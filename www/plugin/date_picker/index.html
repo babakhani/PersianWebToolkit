@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html >
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<title>Persian Calendar</title>
@@ -10,15 +10,13 @@
 		<script type="text/javascript" src="../js/jquery/jquery.tmpl.js"></script>
 		
 		<script type="text/javascript" src="../js/common.js"></script>
-		<!--
-			Persian Date
+		<!-- Persian Date
 		-->
 		<script type="text/javascript" src="../js/persian.date.js"></script>
 		<!--
 			Persian Calendar
 		-->
 		<script type="text/javascript" src="js/class.base.js"></script>
-		<script type="text/javascript" src="js/class.sprite.js"></script>
 		
 		<script type="text/javascript" src="js/view/p.datePicker.view.js"></script>
 		<script type="text/javascript" src="js/p.datePicker.js"></script>
@@ -30,17 +28,32 @@
 	<body>
 		<script type="text/javascript">
 			$(document).ready(function(){
-				$(".datePicker").pDatePicker();
-				//$(".datePicker2").pDatePicker();
-//			<input type="text"  class="datePicker2"/>
+				$(".datePicker").pDatePicker({
+					viewFormat:"YYYY/ MM / DD",
+					sendOption: "p",
+					position:[-10,100],
+					daysTitleFormat : "YYYY MM"
+				});
 			});
 		</script>
 		<div class="container" >
-			<input type="text" class="datePicker" value="09-23-2011" />
+			<input type="text" class="datePicker" name="startDate"  value="08-22-2011" />
 			<br/>
 			<br/>
 			<br/>
 			<br/>
+			<input type="text" class="datePicker" name="endDate"  value="08-22-2011" />
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<input type="text" class="datePicker" name="endDate"   />
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<input type="text" class="datePicker" name="endDate"  value="09-10-2012"  />
+			
 		</div>
 	</body>
 </html>

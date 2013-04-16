@@ -3,6 +3,10 @@
 // Author Reza Babakhani
 // written under the GPL version 2.0
 // All Unit test passed , work on  Chrome / Opera / FF / IE 7,8,9
+/*
+	(c) Copyright 2013 babakhani reza. All Rights Reserved. 
+*/
+
 
 String.prototype.toPersianDigit = function(a) {
     return this.replace(/\d+/g, function(digit) {

@@ -61,6 +61,7 @@ var Views_MonthGrid = {
 				$(self.daysBox).find("td").children("span").click(function(){
 					$thisUnixDate = $(this).data("unixDate");
 					self.raiseEvent("selectDay",[$thisUnixDate]);
+					return false;
 				});
 				self.raiseEvent("reRender");
 			},

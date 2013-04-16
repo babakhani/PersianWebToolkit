@@ -3,116 +3,8 @@ var Class_Base = {
 		this.isInstance = true;
 		this.raiseEvent('init');
 	},
-	visible : function() {
-		this.jq().css({
-			visibility : 'visible'
-		});
-		return this;
-	},
-	invisible : function() {
-		this.jq().css({
-			visibility : 'hidden'
-		});
-		return this;
-	},
-	isVisible : function() {
-		return this.jq().css('visibility') == 'visible';
-	},
-	isHidden : function() {
-		return this.jq().css('display') == 'hidden';
-	},
-	show : function() {
-		this.jq().show();
-		return this;
-	},
-	hide : function() {
-		this.jq().hide();
-		return this;
-	},
-	fadeIn : function(s) {
-		this.jq().fadeIn(s);
-	},
-	fadeOut : function(s) {
-		this.jq().fadeOut(s);
-	},
-	toggle : function() {
-		this.jq().toggle();
-		return this;
-	},
-	width : function(value) {
-		if (value) {
-			this.jq().width(value);
-		}
-		return this.jq().width();
-	},
-	height : function(value) {
-		if (value) {
-			this.jq().height(value);
-		}
-		return this.jq().height();
-	},
-	left : function(value) {
-		if (value) {
-			this.jq().css('left', value);
-		}
-		return this.jq().position().left;
-	},
-	top : function(value) {
-		if (value) {
-			this.jq().css('top', value);
-		}
-		return this.jq().position().top;
-	},
-	bottom : function(value) {
-		if (value) {
-			return this.jq().css('bottom', value);
-		}
-		return this.top() + this.height();
-	},
-	right : function() {
-		return this.left() + this.width();
-	},
 	onInit : function() {
 		this.raiseEvent('init');
-	},
-	// Date Function
-	getUnixTime : function(date) {
-		return moment(date).valueOf();
-	},
-	validateUnixTime : function(dateTime) {
-		if ( typeof dateTime == 'string') {
-			var unixTimeStamp = this.getUnixTime(dateTime);
-		} else {
-			var unixTimeStamp = dateTime;
-		}
-		return unixTimeStamp;
-	},
-	getDateFromUnixTime : function(unixTimeStamp, dateFormatString) {
-		if ( typeof dateFormatString == 'undefined') {
-			$.error('Base_Class.getDateFromUnixTime say: you must define date format string as second arguments');
-			var dateFormatString = 'YYYY/MM/DD'
-		}
-		return moment(unixTimeStamp).format(dateFormatString);
-	},
-	getDeltaDate : function(start, end, mode) {
-		var a = moment(start);
-		var b = moment(end);
-		return b.diff(a, mode);
-	},
-	// Deprecated use 'getAddDate'
-	getAdd : function(d, amount, mode) {
-		var d = moment(d);
-		return d.add(mode, amount);
-	},
-	getAddDate : function(d, amount, mode) {
-		var d = moment(d);
-		return d.add(mode, amount);
-	},
-	jq : function() {
-		if (!this._jq) {
-			this._jq = $(this.element);
-		}
-		return this._jq;
 	},
 	isInt : function(value) {
 		if ( typeof (value) == 'number') {
@@ -188,6 +80,48 @@ var Class_Base = {
     }
 };
 
+var Class_Sprite = {
+	defaultView:"default",
+	// Views Interfcae
+	events:{
+		init:function(){
+			this.render();
+		},
+		render:null
+	},
+	views : {
+		'default' : {
+			render : function() {
+			}
+		}
+	},
+	element : {
+		main: null// Root Element Of Sprite
+	},
+	createElementByClass:function(className){
+		return this.element.find('.'+className);
+	},
+	createStaffElement:function(){
+		var mainElement = this.element.main
+		for(c in this.cssClass){
+			if(c != 'main'){
+				var staffElement = mainElement.find('.'+this.cssClass[c]);
+				this.element[c] = staffElement;
+			}
+		};	
+		return this;
+	},
+	render : function(viewName) {
+		if (!viewName) {
+			viewName = 'default';
+		}
+		this.raiseEvent('render');	
+		this.view = this.views[viewName];
+		return this.view.render(this);
+	}	
+};
+
+
 var inherit = function(self, baseClasses) {
 	var args = [true, self, copyObject(Class_Base)];
 	var events = [];
@@ -217,12 +151,4 @@ var inherit = function(self, baseClasses) {
 	self.init();
 	return self;
 };
-
-
-var liquideFlot = function(listOfElement,options){
-	
-	
-		
-};
-
 

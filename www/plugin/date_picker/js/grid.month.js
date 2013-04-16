@@ -5,7 +5,7 @@
  doc:
 
  For get clicked day use attachEvent  "selectDay"
-     public API:
+    	     public API:
          selectDay
          updateAs
          options:
@@ -13,9 +13,7 @@
              container: sample, (html element)
              year: sample, (first time initialize)
              month:sample, (first time initialize)
-
- */
-
+*/
 var Class_MonthGrid = {
     // List Of days Html object
     state : {

@@ -1,20 +1,16 @@
-.datepicker-container{
-	border:1px solid red;
-}
 
 .datepicker-plot-area{
 	-moz-user-select: none; 
         -khtml-user-select: none; 
         -webkit-user-select: none; 
         -o-user-select: none; 
-	
-
 	display: block;
 	width: 200px;
 	padding:0px 2px 0px 2px;
 	min-height: 200px;
 	position: absolute;
 	border: 1px solid #ccc;
+	background-color: #fff;
 	top:100px;
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
@@ -210,7 +206,6 @@
 	padding: 0px;
 	margin: 0px;
 	color: #333333;
-	
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
@@ -235,11 +230,9 @@
 	border-color: #0044cc #0044cc #002a80;
 	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-		
 	color:#fff;
-	
 	text-shadow: 1px 1px 1px #00000;
-        filter: dropshadow(color=#00000, offx=1, offy=1);
+      filter: dropshadow(color=#00000, offx=1, offy=1);
 }
 
 .datepicker-day-view .busy-day,
@@ -284,13 +277,13 @@
 .datepicker-day-view .work-day,
 .datepicker-day-view .table-days td span.work-day {
 	background: #fefcea; /* Old browsers */
-background: -moz-linear-gradient(top,  #fefcea 0%, #f1da36 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefcea), color-stop(100%,#f1da36)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #fefcea 0%,#f1da36 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #fefcea 0%,#f1da36 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #fefcea 0%,#f1da36 100%); /* IE10+ */
-background: linear-gradient(to bottom,  #fefcea 0%,#f1da36 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#f1da36',GradientType=0 ); /* IE6-9 */
+	background: -moz-linear-gradient(top,  #fefcea 0%, #f1da36 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefcea), color-stop(100%,#f1da36)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #fefcea 0%,#f1da36 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #fefcea 0%,#f1da36 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #fefcea 0%,#f1da36 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #fefcea 0%,#f1da36 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#f1da36',GradientType=0 ); /* IE6-9 */
 
 }
 

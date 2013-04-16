@@ -41,18 +41,32 @@ var Views_pDatePicker = {
             self.dayPickerView = new self.view.DayPicker(self);
             self.monthPickerView =  new self.view.MonthPicker(self);
             self.yearPickerView  =  new self.view.YearPicker(self);
-            
+         	         	
+		// SHow Hide Picker         
+		self.inputElem.focus(function() {self.element.main.show();});
+		$(document).click(function() {self.element.main.hide();});
+		self.inputElem.click(function(e) {e.stopPropagation();return false;});
+		self.element.main.click(function(e) {e.stopPropagation();return false;}); 
+
             return this;
          },
          
-            fixPosition : function(self) {
-                  var x = self.inputElem.position().top;
-                  var y = self.inputElem.position().left;
-                  var inputHeight = self.inputElem.height() + parseInt(self.inputElem.css("padding-top")) + parseInt(self.inputElem.css("padding-bottom")) + parseInt(self.inputElem.css("border-top")) + parseInt(self.inputElem.css("border-bottom")) + 5;
-                  self.element.main.css({
-                        top : (x + inputHeight) + 'px',
-                        left : y + 'px'
-                  })
+            fixPosition : function(self) {	           
+			var inputX = self.inputElem.position().top;
+			var inputY = self.inputElem.position().left;
+			if (self.position == "auto") {
+				var inputHeight = self.inputElem.height() + parseInt(self.inputElem.css("padding-top")) + parseInt(self.inputElem.css("padding-bottom")) + parseInt(self.inputElem.css("border-top")) + parseInt(self.inputElem.css("border-bottom")) + 5;
+				self.element.main.css({
+					top : (inputX + inputHeight) + 'px',
+					left : inputY + 'px'
+				});
+			}else{
+				self.element.main.css({
+					top : (inputX + self.position[0]) + 'px',
+					left : (inputY + self.position[1] ) + 'px'
+				});
+			}
+
                   return this;
             },
             // --------------------------------------------------------------------------- Day View
@@ -62,12 +76,14 @@ var Views_pDatePicker = {
                   self.view_data = {
                         css : self.cssClass,
                         btnNextText : "<",
-                        btnSwitchText : pd.format("YYYY MMMM"),
+                        btnSwitchText : pd.format(self.daysTitleFormat),
                         btnPrevText : ">"
                   };
                   self.element.dayBox = $.tmpl("p_datePicker_header", self.view_data).appendTo(this.container);
                   self.element.dayBox.children("." + self.cssClass.btnSwitch).click(function() {
                         self.view.changeView(self, "month");
+                        
+                        return false;
                   });
                   self.element.dayBox.children("." + self.cssClass.btnNext).click(function() {
                         if(self.state.viewMonth == 12) {
@@ -77,6 +93,8 @@ var Views_pDatePicker = {
                               self.state.viewMonth++;
                         }
                         self.dayPickerView.updateView();
+                        
+                        return false;
                   });
                   self.element.dayBox.children("." + self.cssClass.btnPrev).click(function() {
                         if(self.state.viewMonth == 1) {
@@ -86,6 +104,8 @@ var Views_pDatePicker = {
                               self.state.viewMonth--;
                         }
                         self.dayPickerView.updateView();
+                        
+                        return false;
                   });
                   this.mGrid = new MonthGrid({
                         container : self.container.dayView,
@@ -115,28 +135,36 @@ var Views_pDatePicker = {
                         btnPrevText : ">"
                   };
                   self.element.monthBox = $.tmpl("p_datePicker_header", self.view_data).appendTo(self.container.monthView);
+                  
                   self.element.monthBox.children("." + self.cssClass.btnSwitch).click(function() {
                         self.view.changeView(self, "year")
-
+                        return false;
                   });
                   var monthRaneg = Class_DateRange.monthRange;
+                 
                   for(m in monthRaneg) {
-                        $("<div/>").data({
-                              monthIndex : m
-                        }).addClass("month" + m).addClass(self.cssClass.monthItem).text(monthRaneg[m].name.fa).appendTo(self.container.monthView).click(function() {
+                        $("<div/>").data({ monthIndex : m})
+                        .addClass("month" + m)
+                        .addClass(self.cssClass.monthItem)
+                        .text(monthRaneg[m].name.fa)
+                        .appendTo(self.container.monthView)
+                        .click(function() {
                               self.state.viewMonth = $(this).data().monthIndex;
                               self._updateState("month", $(this).data().monthIndex);
                               self.view.changeView(self, "day");
+                              return false;
                         });
                   };
                   self.element.monthBox.children("." + self.cssClass.btnNext).click(function() {
                         self.state.viewYear++;
                         self.monthPickerView.updateView();
+                        return false;
                   });
                   self.element.monthBox.children("." + self.cssClass.btnPrev).click(function() {
                         self.state.viewYear--;
                         self.monthPickerView.updateView();
                         print(self.state.viewYear);
+                        return false;
                   });
                   this.defineSelectedMonth = function() {
                         self.container.monthView.children('.' + self.cssClass.monthItem).removeClass(self.cssClass.selectedMonth);
@@ -149,7 +177,7 @@ var Views_pDatePicker = {
                   this.updateView = function() {
                         this.defineSelectedMonth();
 
-                        self.element.monthBox.children("." + self.cssClass.btnSwitch).text(self.state.viewYear.toString().toPersianDigit())
+                        self.element.monthBox.children("." + self.cssClass.btnSwitch).text( self.state.viewYear.toString().toPersianDigit() )
                   }
                   return this;
             },
@@ -185,6 +213,7 @@ var Views_pDatePicker = {
                               self.state.viewYear = y;
                               self._updateState("year", y);
                               self.view.changeView(self, "month");
+                                return false;
                         });
                   };
                   this.applyYearList();
@@ -192,12 +221,14 @@ var Views_pDatePicker = {
                         self.state.viewYear = self.state.viewYear+12;
                         self.yearPickerView.applyYearList();
                         self.yearPickerView.updateView();
+                          return false;
                         
                   });
                   self.element.yearHeaderBox.children("." + self.cssClass.btnPrev).click(function() {
                         self.state.viewYear = self.state.viewYear-12;
                         self.yearPickerView.applyYearList();
                         self.yearPickerView.updateView();
+                          return false;
                   });
                   this.updateView = function() {
                         self.container.yearView.children("." + self.cssClass.yearItem).each(function() {
