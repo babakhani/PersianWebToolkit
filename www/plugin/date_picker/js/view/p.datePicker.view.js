@@ -42,11 +42,15 @@ var Views_pDatePicker = {
             self.monthPickerView =  new self.view.MonthPicker(self);
             self.yearPickerView  =  new self.view.YearPicker(self);
          	         	
+         	         	
 		// SHow Hide Picker         
 		self.inputElem.focus(function() {self.element.main.show();});
-		$(document).click(function() {self.element.main.hide();});
 		self.inputElem.click(function(e) {e.stopPropagation();return false;});
-		self.element.main.click(function(e) {e.stopPropagation();return false;}); 
+		
+		self.inputElem.blur(function() {self.element.main.hide();});
+		
+		$(document).click(function() {self.element.main.hide();});
+		self.element.main.mousedown(function(e) {e.stopPropagation();return false;}); 
 
             return this;
          },
@@ -113,7 +117,10 @@ var Views_pDatePicker = {
                         year : 1390
                   }).selectDate(self.state.unixDate).attachEvent("selectDay", function(x) {
                         self._updateState("unix", x);
-                        self.dayPickerView.updateView()
+                        self.dayPickerView.updateView();
+                        if(self.hideOnSelect){
+                        		self.element.main.hide();
+                        }
                   });
                   this.updateView = function() {
                         self.dayPickerView.mGrid.updateAs(self.state.viewYear, self.state.viewMonth)
@@ -163,7 +170,6 @@ var Views_pDatePicker = {
                   self.element.monthBox.children("." + self.cssClass.btnPrev).click(function() {
                         self.state.viewYear--;
                         self.monthPickerView.updateView();
-                        print(self.state.viewYear);
                         return false;
                   });
                   this.defineSelectedMonth = function() {

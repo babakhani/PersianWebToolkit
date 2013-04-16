@@ -6,9 +6,7 @@
 		<link href="css/page.css" rel="stylesheet" type="text/css" />
 		<link href="css/main.css" rel="stylesheet" type="text/css" />
 		<script type="text/javascript" src="../js/jquery/jquery.js"></script>
-		
 		<script type="text/javascript" src="../js/jquery/jquery.tmpl.js"></script>
-		
 		<script type="text/javascript" src="../js/common.js"></script>
 		<!-- Persian Date
 		-->
@@ -17,7 +15,6 @@
 			Persian Calendar
 		-->
 		<script type="text/javascript" src="js/class.base.js"></script>
-		
 		<script type="text/javascript" src="js/view/p.datePicker.view.js"></script>
 		<script type="text/javascript" src="js/p.datePicker.js"></script>
 		<script type="text/javascript" src="js/view/grid.month.view.js"></script>
@@ -30,9 +27,10 @@
 			$(document).ready(function(){
 				$(".datePicker").pDatePicker({
 					viewFormat:"YYYY/ MM / DD",
+					daysTitleFormat : "YYYY MM",
 					sendOption: "p",
 					position:[-10,100],
-					daysTitleFormat : "YYYY MM"
+					hideOnSelect:true // Close When Day Select
 				});
 			});
 		</script>

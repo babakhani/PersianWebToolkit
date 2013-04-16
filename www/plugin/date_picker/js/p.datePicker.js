@@ -21,8 +21,8 @@ var Class_pDatePicker = {
 	viewFormat : "YYYY-MM-DD",
 	sendOption : "g", //"p  as Persian Date" "g  as Garagurian Date" " u as Unix Date"
 	position: "auto" ,// [x,y]
-	daysTitleFormat: "YYYY MM",
-	monthsTitleFormat : "YY MM",
+	daysTitleFormat: "YYYY MMMM",
+	hideOnSelect : false,
 	
 	state : {
 		unixDate : new persianDate().valueOf(),
