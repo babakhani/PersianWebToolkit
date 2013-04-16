@@ -107,18 +107,17 @@ var Views_pDatePicker = {
                         } else {
                               self.state.viewMonth--;
                         }
-                        self.dayPickerView.updateView();
-                        
+                        self.dayPickerView.updateView();                        
                         return false;
                   });
                   this.mGrid = new MonthGrid({
                         container : self.container.dayView,
-                        month : 1,
-                        year : 1390
+                        month : pd.month(),
+                        year : pd.year()
                   }).selectDate(self.state.unixDate).attachEvent("selectDay", function(x) {
                         self._updateState("unix", x);
                         self.dayPickerView.updateView();
-                        if(self.hideOnSelect){
+                        if(self.autoclose){
                         		self.element.main.hide();
                         }
                   });
@@ -128,7 +127,7 @@ var Views_pDatePicker = {
                               self.dayPickerView.mGrid.selectDate(self.state.unixDate);
                         }
                         var pdate = new persianDate([self.state.viewYear, self.state.viewMonth]);
-                        self.element.dayBox.children("." + self.cssClass.btnSwitch).text(pdate.format("YYYY MMMM"))
+                        self.element.dayBox.children("." + self.cssClass.btnSwitch).text(pdate.format(self.daysTitleFormat))
                   };
                   return this;
             },

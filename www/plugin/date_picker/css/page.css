@@ -9,5 +9,19 @@ div.container{
 	display:block;
 	width:90%;
 	margin:20px 5% 0px 5%;
+}
 
+div.container input{
+      display:block;
+      width:180px;
+      height: 28px;
+      line-height: 28px;
+      font-size: 14px;
+      padding: 0px 3px 0px 3px;
+      margin: 0px;
+      border:1px solid silver;
+      color:#333333;
+      -webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
 }

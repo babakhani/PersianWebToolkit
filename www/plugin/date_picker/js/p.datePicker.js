@@ -3,26 +3,26 @@
  */
 
 (function($) {
-	$.fn.pDatePicker = function(options) {
+	$.fn.pDatepicker = function(options) {
 		if (!this) {
 			$.error("Invalid selector");
 		}
 		rootElement = this[0];
 		$(this).each(function(){
-			this.pDatePicker = new pDatePicker(options, this);
+			this.pDatePicker = new pDatepicker(options, this);
 		});
 		return this.pDatePicker;
 	};
 })(jQuery);
 
-var Class_pDatePicker = {
+var Class_pDatepicker = {
 	cssClass : 'datepicker-container',
 	// Default Configuration
 	viewFormat : "YYYY-MM-DD",
 	sendOption : "g", //"p  as Persian Date" "g  as Garagurian Date" " u as Unix Date"
 	position: "auto" ,// [x,y]
 	daysTitleFormat: "YYYY MMMM",
-	hideOnSelect : false,
+	autoclose : false,
 	
 	state : {
 		unixDate : new persianDate().valueOf(),
@@ -107,8 +107,8 @@ var Class_pDatePicker = {
 	}
 };
 
-var pDatePicker = function(options, mainElem) {
-	inherit(this, [Class_Sprite, Class_pDatePicker, Views_pDatePicker, options, {
+var pDatepicker = function(options, mainElem) {
+	inherit(this, [Class_Sprite, Class_pDatepicker, Views_pDatePicker, options, {
 		inputElem : $(mainElem)
 	}]);
 	this.defineCurrentState();
