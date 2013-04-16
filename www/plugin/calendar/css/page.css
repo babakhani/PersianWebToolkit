@@ -1,0 +1,12 @@
+body{
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+	font-family: tahoma;
+}
+.cal-container{
+	display:block;
+	width:100%;
+	min-height:200px;
+	float:left;
+}
+

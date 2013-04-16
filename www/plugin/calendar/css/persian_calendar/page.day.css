@@ -1,0 +1,291 @@
+.day-page-container {
+    display: block;
+     width:98%;
+    margin:0px 1% 0px 1%;
+    position: relative;
+}
+
+/*
+.day-page-container .content {
+    width:98%;
+    margin:0px 1% 0px 1%;
+}
+*/
+
+.day-page-container .day-info-box {
+    display: block;
+    width: 25%;
+    height: 150px;
+    float: left;
+    position:relative;
+    top:-30px;
+}
+
+/*------------------------------------------------------    Month Grid*/
+
+.day-page-container .day-month-grid{
+    display:block;
+    width:25%;
+    height:150px;
+    float:left;
+    position:relative;
+    top:-30px;
+}
+
+.day-page-container .day-month-grid  .table-days {
+    width: 80%;
+    border-right: none;
+    float: right;
+    direction: rtl;
+}
+
+
+.day-page-container .day-month-grid .header {
+    display: block;
+    width: 80%;
+    height: 25px;
+    float: right;
+}
+.day-page-container .day-month-grid .header .title {
+    display:none;
+}
+.day-page-container .day-month-grid .header .header-row {
+    display: block;
+    width: 100%;
+    height: 25px;
+    float: left;
+}
+.day-page-container .day-month-grid .header .header-row-cell {
+    display: block;
+    width: 14%;
+    height: 20px;
+    float: right;
+    line-height: 20px;
+    text-indent: 6px;
+212    text-indent:5px;
+    font-size: 10px;
+    color: #9e9e9e;
+    direction:rtl;
+    text-align:right;
+    font-weight: bold;
+}
+
+.day-page-container .day-month-grid .table-days tr {
+    width: 300px;
+}
+.day-page-container .day-month-grid .table-days td {
+    height: 20px;
+    padding: 0px;
+    margin: 0px;
+    
+}
+.day-page-container .day-month-grid .table-days td span:hover {
+    background-color: #EEEEF4;
+}
+.day-page-container .day-month-grid .table-days td span {
+    display: block;
+    width: 100%;
+    height: 22px;
+    line-height: 22px;
+    text-align: right;
+    text-indent:5px;
+    font-size: 12px;
+    background-color: #fff;
+    padding: 0px;
+    margin: 0px;
+    color: #999;
+}
+
+.day-page-container .day-month-grid .table-days td span.today {
+    background-color: #ededed;
+    height: 21px;
+    border-bottom: 1px solid #009ec3;
+}
+
+.day-page-container .day-month-grid .table-days td span.selected {
+    background-color: #E8CBC5;
+}
+
+
+
+
+
+/*---------------------*/
+
+
+
+
+.day-page-container .day-info-box-day {
+    display: block;
+    width: 100px;
+    height: 100px;
+    line-height:80px;
+    float: left;
+    font-size:85px;
+    direction: rtl;
+    text-align: left;
+    color: gray;
+    font-family: verdana;
+}
+
+.day-page-container .day-info-box-full-day {
+    display: block;
+    float: left;
+    text-align: left;
+    color: gray;
+    direction: rtl;
+    width: 100%;
+    height: 28px;
+    font-size: 23px;
+    font-family: verdana;
+}
+.day-page-container .day-story-list-box {
+    display: block;
+    width: 50%;
+    height: 350px;
+    border: 1px solid gray;
+    float: left;
+    overflow:auto;
+}
+
+
+.day-page-container .day-story-list-box  div.story-item {
+    display: block;
+    width: 98%;
+    height:22px;
+    margin: 1px 0px 0px 0px;
+    padding: 3px 1% 3px 1%;
+    float: right;
+    position: relative;
+    background-color: #ededed;
+}
+
+.day-page-container .day-story-list-box div.story-item:hover {
+    background-color: #e3e3e3;
+    cursor: pointer;
+}
+.day-page-container .day-story-list-box div.story-item > span.title {
+    float: right;
+    font-size: 10px;
+    color: black;
+    max-width: 100px;
+    height: 22px;
+    line-height: 22px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: pre-wrap;      /* CSS3 */
+    white-space: -moz-pre-wrap; /* Firefox */
+    white-space: -pre-wrap;     /* Opera <7 */
+    white-space: -o-pre-wrap;   /* Opera 7 */
+    word-wrap: break-word;      /* IE */
+}
+.day-page-container .day-story-list-box div.story-item span.time {
+    display: block;
+    height: 22px;
+    line-height: 22px;
+    float: left;
+    color: gray;
+    padding-left: 5px;
+    font-size: 10px;
+}
+.day-page-container .day-story-list-box  div.story-item .story-tooltip {
+    display: none;
+    width: 180px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    background-color: white;
+    z-index: 1000;
+    padding: 5px 5px 5px 5px;
+    border: 1px solid gray;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.day-page-container .day-story-list-box  div.story-item .story-tooltip > span.title {
+    display: block;
+    width: 100%;
+    font-size: 12px;
+    height: 24px;
+    text-indent: 0px;
+    color: gray;
+    direction: rtl;
+}
+/*--------------------------------------------------- Day Page Header ---*/
+
+.day-page-container .header-box {
+    display: block;
+    width: 98%;
+    height: 25px;
+    float: left;
+    padding: 10px 1% 10px 1%;
+}
+.day-page-container  .header-box .title-box {
+    display: block;
+    margin-left: 1.5%;
+    font-size: 24px;
+    color: #333;
+    float: left;
+    height: 20px;
+}
+
+.day-page-container  .header-box .control-box {
+    display: block;
+    width: 120px;
+    height: 20px;
+    float: right;
+}
+.day-page-container  .header-box .control-box button {
+    display: block;
+    background: none;
+    border: 1px solid #bfbfbf;
+    height: 20px;
+    float: right;
+    cursor: pointer;
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%); /* W3C */
+    filter: progid :DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+}
+.day-page-container  .header-box .control-box button:hover {
+    background: #e5e5e5; /* Old browsers */
+    background: -moz-linear-gradient(top, #e5e5e5 0%, #ffffff 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e5e5e5), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #e5e5e5 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #e5e5e5 0%,#ffffff 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #e5e5e5 0%,#ffffff 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #e5e5e5 0%,#ffffff 100%); /* W3C */
+    filter: progid :DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+
+}
+.day-page-container .header-box .control-box .btn-next {
+    width: 30px;
+    border-left: none;
+    -webkit-border-top-right-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+    -moz-border-radius-topright: 3px;
+    -moz-border-radius-bottomright: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+.day-page-container .header-box .control-box .btn-prev {
+    width: 30px;
+    border-right: none;
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.day-page-container .header-box .control-box .btn-today {
+    width: 60px;
+}
+
+
+
+

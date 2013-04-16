@@ -1,0 +1,13 @@
+body{
+	margin: 0px 0px 0px 0px;
+	padding: 0px;
+	font-family: tahoma;
+	font-size:12px;
+}
+
+div.container{
+	display:block;
+	width:90%;
+	margin:20px 5% 0px 5%;
+
+}

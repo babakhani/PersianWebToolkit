@@ -1,0 +1,223 @@
+.month-page-container {
+	display: block;
+	width: 100%;
+	min-height: 600px;
+	float: left;
+	position: relative;
+	padding-bottom: 10px;
+	border-bottom: 1px dashed #333;
+	overflow: hidden;
+}
+.month-page-container .fake-object {
+	border: 1px solid #ccc;
+	z-index: 300;
+	background-color: #fff;
+	min-width: 100%;
+	min-height: 100%;
+	-webkit-box-shadow: 10px 0px 1px 1px rgba(120, 120, 120, 1);
+	box-shadow: 10px 0px 1px 1px rgba(120, 120, 120, 1);
+}
+.month-page-container .header-box {
+	display: block;
+	width: 98%;
+	height: 25px;
+	float: left;
+	padding: 10px 1% 10px 1%;]
+	background-color: red;
+}
+.month-page-container .header-box .title-box {
+	display: block;
+	margin-left: 1.5%;
+	font-size: 24px;
+	color: #333;
+	float: left;
+	height: 20px;
+}
+.month-page-container .header-box .control-box {
+	display: block;
+	width: 120px;
+	height: 20px;
+	float: right;
+}
+.month-page-container .header-box .control-box button {
+	display: block;
+	background: none;
+	border: 1px solid #bfbfbf;
+	height: 20px;
+	float: right;
+	cursor: pointer;
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%); /* W3C */
+	filter: progid :DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+}
+.month-page-container .header-box .control-box button:hover {
+	background: #e5e5e5; /* Old browsers */
+	background: -moz-linear-gradient(top, #e5e5e5 0%, #ffffff 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e5e5e5), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #e5e5e5 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #e5e5e5 0%,#ffffff 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #e5e5e5 0%,#ffffff 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #e5e5e5 0%,#ffffff 100%); /* W3C */
+	filter: progid :DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+.month-page-container .header-box .control-box .btn-next {
+	width: 30px;
+	border-left: none;
+	-webkit-border-top-right-radius: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	-moz-border-radius-topright: 3px;
+	-moz-border-radius-bottomright: 3px;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+.month-page-container .header-box .control-box .btn-prev {
+	width: 30px;
+	border-right: none;
+	-webkit-border-top-left-radius: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	-moz-border-radius-topleft: 3px;
+	-moz-border-radius-bottomleft: 3px;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+.month-page-container .header-box .control-box .btn-today {
+	width: 60px;
+}
+.month-page-container table.days-box {
+	width: 98%;
+	margin: 0px 1% 0px 1%;
+	border: 1px solid #ccc;
+	border-right: none;
+	direction: rtl;
+	position: absolute;
+	top: 65px;
+	table-layout: fixed;
+}
+.month-page-container table.days-box tr td {
+	background-color: #f2f2f2;
+	border-right: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	padding: 0px;
+	margin: 0px;
+	height: 85px;
+}
+.days-header-box-row {
+	width: 98%;
+	margin: 5px 1% 0px 1%;
+	border-right: none;
+	direction: rtl;
+}
+.days-header-box-row td {
+	width: 14%;
+	font-size: 11px;
+	text-indent: 5px;
+	color: #999;
+	font-weight: bold;
+}
+.month-page-container div.day-box {
+	display: block;
+	margin: 0px 0px 0px 0px;
+	padding:3px 0px 0px 0px;
+	height: 100%;
+	float: left;
+	direction: rtl;
+	color: #b8b8b8;
+	background-color: #fff;
+	width: 100%;
+	overflow:hidden;
+}
+
+.month-page-container div.day-box .day-story-box{
+	display:block;
+	float:right;
+	width:96%;
+	padding:0px 2% 0px 2%;
+	height:70px;
+	overflow: auto;
+}
+
+.month-page-container div.day-box.selected {
+	-webkit-box-shadow: inset 0px 0px 3px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0px 0px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+.month-page-container div.day-box .day-box-header {
+	display: block;
+	width: 100%;
+	height: 20px;
+	text-indent: 10px;
+}
+.month-page-container div.today {
+	background-color: #ededed;
+	border:2px dashed red;
+}
+.month-page-container div.today span.day-box-header {
+	color: maroon;
+}
+
+.month-page-container div.day-box .day-box-header {
+}
+.month-page-container div.story-item {
+	display: block;
+	width: 100%;
+	float: right;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	padding: 3px 0px 3px 0px;
+	position: relative;
+}
+.month-page-container div.story-item:hover {
+	background-color: #e3e3e3;
+	cursor: pointer;
+}
+.month-page-container div.story-item > span.title {
+	float: right;
+	font-size: 10px;
+	text-indent:4px;
+	color: black;
+	max-width: 100px;
+	height: 14px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: pre-wrap;      /* CSS3 */
+	white-space: -moz-pre-wrap; /* Firefox */
+	white-space: -pre-wrap;     /* Opera <7 */
+	white-space: -o-pre-wrap;   /* Opera 7 */
+	word-wrap: break-word;      /* IE */
+}
+.month-page-container div.story-item span.time {
+	display: block;
+	float: left;
+	color: gray;
+	padding-left: 5px;
+	font-size: 10px;
+}
+.month-page-container  div.story-item .story-tooltip {
+	display: none;
+	width: 180px;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	background-color: white;
+	z-index: 1000;
+	padding: 5px 5px 5px 5px;
+	border: 1px solid gray;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.month-page-container  div.story-item .story-tooltip > span.title {
+	display: block;
+	width: 100%;
+	font-size: 12px;
+	height: 24px;
+	text-indent: 0px;
+	color: gray;
+	direction: rtl;
+}
