@@ -13,6 +13,13 @@ var Class_Base = {
 			return false;
 		}
 	},
+	fullHeight: function(elem){
+		var $this = $(elem);
+		return $this.height() + parseInt($this.css("padding-top")) +
+		 parseInt($this.css("padding-bottom")) +
+		  parseInt($this.css("border-top")) +
+		   parseInt($this.css("border-bottom"));		
+	},
 	// Event Management
 	attachEvent : function(eventName, func) {
 		if (!this.events[eventName]) {

@@ -8,7 +8,7 @@
 			$.error("Invalid selector");
 		}
 		rootElement = this[0];
-		$(this).each(function(){
+		$(this).each(function() {
 			this.pDatePicker = new pDatepicker(options, this);
 		});
 		return this.pDatePicker;
@@ -20,10 +20,28 @@ var Class_pDatepicker = {
 	// Default Configuration
 	viewFormat : "YYYY-MM-DD",
 	sendOption : "g", //"p  as Persian Date" "g  as Garagurian Date" " u as Unix Date"
-	position: "auto" ,// [x,y]
-	daysTitleFormat: "YYYY MMMM",
+	position : "auto", // [x,y]
+	daysTitleFormat : "YYYY MMMM",
 	autoclose : false,
 	
+	/*
+	 * startView
+	 * endView
+	 * keyboardNavigation
+	 * modalMode
+	 * modalBackdrop
+	 * defaultTime
+	 * todayBtn :  Boolean
+	 * toolbox: Boolean
+	 * todayHighlight : Boolean
+	 * forceParse :  Boolean
+	 * maskInput :  Boolean
+	 * pickDate
+	 * pickTime
+	 * pickSeconds
+	 */
+	
+
 	state : {
 		unixDate : new persianDate().valueOf(),
 		selectedYear : 0,
@@ -34,11 +52,11 @@ var Class_pDatepicker = {
 		viewDay : 0
 	},
 	// Public Methud
-	show:function(){
+	show : function() {
 		this.element.main.show();
 		return this;
 	},
-	hide:function(){
+	hide : function() {
 		this.element.main.hide();
 		return this;
 	},
@@ -91,11 +109,10 @@ var Class_pDatepicker = {
 		return this;
 	},
 	// one time run
-	defineCurrentState : function() {
-		if (this.inputElem.val() && new Date(this.inputElem.val()) != "Invalid Date" && new Date(this.inputElem.val()) != "undefined" ) {
-				this.state.unixDate = new Date(this.inputElem.val()).valueOf();
-		}	
-		else{
+	_defineCurrentState : function() {
+		if (this.inputElem.val() && new Date(this.inputElem.val()) != "Invalid Date" && new Date(this.inputElem.val()) != "undefined") {
+			this.state.unixDate = new Date(this.inputElem.val()).valueOf();
+		} else {
 			this.state.unixDate = new Date().valueOf();
 		}
 		var pd = new persianDate(this.state.unixDate);
@@ -104,6 +121,13 @@ var Class_pDatepicker = {
 		this.state.selectedDay = this.state.viewDay = pd.date();
 		this._updateInputElement();
 		return this;
+	},
+	_syncViewWidthSelected : function() {
+		var pd = new persianDate(this.state.unixDate);
+		this.state.selectedYear = this.state.viewYear = pd.year();
+		this.state.selectedMonth = this.state.viewMonth = pd.month();
+		this.state.selectedDay = this.state.viewDay = pd.date();
+		return this;
 	}
 };
 
@@ -111,7 +135,7 @@ var pDatepicker = function(options, mainElem) {
 	inherit(this, [Class_Sprite, Class_pDatepicker, Views_pDatePicker, options, {
 		inputElem : $(mainElem)
 	}]);
-	this.defineCurrentState();
+	this._defineCurrentState();
 	var viewName = 'default';
 	this.raiseEvent('render');
 	this.view = this.views[viewName];
