@@ -25,44 +25,12 @@
 			$(document).ready(function() {
 				$(".datePicker").pDatepicker({
 					// Implemented :)
-
-					//viewFormat:"YYYY/ MM / DD   HH:mm:ss",
-					//daysTitleFormat : "YYYY MMMM",
-					//sendOption: "p",
-					//position:[-10,100],
-					//autoclose:true // Close When Day Select
-
-					// Must Implement
-
-					// startView : "month" // day,month,year,time
-					// keyboardNavigation : true // Boolean
-					// modalMode: true // if true show picker in modal center of page
-
-					// minuteStep : 5 //Specify a step for the minute field.
-					// secondStep : 5 //Specify a step for the second field.
-					// defaultTime :  19/2/1234
-					// modalBackdrop : true
-
-					// minView : The lowest view that the datetimepicker should show.
-					// maxView
-
-					//todayBtn : boolean
-					//todayHighlight : boolean
-					// forceParse : boolean
-					// pickerPosition
-
-					// god ref : http://tarruda.github.io/bootstrap-datetimepicker/
-					//http://jdewit.github.io/bootstrap-timepicker/
-					// http://www.malot.fr/bootstrap-datetimepicker/
-
-					//  maskInput : true  // disables the text input mask
-					// pickDate : true // Boolean
-					// pickTime :  true  // Boolean
-					//  pickSeconds
-					// showTodayBtn : true // Boolean
-					// startDate: Infinity // set a minimum date
-					// endDate: Infinity // set a minimum date
-
+					viewFormat:"YYYY/ MM / DD   HH:mm:ss",
+					daysTitleFormat : "YYYY MMMM",
+					sendOption: "p",
+					position:[-10,100],
+					autoclose:true, // Close When Day Select
+					toolbox:false
 				});
 			});
 		</script>
@@ -83,7 +51,6 @@
 			<br/>
 			<br/>
 			<input type="text" class="datePicker" name="endDate"  value="09-10-2012"  />
-
 		</div>
 	</body>
 </html>

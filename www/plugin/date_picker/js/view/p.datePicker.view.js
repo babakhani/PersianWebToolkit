@@ -48,7 +48,12 @@ var Views_pDatePicker = {
 				self.dayPickerView = new self.view.DayPicker(self);
 				self.monthPickerView = new self.view.MonthPicker(self);
 				self.yearPickerView = new self.view.YearPicker(self);
-				self.toolbox = new self.view.Toolbox(self);
+				
+				if( self.toolbox){
+					self.toolbox = new self.view.Toolbox(self);
+				}else{
+					self.container.toolbox.remove();
+				}
 				// SHow Hide Picker ------------------------
 				self.inputElem.focus(function() {
 					self.element.main.show();

@@ -23,10 +23,8 @@ var Class_pDatepicker = {
 	position : "auto", // [x,y]
 	daysTitleFormat : "YYYY MMMM",
 	autoclose : false,
-	
+	toolbox: true,
 	/*
-	 * startView
-	 * endView
 	 * keyboardNavigation
 	 * modalMode
 	 * modalBackdrop
@@ -39,6 +37,9 @@ var Class_pDatepicker = {
 	 * pickDate
 	 * pickTime
 	 * pickSeconds
+	 * 
+	 * persianNum :  Boolean
+	 * 
 	 */
 	
 

@@ -1,4 +1,3 @@
-
 .datepicker-plot-area{
 	-moz-user-select: none; 
         -khtml-user-select: none; 
@@ -23,7 +22,7 @@
 	background-clip: padding-box;
 }
 
-.datepicker-header{
+.datepicker-plot-area .datepicker-header{
 	display: block;
 	width: 98%;
 	height: 30px;
@@ -32,9 +31,9 @@
 }
 
 
-.datepicker-header .btn-next,
-.datepicker-header .btn-switch,
-.datepicker-header .btn-prev{
+.datepicker-plot-area .datepicker-header .btn-next,
+.datepicker-plot-area .datepicker-header .btn-switch,
+.datepicker-plot-area .datepicker-header .btn-prev{
 	display:block;
 	float:left;
 	height: 28px;
@@ -47,35 +46,35 @@
 	border-radius: 3px;
 }
 
-.datepicker-day-view .datepicker-header .btn-switch:hover,
-.datepicker-month-view .datepicker-header .btn-switch:hover,
-.datepicker-header .btn-next:hover,
-.datepicker-header .btn-prev:hover{
+.datepicker-plot-area .datepicker-day-view .datepicker-header .btn-switch:hover,
+.datepicker-plot-area .datepicker-month-view .datepicker-header .btn-switch:hover,
+.datepicker-plot-area .datepicker-header .btn-next:hover,
+.datepicker-plot-area .datepicker-header .btn-prev:hover{
 	background-color: #e5e5e5;	
 }
 
-.datepicker-header .btn-next{
+.datepicker-plot-area .datepicker-header .btn-next{
 	display: block;
 	width:15%;
 	float: left;
 }
 
-.datepicker-header .btn-switch{
+.datepicker-plot-area .datepicker-header .btn-switch{
 	display: block;
 	width:66%;
 	margin:0px 2% 0px 2% ;
 	float: left;
 	
 }
-.datepicker-header .btn-prev{
+.datepicker-plot-area .datepicker-header .btn-prev{
 	display: block;
 	width:15%;
 	float: left;
 }
 
-.datepicker-day-view,
-.datepicker-month-view,
-.datepicker-year-view{
+.datepicker-plot-area .datepicker-day-view,
+.datepicker-plot-area .datepicker-month-view,
+.datepicker-plot-area .datepicker-year-view{
             float: left;
             min-height: 220px !important;
             margin:0px 2px 0px 2px;
@@ -123,8 +122,8 @@
 
 
 
-.datepicker-year-view .year-item,
-.datepicker-month-view .month-item{
+.datepicker-plot-area .datepicker-year-view .year-item,
+.datepicker-plot-area .datepicker-month-view .month-item{
 	display:block;
 	width:31%;
 	margin:2px 1% 0px 1%;
@@ -138,21 +137,21 @@
 	cursor: pointer;
 }
 
-.datepicker-year-view .year-item:nth-child(2){
+.datepicker-plot-area .datepicker-year-view .year-item:nth-child(2){
 	color: #ccc !important;
 }
 
-.datepicker-year-view .year-item:last-child{
+.datepicker-plot-area .datepicker-year-view .year-item:last-child{
 	color: #ccc !important;
 }
 
-.datepicker-year-view .year-item:hover,
-.datepicker-month-view .month-item:hover{
+.datepicker-plot-area .datepicker-year-view .year-item:hover,
+.datepicker-plot-area .datepicker-month-view .month-item:hover{
 	background-color: #eeeeee;
 }
 
-.datepicker-year-view .year-item.selected,
-.datepicker-month-view .month-item.selected{
+.datepicker-plot-area .datepicker-year-view .year-item.selected,
+.datepicker-plot-area .datepicker-month-view .month-item.selected{
   	background-color: #006dcc;
 	background-image: -moz-linear-gradient(top, #0088cc, #0044cc);
 	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0044cc));
@@ -168,8 +167,8 @@
 }
 
 
-.datepicker-day-view
-.datepicker-day-view .month-grid-box {
+.datepicker-plot-area .datepicker-day-view
+.datepicker-plot-area .datepicker-day-view .month-grid-box {
 	display: block;
 	width: 100%;
 	float: right;
@@ -178,13 +177,13 @@
 	margin: 10px 1% 5px 1%;
 }
 
-.datepicker-day-view  .month-grid-box .header {
+.datepicker-plot-area .datepicker-day-view  .month-grid-box .header {
 	display: block;
 	width: 100%;
 	height: 30px;
 	float: left;
 }
-.datepicker-day-view  .month-grid-box .header .title {
+.datepicker-plot-area .datepicker-day-view  .month-grid-box .header .title {
 	display: block;
 	width: 100%;
 	height: 3px;
@@ -197,23 +196,14 @@
 	font-weight: bold;
 }
 
-/*
-.datepicker-day-view .month-grid-box.today .header-row,
-.datepicker-day-view .month-grid-box.today .title{
-	background-color: #333;
-	color: white;
-}
-*/
-
-.month-grid-box .header .header-row {
+.datepicker-plot-area .month-grid-box .header .header-row {
 	display: block;
 	width: 100%;
 	height: 25px;
 	float: left;
 }
 
-	
-.datepicker-day-view  .month-grid-box .header .header-row-cell {
+.datepicker-plot-area .datepicker-day-view  .month-grid-box .header .header-row-cell {
 	display: block;
 	width: 14%;
 	height: 25px;
@@ -226,23 +216,23 @@
 	color: #333;
 	font-weight: bold;
 }
-.datepicker-day-view  .table-days {
+.datepicker-plot-area .datepicker-day-view  .table-days {
 	width: 100%;
 	float: left;
 	direction: rtl;
 }
-.datepicker-day-view  .table-days tr {
+.datepicker-plot-area .datepicker-day-view  .table-days tr {
 	width: 300px;
 }
-.datepicker-day-view .table-days td {
+.datepicker-plot-area .datepicker-day-view .table-days td {
 	height: 26px;
 	padding: 0px;
 	margin: 0px;
 }
-.datepicker-day-view .table-days td span:hover {
+.datepicker-plot-area .datepicker-day-view .table-days td span:hover {
 	background-color: #EEEEF4;
 }
-.datepicker-day-view .table-days td span {
+.datepicker-plot-area .datepicker-day-view .table-days td span {
 	cursor: pointer;
 	display: block;
 	width: 100%;
@@ -258,14 +248,14 @@
 	border-radius: 3px;
 }
 
-.datepicker-day-view .table-days td span.today {
+.datepicker-plot-area .datepicker-day-view .table-days td span.today {
 	font-size: 14px;
 	background-color: #333;
 	color:#fff;
 }
 
 
-.datepicker-day-view .table-days td span.selected {
+.datepicker-plot-area .datepicker-day-view .table-days td span.selected {
   	background-color: #006dcc;
 	background-image: -moz-linear-gradient(top, #0088cc, #0044cc);
 	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0044cc));
@@ -282,8 +272,8 @@
       filter: dropshadow(color=#00000, offx=1, offy=1);
 }
 
-.datepicker-day-view .busy-day,
-.datepicker-day-view .table-days td span.busy-day {
+.datepicker-plot-area .datepicker-day-view .busy-day,
+.datepicker-plot-area .datepicker-day-view .table-days td span.busy-day {
 	color: #FFF;
 	background: rgb(255,48,25); /* Old browsers */
 	background: -moz-linear-gradient(top,  rgba(255,48,25,1) 0%, rgba(207,4,4,1) 100%); /* FF3.6+ */
@@ -295,8 +285,8 @@
 	filter: progid :DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404',GradientType=0 ); /* IE6-9 */
 }
 
-.datepicker-day-view .normal-day,
-.datepicker-day-view .table-days td span.normal-day {
+.datepicker-plot-area .datepicker-day-view .normal-day,
+.datepicker-plot-area .datepicker-day-view .table-days td span.normal-day {
 	color: #FFF;
 	background: rgb(210,255,82); /* Old browsers */
 	background: -moz-linear-gradient(top,  rgba(210,255,82,1) 0%, rgba(145,232,66,1) 100%); /* FF3.6+ */
@@ -308,8 +298,8 @@
 	filter: progid :DXImageTransform.Microsoft.gradient( startColorstr='#d2ff52', endColorstr='#91e842',GradientType=0 ); /* IE6-9 */
 }
 
-.datepicker-day-view .orange-day,
-.datepicker-day-view .table-days td span.orange-day {
+.datepicker-plot-area .datepicker-day-view .orange-day,
+.datepicker-plot-area .datepicker-day-view .table-days td span.orange-day {
 	color: #FFF;
 	background: rgb(255,103,15); /* Old browsers */
 	background: -moz-linear-gradient(top,  rgba(255,103,15,1) 0%, rgba(255,103,15,1) 100%); /* FF3.6+ */
@@ -321,8 +311,8 @@
 	filter: progid :DXImageTransform.Microsoft.gradient( startColorstr='#ff670f', endColorstr='#ff670f',GradientType=0 ); /* IE6-9 */
 }
 
-.datepicker-day-view .work-day,
-.datepicker-day-view .table-days td span.work-day {
+.datepicker-plot-area .datepicker-day-view .work-day,
+.datepicker-plot-area .datepicker-day-view .table-days td span.work-day {
 	background: #fefcea; /* Old browsers */
 	background: -moz-linear-gradient(top,  #fefcea 0%, #f1da36 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefcea), color-stop(100%,#f1da36)); /* Chrome,Safari4+ */
