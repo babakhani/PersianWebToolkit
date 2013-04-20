@@ -106,7 +106,8 @@ var Class_pDatepicker = {
 		}
 		// Update Visual Input
 		var pdate = new persianDate(self.state.unixDate);
-		this.inputElem.val(pdate.format(self.viewFormat));
+
+		this.inputElem.val( pdate.format(self.viewFormat).toPersianDigit() );
 		return this;
 	},
 	// one time run

@@ -137,14 +137,6 @@
 	cursor: pointer;
 }
 
-.datepicker-plot-area .datepicker-year-view .year-item:nth-child(2){
-	color: #ccc !important;
-}
-
-.datepicker-plot-area .datepicker-year-view .year-item:last-child{
-	color: #ccc !important;
-}
-
 .datepicker-plot-area .datepicker-year-view .year-item:hover,
 .datepicker-plot-area .datepicker-month-view .month-item:hover{
 	background-color: #eeeeee;
