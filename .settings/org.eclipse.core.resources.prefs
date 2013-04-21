@@ -1,7 +1,5 @@
 eclipse.preferences.version=1
-encoding//www/index.html=UTF-8
 encoding//www/js/persian.date.js=UTF-8
-encoding//www/plugin/calendar/index.html=UTF-8
-encoding//www/plugin/date_picker/css/main.css=UTF-8
-encoding//www/plugin/date_picker/css/page.css=UTF-8
+encoding//www/js/persian.date.test.js=UTF-8
+encoding//www/js/qunit/qunit.js=UTF-8
 encoding/www=UTF-8

@@ -1,10 +1,23 @@
 // Persian Date
-// Version 0.1.5
+// Version 0.1.6
 // Author Reza Babakhani
 // written under the GPL version 2.0
 // All Unit test passed , work on  Chrome / Opera / FF / IE 7,8,9
-
 (function() {
+	String.prototype.toPersianDigit = function(a) {
+		return this.replace(/\d+/g, function(digit) {
+			var enDigitArr = [], peDigitArr = [];
+			for (var i = 0; i < digit.length; i++) {
+				enDigitArr.push(digit.charCodeAt(i));
+			}
+			for (var j = 0; j < enDigitArr.length; j++) {
+				peDigitArr.push(String.fromCharCode(enDigitArr[j] + ((!!a && a == true) ? 1584 : 1728)));
+			}
+			return peDigitArr.join('');
+		});
+	};
+	window.persianDate = {};
+	window.persianDate.formatNumebr = false;
 	window.Class_DateRange = {
 		monthRange : {
 			1 : {
@@ -445,72 +458,100 @@
 				date : self.date(),
 				timezone : self.zone()
 			};
+			
+			
+			
 			function replaceFunction(input) {
+				
+				var formatToPersian = persianDate.formatNumebr;
+				
 				switch(input) {
 					// AM/PM
 					case("a"): {
-						return ((info.hour >= 12) ? 'ب ظ' : 'ق ظ');
+						if( formatToPersian)
+							return ((info.hour >= 12) ? 'ب ظ' : 'ق ظ');	
+						else
+							return ((info.hour >= 12) ? 'PM' : 'AM');	
 					}
 					// Hours (Int)
 					case("H"): {
-						//return self.toPersianDigit(info.hour);
-						return info.hour;
+						if( formatToPersian)
+							return self.toPersianDigit(info.hour);
+						else
+							return info.hour;
 					}
 					case("HH"): {
-						//return self.toPersianDigit(self.leftZeroFill(info.hour, 2));
-						return self.leftZeroFill(info.hour, 2);
+						if(formatToPersian)
+							return self.toPersianDigit(self.leftZeroFill(info.hour, 2));
+						else
+							return self.leftZeroFill(info.hour, 2);
 					}
 					// Minutes
 					case("m"): {
-						//return self.toPersianDigit(info.minute);
-						return info.minute;
+						if(formatToPersian)
+							return self.toPersianDigit(info.minute);
+						else
+							return info.minute;
 					}
 					// Two Digit Minutes
 					case("mm"): {
-						//return self.toPersianDigit(self.leftZeroFill(info.minute, 2));
-						return self.leftZeroFill(info.minute, 2);
+						if(formatToPersian)
+							return self.toPersianDigit(self.leftZeroFill(info.minute, 2));
+						else
+							return self.leftZeroFill(info.minute, 2);
 					}
 					// Second
 					case("s"): {
-						//return self.toPersianDigit(info.second);
-						return info.second;
+						if(formatToPersian)
+							return self.toPersianDigit(info.second);
+						else
+							return info.second;
 					}
 					case("ss"): {
-						//return self.toPersianDigit(self.leftZeroFill(info.second, 2));
-						return self.leftZeroFill(info.second, 2);
+						if(formatToPersian)
+							return self.toPersianDigit(self.leftZeroFill(info.second, 2));
+						else
+							return self.leftZeroFill(info.second, 2);
 					}
 					// Day (Int)
 					case("D"): {
-						//return self.toPersianDigit(self.leftZeroFill(info.date));
-						return self.leftZeroFill(info.date);
+						if(formatToPersian)
+							return self.toPersianDigit(self.leftZeroFill(info.date));
+						else
+							return self.leftZeroFill(info.date);
 					}
-					// Two Digit (Str)
+					// Return Two Digit
 					case("DD"): {
-						//return self.toPersianDigit(self.leftZeroFill(info.date, 2));
-						return self.leftZeroFill(info.date, 2);
+						if(formatToPersian)
+							return self.toPersianDigit(self.leftZeroFill(info.date, 2));
+						else
+							return self.leftZeroFill(info.date, 2);
 					}
-					// Two Digit (Str)
+					// Return Week Day abbr Name
 					case("DDD"): {
 						return self.weekRange[self.pDate.weekDayNumber].abbr.fa;
 					}
-					// Two Digit (Str)
+					// Return Week Day Full Name
 					case("DDDD"): {
 						return self.weekRange[self.pDate.weekDayNumber].name.fa;
 					}
-					// Two Digit (Str)
+					// Return Persian Day Name
 					case("dddd"): {
-						//return self.pDate.dayName;
-						return self.persianDaysName[self.pDate.monthDayNumber]
+							return self.persianDaysName[self.pDate.monthDayNumber]
 					}
 					// Month  (Int)
 					case("M"): {
-						//return self.toPersianDigit(info.month);
-						return info.month;
+						if(formatToPersian)
+							return self.toPersianDigit(info.month);
+						else
+							return info.month;
 					}
 					// Two Digit Month (Str)
 					case("MM"): {
-						//return self.toPersianDigit(self.leftZeroFill(info.month, 2));
-						return self.leftZeroFill(info.month, 2);
+						if(formatToPersian)
+							return self.toPersianDigit(self.leftZeroFill(info.month, 2));
+						else
+							return self.leftZeroFill(info.month, 2);
 					}
 					// Abbr String of Month (Str)
 					case("MMM"): {
@@ -524,22 +565,30 @@
 					// Two Digit Year (Str)
 					case("YY"): {
 						var yearDigitArray = info.year.toString().split("");
-						//return self.toPersianDigit(yearDigitArray[2] + yearDigitArray[3]);
+						if(formatToPersian)
+							return self.toPersianDigit(yearDigitArray[2] + yearDigitArray[3]);
+						else
 						return yearDigitArray[2] + yearDigitArray[3];
 
 					}
 					// Full Year (Int)
 					case("YYYY"): {
-						//return self.toPersianDigit(info.year);
-						return info.year;
+						if(formatToPersian)
+							return self.toPersianDigit(info.year);
+						else
+							return info.year;
 					}
 					case("Z"): {
-						//return self.toPersianDigit(info.timezone);
-						return info.timezone;
+						if(formatToPersian)
+							return self.toPersianDigit(info.timezone);
+						else
+							return info.timezone;
 					}
 					case("ZZ"): {
-						//return self.toPersianDigit(info.timezone);
-						return info.timezone;
+						if(formatToPersian)
+							return self.toPersianDigit(info.timezone);
+						else
+							return info.timezone;
 					}
 					case("L"): {
 						return self.format("YYYY/MM/DD");
