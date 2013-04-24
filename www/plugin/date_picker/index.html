@@ -4,50 +4,36 @@
 		<title>Persian Calendar</title>
 		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 		<link href="css/page.css" rel="stylesheet" type="text/css" />
-		<link href="css/main.css" rel="stylesheet" type="text/css" />
+		<link href="css/persianDatepicker.css" rel="stylesheet" type="text/css" />
 		<script type="text/javascript" src="../js/jquery/jquery.js"></script>
 		<script type="text/javascript" src="../js/jquery/jquery.tmpl.js"></script>
 		<script type="text/javascript" src="../js/common.js"></script>
-		<!-- Persian Date
-		-->
+		<!-- Persian Date -->
 		<script type="text/javascript" src="../js/persian.date.js"></script>
-		<!--
-		Persian Calendar
-		-->
-		<script type="text/javascript" src="js/class.base.js"></script>
-		<script type="text/javascript" src="js/view/p.datePicker.view.js"></script>
-		<script type="text/javascript" src="js/p.datePicker.js"></script>
-		<script type="text/javascript" src="js/view/grid.month.view.js"></script>
-		<script type="text/javascript" src="js/grid.month.js"></script>
+		<!-- Persian Calendar -->
+		<script type="text/javascript" src="js/persianDatepicker.js"></script>
 	</head>
 	<body>
 		<script type="text/javascript">
-			$(document).ready(function() {
-				$(".datePicker").pDatepicker({
-					// Implemented :)
-					viewFormat:"YYYY/ MM / DD   HH:mm:ss",
-					daysTitleFormat : "YYYY MMMM",
-					sendOption: "p",
-					position:[-10,100],
-					autoclose:true, // Close When Day Select
-					toolbox:false
-				});
-			});
+                  $(document).ready(function() {
+                        $(".datePicker").pDatepicker({
+                              viewFormat : "YYYY/ MM / DD   HH:mm:ss",
+                              daysTitleFormat : "YYYY MMMM",
+                              sendOption : "p",
+                              position : [-10, 100],
+                              autoclose : true, 
+                              toolbox : false
+                        });
+                  });
 		</script>
 		<div class="container" >
 			<input type="text" class="datePicker" name="startDate"  value="08-22-2011" />
 			<br/>
 			<br/>
-			<br/>
-			<br/>
 			<input type="text" class="datePicker" name="endDate"  value="08-22-2011" />
 			<br/>
 			<br/>
-			<br/>
-			<br/>
 			<input type="text" class="datePicker" name="endDate"   />
-			<br/>
-			<br/>
 			<br/>
 			<br/>
 			<input type="text" class="datePicker" name="endDate"  value="09-10-2012"  />

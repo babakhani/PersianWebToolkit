@@ -1,0 +1,48 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Persian Calendar</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<link href="css/page.css" rel="stylesheet" type="text/css" />
+		<link href="css/persianDatepicker.css" rel="stylesheet" type="text/css" />
+		
+		<script type="text/javascript" src="../js/jquery/jquery.js"></script>
+		<script type="text/javascript" src="../js/jquery/jquery.tmpl.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+		<!-- Persian Date -->
+		<script type="text/javascript" src="../js/persian.date.js"></script>
+		<!-- Persian Calendar -->
+		<script type="text/javascript" src="js/staff/class.base.sjs"></script>
+		<script type="text/javascript" src="js/staff/view/p.datePicker.view.sjs"></script>
+		<script type="text/javascript" src="js/staff/p.datePicker.sjs"></script>
+		<script type="text/javascript" src="js/staff/view/grid.month.view.sjs"></script>
+		<script type="text/javascript" src="js/staff/grid.month.sjs"></script>
+	</head>
+	<body>
+		<script type="text/javascript">
+                  $(document).ready(function() {
+                        $(".datePicker").pDatepicker({
+                              // Implemented :)
+                              viewFormat : "YYYY/ MM / DD   HH:mm:ss",
+                              daysTitleFormat : "YYYY MMMM",
+                              sendOption : "p",
+                              position : [-10, 100],
+                              autoclose : true, // Close When Day Select
+                              toolbox : false
+                        });
+                  });
+		</script>
+		<div class="container" >
+			<input type="text" class="datePicker" name="startDate"  value="08-22-2011" />
+			<br/>
+			<br/>
+			<input type="text" class="datePicker" name="endDate"  value="08-22-2011" />
+			<br/>
+			<br/>
+			<input type="text" class="datePicker" name="endDate"   />
+			<br/>
+			<br/>
+			<input type="text" class="datePicker" name="endDate"  value="09-10-2012"  />
+		</div>
+	</body>
+</html>
