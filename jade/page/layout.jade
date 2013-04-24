@@ -1,0 +1,15 @@
+!!! transitional
+html( xmlns = "http://www.w3.org/1999/xhtml", lang = "en", 'xml:lang' = "en" )
+  title this is first jade page 
+  head
+    include ../includes/head
+  block style
+  
+  block scripts  
+  body
+    include ../includes/page.header.html
+    #main_content_wrap.outer
+      block content
+      
+       
+    include ../includes/page.footer.jade
