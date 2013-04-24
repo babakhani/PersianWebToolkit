@@ -1,5 +1,5 @@
 (function(){
-      var Class_Base = {
+    var Class_Base = {
       init : function() {
             this.isInstance = true;
             this.raiseEvent('init');
@@ -295,23 +295,23 @@ var Views_pDatePicker = {
                         "<div class='${css.btnSwitch}' >${btnSwitchText}</div>" + //
                         "<div class='${css.btnPrev}' >${btnPrevText}</div>" + //
                         "</div>");
-                        
+
                         // Define Elements
                         self.element.main = $.tmpl("p_datePicker_tmpl", self.view_data).hide().appendTo($("body"));
                         self.container.dayView = $(self.element.main).children('.' + self.cssClass.dayView);
                         self.container.monthView = $(self.element.main).children('.' + self.cssClass.monthView).hide();
                         self.container.yearView = $(self.element.main).children('.' + self.cssClass.yearView).hide();
-                        self.container.toolbox =  $(self.element.main).children('.' + self.cssClass.toolbox);
+                        self.container.toolbox = $(self.element.main).children('.' + self.cssClass.toolbox);
                         self.view.fixPosition(self);
-                        
+
                         // Append Satff
                         self.dayPickerView = new self.view.DayPicker(self);
                         self.monthPickerView = new self.view.MonthPicker(self);
                         self.yearPickerView = new self.view.YearPicker(self);
-                        
-                        if( self.toolbox){
+
+                        if (self.toolbox) {
                               self.toolbox = new self.view.Toolbox(self);
-                        }else{
+                        } else {
                               self.container.toolbox.remove();
                         }
                         // SHow Hide Picker ------------------------
@@ -337,8 +337,8 @@ var Views_pDatePicker = {
                   },
 
                   fixPosition : function(self) {
-                        var inputX = self.inputElem.position().top;
-                        var inputY = self.inputElem.position().left;
+                        var inputX = self.inputElem.offset().top;
+                        var inputY = self.inputElem.offset().left;
 
                         if (self.position == "auto") {
                               var inputHeight = self.fullHeight(self.inputElem) + 5;
@@ -354,23 +354,23 @@ var Views_pDatePicker = {
                         }
                         return this;
                   },
-                  updateAllViews : function(self){
+                  updateAllViews : function(self) {
                         self.dayPickerView.updateView();
                         self.monthPickerView.updateView();
-                        self.yearPickerView.updateView();   
+                        self.yearPickerView.updateView();
                         return self;
                   },
                   // --------------------------------------------------------------------------- Toolbox
-                  Toolbox:function(self){
-                              this.container = self.container.toolbox;
-                              var todayUnix = new Date().valueOf();
-                              $("<div>امروز</div>").addClass(self.cssClass.btnToday).click(function(){
-                                    self.state.unixDate = todayUnix;
-                                    self._syncViewWidthSelected();
-                                    self._updateState("unix", todayUnix);
-                                    self.view.updateAllViews(self);                                   
-                                    return false;
-                              }).appendTo(this.container);
+                  Toolbox : function(self) {
+                        this.container = self.container.toolbox;
+                        var todayUnix = new Date().valueOf();
+                        $("<div>امروز</div>").addClass(self.cssClass.btnToday).click(function() {
+                              self.state.unixDate = todayUnix;
+                              self._syncViewWidthSelected();
+                              self._updateState("unix", todayUnix);
+                              self.view.updateAllViews(self);
+                              return false;
+                        }).appendTo(this.container);
                   },
                   // --------------------------------------------------------------------------- Day View
                   DayPicker : function(self) {
@@ -425,7 +425,7 @@ var Views_pDatePicker = {
                               if (self.state.viewYear == self.state.selectedYear && self.state.viewMonth == self.state.selectedMonth) {
                                     self.dayPickerView.mGrid.selectDate(self.state.unixDate);
                               }
-                              var pdateStr = new persianDate([self.state.viewYear, self.state.viewMonth]).format(self.daysTitleFormat) ;
+                              var pdateStr = new persianDate([self.state.viewYear, self.state.viewMonth]).format(self.daysTitleFormat);
                               self.element.dayBox.children("." + self.cssClass.btnSwitch).text(pdateStr)
                         };
                         return this;
@@ -545,7 +545,7 @@ var Views_pDatePicker = {
                               var year = pd.year();
                               var remaining = parseInt(year / 12) * 12;
                               self.element.yearHeaderBox.children("." + self.cssClass.btnSwitch).text(remaining.toString().toPersianDigit() + "-" + (remaining + 11).toString().toPersianDigit());
-                              
+
                               return this;
                         }
                         return this;
