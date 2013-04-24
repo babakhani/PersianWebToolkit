@@ -1,4 +1,12 @@
+/* Reset Public Style */
+.datepicker-plot-area table,
+.datepicker-plot-area th,
+.datepicker-plot-area td{
+      border: none;
+}
 .datepicker-plot-area{
+      font-size:12px;
+      font-family:tahoma;
 	-moz-user-select: none; 
         -khtml-user-select: none; 
         -webkit-user-select: none; 
