@@ -1,0 +1,10 @@
+.svn/;.svn;.DS_Store;.project
+/cherrypy
+/.externalToolBuilders
+/.settings
+.settings/;
+.externalToolBuilders/;
+.DS_Store
+.project
+.pydevproject
+build.xml
