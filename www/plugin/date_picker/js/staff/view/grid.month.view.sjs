@@ -43,7 +43,7 @@ var Views_MonthGrid = {
 				var addSpan = function(i){
 					var dayPartPersianDate = new persianDate([self.state.year, self.state.month, i]);
 					var dayPartUnixTime = dayPartPersianDate.valueOf();
-					self.daysList.push($("<span/>").text( self.toPersianDigit(i) ).data({day:i, unixDate : dayPartUnixTime}).appendTo($(this))[0]);
+					self.daysList.push($("<span/>").text( self._formatDigit(i) ).data({day:i, unixDate : dayPartUnixTime}).appendTo($(this))[0]);
 				}
 				$(self.daysBox).find("td").each(function(index) {
 					$(this).empty();

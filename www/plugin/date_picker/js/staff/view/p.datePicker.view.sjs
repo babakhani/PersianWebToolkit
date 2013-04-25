@@ -66,13 +66,18 @@ var Views_pDatePicker = {
                               self.element.main.hide();
                         });
                         $(document).click(function() {
+                              self.inputElem.blur();
                               self.element.main.hide();
                         });
-                        self.element.main.mousedown(function(e) {
+                        $(self.element.main).mousedown(function(e) {
                               e.stopPropagation();
                               return false;
                         });
                         // ----------------------------------------
+                        
+                        self.view.changeView(self, self.viewMode);
+                        
+                        
                         return this;
                   },
 
@@ -119,7 +124,7 @@ var Views_pDatePicker = {
                         self.view_data = {
                               css : self.cssClass,
                               btnNextText : "<",
-                              btnSwitchText : pd.format(self.daysTitleFormat),
+                              btnSwitchText : self._formatDigit(pd.format(self.daysTitleFormat)),
                               btnPrevText : ">"
                         };
                         self.element.dayBox = $.tmpl("p_datePicker_header", self.view_data).appendTo(this.container);
@@ -152,11 +157,12 @@ var Views_pDatePicker = {
                         this.mGrid = new MonthGrid({
                               container : self.container.dayView,
                               month : pd.month(),
-                              year : pd.year()
+                              year : pd.year(),
+                              persianDigit :  self.persianDigit
                         }).selectDate(self.state.unixDate).attachEvent("selectDay", function(x) {
                               self._updateState("unix", x);
                               self.dayPickerView.updateView();
-                              if (self.autoclose) {
+                              if (self.autoClose) {
                                     self.element.main.hide();
                               }
                         });
@@ -166,7 +172,7 @@ var Views_pDatePicker = {
                                     self.dayPickerView.mGrid.selectDate(self.state.unixDate);
                               }
                               var pdateStr = new persianDate([self.state.viewYear, self.state.viewMonth]).format(self.daysTitleFormat);
-                              self.element.dayBox.children("." + self.cssClass.btnSwitch).text(pdateStr)
+                              self.element.dayBox.children("." + self.cssClass.btnSwitch).text(self._formatDigit(pdateStr))
                         };
                         return this;
                   },
@@ -218,7 +224,7 @@ var Views_pDatePicker = {
                         this.updateView = function() {
                               this.defineSelectedMonth();
 
-                              self.element.monthBox.children("." + self.cssClass.btnSwitch).text(self.state.viewYear.toString().toPersianDigit())
+                              self.element.monthBox.children("." + self.cssClass.btnSwitch).text(  self._formatDigit(self.state.viewYear )  )
                         }
                         return this;
                   },
@@ -230,7 +236,7 @@ var Views_pDatePicker = {
                         self.view_data = {
                               css : self.cssClass,
                               btnNextText : "<",
-                              btnSwitchText : remaining.toString().toPersianDigit() + "-" + (remaining + 11).toString().toPersianDigit(),
+                              btnSwitchText :  self._formatDigit(remaining) + "-" +  self._formatDigit(remaining + 11),
                               btnPrevText : ">"
                         };
                         self.element.yearHeaderBox = $.tmpl("p_datePicker_header", self.view_data).appendTo(self.container.yearView);
@@ -244,7 +250,8 @@ var Views_pDatePicker = {
                               for (i in range(12)) {
                                     var yearItem = $("<div/>").addClass(self.cssClass.yearItem).data({
                                           year : (remaining + parseInt(i))
-                                    }).text((remaining + parseInt(i)).toString().toPersianDigit()).appendTo(self.container.yearView)
+                                    }).text(      self._formatDigit(remaining + parseInt(i)) )
+                                    .appendTo(self.container.yearView)
                                     if (year == remaining + parseInt(i)) {
                                           yearItem.addClass(self.cssClass.selectedYear)
                                     }
@@ -284,12 +291,10 @@ var Views_pDatePicker = {
                               var pd = new persianDate([self.state.viewYear, self.state.viewMonth]);
                               var year = pd.year();
                               var remaining = parseInt(year / 12) * 12;
-                              self.element.yearHeaderBox.children("." + self.cssClass.btnSwitch).text(remaining.toString().toPersianDigit() + "-" + (remaining + 11).toString().toPersianDigit());
-
+                              self.element.yearHeaderBox.children("." + self.cssClass.btnSwitch).text(  self._formatDigit(remaining) + "-" + self._formatDigit(remaining + 11));
                               return this;
                         }
                         return this;
-
                   },
                   changeView : function(self, viewName) {
                         switch(viewName) {
@@ -300,6 +305,7 @@ var Views_pDatePicker = {
                                     self.container.monthView.show();
                                     break;
                               case('year'):
+                                     self.container.dayView.hide();
                                     self.container.monthView.hide();
                                     self.yearPickerView.updateView()
                                     self.container.yearView.show();

@@ -23,6 +23,13 @@ var Class_MonthGrid = {
         firstWeekDayOfMonth : null,
         daysCount : null
     },
+    persianDigit : true,
+    _formatDigit : function(digit){
+            if(this.persianDigit)
+                 return digit.toString().toPersianDigit();            
+            else
+                 return digit; 
+    }, 
     events : {
         init : function() {
         },

@@ -8,7 +8,6 @@
 		
 		<script type="text/javascript" src="../js/jquery/jquery.js"></script>
 		<script type="text/javascript" src="../js/jquery/jquery.tmpl.js"></script>
-		<script type="text/javascript" src="../js/common.js"></script>
 		<!-- Persian Date -->
 		<script type="text/javascript" src="../js/persian.date.js"></script>
 		<!-- Persian Calendar -->
@@ -21,28 +20,33 @@
 	<body>
 		<script type="text/javascript">
                   $(document).ready(function() {
-                        $(".datePicker").pDatepicker({
+                        $(".datepicker").pDatepicker({
                               // Implemented :)
-                              viewFormat : "YYYY/ MM / DD   HH:mm:ss",
-                              daysTitleFormat : "YYYY MMMM",
-                              sendOption : "p",
+                              
+                              
+                              // Released Never Chnaged :)
+                              viewFormat : "YY/ MM / DD   HH:mm:ss",	                             
+                              viewMode: "year",
+                              persianDigit:false,
+                              toolbox : false,
+                              mask:"unix",
+                              autoClose : true, // Close When Day Select
                               position : [-10, 100],
-                              autoclose : true, // Close When Day Select
-                              toolbox : false
+                              //viewFormatter :function(date /* javascript date object*/){},
+					//maskFormatter :function(date /* javascript date object*/){}
                         });
+                        
+                        
+                        
+                        $("#example1").pDatepicker();
                   });
 		</script>
 		<div class="container" >
-			<input type="text" class="datePicker" name="startDate"  value="08-22-2011" />
+			<input id="example1" type="text"  name="startDate"  value="08-22-2011" />
 			<br/>
 			<br/>
-			<input type="text" class="datePicker" name="endDate"  value="08-22-2011" />
 			<br/>
-			<br/>
-			<input type="text" class="datePicker" name="endDate"   />
-			<br/>
-			<br/>
-			<input type="text" class="datePicker" name="endDate"  value="09-10-2012"  />
+			<input class="datepicker" name="example1"  />
 		</div>
 	</body>
 </html>
