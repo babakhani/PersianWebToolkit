@@ -2,8 +2,8 @@
 /cherrypy
 /.externalToolBuilders
 /.settings
-.settings/
-.externalToolBuilders/
+.settings/;
+.externalToolBuilders/;
 .DS_Store
 .project
 .pydevproject
