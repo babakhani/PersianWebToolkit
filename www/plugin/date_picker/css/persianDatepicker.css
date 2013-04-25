@@ -1,3 +1,4 @@
+
 /* Reset Public Style */
 .datepicker-plot-area table,
 .datepicker-plot-area th,
@@ -28,6 +29,8 @@
 	-webkit-background-clip: padding-box;
 	-moz-background-clip: padding;
 	background-clip: padding-box;
+	font-family: tahoma;
+	font-size:12px;
 }
 
 .datepicker-plot-area .datepicker-header{
@@ -130,6 +133,7 @@
 
 
 
+
 .datepicker-plot-area .datepicker-year-view .year-item,
 .datepicker-plot-area .datepicker-month-view .month-item{
 	display:block;
@@ -228,6 +232,7 @@
 	height: 26px;
 	padding: 0px;
 	margin: 0px;
+	
 }
 .datepicker-plot-area .datepicker-day-view .table-days td span:hover {
 	background-color: #EEEEF4;
@@ -320,8 +325,7 @@
 	background: -o-linear-gradient(top,  #fefcea 0%,#f1da36 100%); /* Opera 11.10+ */
 	background: -ms-linear-gradient(top,  #fefcea 0%,#f1da36 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  #fefcea 0%,#f1da36 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#f1da36',GradientType=0 ); /* IE6-9 */
-
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#f1da36',GradientType=0 ); /* IE6-9 */
 }
 
 

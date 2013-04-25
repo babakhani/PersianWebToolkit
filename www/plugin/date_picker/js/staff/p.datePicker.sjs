@@ -11,7 +11,7 @@
             $(this).each(function() {
                   this.pDatePicker = new pDatepicker(options, this);
             });
-            return this.pDatePicker;
+            return this;
       };
 })(jQuery);
 
@@ -146,6 +146,6 @@ var pDatepicker = function(options, mainElem) {
       var viewName = 'default';
       this.view = this.views[viewName];
       this.raiseEvent('render');
-      return this.view.render(this);
+      this.view.render(this);
       return this;
 };
