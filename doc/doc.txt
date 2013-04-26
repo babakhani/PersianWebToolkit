@@ -1,1 +1,0 @@
-jade ~/Workspace/PersianWTK/jade/ --out ~/Workspace/PersianWTK/ --watch
