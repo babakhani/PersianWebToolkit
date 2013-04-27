@@ -20,339 +20,314 @@
       };
       window.persianDate = {};
       window.persianDate.formatNumebr = false;
-      window.Class_DateRange = {
-            monthRange : {
-                  1 : {
-                        name : {
-                              fa : "فروردین"
-                        },
-                        abbr : {
-                              fa : "فرو"
-                        }
+      var monthRange = {
+            1 : {
+                  name : {
+                        fa : "فروردین"
                   },
-                  2 : {
-                        name : {
-                              fa : "اردیبهشت"
-                        },
-                        abbr : {
-                              fa : "ارد"
-                        }
-                  },
-                  3 : {
-                        name : {
-                              fa : "خرداد"
-                        },
-                        abbr : {
-                              fa : "خرد"
-                        }
-                  },
-                  4 : {
-                        name : {
-                              fa : "تیر"
-                        },
-                        abbr : {
-                              fa : "تیر"
-                        }
-                  },
-                  5 : {
-                        name : {
-                              fa : "مرداد"
-                        },
-                        abbr : {
-                              fa : "مرد"
-                        }
-                  },
-                  6 : {
-                        name : {
-                              fa : "شهریور"
-                        },
-                        abbr : {
-                              fa : "شهر"
-                        }
-                  },
-                  7 : {
-                        name : {
-                              fa : "مهر"
-                        },
-                        abbr : {
-                              fa : "مهر"
-                        }
-                  },
-                  8 : {
-                        name : {
-                              fa : "آبان"
-                        },
-                        abbr : {
-                              fa : "آبا"
-                        }
-
-                  },
-                  9 : {
-                        name : {
-                              fa : "آذر"
-                        },
-                        abbr : {
-                              fa : "آذر"
-                        }
-                  },
-                  10 : {
-                        name : {
-                              fa : "دی"
-                        },
-                        abbr : {
-                              fa : "دی"
-                        }
-                  },
-                  11 : {
-                        name : {
-                              fa : "بهمن"
-                        },
-                        abbr : {
-                              fa : "بهم"
-                        }
-                  },
-                  12 : {
-                        name : {
-                              fa : "اسفند"
-                        },
-                        abbr : {
-                              fa : "اسف"
-                        }
+                  abbr : {
+                        fa : "فرو"
                   }
             },
-            weekRange : {
-                  0 : {
-                        name : {
-                              fa : "شنبه"
-                        },
-                        abbr : {
-                              fa : "ش"
-                        }
+            2 : {
+                  name : {
+                        fa : "اردیبهشت"
                   },
-                  1 : {
-                        name : {
-                              fa : "یکشنبه"
-                        },
-                        abbr : {
-                              fa : "ی"
-                        }
-                  },
-                  2 : {
-                        name : {
-                              fa : "دوشنبه"
-                        },
-                        abbr : {
-                              fa : "د"
-                        }
-                  },
-                  3 : {
-                        name : {
-                              fa : "سه شنبه"
-                        },
-                        abbr : {
-                              fa : "س"
-                        }
-                  },
-                  4 : {
-                        name : {
-                              fa : "چهار شنبه"
-                        },
-                        abbr : {
-                              fa : "چ"
-                        }
-                  },
-                  5 : {
-                        name : {
-                              fa : "پنج شنبه"
-                        },
-                        abbr : {
-                              fa : "پ"
-                        }
-                  },
-                  6 : {
-                        name : {
-                              fa : "جمعه"
-                        },
-                        abbr : {
-                              fa : "ج"
-                        }
+                  abbr : {
+                        fa : "ارد"
                   }
             },
-            persianDaysName : ["اورمزد", "بهمن", "اوردیبهشت", "شهریور", "سپندارمذ", "خورداد", "امرداد", "دی به آذز", "آذز", "آبان", "خورشید", "ماه", "تیر", "گوش", "دی به مهر", "مهر", "سروش", "رشن", "فروردین", "بهرام", "رام", "باد", "دی به دین", "دین", "ارد", "اشتاد", "آسمان", "زامیاد", "مانتره سپند", "انارام", "زیادی"]
-      };
+            3 : {
+                  name : {
+                        fa : "خرداد"
+                  },
+                  abbr : {
+                        fa : "خرد"
+                  }
+            },
+            4 : {
+                  name : {
+                        fa : "تیر"
+                  },
+                  abbr : {
+                        fa : "تیر"
+                  }
+            },
+            5 : {
+                  name : {
+                        fa : "مرداد"
+                  },
+                  abbr : {
+                        fa : "مرد"
+                  }
+            },
+            6 : {
+                  name : {
+                        fa : "شهریور"
+                  },
+                  abbr : {
+                        fa : "شهر"
+                  }
+            },
+            7 : {
+                  name : {
+                        fa : "مهر"
+                  },
+                  abbr : {
+                        fa : "مهر"
+                  }
+            },
+            8 : {
+                  name : {
+                        fa : "آبان"
+                  },
+                  abbr : {
+                        fa : "آبا"
+                  }
 
-      var toPersianDigit = function(digit) {
+            },
+            9 : {
+                  name : {
+                        fa : "آذر"
+                  },
+                  abbr : {
+                        fa : "آذر"
+                  }
+            },
+            10 : {
+                  name : {
+                        fa : "دی"
+                  },
+                  abbr : {
+                        fa : "دی"
+                  }
+            },
+            11 : {
+                  name : {
+                        fa : "بهمن"
+                  },
+                  abbr : {
+                        fa : "بهم"
+                  }
+            },
+            12 : {
+                  name : {
+                        fa : "اسفند"
+                  },
+                  abbr : {
+                        fa : "اسف"
+                  }
+            }
+      }, weekRange = {
+            0 : {
+                  name : {
+                        fa : "شنبه"
+                  },
+                  abbr : {
+                        fa : "ش"
+                  }
+            },
+            1 : {
+                  name : {
+                        fa : "یکشنبه"
+                  },
+                  abbr : {
+                        fa : "ی"
+                  }
+            },
+            2 : {
+                  name : {
+                        fa : "دوشنبه"
+                  },
+                  abbr : {
+                        fa : "د"
+                  }
+            },
+            3 : {
+                  name : {
+                        fa : "سه شنبه"
+                  },
+                  abbr : {
+                        fa : "س"
+                  }
+            },
+            4 : {
+                  name : {
+                        fa : "چهار شنبه"
+                  },
+                  abbr : {
+                        fa : "چ"
+                  }
+            },
+            5 : {
+                  name : {
+                        fa : "پنج شنبه"
+                  },
+                  abbr : {
+                        fa : "پ"
+                  }
+            },
+            6 : {
+                  name : {
+                        fa : "جمعه"
+                  },
+                  abbr : {
+                        fa : "ج"
+                  }
+            }
+      }, persianDaysName = ["اورمزد", "بهمن", "اوردیبهشت", "شهریور", "سپندارمذ", "خورداد", "امرداد", "دی به آذز", "آذز", "آبان", "خورشید", "ماه", "تیر", "گوش", "دی به مهر", "مهر", "سروش", "رشن", "فروردین", "بهرام", "رام", "باد", "دی به دین", "دین", "ارد", "اشتاد", "آسمان", "زامیاد", "مانتره سپند", "انارام", "زیادی"], toPersianDigit = function(digit) {
             return digit.toString().toPersianDigit();
-      };
-      var isArray = function(input) {
+      }, isArray = function(input) {
             return Object.prototype.toString.call(input) === '[object Array]';
-      }
-      var isString = function(input) {
+      }, isString = function(input) {
             return typeof input == "string" ? true : false;
-      }
-      var isNumber = function(input) {
+      }, isNumber = function(input) {
             return typeof input == "number" ? true : false;
-      };
-      var isDate = function(input) {
+      }, isDate = function(input) {
             return input instanceof Date;
-      };
-      var isUndefined = function(input) {
+      }, isUndefined = function(input) {
             if ( typeof input == "undefined")
                   return true;
             else
                   return false;
-      };
-      var leftZeroFill = function(number, targetLength) {
+      }, leftZeroFill = function(number, targetLength) {
             var output = number + '';
             while (output.length < targetLength) {
                   output = '0' + output;
             }
             return output;
-      };
-      var absRound = function(number) {
+      }, absRound = function(number) {
             if (number < 0) {
                   return Math.ceil(number);
             } else {
                   return Math.floor(number);
             }
-      };
-      var mod = function(a, b) {
+      }, mod = function(a, b) {
             return a - (b * Math.floor(a / b));
-      };
-      
-
-      var Class_DateConvertor = {
-            GREGORIAN_EPOCH : 1721425.5,
-            PERSIAN_EPOCH : 1948320.5,
-            jwday : function jwday(j) {
-                  return mod(Math.floor((j + 1.5)), 7);
-            },
-            //  LEAP_GREGORIAN  --  Is a given year in the Gregorian calendar a leap year ?
-            isLeapGregorian : function(year) {
-                  return ((year % 4) == 0) && (!(((year % 100) == 0) && ((year % 400) != 0)));
-            },
-            isLeapPersian : function(year) {
-                  return ((((((year - ((year > 0) ? 474 : 473)) % 2820) + 474) + 38) * 682) % 2816) < 682;
-            },
-            //  GREGORIAN_TO_JD  --  Determine Julian day number from Gregorian calendar date
-            gregorianToJd : function(year, month, day) {
-                  return (this.GREGORIAN_EPOCH - 1) + (365 * (year - 1)) + Math.floor((year - 1) / 4) + (-Math.floor((year - 1) / 100)) + Math.floor((year - 1) / 400) + Math.floor((((367 * month) - 362) / 12) + ((month <= 2) ? 0 : (this.isLeapGregorian(year) ? -1 : -2)
-                  ) + day);
-            },
-            //  JD_TO_GREGORIAN  --  Calculate Gregorian calendar date from Julian day
-            jdToGregorian : function(jd) {
-                  var wjd, depoch, quadricent, dqc, cent, dcent, quad, dquad, yindex, dyindex, year, yearday, leapadj;
-                  wjd = Math.floor(jd - 0.5) + 0.5;
-                  depoch = wjd - this.GREGORIAN_EPOCH;
-                  quadricent = Math.floor(depoch / 146097);
-                  dqc = mod(depoch, 146097);
-                  cent = Math.floor(dqc / 36524);
-                  dcent = mod(dqc, 36524);
-                  quad = Math.floor(dcent / 1461);
-                  dquad = mod(dcent, 1461);
-                  yindex = Math.floor(dquad / 365);
-                  year = (quadricent * 400) + (cent * 100) + (quad * 4) + yindex;
-                  if (!((cent == 4) || (yindex == 4))) {
-                        year++;
-                  }
-                  yearday = wjd - this.gregorianToJd(year, 1, 1);
-                  leapadj = ((wjd < this.gregorianToJd(year, 3, 1)) ? 0 : (this.isLeapGregorian(year) ? 1 : 2)
-                  );
-                  month = Math.floor((((yearday + leapadj) * 12) + 373) / 367);
-                  day = (wjd - this.gregorianToJd(year, month, 1)) + 1;
-                  return new Array(year, month, day);
-            },
-            //  PERSIAN_TO_JD  --  Determine Julian day from Persian date
-            persianToJd : function(year, month, day) {
-                  mod = function(a, b) {
-                        return a - (b * Math.floor(a / b));
-                  };
-
-                  var epbase, epyear;
-                  epbase = year - ((year >= 0) ? 474 : 473);
-                  epyear = 474 + mod(epbase, 2820);
-                  return day + ((month <= 7) ? ((month - 1) * 31) : (((month - 1) * 30) + 6)
-                  ) + Math.floor(((epyear * 682) - 110) / 2816) + (epyear - 1) * 365 + Math.floor(epbase / 2820) * 1029983 + (this.PERSIAN_EPOCH - 1);
-            },
-            //  JD_TO_PERSIAN  --  Calculate Persian date from Julian day
-            jdToPersian : function(jd) {
-                  var year, month, day, depoch, cycle, cyear, ycycle, aux1, aux2, yday;
-                  jd = Math.floor(jd) + 0.5;
-                  depoch = jd - this.persianToJd(475, 1, 1);
-                  cycle = Math.floor(depoch / 1029983);
-                  cyear = mod(depoch, 1029983);
-                  if (cyear == 1029982) {
-                        ycycle = 2820;
-                  } else {
-                        aux1 = Math.floor(cyear / 366);
-                        aux2 = mod(cyear, 366);
-                        ycycle = Math.floor(((2134 * aux1) + (2816 * aux2) + 2815) / 1028522) + aux1 + 1;
-                  }
-                  year = ycycle + (2820 * cycle) + 474;
-                  if (year <= 0) {
-                        year--;
-                  }
-                  yday = (jd - this.persianToJd(year, 1, 1)) + 1;
-                  month = (yday <= 186) ? Math.ceil(yday / 31) : Math.ceil((yday - 6) / 30);
-                  day = (jd - this.persianToJd(year, month, 1)) + 1;
-                  return new Array(year, month, day);
-            },
-            calcPersian : function(year, month, day) {
-                  var date, j;
-                  var j = this.persianToJd(year, month, day);
-                  var date = this.jdToGregorian(j);
-                  return new Array(date[0], date[1] - 1, date[2]);
-            },
-            //  calcGregorian  --  Perform calculation starting with a Gregorian date
-            calcGregorian : function(year, month, day) {
-                  var j;
-                  //  Update Julian day
-                  var j = this.gregorianToJd(year, month + 1, day) + (Math.floor(0 + 60 * (0 + 60 * 0) + 0.5) / 86400.0);
-                  //  Update Persian Calendar
-                  var perscal = this.jdToPersian(j);
-                  var weekday = this.jwday(j);
-                  return new Array(perscal[0], perscal[1], perscal[2], weekday);
-            },
-            //Converts a gregorian date to Jalali date for different formats
-            toPersianDate : function(gd) {
-                  var pa = this.calcGregorian(gd.getFullYear(), gd.getMonth(), gd.getDate());
-                  var output = {};
-                  output.monthDayNumber = pa[2] - 1;
-                  // TODO: simplify this code
-                  // Sync Gregorian Week Index Width Persian  week Index
-                  if (pa[3] == 6) {
-                        output.weekDayNumber = 0;
-                  } else {
-                        output.weekDayNumber = pa[3] + 1;
-                  }
-                  output.year = pa[0];
-                  output.month = pa[1];
-                  output.day = pa[3];
-                  output.date = pa[2];
-                  output.hours = gd.getHours();
-                  output.minutes = ((gd.getMinutes() < 10) ? ('0' + gd.getMinutes()) : (gd.getMinutes()));
-                  output.seconds = gd.getSeconds();
-                  output.milliseconds = gd.getMilliseconds();
-                  output.timeZoneOffset = gd.getTimezoneOffset();
-                  return output;
-            },
-            persianArrayToGregorianDate : function(parray) {
-                  // Howha : javascript Cant Parse this array truly 2011,2,20
-                  var pd = this.calcPersian(parray[0] ? parray[0] : 0, parray[1] ? parray[1] : 1, parray[2] ? parray[2] : 1);
-                  var gDate = new Date(pd[0], pd[1], pd[2]);
-                  gDate.setYear(pd[0]);
-                  gDate.setMonth(pd[1]);
-                  gDate.setDate(pd[2]);
-                  // TODO:
-
-                  gDate.setHours(parray[3] ? parray[3] : 0);
-                  gDate.setMinutes(parray[4] ? parray[4] : 0);
-                  gDate.setSeconds(parray[5] ? parray[5] : 0);
-                  return gDate;
-            },
-            getPersianArrayFromPDate : function(pDate) {
-                  return [pDate.year, pDate.month, pDate.date, pDate.hours, pDate.minutes, pDate.seconds, pDate.milliseconds];
+      }, GREGORIAN_EPOCH = 1721425.5, PERSIAN_EPOCH = 1948320.5, jwday = function jwday(j) {
+            return mod(Math.floor((j + 1.5)), 7);
+      },
+      //  LEAP_GREGORIAN  --  Is a given year in the Gregorian calendar a leap year ?
+      isLeapGregorian = function(year) {
+            return ((year % 4) == 0) && (!(((year % 100) == 0) && ((year % 400) != 0)));
+      }, isLeapPersian = function(year) {
+            return ((((((year - ((year > 0) ? 474 : 473)) % 2820) + 474) + 38) * 682) % 2816) < 682;
+      },
+      //  GREGORIAN_TO_JD  --  Determine Julian day number from Gregorian calendar date
+      gregorianToJd = function(year, month, day) {
+            return (GREGORIAN_EPOCH - 1) + (365 * (year - 1)) + Math.floor((year - 1) / 4) + (-Math.floor((year - 1) / 100)) + Math.floor((year - 1) / 400) + Math.floor((((367 * month) - 362) / 12) + ((month <= 2) ? 0 : (isLeapGregorian(year) ? -1 : -2)
+            ) + day);
+      },
+      //  JD_TO_GREGORIAN  --  Calculate Gregorian calendar date from Julian day
+      jdToGregorian = function(jd) {
+            var wjd, depoch, quadricent, dqc, cent, dcent, quad, dquad, yindex, dyindex, year, yearday, leapadj;
+            wjd = Math.floor(jd - 0.5) + 0.5;
+            depoch = wjd - GREGORIAN_EPOCH;
+            quadricent = Math.floor(depoch / 146097);
+            dqc = mod(depoch, 146097);
+            cent = Math.floor(dqc / 36524);
+            dcent = mod(dqc, 36524);
+            quad = Math.floor(dcent / 1461);
+            dquad = mod(dcent, 1461);
+            yindex = Math.floor(dquad / 365);
+            year = (quadricent * 400) + (cent * 100) + (quad * 4) + yindex;
+            if (!((cent == 4) || (yindex == 4))) {
+                  year++;
             }
+            yearday = wjd - gregorianToJd(year, 1, 1);
+            leapadj = ((wjd < gregorianToJd(year, 3, 1)) ? 0 : (isLeapGregorian(year) ? 1 : 2)
+            );
+            month = Math.floor((((yearday + leapadj) * 12) + 373) / 367);
+            day = (wjd - gregorianToJd(year, month, 1)) + 1;
+            return new Array(year, month, day);
+      },
+      //  PERSIAN_TO_JD  --  Determine Julian day from Persian date
+      persianToJd = function(year, month, day) {
+            mod = function(a, b) {
+                  return a - (b * Math.floor(a / b));
+            };
+
+            var epbase, epyear;
+            epbase = year - ((year >= 0) ? 474 : 473);
+            epyear = 474 + mod(epbase, 2820);
+            return day + ((month <= 7) ? ((month - 1) * 31) : (((month - 1) * 30) + 6)
+            ) + Math.floor(((epyear * 682) - 110) / 2816) + (epyear - 1) * 365 + Math.floor(epbase / 2820) * 1029983 + (PERSIAN_EPOCH - 1);
+      },
+      //  JD_TO_PERSIAN  --  Calculate Persian date from Julian day
+      jdToPersian = function(jd) {
+            var year, month, day, depoch, cycle, cyear, ycycle, aux1, aux2, yday;
+            jd = Math.floor(jd) + 0.5;
+            depoch = jd - persianToJd(475, 1, 1);
+            cycle = Math.floor(depoch / 1029983);
+            cyear = mod(depoch, 1029983);
+            if (cyear == 1029982) {
+                  ycycle = 2820;
+            } else {
+                  aux1 = Math.floor(cyear / 366);
+                  aux2 = mod(cyear, 366);
+                  ycycle = Math.floor(((2134 * aux1) + (2816 * aux2) + 2815) / 1028522) + aux1 + 1;
+            }
+            year = ycycle + (2820 * cycle) + 474;
+            if (year <= 0) {
+                  year--;
+            }
+            yday = (jd - persianToJd(year, 1, 1)) + 1;
+            month = (yday <= 186) ? Math.ceil(yday / 31) : Math.ceil((yday - 6) / 30);
+            day = (jd - persianToJd(year, month, 1)) + 1;
+            return new Array(year, month, day);
+      }, calcPersian = function(year, month, day) {
+            var date, j;
+            var j = persianToJd(year, month, day);
+            var date = jdToGregorian(j);
+            return new Array(date[0], date[1] - 1, date[2]);
+      },
+      //  calcGregorian  --  Perform calculation starting with a Gregorian date
+      calcGregorian = function(year, month, day) {
+            var j;
+            //  Update Julian day
+            var j = gregorianToJd(year, month + 1, day) + (Math.floor(0 + 60 * (0 + 60 * 0) + 0.5) / 86400.0);
+            //  Update Persian Calendar
+            var perscal = jdToPersian(j);
+            var weekday = jwday(j);
+            return new Array(perscal[0], perscal[1], perscal[2], weekday);
+      },
+      //Converts a gregorian date to Jalali date for different formats
+      toPersianDate = function(gd) {
+            var pa = calcGregorian(gd.getFullYear(), gd.getMonth(), gd.getDate());
+            var output = {};
+            output.monthDayNumber = pa[2] - 1;
+            // TODO: simplify this code
+            // Sync Gregorian Week Index Width Persian  week Index
+            if (pa[3] == 6) {
+                  output.weekDayNumber = 0;
+            } else {
+                  output.weekDayNumber = pa[3] + 1;
+            }
+            output.year = pa[0];
+            output.month = pa[1];
+            output.day = pa[3];
+            output.date = pa[2];
+            output.hours = gd.getHours();
+            output.minutes = ((gd.getMinutes() < 10) ? ('0' + gd.getMinutes()) : (gd.getMinutes()));
+            output.seconds = gd.getSeconds();
+            output.milliseconds = gd.getMilliseconds();
+            output.timeZoneOffset = gd.getTimezoneOffset();
+            return output;
+      }, persianArrayToGregorianDate = function(parray) {
+            // Howha : javascript Cant Parse this array truly 2011,2,20
+            var pd = calcPersian(parray[0] ? parray[0] : 0, parray[1] ? parray[1] : 1, parray[2] ? parray[2] : 1);
+            var gDate = new Date(pd[0], pd[1], pd[2]);
+            gDate.setYear(pd[0]);
+            gDate.setMonth(pd[1]);
+            gDate.setDate(pd[2]);
+            // TODO:
+
+            gDate.setHours(parray[3] ? parray[3] : 0);
+            gDate.setMinutes(parray[4] ? parray[4] : 0);
+            gDate.setSeconds(parray[5] ? parray[5] : 0);
+            return gDate;
+      }, getPersianArrayFromPDate = function(pDate) {
+            return [pDate.year, pDate.month, pDate.date, pDate.hours, pDate.minutes, pDate.seconds, pDate.milliseconds];
       };
 
       var Duration = function(duration) {
@@ -405,7 +380,7 @@
             }
       };
 
-      var Class_Duration = {
+      var Class_PersianDate = {
             duration : function(input, key) {
                   var isDuration = this.isDuration(input), isNumber = ( typeof input === 'number'), duration = ( isDuration ? input._data : ( isNumber ? {} : input)), ret;
                   if (isNumber) {
@@ -422,10 +397,8 @@
             },
             humanize : function() {
                   return "Must Implement";
-            }
-      }
+            },
 
-      var Class_PersianDate = {
             //.add('days', 7);
             add : function(key, input) {
                   var d = this.duration(input, key).valueOf();
@@ -518,15 +491,15 @@
                               }
                               // Return Week Day abbr Name
                               case("DDD"): {
-                                    return self.weekRange[self.pDate.weekDayNumber].abbr.fa;
+                                    return weekRange[self.pDate.weekDayNumber].abbr.fa;
                               }
                               // Return Week Day Full Name
                               case("DDDD"): {
-                                    return self.weekRange[self.pDate.weekDayNumber].name.fa;
+                                    return weekRange[self.pDate.weekDayNumber].name.fa;
                               }
                               // Return Persian Day Name
                               case("dddd"): {
-                                    return self.persianDaysName[self.pDate.monthDayNumber]
+                                    return persianDaysName[self.pDate.monthDayNumber]
                               }
                               // Month  (Int)
                               case("M"): {
@@ -544,11 +517,11 @@
                               }
                               // Abbr String of Month (Str)
                               case("MMM"): {
-                                    return self.monthRange[info.month].abbr.fa;
+                                    return monthRange[info.month].abbr.fa;
                               }
                               // Full String name of Month (Str)
                               case("MMMM"): {
-                                    return self.monthRange[info.month].name.fa;
+                                    return monthRange[info.month].name.fa;
                               }
                               // Year
                               // Two Digit Year (Str)
@@ -767,7 +740,7 @@
                   return output;
             },
             isLeapYear : function() {
-                  return this.isLeapPersian(this.year());
+                  return isLeapPersian(this.year());
             },
             daysInMonth : function(year, month) {
                   if (month < 1 || month > 12)
@@ -776,7 +749,7 @@
                         return 31;
                   if (month < 12)
                         return 30;
-                  if (this.isLeapPersian(year))
+                  if (isLeapPersian(year))
                         return 30;
                   return 29;
                   return "Must Implement";
@@ -835,9 +808,9 @@
             // Day of Months
             date : function(input) {
                   if (input) {
-                        var pDateArray = this.getPersianArrayFromPDate(this.pDate);
+                        var pDateArray = getPersianArrayFromPDate(this.pDate);
                         pDateArray[2] = input;
-                        this.gDate = this.persianArrayToGregorianDate(pDateArray);
+                        this.gDate = persianArrayToGregorianDate(pDateArray);
                         this._updatePDate();
                   } else {
                         return this.pDate.date;
@@ -849,9 +822,9 @@
             },
             month : function(input) {
                   if (input) {
-                        var pDateArray = this.getPersianArrayFromPDate(this.pDate);
+                        var pDateArray = getPersianArrayFromPDate(this.pDate);
                         pDateArray[1] = input;
-                        this.gDate = this.persianArrayToGregorianDate(pDateArray);
+                        this.gDate = persianArrayToGregorianDate(pDateArray);
                         this._updatePDate();
                   } else {
                         return this.pDate.month;
@@ -859,9 +832,9 @@
             },
             year : function(input) {
                   if (input) {
-                        var pDateArray = this.getPersianArrayFromPDate(this.pDate);
+                        var pDateArray = getPersianArrayFromPDate(this.pDate);
                         pDateArray[0] = input;
-                        this.gDate = this.persianArrayToGregorianDate(pDateArray);
+                        this.gDate = persianArrayToGregorianDate(pDateArray);
                         this._updatePDate();
                   } else {
                         return this.pDate.year;
@@ -875,13 +848,13 @@
                         return 31;
                   if (month < 12)
                         return 30;
-                  if (this.isLeapPersian(year))
+                  if (isLeapPersian(year))
                         return 30;
                   return 29;
             },
             getFirstWeekDayOfMonth : function(year, month) {
-                  var dateArray = Class_DateConvertor.calcPersian(year, month, 1);
-                  var pdate = Class_DateConvertor.calcGregorian(dateArray[0], dateArray[1], dateArray[2]);
+                  var dateArray = calcPersian(year, month, 1);
+                  var pdate = calcGregorian(dateArray[0], dateArray[1], dateArray[2]);
                   if (pdate[3] + 2 == 8) {
                         return 1;
                   } else if (pdate[3] + 2 == 7) {
@@ -896,7 +869,10 @@
             },
             version : 0.1,
             _updatePDate : function() {
-                  this.pDate = this.toPersianDate(this.gDate);
+                  this.pDate = toPersianDate(this.gDate);
+            },
+            valueOf:function(){
+                  return this._valueOf();
             }
       };
 
@@ -904,17 +880,6 @@
       // ***************************** Constructor
       //##########################################
       persianDate = function(input) {
-            this._inherit = function(array) {
-                  for (cl in array) {
-                        var obj1 = array[cl]
-                        var self = this;
-                        for (var attrname in obj1) {
-                              self[attrname] = obj1[attrname];
-                        };
-                  }
-                  return self;
-            };
-            this._inherit([Class_DateConvertor, Class_DateRange, Class_Duration]);
             // Convert Any thing to Gregorian Date
             if (isUndefined(input)) {
                   this.gDate = new Date();
@@ -923,18 +888,19 @@
             } else if (isArray(input)) {
                   //  Encapsulate Input Array
                   var arrayInput = input.slice();
-                  this.gDate = this.persianArrayToGregorianDate(arrayInput);
+                  this.gDate = persianArrayToGregorianDate(arrayInput);
             } else if (isNumber(input)) {
                   this.gDate = new Date(input);
             } else if ( input instanceof persianDate) {
                   this.gDate = input.gDate;
             }
-            this.pDate = this.toPersianDate(this.gDate);
-            // Fix IE 8
+            this.pDate = toPersianDate(this.gDate);
+            /* Fix IE 8
             // Some issue appear when valuOf is extended function
             this.valueOf = function() {
                   return this._valueOf();
             };
+            */
             return this;
       };
 
