@@ -8,18 +8,18 @@
 (function() {
       String.prototype.toPersianDigit = function(a) {
             return this.replace(/\d+/g, function(digit) {
-                  var enDigitArr = [], peDigitArr = [];
-                  for (var i = 0; i < digit.length; i++) {
+                  var enDigitArr = [], peDigitArr = [],i,j;
+                  for (i = 0; i < digit.length; i+=1) {
                         enDigitArr.push(digit.charCodeAt(i));
                   }
-                  for (var j = 0; j < enDigitArr.length; j++) {
-                        peDigitArr.push(String.fromCharCode(enDigitArr[j] + ((!!a && a == true) ? 1584 : 1728)));
+                  for (j = 0; j < enDigitArr.length; j+=1) {
+                        peDigitArr.push(String.fromCharCode(enDigitArr[j] + ((!!a && a === true) ? 1584 : 1728)));
                   }
                   return peDigitArr.join('');
             });
       };
-      window.persianDate = {};
-      window.persianDate.formatNumebr = false;
+      window.PersianDate = {};
+      window.PersianDate.formatNumebr = false;
       var monthRange = {
             1 : {
                   name : {
@@ -180,13 +180,13 @@
       }, isArray = function(input) {
             return Object.prototype.toString.call(input) === '[object Array]';
       }, isString = function(input) {
-            return typeof input == "string" ? true : false;
+            return typeof input === "string" ? true : false;
       }, isNumber = function(input) {
-            return typeof input == "number" ? true : false;
+            return typeof input === "number" ? true : false;
       }, isDate = function(input) {
             return input instanceof Date;
       }, isUndefined = function(input) {
-            if ( typeof input == "undefined")
+            if ( typeof input === "undefined")
                   return true;
             else
                   return false;
@@ -204,12 +204,12 @@
             }
       }, mod = function(a, b) {
             return a - (b * Math.floor(a / b));
-      }, GREGORIAN_EPOCH = 1721425.5, PERSIAN_EPOCH = 1948320.5, jwday = function jwday(j) {
+      }, GREGORIAN_EPOCH = 1721425.5, PERSIAN_EPOCH = 1948320.5, jwday = function (j) {
             return mod(Math.floor((j + 1.5)), 7);
       },
       //  LEAP_GREGORIAN  --  Is a given year in the Gregorian calendar a leap year ?
       isLeapGregorian = function(year) {
-            return ((year % 4) == 0) && (!(((year % 100) == 0) && ((year % 400) != 0)));
+            return ((year % 4) == 0) && (!(((year % 100) === 0) && ((year % 400) != 0)));
       }, isLeapPersian = function(year) {
             return ((((((year - ((year > 0) ? 474 : 473)) % 2820) + 474) + 38) * 682) % 2816) < 682;
       },
@@ -260,7 +260,7 @@
             depoch = jd - persianToJd(475, 1, 1);
             cycle = Math.floor(depoch / 1029983);
             cyear = mod(depoch, 1029983);
-            if (cyear == 1029982) {
+            if (cyear === 1029982) {
                   ycycle = 2820;
             } else {
                   aux1 = Math.floor(cyear / 366);
@@ -269,7 +269,7 @@
             }
             year = ycycle + (2820 * cycle) + 474;
             if (year <= 0) {
-                  year--;
+                  year-=1;
             }
             yday = (jd - persianToJd(year, 1, 1)) + 1;
             month = (yday <= 186) ? Math.ceil(yday / 31) : Math.ceil((yday - 6) / 30);
@@ -283,12 +283,11 @@
       },
       //  calcGregorian  --  Perform calculation starting with a Gregorian date
       calcGregorian = function(year, month, day) {
-            var j;
             //  Update Julian day
-            var j = gregorianToJd(year, month + 1, day) + (Math.floor(0 + 60 * (0 + 60 * 0) + 0.5) / 86400.0);
+            var j = gregorianToJd(year, month + 1, day) + (Math.floor(0 + 60 * (0 + 60 * 0) + 0.5) / 86400.0),
             //  Update Persian Calendar
-            var perscal = jdToPersian(j);
-            var weekday = jwday(j);
+            perscal = jdToPersian(j),
+            weekday = jwday(j);
             return new Array(perscal[0], perscal[1], perscal[2], weekday);
       },
       //Converts a gregorian date to Jalali date for different formats
@@ -328,17 +327,18 @@
             return gDate;
       }, getPersianArrayFromPDate = function(pDate) {
             return [pDate.year, pDate.month, pDate.date, pDate.hours, pDate.minutes, pDate.seconds, pDate.milliseconds];
-      };
-
-      var Duration = function(duration) {
+      }
+      //##########################################
+      // ***************************** Constructor Duration
+      //##########################################
+      ,Duration = function(duration) {
             var absRound = function(number) {
                   if (number < 0) {
                         return Math.ceil(number);
                   } else {
                         return Math.floor(number);
                   }
-            };
-            var data = this._data = {}, years = duration.years || duration.y || 0, months = duration.months || duration.M || 0, weeks = duration.weeks || duration.w || 0, days = duration.days || duration.d || 0, hours = duration.hours || duration.h || 0, minutes = duration.minutes || duration.m || 0, seconds = duration.seconds || duration.s || 0, milliseconds = duration.milliseconds || duration.ms || 0;
+            },data = this._data = {}, years = duration.years || duration.y || 0, months = duration.months || duration.M || 0, weeks = duration.weeks || duration.w || 0, days = duration.days || duration.d || 0, hours = duration.hours || duration.h || 0, minutes = duration.minutes || duration.m || 0, seconds = duration.seconds || duration.s || 0, milliseconds = duration.milliseconds || duration.ms || 0;
             // representation for dateAddRemove
             this._milliseconds = milliseconds + seconds * (1e3) + minutes * (6e4) + hours * (36e5);
             // Because of dateAddRemove treats 24 hours as different from a
@@ -366,26 +366,11 @@
             data.years = years;
             return this;
 
-      };
-
-      Duration.prototype = {
-            weeks : function() {
-                  return "Must Implement";
-            },
-            valueOf : function() {
-                  return this._milliseconds + this._days * (864e5) + this._months * (2592e6);
-            },
-            humanize : function(withSuffix) {
-                  return "Must Implement";
-            }
-      };
-
-    
-
+      }
       //##########################################
-      // ***************************** Constructor
+      // ***************************** Constructor Of Date
       //##########################################
-      persianDate = function(input) {
+      ,PersianDate = function(input) {
             // Convert Any thing to Gregorian Date
             if (isUndefined(input)) {
                   this.gDate = new Date();
@@ -397,20 +382,33 @@
                   this.gDate = persianArrayToGregorianDate(arrayInput);
             } else if (isNumber(input)) {
                   this.gDate = new Date(input);
-            } else if ( input instanceof persianDate) {
+            } else if ( input instanceof PersianDate) {
                   this.gDate = input.gDate;
             }
             this.pDate = toPersianDate(this.gDate);
             /* Fix IE 8
-            // Some issue appear when valuOf is extended function
-            this.valueOf = function() {
-                  return this._valueOf();
-            };
-            */
+             // Some issue appear when valuOf is extended function
+             this.valueOf = function() {
+             return this._valueOf();
+             };
+             */
             return this;
       };
+      
+      
+      Duration.prototype = {
+            weeks : function() {
+                  return "Must Implement";
+            },
+            valueOf : function() {
+                  return this._milliseconds + this._days * (864e5) + this._months * (2592e6);
+            },
+            humanize : function(withSuffix) {
+                  return "Must Implement";
+            }
+      }
 
-      persianDate.prototype =  {
+      PersianDate.prototype = {
             duration : function(input, key) {
                   var isDuration = this.isDuration(input), isNumber = ( typeof input === 'number'), duration = ( isDuration ? input._data : ( isNumber ? {} : input)), ret;
                   if (isNumber) {
@@ -431,19 +429,19 @@
 
             //.add('days', 7);
             add : function(key, input) {
-                  var d = this.duration(input, key).valueOf();
-                  var newUnixDate = this.gDate.valueOf() + d;
-                  return new persianDate(newUnixDate);
+                  var d = this.duration(input, key).valueOf()
+                  ,newUnixDate = this.gDate.valueOf() + d;
+                  return new PersianDate(newUnixDate);
             },
             subtract : function(key, input) {
                   var d = this.duration(input, key).valueOf()
-                  var newUnixDate = this.gDate.valueOf() - d;
-                  return new persianDate(newUnixDate);
+                  ,newUnixDate = this.gDate.valueOf() - d;
+                  return new PersianDate(newUnixDate);
             },
             format : function(inputString) {
-                  var self = this;
-                  var formattingTokens = /(\[[^\[]*\])|(\\)?(Mo|MM?M?M?|Do|DDDo|DD?D?D?|dddd?|do?|w[o|w]?|YYYY|YY|a|A|hh?|HH?|mm?|ss?|SS?S?|zz?|ZZ?|LT|LL?L?L?)/g;
-                  var info = {
+                  var self = this
+                  ,formattingTokens = /(\[[^\[]*\])|(\\)?(Mo|MM?M?M?|Do|DDDo|DD?D?D?|dddd?|do?|w[o|w]?|YYYY|YY|a|A|hh?|HH?|mm?|ss?|SS?S?|zz?|ZZ?|LT|LL?L?L?)/g
+                  ,info = {
                         year : self.year(),
                         month : self.month(),
                         hour : self.hours(),
@@ -455,7 +453,7 @@
 
                   function replaceFunction(input) {
 
-                        var formatToPersian = persianDate.formatNumebr;
+                        var formatToPersian = PersianDate.formatNumebr;
 
                         switch(input) {
                               // AM/PM
@@ -620,7 +618,7 @@
                   return this.gDate._d;
             },
             diff : function(input, val, asFloat) {
-                  var self = new persianDate(this);
+                  var self = new PersianDate(this);
                   var inputMoment = input;
                   //this._isUTC ? moment(input).utc() : moment(input).local();
                   var zoneDiff = 0;
@@ -650,23 +648,23 @@
                   // Simplify this
                   switch(key) {
                         case "year":
-                              return new persianDate([this.year(), 1, 1]);
+                              return new PersianDate([this.year(), 1, 1]);
                         case "month":
-                              return new persianDate([this.year(), this.month(), 1]);
+                              return new PersianDate([this.year(), this.month(), 1]);
                         case "day" :
-                              return new persianDate([this.year(), this.month(), this.date(), 0, 0, 0]);
+                              return new PersianDate([this.year(), this.month(), this.date(), 0, 0, 0]);
                         case "hour" :
-                              return new persianDate([this.year(), this.month(), this.date(), this.hours(), 0, 0]);
+                              return new PersianDate([this.year(), this.month(), this.date(), this.hours(), 0, 0]);
                         case "minute":
-                              return new persianDate([this.year(), this.month(), this.date(), this.hours(), this.minutes(), 0]);
+                              return new PersianDate([this.year(), this.month(), this.date(), this.hours(), this.minutes(), 0]);
                         case "second":
-                              return new persianDate([this.year(), this.month(), this.date(), this.hours(), this.minutes(), this.seconds()]);
+                              return new PersianDate([this.year(), this.month(), this.date(), this.hours(), this.minutes(), this.seconds()]);
                         case "week":
                               var weekDayNumber = this.pDate.weekDayNumber;
                               if (weekDayNumber == 0) {
-                                    return new persianDate([this.year(), this.month(), this.date()]);
+                                    return new PersianDate([this.year(), this.month(), this.date()]);
                               } else {
-                                    return new persianDate([this.year(), this.month(), this.date()]).subtract("days", weekDayNumber);
+                                    return new PersianDate([this.year(), this.month(), this.date()]).subtract("days", weekDayNumber);
                               }
                         default:
                               return this;
@@ -677,18 +675,18 @@
                   switch(key) {
                         case "year":
                               var days = this.isLeapYear() ? 30 : 29;
-                              return new persianDate([this.year(), 12, days, 23, 59, 59]);
+                              return new PersianDate([this.year(), 12, days, 23, 59, 59]);
                         case "month":
                               var monthDays = this.daysInMonth(this.year(), this.month());
-                              return new persianDate([this.year(), this.month(), monthDays, 23, 59, 59]);
+                              return new PersianDate([this.year(), this.month(), monthDays, 23, 59, 59]);
                         case "day" :
-                              return new persianDate([this.year(), this.month(), this.date(), 23, 59, 59]);
+                              return new PersianDate([this.year(), this.month(), this.date(), 23, 59, 59]);
                         case "hour" :
-                              return new persianDate([this.year(), this.month(), this.date(), this.hours(), 59, 59]);
+                              return new PersianDate([this.year(), this.month(), this.date(), this.hours(), 59, 59]);
                         case "minute":
-                              return new persianDate([this.year(), this.month(), this.date(), this.hours(), this.minutes(), 59]);
+                              return new PersianDate([this.year(), this.month(), this.date(), this.hours(), this.minutes(), 59]);
                         case "second":
-                              return new persianDate([this.year(), this.month(), this.date(), this.hours(), this.minutes(), this.seconds()]);
+                              return new PersianDate([this.year(), this.month(), this.date(), this.hours(), this.minutes(), this.seconds()]);
                         case "week":
                               var weekDayNumber = this.pDate.weekDayNumber;
                               if (6 - weekDayNumber == 0) {
@@ -696,7 +694,7 @@
                               } else {
                                     weekDayNumber = 6 - weekDayNumber;
                               }
-                              return new persianDate([this.year(), this.month(), this.date()]).add("days", weekDayNumber);
+                              return new PersianDate([this.year(), this.month(), this.date()]).add("days", weekDayNumber);
                         default:
                               return this;
                   }
@@ -782,7 +780,6 @@
                   if (isLeapPersian(year))
                         return 30;
                   return 29;
-                  return "Must Implement";
             },
             // return Native Javascript Date
             toDate : function() {
@@ -799,7 +796,7 @@
                   return parseInt(output);
             },
             isPersianDate : function(obj) {
-                  return obj instanceof persianDate;
+                  return obj instanceof PersianDate;
             },
             // -------------------------------------- Getter Setter
             milliseconds : function(input) {
@@ -883,8 +880,7 @@
                   return 29;
             },
             getFirstWeekDayOfMonth : function(year, month) {
-                  var dateArray = calcPersian(year, month, 1);
-                  var pdate = calcGregorian(dateArray[0], dateArray[1], dateArray[2]);
+                  var dateArray = calcPersian(year, month, 1), pdate = calcGregorian(dateArray[0], dateArray[1], dateArray[2]);
                   if (pdate[3] + 2 == 8) {
                         return 1;
                   } else if (pdate[3] + 2 == 7) {
@@ -895,14 +891,15 @@
             },
             clone : function() {
                   var self = this;
-                  return new persianDate(self.gDate);
+                  return new PersianDate(self.gDate);
             },
             version : 0.1,
             _updatePDate : function() {
                   this.pDate = toPersianDate(this.gDate);
             },
-            valueOf:function(){
+            valueOf : function() {
                   return this._valueOf();
             }
       };
-})();
+      persianDate = PersianDate;
+}());
