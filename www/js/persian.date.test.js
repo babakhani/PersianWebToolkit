@@ -7,12 +7,10 @@ test("Parse", function() {
 	// Empty input
 	var emptyInput = new persianDate();
 	ok(emptyInput, "Object Created Succeed :)");
-
 	// Cloning From persianDate
 	var persianDateInput = new persianDate();
 	var makedDate = new persianDate(persianDateInput);
-	deepEqual(persianDateInput, makedDate, "Object Cloning from self Succeed  :)");
-
+	deepEqual(persianDateInput.format(), makedDate.format(), "Object Cloning from self Succeed  :)");
 	// Array  Init
 	arraySample = [{
 		key : [1391, 12, 1, 2, 3, 4],
