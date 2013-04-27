@@ -380,7 +380,37 @@
             }
       };
 
-      var Class_PersianDate = {
+    
+
+      //##########################################
+      // ***************************** Constructor
+      //##########################################
+      persianDate = function(input) {
+            // Convert Any thing to Gregorian Date
+            if (isUndefined(input)) {
+                  this.gDate = new Date();
+            } else if (isDate(input)) {
+                  this.gDate = input;
+            } else if (isArray(input)) {
+                  //  Encapsulate Input Array
+                  var arrayInput = input.slice();
+                  this.gDate = persianArrayToGregorianDate(arrayInput);
+            } else if (isNumber(input)) {
+                  this.gDate = new Date(input);
+            } else if ( input instanceof persianDate) {
+                  this.gDate = input.gDate;
+            }
+            this.pDate = toPersianDate(this.gDate);
+            /* Fix IE 8
+            // Some issue appear when valuOf is extended function
+            this.valueOf = function() {
+                  return this._valueOf();
+            };
+            */
+            return this;
+      };
+
+      persianDate.prototype =  {
             duration : function(input, key) {
                   var isDuration = this.isDuration(input), isNumber = ( typeof input === 'number'), duration = ( isDuration ? input._data : ( isNumber ? {} : input)), ret;
                   if (isNumber) {
@@ -875,34 +905,4 @@
                   return this._valueOf();
             }
       };
-
-      //##########################################
-      // ***************************** Constructor
-      //##########################################
-      persianDate = function(input) {
-            // Convert Any thing to Gregorian Date
-            if (isUndefined(input)) {
-                  this.gDate = new Date();
-            } else if (isDate(input)) {
-                  this.gDate = input;
-            } else if (isArray(input)) {
-                  //  Encapsulate Input Array
-                  var arrayInput = input.slice();
-                  this.gDate = persianArrayToGregorianDate(arrayInput);
-            } else if (isNumber(input)) {
-                  this.gDate = new Date(input);
-            } else if ( input instanceof persianDate) {
-                  this.gDate = input.gDate;
-            }
-            this.pDate = toPersianDate(this.gDate);
-            /* Fix IE 8
-            // Some issue appear when valuOf is extended function
-            this.valueOf = function() {
-                  return this._valueOf();
-            };
-            */
-            return this;
-      };
-
-      persianDate.prototype = Class_PersianDate;
 })();
