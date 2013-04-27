@@ -2,3 +2,15 @@ ul li{
       list-style: none !important;
 
 }
+
+pre .string{
+     color: #ED7677;
+}
+pre .number{
+      color: #4baa8f;
+}
+
+pre .keyword{
+      font-weight: 700;
+      color:#380D00;
+}

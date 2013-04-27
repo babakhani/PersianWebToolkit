@@ -1,0 +1,94 @@
+
+
+nav.subnav {
+    height: 40px;
+    
+    background: #333;
+    /*
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    padding: 0 20px;
+    font-weight: 200;
+    */
+    z-index: 2000;
+    display:block;
+    padding:0px 0px 0px 0px;
+    float: left;
+    width:100%;
+    margin:0px 0px 0px 0px;
+    
+    
+}
+
+@media screen and (max-width: 480px) {
+    nav.subnav {
+        display: none;
+    };
+}
+
+nav.subnav .section {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+}
+
+nav.subnav .section a {
+    padding: 0 5px;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-width: 0 1px;
+    display: block;
+    font-size: 14px;
+    color: #ccc;
+}
+
+nav.subnav .section .dropdown {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background: #fff;
+    min-width: 100%;
+    border: 1px solid #333;
+    border-top: 0;
+    display: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+nav.subnav .section .dropdown a {
+    padding: 0 10px;
+    white-space: nowrap;
+    line-height: 30px;
+    color: #333;
+}
+
+nav.subnav .section .dropdown a:hover {
+    background: #eee;
+}
+
+nav.subnav .section:hover>a {
+    border-color: #333;
+    background: #fff;
+    color: #333;
+}
+
+nav.subnav .section:hover .dropdown {
+    display: block;
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    nav.subnav {
+        padding: 0 10px;
+        height: auto;
+    }
+
+    nav.subnav .section a {
+        padding: 0 5px;
+        font-size: 14px;
+    };
+}
+
