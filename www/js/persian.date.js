@@ -738,6 +738,7 @@
                               var utcStamp = this.valueOf() - offsetMils;
                         }
                         this.gDate = new Date(utcStamp);
+                       
                         this._updatePDate();
                         this._utcMode = true;
                         return this;

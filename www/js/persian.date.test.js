@@ -184,6 +184,7 @@ test("Get", function() {
 	var t = new persianDate().minutes();
 	ok(t, "Get Now minutes: " + t);
 	var t = new persianDate().hours();
+      if(t === 0 ){t =true;};
 	ok(t, "Get Now Hours: " + t);
 	var t = new persianDate().date();
 	ok(t, "Get Now Date of the Month: " + t);
