@@ -1,11 +1,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><title>Persian Web Toolkit</title><head><link rel="stylesheet" href="css/pages.css"/><link rel="stylesheet" href="css/stylesheet.css"/></head><body><div id="header_wrap" class="outer">
 	<header class="inner">
 		<a id="forkme_banner" href="https://github.com/babakhani/PersianWTK">View on GitHub</a>
-		<h1 id="project_title">Persian WTK</h1>
+		<h3 id="project_title">Persian Web Toolkit</h3>
+			<!--
 		<section id="downloads">
 		<a class="zip_download_link" href="https://github.com/babakhani/PersianWTK/zipball/master">Download this project as a .zip file</a>
 		<a class="tar_download_link" href="https://github.com/babakhani/PersianWTK/tarball/master">Download this project as a tar.gz file</a>
 		</section>
+		-->
 	</header>
 </div>
 <div id="main_content_wrap" class="outer"><div id="main_content_wrap" class="outer"><div id="main_content_wrap" class="outer"><section id="main_content" class="inner"><article class="method">
@@ -185,51 +187,14 @@ persianDate([<span class="number">2010</span>, <span class="number">2</span>, <s
 	</div>
 </article>
 
-<article class="method">
-	<a class="target" name="/parsing/asp-net-json-date/"></a>
-	<h3><a href="#/parsing/asp-net-json-date/"><span class="hash">#</span>ASP.NET JSON Date</a><span>1.3.0</span></h3>
-	<div class="prose">
-		<pre lang="javascript">persianDate(String);</pre>							
-			
-						
 
-
-
-
-		<p>
-			ASP.NET returns dates in JSON as
-			<code>
-				/Date(1198908717056)/
-			</code>
-			or
-			<code>
-				/Date(1198908717056-0700)/
-			</code>
-		</p>
-
-		<p>
-			If a string that matches this format is passed in, it will be parsed correctly.
-		</p>
-
-		<div class="highlight">
-			<pre lang="javascript">persianDate(<span class="string">"/Date(1198908717056-0700)/"</span>); <span class="comment">// December 28 2007 10:11 PM</span>
-</pre>
-		</div>
-	</div>
-</article>
 
 <article class="method">
 	<a class="target" name="/parsing/moment-clone/"></a>
 	<h3><a href="#/parsing/moment-clone/"><span class="hash">#</span>Moment Clone</a><span>1.2.0</span></h3>
 	<div class="prose">
 		<pre lang="javascript">persianDate(Moment);</pre>							
-			
-						
-
-
-
-
-		<p>
+	<p>
 			All moments are mutable. If you want a clone of a moment, you can do so explicitly or implicitly.
 		</p>
 

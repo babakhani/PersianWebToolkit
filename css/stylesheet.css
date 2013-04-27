@@ -304,12 +304,13 @@ Full-Width Styles
 
 #header_wrap .inner {
   padding: 10px 10px 10px 10px;
+  min-height:80px;
 }
 
 #project_title {
   margin: 0;
   color: #fff;
-  font-size: 42px;
+  font-size: 30px;
   font-weight: 700;
   text-shadow: #111 0px 0px 10px;
 }
