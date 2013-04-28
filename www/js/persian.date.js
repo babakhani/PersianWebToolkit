@@ -406,8 +406,7 @@
             humanize : function(withSuffix) {
                   return "Must Implement";
             }
-      }
-
+      };
       PersianDate.prototype = {
             duration : function(input, key) {
                   var isDuration = this.isDuration(input), isNumber = ( typeof input === 'number'), duration = ( isDuration ? input._data : ( isNumber ? {} : input)), ret;
@@ -426,8 +425,6 @@
             humanize : function() {
                   return "Must Implement";
             },
-
-            //.add('days', 7);
             add : function(key, input) {
                   var d = this.duration(input, key).valueOf()
                   ,newUnixDate = this.gDate.valueOf() + d;
@@ -450,11 +447,8 @@
                         date : self.date(),
                         timezone : self.zone()
                   };
-
                   function replaceFunction(input) {
-
                         var formatToPersian = PersianDate.formatNumebr;
-
                         switch(input) {
                               // AM/PM
                               case("a"): {
@@ -618,16 +612,16 @@
                   return this.gDate._d;
             },
             diff : function(input, val, asFloat) {
-                  var self = new PersianDate(this);
-                  var inputMoment = input;
+                  var self = new PersianDate(this),
+                  inputMoment = input,
                   //this._isUTC ? moment(input).utc() : moment(input).local();
-                  var zoneDiff = 0;
+                  zoneDiff = 0,
                   //(this.zone() - inputMoment.zone()) * 6e4;
-                  var diff = self.gDate - inputMoment.gDate - zoneDiff;
-                  var year = self.year() - inputMoment.year();
-                  var month = self.month() - inputMoment.month();
-                  var date = (self.date() - inputMoment.date()) * -1;
-                  var output;
+                  diff = self.gDate - inputMoment.gDate - zoneDiff,
+                  year = self.year() - inputMoment.year(),
+                  month = self.month() - inputMoment.month(),
+                  date = (self.date() - inputMoment.date()) * -1,
+                  output;
                   if (val === 'months') {
                         output = year * 12 + month + date / 30;
                   } else if (val === 'years') {
@@ -661,7 +655,7 @@
                               return new PersianDate([this.year(), this.month(), this.date(), this.hours(), this.minutes(), this.seconds()]);
                         case "week":
                               var weekDayNumber = this.pDate.weekDayNumber;
-                              if (weekDayNumber == 0) {
+                              if (weekDayNumber === 0) {
                                     return new PersianDate([this.year(), this.month(), this.date()]);
                               } else {
                                     return new PersianDate([this.year(), this.month(), this.date()]).subtract("days", weekDayNumber);
@@ -689,7 +683,7 @@
                               return new PersianDate([this.year(), this.month(), this.date(), this.hours(), this.minutes(), this.seconds()]);
                         case "week":
                               var weekDayNumber = this.pDate.weekDayNumber;
-                              if (6 - weekDayNumber == 0) {
+                              if (weekDayNumber === 6) {
                                     weekDayNumber = 7;
                               } else {
                                     weekDayNumber = 6 - weekDayNumber;
@@ -882,9 +876,9 @@
             },
             getFirstWeekDayOfMonth : function(year, month) {
                   var dateArray = calcPersian(year, month, 1), pdate = calcGregorian(dateArray[0], dateArray[1], dateArray[2]);
-                  if (pdate[3] + 2 == 8) {
+                  if (pdate[3] + 2 === 8) {
                         return 1;
-                  } else if (pdate[3] + 2 == 7) {
+                  } else if (pdate[3] + 2 === 7) {
                         return 7;
                   } else {
                         return pdate[3] + 2;
