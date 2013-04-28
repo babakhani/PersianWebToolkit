@@ -3,7 +3,7 @@
 // Author Reza Babakhani
 // written under the GPL version 2.0
 // All Unit test passed , work on  Chrome / Opera / FF / IE 7,8,9
-//
+// 
 
 (function() {
       String.prototype.toPersianDigit = function(a) {
@@ -18,8 +18,6 @@
                   return peDigitArr.join('');
             });
       };
-      window.PersianDate = {};
-      window.PersianDate.formatNumebr = false;
       var monthRange = {
             1 : {
                   name : {
@@ -435,6 +433,7 @@
                   ,newUnixDate = this.gDate.valueOf() - d;
                   return new PersianDate(newUnixDate);
             },
+            formatNumber : true,
             format : function(inputString) {
                   var self = this
                   ,formattingTokens = /(\[[^\[]*\])|(\\)?(Mo|MM?M?M?|Do|DDDo|DD?D?D?|dddd?|do?|w[o|w]?|YYYY|YY|a|A|hh?|HH?|mm?|ss?|SS?S?|zz?|ZZ?|LT|LL?L?L?)/g
@@ -448,7 +447,7 @@
                         timezone : self.zone()
                   };
                   function replaceFunction(input) {
-                        var formatToPersian = PersianDate.formatNumebr;
+                        formatToPersian = self.formatNumber;
                         switch(input) {
                               // AM/PM
                               case("a"): {

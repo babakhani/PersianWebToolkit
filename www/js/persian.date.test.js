@@ -1,8 +1,5 @@
 var globalTextstringFromat = "YYYY-MM-DD HH:mm:ss a";
 module("Parse");
-
-window.persianDate.formatNumebr = true;
-
 test("Parse", function() {
 	// Empty input
 	var emptyInput = new persianDate();
