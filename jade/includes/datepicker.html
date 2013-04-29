@@ -1,5 +1,12 @@
 <h2>Persian Date Picker</h2>
 
+<script>
+	$(document).ready(function(){
+		prettyPrint();
+	})
+	
+</script>
+
 <p>
 	This Date picker work with Iranian calendar .
 </p>
@@ -14,8 +21,9 @@
 Client Side Persain Date library :
 <br/>
 <a href="js/persainDate.js" download="persainDate.js" >persianDate.js </a>0.1.6 >
-<h4>Download :</h4>
-	<a href="https://github.com/babakhani/pwt.datepicker/archive/master.zip" >Download</a>
+<h4>
+	<a href="https://github.com/babakhani/pwt.datepicker/archive/master.zip" >Download</a>	
+</h4>
 <br/>
 <div >
 	<h2>Example</h2>
@@ -24,7 +32,6 @@ Client Side Persain Date library :
 	</p>
 	<div class="well">
 		<input  type="text" class="sample-input " value="02-16-2012" id="example1"  >
-
 		<script type="text/javascript" >
                   $(document).ready(function() {
                         $("#example1").pDatepicker({
@@ -36,11 +43,29 @@ Client Side Persain Date library :
 	</div>
 	
 	<h2>Using persianDatepicker.js</h2>
-	<p>
-		Call the datepicker via javascript:
-	</p>
-	<pre class="prettyprint linenums">
-		<ol class="linenums"><li class="L0"><span class="pln">$</span><span class="pun">(</span><span class="str">'.datepicker'</span><span class="pun">).</span><span class="pln">pDatepicker</span><span class="pun">()</span></li></ol></pre>
+	
+	
+	<h3>Qiuck Start</h3>
+	
+	<pre class="prettyprint lang-html">
+		&lt;head&gt;
+			&lt;link rel="stylesheet" href="css/pwt.datepicker.css"/&gt;
+			&lt;script src="js/jquery.js"&gt;&lt;/script&gt;
+			&lt;script src="js/persainDate.js"&gt;&lt;/script&gt;
+			&lt;script src="js/pwt.datepicker.js"&gt;&lt;/script&gt;
+		&lt;/head&gt;
+		...
+		&lt;script type="text/javascript"&gt;
+			$(document).ready(function() {
+		            $("#example1").pDatepicker();
+            		});
+		&lt;/script&gt;
+		...
+		&lt;body&gt;
+			&lt;div class="example1" /&gt;
+		&lt;/body&gt;
+	</pre>
+	
 	
 	<h3>Options</h3>
 	<table class="table table-bordered table-striped">
