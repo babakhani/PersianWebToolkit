@@ -3,7 +3,6 @@
 // Author Reza Babakhani
 // written under the GPL version 2.0
 // All Unit test passed , work on  Chrome / Opera / FF / IE 7,8,9
-// 
 
 (function() {
       String.prototype.toPersianDigit = function(a) {
@@ -383,6 +382,10 @@
             } else if ( input instanceof PersianDate) {
                   this.gDate = input.gDate;
             }
+            // ASP.NET JSON Date
+            else if (input.substring(0,6)  === "/Date(" ){
+                  this.gDate = new Date(parseInt(input.substr(6)));
+            }
             this.pDate = toPersianDate(this.gDate);
             /* Fix IE 8
              // Some issue appear when valuOf is extended function
@@ -731,7 +734,6 @@
                               var utcStamp = this.valueOf() - offsetMils;
                         }
                         this.gDate = new Date(utcStamp);
-                       
                         this._updatePDate();
                         this._utcMode = true;
                         return this;
@@ -784,9 +786,13 @@
                   return this.gDate.valueOf();
             },
             // Return Unix Timestamp (1318874398)
-            unix : function() {
+            unix : function(timestamp) {
+                  if(timestamp){
+                        return new persianDate( timestamp * 1000);
+                  }else{                        
                   var str = this.gDate.valueOf().toString();
                   output = str.substring(0, str.length - 3);
+                  }
                   return parseInt(output);
             },
             isPersianDate : function(obj) {
@@ -896,4 +902,5 @@
             }
       };
       persianDate = PersianDate;
+      persianDate.unix = persianDate.prototype.unix;
 }());
