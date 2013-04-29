@@ -6,5 +6,5 @@
 .project
 .pydevproject
 build.xml
-
+test.html
 www/.DS_Store
