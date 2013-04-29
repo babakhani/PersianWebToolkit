@@ -3,7 +3,7 @@
 // Dual licensed under the MIT or GPL Version 2 licenses.
 // babakhani reza@gmail.com
 // babakhani.github.io/PersianWTK
-// Version Beta 0.0.1
+// Beta Version 0.0.2
 
 // Dependency :  Jquery.js , persianDate.js
 
@@ -213,159 +213,159 @@ Class_DateRange = {
       monthRange : {
             1 : {
                   name : {
-                        fa : "فروردین"
+                        fa : "ŸÅÿ±Ÿàÿ±ÿØ€åŸÜ"
                   },
                   abbr : {
-                        fa : "فرو"
+                        fa : "ŸÅÿ±Ÿà"
                   }
             },
             2 : {
                   name : {
-                        fa : "اردیبهشت"
+                        fa : "ÿßÿ±ÿØ€åÿ®Ÿáÿ¥ÿ™"
                   },
                   abbr : {
-                        fa : "ارد"
+                        fa : "ÿßÿ±ÿØ"
                   }
             },
             3 : {
                   name : {
-                        fa : "خرداد"
+                        fa : "ÿÆÿ±ÿØÿßÿØ"
                   },
                   abbr : {
-                        fa : "خرد"
+                        fa : "ÿÆÿ±ÿØ"
                   }
             },
             4 : {
                   name : {
-                        fa : "تیر"
+                        fa : "ÿ™€åÿ±"
                   },
                   abbr : {
-                        fa : "تیر"
+                        fa : "ÿ™€åÿ±"
                   }
             },
             5 : {
                   name : {
-                        fa : "مرداد"
+                        fa : "ŸÖÿ±ÿØÿßÿØ"
                   },
                   abbr : {
-                        fa : "مرد"
+                        fa : "ŸÖÿ±ÿØ"
                   }
             },
             6 : {
                   name : {
-                        fa : "شهریور"
+                        fa : "ÿ¥Ÿáÿ±€åŸàÿ±"
                   },
                   abbr : {
-                        fa : "شهر"
+                        fa : "ÿ¥Ÿáÿ±"
                   }
             },
             7 : {
                   name : {
-                        fa : "مهر"
+                        fa : "ŸÖŸáÿ±"
                   },
                   abbr : {
-                        fa : "مهر"
+                        fa : "ŸÖŸáÿ±"
                   }
             },
             8 : {
                   name : {
-                        fa : "آبان"
+                        fa : "ÿ¢ÿ®ÿßŸÜ"
                   },
                   abbr : {
-                        fa : "آبا"
+                        fa : "ÿ¢ÿ®ÿß"
                   }
 
             },
             9 : {
                   name : {
-                        fa : "آذر"
+                        fa : "ÿ¢ÿ∞ÿ±"
                   },
                   abbr : {
-                        fa : "آذر"
+                        fa : "ÿ¢ÿ∞ÿ±"
                   }
             },
             10 : {
                   name : {
-                        fa : "دی"
+                        fa : "ÿØ€å"
                   },
                   abbr : {
-                        fa : "دی"
+                        fa : "ÿØ€å"
                   }
             },
             11 : {
                   name : {
-                        fa : "بهمن"
+                        fa : "ÿ®ŸáŸÖŸÜ"
                   },
                   abbr : {
-                        fa : "بهم"
+                        fa : "ÿ®ŸáŸÖ"
                   }
             },
             12 : {
                   name : {
-                        fa : "اسفند"
+                        fa : "ÿßÿ≥ŸÅŸÜÿØ"
                   },
                   abbr : {
-                        fa : "اسف"
+                        fa : "ÿßÿ≥ŸÅ"
                   }
             }
       }, weekRange : {
             0 : {
                   name : {
-                        fa : "شنبه"
+                        fa : "ÿ¥ŸÜÿ®Ÿá"
                   },
                   abbr : {
-                        fa : "ش"
+                        fa : "ÿ¥"
                   }
             },
             1 : {
                   name : {
-                        fa : "یکشنبه"
+                        fa : "€å⁄©ÿ¥ŸÜÿ®Ÿá"
                   },
                   abbr : {
-                        fa : "ی"
+                        fa : "€å"
                   }
             },
             2 : {
                   name : {
-                        fa : "دوشنبه"
+                        fa : "ÿØŸàÿ¥ŸÜÿ®Ÿá"
                   },
                   abbr : {
-                        fa : "د"
+                        fa : "ÿØ"
                   }
             },
             3 : {
                   name : {
-                        fa : "سه شنبه"
+                        fa : "ÿ≥Ÿá ÿ¥ŸÜÿ®Ÿá"
                   },
                   abbr : {
-                        fa : "س"
+                        fa : "ÿ≥"
                   }
             },
             4 : {
                   name : {
-                        fa : "چهار شنبه"
+                        fa : "⁄ÜŸáÿßÿ± ÿ¥ŸÜÿ®Ÿá"
                   },
                   abbr : {
-                        fa : "چ"
+                        fa : "⁄Ü"
                   }
             },
             5 : {
                   name : {
-                        fa : "پنج شنبه"
+                        fa : "ŸæŸÜÿ¨ ÿ¥ŸÜÿ®Ÿá"
                   },
                   abbr : {
-                        fa : "پ"
+                        fa : "Ÿæ"
                   }
             },
             6 : {
                   name : {
-                        fa : "جمعه"
+                        fa : "ÿ¨ŸÖÿπŸá"
                   },
                   abbr : {
-                        fa : "ج"
+                        fa : "ÿ¨"
                   }
             }
-      }, persianDaysName : ["اورمزد", "بهمن", "اوردیبهشت", "شهریور", "سپندارمذ", "خورداد", "امرداد", "دی به آذز", "آذز", "آبان", "خورشید", "ماه", "تیر", "گوش", "دی به مهر", "مهر", "سروش", "رشن", "فروردین", "بهرام", "رام", "باد", "دی به دین", "دین", "ارد", "اشتاد", "آسمان", "زامیاد", "مانتره سپند", "انارام", "زیادی"]};
+      }, persianDaysName : ["ÿßŸàÿ±ŸÖÿ≤ÿØ", "ÿ®ŸáŸÖŸÜ", "ÿßŸàÿ±ÿØ€åÿ®Ÿáÿ¥ÿ™", "ÿ¥Ÿáÿ±€åŸàÿ±", "ÿ≥ŸæŸÜÿØÿßÿ±ŸÖÿ∞", "ÿÆŸàÿ±ÿØÿßÿØ", "ÿßŸÖÿ±ÿØÿßÿØ", "ÿØ€å ÿ®Ÿá ÿ¢ÿ∞ÿ≤", "ÿ¢ÿ∞ÿ≤", "ÿ¢ÿ®ÿßŸÜ", "ÿÆŸàÿ±ÿ¥€åÿØ", "ŸÖÿßŸá", "ÿ™€åÿ±", "⁄ØŸàÿ¥", "ÿØ€å ÿ®Ÿá ŸÖŸáÿ±", "ŸÖŸáÿ±", "ÿ≥ÿ±Ÿàÿ¥", "ÿ±ÿ¥ŸÜ", "ŸÅÿ±Ÿàÿ±ÿØ€åŸÜ", "ÿ®Ÿáÿ±ÿßŸÖ", "ÿ±ÿßŸÖ", "ÿ®ÿßÿØ", "ÿØ€å ÿ®Ÿá ÿØ€åŸÜ", "ÿØ€åŸÜ", "ÿßÿ±ÿØ", "ÿßÿ¥ÿ™ÿßÿØ", "ÿ¢ÿ≥ŸÖÿßŸÜ", "ÿ≤ÿßŸÖ€åÿßÿØ", "ŸÖÿßŸÜÿ™ÿ±Ÿá ÿ≥ŸæŸÜÿØ", "ÿßŸÜÿßÿ±ÿßŸÖ", "ÿ≤€åÿßÿØ€å"]};
 
 
 
@@ -582,7 +582,7 @@ var Views_pDatePicker = {
                   Toolbox : function(self) {
                         this.container = self.container.toolbox;
                         var todayUnix = new Date().valueOf();
-                        $("<div>امروز</div>").addClass(self.cssClass.btnToday).click(function() {
+                        $("<div>ÿßŸÖÿ±Ÿàÿ≤</div>").addClass(self.cssClass.btnToday).click(function() {
                               self.state.unixDate = todayUnix;
                               self._syncViewWidthSelected();
                               self._updateState("unix", todayUnix);
