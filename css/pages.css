@@ -48,6 +48,7 @@ pre .keyword{
       -webkit-border-radius: 10px;
       -moz-border-radius: 10px;
       border-radius: 10px;
+      background-color:#f4f4f4;
       
       -webkit-box-shadow:  0px 0px 3px 0px rgba(0, 0, 0, 0.5);
         
@@ -59,6 +60,12 @@ pre .keyword{
       background-image: url("../img/icon_zip.png");
       background-repeat: no-repeat;
       background-position: top center;
+      
+      -webkit-transition: all 120ms ease-in;
+            -moz-transition: all 120ms ease-in;
+        -ms-transition: all 120ms ease-in;
+        -o-transition: all 120ms ease-in;
+            transition: all 120ms ease-in;
 }
 
 .download-info{
@@ -73,9 +80,6 @@ pre .keyword{
       text-align: center;
 }
 
-.download-item:hover .download-zip{
-      background-position: 0px 2px;
-}
 
 .download-item:active .download-zip{
       background-position: 0px 10px;
