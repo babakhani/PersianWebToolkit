@@ -12,34 +12,37 @@
 		-->
 	</header>
 </div>
-<div id="main_content_wrap" class="outer"><div id="main_content_wrap" class="outer"><div id="main_content_wrap" class="outer"><section id="main_content" class="inner"><h2>Persian Date Picker</h2>
+<div id="main_content_wrap" class="outer"><div id="main_content_wrap" class="outer"><div id="main_content_wrap" class="outer"><section id="main_content" class="inner"><script type="text/javascript" >
+      $(document).ready(function() {
+            prettyPrint();
+      })
 
-<script>
-	$(document).ready(function(){
-		prettyPrint();
-	})
-	
 </script>
 
-<p>
-	This Date picker work with Iranian calendar .
-</p>
+<div class="page-title-box" >
+	<h2>Persian Date Picker</h2>
+	<p>
+		This Date picker work with Iranian calendar .
+	</p>
+	<span>More info  at:</span>
+	<a target="blank" href="http://en.wikipedia.org/wiki/Iranian_calendar" >http://en.wikipedia.org/wiki/Iranian_calendar</a>
+	<br/>
+	<br/>
+	<h4>Dependency :</h4>
+	<a href="http://jquery.org"  >jquery.js </a>1.4 >
+	<br/>
+	Client Side Persain Date library :
+	<br/>
+	<a href="js/persainDate.js" download="persainDate.js" >persianDate.js </a>0.1.6 > 
 
-<span>More info  at:</span>
-<a target="blank" href="http://en.wikipedia.org/wiki/Iranian_calendar" >http://en.wikipedia.org/wiki/Iranian_calendar</a>
+</div>
+<div class="download-box" >
+	<a class="download-zip" href="https://github.com/babakhani/pwt.datepicker/archive/master.zip" ></a>
+</div>
 <br/>
 <br/>
-<h4>Dependency :</h4>
-<a href="http://jquery.org"  >jquery.js </a>1.4 >
 <br/>
-Client Side Persain Date library :
-<br/>
-<a href="js/persainDate.js" download="persainDate.js" >persianDate.js </a>0.1.6 >
-<h4>
-	<a href="https://github.com/babakhani/pwt.datepicker/archive/master.zip" >Download</a>	
-</h4>
-<br/>
-<div >
+<div class="page-content-box" >
 	<h2>Example</h2>
 	<p>
 		Attached to a field with the format specified via options.
@@ -49,18 +52,16 @@ Client Side Persain Date library :
 		<script type="text/javascript" >
                   $(document).ready(function() {
                         $("#example1").pDatepicker({
-                        		
+
                         });
                   });
 		</script>
 
 	</div>
-	
-	<h2>Using persianDatepicker.js</h2>
-	
-	
+
+	<h2>Using pwt.datepicker.js</h2>
+
 	<h3>Qiuck Start</h3>
-	
 	<pre class="prettyprint lang-html">
 		&lt;head&gt;
 			&lt;link rel="stylesheet" href="css/pwt.datepicker.css"/&gt;
@@ -78,7 +79,8 @@ Client Side Persain Date library :
 	</pre>
 	
 	
-	<h3>Options</h3>
+	
+ <h3>Options</h3>
 	<table class="table table-bordered table-striped">
 		<thead>
 			<tr>
@@ -129,27 +131,31 @@ Client Side Persain Date library :
 				<td>mask</td>
 				<td>String | Intger</td>
 				<td>false</td>
-				<td>If Mask Set Datepicker add input hidden whit name of main input and set value for this on select date, acceptable value:  <strong>unix,gregorian</strong> </td>
+				<td>If Mask Set Datepicker add input hidden whit name of main input and set value for this on select date, acceptable value: <strong>unix,gregorian</strong></td>
 			</tr>
 			<tr>
 				<td>viewFormatter</td>
 				<td>Function</td>
 				<td>--</td>
-				<td>format value of input<br/>
-					{...<br/>
-					viewFormatter: function(unixDate){return unixDate}<br/>
-					...}
-				</td>
+				<td>format value of input
+				<br/>
+				{...
+				<br/>
+				viewFormatter: function(unixDate){return unixDate}
+				<br/>
+				...} </td>
 			</tr>
 			<tr>
 				<td>maskFormatter</td>
 				<td>Function</td>
 				<td>--</td>
-				<td>format value of mask input<br/>
-					{...<br/>
-					maskFormatter: function(unixDate){return unixDate}<br/>
-					...}
-				</td>
+				<td>format value of mask input
+				<br/>
+				{...
+				<br/>
+				maskFormatter: function(unixDate){return unixDate}
+				<br/>
+				...} </td>
 			</tr>
 		</tbody>
 	</table>

@@ -14,3 +14,43 @@ pre .keyword{
       font-weight: 700;
       color:#380D00;
 }
+
+
+/* ----------------------- Download Area ----------------*/
+
+.download-box{
+      width:30%;
+      float: left;
+      min-height: 300px;
+}
+
+.download-zip{
+      display: block;
+      width: 128px;
+      height: 128px;
+      background-image: url("../img/icon_zip.png");
+      background-repeat: no-repeat;
+      background-position: top center;
+      float: left;
+}
+
+.download-zip:hover{
+      background-position: 0px 2px;
+}
+
+.download-zip:active{
+      background-position: 0px 4px;
+}
+
+.page-title-box{
+      width:70%;
+      float: left;
+      min-height: 300px;
+}
+
+.page-content-box{
+      display: block;
+      width: 100%;
+      clear:both;
+      min-height: 300px;
+}
