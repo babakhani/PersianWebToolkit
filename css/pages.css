@@ -33,6 +33,50 @@ font-size: 25px !important;
 
 }
 
+.search-box{
+      min-height:400px;
+}
+
+.search-box table,
+.search-box th,
+.search-box td{
+      border:none !important;
+      background: none !important;
+      padding:0px !important;
+}
+
+.search-box form{
+      padding:0px !important;
+}
+
+.gsc-control-cse,
+.gsc-search-box{
+      background: none !important;
+      border:none !important;
+}
+
+.gsib_a{
+      height: 28px;
+      padding:0px 3px 0px 3px !important;
+}
+
+.gsib_a input{
+      width:98%  !important;
+      margin-left:2% !important;
+}
+
+.gsc-table-result .gs-snippet{
+      padding:0px 10px 0px 10px;
+}
+
+.gsc-search-button input{
+      margin-bottom:4px;
+}
+
+.gsc-input-box {
+      height:28px !important;;
+}
+
 /* ----------------------- Download Area ----------------*/
 
 .download-box{
