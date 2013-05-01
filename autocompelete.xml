@@ -1,16 +1,15 @@
-<Autocompletions>
-  <Autocompletion term="datepicker"  type="2" ></Autocompletion>
-  <Autocompletion term="persian date doc"  type="2" ></Autocompletion>
-  <Autocompletion term="datepicker doc"  type="2" ></Autocompletion>
-  <Autocompletion term="datepicker demo"  type="2" ></Autocompletion>
-  <Autocompletion term="calendar doc"  type="2" ></Autocompletion>
-  <Autocompletion term="calendar demo"  type="2" ></Autocompletion>
-  <Autocompletion term="javascript"  type="2" ></Autocompletion>
-  <Autocompletion term="persian web toolkit"  type="2" ></Autocompletion>
-  <Autocompletion term="persian gulf"  type="2" ></Autocompletion>
-  <Autocompletion term="sharabe shiraz"  type="2" ></Autocompletion>
-  <Autocompletion term="damavand"  type="2" ></Autocompletion>
-  <Autocompletion term="tochal"  type="2" ></Autocompletion>
-  <Autocompletion term="sabalan"  type="2" ></Autocompletion>
-  <Autocompletion term="tar lake"  type="2" ></Autocompletion>
+<?xml version="1.0" encoding="UTF-8"?>
+ <Autocompletions>
+  <Autocompletion term="cake" type="1" language=""/>
+  <Autocompletion term="datepicker" type="1" language=""/>
+  <Autocompletion term="persian date doc" type="1" language=""/>
+  <Autocompletion term="datepicker doc" type="1" language=""/>
+  <Autocompletion term="datepicker demo" type="1" language=""/>
+  <Autocompletion term="calendar doc" type="1" language=""/>
+  <Autocompletion term="calendar demo" type="1" language=""/>
+  <Autocompletion term="javascript" type="1" language=""/>
+  <Autocompletion term="persian web toolkit" type="1" language=""/>
+  <Autocompletion term="persian gulf" type="1" language=""/>
+  <Autocompletion term="damavand" type="1" language=""/>
+  <Autocompletion term="tar lake" type="1" language=""/>
 </Autocompletions>
