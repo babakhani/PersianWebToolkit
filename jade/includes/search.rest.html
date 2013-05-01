@@ -1,0 +1,13 @@
+<div id="content"></div>
+    <script>
+      function hndlr(response) {
+      	console.log(response)
+      for (var i = 0; i < response.items.length; i++) {
+        var item = response.items[i];
+        // in production code, item.htmlTitle should have the HTML entities escaped.
+        document.getElementById("content").innerHTML += "<br>" + item.htmlTitle;
+      }
+    }
+    </script>
+    <script src="https://www.googleapis.com/customsearch/v1?key=AIzaSyANWjxl_ZL0sGZzvFJ9ssKdbm_owPXYJs4&cx=006105496046926375623:WMX467610434&q=d&callback=hndlr">
+    </script>
