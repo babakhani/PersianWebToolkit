@@ -4,11 +4,14 @@ html( xmlns = "http://www.w3.org/1999/xhtml", lang = "en", 'xml:lang' = "en" )
   head
     include ../includes/head
     include ../includes/head.script.html
-  block style
+    block style
   
-  block scripts  
+    block scripts  
+  
+  
   body
     include ../includes/page.header.html
+    block menu
     #main_content_wrap.outer
       block content
       

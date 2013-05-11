@@ -2,14 +2,21 @@ extends layout
 
 block style
   link(rel='stylesheet', href='css/menu.css')
-
+  link(rel='stylesheet', href='css/datepicker.css')
+  link(rel='stylesheet', href='js/prettify/theme/desert.css')
 
 block scripts
-  
+  script(src='js/jquery.js')
+  script(src='../PersianDate/persianDate.js')
+  script(src='js/prettify/prettify.js')
+
+
+block menu 
+    include ../includes/persiandate.menu.html
+
 
 
 block content
  #main_content_wrap.outer
-   #main_content_wrap.outer
       section#main_content.inner
         include ../includes/persiandate.doc.html
