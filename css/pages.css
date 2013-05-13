@@ -313,7 +313,7 @@ Full-Width Styles
 }
 
 #header_wrap .inner {
-  padding: 10px 10px 10px 10px;
+  padding: 0px 10px 0px 10px;
   min-height:40px;
 }
 
@@ -321,7 +321,7 @@ Full-Width Styles
   margin: 0;
   color: #fff;
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 200;
   text-shadow: #111 0px 0px 10px;
 }
 
@@ -639,3 +639,41 @@ font-size: 25px !important;
       width:100%;
       background-color: #333;
 }
+
+/*------------------------ Header Menu ------------------*/
+.page-header-menu{
+      display: block;
+      float: right !important;
+      width:300px;
+      height:40px ;
+      margin:0px ;
+      padding:0px ;
+}
+
+.page-header-menu li{
+      display: block;
+      float: right;
+      width:120px;
+      height:40px;
+      line-height: 40px;
+      margin:0px  ;
+      padding:0px  ;
+      text-align: center;
+}
+
+.page-header-menu li.current{
+      background-color: #333;
+}
+
+.page-header-menu li.current a{
+      color:#fff;
+
+}
+
+.page-header-menu a{
+      color:#fff;
+}
+
+
+
+
