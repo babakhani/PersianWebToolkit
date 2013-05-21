@@ -676,4 +676,14 @@ font-size: 25px !important;
 
 
 
+.minor-version{
+      font-size:10px;
+      color:green;
+}
 
+.deprecated-version{
+      font-size:10px;
+      color:red;
+      padding:0px 3px 0px 3px;
+
+}

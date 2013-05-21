@@ -1,26 +1,133 @@
+/*
 // Jquery Persian Datepicker
 // Copyright 2011, Software Freedom Conservancy, Inc.
 // Dual licensed under the MIT or GPL Version 2 licenses.
 // babakhani reza@gmail.com
-// babakhani.github.io/PersianWTK
-// Beta Version 0.0.2
-
-// Dependency :  Jquery.js , persianDate.js
-
-
+// babakhani.github.io/PersianWebToolkit
+// Beta Version 0.0.4
+// Dependency :  Jquery.js , pwt-date.js
+ Chnage Log:
+      0.0.4
+            Implement Jquery plugin manifest
+            Add Observer Option
+            Add : format,formatter, altField,altFormat,altFieldFormatter 
+                        show(),hide(),destroy()
+            deprecate: viewFormat ,mask,maskFormatter,viewFormatter
+     0.0.3 remove jquery tmpl
+*/
+(function ($) {
+      
+   
+      $.event.special.textchange = {
+            setup: function (data, namespaces) {
+                  $.event.special.textchange.saveLastValue(this);
+                  $(this).bind('keyup.textchange', $.event.special.textchange.handler);
+                  $(this).bind('cut.textchange paste.textchange input.textchange', $.event.special.textchange.delayedHandler);
+            },
+            teardown: function (namespaces) {
+                  $(this).unbind('.textchange');
+            },
+            handler: function (event) {
+                  $.event.special.textchange.triggerIfChanged($(this));
+            },
+            delayedHandler: function (event) {
+                  var element = $(this);
+                  setTimeout(function () {
+                        $.event.special.textchange.triggerIfChanged(element);
+                  }, 25);
+            },
+            triggerIfChanged: function (element) {
+              var current = element[0].contentEditable === 'true' ? element.html() : element.val();
+                  if (current !== element.data('lastValue')) {
+                        element.trigger('textchange',  element.data('lastValue'));
+                       
+                       // element.data('lastValue', current);
+                  }
+            },
+            saveLastValue: function (element) {
+                  $(element).data('lastValue', element.contentEditable === 'true' ? $(element).html() : $(element).val());
+            }
+      };
+      
+      $.event.special.hastext = {
+            
+            setup: function (data, namespaces) {
+                  $(this).bind('textchange', $.event.special.hastext.handler);
+            },
+            
+            teardown: function (namespaces) {
+                  $(this).unbind('textchange', $.event.special.hastext.handler);
+            },
+            
+            handler: function (event, lastValue) {
+                  if ((lastValue === '') && lastValue !== $(this).val()) {
+                        $(this).trigger('hastext');
+                  }
+            }
+      };
+      
+      $.event.special.notext = {
+            
+            setup: function (data, namespaces) {
+                  $(this).bind('textchange', $.event.special.notext.handler);
+            },
+            
+            teardown: function (namespaces) {
+                  $(this).unbind('textchange', $.event.special.notext.handler);
+            },
+            
+            handler: function (event, lastValue) {
+                  if ($(this).val() === '' && $(this).val() !== lastValue) {
+                        $(this).trigger('notext');
+                  }
+            }
+      };    
+      // Enhance val() so that this plugin is aware of programmatic changes to
+      // text using val().
+      var origValFn = $.fn.val;
+      $.fn.val = function () {
+            var returnValue = origValFn.apply(this, arguments);
+            if (arguments.length) {
+                  this.each(function () {
+                        $.event.special.textchange.triggerIfChanged($(this));
+                  });
+            }
+            return returnValue;
+      };
+})(jQuery);
 
 (function(){
-/*
- * jQuery Templates Plugin 1.0.0pre
- * http://github.com/jquery/jquery-tmpl
- * Requires jQuery 1.4.2
- *
- * Copyright 2011, Software Freedom Conservancy, Inc.
- * Dual licensed under the MIT or GPL Version 2 licenses.
- * http://jquery.org/license
- */
-(function(a){var r=a.fn.domManip,d="_tmplitem",q=/^[^<]*(<[\w\W]+>)[^>]*$|\{\{\! /,b={},f={},e,p={key:0,data:{}},i=0,c=0,l=[];function g(g,d,h,e){var c={data:e||(e===0||e===false)?e:d?d.data:{},_wrap:d?d._wrap:null,tmpl:null,parent:d||null,nodes:[],calls:u,nest:w,wrap:x,html:v,update:t};g&&a.extend(c,g,{nodes:[],parent:d});if(h){c.tmpl=h;c._ctnt=c._ctnt||c.tmpl(a,c);c.key=++i;(l.length?f:b)[i]=c}return c}a.each({appendTo:"append",prependTo:"prepend",insertBefore:"before",insertAfter:"after",replaceAll:"replaceWith"},function(f,d){a.fn[f]=function(n){var g=[],i=a(n),k,h,m,l,j=this.length===1&&this[0].parentNode;e=b||{};if(j&&j.nodeType===11&&j.childNodes.length===1&&i.length===1){i[d](this[0]);g=this}else{for(h=0,m=i.length;h<m;h++){c=h;k=(h>0?this.clone(true):this).get();a(i[h])[d](k);g=g.concat(k)}c=0;g=this.pushStack(g,f,i.selector)}l=e;e=null;a.tmpl.complete(l);return g}});a.fn.extend({tmpl:function(d,c,b){return a.tmpl(this[0],d,c,b)},tmplItem:function(){return a.tmplItem(this[0])},template:function(b){return a.template(b,this[0])},domManip:function(d,m,k){if(d[0]&&a.isArray(d[0])){var g=a.makeArray(arguments),h=d[0],j=h.length,i=0,f;while(i<j&&!(f=a.data(h[i++],"tmplItem")));if(f&&c)g[2]=function(b){a.tmpl.afterManip(this,b,k)};r.apply(this,g)}else r.apply(this,arguments);c=0;!e&&a.tmpl.complete(b);return this}});a.extend({tmpl:function(d,h,e,c){var i,k=!c;if(k){c=p;d=a.template[d]||a.template(null,d);f={}}else if(!d){d=c.tmpl;b[c.key]=c;c.nodes=[];c.wrapped&&n(c,c.wrapped);return a(j(c,null,c.tmpl(a,c)))}if(!d)return[];if(typeof h==="function")h=h.call(c||{});e&&e.wrapped&&n(e,e.wrapped);i=a.isArray(h)?a.map(h,function(a){return a?g(e,c,d,a):null}):[g(e,c,d,h)];return k?a(j(c,null,i)):i},tmplItem:function(b){var c;if(b instanceof a)b=b[0];while(b&&b.nodeType===1&&!(c=a.data(b,"tmplItem"))&&(b=b.parentNode));return c||p},template:function(c,b){if(b){if(typeof b==="string")b=o(b);else if(b instanceof a)b=b[0]||{};if(b.nodeType)b=a.data(b,"tmpl")||a.data(b,"tmpl",o(b.innerHTML));return typeof c==="string"?(a.template[c]=b):b}return c?typeof c!=="string"?a.template(null,c):a.template[c]||a.template(null,q.test(c)?c:a(c)):null},encode:function(a){return(""+a).split("<").join("&lt;").split(">").join("&gt;").split('"').join("&#34;").split("'").join("&#39;")}});a.extend(a.tmpl,{tag:{tmpl:{_default:{$2:"null"},open:"if($notnull_1){__=__.concat($item.nest($1,$2));}"},wrap:{_default:{$2:"null"},open:"$item.calls(__,$1,$2);__=[];",close:"call=$item.calls();__=call._.concat($item.wrap(call,__));"},each:{_default:{$2:"$index, $value"},open:"if($notnull_1){$.each($1a,function($2){with(this){",close:"}});}"},"if":{open:"if(($notnull_1) && $1a){",close:"}"},"else":{_default:{$1:"true"},open:"}else if(($notnull_1) && $1a){"},html:{open:"if($notnull_1){__.push($1a);}"},"=":{_default:{$1:"$data"},open:"if($notnull_1){__.push($.encode($1a));}"},"!":{open:""}},complete:function(){b={}},afterManip:function(f,b,d){var e=b.nodeType===11?a.makeArray(b.childNodes):b.nodeType===1?[b]:[];d.call(f,b);m(e);c++}});function j(e,g,f){var b,c=f?a.map(f,function(a){return typeof a==="string"?e.key?a.replace(/(<\w+)(?=[\s>])(?![^>]*_tmplitem)([^>]*)/g,"$1 "+d+'="'+e.key+'" $2'):a:j(a,e,a._ctnt)}):e;if(g)return c;c=c.join("");c.replace(/^\s*([^<\s][^<]*)?(<[\w\W]+>)([^>]*[^>\s])?\s*$/,function(f,c,e,d){b=a(e).get();m(b);if(c)b=k(c).concat(b);if(d)b=b.concat(k(d))});return b?b:k(c)}function k(c){var b=document.createElement("div");b.innerHTML=c;return a.makeArray(b.childNodes)}function o(b){return new Function("jQuery","$item","var $=jQuery,call,__=[],$data=$item.data;with($data){__.push('"+a.trim(b).replace(/([\\'])/g,"\\$1").replace(/[\r\t\n]/g," ").replace(/\$\{([^\}]*)\}/g,"{{= $1}}").replace(/\{\{(\/?)(\w+|.)(?:\(((?:[^\}]|\}(?!\}))*?)?\))?(?:\s+(.*?)?)?(\(((?:[^\}]|\}(?!\}))*?)\))?\s*\}\}/g,function(m,l,k,g,b,c,d){var j=a.tmpl.tag[k],i,e,f;if(!j)throw"Unknown template tag: "+k;i=j._default||[];if(c&&!/\w$/.test(b)){b+=c;c=""}if(b){b=h(b);d=d?","+h(d)+")":c?")":"";e=c?b.indexOf(".")>-1?b+h(c):"("+b+").call($item"+d:b;f=c?e:"(typeof("+b+")==='function'?("+b+").call($item):("+b+"))"}else f=e=i.$1||"null";g=h(g);return"');"+j[l?"close":"open"].split("$notnull_1").join(b?"typeof("+b+")!=='undefined' && ("+b+")!=null":"true").split("$1a").join(f).split("$1").join(e).split("$2").join(g||i.$2||"")+"__.push('"})+"');}return __;")}function n(c,b){c._wrap=j(c,true,a.isArray(b)?b:[q.test(b)?b:a(b).html()]).join("")}function h(a){return a?a.replace(/\\'/g,"'").replace(/\\\\/g,"\\"):null}function s(b){var a=document.createElement("div");a.appendChild(b.cloneNode(true));return a.innerHTML}function m(o){var n="_"+c,k,j,l={},e,p,h;for(e=0,p=o.length;e<p;e++){if((k=o[e]).nodeType!==1)continue;j=k.getElementsByTagName("*");for(h=j.length-1;h>=0;h--)m(j[h]);m(k)}function m(j){var p,h=j,k,e,m;if(m=j.getAttribute(d)){while(h.parentNode&&(h=h.parentNode).nodeType===1&&!(p=h.getAttribute(d)));if(p!==m){h=h.parentNode?h.nodeType===11?0:h.getAttribute(d)||0:0;if(!(e=b[m])){e=f[m];e=g(e,b[h]||f[h]);e.key=++i;b[i]=e}c&&o(m)}j.removeAttribute(d)}else if(c&&(e=a.data(j,"tmplItem"))){o(e.key);b[e.key]=e;h=a.data(j.parentNode,"tmplItem");h=h?h.key:0}if(e){k=e;while(k&&k.key!=h){k.nodes.push(j);k=k.parent}delete e._ctnt;delete e._wrap;a.data(j,"tmplItem",e)}function o(a){a=a+n;e=l[a]=l[a]||g(e,b[e.parent.key+n]||e.parent)}}}function u(a,d,c,b){if(!a)return l.pop();l.push({_:a,tmpl:d,item:this,data:c,options:b})}function w(d,c,b){return a.tmpl(a.template(d),c,b,this)}function x(b,d){var c=b.options||{};c.wrapped=d;return a.tmpl(a.template(b.tmpl),b.data,c,b.item)}function v(d,c){var b=this._wrap;return a.map(a(a.isArray(b)?b.join(""):b).filter(d||"*"),function(a){return c?a.innerText||a.textContent:a.outerHTML||s(a)})}function t(){var b=this.nodes;a.tmpl(null,null,null,this).insertBefore(b[0]);a(b).remove()}})(jQuery);
-var range = function(e){
+$.tmpl = function(input,dict) {
+    // Micro Mustache Template engine
+    String.prototype.format = function string_format(arrayInput) {
+            function replacer(key){
+                  var keyArr =key.slice(2,-2).split("."),firstKey = keyArr[0], SecondKey = keyArr[1];
+                   if (arrayInput[firstKey] instanceof Object){
+                         return arrayInput[firstKey][SecondKey];
+                   }
+                   else{
+                         return arrayInput[firstKey];
+                   }
+            }
+            return this.replace(/{{\s*[\w\.]+\s*}}/g,replacer);  
+      };
+     return $(input.format(dict));
+};
+String.prototype.toPersianDigit = function(a) {
+      return this.replace(/\d+/g, function(digit) {
+            var enDigitArr = [], peDigitArr = [];
+            for (var i = 0; i < digit.length; i++) {
+                  enDigitArr.push(digit.charCodeAt(i));
+            }
+            for (var j = 0; j < enDigitArr.length; j++) {
+                  peDigitArr.push(String.fromCharCode(enDigitArr[j] + ((!!a && a == true) ? 1584 : 1728)));
+            }
+            return peDigitArr.join('');
+      });
+};
+var log = function(input){
+      console.log(input);
+},range = function(e){
       r = [];
       var i=0;
       while (i<=e-1)
@@ -29,9 +136,7 @@ var range = function(e){
             i++;
       }
       return r;
-};
-
-var inherit = function(self, baseClasses) {
+},inherit = function(self, baseClasses) {
       copyObject = function(o){
             return $.extend(true,{},o);
       }     
@@ -40,7 +145,7 @@ var inherit = function(self, baseClasses) {
       for (index in baseClasses) {
             var cls = copyObject(baseClasses[index]);
             if (!cls) {
-                  continue;
+                 continue;
             }
             if (cls['events'] && Object.keys(cls['events']).length > 0) {
                   events.push(cls['events']);
@@ -62,31 +167,17 @@ var inherit = function(self, baseClasses) {
       }
       self.init();
       return self;
-};
-
-
-
-var Class_Base = {
+},Class_Base = {
       init : function() {
             this.isInstance = true;
             this.raiseEvent('init');
       },
-      onInit : function() {
-            this.raiseEvent('init');
-      },
-      isInt : function(value) {
-            if ( typeof (value) == 'number') {
-                  return true;
-            } else {
-                  return false;
-            }
-      },
-      fullHeight: function(elem){
-            var $this = $(elem);
-            return $this.height() + parseInt($this.css("padding-top")) +
-             parseInt($this.css("padding-bottom")) +
-              parseInt($this.css("border-top")) +
-               parseInt($this.css("border-bottom"));        
+      fullHeight:function(element){
+           return $(element).height()
+           +parseInt($(element).css("padding-top"))
+           +parseInt($(element).css("padding-bottom"))
+           +parseInt($(element).css("border-top"))
+           +parseInt($(element).css("border-bottom"))    
       },
       // Event Management
       attachEvent : function(eventName, func) {
@@ -99,7 +190,6 @@ var Class_Base = {
                   }
             }
             this.events[eventName].push(func)
-            
             return this;
       },
       dettachEvent : function(eventName, func) {
@@ -135,27 +225,8 @@ var Class_Base = {
       },
       events : {
             init : null // e
-      },
-      getPercent : function(all, part) {
-            return (part * 100) / all;
-      },
-      toPersianDigit : function(input) {
-            return input.toString().toPersianDigit();
-      },
-      anyoneDo : function(array, func, param) {
-            for (i in array) {
-                  array[i][func](param);
-            }
-      },isUndefined : function(input) {
-        if( typeof input == "undefined") {
-            return true;
-        } else {
-            return false;
-        }
-    }
-};
-
-var Class_Sprite = {
+      }
+},Class_Sprite = {
       defaultView:"default",
       // Views Interfcae
       events:{
@@ -193,23 +264,8 @@ var Class_Sprite = {
             this.raiseEvent('render');    
             this.view = this.views[viewName];
             return this.view.render(this);
-      }     
-};
-
-String.prototype.toPersianDigit = function(a) {
-      return this.replace(/\d+/g, function(digit) {
-            var enDigitArr = [], peDigitArr = [];
-            for (var i = 0; i < digit.length; i++) {
-                  enDigitArr.push(digit.charCodeAt(i));
-            }
-            for (var j = 0; j < enDigitArr.length; j++) {
-                  peDigitArr.push(String.fromCharCode(enDigitArr[j] + ((!!a && a == true) ? 1584 : 1728)));
-            }
-            return peDigitArr.join('');
-      });
-};
-
-Class_DateRange = {
+      } ,tmpl:{}  
+},Class_DateRange = {
       monthRange : {
             1 : {
                   name : {
@@ -365,15 +421,8 @@ Class_DateRange = {
                         fa : "ج"
                   }
             }
-      }, persianDaysName : ["اورمزد", "بهمن", "اوردیبهشت", "شهریور", "سپندارمذ", "خورداد", "امرداد", "دی به آذز", "آذز", "آبان", "خورشید", "ماه", "تیر", "گوش", "دی به مهر", "مهر", "سروش", "رشن", "فروردین", "بهرام", "رام", "باد", "دی به دین", "دین", "ارد", "اشتاد", "آسمان", "زامیاد", "مانتره سپند", "انارام", "زیادی"]};
-
-
-
-
-
-
-
-var Views_MonthGrid = {
+      }, persianDaysName : ["اورمزد", "بهمن", "اوردیبهشت", "شهریور", "سپندارمذ", "خورداد", "امرداد", "دی به آذز", "آذز", "آبان", "خورشید", "ماه", "تیر", "گوش", "دی به مهر", "مهر", "سروش", "رشن", "فروردین", "بهرام", "رام", "باد", "دی به دین", "دین", "ارد", "اشتاد", "آسمان", "زامیاد", "مانتره سپند", "انارام", "زیادی"]},
+      Views_MonthGrid = {
       cssClass : {
             main : "month-grid-box",
             header : "header",
@@ -391,19 +440,15 @@ var Views_MonthGrid = {
                         self.view_data = {
                               css : self.cssClass
                         };
-                        $.template("month_grid_tmpl", 
-                                                "<div class='${css.main}' >\
-                                                      <div class='${css.header}' > \
-                                                            <div class='${css.headerTitle}' ></div>\
-                                                            <div class='${css.headerRow}' ></div>\
+                        self.tmpl.main ="<div class='{{css.main}}' >\
+                                                      <div class='{{css.header}}' > \
+                                                            <div class='{{css.headerTitle}}' ></div>\
+                                                            <div class='{{css.headerRow}}' ></div>\
                                                       </div>\
-                                                      <table cellspacing='0' class='${css.daysTable}'  ><tbody><tr><td /><td/><td/><td/><td/><td/><td/></tr><tr><td/><td/><td/><td/><td/><td/><td/></tr><tr><td/><td/><td/><td/><td/><td/><td/></tr><tr><td/><td/><td/><td/><td/><td/><td/></tr><tr><td/><td/><td/><td/><td/><td/><td/></tr><tr><td/><td/><td/><td/><td/><td/><td/></tr></tbody></table>\
-                                                </div>" );
-                        self.element  = $.tmpl("month_grid_tmpl", self.view_data).appendTo(self.container);
+                                                      <table cellspacing='0' class='{{css.daysTable}}'  ><tbody><tr><td /><td/><td/><td/><td/><td/><td/></tr><tr><td/><td/><td/><td/><td/><td/><td/></tr><tr><td/><td/><td/><td/><td/><td/><td/></tr><tr><td/><td/><td/><td/><td/><td/><td/></tr><tr><td/><td/><td/><td/><td/><td/><td/></tr><tr><td/><td/><td/><td/><td/><td/><td/></tr></tbody></table>\
+                                                </div>";
+                        self.element  = $.tmpl(self.tmpl.main,self.view_data).appendTo(self.container);
                         self.header = self.createElementByClass(self.cssClass.header);
-                        
-                        // Change !!
-                        //self.title = self.createElementByClass(self.cssClass.headerTitle).text( self.monthRange[self.state.month].name.fa  )[0];
                         self.headerRow = self.createElementByClass(self.cssClass.headerRow);
                         for(weekDay in self.weekRange) {
                               $("<div/>").text(self.weekRange[weekDay].abbr.fa).addClass(self.cssClass.headerRowCell).appendTo(self.headerRow)[0];
@@ -470,8 +515,7 @@ var Views_MonthGrid = {
                   }
             }//------- End of Default view
       }
-};
-var Views_pDatePicker = {
+},Views_pDatePicker = {
       cssClass : {
             datePickerPlotArea : "datepicker-plot-area",
             dayView : "datepicker-day-view",
@@ -487,30 +531,28 @@ var Views_pDatePicker = {
             selectedYear : "selected",
             toolbox : "toolbox ",
             btnToday : "btn-today"
-
       },
       container : {},
       views : {
             "default" : {
                   render : function(self) {
                         self.element = {};
-                        self.view_data = {
-                              css : self.cssClass
+                        self.view_data =  {
+                              css: self.cssClass
                         };
-                        $.template("p_datePicker_tmpl", "<div class='${css.datePickerPlotArea}' >" + //
-                        " <div class='${css.dayView}' ></div>" + //
-                        "<div class='${css.monthView}' ></div>" + //
-                        "<div class='${css.yearView}' ></div>" + //
-                        "<div class='${css.toolbox}' ></div>" + //
-                        "</div>");
-                        $.template("p_datePicker_header", "<div class='${css.datpickerHeader}' >" + //
-                        "<div class='${css.btnNext}' >${btnNextText}</div>" + //
-                        "<div class='${css.btnSwitch}' >${btnSwitchText}</div>" + //
-                        "<div class='${css.btnPrev}' >${btnPrevText}</div>" + //
-                        "</div>");
-
+                        self.tmpl.header = "<div class='{{css.datpickerHeader}}' >" + //
+                        "<div class='{{css.btnNext}}' >{{btnNextText}}</div>" + //
+                        "<div class='{{css.btnSwitch}}' >{{btnSwitchText}}</div>" + //
+                        "<div class='{{css.btnPrev}}' >{{btnPrevText}}</div>" + //
+                        "</div>";
+                       self.tmpl.main = "<div class='{{css.datePickerPlotArea}}' >" + //
+                        " <div class='{{css.dayView}}' ></div>" + //
+                        "<div class='{{css.monthView}}' ></div>" + //
+                        "<div class='{{css.yearView}}' ></div>" + //
+                        "<div class='{{css.toolbox}}' ></div>" + //
+                        "</div>";
+                         self.element.main = $.tmpl(self.tmpl.main ,self.view_data).hide().appendTo($("body"));
                         // Define Elements
-                        self.element.main = $.tmpl("p_datePicker_tmpl", self.view_data).hide().appendTo($("body"));
                         self.container.dayView = $(self.element.main).children('.' + self.cssClass.dayView);
                         self.container.monthView = $(self.element.main).children('.' + self.cssClass.monthView).hide();
                         self.container.yearView = $(self.element.main).children('.' + self.cssClass.yearView).hide();
@@ -529,18 +571,18 @@ var Views_pDatePicker = {
                         }
                         // SHow Hide Picker ------------------------
                         self.inputElem.focus(function() {
-                              self.element.main.show();
+                              self.show();
                         });
                         self.inputElem.click(function(e) {
                               e.stopPropagation();
                               return false;
                         });
                         self.inputElem.blur(function() {
-                              self.element.main.hide();
+                              self.hide();
                         });
                         $(document).click(function() {
                               self.inputElem.blur();
-                              self.element.main.hide();
+                              self.hide();
                         });
                         $(self.element.main).mousedown(function(e) {
                               e.stopPropagation();
@@ -559,7 +601,8 @@ var Views_pDatePicker = {
                         var inputY = self.inputElem.offset().left;
 
                         if (self.position == "auto") {
-                              var inputHeight = self.fullHeight(self.inputElem) + 5;
+                              
+                              var inputHeight = self.fullHeight(self.inputElem);
                               self.element.main.css({
                                     top : (inputX + inputHeight) + 'px',
                                     left : inputY + 'px'
@@ -600,7 +643,7 @@ var Views_pDatePicker = {
                               btnSwitchText : self._formatDigit(pd.format(self.daysTitleFormat)),
                               btnPrevText : ">"
                         };
-                        self.element.dayBox = $.tmpl("p_datePicker_header", self.view_data).appendTo(this.container);
+                        self.element.dayBox = $.tmpl( self.tmpl.header,self.view_data).appendTo(this.container);
                         self.element.dayBox.children("." + self.cssClass.btnSwitch).click(function() {
                               self.view.changeView(self, "month");
 
@@ -633,11 +676,7 @@ var Views_pDatePicker = {
                               year : pd.year(),
                               persianDigit :  self.persianDigit
                         }).selectDate(self.state.unixDate).attachEvent("selectDay", function(x) {
-                              self._updateState("unix", x);
-                              self.dayPickerView.updateView();
-                              if (self.autoClose) {
-                                    self.element.main.hide();
-                              }
+                              self._selectDate("unix",x);
                         });
                         this.updateView = function() {
                               self.dayPickerView.mGrid.updateAs(self.state.viewYear, self.state.viewMonth);
@@ -651,21 +690,19 @@ var Views_pDatePicker = {
                   },
                   // ---------------------------------------------------------------------------  Month View
                   MonthPicker : function(self) {
-                        var pd = new persianDate(self.state.unixDate);
+                        var pd = new persianDate(self.state.unixDate),
+                              monthRaneg = Class_DateRange.monthRange
                         self.view_data = {
                               css : self.cssClass,
                               btnNextText : "<",
                               btnSwitchText : pd.format("YYYY"),
                               btnPrevText : ">"
                         };
-                        self.element.monthBox = $.tmpl("p_datePicker_header", self.view_data).appendTo(self.container.monthView);
-
+                        self.element.monthBox = $.tmpl(self.tmpl.header,self.view_data).appendTo(self.container.monthView);
                         self.element.monthBox.children("." + self.cssClass.btnSwitch).click(function() {
                               self.view.changeView(self, "year")
                               return false;
                         });
-                        var monthRaneg = Class_DateRange.monthRange;
-
                         for (m in monthRaneg) {
                               $("<div/>").data({
                                     monthIndex : m
@@ -712,12 +749,12 @@ var Views_pDatePicker = {
                               btnSwitchText :  self._formatDigit(remaining) + "-" +  self._formatDigit(remaining + 11),
                               btnPrevText : ">"
                         };
-                        self.element.yearHeaderBox = $.tmpl("p_datePicker_header", self.view_data).appendTo(self.container.yearView);
-
+                        self.element.yearHeaderBox = $.tmpl(self.tmpl.header,self.view_data).appendTo(self.container.yearView);
                         this.applyYearList = function() {
-                              var pd = new persianDate(self.state.unixDate);
-                              var year = self.state.viewYear;
-                              var remaining = parseInt(year / 12) * 12;
+                              var pd = new persianDate(self.state.unixDate)
+                              ,year = self.state.viewYear
+                              ,remaining = parseInt(year / 12) * 12;
+                              
                               self.container.yearView.children("." + self.cssClass.yearItem).remove();
                               // Apply Year
                               for (i in range(12)) {
@@ -794,24 +831,7 @@ var Views_pDatePicker = {
                   }
             }
       }
-};
-/*
- Version 0.0.1
- Smart object
- Abstract factory
- doc:
-
- For get clicked day use attachEvent  "selectDay"
-           public API:
-         selectDay
-         updateAs
-         options:
-             parent: sample, (container object)
-             container: sample, (html element)
-             year: sample, (first time initialize)
-             month:sample, (first time initialize)
-*/
-var Class_MonthGrid = {
+},Class_MonthGrid = {
     // List Of days Html object
     state : {
         year : null,
@@ -892,7 +912,6 @@ var Class_MonthGrid = {
         self.state.year = year;
         self.state.month = month;
         self.view.renderDays(self);
-        
         return this;
     },
     goToYear : function(year) {
@@ -901,48 +920,46 @@ var Class_MonthGrid = {
     applyStory : function() {
         //this.view.applyStory(this);
     }
-};
-
-var MonthGrid = function(options) {
+},MonthGrid = function(options) {
     // Change !!
     //this.pcal = options.parent.pcal;
     inherit(this, [Class_Sprite, Views_MonthGrid, Class_DateRange, Class_MonthGrid, options]);
     var self = this;
     return this;
-};
-/*
- (c) Copyright 2013 babakhani reza. All Rights Reserved.
- */
-
-(function($) {
-      $.fn.pDatepicker = function(options) {
-            if (!this) {
-                  $.error("Invalid selector");
-            }
-            rootElement = this[0];
-            $(this).each(function() {
-                  this.pDatePicker = new pDatepicker(options, this);
-            });
-            return this;
-      };
-})(jQuery);
-
-var Class_pDatepicker = {
+},Class_pDatepicker = {
       cssClass : 'datepicker-container',
       daysTitleFormat : "YYYY MMMM",
       persianDigit : true,
       // Released Do not Any Change
-      viewFormat : "YYYY-MM-DD",
       viewMode : "day", /// day,month,year
       position : "auto", // [x,y]
       autoClose : false,
       toolbox : true,
+      // 0.0.4      
+      format: false, 
+      observer: false,      
+      altField : false,
+      altFormat: "unix",
+      
+      // Deprecated In 0.0.4
       mask : false, //unix,Gregorian
-      viewFormatter : function(unixDate /* javascript date object*/) {
+      viewFormat : "YYYY / MM / DD",
+      
+      formatter : function(unixDate /* javascript date object*/) {
             var self = this;
             var pdate = new persianDate(unixDate);
             return self._formatDigit(pdate.format(self.viewFormat));
       },
+      altFieldFormatter:function(unixDate){
+             var self = this;
+             if (self.altFormat.toLowerCase() == "gregorian" | self.altFormat.toLowerCase() == "g" )
+                  return new Date(self.state.unixDate);
+            if (self.altFormat.toLowerCase() == "unix" | self.altFormat.toLowerCase() == "u")
+                   return self.state.unixDate;
+            else
+                   return new persianDate(self.state.unixDate).format(self.altFormat);
+      },
+      // Deprecated In 0.0.4
       maskFormatter : function(unixDate /* javascript date object*/) {
             var self = this;
             if (self.mask.toLowerCase() == "gregorian")
@@ -964,24 +981,91 @@ var Class_pDatepicker = {
             viewMonth : 0,
             viewDay : 0
       },
-      events : {
-      },
-      // Public Methud
+      events : {},
+      _viewed: false,
+      // ------------------------------------------------------------------------ Public Methud
       show : function() {
             this.element.main.show();
+            this.onShow(this);
+            this._viewed = true;
             return this;
       },
       hide : function() {
-            this.element.main.hide();
+            if(this._viewed){
+                  this.element.main.hide();
+                  this.onHide(this);
+                  this._viewed = false;
+            }
             return this;
       },
       init : function() {
             var self = this;
             this.inputElem.addClass(self.cssClass);
-            if (self.mask) {
-                  self._appendMaskInput()
-            };
+            if (self.mask) {self._appendMaskInput();};
+            if(self.observer){self._observer();}
+            // TODO:  Must Remove Before Release 0.1.0
+            if(self.format){self.viewFormat = self.format}
+            if (self.viewFormatter){self.formatter = self.viewFormatter}
             return this
+      },
+      // Removes the datepicker functionality completely. 
+      destroy:function(){
+            this.inputElem.removeClass(self.cssClass);
+            this.element.main.remove();
+            return this;
+      },
+      option:function(options){
+           var key = options[0],val = options[1];
+           // is array
+            if(typeof options[0] === "object"){
+                  for(o in key ){
+                        this[o] = key[o];
+                  }
+                  return this;
+            }
+            else if(val && val !== "undefined" || val == false){
+                  this[key] = val;
+                  return this;
+            }else{
+                  return this[key];
+            }     
+      },
+      onShow:function(self){},
+      onHide:function(self){},
+      onSelect: function(unixDate){
+      },
+      _observer: function(){
+           var self = this;
+           self.inputElem.bind("textchange",function(){
+                if(!self._flagSelfManipulate){
+                       var newDate = new Date(self.inputElem.val());
+                       if(newDate != "Invalid Date"){
+                            var newPersainDate = new persianDate(newDate);
+                            self._updateState("unix",newPersainDate.valueOf());
+                       }
+                 }
+           })    
+           $(self.altField).bind("textchange",function(){
+                 if(!self._flagSelfManipulate){
+                       var newDate = new Date($(this).val());                
+                       if(newDate != "Invalid Date"){
+                            var newPersainDate = new persianDate(newDate);
+                            self._updateState("unix",newPersainDate.valueOf());
+                       }
+                 }
+           })           
+           return this;
+      },
+      _flagSelfManipulate : true,
+      _selectDate:function(key,unixDate){
+            var self = this;                                          
+            self._updateState("unix",unixDate);
+            self.dayPickerView.updateView();
+            self.onSelect(unixDate,this)
+            if (self.autoClose) {
+                  self.element.main.hide();
+            }
+            return this;
       },
       _formatDigit : function(digit) {
             if (this.persianDigit)
@@ -999,7 +1083,9 @@ var Class_pDatepicker = {
             }).removeAttr("class");
             self.visualInput.attr("id", "");
             this.inputElem.after(self.visualInput);
+            return this;
       },
+      // Update Every Thing This Update All State
       _updateState : function(key, val) {
             var self = this;
             if (key == "year") {
@@ -1021,10 +1107,17 @@ var Class_pDatepicker = {
       },
       _updateInputElement : function() {
             var self = this;
+            self._flagSelfManipulate = true;
             if (self.mask) {
                   self.visualInput.val(self.maskFormatter(self.state.unixDate));
             }
-            this.inputElem.val(self.viewFormatter(self.state.unixDate));
+            
+            if(self.altField && $(self.altField).length >= 1 ){
+                  $(self.altField).val(self.altFieldFormatter(self.state.unixDate));
+                  
+            }
+            this.inputElem.val(self.formatter(self.state.unixDate)).data({"lastValue":""});
+            self._flagSelfManipulate = false;
             return this;
       },
       // one time run
@@ -1048,9 +1141,8 @@ var Class_pDatepicker = {
             this.state.selectedDay = this.state.viewDay = pd.date();
             return this;
       }
-};
-
-var pDatepicker = function(options, mainElem) {
+},Datepicker = function(mainElem,options) {     
+      // Prevent Duplicate 
       inherit(this, [Class_Sprite, Class_pDatepicker, Views_pDatePicker, options, {
             inputElem : $(mainElem)
       }]);
@@ -1059,6 +1151,29 @@ var pDatepicker = function(options, mainElem) {
       this.view = this.views[viewName];
       this.raiseEvent('render');
       this.view.render(this);
+      this.inputElem.data("datepicker",this);
       return this;
 };
+(function($) {
+      $.fn.persianDatepicker = $.fn.pDatepicker = function(options) {
+            var args = Array.prototype.slice.call(arguments),output = this;
+            if (!this) {
+                  $.error("Invalid selector");
+            }
+            $(this).each(function() {
+                  // encapsulation Args
+                   var emptyArr = new Array,tempArg = args.concat(emptyArr),dp = $(this).data("datepicker");
+                   if(dp && typeof tempArg[0] == "string"){
+                         var funcName = tempArg[0],funcArgs = tempArg.splice(0,1);
+                         output = dp[funcName](tempArg);
+                  }
+                  else{
+                        this.pDatePicker = new Datepicker(this, options);
+                  }
+            });
+            return output;
+      };
+})(jQuery);
+
+
 })();
