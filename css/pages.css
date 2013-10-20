@@ -37,6 +37,21 @@ footer, header, hgroup, menu, nav, section {
 
 /*--------------------------------------*/
 
+#header_wrap,
+.page-menu{
+          position:fixed;
+          z-index: 1000;
+}
+
+.page-menu{
+          top:42px;
+          border-bottom:1px solid #fff;
+}
+
+#main_content_wrap{
+          padding-top:60px;
+          
+}
 
 /*******************************************************************************
 Theme Styles
