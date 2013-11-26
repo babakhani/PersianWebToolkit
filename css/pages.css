@@ -722,3 +722,23 @@ font-size: 25px !important;
       padding:0px 3px 0px 3px;
 
 }
+
+
+.direct-source-link{
+  display:block;
+  float: left;
+  border: 1px solid #ededed;
+  height:32px;
+  line-height:32px;
+  background-color: #fff;
+  float:left;
+  padding:10px;
+  margin-top:10px;
+  margin-right:10px;
+}
+
+.direct-source-link b{
+  font-weight: bold !important;
+
+}
+
