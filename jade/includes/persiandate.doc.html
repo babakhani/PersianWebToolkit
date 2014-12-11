@@ -1,616 +1,700 @@
-<script type="text/javascript" >
-      $(document).ready(function() {
-            $("pre").addClass("prettyprint");
-            prettyPrint();
-      })
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("pre").addClass("prettyprint");
+        prettyPrint();
+    })
 </script>
 
-<div class="page-title-box" >
-	<h1>Persian Date</h1> 
-	<h6 class="warning-version" >Beta Version 0.1.7</h6>
-		<h2> javascript date library for parsing, validating, manipulating, and formatting <strong>persian dates</strong> System. </h2>
-	<p>
-		Inspired by <a href="http://momentjs.com/" >moment.js</a>
-	</p>
-	<p>
-	<span>More info  at </span><a target="blank" href="http://en.wikipedia.org/wiki/Iranian_calendar" >http://en.wikipedia.org/wiki/Iranian_calendar</a>
-	</p>
-	<p>
-		<a href="./persian-date-tests.html" >Tests</a>
-	</p>
-	<p>
-		<a href="https://github.com/babakhani/PersianDate" >Project on github</a>
-	</p>
-	<p>
-		<a class="direct-source-link" target="blank"  href="http://rawgithub.com/babakhani/PersianDate/master/pwt-date.js" ><b>pwt-date.js</b> 54 kb</a>
-		<a class="direct-source-link" target="blank"  href="http://rawgithub.com/babakhani/PersianDate/master/pwt-date.min.js" ><b>pwt-date.min.js </b>14 kb</a>
-		<span class="direct-source-link"><b>Minify and GZip </b>4 kb</span>
-	</p>
+<div class="page-title-box">
+    <h1>Persian Date</h1>
+    <h6 class="warning-version">Beta Version 0.1.7</h6>
+
+    <h2> javascript date library for parsing, validating, manipulating, and formatting <strong>persian dates</strong>
+        System. </h2>
+
+    <p>
+        Inspired by <a href="http://momentjs.com/">moment.js</a>
+    </p>
+
+    <p>
+        <span>More info  at </span><a target="blank" href="http://en.wikipedia.org/wiki/Iranian_calendar">http://en.wikipedia.org/wiki/Iranian_calendar</a>
+    </p>
+
+    <p>
+        <a href="./persian-date-tests.html">Tests</a>
+    </p>
+
+    <p>
+        <a href="https://github.com/babakhani/PersianDate">Project on github</a>
+    </p>
+
+    <p>
+        <a class="direct-source-link" target="blank"
+           href="http://rawgithub.com/babakhani/PersianDate/master/pwt-date.js"><b>pwt-date.js</b> 54 kb</a>
+        <a class="direct-source-link" target="blank"
+           href="http://rawgithub.com/babakhani/PersianDate/master/pwt-date.min.js"><b>pwt-date.min.js </b>14 kb</a>
+        <span class="direct-source-link"><b>Minify and GZip </b>4 kb</span>
+    </p>
 </div>
-<div class="download-box" >
-	<a class="download-item"  href="https://github.com/babakhani/PersianDate/archive/master.zip" > <span class="download-zip"  ></span> <span class="download-zip-title" >Download Zip <span class="download-info" >From Github</span></span> </a>
-	<div class="page-git-star-btn" >
-			<iframe src="http://ghbtns.com/github-btn.html?user=babakhani&repo=PersianDate&type=watch&count=false" allowtransparency="true" frameborder="0" scrolling="0" width="55px" height="20px"></iframe>
-	</div>	
+<div class="download-box">
+    <a class="download-item" href="https://github.com/babakhani/PersianDate/archive/master.zip"> <span
+            class="download-zip"></span> <span class="download-zip-title">Download Zip <span class="download-info">From Github</span></span>
+    </a>
+
+    <div class="page-git-star-btn">
+        <iframe src="http://ghbtns.com/github-btn.html?user=babakhani&repo=PersianDate&type=watch&count=false"
+                allowtransparency="true" frameborder="0" scrolling="0" width="55px" height="20px"></iframe>
+    </div>
 </div>
 
 <br/>
-<article class="method">
-	<a class="target" name="/use-it/browser/"></a>
-	<h3><a href="#/use-it/browser/"><span class="hash">#</span>Browser</a><span></span></h3>
-	<div class="prose">
 
-		<div class="highlight">
-			<pre >&lt;script src="pwt-date.js"&gt;&lt;/script&gt;
+<article class="method">
+    <a class="target" name="/use-it/browser/"></a>
+
+    <h3><a href="#/use-it/bower/"><span class="hash">#</span>Install</a><span></span></h3>
+
+    <div class="prose">
+        <div class="highlight">
+			<pre>bower install persian-date</pre>
+        </div>
+    </div>
+</article>
+
+
+<article class="method">
+    <a class="target" name="/use-it/browser/"></a>
+
+    <h3><a href="#/use-it/browser/"><span class="hash">#</span>Browser</a><span></span></h3>
+
+    <div class="prose">
+
+        <div class="highlight">
+			<pre>&lt;script src="pwt-date.js"&gt;&lt;/script&gt;
 &lt;script&gt;
     persianDate().format();
 &lt;/script&gt;
 </pre>
-		</div>
-	</div>
+        </div>
+    </div>
 </article>
 
 <article class="section">
-	<a class="target" name="/parsing/"></a>
-	<h2><a href="#/parsing/"><span class="hash">#</span>Parse</a></h2>
-	<p>
-		Instead of modifying the native
-		<code>
-			Date.prototype
-		</code>
-		, persianDate.js creates a wrapper for the
-		<code>
-			Date
-		</code>
-		object. To get this wrapper object, simply call
-		<code>
-			persianDate()
-		</code>
-		with one of the supported input types.
-	</p>
+    <a class="target" name="/parsing/"></a>
+
+    <h2><a href="#/parsing/"><span class="hash">#</span>Parse</a></h2>
+
+    <p>
+        Instead of modifying the native
+        <code>
+            Date.prototype
+        </code>
+        , persianDate.js creates a wrapper for the
+        <code>
+            Date
+        </code>
+        object. To get this wrapper object, simply call
+        <code>
+            persianDate()
+        </code>
+        with one of the supported input types.
+    </p>
 </article>
 
 <article class="method">
-	<a class="target" name="/parsing/now/"></a>
-	<h3><a href="#/parsing/now/"><span class="hash">#</span>Now</a></h3>
-	<div class="prose">
-		<pre  lang="javascript">persianDate();</pre>
-		<p>
-			To get the current date and time, just call
-			<code>
-				persianDate()
-			</code>
-			with no parameters.
-		</p>
+    <a class="target" name="/parsing/now/"></a>
 
-		<div class="highlight">
-			<pre  lang="javascript"><span class="keyword">var</span> now = persianDate();</pre>
-		</div>
-		<p>
-			This is essentially the same as calling
-			<code>
-				persianDate(new Date())
-			</code>
-			.
-		</p>
-	</div>
+    <h3><a href="#/parsing/now/"><span class="hash">#</span>Now</a></h3>
+
+    <div class="prose">
+        <pre lang="javascript">persianDate();</pre>
+        <p>
+            To get the current date and time, just call
+            <code>
+                persianDate()
+            </code>
+            with no parameters.
+        </p>
+
+        <div class="highlight">
+            <pre lang="javascript"><span class="keyword">var</span> now = persianDate();</pre>
+        </div>
+        <p>
+            This is essentially the same as calling
+            <code>
+                persianDate(new Date())
+            </code>
+            .
+        </p>
+    </div>
 </article>
 
 <article class="method">
-	<a class="target" name="/parsing/unix-offset/"></a>
-	<h3><a href="#/parsing/unix-offset/"><span class="hash">#</span>Unix Offset (milliseconds)</a></h3>
-	<div class="prose">
-		<pre  lang="javascript">persianDate(Number);</pre>
-		<p>
-			Similar to
-			<code>
-				new Date(Number)
-			</code>
-			, you can create a persianDate by passing an integer value representing the number of <em>milliseconds</em> since the Unix Epoch (Jan 1 1970 12AM UTC).
-		</p>
+    <a class="target" name="/parsing/unix-offset/"></a>
 
-		<div class="highlight">
-			<pre  lang="javascript">
+    <h3><a href="#/parsing/unix-offset/"><span class="hash">#</span>Unix Offset (milliseconds)</a></h3>
+
+    <div class="prose">
+        <pre lang="javascript">persianDate(Number);</pre>
+        <p>
+            Similar to
+            <code>
+                new Date(Number)
+            </code>
+            , you can create a persianDate by passing an integer value representing the number of <em>milliseconds</em>
+            since the Unix Epoch (Jan 1 1970 12AM UTC).
+        </p>
+
+        <div class="highlight">
+			<pre lang="javascript">
 var day = persianDate(1318781876406);//"۱۳۹۰-۰۷-۲۴ ۱۹:۴۷:۵۶ ب ظ"
 </pre>
-		</div>
-	</div>
+        </div>
+    </div>
 </article>
 
 <article class="method">
-	<a class="target" name="/parsing/unix-timestamp/"></a>
-	<h3><a href="#/parsing/unix-timestamp/"><span class="hash">#</span>Unix Timestamp (seconds)</a></h3>
-	<div class="prose">
-		<pre lang="javascript">persianDate.unix(Number)</pre>						
-		
-						
+    <a class="target" name="/parsing/unix-timestamp/"></a>
+
+    <h3><a href="#/parsing/unix-timestamp/"><span class="hash">#</span>Unix Timestamp (seconds)</a></h3>
+
+    <div class="prose">
+        <pre lang="javascript">persianDate.unix(Number)</pre>
 
 
+        <p>
+            To create a persianDate from a Unix timestamp (<em>seconds</em> since the Unix Epoch), use
+            <code>
+                persianDate.unix(Number)
+            </code>
 
+        </p>
 
-		<p>
-			To create a persianDate from a Unix timestamp (<em>seconds</em> since the Unix Epoch), use
-			<code>
-				persianDate.unix(Number)
-			</code>
-
-		</p>
-
-		<div class="highlight">
+        <div class="highlight">
 			<pre lang="javascript">
 var day = persianDate.unix(1318781876);//"۱۳۹۰-۰۷-۲۴ ۱۹:۴۷:۵۶ ب ظ"
 </pre>
-		</div>
-		<p>
-			This is implemented as
-			<code>
-				persianDate(timestamp * 1000)
-			</code>
-			, so partial seconds in the input timestamp are included.
-		</p>
+        </div>
+        <p>
+            This is implemented as
+            <code>
+                persianDate(timestamp * 1000)
+            </code>
+            , so partial seconds in the input timestamp are included.
+        </p>
 
-		<div class="highlight">
+        <div class="highlight">
 			<pre lang="javascript">
 var day = persianDate.unix(1318781876.721);
 </pre>
-		</div>
-	</div>
+        </div>
+    </div>
 </article>
 
 <article class="method">
-	<a class="target" name="/parsing/date/"></a>
-	<h3><a href="#/parsing/date/"><span class="hash">#</span>Date</a></h3>
-	<div class="prose">
-		<pre  lang="javascript">persianDate(new Date());</pre>
-		<p>
-			You can create a
-			<code>
-				persianDate
-			</code>
-			with a pre-existing native Javascript
-			<code>
-				Date
-			</code>
-			object.
-		</p>
+    <a class="target" name="/parsing/date/"></a>
 
-		<div class="highlight">
-			<pre  lang="javascript">
+    <h3><a href="#/parsing/date/"><span class="hash">#</span>Date</a></h3>
+
+    <div class="prose">
+        <pre lang="javascript">persianDate(new Date());</pre>
+        <p>
+            You can create a
+            <code>
+                persianDate
+            </code>
+            with a pre-existing native Javascript
+            <code>
+                Date
+            </code>
+            object.
+        </p>
+
+        <div class="highlight">
+			<pre lang="javascript">
 var day = new Date(<span class="number">2011, 9, 16);
 var dayWrapper = persianDate(day);//"۱۳۹۰-۰۷-۲۴ ۰۰:۰۰:۰۰ ق ظ"
 </pre>
-		</div>
-		<p>
-			This is the fastest way to get a persianDate.js wrapper.
-		</p>
-	</div>
+        </div>
+        <p>
+            This is the fastest way to get a persianDate.js wrapper.
+        </p>
+    </div>
 </article>
 
 <article class="method">
-	<a class="target" name="/parsing/array/"></a>
-	<h3><a href="#/parsing/array/"><span class="hash">#</span>Array</a></h3>
-	<div class="prose">
-		<pre  lang="javascript">persianDate(Number[]);</pre>
-		<p>
-			You can create a persianDate with an array of numbers that mirror the parameters passed to <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Date">new Date()</a>But As Persian Date Number Like  [1393,2,22,11,22,30]
-		</p>
+    <a class="target" name="/parsing/array/"></a>
 
-		<p>
-			<strong>Note:</strong>In this version array of Gregorian Date dose not Support
-		</p>
+    <h3><a href="#/parsing/array/"><span class="hash">#</span>Array</a></h3>
 
-		<div class="highlight">
-			<pre  lang="javascript">[year, month, day, hour, minute, second, millisecond]
+    <div class="prose">
+        <pre lang="javascript">persianDate(Number[]);</pre>
+        <p>
+            You can create a persianDate with an array of numbers that mirror the parameters passed to <a
+                href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Date">new Date()</a>But As
+            Persian Date Number Like [1393,2,22,11,22,30]
+        </p>
+
+        <p>
+            <strong>Note:</strong>In this version array of Gregorian Date dose not Support
+        </p>
+
+        <div class="highlight">
+			<pre lang="javascript">[year, month, day, hour, minute, second, millisecond]
 persianDate([1393, 1, 14, 15,25, 50,125]); // "۱۳۹۳-۰۱-۱۴ ۱۵:۲۵:۵۰ ب ظ"
 </pre>
-		</div>
-		<p>
-			Any value past the year is optional, and will default to the lowest possible number.
-		</p>
+        </div>
+        <p>
+            Any value past the year is optional, and will default to the lowest possible number.
+        </p>
 
-		<div class="highlight">
-			<pre  lang="javascript">persianDate([<span class="number">1392</span>]); <span class="comment">// Farvardin 1st</span>
-persianDate([<span class="number">1392</span>, <span class="number">6</span>]); <span class="comment">// Shahrivar 1st</span>
-persianDate([<span class="number">1392</span>, <span class="number">6</span>, <span class="number">10</span>]); <span class="comment">// Shahrivar 10th</span>
+        <div class="highlight">
+			<pre lang="javascript">persianDate([<span class="number">1392</span>]); <span class="comment">// Farvardin 1st</span>
+persianDate([<span class="number">1392</span>, <span class="number">6</span>]); <span
+                        class="comment">// Shahrivar 1st</span>
+persianDate([<span class="number">1392</span>, <span class="number">6</span>, <span class="number">10</span>]); <span
+                        class="comment">// Shahrivar 10th</span>
 </pre>
-		</div>
+        </div>
 </article>
 
 <article class="method">
-	<a class="target" name="/parsing/clone/"></a>
-	<h3><a href="#/parsing/persianDate-clone/"><span class="hash">#</span>PesianDate Clone</a></h3>
-	<div class="prose">
-		<pre  lang="javascript">persianDate(persianDate);</pre>
-		<p>
-			All persianDate are mutable. If you want a clone of a persianDate, you can do so explicitly or implicitly.
-		</p>
+    <a class="target" name="/parsing/clone/"></a>
 
-		<p>
-			Calling
-			<code>
-				persianDate()
-			</code>
-			on a persianDate will clone it.
-		</p>
+    <h3><a href="#/parsing/persianDate-clone/"><span class="hash">#</span>PesianDate Clone</a></h3>
 
-		<div class="highlight">
-			<pre  lang="javascript"><span class="keyword">var</span> a = persianDate([<span class="number">1392</span>]);
+    <div class="prose">
+        <pre lang="javascript">persianDate(persianDate);</pre>
+        <p>
+            All persianDate are mutable. If you want a clone of a persianDate, you can do so explicitly or implicitly.
+        </p>
+
+        <p>
+            Calling
+            <code>
+                persianDate()
+            </code>
+            on a persianDate will clone it.
+        </p>
+
+        <div class="highlight">
+			<pre lang="javascript"><span class="keyword">var</span> a = persianDate([<span class="number">1392</span>]);
 <span class="keyword">var</span> b = persianDate(a);
 a.year(<span class="number">1300</span>);
 b.year(); <span class="comment">// 1392</span>
 </pre>
-		</div>
-		<div class="highlight">
-			<pre  lang="javascript"><span class="keyword">var</span> a = persianDate([<span class="number">1392</span>]);
+        </div>
+        <div class="highlight">
+			<pre lang="javascript"><span class="keyword">var</span> a = persianDate([<span class="number">1392</span>]);
 <span class="keyword">var</span> b = a.clone();
 a.year(<span class="number">1300</span>);
 b.year(); <span class="comment">// 1392</span>
 </pre>
-		</div>
-	</div>
+        </div>
+    </div>
 </article>
 
 <article class="method">
-	<a class="target" name="/parsing/asp-net-json-date/"></a>
-	<h3><a href="#/parsing/asp-net-json-date/"><span class="hash">#</span>ASP.NET JSON Date</a></h3>
-	<div class="prose">
-		<pre lang="javascript">persianDate(String);</pre>
-		<p>
-			ASP.NET returns dates in JSON as
-			<code>
-				/Date(1198908717056)/
-			</code>
-			or
-			<code>
-				/Date(1198908717056-0700)/
-			</code>
-		</p>
-		<p>
-			If a string that matches this format is passed in, it will be parsed correctly.
-		</p>
+    <a class="target" name="/parsing/asp-net-json-date/"></a>
 
-		<div class="highlight">
+    <h3><a href="#/parsing/asp-net-json-date/"><span class="hash">#</span>ASP.NET JSON Date</a></h3>
+
+    <div class="prose">
+        <pre lang="javascript">persianDate(String);</pre>
+        <p>
+            ASP.NET returns dates in JSON as
+            <code>
+                /Date(1198908717056)/
+            </code>
+            or
+            <code>
+                /Date(1198908717056-0700)/
+            </code>
+        </p>
+
+        <p>
+            If a string that matches this format is passed in, it will be parsed correctly.
+        </p>
+
+        <div class="highlight">
 			<pre lang="javascript">
 persianDate("/Date(1198908717056-0700)/"); //"۱۳۸۶-۱۰-۰۸ ۰۹:۴۱:۵۷ ق ظ"
 </pre>
-		</div>
-	</div>
+        </div>
+    </div>
 </article>
 
 <article class="section">
-	<a class="target" name="/get-set/"></a>
-	<h2><a href="#/get-set/"><span class="hash">#</span>Get + Set</a></h2>
-	<p>
-		persainDate.js uses overloaded getters and setters. You may be familiar with this pattern from it's use in jQuery.
-	</p>
+    <a class="target" name="/get-set/"></a>
 
-	<p>
-		Calling these methods without parameters acts as a getter, and calling them with a parameter acts as a setter.
-	</p>
+    <h2><a href="#/get-set/"><span class="hash">#</span>Get + Set</a></h2>
 
-	<p>
-		These map to the corresponding function on the native
-		<code>
-			Date
-		</code>
-		object.
-	</p>
+    <p>
+        persainDate.js uses overloaded getters and setters. You may be familiar with this pattern from it's use in
+        jQuery.
+    </p>
 
-	<div class="highlight">
-		<pre   lang="javascript">persianDate().seconds(<span class="number">30</span>) === <span class="keyword">new</span> Date().setSeconds(<span class="number">30</span>);
+    <p>
+        Calling these methods without parameters acts as a getter, and calling them with a parameter acts as a setter.
+    </p>
+
+    <p>
+        These map to the corresponding function on the native
+        <code>
+            Date
+        </code>
+        object.
+    </p>
+
+    <div class="highlight">
+		<pre lang="javascript">persianDate().seconds(<span class="number">30</span>) === <span
+                class="keyword">new</span> Date().setSeconds(<span class="number">30</span>);
 persianDate().seconds()   === <span class="keyword">new</span> Date().getSeconds();
 </pre>
-	</div>
+    </div>
 
 </article>
 
 <article class="method">
-	<a class="target" name="/get-set/millisecond/"></a>
-	<h3><a href="#/get-set/millisecond/"><span class="hash">#</span>Millisecond</a></h3>
-	<div class="prose">
-		<pre  lang="javascript">persianDate().millisecond(Number);
+    <a class="target" name="/get-set/millisecond/"></a>
+
+    <h3><a href="#/get-set/millisecond/"><span class="hash">#</span>Millisecond</a></h3>
+
+    <div class="prose">
+		<pre lang="javascript">persianDate().millisecond(Number);
 persianDate().millisecond(); <span class="comment">// Number</span>
 persianDate().milliseconds(Number);
 persianDate().milliseconds(); <span class="comment">// Number</span></pre>
-		<p>
-			Gets or sets the milliseconds.
-		</p>
+        <p>
+            Gets or sets the milliseconds.
+        </p>
 
-		<p>
-			Accepts numbers from 0 to 999. If the range is exceeded, it will bubble up to the seconds.
-		</p>
-	</div>
+        <p>
+            Accepts numbers from 0 to 999. If the range is exceeded, it will bubble up to the seconds.
+        </p>
+    </div>
 </article>
 
 <article class="method">
-	<a class="target" name="/get-set/second/"></a>
-	<h3><a href="#/get-set/second/"><span class="hash">#</span>Second</a></h3>
-	<div class="prose">
-		<pre  lang="javascript">persianDate().second(Number);
+    <a class="target" name="/get-set/second/"></a>
+
+    <h3><a href="#/get-set/second/"><span class="hash">#</span>Second</a></h3>
+
+    <div class="prose">
+		<pre lang="javascript">persianDate().second(Number);
 persianDate().second(); <span class="comment">// Number</span>
 persianDate().seconds(Number);
 persianDate().seconds(); <span class="comment">// Number</span></pre>
-		<p>
-			Gets or sets the seconds.
-		</p>
+        <p>
+            Gets or sets the seconds.
+        </p>
 
-		<p>
-			Accepts numbers from 0 to 59. If the range is exceeded, it will bubble up to the minutes.
-		</p>
-	</div>
+        <p>
+            Accepts numbers from 0 to 59. If the range is exceeded, it will bubble up to the minutes.
+        </p>
+    </div>
 </article>
 
 <article class="method">
-	<a class="target" name="/get-set/minute/"></a>
-	<h3><a href="#/get-set/minute/"><span class="hash">#</span>Minute</a></h3>
-	<div class="prose">
-		<pre  lang="javascript">persianDate().minute(Number);
+    <a class="target" name="/get-set/minute/"></a>
+
+    <h3><a href="#/get-set/minute/"><span class="hash">#</span>Minute</a></h3>
+
+    <div class="prose">
+		<pre lang="javascript">persianDate().minute(Number);
 persianDate().minute(); <span class="comment">// Number</span>
 persianDate().minutes(Number);
 persianDate().minutes(); <span class="comment">// Number</span></pre>
-		<p>
-			Gets or sets the minutes.
-		</p>
+        <p>
+            Gets or sets the minutes.
+        </p>
 
-		<p>
-			Accepts numbers from 0 to 59. If the range is exceeded, it will bubble up to the hours.
-		</p>
-	</div>
+        <p>
+            Accepts numbers from 0 to 59. If the range is exceeded, it will bubble up to the hours.
+        </p>
+    </div>
 </article>
 
 <article class="method">
-	<a class="target" name="/get-set/hour/"></a>
-	<h3><a href="#/get-set/hour/"><span class="hash">#</span>Hour</a></h3>
-	<div class="prose">
-		<pre  lang="javascript">persianDate().hour(Number);
+    <a class="target" name="/get-set/hour/"></a>
+
+    <h3><a href="#/get-set/hour/"><span class="hash">#</span>Hour</a></h3>
+
+    <div class="prose">
+		<pre lang="javascript">persianDate().hour(Number);
 persianDate().hour(); <span class="comment">// Number</span>
 persianDate().hours(Number);
 persianDate().hours(); <span class="comment">// Number</span></pre>
-		<p>
-			Gets or sets the hour.
-		</p>
+        <p>
+            Gets or sets the hour.
+        </p>
 
-		<p>
-			Accepts numbers from 0 to 23. If the range is exceeded, it will bubble up to the day.
-		</p>
-	</div>
+        <p>
+            Accepts numbers from 0 to 23. If the range is exceeded, it will bubble up to the day.
+        </p>
+    </div>
 </article>
 
 <article class="method">
-	<a class="target" name="/get-set/date/"></a>
-	<h3><a href="#/get-set/date/"><span class="hash">#</span>Date of Month</a></h3>
-	<div class="prose">
-		<pre  lang="javascript">persianDate().date(Number);
+    <a class="target" name="/get-set/date/"></a>
+
+    <h3><a href="#/get-set/date/"><span class="hash">#</span>Date of Month</a></h3>
+
+    <div class="prose">
+		<pre lang="javascript">persianDate().date(Number);
 persianDate().date(); <span class="comment">// Number</span>
 persianDate().dates(Number);
 persianDate().dates(); <span class="comment">// Number</span></pre>
-		<p>
-			Gets or sets the day of the month.
-		</p>
+        <p>
+            Gets or sets the day of the month.
+        </p>
 
-		<p>
-			Accepts numbers from 1 to 31. If the range is exceeded, it will bubble up to the months.
-		</p>
+        <p>
+            Accepts numbers from 1 to 31. If the range is exceeded, it will bubble up to the months.
+        </p>
 
-		<p>
-			<em>Note:</em>
-			<code>
-				persianDate#date
-			</code>
-			is for the date of the month, and
-			<code>
-				persianDate#day
-			</code>
-			is for the day of the week.
-		</p>
-	</div>
+        <p>
+            <em>Note:</em>
+            <code>
+                persianDate#date
+            </code>
+            is for the date of the month, and
+            <code>
+                persianDate#day
+            </code>
+            is for the day of the week.
+        </p>
+    </div>
 </article>
 
 <article class="method">
-	<a class="target" name="/get-set/year/"></a>
-	<h3><a href="#/get-set/year/"><span class="hash">#</span>Year</a></h3>
-	<div class="prose">
-		<pre  lang="javascript">persianDate().year(Number);
+    <a class="target" name="/get-set/year/"></a>
+
+    <h3><a href="#/get-set/year/"><span class="hash">#</span>Year</a></h3>
+
+    <div class="prose">
+		<pre lang="javascript">persianDate().year(Number);
 persianDate().year(); <span class="comment">// Number</span>
 persianDate().years(Number);
 persianDate().years(); <span class="comment">// Number</span></pre>
-		<p>
-			Gets or sets the year.
-		</p>
+        <p>
+            Gets or sets the year.
+        </p>
 
-		<p>
-			Accepts numbers from -270,000 to 270,000.
-		</p>
-	</div>
+        <p>
+            Accepts numbers from -270,000 to 270,000.
+        </p>
+    </div>
 </article>
 
 <article class="method">
-	<a class="target" name="/get-set/day/"></a>
-	<h3><a href="#/get-set/day/"><span class="hash">#</span>Day of Week</a></h3>
-	<div class="prose">
-		<pre   lang="javascript">
+    <a class="target" name="/get-set/day/"></a>
+
+    <h3><a href="#/get-set/day/"><span class="hash">#</span>Day of Week</a></h3>
+
+    <div class="prose">
+		<pre lang="javascript">
 persianDate().day(); // Number
 persianDate().days(); // Number</pre>
-		<p>
-			Gets  the day of the week.
-		</p>
+        <p>
+            Gets the day of the week.
+        </p>
 
-		<div class="highlight"></div>
-		<p>
-			<em>Note:</em>
-			<code>
-				persianDate#date
-			</code>
-			is for the date of the month, and
-			<code>
-				persianDate#day
-			</code>
-			is for the day of the week.
-		</p>
-	</div>
+        <div class="highlight"></div>
+        <p>
+            <em>Note:</em>
+            <code>
+                persianDate#date
+            </code>
+            is for the date of the month, and
+            <code>
+                persianDate#day
+            </code>
+            is for the day of the week.
+        </p>
+    </div>
 </article>
 
 <article class="section">
-	<a class="target" name="/manipulating/"></a>
-	<h2><a href="#/manipulating/"><span class="hash">#</span>Manipulate</a></h2>
-	<p>
-		Once you have a
-		<code>
-			PersianDate
-		</code>
-		, you may want to manipulate it in some way. There are a number of methods to help with this.
-	</p>
+    <a class="target" name="/manipulating/"></a>
 
-	<p>
-		persianDate.js uses the <a href="http://en.wikipedia.org/wiki/Fluent_interface">fluent interface pattern</a>, also known as <a href="http://en.wikipedia.org/wiki/Method_chaining">method chaining</a>. This allows you to do crazy things like the following.
-	</p>
+    <h2><a href="#/manipulating/"><span class="hash">#</span>Manipulate</a></h2>
 
-	<div class="highlight">
-		<pre  lang="javascript">persianDate().add(<span class="string">'days'</span>, <span class="number">7</span>).subtract(<span class="string">'months'</span>, <span class="number">1</span>).year(<span class="number">2009</span>).hours(<span class="number">0</span>).minutes(<span class="number">0</span>).seconds(<span class="number">0</span>);
+    <p>
+        Once you have a
+        <code>
+            PersianDate
+        </code>
+        , you may want to manipulate it in some way. There are a number of methods to help with this.
+    </p>
+
+    <p>
+        persianDate.js uses the <a href="http://en.wikipedia.org/wiki/Fluent_interface">fluent interface pattern</a>,
+        also known as <a href="http://en.wikipedia.org/wiki/Method_chaining">method chaining</a>. This allows you to do
+        crazy things like the following.
+    </p>
+
+    <div class="highlight">
+		<pre lang="javascript">persianDate().add(<span class="string">'days'</span>, <span class="number">7</span>).subtract(<span
+                class="string">'months'</span>, <span class="number">1</span>).year(<span class="number">2009</span>).hours(<span
+                class="number">0</span>).minutes(<span class="number">0</span>).seconds(<span class="number">0</span>);
 </pre>
-	</div>
-	<p>
-		<strong>Note:</strong> It should be noted that persianDates are mutable. Calling any of the manipulation methods will change the original persianDate.
-	</p>
+    </div>
+    <p>
+        <strong>Note:</strong> It should be noted that persianDates are mutable. Calling any of the manipulation methods
+        will change the original persianDate.
+    </p>
 
-	<p>
-		If you want to create a copy and manipulate it, you should use
-		<code>
-			persianDate#clone
-		</code>
-		before manipulating the persianDate.<a href="#/parsing/clone/">More info on cloning.</a>
-	</p>
+    <p>
+        If you want to create a copy and manipulate it, you should use
+        <code>
+            persianDate#clone
+        </code>
+        before manipulating the persianDate.<a href="#/parsing/clone/">More info on cloning.</a>
+    </p>
 </article>
 
 <article class="method">
-	<a class="target" name="/manipulating/add/"></a>
-	<h3><a href="#/manipulating/add/"><span class="hash">#</span>Add</a></h3>
-	<div class="prose">
-		<pre  lang="javascript">persianDate().add(String, Number);</pre>
-		<p>
-			Mutates the original persianDate by adding time.
-		</p>
-		<p>
-			This is a pretty robust function for adding time to an existing persianDate. To add time, pass the key of what time you want to add, and the amount you want to add.
-		</p>
+    <a class="target" name="/manipulating/add/"></a>
 
-		<div class="highlight">
-			<pre  lang="javascript">persianDate().add(<span class="string">'days'</span>, <span class="number">7</span>);
+    <h3><a href="#/manipulating/add/"><span class="hash">#</span>Add</a></h3>
+
+    <div class="prose">
+        <pre lang="javascript">persianDate().add(String, Number);</pre>
+        <p>
+            Mutates the original persianDate by adding time.
+        </p>
+
+        <p>
+            This is a pretty robust function for adding time to an existing persianDate. To add time, pass the key of
+            what time you want to add, and the amount you want to add.
+        </p>
+
+        <div class="highlight">
+			<pre lang="javascript">persianDate().add(<span class="string">'days'</span>, <span class="number">7</span>);
 </pre>
-		</div>
-		<p>
-			There are some shorthand keys as well if you're into that whole brevity thing.
-		</p>
-		<div class="highlight">
-			<pre  lang="javascript">persianDate().add(<span class="string">'d'</span>, <span class="number">7</span>);
+        </div>
+        <p>
+            There are some shorthand keys as well if you're into that whole brevity thing.
+        </p>
+
+        <div class="highlight">
+			<pre lang="javascript">persianDate().add(<span class="string">'d'</span>, <span class="number">7</span>);
 </pre>
-		</div>
-		<table class="table table-striped table-bordered">
-			<tbody>
-				<tr>
-					<th>Key</th>
-					<th>Alternate</th>
-					<th>Shorthand</th>
-				</tr>
-				<tr>
-					<td>years</td>
-					<td>year</td>
-					<td>y</td>
-				</tr>
-				<tr>
-					<td>months</td>
-					<td>month</td>
-					<td>M</td>
-				</tr>
-				<tr>
-					<td>weeks</td>
-					<td>week</td>
-					<td>w</td>
-				</tr>
-				<tr>
-					<td>days</td>
-					<td>day</td>
-					<td>d</td>
-				</tr>
-				<tr>
-					<td>hours</td>
-					<td>hour</td>
-					<td>h</td>
-				</tr>
-				<tr>
-					<td>minutes</td>
-					<td>minute</td>
-					<td>m</td>
-				</tr>
-				<tr>
-					<td>seconds</td>
-					<td>second</td>
-					<td>s</td>
-				</tr>
-				<tr>
-					<td>milliseconds</td>
-					<td>millisecond</td>
-					<td>ms</td>
-				</tr>
-			</tbody>
-		</table>
+        </div>
+        <table class="table table-striped table-bordered">
+            <tbody>
+            <tr>
+                <th>Key</th>
+                <th>Alternate</th>
+                <th>Shorthand</th>
+            </tr>
+            <tr>
+                <td>years</td>
+                <td>year</td>
+                <td>y</td>
+            </tr>
+            <tr>
+                <td>months</td>
+                <td>month</td>
+                <td>M</td>
+            </tr>
+            <tr>
+                <td>weeks</td>
+                <td>week</td>
+                <td>w</td>
+            </tr>
+            <tr>
+                <td>days</td>
+                <td>day</td>
+                <td>d</td>
+            </tr>
+            <tr>
+                <td>hours</td>
+                <td>hour</td>
+                <td>h</td>
+            </tr>
+            <tr>
+                <td>minutes</td>
+                <td>minute</td>
+                <td>m</td>
+            </tr>
+            <tr>
+                <td>seconds</td>
+                <td>second</td>
+                <td>s</td>
+            </tr>
+            <tr>
+                <td>milliseconds</td>
+                <td>millisecond</td>
+                <td>ms</td>
+            </tr>
+            </tbody>
+        </table>
 
-		<p>
-			If you want to add multiple different keys at the same time, you can pass them in as an object literal.
-		</p>
+        <p>
+            If you want to add multiple different keys at the same time, you can pass them in as an object literal.
+        </p>
 
-		<div class="highlight">
-			<pre  lang="javascript">
-persianDate().add(<span class="string">'days'</span>, <span class="number">7</span>).add(<span class="string">'months'</span>, <span class="number">1</span>); <span class="comment">// with chaining</span>
+        <div class="highlight">
+			<pre lang="javascript">
+persianDate().add(<span class="string">'days'</span>, <span class="number">7</span>).add(<span
+                    class="string">'months'</span>, <span class="number">1</span>); <span class="comment">// with chaining</span>
 </pre>
-		</div>
-		<p>
-			There are no upper limits for the amounts, so you can overload any of the parameters.
-		</p>
+        </div>
+        <p>
+            There are no upper limits for the amounts, so you can overload any of the parameters.
+        </p>
 
-		<div class="highlight">
-			<pre  lang="javascript">persianDate().add(<span class="string">'milliseconds'</span>, <span class="number">1000000</span>); <span class="comment">// a million milliseconds</span>
+        <div class="highlight">
+			<pre lang="javascript">persianDate().add(<span class="string">'milliseconds'</span>, <span class="number">1000000</span>); <span
+                    class="comment">// a million milliseconds</span>
 persianDate().add(<span class="string">'days'</span>, <span class="number">360</span>); <span class="comment">// 360 days</span>
 </pre>
-		</div>
+        </div>
 
 </article>
 
 <article class="method">
-	<a class="target" name="/manipulating/subtract/"></a>
-	<h3><a href="#/manipulating/subtract/"><span class="hash">#</span>Subtract</a></h3>
-	<div class="prose">
-		<pre  lang="javascript">persianDate().subtract(String, Number);</pre>
-		<p>
-			Mutates the original persianDate by subtracting time.
-		</p>
+    <a class="target" name="/manipulating/subtract/"></a>
 
-		<p>
-			This is exactly the same as
-			<code>
-				persianDate#add
-			</code>
-			, only instead of adding time, it subtracts time.
-		</p>
+    <h3><a href="#/manipulating/subtract/"><span class="hash">#</span>Subtract</a></h3>
 
-		<div class="highlight">
-			<pre  lang="javascript">persianDate().subtract(<span class="string">'days'</span>, <span class="number">7</span>);
+    <div class="prose">
+        <pre lang="javascript">persianDate().subtract(String, Number);</pre>
+        <p>
+            Mutates the original persianDate by subtracting time.
+        </p>
+
+        <p>
+            This is exactly the same as
+            <code>
+                persianDate#add
+            </code>
+            , only instead of adding time, it subtracts time.
+        </p>
+
+        <div class="highlight">
+			<pre lang="javascript">persianDate().subtract(<span class="string">'days'</span>, <span
+                    class="number">7</span>);
 </pre>
-		</div>
-	</div>
+        </div>
+    </div>
 </article>
 
 <article class="method">
-	<a class="target" name="/manipulating/start-of/"></a>
-	<h3><a href="#/manipulating/start-of/"><span class="hash">#</span>Start of Time</a></h3>
-	<div class="prose">
-		<pre  lang="javascript">persianDate().startOf(String);</pre>
-		<p>
-			Mutates the original persianDate by setting it to the start of a unit of time.
-		</p>
+    <a class="target" name="/manipulating/start-of/"></a>
 
-		<div class="highlight">
-			<pre  lang="javascript">persianDate().startOf(<span class="string">'year'</span>);   <span class="comment">// set to Farvardin 1st, 12:00 am this year</span>
+    <h3><a href="#/manipulating/start-of/"><span class="hash">#</span>Start of Time</a></h3>
+
+    <div class="prose">
+        <pre lang="javascript">persianDate().startOf(String);</pre>
+        <p>
+            Mutates the original persianDate by setting it to the start of a unit of time.
+        </p>
+
+        <div class="highlight">
+			<pre lang="javascript">persianDate().startOf(<span class="string">'year'</span>);   <span class="comment">// set to Farvardin 1st, 12:00 am this year</span>
 persianDate().startOf(<span class="string">'month'</span>);  <span class="comment">// set to the first of this month, 12:00 am</span>
 persianDate().startOf(<span class="string">'week'</span>);   <span class="comment">// set to the first day of this week, 12:00 am</span>
 persianDate().startOf(<span class="string">'day'</span>);    <span class="comment">// set to 12:00 am today</span>
@@ -618,46 +702,52 @@ persianDate().startOf(<span class="string">'hour'</span>);   <span class="commen
 persianDate().startOf(<span class="string">'minute'</span>); <span class="comment">// set to now, but with 0 seconds and 0 milliseconds</span>
 persianDate().startOf(<span class="string">'second'</span>); <span class="comment">// same as persianDate().milliseconds(0);</span>
 </pre>
-		</div>
-		<p>
-			These shortcuts are essentially the same as the following.
-		</p>
+        </div>
+        <p>
+            These shortcuts are essentially the same as the following.
+        </p>
 
-		<div class="highlight">
-			<pre  lang="javascript">persianDate().startOf(<span class="string">'year'</span>);
-persianDate().month(<span class="number">0</span>).date(<span class="number">1</span>).hours(<span class="number">0</span>).minutes(<span class="number">0</span>).seconds(<span class="number">0</span>).milliseconds(<span class="number">0</span>);
+        <div class="highlight">
+			<pre lang="javascript">persianDate().startOf(<span class="string">'year'</span>);
+persianDate().month(<span class="number">0</span>).date(<span class="number">1</span>).hours(<span
+                        class="number">0</span>).minutes(<span class="number">0</span>).seconds(<span
+                        class="number">0</span>).milliseconds(<span class="number">0</span>);
 </pre>
-		</div>
-		<div class="highlight">
-			<pre  lang="javascript">persianDate().startOf(<span class="string">'hour'</span>);
-persianDate().minutes(<span class="number">0</span>).seconds(<span class="number">0</span>).milliseconds(<span class="number">0</span>)
+        </div>
+        <div class="highlight">
+			<pre lang="javascript">persianDate().startOf(<span class="string">'hour'</span>);
+persianDate().minutes(<span class="number">0</span>).seconds(<span class="number">0</span>).milliseconds(<span
+                        class="number">0</span>)
 </pre>
-		</div>
-	</div>
+        </div>
+    </div>
 </article>
 
 <article class="method">
-	<a class="target" name="/manipulating/end-of/"></a>
-	<h3><a href="#/manipulating/end-of/"><span class="hash">#</span>End of Time</a></h3>
-	<div class="prose">
-		<pre  lang="javascript">persianDate().endOf(String);</pre>
-		<p>
-			Mutates the original persianDate by setting it to the end of a unit of time.
-		</p>
-		<p>
-			This is the same as
-			<code>
-				persianDate#startOf
-			</code>
-			, only instead of setting to the start of a unit of time, it sets to the end of a unit of time.
-		</p>
+    <a class="target" name="/manipulating/end-of/"></a>
 
-		<div class="highlight">
-			<pre  lang="javascript">persianDate().endOf(<span class="string">"year"</span>); <span class="comment">// set the persianDate to 12-31 11:59:59.999 pm this year</span>
+    <h3><a href="#/manipulating/end-of/"><span class="hash">#</span>End of Time</a></h3>
+
+    <div class="prose">
+        <pre lang="javascript">persianDate().endOf(String);</pre>
+        <p>
+            Mutates the original persianDate by setting it to the end of a unit of time.
+        </p>
+
+        <p>
+            This is the same as
+            <code>
+                persianDate#startOf
+            </code>
+            , only instead of setting to the start of a unit of time, it sets to the end of a unit of time.
+        </p>
+
+        <div class="highlight">
+			<pre lang="javascript">persianDate().endOf(<span class="string">"year"</span>); <span class="comment">// set the persianDate to 12-31 11:59:59.999 pm this year</span>
 </pre>
-		</div>
+        </div>
 
-	</div>
+    </div>
 </article>
 <!--
 <article class="method">
@@ -714,263 +804,273 @@ a.hours(); // 16 UTC
 </article>
 -->
 <article class="section">
-	<a class="target" name="/displaying/"></a>
-	<h2><a href="#/displaying/"><span class="hash">#</span>Display</a></h2>
-	<p>
-		Once parsing and manipulation are done, you need some way to display the persianDate.
-	</p>
+    <a class="target" name="/displaying/"></a>
+
+    <h2><a href="#/displaying/"><span class="hash">#</span>Display</a></h2>
+
+    <p>
+        Once parsing and manipulation are done, you need some way to display the persianDate.
+    </p>
 </article>
 
 <article class="method">
-	<a class="target" name="/displaying/format/"></a>
-	<h3><a href="#/displaying/format/"><span class="hash">#</span>Format</a></h3>
-	<div class="prose">
-		<pre  lang="javascript">persianDate().format();
-persianDate().format(String);</pre>
-		<p>
-			This is the most robust display option. It takes a string of tokens and replaces them with their corresponding values.
-		</p>
+<a class="target" name="/displaying/format/"></a>
 
-		<div class="highlight">
-			<pre  lang="javascript">
+<h3><a href="#/displaying/format/"><span class="hash">#</span>Format</a></h3>
+
+<div class="prose">
+<pre lang="javascript">persianDate().format();
+persianDate().format(String);</pre>
+<p>
+    This is the most robust display option. It takes a string of tokens and replaces them with their corresponding
+    values.
+</p>
+
+<div class="highlight">
+			<pre lang="javascript">
 persianDate().format("dddd, MMMM DD YYYY, h:mm:ss a"); // "شنبه, اردیبهشت ۲۱ ۱۳۹۲, ۰:۴۲:۴۷ ق ظ"
 persianDate().format("dddd, hA")//"شنبه, ۸ ق ظ"
 </pre>
-		</div>
-		<p>
-			There are a couple conventions used with the naming of the
-		</p>
+</div>
+<p>
+    There are a couple conventions used with the naming of the
+</p>
 
-		<table class="table table-striped table-bordered">
-			<tbody>
-				<tr>
-					<th></th>
-					<th>Token</th>
-					<th>Output</th>
-				</tr>
-				<tr>
-					<td><b>Month</b></td>
-					<td>M</td>
-					<td>۱ ۲ ... ۱۱ ۱۲</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>MM</td>
-					<td>۰۱ ۰۲ ... ۱۱ ۱۲</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>MMM</td>
-					<td> فرو ارد ... اسف</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>MMMM</td>
-					<td>فروردین اردیبهشت ... اسفند</td>
-				</tr>
-				<tr>
-					<td><b>Day of Month</b></td>
-					<td>D</td>
-					<td>۱ ۲ ... ۳۰ ۳۱</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>DD</td>
-					<td>۰۱ ۰۲ ... ۳۰ ۳۱</td>
-				</tr>
-				<tr>
-					<td><b>Day of Year</b></td>
-					<td>DDD</td>
-					<td>1 2 ... 364 365</td>
-				</tr>
-				<tr>
-					<td><b>Day of Week</b></td>
-					<td>d</td>
-					<td>0 1 ... 5 6</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>ddd</td>
-					<td>ش ی ... ج</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>dddd</td>
-					<td>شنبه یکشنبه ... جمعه </td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>ddddd</td>
-					<td>انارام مانتره سپند ... اشتاد </td>
-				</tr>
-				<tr>
-					<td><b>Week of Year</b></td>
-					<td>w</td>
-					<td>۱ ۲ ... ۵۲ ۵۳</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>ww</td>
-					<td>۰۱ ۰۲ ... ۵۲ ۵۳</td>
-				</tr>
-				<tr>
-					<td><b>Year</b></td>
-					<td>YY</td>
-					<td>۶۶ ۹۱ ... ۹۸ ۳۰</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>YYYY</td>
-					<td>۱۳۶۶ ۱۳۹۱ ... ۱۳۹۸ ۱۴۰۱</td>
-				</tr>
-				<tr>
-					<td><b>AM/PM</b></td>
-					<td>a</td>
-					<td>"ق ظ", "ب ظ"</td>
-				</tr>
+<table class="table table-striped table-bordered">
+    <tbody>
+    <tr>
+        <th></th>
+        <th>Token</th>
+        <th>Output</th>
+    </tr>
+    <tr>
+        <td><b>Month</b></td>
+        <td>M</td>
+        <td>۱ ۲ ... ۱۱ ۱۲</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>MM</td>
+        <td>۰۱ ۰۲ ... ۱۱ ۱۲</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>MMM</td>
+        <td> فرو ارد ... اسف</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>MMMM</td>
+        <td>فروردین اردیبهشت ... اسفند</td>
+    </tr>
+    <tr>
+        <td><b>Day of Month</b></td>
+        <td>D</td>
+        <td>۱ ۲ ... ۳۰ ۳۱</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>DD</td>
+        <td>۰۱ ۰۲ ... ۳۰ ۳۱</td>
+    </tr>
+    <tr>
+        <td><b>Day of Year</b></td>
+        <td>DDD</td>
+        <td>۱ ۲ ... ۳۶۴ ۳۶۵</td>
+    </tr>
+    <tr>
+        <td><b>Day of Week</b></td>
+        <td>d</td>
+        <td>۰ ۱ ... ۵ ۶</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>ddd</td>
+        <td>ش ی ... ج</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>dddd</td>
+        <td>شنبه یکشنبه ... جمعه</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>ddddd</td>
+        <td>انارام مانتره سپند ... اشتاد</td>
+    </tr>
+    <tr>
+        <td><b>Week of Year</b></td>
+        <td>w</td>
+        <td>۱ ۲ ... ۵۲ ۵۳</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>ww</td>
+        <td>۰۱ ۰۲ ... ۵۲ ۵۳</td>
+    </tr>
+    <tr>
+        <td><b>Year</b></td>
+        <td>YY</td>
+        <td>۶۶ ۹۱ ... ۹۸ ۳۰</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>YYYY</td>
+        <td>۱۳۶۶ ۱۳۹۱ ... ۱۳۹۸ ۱۴۰۱</td>
+    </tr>
+    <tr>
+        <td><b>AM/PM</b></td>
+        <td>a</td>
+        <td>"ق ظ", "ب ظ"</td>
+    </tr>
 
-				<tr>
-					<td><b>Hour</b></td>
-					<td>H</td>
-					<td>۰ ۱ ... ۲۲ ۲۳</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>HH</td>
-					<td>۰۰ ۰۱ ... ۲۲ ۲۳</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>h</td>
-					<td>۱ ۲ ... ۱۱ ۱۲</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>hh</td>
-					<td>۰۱ ۰۲ ... ۱۱ ۱۲</td>
-				</tr>
-				<tr>
-					<td><b>Minute</b></td>
-					<td>m</td>
-					<td>۰ ۱ ... ۵۸ ۵۹</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>mm</td>
-					<td>۰۰ ۰۱ ... ۵۸ ۵۹</td>
-				</tr>
-				<tr>
-					<td><b>Second</b></td>
-					<td>s</td>
-					<td>۰ ۱ ... ۵۸ ۵۹</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>ss</td>
-					<td>۰۰ ۰۱ ... ۵۸ ۵۹</td>
-				</tr>
-				<tr>
-					<td><b>Unix Timestamp</b></td>
-					<td>X</td>
-					<td>1360013296</td>
-				</tr>
-				<tr>
-					<td><b>Timezone</b></td>
-					<td>Z</td>
-					<td>-۰۴:۳۰ -۰۵:۰۰ ...  +۰۴:۳۰ +۰۵:۰۰</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>ZZ</td>
-					<td> -۰۴۳۰  -۰۵:۰۰ ...  +۰۴:۳۰ +۰۵:۰۰ </td>
-				</tr>
-			</tbody>
-		</table>
+    <tr>
+        <td><b>Hour</b></td>
+        <td>H</td>
+        <td>۰ ۱ ... ۲۲ ۲۳</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>HH</td>
+        <td>۰۰ ۰۱ ... ۲۲ ۲۳</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>h</td>
+        <td>۱ ۲ ... ۱۱ ۱۲</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>hh</td>
+        <td>۰۱ ۰۲ ... ۱۱ ۱۲</td>
+    </tr>
+    <tr>
+        <td><b>Minute</b></td>
+        <td>m</td>
+        <td>۰ ۱ ... ۵۸ ۵۹</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>mm</td>
+        <td>۰۰ ۰۱ ... ۵۸ ۵۹</td>
+    </tr>
+    <tr>
+        <td><b>Second</b></td>
+        <td>s</td>
+        <td>۰ ۱ ... ۵۸ ۵۹</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>ss</td>
+        <td>۰۰ ۰۱ ... ۵۸ ۵۹</td>
+    </tr>
+    <tr>
+        <td><b>Unix Timestamp</b></td>
+        <td>X</td>
+        <td>1360013296</td>
+    </tr>
+    <tr>
+        <td><b>Timezone</b></td>
+        <td>Z</td>
+        <td>-۰۴:۳۰ -۰۵:۰۰ ... +۰۴:۳۰ +۰۵:۰۰</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>ZZ</td>
+        <td> -۰۴۳۰ -۰۵:۰۰ ... +۰۴:۳۰ +۰۵:۰۰</td>
+    </tr>
+    </tbody>
+</table>
 
-		<h4>Long Date formats</h4>
+<h4>Long Date formats</h4>
 
-		<table class="table table-striped table-bordered">
-			<tbody>
-				<tr>
-					<td><b>Time</b></td>
-					<td>LT</td>
-					<td>"۴:۱۵ ب ظ"</td>
-				</tr>
-				<tr>
-					<td><b>Month numeral, day of month, year</b></td>
-					<td>L</td>
-					<td>۱۳۹۲/۰۲/۲۰</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>l</td>
-					<td>۳۹۲/۲/۲۰</td>
-				</tr>
-				<tr>
-					<td><b>Month name, day of month, year</b></td>
-					<td>LL</td>
-					<td>اردیبهشت ۲۰ ۱۳۹۲</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>ll</td>
-					<td>ارد ۲۰ ۱۳۹۲</td>
-				</tr>
-				<tr>
-					<td><b>Month name, day of month, year, time</b></td>
-					<td>LLL</td>
-					<td>اردیبهشت ۱۳۹۲ ۲۰   ۴:۲۳  ب ظ</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>lll</td>
-					<td>ارد ۱۳۹۲ ۲۰   ۴:۲۳  ب ظ</td>
-				</tr>
-				<tr>
-					<td><b>Month name, day of month, day of week, year, time</b></td>
-					<td>LLLL</td>
-					<td>جمعه ۲۰ اردیبهشت ۱۳۹۲  ۴:۲۵  ب ظ</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>llll</td>
-					<td>ج ۲۰ ارد ۱۳۹۲  ۴:۲۷  ب ظ</td>
-				</tr>
-			</tbody>
-		</table>
+<table class="table table-striped table-bordered">
+    <tbody>
+    <tr>
+        <td><b>Time</b></td>
+        <td>LT</td>
+        <td>"۴:۱۵ ب ظ"</td>
+    </tr>
+    <tr>
+        <td><b>Month numeral, day of month, year</b></td>
+        <td>L</td>
+        <td>۱۳۹۲/۰۲/۲۰</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>l</td>
+        <td>۳۹۲/۲/۲۰</td>
+    </tr>
+    <tr>
+        <td><b>Month name, day of month, year</b></td>
+        <td>LL</td>
+        <td>اردیبهشت ۲۰ ۱۳۹۲</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>ll</td>
+        <td>ارد ۲۰ ۱۳۹۲</td>
+    </tr>
+    <tr>
+        <td><b>Month name, day of month, year, time</b></td>
+        <td>LLL</td>
+        <td>اردیبهشت ۱۳۹۲ ۲۰ ۴:۲۳ ب ظ</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>lll</td>
+        <td>ارد ۱۳۹۲ ۲۰ ۴:۲۳ ب ظ</td>
+    </tr>
+    <tr>
+        <td><b>Month name, day of month, day of week, year, time</b></td>
+        <td>LLLL</td>
+        <td>جمعه ۲۰ اردیبهشت ۱۳۹۲ ۴:۲۵ ب ظ</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>llll</td>
+        <td>ج ۲۰ ارد ۱۳۹۲ ۴:۲۷ ب ظ</td>
+    </tr>
+    </tbody>
+</table>
 
-		<h4>Default format</h4>
-		<p>
-			ISO8601 format
-			<code>
-				YYYY-MM-DDTHH:mm:ssZ
-			</code>
-			.
-		</p>
-		<p >
-			"۱۳۹۱-۱۰-۰۴ ۱۱:۲۷:۵۳ ق ظ"
-		</p>
+<h4>Default format</h4>
+
+<p>
+    ISO8601 format
+    <code>
+        YYYY-MM-DDTHH:mm:ssZ
+    </code>
+    .
+</p>
+
+<p>
+    "۱۳۹۱-۱۰-۰۴ ۱۱:۲۷:۵۳ ق ظ"
+</p>
 
 </article>
 
 <article class="method">
-	<a class="target" name="/displaying/formatPersian/"></a>
-	<h3><a href="#/query/is-a-persianDate/"><span class="hash">#</span>Format To Persian date</a></h3>
-	<div class="prose">
+    <a class="target" name="/displaying/formatPersian/"></a>
 
-		<p>
-			By Default persianDate <a href="#/displaying/format/" >#format</a> , use Persian Number System, for engilsh number Set formatPersian Option as false 			<pre    >
+    <h3><a href="#/query/is-a-persianDate/"><span class="hash">#</span>Format To Persian date</a></h3>
+
+    <div class="prose">
+
+        <p>
+            By Default persianDate <a href="#/displaying/format/">#format</a> , use Persian Number System, for engilsh
+            number Set formatPersian Option as false 			<pre>
 var d = new persianDate([1391]);
 d.format(); //"۱۳۹۱-۰۱-۰۱ ۰۰:۰۰:۰۰ ق ظ"
 window.formatPersian = false;
 d.format(); //"1391-01-01 00:00:00 AM"
 			</pre>
-			Also you can set golbal config like this  
- 			<pre> window.formatPersian  = false</pre>
-		<p>
-			<em>Note:</em>After Set Golbal config you can set config for every instance
-		</p>
-		<pre    >
+        Also you can set golbal config like this
+        <pre> window.formatPersian  = false</pre>
+        <p>
+            <em>Note:</em>After Set Golbal config you can set config for every instance
+        </p>
+		<pre>
 var d = new persianDate([1391]);
 d.format(); //"۱۳۹۱-۰۱-۰۱ ۰۰:۰۰:۰۰ ق ظ"
 window.formatPersian = false;
@@ -978,322 +1078,346 @@ d.format(); //"1391-01-01 00:00:00 AM"
 d.formatPersian = true;
 d.format(); //"۱۳۹۱-۰۱-۰۱ ۰۰:۰۰:۰۰ ق ظ"
 			</pre>
-	</div>
+    </div>
 
 </article>
 
 <article class="method">
-	<a class="target" name="/displaying/difference/"></a>
-	<h3><a href="#/displaying/difference/"><span class="hash">#</span>Difference</a></h3>
-	<div class="prose">
-		<pre  lang="javascript">
+    <a class="target" name="/displaying/difference/"></a>
+
+    <h3><a href="#/displaying/difference/"><span class="hash">#</span>Difference</a></h3>
+
+    <div class="prose">
+		<pre lang="javascript">
 persianDate().diff(PersianDate|String|Boolean);
 persianDate().diff(PersianDate|String|Boolean);</pre>
-		<p>
-			To get the difference in milliseconds, use
-			<code>
-				persianDate#diff
-			</code>
-			like you would use
-			<code>
-				persianDate#from
-			</code>
-			.
-		</p>
+        <p>
+            To get the difference in milliseconds, use
+            <code>
+                persianDate#diff
+            </code>
+            like you would use
+            <code>
+                persianDate#from
+            </code>
+            .
+        </p>
 
-		<div class="highlight">
-			<pre  lang="javascript">
+        <div class="highlight">
+			<pre lang="javascript">
 var a = persianDate([1392, 0, 29]);
 var b = persianDate([1392, 0,28]);
 a.diff(b) // 86400000
 </pre>
-		</div>
-		<p>
-			To get the difference in another unit of measurement, pass that measurement as the second argument.
-		</p>
+        </div>
+        <p>
+            To get the difference in another unit of measurement, pass that measurement as the second argument.
+        </p>
 
-		<div class="highlight">
-			<pre  lang="javascript">
+        <div class="highlight">
+			<pre lang="javascript">
 var a = persianDate([1392, 0,29]);
 var b = persianDate([1392,0,28]);
 a.diff(b, 'days')// 1
 </pre>
-		</div>
-		<p>
-			The supported measurements are years, months, weeks, days, hours, minutes, and seconds. For ease of development, the singular forms are supported .
-		</p>
-		<div class="highlight">
-			<pre  lang="javascript"><span class="keyword">var</span> a = persianDate([<span class="number">1391</span>, <span class="number">0</span>]);
+        </div>
+        <p>
+            The supported measurements are years, months, weeks, days, hours, minutes, and seconds. For ease of
+            development, the singular forms are supported .
+        </p>
+
+        <div class="highlight">
+			<pre lang="javascript"><span class="keyword">var</span> a = persianDate([<span
+                    class="number">1391</span>, <span class="number">0</span>]);
 <span class="keyword">var</span> b = persianDate([<span class="number">1392</span>, <span class="number">5</span>]);
 a.diff(b, <span class="string">'years'</span>)       <span class="comment">// 1</span>
 a.diff(b, <span class="string">'years'</span>, <span class="literal">true</span>) <span class="comment">// 1.5</span>
 </pre>
-		</div>
-		<p>
-			If the persianDate is later than the persianDate you are passing to
-			<code>
-				persianDate.fn.diff
-			</code>
-			, the return value will be negative.
-		</p>
+        </div>
+        <p>
+            If the persianDate is later than the persianDate you are passing to
+            <code>
+                persianDate.fn.diff
+            </code>
+            , the return value will be negative.
+        </p>
 
-		<div class="highlight">
-			<pre  lang="javascript"><span class="keyword">var</span> a = persianDate();
-<span class="keyword">var</span> b = persianDate().add(<span class="string">'seconds'</span>, <span class="number">1</span>);
+        <div class="highlight">
+			<pre lang="javascript"><span class="keyword">var</span> a = persianDate();
+<span class="keyword">var</span> b = persianDate().add(<span class="string">'seconds'</span>, <span
+                        class="number">1</span>);
 a.diff(b) <span class="comment">// -1000</span>
 b.diff(a) <span class="comment">// 1000</span>
 </pre>
-		</div>
-		<p>
-			A easy way to think of this is by replacing
-			<code>
-				.diff(
-			</code>
-			with a minus operator.
-		</p>
+        </div>
+        <p>
+            A easy way to think of this is by replacing
+            <code>
+                .diff(
+            </code>
+            with a minus operator.
+        </p>
 
-		<div class="highlight">
-			<pre  lang="javascript">          <span class="comment">// a &lt; b</span>
+        <div class="highlight">
+			<pre lang="javascript">          <span class="comment">// a &lt; b</span>
 a.diff(b) <span class="comment">// a - b &lt; 0</span>
 b.diff(a) <span class="comment">// b - a &lt; 0</span>
 </pre>
-		</div>
-	</div>
+        </div>
+    </div>
 </article>
 
 <article class="method">
-	<a class="target" name="/displaying/unix-offset/"></a>
-	<h3><a href="#/displaying/unix-offset/"><span class="hash">#</span>Unix Offset (milliseconds)</a></h3>
-	<div class="prose">
-		<pre  lang="javascript">persianDate().valueOf();
-</pre>
-		<p>
-			<code>
-				persianDate#valueOf
-			</code>
-			simply outputs the number of milliseconds since the Unix Epoch, just like
-			<code>
-				Date#valueOf
-			</code>
-			.
-		</p>
+    <a class="target" name="/displaying/unix-offset/"></a>
 
-		<div class="highlight">
-			<pre  lang="javascript">persianDate(<span class="number">1318874398806</span>).valueOf(); <span class="comment">// 1318874398806</span>
+    <h3><a href="#/displaying/unix-offset/"><span class="hash">#</span>Unix Offset (milliseconds)</a></h3>
+
+    <div class="prose">
+		<pre lang="javascript">persianDate().valueOf();
+</pre>
+        <p>
+            <code>
+                persianDate#valueOf
+            </code>
+            simply outputs the number of milliseconds since the Unix Epoch, just like
+            <code>
+                Date#valueOf
+            </code>
+            .
+        </p>
+
+        <div class="highlight">
+			<pre lang="javascript">persianDate(<span class="number">1318874398806</span>).valueOf(); <span
+                    class="comment">// 1318874398806</span>
 persianDate(<span class="number">1318874398806</span>); <span class="comment">// "۱۳۹۰-۰۷-۲۵ ۲۱:۲۹:۵۸ ب ظ"</span>
 </pre>
-		</div>
-		<p>
-			To get a Unix timestamp (the number of seconds since the epoch) from a
-			<code>
-				persianDate
-			</code>
-			, use
-			<code>
-				persianDate#unix
-			</code>
-			.
-		</p>
-	</div>
+        </div>
+        <p>
+            To get a Unix timestamp (the number of seconds since the epoch) from a
+            <code>
+                persianDate
+            </code>
+            , use
+            <code>
+                persianDate#unix
+            </code>
+            .
+        </p>
+    </div>
 </article>
 
 <article class="method">
-	<a class="target" name="/displaying/unix-timestamp/"></a>
-	<h3><a href="#/displaying/unix-timestamp/"><span class="hash">#</span>Unix Timestamp (seconds)</a></h3>
-	<div class="prose">
-		<pre  lang="javascript">persianDate().unix();</pre>
-		<p>
-			<code>
-				persianDate#unix
-			</code>
-			outputs a Unix timestamp (the of seconds since the Unix Epoch).
-		</p>
+    <a class="target" name="/displaying/unix-timestamp/"></a>
 
-		<div class="highlight">
-			<pre  lang="javascript">persianDate(<span class="number">1318874398806</span>).unix(); <span class="comment">// 1318874398</span>
+    <h3><a href="#/displaying/unix-timestamp/"><span class="hash">#</span>Unix Timestamp (seconds)</a></h3>
+
+    <div class="prose">
+        <pre lang="javascript">persianDate().unix();</pre>
+        <p>
+            <code>
+                persianDate#unix
+            </code>
+            outputs a Unix timestamp (the of seconds since the Unix Epoch).
+        </p>
+
+        <div class="highlight">
+			<pre lang="javascript">persianDate(<span class="number">1318874398806</span>).unix(); <span class="comment">// 1318874398</span>
 </pre>
-		</div>
-		<p>
-			This value is floored to the nearest second, and does not include a milliseconds component.
-		</p>
-	</div>
+        </div>
+        <p>
+            This value is floored to the nearest second, and does not include a milliseconds component.
+        </p>
+    </div>
 </article>
 
 <article class="method">
-	<a class="target" name="/displaying/timezone-offset/"></a>
-	<h3><a href="#/displaying/timezone-offset/"><span class="hash">#</span>Timezone Offset</a></h3>
-	<div class="prose">
-		<pre  lang="javascript">persianDate().zone();</pre>
-		<p>
-			Get the timezone offset in minutes.
-		</p>
+    <a class="target" name="/displaying/timezone-offset/"></a>
 
-		<div class="highlight">
-			<pre  lang="javascript">persianDate().zone(); <span class="comment">// (60, 120, 240, etc.)</span>
+    <h3><a href="#/displaying/timezone-offset/"><span class="hash">#</span>Timezone Offset</a></h3>
+
+    <div class="prose">
+        <pre lang="javascript">persianDate().zone();</pre>
+        <p>
+            Get the timezone offset in minutes.
+        </p>
+
+        <div class="highlight">
+			<pre lang="javascript">persianDate().zone(); <span class="comment">// (60, 120, 240, etc.)</span>
 </pre>
-		</div>
-	</div>
+        </div>
+    </div>
 </article>
 
 <article class="method">
-	<a class="target" name="/displaying/days-in-month/"></a>
-	<h3><a href="#/displaying/days-in-month/"><span class="hash">#</span>Days in Month</a></h3>
-	<div class="prose">
-		<pre  lang="javascript">persianDate().daysInMonth();</pre>
-		<p>
-			Get the number of days in the current month.
-		</p>
+    <a class="target" name="/displaying/days-in-month/"></a>
 
-		<div class="highlight">
-			<pre  lang="javascript">persianDate(<span class="string">[1392,01]</span>).daysInMonth() <span class="comment">// 29</span>
+    <h3><a href="#/displaying/days-in-month/"><span class="hash">#</span>Days in Month</a></h3>
+
+    <div class="prose">
+        <pre lang="javascript">persianDate().daysInMonth();</pre>
+        <p>
+            Get the number of days in the current month.
+        </p>
+
+        <div class="highlight">
+			<pre lang="javascript">persianDate(<span class="string">[1392,01]</span>).daysInMonth() <span
+                    class="comment">// 29</span>
 persianDate(<span class="string">[1392,08]</span>).daysInMonth() <span class="comment">// 31</span>
 </pre>
-		</div>
-	</div>
+        </div>
+    </div>
 </article>
 
 <article class="method">
-	<a class="target" name="/displaying/as-javascript-date/"></a>
-	<h3><a href="#/displaying/as-javascript-date/"><span class="hash">#</span>As Javascript Date</a></h3>
-	<div class="prose">
-		<pre  lang="javascript">persianDate().toDate();</pre>
-		<p>
-			To get the native Date object that persianDate.js wraps, use
-			<code>
-				persianDate#toDate
-			</code>
-			.
-		</p>
+    <a class="target" name="/displaying/as-javascript-date/"></a>
 
-		<p>
-			This will return the
-			<code>
-				Date
-			</code>
-			that the persianDate uses, so any changes to that
-			<code>
-				Date
-			</code>
-			will cause the persianDate to change. If you want a
-			<code>
-				Date
-			</code>
-			that is a copy, use
-			<code>
-				persianDate#clone
-			</code>
-			before you use
-			<code>
-				persianDate#toDate
-			</code>
-			.
-		</p>
+    <h3><a href="#/displaying/as-javascript-date/"><span class="hash">#</span>As Javascript Date</a></h3>
 
-	</div>
+    <div class="prose">
+        <pre lang="javascript">persianDate().toDate();</pre>
+        <p>
+            To get the native Date object that persianDate.js wraps, use
+            <code>
+                persianDate#toDate
+            </code>
+            .
+        </p>
+
+        <p>
+            This will return the
+            <code>
+                Date
+            </code>
+            that the persianDate uses, so any changes to that
+            <code>
+                Date
+            </code>
+            will cause the persianDate to change. If you want a
+            <code>
+                Date
+            </code>
+            that is a copy, use
+            <code>
+                persianDate#clone
+            </code>
+            before you use
+            <code>
+                persianDate#toDate
+            </code>
+            .
+        </p>
+
+    </div>
 </article>
 
 <article class="method">
-	<a class="target" name="/displaying/as-array/"></a>
-	<h3><a href="#/displaying/as-array/"><span class="hash">#</span>As Array</a></h3>
-	<div class="prose">
-		<pre   lang="javascript">persianDate().toArray();</pre>												
-		
-						
+    <a class="target" name="/displaying/as-array/"></a>
+
+    <h3><a href="#/displaying/as-array/"><span class="hash">#</span>As Array</a></h3>
+
+    <div class="prose">
+        <pre lang="javascript">persianDate().toArray();</pre>
 
 
+        <p>
+            This returns an array that mirrors the parameters from
+            <code>
+                new persianDate()
+            </code>
+            .
+        </p>
 
-
-
-
-
-		<p>
-			This returns an array that mirrors the parameters from
-			<code>
-				new persianDate()
-			</code>
-			.
-		</p>
-
-		<div class="highlight">
-			<pre   lang="javascript">
+        <div class="highlight">
+			<pre lang="javascript">
 persianDate().toArray(); <span class="comment">// [1391, 1, 4, 14, 40, 16, 154];</span>
 </pre>
-		</div>
-	</div>
+        </div>
+    </div>
 </article>
 
 <article class="method">
-	<a class="target" name="/query/is-leap-year/"></a>
-	<h3><a href="#/query/is-leap-year/"><span class="hash">#</span>Is Leap Year</a></h3>
-	<div class="prose">
-		<pre  lang="javascript">persianDate().isLeapYear();</pre>
-		<p>
-			<code>
-				persianDate#isLeapYear
-			</code>
-			returns
-			<code>
-				true
-			</code>
-			if that year is a leap year, and
-			<code>
-				false
-			</code>
-			if it is not.
-		</p>
+    <a class="target" name="/query/is-leap-year/"></a>
 
-		<div class="highlight">
-			<pre  lang="javascript">persianDate([<span class="number">1391</span>]).isLeapYear() <span class="comment">// true</span>
+    <h3><a href="#/query/is-leap-year/"><span class="hash">#</span>Is Leap Year</a></h3>
+
+    <div class="prose">
+        <pre lang="javascript">persianDate().isLeapYear();</pre>
+        <p>
+            <code>
+                persianDate#isLeapYear
+            </code>
+            returns
+            <code>
+                true
+            </code>
+            if that year is a leap year, and
+            <code>
+                false
+            </code>
+            if it is not.
+        </p>
+
+        <div class="highlight">
+			<pre lang="javascript">persianDate([<span class="number">1391</span>]).isLeapYear() <span class="comment">// true</span>
 persianDate([<span class="number">1392</span>]).isLeapYear() <span class="comment">// false</span>
 </pre>
-		</div>
-	</div>
+        </div>
+    </div>
 </article>
 
 <article class="method">
-	<a class="target" name="/query/is-daylight-saving-time/"></a>
-	<h3><a href="#/query/is-daylight-saving-time/"><span class="hash">#</span>Is Daylight Saving Time</a></h3>
-	<div class="prose">
-		<pre  lang="javascript">persianDate().isDST();</pre>
-		<p>
-			<code>
-				persianDate#isDST
-			</code>
-			checks if the current persianDate is in daylight savings time.
-		</p>
-		<p>
-			<em>Note:</em>
-			<a target="blank" href="http://fa.wikipedia.org/wiki/%D8%B3%D8%A7%D8%B9%D8%AA_%D8%AA%D8%A7%D8%A8%D8%B3%D8%AA%D8%A7%D9%86%DB%8C" > Daylight saving time  in Iran </a>
-		</p>
+    <a class="target" name="/query/is-daylight-saving-time/"></a>
 
-		<div class="highlight">
-			<pre  lang="javascript">persianDate([<span class="number">1392</span>, <span class="number">2</span>, <span class="number">12</span>]).isDST(); <span class="comment">// true</span>
-persianDate([<span class="number">1392</span>, <span class="number">7</span>, <span class="number">14</span>]).isDST(); <span class="comment">// false</span>
+    <h3><a href="#/query/is-daylight-saving-time/"><span class="hash">#</span>Is Daylight Saving Time</a></h3>
+
+    <div class="prose">
+        <pre lang="javascript">persianDate().isDST();</pre>
+        <p>
+            <code>
+                persianDate#isDST
+            </code>
+            checks if the current persianDate is in daylight savings time.
+        </p>
+
+        <p>
+            <em>Note:</em>
+            <a target="blank"
+               href="http://fa.wikipedia.org/wiki/%D8%B3%D8%A7%D8%B9%D8%AA_%D8%AA%D8%A7%D8%A8%D8%B3%D8%AA%D8%A7%D9%86%DB%8C">
+                Daylight saving time in Iran </a>
+        </p>
+
+        <div class="highlight">
+			<pre lang="javascript">persianDate([<span class="number">1392</span>, <span class="number">2</span>, <span
+                    class="number">12</span>]).isDST(); <span class="comment">// true</span>
+persianDate([<span class="number">1392</span>, <span class="number">7</span>, <span class="number">14</span>]).isDST(); <span
+                        class="comment">// false</span>
 </pre>
-		</div>
-	</div>
+        </div>
+    </div>
 </article>
 
 <article class="method">
-	<a class="target" name="/query/is-a-persianDate/"></a>
-	<h3><a href="#/query/is-a-persianDate/"><span class="hash">#</span>Is a PersainDat</a></h3>
-	<div class="prose">
-		<pre  lang="javascript">persianDate().isPersianDate(obj);</pre>
-		<p>
-			To check if a variable is a persianDate object, use
-			<code>
-				persianDate().isPersianDate()
-			</code>
-			.
-		</p>
+    <a class="target" name="/query/is-a-persianDate/"></a>
 
-		<div class="highlight">
-			<pre  lang="javascript">
+    <h3><a href="#/query/is-a-persianDate/"><span class="hash">#</span>Is a PersainDat</a></h3>
+
+    <div class="prose">
+        <pre lang="javascript">persianDate().isPersianDate(obj);</pre>
+        <p>
+            To check if a variable is a persianDate object, use
+            <code>
+                persianDate().isPersianDate()
+            </code>
+            .
+        </p>
+
+        <div class="highlight">
+			<pre lang="javascript">
 persianDate().isPersianDate() // false
 persianDate().isPersianDate(new Date()) // false
 persianDate().isPersianDate(persianDate()) // true
 </pre>
-		</div>
-	</div>
+        </div>
+    </div>
 </article>
 
