@@ -1,18 +1,27 @@
 doctype transitional
 html( xmlns = "http://www.w3.org/1999/xhtml", lang = "en", 'xml:lang' = "en" )
-  title Persian Web Toolkit
-  head
-    include ../includes/head
-    include ../includes/head.script.html
-    block style
-    block scripts  
-  
-  
-  body
-    include ../includes/page.header.html
-    block menu
-    #main_content_wrap.outer
-      block content
-      
-       
-    include ../includes/page.footer.jade
+    title Persian Web Toolkit
+    head
+        include ../includes/head
+
+        link(rel='stylesheet', href='/PersianWebToolkit/css/menu.css')
+        link(rel='stylesheet', href='/PersianWebToolkit/lib/prettify/theme/desert.css')
+        link(rel='stylesheet', href='/PersianWebToolkit/lib/bootstrap/css/bootstrap.css')
+        link(rel='stylesheet', href='/PersianWebToolkit/css/pages.css')
+        block style
+
+        script(src='/PersianWebToolkit/lib/jquery/jquery-1.11.2.js')
+        script(src='/PersianWebToolkit/lib/prettify/prettify.js')
+        script(src='/PersianWebToolkit/lib/bootstrap/js/bootstrap.js')
+        script(src='/PersianWebToolkit/lib/persian-date-0.1.8b.js')
+        script(src='/PersianWebToolkit/js/main.js')
+        block scripts
+
+    body
+        include ../includes/page.header.html
+        block menu
+        #main_content_wrap.outer
+            block content
+
+
+        include ../includes/page.footer.jade
