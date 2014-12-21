@@ -135,7 +135,6 @@ a {
     -ms-transition: text-shadow 0.5s ease;
 }
 
-
 .home-page-logo {
     width: 300px;
     height: 300px;
@@ -739,13 +738,20 @@ pre .keyword {
 /*
     Options Table
 */
-.table-plugin-options{
-    font-size:14px;
+.table-plugin-options {
+    font-size: 14px;
 }
-.table-plugin-options .indent{
+
+.table-plugin-options .indent {
     display: block;
-    width:25px;
-    height:30px;
-    float:left;
+    width: 25px;
+    height: 30px;
+    float: left;
 
 }
+
+.table-plugin-options b {
+    font-weight: bold !important;
+
+}
+

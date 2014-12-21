@@ -123,13 +123,13 @@
 </thead>
 <tbody>
 <tr>
-    <td>format <span class="minor-version">0.0.4</span></td>
+    <td><b>format</b></td>
     <td>string</td>
     <td>'mm/dd/yyyy'</td>
     <td>the date format, combination of d, dd, m, mm, yy, yyy.</td>
 </tr>
 <tr>
-    <td>formatter <span class="minor-version">0.0.4</span></td>
+    <td><b>formatter</b></td>
     <td>Function</td>
     <td>--</td>
     <td>format value of input
@@ -142,7 +142,7 @@
     </td>
 </tr>
 <tr>
-    <td>altField <span class="minor-version">0.0.4</span></td>
+    <td><b>altField</b></td>
     <td>selector string</td>
     <td>false</td>
     <td>An input element that is to be updated with the selected date from the datepicker. Use the altFormat option
@@ -151,14 +151,14 @@
     </td>
 </tr>
 <tr>
-    <td>altFormat <span class="minor-version">0.0.4</span></td>
+    <td><b>altFormat </b></td>
     <td>String</td>
     <td>unix</td>
     <td>The <a target="_blank " href="http://babakhani.github.io/PersianWebToolkit/persiandate#/displaying/format/">dateFormat</a>
         to be used for the altField option. acceptable value: <strong>unix,gregorian,g,u,YYYY/mMM/DD</strong></td>
 </tr>
 <tr>
-    <td>altFieldFormatter <span class="minor-version">0.0.4</span></td>
+    <td><b>altFieldFormatter</b></td>
     <td>Function</td>
     <td>--</td>
     <td>format value of 'altField' input
@@ -171,7 +171,7 @@
     </td>
 </tr>
 <tr>
-    <td>observer <span class="minor-version">0.0.4</span></td>
+    <td><b>observer</b></td>
     <td>Boolean</td>
     <td>false</td>
     <td>if you use $(element).val() to set input val and 'observer : true' , datepicker sync with your inputed
@@ -179,91 +179,50 @@
     </td>
 </tr>
 <tr>
-    <td>onShow <span class="minor-version">0.0.4</span></td>
+    <td><b>onShow</b></td>
     <td>Function</td>
     <td>--</td>
     <td>A function that takes current datepicker instance. It is called just before the datepicker is displayed.
     </td>
 </tr>
 <tr>
-    <td>onHide <span class="minor-version">0.0.4</span></td>
+    <td><b>onHide </b></td>
     <td>Function</td>
     <td>--</td>
     <td>A function that takes current datepicker instance. It is called just before the datepicker Hide.</td>
 </tr>
 <tr>
-    <td>onSelect<span class="minor-version">0.0.4</span></td>
+    <td><b>onSelect</b></td>
     <td>Function</td>
     <td>--</td>
     <td>A function that takes current datepicker unixDate. It is called When Day Select.</td>
 </tr>
 <tr>
-    <td>viewMode</td>
+    <td><b>viewMode</b></td>
     <td>string</td>
     <td>day</td>
     <td>day,month,year</td>
 </tr>
 <tr>
-    <td>persianDigit</td>
+    <td><b>persianDigit</b></td>
     <td>Boolean</td>
     <td>true</td>
     <td>if true all digit convert to persian digit.</td>
 </tr>
 <tr>
-    <td>position</td>
+    <td><b>position</b></td>
     <td>Array</td>
     <td>auto</td>
     <td>[x,y] , define a position of datepicker relative to input element.</td>
 </tr>
 <tr>
-    <td>autoClose</td>
+    <td><b>autoClose</b></td>
     <td>Boolean</td>
     <td>false</td>
     <td>If true picker close When Select day</td>
 </tr>
-
-
-<!--<tr>-->
-    <!--<td>viewFormatter<span class="deprecated-version">Deprecated In 0.0.4</span></td>-->
-    <!--<td>Function</td>-->
-    <!--<td>--</td>-->
-    <!--<td>format value of input-->
-        <!--<br/>-->
-        <!--{...-->
-        <!--<br/>-->
-        <!--viewFormatter: function(unixDate){return unixDate}-->
-        <!--<br/>-->
-        <!--...}-->
-    <!--</td>-->
-<!--</tr>-->
-<!--<tr>-->
-    <!--<td>viewFormat <span class="deprecated-version">Deprecated In 0.0.4</span></td>-->
-    <!--<td>string</td>-->
-    <!--<td>'mm/dd/yyyy'</td>-->
-    <!--<td>the date format, combination of d, dd, m, mm, yy, yyy.</td>-->
-<!--</tr>-->
-<!--<tr>-->
-    <!--<td>mask<span class="deprecated-version">Deprecated In 0.0.4</span></td>-->
-    <!--<td>String | Intger</td>-->
-    <!--<td>false</td>-->
-    <!--<td>If Mask Set Datepicker add input hidden whit name of main input and set value for this on select date,-->
-        <!--acceptable value: <strong>unix,gregorian</strong></td>-->
-<!--</tr>-->
-<!--<tr>-->
-    <!--<td>maskFormatter<span class="deprecated-version">Deprecated In 0.0.4</span></td>-->
-    <!--<td>Function</td>-->
-    <!--<td>--</td>-->
-    <!--<td>format value of mask input-->
-        <!--<br/>-->
-        <!--{...-->
-        <!--<br/>-->
-        <!--maskFormatter: function(unixDate){return unixDate}-->
-        <!--<br/>-->
-        <!--...}-->
-    <!--</td>-->
-<!--</tr>-->
 <tr>
-    <td>minDate</td>
+    <td><b>minDate</b></td>
     <td>unix</td>
     <td>--</td>
     <td>
@@ -271,7 +230,7 @@
     </td>
 </tr>
 <tr>
-    <td>maxDate</td>
+    <td><b>maxDate</b></td>
     <td>unix</td>
     <td>--</td>
     <td>
@@ -280,16 +239,18 @@
 </tr>
 
 <tr>
-    <td>timePicker</td>
+    <td><b>timePicker</b></td>
     <td>Object</td>
     <td>--</td>
     <td>
         timePicker config object
     </td>
 </tr>
-
 <tr>
-    <td><div class="indent"></div>enabled</td>
+    <td>
+        <div class="indent"></div>
+        enabled
+    </td>
     <td>Boolean</td>
     <td>false</td>
     <td>
@@ -298,7 +259,10 @@
 </tr>
 
 <tr>
-    <td><div class="indent"></div>showSeconds</td>
+    <td>
+        <div class="indent"></div>
+        showSeconds
+    </td>
     <td>Boolean</td>
     <td>true</td>
     <td>
@@ -307,7 +271,10 @@
 </tr>
 
 <tr>
-    <td><div class="indent"></div>showMeridian</td>
+    <td>
+        <div class="indent"></div>
+        showMeridian
+    </td>
     <td>Boolean</td>
     <td>true</td>
     <td>
@@ -316,7 +283,10 @@
 </tr>
 
 <tr>
-    <td><div class="indent"></div>changeOnScroll</td>
+    <td>
+        <div class="indent"></div>
+        changeOnScroll
+    </td>
     <td>Boolean</td>
     <td>true</td>
     <td>
@@ -327,7 +297,7 @@
 <!-- navigator -->
 
 <tr>
-    <td><b> navigator</b></td>
+    <td><b>navigator</b></td>
     <td>Object</td>
     <td>--</td>
     <td>
@@ -336,7 +306,10 @@
 </tr>
 
 <tr>
-    <td><div class="indent"></div>enabled</td>
+    <td>
+        <div class="indent"></div>
+        enabled
+    </td>
     <td>Boolean</td>
     <td>--</td>
     <td>
@@ -345,20 +318,26 @@
 </tr>
 
 <tr>
-    <td><div class="indent"></div>text</td>
+    <td>
+        <div class="indent"></div>
+        text
+    </td>
     <td>Object</td>
     <td>--</td>
     <td>
         text: {
-            btnNextText: "<",
-            btnPrevText: ">"
+        btnNextText: "<",
+        btnPrevText: ">"
         }
     </td>
 </tr>
 
 <tr>
-    <td><div class="indent"></div>onNext</td>
-    <td>event</td>
+    <td>
+        <div class="indent"></div>
+        onNext
+    </td>
+    <td>Function</td>
     <td>--</td>
     <td>
         Trigger When Next button clicked
@@ -366,8 +345,11 @@
 </tr>
 
 <tr>
-    <td><div class="indent"></div>onPrev</td>
-    <td>event</td>
+    <td>
+        <div class="indent"></div>
+        onPrev
+    </td>
+    <td>Function</td>
     <td>--</td>
     <td>
         Trigger When Prev button clicked
@@ -375,8 +357,11 @@
 </tr>
 
 <tr>
-    <td><div class="indent"></div>onSwitch</td>
-    <td>event</td>
+    <td>
+        <div class="indent"></div>
+        onSwitch
+    </td>
+    <td>Function</td>
     <td>--</td>
     <td>
         Trigger When Switch button clicked
@@ -386,7 +371,7 @@
 
 <!-- toolbox -->
 <tr>
-    <td>toolbox</td>
+    <td><b>toolbox</b></td>
     <td>Object</td>
     <td>--</td>
     <td>
@@ -395,7 +380,10 @@
 </tr>
 
 <tr>
-    <td><div class="indent"></div>enabled</td>
+    <td>
+        <div class="indent"></div>
+        enabled
+    </td>
     <td>Boolean</td>
     <td>true</td>
     <td>
@@ -403,18 +391,24 @@
     </td>
 </tr>
 <tr>
-    <td><div class="indent"></div>text</td>
+    <td>
+        <div class="indent"></div>
+        text
+    </td>
     <td>Object</td>
     <td>--</td>
     <td>
-        {
-            btnToday: "امروز"
+        text: {
+        btnToday: "امروز"
         }
     </td>
 </tr>
 <tr>
-    <td><div class="indent"></div>onToday</td>
-    <td>event</td>
+    <td>
+        <div class="indent"></div>
+        onToday
+    </td>
+    <td>Function</td>
     <td>--</td>
     <td>
         Trigger When Today Button Clicked
@@ -424,7 +418,7 @@
 
 <!-- dayPicker -->
 <tr>
-    <td>dayPicker</td>
+    <td><b>dayPicker</b></td>
     <td>Object</td>
     <td>--</td>
     <td>
@@ -433,7 +427,10 @@
 </tr>
 
 <tr>
-    <td><div class="indent"></div>enabled</td>
+    <td>
+        <div class="indent"></div>
+        enabled
+    </td>
     <td>Boolean</td>
     <td>true</td>
     <td>
@@ -441,8 +438,11 @@
     </td>
 </tr>
 <tr>
-    <td><div class="indent"></div>titleFormat</td>
-    <td>Date Format String</td>
+    <td>
+        <div class="indent"></div>
+        titleFormat
+    </td>
+    <td>String</td>
     <td>'YYYY MMMM'</td>
     <td>
         format text of navigator title
@@ -450,8 +450,11 @@
 </tr>
 
 <tr>
-    <td><div class="indent"></div>titleFormatter</td>
-    <td>function</td>
+    <td>
+        <div class="indent"></div>
+        titleFormatter
+    </td>
+    <td>Function</td>
     <td>--</td>
     <td>
         format text of navigator title
@@ -459,17 +462,20 @@
 </tr>
 
 <tr>
-    <td><div class="indent"></div>onSelect</td>
-    <td>event</td>
+    <td>
+        <div class="indent"></div>
+        onSelect
+    </td>
+    <td>Function</td>
     <td>--</td>
     <td>
-          Trigger When Date Select
+        Trigger When Date Select
     </td>
 </tr>
 
 <!-- monthPicker -->
 <tr>
-    <td>monthPicker</td>
+    <td><b>monthPicker</b></td>
     <td>Object</td>
     <td>--</td>
     <td>
@@ -478,7 +484,10 @@
 </tr>
 
 <tr>
-    <td><div class="indent"></div>enabled</td>
+    <td>
+        <div class="indent"></div>
+        enabled
+    </td>
     <td>Boolean</td>
     <td>true</td>
     <td>
@@ -486,8 +495,11 @@
     </td>
 </tr>
 <tr>
-    <td><div class="indent"></div>titleFormat</td>
-    <td>Date Format String</td>
+    <td>
+        <div class="indent"></div>
+        titleFormat
+    </td>
+    <td>String</td>
     <td>'YYYY MMMM'</td>
     <td>
         format text of navigator title
@@ -495,8 +507,11 @@
 </tr>
 
 <tr>
-    <td><div class="indent"></div>titleFormatter</td>
-    <td>function</td>
+    <td>
+        <div class="indent"></div>
+        titleFormatter
+    </td>
+    <td>Function</td>
     <td>--</td>
     <td>
         format text of navigator title
@@ -504,8 +519,11 @@
 </tr>
 
 <tr>
-    <td><div class="indent"></div>onSelect</td>
-    <td>event</td>
+    <td>
+        <div class="indent"></div>
+        onSelect
+    </td>
+    <td>Function</td>
     <td>--</td>
     <td>
         Trigger When Month Select
@@ -514,16 +532,19 @@
 
 <!-- yearPicker -->
 <tr>
-    <td>yearPicker</td>
+    <td><b>yearPicker</b></td>
     <td>Object</td>
     <td>--</td>
     <td>
-       yearPicker config Object
+        yearPicker config Object
     </td>
 </tr>
 
 <tr>
-    <td><div class="indent"></div>enabled</td>
+    <td>
+        <div class="indent"></div>
+        enabled
+    </td>
     <td>Boolean</td>
     <td>true</td>
     <td>
@@ -531,8 +552,11 @@
     </td>
 </tr>
 <tr>
-    <td><div class="indent"></div>titleFormat</td>
-    <td>Date Format String</td>
+    <td>
+        <div class="indent"></div>
+        titleFormat
+    </td>
+    <td>String</td>
     <td>'YYYY MMMM'</td>
     <td>
         format text of navigator title
@@ -540,16 +564,22 @@
 </tr>
 
 <tr>
-    <td><div class="indent"></div>titleFormatter</td>
-    <td>function</td>
+    <td>
+        <div class="indent"></div>
+        titleFormatter
+    </td>
+    <td>Function</td>
     <td>--</td>
     <td>
         format text of navigator title
     </td>
 </tr>
 <tr>
-    <td><div class="indent"></div>onSelect</td>
-    <td>event</td>
+    <td>
+        <div class="indent"></div>
+        onSelect
+    </td>
+    <td>Function</td>
     <td>--</td>
     <td>
         Trigger When Year Select
@@ -558,7 +588,7 @@
 
 <!--dsad-->
 <tr>
-    <td>onlyTimePicker</td>
+    <td><b>onlyTimePicker</b></td>
     <td>Boolean</td>
     <td>--</td>
     <td>
@@ -566,7 +596,7 @@
     </td>
 </tr>
 <tr>
-    <td>justSelectOnDate</td>
+    <td><b>justSelectOnDate</b></td>
     <td>Boolean</td>
     <td>--</td>
     <td>
@@ -578,10 +608,10 @@
 </tbody>
 </table>
 <h3>Methods</h3>
-<table class="table table-bordered table-striped">
+<table class="table table-bordered table-striped table-plugin-options">
     <thead>
     <tr>
-        <th style="width: 100px;">Name</th>
+        <th style="width: 150px;">Name</th>
         <th style="width: 100px;">Arguments</th>
         <th style="width: 100px;">Description</th>
         <th>Sample Code</th>
