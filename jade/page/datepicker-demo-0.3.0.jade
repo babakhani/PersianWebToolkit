@@ -1,0 +1,8 @@
+extends layout
+block style
+    link(rel='stylesheet', href='https://cdn.rawgit.com/babakhani/pwt.datepicker/RefactorArchitecture/dist/0.3.0/css/persian-datepicker-0.3.0.min.css')
+block scripts
+    script(src='https://cdn.rawgit.com/babakhani/pwt.datepicker/RefactorArchitecture/dist/0.3.0/js/persian-datepicker-0.3.0.min.js')
+block content
+    section#main_content.inner
+        include ../includes/datepicker-demo-0.3.0.html

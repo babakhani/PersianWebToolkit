@@ -1,0 +1,19 @@
+.jumbotron{
+
+}
+
+h3{
+    width:100%;
+    float: left;
+    
+}
+
+.well{
+    width: 100%;
+    display: block;
+    float: left;
+}
+
+.list-group{
+    float: left;
+}

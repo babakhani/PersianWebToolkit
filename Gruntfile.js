@@ -14,10 +14,18 @@ module.exports = function (grunt) {
         jade: {
             compile: {
                 files: {
-                    "doc/datepicker/<%= pkg.datepickerVersion %>/datepicker.html": 'jade/page/datepicker.jade',
-                    "doc/persiandate/<%= pkg.persiandateVersion %>/persiandate.html": 'jade/page/persiandate.jade',
-                    "index.html": 'jade/page/index.jade'
+                    "doc/datepicker/<%= pkg.datepickerVersion %>/index.html": 'jade/page/datepicker-<%= pkg.datepickerVersion %>.jade',
+                    "doc/datepicker/<%= pkg.datepickerVersion %>/demo.html": 'jade/page/datepicker-demo-<%= pkg.datepickerVersion %>.jade',
+
+                    "doc/persiandate/<%= pkg.persiandateVersion %>/index.html": 'jade/page/persiandate-<%= pkg.persiandateVersion %>.jade'
                 }
+
+            }
+        },
+        watch: {
+            scripts: {
+                files: ['jade/page/*','jade/includes/*'],
+                tasks: ['jade']
             }
         }
     });
@@ -25,5 +33,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-jade');
-    grunt.registerTask('default', ['jade']);
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.registerTask('default', ['jade','watch']);
 };

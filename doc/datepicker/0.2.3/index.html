@@ -1,0 +1,396 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><title>Persian Web Toolkit</title>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="canonical" href="http://babakhani.github.io/PersianWebToolkit"/>
+    <meta name="description" content="javascript,datepicker,date,persian,calendar">
+    <meta name="keyword"
+          content="persian,datepicker,date,khayam,jalali,reza,babakhani,jquery,plugin,javascript,js,persian web toolkit,pwt"/>
+    <link rel="shortcut icon" href="img/favicon.png"/>
+    <link rel="stylesheet" href="/PersianWebToolkit/css/menu.css"/>
+    <link rel="stylesheet" href="/PersianWebToolkit/lib/prettify/theme/desert.css"/>
+    <link rel="stylesheet" href="/PersianWebToolkit/lib/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/PersianWebToolkit/css/pages.css"/>
+    <link rel="stylesheet" href="/PersianWebToolkit/css/over-bootstrap.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.rawgit.com/babakhani/pwt.datepicker/RefactorArchitecture/dist/0.3.0/css/persian-datepicker-0.3.0.min.css"/>
+    <script src="/PersianWebToolkit/lib/jquery/jquery-1.11.2.min.js"></script>
+    <script src="/PersianWebToolkit/lib/prettify/prettify.js"></script>
+    <script src="/PersianWebToolkit/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/PersianWebToolkit/lib/persian-date-0.1.8b.js"></script>
+    <script src="/PersianWebToolkit/js/main.js"></script>
+    <script src="https://cdn.rawgit.com/babakhani/pwt.datepicker/RefactorArchitecture/dist/0.3.0/js/persian-datepicker-0.3.0.min.js"></script>
+</head>
+<body><!-- Fixed navbar -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/PersianWebToolkit" class="navbar-brand">
+                <div class="page-logo"></div>
+                Persian Web Toolkit
+            </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a projectName="persiandate" href="/PersianWebToolkit/doc/persiandate/version.html">Persian Date</a>
+                </li>
+                <li>
+                    <a href="/PersianWebToolkit/doc/datepicker/version.html">
+                        Datepicker
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div id="main_content_wrap" class="outer">
+<section id="main_content" class="inner">
+<div class="row">
+    <div class="col-xs-8 ">
+        <div class="alert alert-warning" role="alert">
+            New Version released! Try This
+            <a href="/PersianWebToolkit/doc/datepicker/version.html"> Persian Date Picker</a>
+        </div>
+        <h1>Persian Date Picker</h1>
+
+
+        <span class="label label-warning">Beta Version 0.2.3</span>
+
+        <p>
+            This Date picker work with Iranian calendar.
+        </p>
+
+        <p>
+            <span>More info  at</span>
+            <a target="blank" href="http://en.wikipedia.org/wiki/Iranian_calendar">http://en.wikipedia.org/wiki/Iranian_calendar</a>
+        </p>
+
+        <p>
+            <a href="https://github.com/babakhani/pwt.datepicker">Project on github</a>
+        </p>
+
+        <p>
+            <a href="http://plugins.jquery.com/pwt.datepicker/">Project on Jquery</a>
+        </p>
+
+        <p>
+            <a class="direct-source-link" target="blank"
+               href="http://rawgithub.com/babakhani/pwt.datepicker/master/js/pwt-datepicker.js"><b>pwt-datepicker.js</b>
+                52
+                kb</a>
+            <a class="direct-source-link" target="blank"
+               href="http://rawgithub.com/babakhani/pwt.datepicker/master/js/pwt-datepicker.min.js"><b>pwt-datepicker.min.js </b>24
+                kb</a>
+            <span class="direct-source-link"><b>Minify and GZip </b>6 kb</span>
+        </p>
+    </div>
+    <div class="col-xs-4">
+        <div class="page-git-star-btn">
+            <div>
+                <iframe src="http://ghbtns.com/github-btn.html?user=babakhani&repo=pwt.datepicker&type=watch&count=true&size=small"
+                        height="30" width="170" frameborder="0" scrolling="0" style="width:170px; height: 30px;"
+                        allowTransparency="true"></iframe>
+            </div>
+            <div>
+                <iframe src="http://ghbtns.com/github-btn.html?user=babakhani&repo=pwt.datepicker&type=fork&count=true&size=small"
+                        height="30" width="170" frameborder="0" scrolling="0" style="width:170px; height: 30px;"
+                        allowTransparency="true"></iframe>
+            </div>
+            <a class="download-item push-left"
+               href="https://github.com/babakhani/pwt.datepicker/archive/master.zip"> <span
+                    class="download-zip"></span> <span class="download-zip-title">Download Zip <span
+                    class="download-info">From Github</span></span>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="row col-xs-12">
+
+</div>
+
+
+<h3>Dependency </h3>
+
+<div class="well">
+    <a href="http://jquery.org">jquery.js</a>1.4 &#62; |
+    <a href="js/pwt-date.js" download="pwt-date.js">pwt.date.js </a>0.1.6 &#62;
+</div>
+
+
+<h3>Fiddle Example</h3>
+
+<div class="well">
+    <a target="blank" href="http://jsfiddle.net/babareza/DqppC/">Simple Initialize</a> | <a target="blank"
+                                                                                            href="http://jsfiddle.net/babareza/PAg54/">Custom
+    Format</a> | <a target="blank" href="http://jsfiddle.net/babareza/z3G2q/">Formatter Function</a> | <a
+        target="blank"
+        href="http://jsfiddle.net/babareza/Gm7eM/">Alt
+    Field</a> | <a target="blank" href="http://jsfiddle.net/babareza/wjfNG/ ">Engilsh Number</a> | <a target="blank"
+                                                                                                      href="http://jsfiddle.net/babareza/dAhEa/">Custom
+    Position</a> | <a target="blank" href="http://jsfiddle.net/babareza/Vx5TG/">Custom View Mode</a>
+    <br/>
+</div>
+<div class="page-content-box">
+<h3>Quick Example</h3>
+
+<p>
+    Attached to a field with the format specified via options.
+</p>
+
+<div class="well">
+    <input type="text" class="sample-input form-control" value="02-16-2012" id="example1">
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#example1").pDatepicker({
+
+            });
+        });
+    </script>
+
+
+</div>
+<h3>Qiuck Start</h3>
+	<pre class="prettyprint lang-html">
+		&lt;head&gt;
+			&lt;link rel="stylesheet" href="css/pwt.datepicker.css"/&gt;
+			&lt;script src="js/jquery.js"&gt;&lt;/script&gt;
+			&lt;script src="js/persian.date.js"&gt;&lt;/script&gt;
+			&lt;script src="js/persian.datepicker.js"&gt;&lt;/script&gt;
+		&lt;/head&gt;
+		
+		&lt;script type="text/javascript"&gt;
+			$(document).ready(function() {
+		            $(".example1").pDatepicker();
+            		});
+		&lt;/script&gt;
+		&lt;input type="text" class="example1" /&gt;
+	</pre>
+
+
+<h3>Options</h3>
+<table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+        <th style="width: 100px;">Name</th>
+        <th style="width: 50px;">type</th>
+        <th style="width: 100px;">default</th>
+        <th>description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>format <span class="minor-version">0.0.4</span></td>
+        <td>string</td>
+        <td>'mm/dd/yyyy'</td>
+        <td>the date format, combination of d, dd, m, mm, yy, yyy.</td>
+    </tr>
+    <tr>
+        <td>formatter <span class="minor-version">0.0.4</span></td>
+        <td>Function</td>
+        <td>--</td>
+        <td>format value of input
+            <br/>
+            {...
+            <br/>
+            formatter: function(unixDate){return unixDate}
+            <br/>
+            ...}
+        </td>
+    </tr>
+    <tr>
+        <td>altField <span class="minor-version">0.0.4</span></td>
+        <td>selector string</td>
+        <td>false</td>
+        <td>An input element that is to be updated with the selected date from the datepicker. Use the altFormat option
+            to change the format of the date within this field. Leave as blank for no alternate field.
+            acceptable value: : '#elementId','.element-class'
+        </td>
+    </tr>
+    <tr>
+        <td>altFormat <span class="minor-version">0.0.4</span></td>
+        <td>String</td>
+        <td>unix</td>
+        <td>The <a target="_blank " href="http://babakhani.github.io/PersianWebToolkit/persiandate#/displaying/format/">dateFormat</a>
+            to be used for the altField option. acceptable value: <strong>unix,gregorian,g,u,YYYY/mMM/DD</strong></td>
+    </tr>
+    <tr>
+        <td>altFieldFormatter <span class="minor-version">0.0.4</span></td>
+        <td>Function</td>
+        <td>--</td>
+        <td>format value of 'altField' input
+            <br/>
+            {...
+            <br/>
+            altFieldFormatter: function(unixDate){return unixDate}
+            <br/>
+            ...}
+        </td>
+    </tr>
+    <tr>
+        <td>observer <span class="minor-version">0.0.4</span></td>
+        <td>Boolean</td>
+        <td>false</td>
+        <td>if you use $(element).val() to set input val and 'observer : true' , datepicker sync with your inputed
+            Value. Observer Watch input and altField Elemets.
+        </td>
+    </tr>
+    <tr>
+        <td>onShow <span class="minor-version">0.0.4</span></td>
+        <td>Function</td>
+        <td>--</td>
+        <td>A function that takes current datepicker instance. It is called just before the datepicker is displayed.
+        </td>
+    </tr>
+    <tr>
+        <td>onHide <span class="minor-version">0.0.4</span></td>
+        <td>Function</td>
+        <td>--</td>
+        <td>A function that takes current datepicker instance. It is called just before the datepicker Hide.</td>
+    </tr>
+    <tr>
+        <td>onSelect<span class="minor-version">0.0.4</span></td>
+        <td>Function</td>
+        <td>--</td>
+        <td>A function that takes current datepicker unixDate. It is called When Day Select.</td>
+    </tr>
+    <tr>
+        <td>viewMode</td>
+        <td>string</td>
+        <td>day</td>
+        <td>day,month,year</td>
+    </tr>
+    <tr>
+        <td>persianDigit</td>
+        <td>Boolean</td>
+        <td>true</td>
+        <td>if true all digit convert to persian digit.</td>
+    </tr>
+    <tr>
+        <td>position</td>
+        <td>Array</td>
+        <td>auto</td>
+        <td>[x,y] , define a position of datepicker relative to input element.</td>
+    </tr>
+    <tr>
+        <td>autoClose</td>
+        <td>Boolean</td>
+        <td>false</td>
+        <td>If true picker close When Select day</td>
+    </tr>
+    <tr>
+        <td>toolbox</td>
+        <td>Boolean</td>
+        <td>true</td>
+        <td>Show Hide toolbox element</td>
+    </tr>
+
+    <tr>
+        <td>viewFormatter<span class="deprecated-version">Deprecated In 0.0.4</span></td>
+        <td>Function</td>
+        <td>--</td>
+        <td>format value of input
+            <br/>
+            {...
+            <br/>
+            viewFormatter: function(unixDate){return unixDate}
+            <br/>
+            ...}
+        </td>
+    </tr>
+    <tr>
+        <td>viewFormat <span class="deprecated-version">Deprecated In 0.0.4</span></td>
+        <td>string</td>
+        <td>'mm/dd/yyyy'</td>
+        <td>the date format, combination of d, dd, m, mm, yy, yyy.</td>
+    </tr>
+    <tr>
+        <td>mask<span class="deprecated-version">Deprecated In 0.0.4</span></td>
+        <td>String | Intger</td>
+        <td>false</td>
+        <td>If Mask Set Datepicker add input hidden whit name of main input and set value for this on select date,
+            acceptable value: <strong>unix,gregorian</strong></td>
+    </tr>
+    <tr>
+        <td>maskFormatter<span class="deprecated-version">Deprecated In 0.0.4</span></td>
+        <td>Function</td>
+        <td>--</td>
+        <td>format value of mask input
+            <br/>
+            {...
+            <br/>
+            maskFormatter: function(unixDate){return unixDate}
+            <br/>
+            ...}
+        </td>
+    </tr>
+
+    </tbody>
+</table>
+<h3>Methods</h3>
+<table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+        <th style="width: 100px;">Name</th>
+        <th style="width: 100px;">Arguments</th>
+        <th style="width: 100px;">Description</th>
+        <th>Sample Code</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>show() <span class="minor-version">0.0.4</span></td>
+        <td>This method does not accept any arguments.</td>
+        <td>Open the date picker.</td>
+        <td>
+            <pre class="prettyprint lang-html">$( ".selector" ).datepicker( "show" );</pre>
+        </td>
+    </tr>
+    <tr>
+        <td>hide() <span class="minor-version">0.0.4</span></td>
+        <td>This method does not accept any arguments.</td>
+        <td>Close the date picker.</td>
+        <td>
+            <pre class="prettyprint lang-html">$( ".selector" ).datepicker( "hide" );</pre>
+        </td>
+    </tr>
+    <tr>
+        <td>destroy <span class="minor-version">0.0.4</span></td>
+        <td>This method does not accept any arguments.</td>
+        <td>Removes the datepicker functionality completely.</td>
+        <td>
+            <pre class="prettyprint lang-html">$( ".selector" ).datepicker( "destroy" );</pre>
+        </td>
+    </tr>
+
+    </tbody>
+</table>
+</div>
+</section>
+</div>
+<div id="footer_wrap" class="outer"></div>
+<footer class="inner">
+    <p class="copyright">Persian Web Toolkit maintained by<a href="https://github.com/babakhani"> Reza Babakhani</a>
+        <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+        <script type="text/javascript">
+            try {
+                var pageTracker = _gat._getTracker("UA-40548780-1");
+                pageTracker._trackPageview();
+            } catch (err) {
+            }
+        </script>
+    </p>
+</footer>
+</body>
+</html>
