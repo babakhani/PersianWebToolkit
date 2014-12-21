@@ -736,3 +736,13 @@ pre .keyword {
 
 }
 
+/*
+    Options Table
+*/
+
+.table-plugin-options .indent{
+    display: block;
+    width:15px;
+    height:30px;
+    float:left;
+}
