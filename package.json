@@ -1,7 +1,7 @@
 {
     "name": "persian-web-toolkit",
     "version": "0.3.3",
-    "datepickerVersion": "0.3.0",
+    "datepickerVersion": "0.3.5",
     "persiandateVersion": "0.1.8",
     "devDependencies": {
         "grunt": "0.4.4",
