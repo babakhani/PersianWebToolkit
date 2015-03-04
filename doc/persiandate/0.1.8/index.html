@@ -1,6 +1,25 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><title>Persian Web Toolkit</title><head><link rel="shortcut icon" href="/PersianWebToolkit/img/favicon.png"/><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<link rel="canonical" href="http://babakhani.github.io/PersianWebToolkit" />
-<meta name="description" content="javascript,datepicker,date,persian,calendar"><meta name="keyword" content="persian,datepicker,date,khayam,jalali,reza,babakhani,jquery,plugin,javascript,js,persian web toolkit,pwt"/><link rel="stylesheet" href="/PersianWebToolkit/css/menu.css"/><link rel="stylesheet" href="/PersianWebToolkit/lib/prettify/theme/desert.css"/><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/><link rel="stylesheet" href="/PersianWebToolkit/css/pages.css"/><link rel="stylesheet" href="/PersianWebToolkit/css/over-bootstrap.css"/><script src="/PersianWebToolkit/lib/jquery/jquery-1.11.2.min.js"></script><script src="/PersianWebToolkit/lib/prettify/prettify.js"></script><script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script><script src="/PersianWebToolkit/lib/persian-date-0.1.8b.js"></script><script src="/PersianWebToolkit/js/main.js"></script></head><body><!-- Fixed navbar -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><title>Persian Web Toolkit</title>
+<head>
+    <link rel="shortcut icon" href="/PersianWebToolkit/vendor/img/favicon.png"/>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="canonical" href="http://babakhani.github.io/PersianWebToolkit"/>
+    <meta name="description" content="javascript,datepicker,date,persian,calendar">
+    <meta name="keyword"
+          content="persian,datepicker,date,khayam,jalali,reza,babakhani,jquery,plugin,javascript,js,persian web toolkit,pwt"/>
+    <link rel="stylesheet" href="/PersianWebToolkit/vendor/css/menu.css"/>
+    <link rel="stylesheet" href="/PersianWebToolkit/vendor/lib/prettify/theme/desert.css"/>
+    <link rel="stylesheet" href="/PersianWebToolkit/vendor/lib/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/PersianWebToolkit/vendor/css/pages.css"/>
+    <link rel="stylesheet" href="/PersianWebToolkit/vendor/css/over-bootstrap.css"/>
+    <script src="/PersianWebToolkit/vendor/lib/jquery/jquery.js"></script>
+    <script src="/PersianWebToolkit/vendor/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/PersianWebToolkit/vendor/lib/prettify/prettify.js"></script>
+    <script src="/PersianWebToolkit/vendor/lib/persian-date-0.1.8b.js"></script>
+    <script src="/PersianWebToolkit/vendor/js/main.js"></script>
+</head>
+<body><!-- Fixed navbar -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
@@ -21,95 +40,108 @@
                 <li>
                     <a projectName="persiandate" href="/PersianWebToolkit/doc/persiandate/version.html">Persian Date</a>
                 </li>
-                <li >
-                    <a href="/PersianWebToolkit/doc/datepicker/version.html" >
+                <li>
+                    <a href="/PersianWebToolkit/doc/datepicker/version.html">
                         Datepicker
                     </a>
                 </li>
             </ul>
         </div>
     </div>
-</nav><div class="page-menu" >
-	<div class="inner"  >
-<nav class="subnav inner" >
-	<div class="section">
-		<a href="#/parsing/">Parse</a>
-		<div class="dropdown">
-			<a href="#/parsing/now/">Now</a>
-			<a href="#/parsing/unix-offset/">Unix Offset (milliseconds)</a>
-			<a href="#/parsing/unix-timestamp/">Unix Timestamp (seconds)</a>
-			<a href="#/parsing/date/">Date</a>
-			<a href="#/parsing/array/">Array</a>
-			<a href="#/parsing/clone/">PersianDate Clone</a>
-			<a href="#/parsing/asp-net-json-date/">ASP.NET JSON Date</a>
-		</div>
-	</div>
-	<div class="section">
-		<a href="#/get-set/">Get + Set</a>
-		<div class="dropdown">
-
-			<a href="#/get-set/millisecond/">Millisecond</a>
-
-			<a href="#/get-set/second/">Second</a>
-
-			<a href="#/get-set/minute/">Minute</a>
-
-			<a href="#/get-set/hour/">Hour</a>
-
-			<a href="#/get-set/date/">Date of Month</a>
-
-			<a href="#/get-set/day/">Day of Week</a>
-			<a href="#/get-set/month/">Month</a>
-
-			<a href="#/get-set/year/">Year</a>
-
-		</div>
-	</div>
-
-	<div class="section">
-		<a href="#/manipulating/">Manipulate</a>
-		<div class="dropdown">
-
-			<a href="#/manipulating/add/">Add</a>
-
-			<a href="#/manipulating/subtract/">Subtract</a>
-
-			<a href="#/manipulating/start-of/">Start of Time</a>
-
-			<a href="#/manipulating/end-of/">End of Time</a>
-		
-		</div>
-	</div>
-
-	<div class="section">
-		<a href="#/displaying/">Display</a>
-		<div class="dropdown">
-			<a href="#/displaying/format/">Format</a>
-			<a href="#/displaying/formatPersian/">Format To Persian</a>
-			<a href="#/displaying/difference/">Difference</a>
-			<a href="#/displaying/unix-offset/">Unix Offset (milliseconds)</a>
-			<a href="#/displaying/unix-timestamp/">Unix Timestamp (seconds)</a>
-			<a href="#/displaying/timezone-offset/">Timezone Offset</a>
-			<a href="#/displaying/days-in-month/">Days in Month</a>
-			<a href="#/displaying/as-javascript-date/">As Javascript Date</a>
-			<a href="#/displaying/as-array/">As Array</a>
-		</div>
-	</div>
-
-	<div class="section">
-		
-		<a href="#/query/">Query</a>
-		<div class="dropdown">
-			<a href="#/query/is-leap-year/">Is Leap Year</a>
-			<a href="#/query/is-daylight-saving-time/">Is Daylight Saving Time</a>
-			<a href="#/query/is-a-persianDate/">Is a persianDate</a>
-
-		</div>
-	</div>
-
 </nav>
+<div class="spacer"></div>
+
+<div class="page-menu">
+    <div class="container">
+        <div class="inner">
+            <nav class="subnav inner">
+                <div class="section">
+                    <a href="#/parsing/">Parse</a>
+                    <div class="dropdown">
+                        <a href="#/parsing/now/">Now</a>
+                        <a href="#/parsing/unix-offset/">Unix Offset (milliseconds)</a>
+                        <a href="#/parsing/unix-timestamp/">Unix Timestamp (seconds)</a>
+                        <a href="#/parsing/date/">Date</a>
+                        <a href="#/parsing/array/">Array</a>
+                        <a href="#/parsing/clone/">PersianDate Clone</a>
+                        <a href="#/parsing/asp-net-json-date/">ASP.NET JSON Date</a>
+                    </div>
+                </div>
+                <div class="section">
+                    <a href="#/get-set/">Get + Set</a>
+
+                    <div class="dropdown">
+
+                        <a href="#/get-set/millisecond/">Millisecond</a>
+
+                        <a href="#/get-set/second/">Second</a>
+
+                        <a href="#/get-set/minute/">Minute</a>
+
+                        <a href="#/get-set/hour/">Hour</a>
+
+                        <a href="#/get-set/date/">Date of Month</a>
+
+                        <a href="#/get-set/day/">Day of Week</a>
+                        <a href="#/get-set/month/">Month</a>
+
+                        <a href="#/get-set/year/">Year</a>
+
+                    </div>
+                </div>
+
+                <div class="section">
+                    <a href="#/manipulating/">Manipulate</a>
+
+                    <div class="dropdown">
+
+                        <a href="#/manipulating/add/">Add</a>
+
+                        <a href="#/manipulating/subtract/">Subtract</a>
+
+                        <a href="#/manipulating/start-of/">Start of Time</a>
+
+                        <a href="#/manipulating/end-of/">End of Time</a>
+
+                    </div>
+                </div>
+
+                <div class="section">
+                    <a href="#/displaying/">Display</a>
+
+                    <div class="dropdown">
+                        <a href="#/displaying/format/">Format</a>
+                        <a href="#/displaying/formatPersian/">Format To Persian</a>
+                        <a href="#/displaying/difference/">Difference</a>
+                        <a href="#/displaying/unix-offset/">Unix Offset (milliseconds)</a>
+                        <a href="#/displaying/unix-timestamp/">Unix Timestamp (seconds)</a>
+                        <a href="#/displaying/timezone-offset/">Timezone Offset</a>
+                        <a href="#/displaying/days-in-month/">Days in Month</a>
+                        <a href="#/displaying/as-javascript-date/">As Javascript Date</a>
+                        <a href="#/displaying/as-array/">As Array</a>
+                    </div>
+                </div>
+
+                <div class="section">
+
+                    <a href="#/query/">Query</a>
+
+                    <div class="dropdown">
+                        <a href="#/query/is-leap-year/">Is Leap Year</a>
+                        <a href="#/query/is-daylight-saving-time/">Is Daylight Saving Time</a>
+                        <a href="#/query/is-a-persianDate/">Is a persianDate</a>
+
+                    </div>
+                </div>
+
+            </nav>
+        </div>
+    </div>
 </div>
-</div><div id="main_content_wrap" class="outer"><div id="main_content_wrap" class="outer"><section id="main_content" class="inner"><div class="row">
+<div id="main_content_wrap" class="outer">
+<div class="container">
+<section id="main_content" class="inner">
+<div class="row">
     <div class="col-xs-8 ">
         <h1>Persian Date</h1>
         <span class="label label-success">Version 0.1.8</span>
@@ -1544,13 +1576,26 @@ persianDate().isPersianDate(persianDate()) // true
     </div>
 </article>
 
-</section></div></div><div id="footer_wrap" class="outer"></div><footer class="inner"><p class="copyright">Persian Web Toolkit maintained by<a href="https://github.com/babakhani"> Reza Babakhani</a><script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try{
-var pageTracker = _gat._getTracker("UA-40548780-1");
-pageTracker._trackPageview();
-} catch(err) {}
-</script></p></footer></body></html>
+</section>
+</div>
+</div>
+<div id="footer_wrap" class="outer"></div>
+<footer >
+     <div class="container">
+    <p class="copyright">Persian Web Toolkit maintained by<a href="https://github.com/babakhani"> Reza Babakhani</a> & <a href="https://github.com/pylover"> Vahid Mardani</a>
+        <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+        <script type="text/javascript">
+            try {
+                var pageTracker = _gat._getTracker("UA-40548780-1");
+                pageTracker._trackPageview();
+            } catch (err) {
+            }
+        </script>
+    </p>
+         </div>
+</footer>
+</body>
+</html>

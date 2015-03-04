@@ -288,9 +288,14 @@ Full-Width Styles
 
 .inner {
     position: relative;
-    max-width: 90%;
-    padding: 0px 10px;
     margin: 0 auto;
+}
+
+.spacer{
+    display:block;
+    width:100%;
+    float:left;
+    height:20px;
 }
 
 #forkme_banner {
@@ -324,8 +329,8 @@ Full-Width Styles
 
 #navbar,
 .navbar {
-    height: 42px;
-    min-height: 42px;
+    height: 50px;
+    line-height: 50px;
 }
 
 .icon-barbar-nav > li > a {
@@ -343,7 +348,7 @@ Full-Width Styles
     display: block;
     width: 100%;
     line-height: 30px;
-    margin: 5px 0px 0px 0px;
+    margin: 10px 0px 0px 0px;
     padding: 0px;
     color: #fff !important;
     font-size: 20px;
@@ -643,7 +648,7 @@ pre .keyword {
     display: block;
     width: 100%;
     clear: both;
-    min-height: 300px;
+    min-height: 100px;
 }
 
 /*------------------------ Menu ------------------*/
