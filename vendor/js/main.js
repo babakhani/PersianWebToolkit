@@ -1,14 +1,20 @@
 $(document).ready(function () {
+    $(document).trigger('loadInclude');
+})
+
+
+$(document).on('loadInclude', function () {
+    $("pre").addClass("prettyprint");
+    prettyPrint();
     var href = window.location.href;
-    $("#pageHeaderMenu li a").each(function () {
+
+    $(".navbar-nav li a").each(function () {
         var text = $(this).attr("projectName"),
             self = $(this);
         if (href.indexOf(text) !== -1) {
             self.parent().addClass('current');
         }
     });
-    $("pre").addClass("prettyprint");
-    prettyPrint();
 
     function loadResource(filename, filetype) {
         if (filetype == "js") {
@@ -26,18 +32,38 @@ $(document).ready(function () {
             document.getElementsByTagName("head")[0].appendChild(fileref)
     }
 
+    function removefile(filename, filetype) {
+        var targetElement = "link";
+        var targetAttr = "href";
 
-    $('select.theme-roller').change(function () {
-        var theme = $(this).val();
+        var allCtrl = document.getElementsByTagName(targetElement);
+        for (var i = allCtrl.length; i >= 0; i--) { //search backwards within nodelist for matching elements to remove
+            if (allCtrl[i] && allCtrl[i].getAttribute(targetAttr) != null && allCtrl[i].getAttribute(targetAttr).indexOf(filename) != -1);
+            allCtrl[i].parentNode.removeChild(allCtrl[i]);
+        }
+    }
+    themRoller = function (theme) {
         if (theme == 'dark') {
-            loadResource("http://rawgithub.com/babakhani/pwt.datepicker/Develop/dist/css/theme/persian-datepicker-dark.css", 'css')
+            loadResource("/PersianWebToolkit/vendor/persian_datepicker/0.4.0/css/theme/persian-datepicker-dark.css", 'css')
         }
         if (theme == 'blue') {
-            loadResource("http://rawgithub.com/babakhani/pwt.datepicker/Develop/dist/css/theme/persian-datepicker-blue.css", 'css')
+            loadResource("/PersianWebToolkit/vendor/persian_datepicker/0.4.0/css/theme/persian-datepicker-blue.css", 'css')
         }
         if (theme == 'default') {
-            loadResource("http://rawgithub.com/babakhani/pwt.datepicker/Develop/dist/css/persian-datepicker-0.3.5.min.css", 'css')
+            loadResource("/PersianWebToolkit/vendor/persian_datepicker/0.4.0/css/persian-datepicker-0.4.0.css", 'css')
         }
+        $("[data-theme]").each(function () {
+            $(this).removeClass('selected');
+            if ($(this).attr('data-theme') == theme) {
+                $(this).addClass('selected');
+            }
+        })
+    }
+    $('select.theme-roller').change(function () {
+        var theme = $(this).val();
+        themRoller(theme)
     });
+
+    $('[title]').tooltip();
 
 });

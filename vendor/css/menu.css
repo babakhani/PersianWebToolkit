@@ -1,41 +1,44 @@
+/*------------------------ Menu ------------------*/
 
+.page-menu {
+    top: 42px;
+    position: fixed;
+    z-index: 1000;
+    display: block;
+    float: left;
+    width: 100%;
+    background-color: #333 ;
+    height: 40px;
+}
 
 nav.subnav {
     height: 40px;
-    
-    background: #333;
-    /*
-    position: fixed;
-    top: 70px;
-    left: 0;
-    right: 0;
-    padding: 0 20px;
-    font-weight: 200;
-    */
+    line-height: 40px;
+    weight: 200;
     z-index: 2000;
-    display:block;
-    padding:0px 0px 0px 0px;
+    display: block;
+    padding: 0px 0px 0px 0px;
     float: left;
-    width:100%;
-    margin:0px 0px 0px 0px;
-    
-    
+    width: 100%;
+    margin: 0px 0px 0px 0px;
+
 }
 
 @media screen and (max-width: 480px) {
     nav.subnav {
         display: none;
-    };
+    }
 }
 
 nav.subnav .section {
     display: inline-block;
     height: 40px;
-    line-height: 40px;
+    line-height: 45px;
     position: relative;
 }
 
 nav.subnav .section a {
+    height:39px;
     padding: 0 5px;
     text-decoration: none;
     border: 1px solid transparent;
@@ -70,7 +73,7 @@ nav.subnav .section .dropdown a:hover {
     background: #eee;
 }
 
-nav.subnav .section:hover>a {
+nav.subnav .section:hover > a {
     border-color: #333;
     background: #fff;
     color: #333;
@@ -89,6 +92,6 @@ nav.subnav .section:hover .dropdown {
     nav.subnav .section a {
         padding: 0 5px;
         font-size: 14px;
-    };
+    }
 }
 

@@ -1,19 +1,263 @@
-.jumbotron{
+.jumbotron {
 
 }
 
-h3{
-    width:100%;
+h3 {
+    width: 100%;
     float: left;
-    
+
 }
 
-.well{
+.well {
     width: 100%;
     display: block;
     float: left;
 }
 
-.list-group{
+.list-group {
     float: left;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.navbar-nav li {
+    padding-left: 0px;
+}
+
+.navbar-nav li.current{
+
+    background: #333333;
+}
+
+
+#navbar,
+.navbar {
+    height: 50px;
+    line-height: 50px;
+    overflow: hidden;
+    background: #212121;
+}
+
+.navbar-header {
+    width: 200px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.navbar-brand {
+    width: 100%;
+    display: block;
+    width: 100%;
+    line-height: 30px;
+    margin: 10px 0px 0px 0px;
+    padding: 0px;
+    color: #fff !important;
+    font-size: 20px;
+    font-weight: 200;
+    text-shadow: #111 0px 0px 10px;
+}
+
+.navbar-nav li.current a{
+    color:#ffffff;
+}
+.navbar-inverse{
+    border:none;
+}
+
+.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand{
+    margin-left:0px;
+}
+
+.product-box {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.product-box p.description {
+    height: 100px;
+    text-align: justify;
+}
+
+.product-box .label {
+    font-size: 11px !important;
+}
+
+.product-box h1 {
+    font-weight: bold;
+    color: #263238;
+}
+
+.team-item .avatar {
+    width: 100px;
+    height: 100px;
+    margin: 0px auto;
+    float: none;
+}
+
+.team-item .avatar img {
+    float: none;
+    margin: 0px auto;
+}
+
+.team-item {
+    width: 200px;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.board-box {
+    background-color: #E0E0E0;
+    margin: 50px 0px;
+    padding: 20px 0px;
+}
+
+.board-box .jumbotron {
+    background: none !important;
+    color: #ffffff;
+    margin: 0px;
+    float:right;
+    width:100%;
+    padding:20px 0px;
+}
+
+.no-padding-side{
+    padding-right:0px;
+    padding-left:0px;
+}
+
+.board-box .jumbotron a {
+    color: #ffffff;
+    font-style: italic;
+}
+
+
+.board-box .jumbotron a.btn{
+    font-style: normal;
+}
+
+.board-box .jumbotron .btn-default{
+    color:#333333;
+}
+
+.board-box .jumbotron h1{
+    font-size:45px;
+}
+.board-box .jumbotron h1,
+.board-box .jumbotron p{
+    text-shadow: 1px 1px 1px #393939;
+
+}
+
+h3 a:hover{
+    text-decoration: none;
+    cursor: default;
+}
+
+
+.board-box.no-margin {
+    margin: 0px;
+}
+
+.board-box.primary {
+    /*background-color: #4CAF50;*/
+    /*background-color: #004D40;*/
+    /*background-color: #006064;*/
+    background-color: #00838F;
+    /*background-color: #2E8B34;*/
+}
+
+.board-box.default {
+    background: none;
+}
+
+.board-box.sample {
+    background: #E0E0E0;
+}
+
+.center-content{
+    width:auto;
+    padding:20px;
+    float:none;
+    margin:0px auto;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Open Sans';
+    font-size: 24px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal !important;
+}
+
+h1 .label{
+    font-size:16px;
+}
+
+h3 {
+    font-family: 'Open Sans';
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+}
+
+p {
+    font-family: 'Open Sans';
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+}
+
+blockquote {
+    font-family: 'Open Sans';
+    font-size: 21px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+}
+
+pre {
+    font-family: 'Open Sans';
+    font-size: 13px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+}
+
+.btn-primary{
+    background: #F43C00;
+}
+.btn-primary:hover{
+    background: #F43C00;
+}
+.btn{
+    border-radius: 0px;
+    border:none;
+    -webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,0.3);
+}
+
+.btn-disabled{
+
+    border:none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.btn:hover{
+    -webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0,0.5);
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,0.6);
+}
+
+.btn:active{
+    -webkit-box-shadow: 0 4px 5px 0 rgba(0,0,0,0.5);
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.6);
+}
+
+.btn-warning{
+    background: #FF8000;
 }

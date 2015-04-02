@@ -1,0 +1,77 @@
+<div class="row board-box no-margin primary">
+    <div class="container">
+        <div class="jumbotron">
+            <div class="col-xs-8 no-padding-side">
+                <h1>Persian Date Picker <span class="label label-success">{{version}}</span></h1>
+                <p>
+                    This Date picker work with Iranian calendar.
+                </p>
+
+                <p>
+                    <span>More info  at</span>
+                    <a target="blank" href="http://en.wikipedia.org/wiki/Iranian_calendar">http://en.wikipedia.org/wiki/Iranian_calendar</a>
+                </p>
+                <p>Lightweight, Full Feature, Timepicker, Year/Month Picker, Bootstrap Style, Scroll Navigation</p>
+                <div class="spacer"></div>
+
+                <p>
+                    <a class="btn btn-default github-link" href="https://github.com/babakhani/pwt.datepicker">Project on
+                        github</a>
+                    <a class="btn btn-default jquery-link" href="http://plugins.jquery.com/pwt.datepicker/">Project on
+                        Jquery</a>
+                    <a class="btn btn-warning" href="{{demoUrl}}" role="button">Demo Page</a>
+                </p>
+
+            </div>
+            <div class="col-xs-4 no-padding-side">
+                <div class="pull-right">
+                    <div class="spacer"></div>
+                    <a class="download-item push-left"
+                       href="{{downloadUrl}}">
+                        <span class="download-zip"></span>
+                    <span class="download-zip-title">Download Zip
+                        <span class="download-info">From Github</span>
+                        <span class="download-info">{{volume}}</span>
+                    </span>
+                    </a>
+
+                    <div class="spacer"></div>
+                    <div ng-include="'/PersianWebToolkit/doc/datepicker/partial/git-star.html'"></div>
+                    <div ng-include="'/PersianWebToolkit/doc/datepicker/partial/git-fork.html'"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="board-box sample no-margin">
+    <div class="container center-text">
+        <h3><a href="#/Inline-Example/"><span class="hash">#</span>Inline Example</a><span></span></h3>
+    </div>
+    <div class="row">
+        <div class="col-xs-3"></div>
+        <div class="col-xs-6">
+          <div ng-include="'/PersianWebToolkit/doc/datepicker/0.4.0/include/theme-switch.html'"></div>
+            <div class="spacer"></div>
+            <div id="inlineDatepicker" class="col-xs-12 no-padding-side"></div>
+            <input id="inlineDatepickerAlt" type="hidden" class="form-control "/>
+            <script type="text/javascript">
+                $("#inlineDatepicker").persianDatepicker({
+                    timePicker: {
+                        enabled: true
+                    }
+                });
+            </script>
+
+            <h5 class="center-text">
+                <a href="{{demoUrl}}" role="button">More Exmple</a>
+            </h5>
+
+
+        </div>
+        <div class="col-xs-3"></div>
+    </div>
+
+</div>
+

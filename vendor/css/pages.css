@@ -1,3 +1,11 @@
+* {
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+
 /*******************************************************************************
 Slate Theme for GitHub Pages
 by Jason Costello, @jsncostello
@@ -36,19 +44,8 @@ footer, header, hgroup, menu, nav, section {
 
 /*--------------------------------------*/
 
-#header_wrap,
-.page-menu {
-    position: fixed;
-    z-index: 1000;
-}
-
-.page-menu {
-    top: 42px;
-    border-bottom: 1px solid #fff;
-}
-
 #main_content_wrap {
-    padding-top: 60px;
+    padding-top: 50px;
 
 }
 
@@ -60,9 +57,10 @@ body {
     color: #373737;
     background: #212121;
     font-size: 16px;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Open Sans';
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -114,10 +112,6 @@ p {
     margin: 10px 0 15px 0;
 }
 
-footer p {
-    color: #f2f2f2;
-}
-
 a {
     text-decoration: none;
     color: #007edf;
@@ -141,11 +135,6 @@ a {
     float: left;
     margin: 0px 30px 20px 0px;
     background-image: url('../img/home-page-logo.png');
-}
-
-footer a:hover {
-    color: #43adff;
-    text-shadow: #0090ff 0px 0px 2px;
 }
 
 em {
@@ -188,8 +177,8 @@ pre, code {
 }
 
 pre {
-    width: 96%;
-    padding: 10px 2%;
+    width: 100%;
+    padding: 10px 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .1);
     overflow: auto;
 }
@@ -267,7 +256,6 @@ td {
 
 }
 
-
 form {
     background: #f2f2f2;
     padding: 20px;
@@ -291,11 +279,11 @@ Full-Width Styles
     margin: 0 auto;
 }
 
-.spacer{
-    display:block;
-    width:100%;
-    float:left;
-    height:20px;
+.spacer {
+    display: block;
+    width: 100%;
+    float: left;
+    height: 20px;
 }
 
 #forkme_banner {
@@ -327,33 +315,8 @@ Full-Width Styles
     min-height: 40px;
 }
 
-#navbar,
-.navbar {
-    height: 50px;
-    line-height: 50px;
-}
-
 .icon-barbar-nav > li > a {
     padding: 10px 3px;
-}
-
-.navbar-header {
-    width: 220px;
-    padding: 0px;
-    margin: 0px;
-}
-
-.navbar-brand {
-    width: 100%;
-    display: block;
-    width: 100%;
-    line-height: 30px;
-    margin: 10px 0px 0px 0px;
-    padding: 0px;
-    color: #fff !important;
-    font-size: 20px;
-    font-weight: 200;
-    text-shadow: #111 0px 0px 10px;
 }
 
 #project_tagline {
@@ -364,48 +327,10 @@ Full-Width Styles
     text-shadow: #111 0px 0px 10px;
 }
 
-#downloads {
-    position: absolute;
-    width: 210px;
-    z-index: 10;
-    bottom: -40px;
-    right: 0;
-    height: 70px;
-    background: url('../img/icon_download.png') no-repeat 0% 90%;
-}
-
-.zip_download_link {
-    display: block;
-    float: right;
-    width: 90px;
-    height: 70px;
-    text-indent: -5000px;
-    overflow: hidden;
-    background: url(../img/sprite_download.png) no-repeat bottom left;
-}
-
-.tar_download_link {
-    display: block;
-    float: right;
-    width: 90px;
-    height: 70px;
-    text-indent: -5000px;
-    overflow: hidden;
-    background: url(../img/sprite_download.png) no-repeat bottom right;
-    margin-left: 10px;
-}
-
-.zip_download_link:hover {
-    background: url(../img/sprite_download.png) no-repeat top left;
-}
-
-.tar_download_link:hover {
-    background: url(../img/sprite_download.png) no-repeat top right;
-}
-
 #main_content_wrap {
     background: #f2f2f2;
     float: left;
+    width: 100%;
 }
 
 #footer_wrap {
@@ -508,69 +433,6 @@ pre .keyword {
     color: #380D00;
 }
 
-.warning-version {
-    color: red;
-
-}
-
-#project_title {
-    width: 50%;
-    float: left;
-    font-size: 25px !important;
-}
-
-.page-gplus-btn,
-.page-git-star-btn {
-    float: right;
-    margin-top: 10px;
-    margin-right: 4px;
-
-}
-
-.search-box {
-    min-height: 400px;
-}
-
-.search-box table,
-.search-box th,
-.search-box td {
-    border: none !important;
-    background: none !important;
-    padding: 0px !important;
-}
-
-.search-box form {
-    padding: 0px !important;
-}
-
-.gsc-control-cse,
-.gsc-search-box {
-    background: none !important;
-    border: none !important;
-}
-
-.gsib_a {
-    height: 28px;
-    padding: 0px 3px 0px 3px !important;
-}
-
-.gsib_a input {
-    width: 98% !important;
-    margin-left: 2% !important;
-}
-
-.gsc-table-result .gs-snippet {
-    padding: 0px 10px 0px 10px;
-}
-
-.gsc-search-button input {
-    margin-bottom: 4px;
-}
-
-.gsc-input-box {
-    height: 28px !important;;
-}
-
 /* ----------------------- Download Area ----------------*/
 
 .page-title-box,
@@ -598,20 +460,25 @@ pre .keyword {
     min-height: 156px;
     border: 1px dashed #ccc;
     overflow: hidden;
+    padding: 0px 0px 9px 0px;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     border-radius: 8px;
+
+    -webkit-transition: all 400ms ease;
+    -moz-transition: all 400ms ease;
+    -ms-transition: all 400ms ease;
+    -o-transition: all 400ms ease;
+    transition: all 400ms ease;
 }
 
 .download-item:hover {
-    border: 1px solid #7ddef2;
+    border: 1px solid #ffffff;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
-    background-color: #f4f4f4;
-
+    background-color: rgba(255, 255, 255, 0.1);
     -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5);
-
     box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5);
 }
 
@@ -620,7 +487,6 @@ pre .keyword {
     background-image: url("../img/icon_zip.png");
     background-repeat: no-repeat;
     background-position: top center;
-
     -webkit-transition: all 120ms ease-in;
     -moz-transition: all 120ms ease-in;
     -ms-transition: all 120ms ease-in;
@@ -649,14 +515,6 @@ pre .keyword {
     width: 100%;
     clear: both;
     min-height: 100px;
-}
-
-/*------------------------ Menu ------------------*/
-.page-menu {
-    display: block;
-    float: left;
-    width: 100%;
-    background-color: #333;
 }
 
 .page-logo {
@@ -715,23 +573,6 @@ pre .keyword {
 
 }
 
-.direct-source-link {
-    display: block;
-    float: left;
-    border: 1px solid #ededed;
-    height: 42px;
-    background-color: #ffffff;
-    float: left;
-    padding: 10px;
-    margin-top: 10px;
-    margin-right: 10px;
-}
-
-.direct-source-link b {
-    font-weight: bold !important;
-
-}
-
 /*
     Options Table
 */
@@ -752,3 +593,80 @@ pre .keyword {
 
 }
 
+footer {
+}
+
+footer p {
+    color: #f2f2f2;
+}
+
+footer a:hover {
+    color: #43adff;
+    text-shadow: #0090ff 0px 0px 2px;
+}
+
+.theme-toolbox {
+    display: block;
+    width: 100%;
+    float: right;
+}
+
+.theme-toolbox .theme-item-border{
+     width: 42px;
+    height: 42px;
+    border-radius: 42px;
+    margin:3px;
+    padding:5px;
+    float:right;
+    background: rgba(255,255,255,0.3);
+}
+
+
+.theme-toolbox .theme-item-border.selected,
+.theme-toolbox .theme-item-border:hover{
+    background: rgba(255,255,255,0.8);
+}
+.theme-toolbox .theme-item-border.selected div,
+.theme-toolbox .theme-item-border:hover div{
+     -webkit-box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.7);
+    box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.7 );
+}
+
+.theme-toolbox .theme-item-border div {
+    width: 32px;
+    height: 32px;
+    border-radius: 32px;
+    float: left;
+
+    cursor: pointer;
+    -webkit-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.2);
+
+}
+
+
+.theme-default {
+    background-color: #fff;
+}
+
+.theme-dark {
+    background-color: #2D2D2D;
+}
+
+.theme-blue {
+    background-color: #1A3347;
+}
+
+.github-link{
+    background-image: url('../img/github-24.png');
+    background-repeat: no-repeat;
+    background-position: 6px center;
+    padding-left:34px;
+}
+
+.jquery-link{
+    background-image: url('../img/jquery-24.png');
+    background-repeat: no-repeat;
+    background-position: 6px center;
+    padding-left:34px;
+}
