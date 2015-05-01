@@ -18,27 +18,14 @@
     <script src="/PersianWebToolkit/vendor/js/jquery.js"></script>
     <script src="/PersianWebToolkit/vendor/lib/bootstrap/js/bootstrap.js"></script>
     <script src="/PersianWebToolkit/vendor/js/pwt-date.js"></script>
-    <script src="/PersianWebToolkit/vendor/persian_datepicker/0.4.0/js/persian-datepicker-0.4.0.js"></script>
+    <script src="/PersianWebToolkit/vendor/persian_datepicker/0.4.5/js/persian-datepicker-0.4.5.js"></script>
     <link rel="stylesheet"
-          href="/PersianWebToolkit/vendor/persian_datepicker/0.4.0/css/persian-datepicker-0.4.0.css">
+          href="/PersianWebToolkit/vendor/persian_datepicker/0.4.5/css/persian-datepicker-0.4.5.css">
     <script src="/PersianWebToolkit/vendor/lib/prettify/prettify.js"></script>
     <script src="/PersianWebToolkit/vendor/js/angular.js"></script>
 </head>
 <body>
-
 <div ng-include="'/PersianWebToolkit/include/head.html'"></div>
-<div id="main_content_wrap" class="outer">
-    <div class="container">
-        <div clas="row">
-            <div class="column-xs-12">
-                <div class="alert alert-warning" role="alert">
-                    New Version released! Try This
-                    <a href="/PersianWebToolkit/doc/datepicker/version.html"> Persian Date Picker</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 <div id="main_content_wrap" class="outer" ng-controller="myController">
     <div class="container">
         <!-- download -->
@@ -49,9 +36,9 @@
 <script>
     var myApp = angular.module('myApp', [])
     myApp.controller('myController', function ($scope) {
-        $scope.version = "0.4.0";
+        $scope.version = "0.4.5";
         $scope.volume = '1.1 mb'
-        $scope.downloadUrl = 'https://github.com/babakhani/pwt.datepicker/archive/0.3.6.zip';
+        $scope.downloadUrl = 'https://github.com/babakhani/pwt.datepicker/archive/0.4.5.zip';
         $scope.demoUrl = '/PersianWebToolkit/doc/datepicker/0.4.0/demo.html';
         itemmax = 9;
         renderedcount = 0;

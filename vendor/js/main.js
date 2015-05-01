@@ -44,13 +44,19 @@ $(document).on('loadInclude', function () {
     }
     themRoller = function (theme) {
         if (theme == 'dark') {
-            loadResource("/PersianWebToolkit/vendor/persian_datepicker/0.4.0/css/theme/persian-datepicker-dark.css", 'css')
+            loadResource("/PersianWebToolkit/vendor/persian_datepicker/0.4.5/css/theme/persian-datepicker-dark.css", 'css')
         }
         if (theme == 'blue') {
-            loadResource("/PersianWebToolkit/vendor/persian_datepicker/0.4.0/css/theme/persian-datepicker-blue.css", 'css')
+            loadResource("/PersianWebToolkit/vendor/persian_datepicker/0.4.5/css/theme/persian-datepicker-blue.css", 'css')
         }
         if (theme == 'default') {
-            loadResource("/PersianWebToolkit/vendor/persian_datepicker/0.4.0/css/persian-datepicker-0.4.0.css", 'css')
+            loadResource("/PersianWebToolkit/vendor/persian_datepicker/0.4.5/css/persian-datepicker-0.4.5.css", 'css')
+        }
+        if (theme == 'cheerup') {
+            loadResource("/PersianWebToolkit/vendor/persian_datepicker/0.4.5/css/theme/persian-datepicker-cheerup.css", 'css')
+        }
+        if (theme == 'redblack') {
+            loadResource("/PersianWebToolkit/vendor/persian_datepicker/0.4.5/css/theme/persian-datepicker-redblack.css", 'css')
         }
         $("[data-theme]").each(function () {
             $(this).removeClass('selected');

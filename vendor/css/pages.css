@@ -611,25 +611,25 @@ footer a:hover {
     float: right;
 }
 
-.theme-toolbox .theme-item-border{
-     width: 42px;
+.theme-toolbox .theme-item-border {
+    width: 42px;
     height: 42px;
     border-radius: 42px;
-    margin:3px;
-    padding:5px;
-    float:right;
-    background: rgba(255,255,255,0.3);
+    margin: 3px;
+    padding: 5px;
+    float: right;
+    background: rgba(255, 255, 255, 0.3);
 }
-
 
 .theme-toolbox .theme-item-border.selected,
-.theme-toolbox .theme-item-border:hover{
-    background: rgba(255,255,255,0.8);
+.theme-toolbox .theme-item-border:hover {
+    background: rgba(255, 255, 255, 0.8);
 }
+
 .theme-toolbox .theme-item-border.selected div,
-.theme-toolbox .theme-item-border:hover div{
-     -webkit-box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.7);
-    box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.7 );
+.theme-toolbox .theme-item-border:hover div {
+    -webkit-box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.7);
+    box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.7);
 }
 
 .theme-toolbox .theme-item-border div {
@@ -644,7 +644,6 @@ footer a:hover {
 
 }
 
-
 .theme-default {
     background-color: #fff;
 }
@@ -657,16 +656,35 @@ footer a:hover {
     background-color: #1A3347;
 }
 
-.github-link{
+.theme-cheerup {
+    background-color: #556270;
+}
+
+.theme-redblack {
+    background-color: #000000;
+}
+
+.github-link {
     background-image: url('../img/github-24.png');
     background-repeat: no-repeat;
     background-position: 6px center;
-    padding-left:34px;
+    padding-left: 34px;
 }
 
-.jquery-link{
+.jquery-link {
     background-image: url('../img/jquery-24.png');
     background-repeat: no-repeat;
     background-position: 6px center;
-    padding-left:34px;
+    padding-left: 34px;
+}
+
+.scroll-option-icon {
+    display: block;
+    width: 94px;
+    height: 94px;
+    background-image: url("../img/scroll-icon.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 180px;
+    right: -100px;
 }

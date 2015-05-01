@@ -1,0 +1,619 @@
+
+<a class="target" name="/options/"></a>
+<h3><a href="#/options/"><span class="hash">#</span>Options</a><span></span></h3>
+<table class="table table-bordered table-striped table-plugin-options">
+<thead>
+<tr>
+    <th style="width: 180px;">Name</th>
+    <th style="width: 50px;">type</th>
+    <th style="width: 100px;">default</th>
+    <th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td><b>format</b></td>
+    <td>string</td>
+    <td>'mm/dd/yyyy'</td>
+    <td>the date format, combination of d, dd, m, mm, yy, yyy.</td>
+</tr>
+<tr>
+    <td><b>formatter</b></td>
+    <td>Function</td>
+    <td>--</td>
+    <td>format value of input
+        <br/>
+        {...
+        <br/>
+        formatter: function(unixDate){return unixDate}
+        <br/>
+        ...}
+    </td>
+</tr>
+<tr>
+    <td><b>altField</b></td>
+    <td>selector string</td>
+    <td>false</td>
+    <td>An input element that is to be updated with the selected date from the datepicker. Use the altFormat option
+        to change the format of the date within this field. Leave as blank for no alternate field.
+        acceptable value: : '#elementId','.element-class'
+    </td>
+</tr>
+<tr>
+    <td><b>altFormat </b></td>
+    <td>String</td>
+    <td>unix</td>
+    <td>The <a target="_blank " href="http://babakhani.github.io/PersianWebToolkit/persiandate#/displaying/format/">dateFormat</a>
+        to be used for the altField option. acceptable value: <strong>unix,gregorian,g,u,YYYY/mMM/DD</strong></td>
+</tr>
+<tr>
+    <td><b>altFieldFormatter</b></td>
+    <td>Function</td>
+    <td>--</td>
+    <td>format value of 'altField' input
+        <br/>
+        {...
+        <br/>
+        altFieldFormatter: function(unixDate){return unixDate}
+        <br/>
+        ...}
+    </td>
+</tr>
+<tr>
+    <td><b>observer</b></td>
+    <td>Boolean</td>
+    <td>false</td>
+    <td>if you use $(element).val() to set input val and 'observer : true' , datepicker sync with your inputed
+        Value. Observer Watch input and altField Elemets.
+    </td>
+</tr>
+<tr>
+    <td><b>onShow</b></td>
+    <td>Function</td>
+    <td>--</td>
+    <td>A function that takes current datepicker instance. It is called just before the datepicker is displayed.
+    </td>
+</tr>
+<tr>
+    <td><b>onHide </b></td>
+    <td>Function</td>
+    <td>--</td>
+    <td>A function that takes current datepicker instance. It is called just before the datepicker Hide.</td>
+</tr>
+<tr>
+    <td><b>onSelect</b></td>
+    <td>Function</td>
+    <td>--</td>
+    <td>A function that takes current datepicker unixDate. It is called When Day Select.</td>
+</tr>
+<tr>
+    <td><b>viewMode</b></td>
+    <td>string</td>
+    <td>day</td>
+    <td>day,month,year</td>
+</tr>
+<tr>
+    <td><b>persianDigit</b></td>
+    <td>Boolean</td>
+    <td>true</td>
+    <td>if true all digit convert to persian digit.</td>
+</tr>
+<tr>
+    <td><b>position</b></td>
+    <td>Array</td>
+    <td>auto</td>
+    <td>[x,y] , define a position of datepicker relative to input element.</td>
+</tr>
+<tr>
+    <td><b>autoClose</b></td>
+    <td>Boolean</td>
+    <td>false</td>
+    <td>If true picker close When Select day</td>
+</tr>
+<tr>
+    <td><b>minDate</b></td>
+    <td>unix</td>
+    <td>--</td>
+    <td>
+        unix
+    </td>
+</tr>
+<tr>
+    <td><b>maxDate</b></td>
+    <td>unix</td>
+    <td>--</td>
+    <td>
+        unix
+    </td>
+</tr>
+<tr>
+    <td><b>timePicker</b></td>
+    <td>Object</td>
+    <td>--</td>
+    <td>
+        timePicker config object
+    </td>
+</tr>
+<tr>
+    <td>
+        <div class="indent"></div>
+        enabled
+    </td>
+    <td>Boolean</td>
+    <td>false</td>
+    <td>
+        Enable or Disable dayPicker
+    </td>
+</tr>
+<tr>
+    <td>
+        <div class="indent"></div>
+        scrollEnabled
+    </td>
+    <td>Boolean</td>
+    <td>true</td>
+    <td>
+        change view date by scroll.
+    </td>
+</tr>
+<tr>
+    <td>
+        <div class="indent"></div>
+        secondStep
+    </td>
+    <td>number</td>
+    <td>1</td>
+    <td>
+    </td>
+</tr>
+
+<tr>
+    <td>
+        <div class="indent"></div>
+        minuteStep
+    </td>
+    <td>number</td>
+    <td>1</td>
+    <td>
+    </td>
+</tr>
+
+<tr>
+    <td>
+        <div class="indent"></div>
+        hourStep
+    </td>
+    <td>number</td>
+    <td>1</td>
+    <td>
+    </td>
+</tr>
+
+<tr>
+    <td>
+        <div class="indent"></div>
+        showSeconds
+    </td>
+    <td>Boolean</td>
+    <td>true</td>
+    <td>
+        if 'false' second view of timepicker dos not show
+    </td>
+</tr>
+
+<tr>
+    <td>
+        <div class="indent"></div>
+        showMeridian
+    </td>
+    <td>Boolean</td>
+    <td>true</td>
+    <td>
+        if 'false' meridian view of timepicker dos not show
+    </td>
+</tr>
+
+
+<tr>
+    <td><b>navigator</b></td>
+    <td>Object</td>
+    <td>--</td>
+    <td>
+        navigator config object
+    </td>
+</tr>
+
+<tr>
+    <td>
+        <div class="indent"></div>
+        enabled
+    </td>
+    <td>Boolean</td>
+    <td>--</td>
+    <td>
+        Enable or Disable dayPicker
+    </td>
+</tr>
+
+<tr>
+    <td>
+        <div class="indent"></div>
+        text
+    </td>
+    <td>Object</td>
+    <td>--</td>
+    <td>
+        navigator text object
+    </td>
+</tr>
+
+<tr>
+    <td>
+        <div class="indent"></div>
+        <div class="indent"></div>
+        btnNextText
+    </td>
+    <td>String</td>
+    <td>"<"</td>
+    <td>
+        text of navigator next button
+    </td>
+</tr>
+
+<tr>
+    <td>
+        <div class="indent"></div>
+        <div class="indent"></div>
+        btnPrevText
+    </td>
+    <td>String</td>
+    <td>">"</td>
+    <td>
+        text of navigator previews button
+    </td>
+</tr>
+
+<tr>
+    <td>
+        <div class="indent"></div>
+        onNext
+    </td>
+    <td>Function</td>
+    <td>--</td>
+    <td>
+        Trigger When Next button clicked
+    </td>
+</tr>
+
+<tr>
+    <td>
+        <div class="indent"></div>
+        onPrev
+    </td>
+    <td>Function</td>
+    <td>--</td>
+    <td>
+        Trigger When Prev button clicked
+    </td>
+</tr>
+
+<tr>
+    <td>
+        <div class="indent"></div>
+        onSwitch
+    </td>
+    <td>Function</td>
+    <td>--</td>
+    <td>
+        Trigger When Switch button clicked
+    </td>
+</tr>
+
+
+<!-- toolbox -->
+<tr>
+    <td><b>toolbox</b></td>
+    <td>Object</td>
+    <td>--</td>
+    <td>
+        toolbox config object
+    </td>
+</tr>
+
+<tr>
+    <td>
+        <div class="indent"></div>
+        enabled
+    </td>
+    <td>Boolean</td>
+    <td>true</td>
+    <td>
+        Enable or Disable dayPicker
+    </td>
+</tr>
+<tr>
+    <td>
+        <div class="indent"></div>
+        text
+    </td>
+    <td>Object</td>
+    <td>--</td>
+    <td>
+        toolbox text object
+    </td>
+</tr>
+
+<tr>
+    <td>
+        <div class="indent"></div>
+        <div class="indent"></div>
+        btnToday
+    </td>
+    <td>String</td>
+    <td>"امروز"</td>
+    <td>
+        Text of today button
+    </td>
+</tr>
+
+
+<tr>
+    <td>
+        <div class="indent"></div>
+        onToday
+    </td>
+    <td>Function</td>
+    <td>--</td>
+    <td>
+        Trigger When Today Button Clicked
+    </td>
+</tr>
+
+
+<!-- dayPicker -->
+<tr>
+    <td><b>dayPicker</b></td>
+    <td>Object</td>
+    <td>--</td>
+    <td>
+        dayPicker config object
+    </td>
+</tr>
+<tr>
+    <td>
+        <div class="indent"></div>
+        scrollEnabled
+    </td>
+    <td>Boolean</td>
+    <td>true</td>
+    <td>
+        change view date by scroll.
+    </td>
+</tr>
+<tr>
+    <td>
+        <div class="indent"></div>
+        enabled
+    </td>
+    <td>Boolean</td>
+    <td>true</td>
+    <td>
+        Enable or Disable dayPicker
+    </td>
+</tr>
+<tr>
+    <td>
+        <div class="indent"></div>
+        titleFormat
+    </td>
+    <td>String</td>
+    <td>'YYYY MMMM'</td>
+    <td>
+        format text of navigator title
+    </td>
+</tr>
+
+<tr>
+    <td>
+        <div class="indent"></div>
+        titleFormatter
+    </td>
+    <td>Function</td>
+    <td>--</td>
+    <td>
+        format text of navigator title
+    </td>
+</tr>
+
+<tr>
+    <td>
+        <div class="indent"></div>
+        onSelect
+    </td>
+    <td>Function</td>
+    <td>--</td>
+    <td>
+        Trigger When Date Select
+    </td>
+</tr>
+
+<!-- monthPicker -->
+<tr>
+    <td><b>monthPicker</b></td>
+    <td>Object</td>
+    <td>--</td>
+    <td>
+        monthPicker config Object
+    </td>
+</tr>
+<tr>
+    <td>
+        <div class="indent"></div>
+        scrollEnabled
+    </td>
+    <td>Boolean</td>
+    <td>true</td>
+    <td>
+        change view date by scroll.
+    </td>
+</tr>
+<tr>
+    <td>
+        <div class="indent"></div>
+        enabled
+    </td>
+    <td>Boolean</td>
+    <td>true</td>
+    <td>
+        Enable or Disable monthPicker
+    </td>
+</tr>
+<tr>
+    <td>
+        <div class="indent"></div>
+        titleFormat
+    </td>
+    <td>String</td>
+    <td>'YYYY MMMM'</td>
+    <td>
+        format text of navigator title
+    </td>
+</tr>
+
+<tr>
+    <td>
+        <div class="indent"></div>
+        titleFormatter
+    </td>
+    <td>Function</td>
+    <td>--</td>
+    <td>
+        format text of navigator title
+    </td>
+</tr>
+
+<tr>
+    <td>
+        <div class="indent"></div>
+        onSelect
+    </td>
+    <td>Function</td>
+    <td>--</td>
+    <td>
+        Trigger When Month Select
+    </td>
+</tr>
+
+<!-- yearPicker -->
+<tr>
+    <td><b>yearPicker</b></td>
+    <td>Object</td>
+    <td>--</td>
+    <td>
+        yearPicker config Object
+    </td>
+</tr>
+<tr>
+    <td>
+        <div class="indent"></div>
+        scrollEnabled
+    </td>
+    <td>Boolean</td>
+    <td>true</td>
+    <td>
+        change view date by scroll.
+    </td>
+</tr>
+<tr>
+    <td>
+        <div class="indent"></div>
+        enabled
+    </td>
+    <td>Boolean</td>
+    <td>true</td>
+    <td>
+        Enable or Disable yearPicker
+    </td>
+</tr>
+<tr>
+    <td>
+        <div class="indent"></div>
+        titleFormat
+    </td>
+    <td>String</td>
+    <td>'YYYY MMMM'</td>
+    <td>
+        format text of navigator title
+    </td>
+</tr>
+
+<tr>
+    <td>
+        <div class="indent"></div>
+        titleFormatter
+    </td>
+    <td>Function</td>
+    <td>--</td>
+    <td>
+        format text of navigator title
+    </td>
+</tr>
+<tr>
+    <td>
+        <div class="indent"></div>
+        onSelect
+    </td>
+    <td>Function</td>
+    <td>--</td>
+    <td>
+        Trigger When Year Select
+    </td>
+</tr>
+
+
+<tr>
+    <td><b>onlyTimePicker</b></td>
+    <td>Boolean</td>
+    <td>false</td>
+    <td>
+        if True just show timepicker and other view disabled.
+    </td>
+</tr>
+<tr>
+    <td><b>justSelectOnDate</b></td>
+    <td>Boolean</td>
+    <td>true</td>
+    <td>
+        if True Value of input just change by click on day in day view
+    </td>
+</tr>
+<tr>
+    <td>checkDate</td>
+    <td>Function</td>
+    <td>-</td>
+    <td>
+        By using this method you make disable custom dates.
+    </td>
+</tr>
+<tr>
+    <td>checkMonth</td>
+    <td>Function</td>
+    <td>-</td>
+    <td>
+        By using this method you make disable custom Month.
+    </td>
+</tr>
+<tr>
+    <td>checkYear</td>
+    <td>Function</td>
+    <td>-</td>
+    <td>
+        By using this method you make disable custom Year.
+    </td>
+</tr>
+
+
+
+
+</tbody>
+</table>
