@@ -1,0 +1,113 @@
+<div class="row board-box no-margin primary">
+    <div class="container">
+        <div class="jumbotron">
+            <div class="col-xs-8 no-padding-side">
+                <h1>Persian Calendar Heat Map <span class="label label-success">{{version}}</span></h1>
+
+                <p>
+                    jQuery plugin to help create a calendar heat map, to visualize your time series data.Like GitHub
+                    contribution graph.
+                </p>
+
+                <p>Lightweight, Full Feature, Timepicker, Year/Month Picker, Bootstrap Style, Scroll Navigation</p>
+
+                <div class="spacer"></div>
+
+                <p>
+                    <a class="btn btn-default github-link" href="https://github.com/babakhani/pwt.calheatmap">Project on
+                        github</a>
+                    <a class="btn btn-default jquery-link" href="http://plugins.jquery.com/pwt.calheatmap/">Project on
+                        Jquery</a>
+                </p>
+
+            </div>
+            <div class="col-xs-4 no-padding-side">
+                <div class="pull-right">
+                    <div class="spacer"></div>
+                    <a class="download-item push-left"
+                       href="{{downloadUrl}}">
+                        <span class="download-zip"></span>
+                    <span class="download-zip-title">Download Zip
+                        <span class="download-info">From Github</span>
+                        <span class="download-info">{{volume}}</span>
+                    </span>
+                    </a>
+
+                    <div class="spacer"></div>
+                    <div ng-include="'/PersianWebToolkit/doc/datepicker/partial/git-star.html'"></div>
+                    <div ng-include="'/PersianWebToolkit/doc/datepicker/partial/git-fork.html'"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="board-box sample no-margin">
+    <div class="container center-text">
+        <h3><a href="#/Inline-Example/"><span class="hash">#</span>Inline Example</a><span></span></h3>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="spacer"></div>
+            <div id="inlineCalHeatMap"></div>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $("#inlineCalHeatMap").persianHitChart({
+                        startDate: [1391, 1, 1, 1, 1, 1, 1],
+                        endDate: [1392, 1, 1, 1, 1, 1, 1],
+                        weekDayTitle: ["شنبه", "-", "دوشنبه", "-", "چهارشنبه", "-", "جمعه"],
+                        dayWidth: "50",
+                        dayHeight: "35",
+                        data: {
+                            "13910115": {
+                                color: "#FF6B6B",
+                                data: "test day data"
+                            },
+                            "13911211": {
+                                color: "#C44D58",
+                                data: "test day data"
+                            },
+                            "13911216": {
+                                color: "#4ECDC4",
+                                data: "test day data"
+                            },
+                            "13911218": {
+                                color: "#C7F464",
+                                data: "test day data"
+                            },
+                            "13911217": {
+                                color: "#556270",
+                                data: "test day data"
+                            }
+                        },
+                        days: {
+                            label: {
+                                enabled: true,
+                                format: "DD",
+                                formatter: function (Obj, date) {
+                                    return date.format("DD");
+                                }
+                            },
+                            tooltip: {
+                                enabled: true,
+                                formatter: function (Obj, date) {
+
+                                }
+                            }
+                        }
+                    })
+                    ;
+                })
+                ;
+            </script>
+
+            <h5 class="center-text">
+                <a href="{{demoUrl}}" role="button">More Exmple</a>
+            </h5>
+
+        </div>
+    </div>
+
+</div>
+

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Persian Calendar Heat Map</title>
+    <link href='css/persian-calheatmap-0.1.0.css' rel='stylesheet' type='text/css'/>
+    <script type="text/javascript" src="../src/data/sample.js"></script>
+    <script type="text/javascript" src="../lib/jquery.js"></script>
+    <script type="text/javascript" src="../lib/persian-date.js"></script>
+    <script type="text/javascript" src="js/pwt.calheatmap-0.1.0.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".chart-container").persianHitChart({
+                startDate: [1391, 1, 1, 1, 1, 1, 1],
+                endDate: [1392, 1, 1, 1, 1, 1, 1],
+                weekDayTitle: ["شنبه", "-", "دوشنبه", "-", "چهارشنبه", "-", "جمعه"],
+                dayWidth: "50",
+                dayHeight: "35",
+                data: sampleData,
+                days: {
+                    label: {
+                        enabled: true,
+                        format: "DD",
+                        formatter: function (Obj, date) {
+                            return date.format("DD");
+                        }
+                    },
+                    tooltip: {
+                        enabled: true,
+                        formatter: function (Obj, date) {
+
+                        }
+                    }
+                }
+            })
+            ;
+        })
+        ;
+    </script>
+</head>
+<body>
+<h1>Persian Calendar Heat Map</h1>
+
+<div class="chart-container"></div>
+</body>
+</html>

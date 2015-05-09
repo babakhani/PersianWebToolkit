@@ -1,0 +1,127 @@
+.persian-heat-map-chart {
+  display: block;
+  width: 100%;
+  float: left;
+  min-height: 20px;
+  border: 1px solid #e1e1e1;
+  padding: 0px 0px 0px 0px;
+  position: relative;
+    border:1px solid red;
+}
+  .persian-heat-map-chart .days-container {
+    position: absolute;
+    right: 0px;
+    left: 60px;
+    overflow: scroll; }
+    .persian-heat-map-chart .days-container > div {
+      display: block;
+      width: 3000px;
+      overflow: hidden; }
+  .persian-heat-map-chart .week-box {
+    float: left;
+    margin: 0px;
+    padding: 0px 0px;
+    position: relative;
+    padding-bottom: 24px; }
+    .persian-heat-map-chart .week-box li {
+      display: block;
+      height: 20px;
+      text-align: center;
+      list-style: none;
+      margin: 1px 1px;
+      background: #fff; }
+      .persian-heat-map-chart .week-box li.have-day {
+        background: #f9f9f9; }
+      .persian-heat-map-chart .week-box li.alternat {
+        background: #f1f1f1; }
+      .persian-heat-map-chart .week-box li.today {
+        outline: 2px solid #333333; }
+    .persian-heat-map-chart .week-box .month-title {
+      display: block;
+      width: 100px;
+      position: absolute;
+      width: 100px;
+      height: 24px;
+      font-size: 12px;
+      font-weight: bold;
+      color: #666666; }
+  .persian-heat-map-chart .week-box-title {
+    width: 50px;
+    float: left;
+    padding: 0px;
+    margin: 0px 4px; }
+    .persian-heat-map-chart .week-box-title li {
+      display: block;
+      width: 100%;
+      height: 20px;
+      line-height: 20px;
+      list-style: none;
+      margin: 2px 0px 0px 0px;
+      text-align: right;
+      color: #999;
+      font-size: 11px;
+      font-weight: bold; }
+
+.Zebra_Tooltip {
+  position: absolute;
+  z-index: 8000;
+  background: transparent;
+  font-family: Geneva, 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif; }
+
+.Zebra_Tooltip .Zebra_Tooltip_Message {
+  position: relative;
+  padding: 20px;
+  font-size: inherit;
+  text-align: left;
+  font-weight: normal;
+  line-height: inherit;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+  *margin-right: 0; }
+
+.Zebra_Tooltip .Zebra_Tooltip_Arrow {
+  position: absolute;
+  height: 10px;
+  width: 20px;
+  overflow: hidden; }
+
+.Zebra_Tooltip .Zebra_Tooltip_Arrow_Bottom {
+  bottom: 0; }
+
+.Zebra_Tooltip .Zebra_Tooltip_Arrow_Top {
+  top: 0; }
+
+.Zebra_Tooltip .Zebra_Tooltip_Arrow div {
+  position: absolute;
+  border-style: solid;
+  border-width: 10px;
+  height: 0;
+  width: 0;
+  left: 0;
+  _border-left-color: pink;
+  _border-right-color: pink;
+  _filter: chroma(color=pink); }
+
+.Zebra_Tooltip .Zebra_Tooltip_Arrow_Bottom div {
+  top: 0;
+  _border-bottom-color: pink; }
+
+.Zebra_Tooltip .Zebra_Tooltip_Arrow_Top div {
+  bottom: 0;
+  _border-top-color: pink; }
+
+.Zebra_Tooltip .Zebra_Tooltip_Close {
+  text-decoration: none;
+  color: #FFF;
+  position: absolute;
+  right: 8px;
+  top: 1px;
+  font-size: inherit;
+  font-weight: bold; }
+
+.Zebra_Tooltip .Zebra_Tooltip_Close:hover {
+  color: #C40000; }
