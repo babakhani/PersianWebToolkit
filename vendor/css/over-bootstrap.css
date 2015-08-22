@@ -26,11 +26,10 @@ h3 {
     padding-left: 0px;
 }
 
-.navbar-nav li.current{
+.navbar-nav li.current {
 
     background: #333333;
 }
-
 
 #navbar,
 .navbar {
@@ -59,15 +58,16 @@ h3 {
     text-shadow: #111 0px 0px 10px;
 }
 
-.navbar-nav li.current a{
-    color:#ffffff;
-}
-.navbar-inverse{
-    border:none;
+.navbar-nav li.current a {
+    color: #ffffff;
 }
 
-.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand{
-    margin-left:0px;
+.navbar-inverse {
+    border: none;
+}
+
+.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    margin-left: 0px;
 }
 
 .product-box {
@@ -117,14 +117,14 @@ h3 {
     background: none !important;
     color: #ffffff;
     margin: 0px;
-    float:right;
-    width:100%;
-    padding:20px 0px;
+    float: right;
+    width: 100%;
+    padding: 100px 0px;
 }
 
-.no-padding-side{
-    padding-right:0px;
-    padding-left:0px;
+.no-padding-side {
+    padding-right: 0px;
+    padding-left: 0px;
 }
 
 .board-box .jumbotron a {
@@ -132,29 +132,28 @@ h3 {
     font-style: italic;
 }
 
-
-.board-box .jumbotron a.btn{
+.board-box .jumbotron a.btn {
     font-style: normal;
 }
 
-.board-box .jumbotron .btn-default{
-    color:#333333;
+.board-box .jumbotron .btn-default {
+    color: #333333;
 }
 
-.board-box .jumbotron h1{
-    font-size:45px;
+.board-box .jumbotron h1 {
+    font-size: 45px;
 }
+
 .board-box .jumbotron h1,
-.board-box .jumbotron p{
+.board-box .jumbotron p {
     text-shadow: 1px 1px 1px #393939;
 
 }
 
-h3 a:hover{
+h3 a:hover {
     text-decoration: none;
     cursor: default;
 }
-
 
 .board-box.no-margin {
     margin: 0px;
@@ -163,8 +162,8 @@ h3 a:hover{
 .board-box.primary {
     /*background-color: #4CAF50;*/
     /*background-color: #004D40;*/
-    /*background-color: #006064;*/
-    background-color: #00838F;
+    background-color: #006064;
+    /*background-color: #00838F;*/
     /*background-color: #2E8B34;*/
 }
 
@@ -176,11 +175,11 @@ h3 a:hover{
     background: #E0E0E0;
 }
 
-.center-content{
-    width:auto;
-    padding:20px;
-    float:none;
-    margin:0px auto;
+.center-content {
+    width: auto;
+    padding: 20px;
+    float: none;
+    margin: 0px auto;
     text-align: center;
 }
 
@@ -192,8 +191,8 @@ h1 {
     font-weight: normal !important;
 }
 
-h1 .label{
-    font-size:16px;
+h1 .label {
+    font-size: 16px;
 }
 
 h3 {
@@ -228,36 +227,30 @@ pre {
     font-weight: 400;
 }
 
-.btn-primary{
-    background: #F43C00;
-}
-.btn-primary:hover{
-    background: #F43C00;
-}
-.btn{
+.btn {
     border-radius: 0px;
-    border:none;
-    -webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0,0.3);
-    box-shadow: 0 2px 3px 0 rgba(0,0,0,0.3);
+    border: none;
+    -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3);
 }
 
-.btn-disabled{
+.btn-disabled {
 
-    border:none;
+    border: none;
     -webkit-box-shadow: none;
     box-shadow: none;
 }
 
-.btn:hover{
-    -webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0,0.5);
-    box-shadow: 0 2px 3px 0 rgba(0,0,0,0.6);
+.btn:hover {
+    -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.6);
 }
 
-.btn:active{
-    -webkit-box-shadow: 0 4px 5px 0 rgba(0,0,0,0.5);
-    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.6);
+.btn:active {
+    -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.6);
 }
 
-.btn-warning{
+.btn-warning {
     background: #FF8000;
 }
