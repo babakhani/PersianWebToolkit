@@ -714,7 +714,7 @@ var Class_Persian_Hit_Chart = {
             var weekBoxWidth = $weekBox.outerWidth() * $weekBox.length;
             self.$container.find(".days-container > div").width(weekBoxWidth);
             var weekBoxContainerWidth = self.$container.find(".persian-hit-chart").width();
-            var weekContainerHeight = weekBoxHight + monthTitle;
+            var weekContainerHeight = self.dayHeight*7 + monthTitle;
             if (weekBoxContainerWidth < weekBoxWidth) {
                 // Have Scroll and add scroll height
                 weekContainerHeight += 20;

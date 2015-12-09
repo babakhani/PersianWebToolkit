@@ -2,14 +2,11 @@
     <div class="container">
         <div class="jumbotron">
             <div class="col-xs-8 no-padding-side">
-                <h1>Persian Calendar Heat Map <span class="label label-success">{{version}}</span></h1>
-
+                <h1>Persian Calendar Heat Map <span class="label label-warning">{{version}}</span></h1>
                 <p>
                     jQuery plugin to help create a calendar heat map, to visualize your time series data.Like GitHub
                     contribution graph.
                 </p>
-
-                <p>Lightweight, Full Feature, Timepicker, Year/Month Picker, Bootstrap Style, Scroll Navigation</p>
 
                 <div class="spacer"></div>
 
@@ -34,8 +31,8 @@
                     </a>
 
                     <div class="spacer"></div>
-                    <div ng-include="'/PersianWebToolkit/doc/datepicker/partial/git-star.html'"></div>
-                    <div ng-include="'/PersianWebToolkit/doc/datepicker/partial/git-fork.html'"></div>
+                    <div ng-include="'/PersianWebToolkit/doc/calheatmap/partial/git-star.html'"></div>
+                    <div ng-include="'/PersianWebToolkit/doc/calheatmap/partial/git-fork.html'"></div>
                 </div>
             </div>
         </div>
@@ -50,7 +47,7 @@
     <div class="row">
         <div class="col-xs-12">
             <div class="spacer"></div>
-            <div id="inlineCalHeatMap"></div>
+            <div id="inlineCalHeatMap" style="padding:0px 30px;"></div>
             <script type="text/javascript">
                 $(document).ready(function () {
                     $("#inlineCalHeatMap").persianHitChart({
@@ -103,7 +100,7 @@
             </script>
 
             <h5 class="center-text">
-                <a href="{{demoUrl}}" role="button">More Exmple</a>
+                <!--<a href="{{demoUrl}}" role="button">More Exmple</a>-->
             </h5>
 
         </div>
