@@ -6,6 +6,17 @@
     transition: all 200ms ease;
 }
 
+.text-small{
+    font-size:16px !important;
+}
+.transparent{
+    opacity:0.6;
+}
+.avatar img{
+    width:100%;
+
+}
+
 /*******************************************************************************
 Slate Theme for GitHub Pages
 by Jason Costello, @jsncostello
@@ -261,10 +272,7 @@ form {
     padding: 20px;
 }
 
-img {
-    width: 100%;
-    max-width: 100%;
-}
+
 
 /*******************************************************************************
 Full-Width Styles
