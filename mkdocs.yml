@@ -5,6 +5,9 @@ site_description:   Persian Web Toolkit document
 site_author:        babakhani.reza@gmail.com
 copyright:          license http://www.wtfpl.net/
 
+docs_dir: 'docs-source'
+site_dir: 'docs'
+
 google_analytics:
     - 'UA-40548780-1'
     - 'babakhani.github.io/PersianWebToolkit/'
@@ -18,6 +21,7 @@ markdown_extensions:
   - footnotes
   - meta
   - toc(permalink=true)
+
 
 pages:
     - index.md
