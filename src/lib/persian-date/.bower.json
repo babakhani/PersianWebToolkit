@@ -1,0 +1,30 @@
+{
+  "name": "persian-date",
+  "version": "0.1.8",
+  "main": "dist/<= pkg.version>/persian-date-<= pkg.version>.js",
+  "ignore": [
+    ".jshintrc",
+    "**/*.txt",
+    "source",
+    "spec",
+    ".bowerrc",
+    ".gitignore",
+    ".jshintignore",
+    ".jshintrc",
+    "bower.json",
+    "gruntfile.js",
+    "package.json",
+    "README.md"
+  ],
+  "homepage": "https://github.com/babakhani/PersianDate",
+  "_release": "0.1.8",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.1.8",
+    "commit": "cb0a99817cae5c1accdabfd5e3a9cf44d34fc13e"
+  },
+  "_source": "https://github.com/babakhani/PersianDate.git",
+  "_target": "^0.1.8",
+  "_originalSource": "persian-date",
+  "_direct": true
+}

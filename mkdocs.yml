@@ -5,7 +5,7 @@ site_description:   Persian Web Toolkit document
 site_author:        babakhani.reza@gmail.com
 copyright:          license http://www.wtfpl.net/
 remote_branch: 'gh-pages'
-docs_dir: 'docs-source'
+docs_dir: 'src'
 site_dir: 'docs'
 repo_name: 'GitHub'
 strict: true
@@ -16,6 +16,7 @@ google_analytics:
 
 extra_css:
     - ./css/extra.css
+    - ./lib/persian-datepicker/dist/css/persian-datepicker-0.4.5.css
 
 markdown_extensions:
   - admonition
@@ -27,8 +28,12 @@ markdown_extensions:
 
 pages:
     - index.md
-    - Persian Datepicker: 'datepicker/index.md'
     - Persian Date: 'persian-date/index.md'
+    - Persian Datepicker:
+        - Getting Start: 'datepicker/index.md'
+        - Example: 'datepicker/example.md'
+        - Change log: 'datepicker/changelog.md'
+        - Code docuemnt: 'datepicker/documentation.md'
 
 extra:
     social:
@@ -50,6 +55,10 @@ use_directory_urls: true
 strict: true
 dev_addr: '127.0.0.1:8000'
 extra_javascript:
+    - ./lib/jquery/dist/jquery.js
+    - ./lib/persian-date/dist/0.1.8/persian-date-0.1.8.js
+    - ./lib/persian-datepicker/dist/js/persian-datepicker-0.4.5.js
+    - ./js/datepicker-example.js
     - https://buttons.github.io/buttons.js
 
 #extra_templates:

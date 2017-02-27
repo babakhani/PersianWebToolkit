@@ -4,15 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-02-27</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>/datepicker/</loc>
-     <lastmod>2017-02-27</lastmod>
+     <lastmod>2017-02-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -20,9 +12,37 @@
     
     <url>
      <loc>/persian-date/</loc>
-     <lastmod>2017-02-27</lastmod>
+     <lastmod>2017-02-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
+    
+
+    
+        
+    <url>
+     <loc>/datepicker/</loc>
+     <lastmod>2017-02-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/datepicker/example/</loc>
+     <lastmod>2017-02-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/datepicker/changelog/</loc>
+     <lastmod>2017-02-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/datepicker/documentation/</loc>
+     <lastmod>2017-02-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
 </urlset>

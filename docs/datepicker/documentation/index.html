@@ -1,0 +1,3333 @@
+
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Persian Web Toolkit document">
+      
+      
+      
+        <meta name="author" content="babakhani.reza@gmail.com">
+      
+      
+        <link rel="shortcut icon" href="../../assets/images/favicon.ico">
+      
+      <meta name="generator" content="mkdocs+mkdocs-material#1.0.3">
+    
+    
+      
+        <title>Code docuemnt - Persian Web Toolkit</title>
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr-facb31f4a3.js"></script>
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono">
+        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-f3ab63f78a.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-02ce7adcc2.palette.css">
+      
+      
+        <link rel="stylesheet" href="../.././css/extra.css">
+      
+        <link rel="stylesheet" href="../.././lib/persian-datepicker/dist/css/persian-datepicker-0.4.5.css">
+      
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="red" data-md-color-accent="light-blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Persian Web Toolkit" class=" md-logo  md-header-nav__button">
+          
+            <img src="../../images/logo.svg" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  Persian Datepicker
+                </span>
+              
+            
+            Code docuemnt
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <div class="md-search__overlay"></div>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
+      <label class="md-icon md-search__icon" for="search"></label>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+              
+
+
+  
+
+
+  <a href="https://github.com/babakhani/PersianWebToolkit" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+            
+          </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <i class=" md-logo  md-nav__button">
+      
+        <img src="../../images/logo.svg">
+      
+    </i>
+    Persian Web Toolkit
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/babakhani/PersianWebToolkit" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  <li class="md-nav__item">
+    
+      <a href="../.." title="Home" class="md-nav__link">
+        Home
+      </a>
+    
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item">
+    
+      <a href="../../persian-date/" title="Persian Date" class="md-nav__link">
+        Persian Date
+      </a>
+    
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Persian Datepicker
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-3">
+        Persian Datepicker
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../" title="Getting Start" class="md-nav__link">
+        Getting Start
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../example/" title="Example" class="md-nav__link">
+        Example
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../changelog/" title="Change log" class="md-nav__link">
+        Change log
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Code docuemnt
+      </label>
+    
+    <a href="./" title="Code docuemnt" class="md-nav__link md-nav__link--active">
+      Code docuemnt
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#classes" title="Classes" class="md-nav__link">
+    Classes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constants" title="Constants" class="md-nav__link">
+    Constants
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions" title="Functions" class="md-nav__link">
+    Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dateutil" title="DateUtil" class="md-nav__link">
+    DateUtil
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dateutilissamedaydatea-dateb-boolean" title="dateUtil.isSameDay(dateA, dateB) ⇒ boolean" class="md-nav__link">
+    dateUtil.isSameDay(dateA, dateB) ⇒ boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dateutilissamemonthdatea-dateb-boolean" title="dateUtil.isSameMonth(dateA, dateB) ⇒ boolean" class="md-nav__link">
+    dateUtil.isSameMonth(dateA, dateB) ⇒ boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dateutilnormalizetimekey-value-number" title="dateUtil.normalizeTime(key, value) ⇒ number" class="md-nav__link">
+    dateUtil.normalizeTime(key, value) ⇒ number
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input" title="Input" class="md-nav__link">
+    Input
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-inputmodel-inputelement" title="new Input(model, inputElement)" class="md-nav__link">
+    new Input(model, inputElement)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inputmodel-object" title="input.model : Object" class="md-nav__link">
+    input.model : Object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inputelem-element" title="input.elem : Element" class="md-nav__link">
+    input.elem : Element
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inputinitialunix-number" title="input.initialUnix : Number" class="md-nav__link">
+    input.initialUnix : Number
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inputgetinputposition-object" title="input.getInputPosition() ⇒ Object" class="md-nav__link">
+    input.getInputPosition() ⇒ Object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inputgetinputsize-object" title="input.getInputSize() ⇒ Object" class="md-nav__link">
+    input.getInputSize() ⇒ Object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inputupdateunix" title="input.update(unix)" class="md-nav__link">
+    input.update(unix)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inputgetoninitstate-number" title="input.getOnInitState() ⇒ Number" class="md-nav__link">
+    input.getOnInitState() ⇒ Number
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model" title="Model" class="md-nav__link">
+    Model
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-modelinputelement-options" title="new Model(inputElement, options)" class="md-nav__link">
+    new Model(inputElement, options)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelinitialunix-unix" title="model.initialUnix : unix" class="md-nav__link">
+    model.initialUnix : unix
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelinputelement-object" title="model.inputElement : Object" class="md-nav__link">
+    model.inputElement : Object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modeloptions-options" title="model.options : Options" class="md-nav__link">
+    model.options : Options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelinput-input" title="model.input : Input" class="md-nav__link">
+    model.input : Input
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelstate-state" title="model.state : State" class="md-nav__link">
+    model.state : State
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelview-view" title="model.view : View" class="md-nav__link">
+    model.view : View
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modeltoolbox-toolbox" title="model.toolbox : Toolbox" class="md-nav__link">
+    model.toolbox : Toolbox
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelnavigator-navigator" title="model.navigator : Navigator" class="md-nav__link">
+    model.navigator : Navigator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelupdateinputunix" title="model.updateInput(unix)" class="md-nav__link">
+    model.updateInput(unix)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#navigator" title="Navigator" class="md-nav__link">
+    Navigator
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-navigatordatepicker" title="new Navigator(datepicker)" class="md-nav__link">
+    new Navigator(datepicker)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navigatormodel-datepicker" title="navigator.model : Datepicker" class="md-nav__link">
+    navigator.model : Datepicker
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navigatorliveattach" title="navigator.liveAttach()" class="md-nav__link">
+    navigator.liveAttach()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navigatortimeuptimekey" title="navigator.timeUp(timekey)" class="md-nav__link">
+    navigator.timeUp(timekey)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navigatortimedowntimekey" title="navigator.timeDown(timekey)" class="md-nav__link">
+    navigator.timeDown(timekey)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#options" title="Options" class="md-nav__link">
+    Options
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-optionsoptions" title="new Options(options)" class="md-nav__link">
+    new Options(options)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#state" title="State" class="md-nav__link">
+    State
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-statemodel" title="new State(model)" class="md-nav__link">
+    new State(model)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#statemodel-object" title="state.model : object" class="md-nav__link">
+    state.model : object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#statefiletreddate-boolean" title="state.filetredDate : Boolean" class="md-nav__link">
+    state.filetredDate : Boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stateviewmodelist-array" title="state.viewModeList : Array" class="md-nav__link">
+    state.viewModeList : Array
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stateviewmode-string" title="state.viewMode : String" class="md-nav__link">
+    state.viewMode : String
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stateviewmodeindex-number" title="state.viewModeIndex : number" class="md-nav__link">
+    state.viewModeIndex : number
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#statefilterdate-object" title="state.filterDate : Object" class="md-nav__link">
+    state.filterDate : Object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stateview-object" title="state.view : Object" class="md-nav__link">
+    state.view : Object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stateselected-object" title="state.selected : Object" class="md-nav__link">
+    state.selected : Object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#statesetselecteddatetimekey-value-state" title="state.setSelectedDateTime(key, value) ⇒ State" class="md-nav__link">
+    state.setSelectedDateTime(key, value) ⇒ State
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#statenavigatenav" title="state.navigate(nav)" class="md-nav__link">
+    state.navigate(nav)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stateswitchviewmode-state" title="state.switchViewMode() ⇒ State" class="md-nav__link">
+    state.switchViewMode() ⇒ State
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stateswitchviewmodetoviewmode" title="state.switchViewModeTo(viewMode)" class="md-nav__link">
+    state.switchViewModeTo(viewMode)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#statesetviewdatetimekey-value-state" title="state.setViewDateTime(key, value) ⇒ State" class="md-nav__link">
+    state.setViewDateTime(key, value) ⇒ State
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#toolbox" title="Toolbox" class="md-nav__link">
+    Toolbox
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-toolboxdatepicker" title="new Toolbox(datepicker)" class="md-nav__link">
+    new Toolbox(datepicker)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toolboxmodel-datepicker" title="toolbox.model : Datepicker" class="md-nav__link">
+    toolbox.model : Datepicker
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toolbox_attachevents" title="toolbox._attachEvents()" class="md-nav__link">
+    toolbox._attachEvents()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#view" title="View" class="md-nav__link">
+    View
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-viewmodel" title="new View(model)" class="md-nav__link">
+    new View(model)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewyearsviewcount-number" title="view.yearsViewCount : number" class="md-nav__link">
+    view.yearsViewCount : number
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewmodel-datepicker" title="view.model : Datepicker" class="md-nav__link">
+    view.model : Datepicker
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewrendered-null" title="view.rendered : null" class="md-nav__link">
+    view.rendered : null
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewcontainer-null" title="view.$container : null" class="md-nav__link">
+    view.$container : null
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewid-string" title="view.id : string" class="md-nav__link">
+    view.id : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewdestroy" title="view.destroy()" class="md-nav__link">
+    view.destroy()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewsetpickerboxposition" title="view.setPickerBoxPosition()" class="md-nav__link">
+    view.setPickerBoxPosition()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewshow" title="view.show()" class="md-nav__link">
+    view.show()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewhide" title="view.hide()" class="md-nav__link">
+    view.hide()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewtoggle" title="view.toggle()" class="md-nav__link">
+    view.toggle()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewcheckyearaccessyear-boolean" title="view.checkYearAccess(year) ⇒ Boolean" class="md-nav__link">
+    view.checkYearAccess(year) ⇒ Boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewcheckmonthaccessmonth-boolean" title="view.checkMonthAccess(month) ⇒ Boolean" class="md-nav__link">
+    view.checkMonthAccess(month) ⇒ Boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewcheckdayaccessthisunix-boolean" title="view.checkDayAccess(thisUnix) ⇒ Boolean" class="md-nav__link">
+    view.checkDayAccess(thisUnix) ⇒ Boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewgetviewmodeldata-42" title="view.getViewModel(data) ⇒ *" class="md-nav__link">
+    view.getViewModel(data) ⇒ *
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewrenderdata" title="view.render(data)" class="md-nav__link">
+    view.render(data)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewafterrender" title="view.afterRender()" class="md-nav__link">
+    view.afterRender()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config" title="Config" class="md-nav__link">
+    Config
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configinitialvalue-boolean" title="Config.initialValue : Boolean" class="md-nav__link">
+    Config.initialValue : Boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configpersiandigit-boolean" title="Config.persianDigit : Boolean" class="md-nav__link">
+    Config.persianDigit : Boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configviewmode-string" title="Config.viewMode : string" class="md-nav__link">
+    Config.viewMode : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configformat-boolean" title="Config.format : boolean" class="md-nav__link">
+    Config.format : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configaltfield-boolean" title="Config.altField : boolean" class="md-nav__link">
+    Config.altField : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configaltformat-string" title="Config.altFormat : string" class="md-nav__link">
+    Config.altFormat : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configmindate-boolean" title="Config.minDate : boolean" class="md-nav__link">
+    Config.minDate : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configmaxdate-boolean" title="Config.maxDate : boolean" class="md-nav__link">
+    Config.maxDate : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confignavigator-object" title="Config.navigator : object" class="md-nav__link">
+    Config.navigator : object
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#navigatorenabled" title="navigator.enabled" class="md-nav__link">
+    navigator.enabled
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navigatortext" title="navigator.text" class="md-nav__link">
+    navigator.text
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#textbtnnexttext" title="text.btnNextText" class="md-nav__link">
+    text.btnNextText
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textbtnprevtext" title="text.btnPrevText" class="md-nav__link">
+    text.btnPrevText
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onnext-navigator" title=""onNext" (navigator)" class="md-nav__link">
+    "onNext" (navigator)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onprev-navigator" title=""onPrev" (navigator)" class="md-nav__link">
+    "onPrev" (navigator)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onswitch-navigator" title=""onSwitch" (navigator)" class="md-nav__link">
+    "onSwitch" (navigator)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configtoolbox-object" title="Config.toolbox : object" class="md-nav__link">
+    Config.toolbox : object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configonlytimepicker-boolean" title="Config.onlyTimePicker : boolean" class="md-nav__link">
+    Config.onlyTimePicker : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configonlyselectondate-boolean" title="Config.onlySelectOnDate : boolean" class="md-nav__link">
+    Config.onlySelectOnDate : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configtimepicker-object" title="Config.timePicker : object" class="md-nav__link">
+    Config.timePicker : object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configdaypicker-object" title="Config.dayPicker : object" class="md-nav__link">
+    Config.dayPicker : object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configmonthpicker-object" title="Config.monthPicker : object" class="md-nav__link">
+    Config.monthPicker : object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configyearpicker-object" title="Config.yearPicker : object" class="md-nav__link">
+    Config.yearPicker : object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configposition" title="Config.position" class="md-nav__link">
+    Config.position
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configautoclose-boolean" title="Config.autoClose : boolean" class="md-nav__link">
+    Config.autoClose : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configobserver-boolean" title="Config.observer : boolean" class="md-nav__link">
+    Config.observer : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configinputdelay-number" title="Config.inputDelay : number" class="md-nav__link">
+    Config.inputDelay : number
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configformatterunixdate-42" title="Config.formatter(unixDate) ⇒ *" class="md-nav__link">
+    Config.formatter(unixDate) ⇒ *
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configaltfieldformatterunixdate-42" title="Config.altFieldFormatter(unixDate) ⇒ *" class="md-nav__link">
+    Config.altFieldFormatter(unixDate) ⇒ *
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configcheckdate-function" title="Config.checkDate() : function" class="md-nav__link">
+    Config.checkDate() : function
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configcheckmonth-function" title="Config.checkMonth() : function" class="md-nav__link">
+    Config.checkMonth() : function
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configcheckyear-function" title="Config.checkYear() : function" class="md-nav__link">
+    Config.checkYear() : function
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configontoggle" title="Config.onToggle()" class="md-nav__link">
+    Config.onToggle()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configondestroy" title="Config.onDestroy()" class="md-nav__link">
+    Config.onDestroy()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onselect-unixdate" title=""onSelect" (unixDate)" class="md-nav__link">
+    "onSelect" (unixDate)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onshow" title=""onShow"" class="md-nav__link">
+    "onShow"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onhide-self" title=""onHide" (self)" class="md-nav__link">
+    "onHide" (self)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classdaterange" title="ClassDateRange" class="md-nav__link">
+    ClassDateRange
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#classdaterangemonthrange" title="ClassDateRange.monthRange" class="md-nav__link">
+    ClassDateRange.monthRange
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classdaterangeweekrange" title="ClassDateRange.weekRange" class="md-nav__link">
+    ClassDateRange.weekRange
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classdaterangepersiandaysname" title="ClassDateRange.persianDaysName" class="md-nav__link">
+    ClassDateRange.persianDaysName
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#template-string" title="Template : string" class="md-nav__link">
+    Template : string
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loginput" title="log(input)" class="md-nav__link">
+    log(input)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugelem-input" title="debug(elem, input)" class="md-nav__link">
+    debug(elem, input)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#classes" title="Classes" class="md-nav__link">
+    Classes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constants" title="Constants" class="md-nav__link">
+    Constants
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions" title="Functions" class="md-nav__link">
+    Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dateutil" title="DateUtil" class="md-nav__link">
+    DateUtil
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dateutilissamedaydatea-dateb-boolean" title="dateUtil.isSameDay(dateA, dateB) ⇒ boolean" class="md-nav__link">
+    dateUtil.isSameDay(dateA, dateB) ⇒ boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dateutilissamemonthdatea-dateb-boolean" title="dateUtil.isSameMonth(dateA, dateB) ⇒ boolean" class="md-nav__link">
+    dateUtil.isSameMonth(dateA, dateB) ⇒ boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dateutilnormalizetimekey-value-number" title="dateUtil.normalizeTime(key, value) ⇒ number" class="md-nav__link">
+    dateUtil.normalizeTime(key, value) ⇒ number
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input" title="Input" class="md-nav__link">
+    Input
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-inputmodel-inputelement" title="new Input(model, inputElement)" class="md-nav__link">
+    new Input(model, inputElement)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inputmodel-object" title="input.model : Object" class="md-nav__link">
+    input.model : Object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inputelem-element" title="input.elem : Element" class="md-nav__link">
+    input.elem : Element
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inputinitialunix-number" title="input.initialUnix : Number" class="md-nav__link">
+    input.initialUnix : Number
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inputgetinputposition-object" title="input.getInputPosition() ⇒ Object" class="md-nav__link">
+    input.getInputPosition() ⇒ Object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inputgetinputsize-object" title="input.getInputSize() ⇒ Object" class="md-nav__link">
+    input.getInputSize() ⇒ Object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inputupdateunix" title="input.update(unix)" class="md-nav__link">
+    input.update(unix)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inputgetoninitstate-number" title="input.getOnInitState() ⇒ Number" class="md-nav__link">
+    input.getOnInitState() ⇒ Number
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model" title="Model" class="md-nav__link">
+    Model
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-modelinputelement-options" title="new Model(inputElement, options)" class="md-nav__link">
+    new Model(inputElement, options)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelinitialunix-unix" title="model.initialUnix : unix" class="md-nav__link">
+    model.initialUnix : unix
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelinputelement-object" title="model.inputElement : Object" class="md-nav__link">
+    model.inputElement : Object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modeloptions-options" title="model.options : Options" class="md-nav__link">
+    model.options : Options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelinput-input" title="model.input : Input" class="md-nav__link">
+    model.input : Input
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelstate-state" title="model.state : State" class="md-nav__link">
+    model.state : State
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelview-view" title="model.view : View" class="md-nav__link">
+    model.view : View
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modeltoolbox-toolbox" title="model.toolbox : Toolbox" class="md-nav__link">
+    model.toolbox : Toolbox
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelnavigator-navigator" title="model.navigator : Navigator" class="md-nav__link">
+    model.navigator : Navigator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelupdateinputunix" title="model.updateInput(unix)" class="md-nav__link">
+    model.updateInput(unix)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#navigator" title="Navigator" class="md-nav__link">
+    Navigator
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-navigatordatepicker" title="new Navigator(datepicker)" class="md-nav__link">
+    new Navigator(datepicker)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navigatormodel-datepicker" title="navigator.model : Datepicker" class="md-nav__link">
+    navigator.model : Datepicker
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navigatorliveattach" title="navigator.liveAttach()" class="md-nav__link">
+    navigator.liveAttach()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navigatortimeuptimekey" title="navigator.timeUp(timekey)" class="md-nav__link">
+    navigator.timeUp(timekey)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navigatortimedowntimekey" title="navigator.timeDown(timekey)" class="md-nav__link">
+    navigator.timeDown(timekey)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#options" title="Options" class="md-nav__link">
+    Options
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-optionsoptions" title="new Options(options)" class="md-nav__link">
+    new Options(options)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#state" title="State" class="md-nav__link">
+    State
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-statemodel" title="new State(model)" class="md-nav__link">
+    new State(model)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#statemodel-object" title="state.model : object" class="md-nav__link">
+    state.model : object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#statefiletreddate-boolean" title="state.filetredDate : Boolean" class="md-nav__link">
+    state.filetredDate : Boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stateviewmodelist-array" title="state.viewModeList : Array" class="md-nav__link">
+    state.viewModeList : Array
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stateviewmode-string" title="state.viewMode : String" class="md-nav__link">
+    state.viewMode : String
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stateviewmodeindex-number" title="state.viewModeIndex : number" class="md-nav__link">
+    state.viewModeIndex : number
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#statefilterdate-object" title="state.filterDate : Object" class="md-nav__link">
+    state.filterDate : Object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stateview-object" title="state.view : Object" class="md-nav__link">
+    state.view : Object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stateselected-object" title="state.selected : Object" class="md-nav__link">
+    state.selected : Object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#statesetselecteddatetimekey-value-state" title="state.setSelectedDateTime(key, value) ⇒ State" class="md-nav__link">
+    state.setSelectedDateTime(key, value) ⇒ State
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#statenavigatenav" title="state.navigate(nav)" class="md-nav__link">
+    state.navigate(nav)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stateswitchviewmode-state" title="state.switchViewMode() ⇒ State" class="md-nav__link">
+    state.switchViewMode() ⇒ State
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stateswitchviewmodetoviewmode" title="state.switchViewModeTo(viewMode)" class="md-nav__link">
+    state.switchViewModeTo(viewMode)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#statesetviewdatetimekey-value-state" title="state.setViewDateTime(key, value) ⇒ State" class="md-nav__link">
+    state.setViewDateTime(key, value) ⇒ State
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#toolbox" title="Toolbox" class="md-nav__link">
+    Toolbox
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-toolboxdatepicker" title="new Toolbox(datepicker)" class="md-nav__link">
+    new Toolbox(datepicker)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toolboxmodel-datepicker" title="toolbox.model : Datepicker" class="md-nav__link">
+    toolbox.model : Datepicker
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toolbox_attachevents" title="toolbox._attachEvents()" class="md-nav__link">
+    toolbox._attachEvents()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#view" title="View" class="md-nav__link">
+    View
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-viewmodel" title="new View(model)" class="md-nav__link">
+    new View(model)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewyearsviewcount-number" title="view.yearsViewCount : number" class="md-nav__link">
+    view.yearsViewCount : number
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewmodel-datepicker" title="view.model : Datepicker" class="md-nav__link">
+    view.model : Datepicker
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewrendered-null" title="view.rendered : null" class="md-nav__link">
+    view.rendered : null
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewcontainer-null" title="view.$container : null" class="md-nav__link">
+    view.$container : null
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewid-string" title="view.id : string" class="md-nav__link">
+    view.id : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewdestroy" title="view.destroy()" class="md-nav__link">
+    view.destroy()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewsetpickerboxposition" title="view.setPickerBoxPosition()" class="md-nav__link">
+    view.setPickerBoxPosition()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewshow" title="view.show()" class="md-nav__link">
+    view.show()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewhide" title="view.hide()" class="md-nav__link">
+    view.hide()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewtoggle" title="view.toggle()" class="md-nav__link">
+    view.toggle()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewcheckyearaccessyear-boolean" title="view.checkYearAccess(year) ⇒ Boolean" class="md-nav__link">
+    view.checkYearAccess(year) ⇒ Boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewcheckmonthaccessmonth-boolean" title="view.checkMonthAccess(month) ⇒ Boolean" class="md-nav__link">
+    view.checkMonthAccess(month) ⇒ Boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewcheckdayaccessthisunix-boolean" title="view.checkDayAccess(thisUnix) ⇒ Boolean" class="md-nav__link">
+    view.checkDayAccess(thisUnix) ⇒ Boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewgetviewmodeldata-42" title="view.getViewModel(data) ⇒ *" class="md-nav__link">
+    view.getViewModel(data) ⇒ *
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewrenderdata" title="view.render(data)" class="md-nav__link">
+    view.render(data)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewafterrender" title="view.afterRender()" class="md-nav__link">
+    view.afterRender()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config" title="Config" class="md-nav__link">
+    Config
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configinitialvalue-boolean" title="Config.initialValue : Boolean" class="md-nav__link">
+    Config.initialValue : Boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configpersiandigit-boolean" title="Config.persianDigit : Boolean" class="md-nav__link">
+    Config.persianDigit : Boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configviewmode-string" title="Config.viewMode : string" class="md-nav__link">
+    Config.viewMode : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configformat-boolean" title="Config.format : boolean" class="md-nav__link">
+    Config.format : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configaltfield-boolean" title="Config.altField : boolean" class="md-nav__link">
+    Config.altField : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configaltformat-string" title="Config.altFormat : string" class="md-nav__link">
+    Config.altFormat : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configmindate-boolean" title="Config.minDate : boolean" class="md-nav__link">
+    Config.minDate : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configmaxdate-boolean" title="Config.maxDate : boolean" class="md-nav__link">
+    Config.maxDate : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confignavigator-object" title="Config.navigator : object" class="md-nav__link">
+    Config.navigator : object
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#navigatorenabled" title="navigator.enabled" class="md-nav__link">
+    navigator.enabled
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navigatortext" title="navigator.text" class="md-nav__link">
+    navigator.text
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#textbtnnexttext" title="text.btnNextText" class="md-nav__link">
+    text.btnNextText
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textbtnprevtext" title="text.btnPrevText" class="md-nav__link">
+    text.btnPrevText
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onnext-navigator" title=""onNext" (navigator)" class="md-nav__link">
+    "onNext" (navigator)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onprev-navigator" title=""onPrev" (navigator)" class="md-nav__link">
+    "onPrev" (navigator)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onswitch-navigator" title=""onSwitch" (navigator)" class="md-nav__link">
+    "onSwitch" (navigator)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configtoolbox-object" title="Config.toolbox : object" class="md-nav__link">
+    Config.toolbox : object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configonlytimepicker-boolean" title="Config.onlyTimePicker : boolean" class="md-nav__link">
+    Config.onlyTimePicker : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configonlyselectondate-boolean" title="Config.onlySelectOnDate : boolean" class="md-nav__link">
+    Config.onlySelectOnDate : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configtimepicker-object" title="Config.timePicker : object" class="md-nav__link">
+    Config.timePicker : object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configdaypicker-object" title="Config.dayPicker : object" class="md-nav__link">
+    Config.dayPicker : object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configmonthpicker-object" title="Config.monthPicker : object" class="md-nav__link">
+    Config.monthPicker : object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configyearpicker-object" title="Config.yearPicker : object" class="md-nav__link">
+    Config.yearPicker : object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configposition" title="Config.position" class="md-nav__link">
+    Config.position
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configautoclose-boolean" title="Config.autoClose : boolean" class="md-nav__link">
+    Config.autoClose : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configobserver-boolean" title="Config.observer : boolean" class="md-nav__link">
+    Config.observer : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configinputdelay-number" title="Config.inputDelay : number" class="md-nav__link">
+    Config.inputDelay : number
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configformatterunixdate-42" title="Config.formatter(unixDate) ⇒ *" class="md-nav__link">
+    Config.formatter(unixDate) ⇒ *
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configaltfieldformatterunixdate-42" title="Config.altFieldFormatter(unixDate) ⇒ *" class="md-nav__link">
+    Config.altFieldFormatter(unixDate) ⇒ *
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configcheckdate-function" title="Config.checkDate() : function" class="md-nav__link">
+    Config.checkDate() : function
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configcheckmonth-function" title="Config.checkMonth() : function" class="md-nav__link">
+    Config.checkMonth() : function
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configcheckyear-function" title="Config.checkYear() : function" class="md-nav__link">
+    Config.checkYear() : function
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configontoggle" title="Config.onToggle()" class="md-nav__link">
+    Config.onToggle()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configondestroy" title="Config.onDestroy()" class="md-nav__link">
+    Config.onDestroy()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onselect-unixdate" title=""onSelect" (unixDate)" class="md-nav__link">
+    "onSelect" (unixDate)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onshow" title=""onShow"" class="md-nav__link">
+    "onShow"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onhide-self" title=""onHide" (self)" class="md-nav__link">
+    "onHide" (self)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classdaterange" title="ClassDateRange" class="md-nav__link">
+    ClassDateRange
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#classdaterangemonthrange" title="ClassDateRange.monthRange" class="md-nav__link">
+    ClassDateRange.monthRange
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classdaterangeweekrange" title="ClassDateRange.weekRange" class="md-nav__link">
+    ClassDateRange.weekRange
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classdaterangepersiandaysname" title="ClassDateRange.persianDaysName" class="md-nav__link">
+    ClassDateRange.persianDaysName
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#template-string" title="Template : string" class="md-nav__link">
+    Template : string
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loginput" title="log(input)" class="md-nav__link">
+    log(input)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugelem-input" title="debug(elem, input)" class="md-nav__link">
+    debug(elem, input)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+               
+                 <a href="https://github.com/babakhani/PersianWebToolkit/edit/master/docs/datepicker/documentation.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
+               
+              
+                
+                  <h1>Code docuemnt</h1>
+                
+                <h2 id="classes">Classes<a class="headerlink" href="#classes" title="Permanent link">&para;</a></h2>
+<dl>
+<dt><a href="#DateUtil">DateUtil</a></dt>
+<dd><p>Date helper, some useful date method stored here</p>
+</dd>
+<dt><a href="#Input">Input</a></dt>
+<dd><p>Do every thing about input element like get default value, set new value, set alt field input and etc.</p>
+</dd>
+<dt><a href="#Model">Model</a></dt>
+<dd><p>Main datepicker object, manage every things</p>
+</dd>
+<dt><a href="#Navigator">Navigator</a></dt>
+<dd><p>This navigator class do every thing about navigate and select date</p>
+</dd>
+<dt><a href="#Options">Options</a></dt>
+<dd><p>Extend default config from user interred and do compatibility works</p>
+</dd>
+<dt><a href="#State">State</a></dt>
+<dd><p>All state set in his object and get from this
+also this object notify other object to update self or update view or etc.</p>
+</dd>
+<dt><a href="#Toolbox">Toolbox</a></dt>
+<dd><p>Do every things about toolbox, like attach events to toolbox elements</p>
+</dd>
+<dt><a href="#View">View</a></dt>
+<dd><p>As its name suggests, all rendering works do in this object</p>
+</dd>
+</dl>
+
+<h2 id="constants">Constants<a class="headerlink" href="#constants" title="Permanent link">&para;</a></h2>
+<dl>
+<dt><a href="#Config">Config</a></dt>
+<dd><p>This is default config class</p>
+</dd>
+<dt><a href="#ClassDateRange">ClassDateRange</a></dt>
+<dd></dd>
+<dt><a href="#Template">Template</a> : <code>string</code></dt>
+<dd></dd>
+</dl>
+
+<h2 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">&para;</a></h2>
+<dl>
+<dt><a href="#log">log(input)</a></dt>
+<dd><p>normal log</p>
+</dd>
+<dt><a href="#debug">debug(elem, input)</a></dt>
+<dd><p>show debug messages if window.persianDatepickerDebug set as true</p>
+</dd>
+</dl>
+
+<p><a name="DateUtil"></a></p>
+<h2 id="dateutil">DateUtil<a class="headerlink" href="#dateutil" title="Permanent link">&para;</a></h2>
+<p>Date helper, some useful date method stored here</p>
+<p><strong>Kind</strong>: global class  </p>
+<ul>
+<li><a href="#DateUtil">DateUtil</a><ul>
+<li><a href="#DateUtil+isSameDay">.isSameDay(dateA, dateB)</a> ⇒ <code>boolean</code></li>
+<li><a href="#DateUtil+isSameMonth">.isSameMonth(dateA, dateB)</a> ⇒ <code>boolean</code></li>
+<li><a href="#DateUtil+normalizeTime">.normalizeTime(key, value)</a> ⇒ <code>number</code></li>
+</ul>
+</li>
+</ul>
+<p><a name="DateUtil+isSameDay"></a></p>
+<h3 id="dateutilissamedaydatea-dateb-boolean">dateUtil.isSameDay(dateA, dateB) ⇒ <code>boolean</code><a class="headerlink" href="#dateutilissamedaydatea-dateb-boolean" title="Permanent link">&para;</a></h3>
+<p>check if a date is same as b</p>
+<p><strong>Kind</strong>: instance method of <code><a href="#DateUtil">DateUtil</a></code><br />
+<table>
+  <thead>
+    <tr>
+      <th>Param</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>dateA</td>
+    </tr><tr>
+    <td>dateB</td>
+    </tr>  </tbody>
+</table></p>
+<p><a name="DateUtil+isSameMonth"></a></p>
+<h3 id="dateutilissamemonthdatea-dateb-boolean">dateUtil.isSameMonth(dateA, dateB) ⇒ <code>boolean</code><a class="headerlink" href="#dateutilissamemonthdatea-dateb-boolean" title="Permanent link">&para;</a></h3>
+<p>check if a month is same as b</p>
+<p><strong>Kind</strong>: instance method of <code><a href="#DateUtil">DateUtil</a></code><br />
+<table>
+  <thead>
+    <tr>
+      <th>Param</th><th>Type</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>dateA</td><td><code>Date</code></td>
+    </tr><tr>
+    <td>dateB</td><td><code>Date</code></td>
+    </tr>  </tbody>
+</table></p>
+<p><a name="DateUtil+normalizeTime"></a></p>
+<h3 id="dateutilnormalizetimekey-value-number">dateUtil.normalizeTime(key, value) ⇒ <code>number</code><a class="headerlink" href="#dateutilnormalizetimekey-value-number" title="Permanent link">&para;</a></h3>
+<p>normalize time, like check second if bigger than 60</p>
+<p><strong>Kind</strong>: instance method of <code><a href="#DateUtil">DateUtil</a></code><br />
+<table>
+  <thead>
+    <tr>
+      <th>Param</th><th>Type</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>key</td><td><code>string</code></td>
+    </tr><tr>
+    <td>value</td><td><code>number</code></td>
+    </tr>  </tbody>
+</table></p>
+<p><a name="Input"></a></p>
+<h2 id="input">Input<a class="headerlink" href="#input" title="Permanent link">&para;</a></h2>
+<p>Do every thing about input element like get default value, set new value, set alt field input and etc.</p>
+<p><strong>Kind</strong>: global class  </p>
+<ul>
+<li><a href="#Input">Input</a><ul>
+<li><a href="#new_Input_new">new Input(model, inputElement)</a></li>
+<li><a href="#Input+model">.model</a> : <code>Object</code></li>
+<li><a href="#Input+elem">.elem</a> : <code>Element</code></li>
+<li><a href="#Input+initialUnix">.initialUnix</a> : <code>Number</code></li>
+<li><a href="#Input+getInputPosition">.getInputPosition()</a> ⇒ <code>Object</code></li>
+<li><a href="#Input+getInputSize">.getInputSize()</a> ⇒ <code>Object</code></li>
+<li><a href="#Input+update">.update(unix)</a></li>
+<li><a href="#Input+getOnInitState">.getOnInitState()</a> ⇒ <code>Number</code></li>
+</ul>
+</li>
+</ul>
+<p><a name="new_Input_new"></a></p>
+<h3 id="new-inputmodel-inputelement">new Input(model, inputElement)<a class="headerlink" href="#new-inputmodel-inputelement" title="Permanent link">&para;</a></h3>
+<p><table>
+  <thead>
+    <tr>
+      <th>Param</th><th>Type</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>model</td><td><code><a href="#Model">Model</a></code></td>
+    </tr><tr>
+    <td>inputElement</td><td><code>Element</code></td>
+    </tr>  </tbody>
+</table></p>
+<p><a name="Input+model"></a></p>
+<h3 id="inputmodel-object">input.model : <code>Object</code><a class="headerlink" href="#inputmodel-object" title="Permanent link">&para;</a></h3>
+<p><strong>Kind</strong>: instance property of <code><a href="#Input">Input</a></code><br />
+<a name="Input+elem"></a></p>
+<h3 id="inputelem-element">input.elem : <code>Element</code><a class="headerlink" href="#inputelem-element" title="Permanent link">&para;</a></h3>
+<p><strong>Kind</strong>: instance property of <code><a href="#Input">Input</a></code><br />
+<a name="Input+initialUnix"></a></p>
+<h3 id="inputinitialunix-number">input.initialUnix : <code>Number</code><a class="headerlink" href="#inputinitialunix-number" title="Permanent link">&para;</a></h3>
+<p><strong>Kind</strong>: instance property of <code><a href="#Input">Input</a></code><br />
+<a name="Input+getInputPosition"></a></p>
+<h3 id="inputgetinputposition-object">input.getInputPosition() ⇒ <code>Object</code><a class="headerlink" href="#inputgetinputposition-object" title="Permanent link">&para;</a></h3>
+<p>get <input/> element position</p>
+<p><strong>Kind</strong>: instance method of <code><a href="#Input">Input</a></code><br />
+<strong>Todo</strong></p>
+<ul>
+<li>remove jquery</li>
+</ul>
+<p><a name="Input+getInputSize"></a></p>
+<h3 id="inputgetinputsize-object">input.getInputSize() ⇒ <code>Object</code><a class="headerlink" href="#inputgetinputsize-object" title="Permanent link">&para;</a></h3>
+<p>get <input/> element size</p>
+<p><strong>Kind</strong>: instance method of <code><a href="#Input">Input</a></code><br />
+<strong>Todo</strong></p>
+<ul>
+<li>remove jquery</li>
+</ul>
+<p><a name="Input+update"></a></p>
+<h3 id="inputupdateunix">input.update(unix)<a class="headerlink" href="#inputupdateunix" title="Permanent link">&para;</a></h3>
+<p><strong>Kind</strong>: instance method of <code><a href="#Input">Input</a></code><br />
+<table>
+  <thead>
+    <tr>
+      <th>Param</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>unix</td>
+    </tr>  </tbody>
+</table></p>
+<p><a name="Input+getOnInitState"></a></p>
+<h3 id="inputgetoninitstate-number">input.getOnInitState() ⇒ <code>Number</code><a class="headerlink" href="#inputgetoninitstate-number" title="Permanent link">&para;</a></h3>
+<p>return initial value</p>
+<p><strong>Kind</strong>: instance method of <code><a href="#Input">Input</a></code><br />
+<strong>Returns</strong>: <code>Number</code> - - unix<br />
+<a name="Model"></a></p>
+<h2 id="model">Model<a class="headerlink" href="#model" title="Permanent link">&para;</a></h2>
+<p>Main datepicker object, manage every things</p>
+<p><strong>Kind</strong>: global class  </p>
+<ul>
+<li><a href="#Model">Model</a><ul>
+<li><a href="#new_Model_new">new Model(inputElement, options)</a></li>
+<li><a href="#Model+initialUnix">.initialUnix</a> : <code>unix</code></li>
+<li><a href="#Model+inputElement">.inputElement</a> : <code>Object</code></li>
+<li><a href="#Model+options">.options</a> : <code><a href="#Options">Options</a></code></li>
+<li><a href="#Model+input">.input</a> : <code><a href="#Input">Input</a></code></li>
+<li><a href="#Model+state">.state</a> : <code><a href="#State">State</a></code></li>
+<li><a href="#Model+view">.view</a> : <code><a href="#View">View</a></code></li>
+<li><a href="#Model+toolbox">.toolbox</a> : <code><a href="#Toolbox">Toolbox</a></code></li>
+<li><a href="#Model+navigator">.navigator</a> : <code><a href="#Navigator">Navigator</a></code></li>
+<li><a href="#Model+updateInput">.updateInput(unix)</a></li>
+</ul>
+</li>
+</ul>
+<p><a name="new_Model_new"></a></p>
+<h3 id="new-modelinputelement-options">new Model(inputElement, options)<a class="headerlink" href="#new-modelinputelement-options" title="Permanent link">&para;</a></h3>
+<p><table>
+  <thead>
+    <tr>
+      <th>Param</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>inputElement</td>
+    </tr><tr>
+    <td>options</td>
+    </tr>  </tbody>
+</table></p>
+<p><a name="Model+initialUnix"></a></p>
+<h3 id="modelinitialunix-unix">model.initialUnix : <code>unix</code><a class="headerlink" href="#modelinitialunix-unix" title="Permanent link">&para;</a></h3>
+<p>[initialUnix=null]</p>
+<p><strong>Kind</strong>: instance property of <code><a href="#Model">Model</a></code><br />
+<a name="Model+inputElement"></a></p>
+<h3 id="modelinputelement-object">model.inputElement : <code>Object</code><a class="headerlink" href="#modelinputelement-object" title="Permanent link">&para;</a></h3>
+<p>inputElement=inputElement</p>
+<p><strong>Kind</strong>: instance property of <code><a href="#Model">Model</a></code><br />
+<a name="Model+options"></a></p>
+<h3 id="modeloptions-options">model.options : <code><a href="#Options">Options</a></code><a class="headerlink" href="#modeloptions-options" title="Permanent link">&para;</a></h3>
+<p>handle works about config</p>
+<p><strong>Kind</strong>: instance property of <code><a href="#Model">Model</a></code><br />
+<a name="Model+input"></a></p>
+<h3 id="modelinput-input">model.input : <code><a href="#Input">Input</a></code><a class="headerlink" href="#modelinput-input" title="Permanent link">&para;</a></h3>
+<p>handle works about input and alt field input element</p>
+<p><strong>Kind</strong>: instance property of <code><a href="#Model">Model</a></code><br />
+<a name="Model+state"></a></p>
+<h3 id="modelstate-state">model.state : <code><a href="#State">State</a></code><a class="headerlink" href="#modelstate-state" title="Permanent link">&para;</a></h3>
+<p>set and get selected and view and other state</p>
+<p><strong>Kind</strong>: instance property of <code><a href="#Model">Model</a></code><br />
+<a name="Model+view"></a></p>
+<h3 id="modelview-view">model.view : <code><a href="#View">View</a></code><a class="headerlink" href="#modelview-view" title="Permanent link">&para;</a></h3>
+<p>render datepicker view base on State</p>
+<p><strong>Kind</strong>: instance property of <code><a href="#Model">Model</a></code><br />
+<a name="Model+toolbox"></a></p>
+<h3 id="modeltoolbox-toolbox">model.toolbox : <code><a href="#Toolbox">Toolbox</a></code><a class="headerlink" href="#modeltoolbox-toolbox" title="Permanent link">&para;</a></h3>
+<p>handle works about toolbox</p>
+<p><strong>Kind</strong>: instance property of <code><a href="#Model">Model</a></code><br />
+<a name="Model+navigator"></a></p>
+<h3 id="modelnavigator-navigator">model.navigator : <code><a href="#Navigator">Navigator</a></code><a class="headerlink" href="#modelnavigator-navigator" title="Permanent link">&para;</a></h3>
+<p>handle navigation and dateoicker element events</p>
+<p><strong>Kind</strong>: instance property of <code><a href="#Model">Model</a></code><br />
+<a name="Model+updateInput"></a></p>
+<h3 id="modelupdateinputunix">model.updateInput(unix)<a class="headerlink" href="#modelupdateinputunix" title="Permanent link">&para;</a></h3>
+<p><strong>Kind</strong>: instance method of <code><a href="#Model">Model</a></code><br />
+<table>
+  <thead>
+    <tr>
+      <th>Param</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>unix</td>
+    </tr>  </tbody>
+</table></p>
+<p><a name="Navigator"></a></p>
+<h2 id="navigator">Navigator<a class="headerlink" href="#navigator" title="Permanent link">&para;</a></h2>
+<p>This navigator class do every thing about navigate and select date</p>
+<p><strong>Kind</strong>: global class<br />
+<strong>Access:</strong> public  </p>
+<ul>
+<li><a href="#Navigator">Navigator</a><ul>
+<li><a href="#new_Navigator_new">new Navigator(datepicker)</a></li>
+<li><a href="#Navigator+model">.model</a> : <code>Datepicker</code></li>
+<li><a href="#Navigator+liveAttach">.liveAttach()</a></li>
+<li><a href="#Navigator+timeUp">.timeUp(timekey)</a></li>
+<li><a href="#Navigator+timeDown">.timeDown(timekey)</a></li>
+</ul>
+</li>
+</ul>
+<p><a name="new_Navigator_new"></a></p>
+<h3 id="new-navigatordatepicker">new Navigator(datepicker)<a class="headerlink" href="#new-navigatordatepicker" title="Permanent link">&para;</a></h3>
+<p><table>
+  <thead>
+    <tr>
+      <th>Param</th><th>Type</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>datepicker</td><td><code>object</code></td>
+    </tr>  </tbody>
+</table></p>
+<p><a name="Navigator+model"></a></p>
+<h3 id="navigatormodel-datepicker">navigator.model : <code>Datepicker</code><a class="headerlink" href="#navigatormodel-datepicker" title="Permanent link">&para;</a></h3>
+<p><strong>Kind</strong>: instance property of <code><a href="#Navigator">Navigator</a></code><br />
+<a name="Navigator+liveAttach"></a></p>
+<h3 id="navigatorliveattach">navigator.liveAttach()<a class="headerlink" href="#navigatorliveattach" title="Permanent link">&para;</a></h3>
+<p>attach events that needed attach after every render</p>
+<p><strong>Kind</strong>: instance method of <code><a href="#Navigator">Navigator</a></code><br />
+<strong>Access:</strong> public<br />
+<strong>Todo</strong></p>
+<ul>
+<li>attach as a live way</li>
+</ul>
+<p><a name="Navigator+timeUp"></a></p>
+<h3 id="navigatortimeuptimekey">navigator.timeUp(timekey)<a class="headerlink" href="#navigatortimeuptimekey" title="Permanent link">&para;</a></h3>
+<p>set time up depend to timekey</p>
+<p><strong>Kind</strong>: instance method of <code><a href="#Navigator">Navigator</a></code><br />
+<strong>Access:</strong> public<br />
+<table>
+  <thead>
+    <tr>
+      <th>Param</th><th>Type</th><th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>timekey</td><td><code>String</code></td><td><p>accept hour, minute,second</p>
+</td>
+    </tr>  </tbody>
+</table></p>
+<p><a name="Navigator+timeDown"></a></p>
+<h3 id="navigatortimedowntimekey">navigator.timeDown(timekey)<a class="headerlink" href="#navigatortimedowntimekey" title="Permanent link">&para;</a></h3>
+<p>set time down depend to timekey</p>
+<p><strong>Kind</strong>: instance method of <code><a href="#Navigator">Navigator</a></code><br />
+<strong>Access:</strong> public<br />
+<table>
+  <thead>
+    <tr>
+      <th>Param</th><th>Type</th><th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>timekey</td><td><code>String</code></td><td><p>accept hour, minute,second</p>
+</td>
+    </tr>  </tbody>
+</table></p>
+<p><a name="Options"></a></p>
+<h2 id="options">Options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h2>
+<p>Extend default config from user interred and do compatibility works</p>
+<p><strong>Kind</strong>: global class<br />
+<strong>Access:</strong> public<br />
+<a name="new_Options_new"></a></p>
+<h3 id="new-optionsoptions">new Options(options)<a class="headerlink" href="#new-optionsoptions" title="Permanent link">&para;</a></h3>
+<p><table>
+  <thead>
+    <tr>
+      <th>Param</th><th>Type</th><th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>options</td><td><code>object</code></td><td><p>config passed when initialize</p>
+</td>
+    </tr>  </tbody>
+</table></p>
+<p><a name="State"></a></p>
+<h2 id="state">State<a class="headerlink" href="#state" title="Permanent link">&para;</a></h2>
+<p>All state set in his object and get from this
+also this object notify other object to update self or update view or etc.</p>
+<p><strong>Kind</strong>: global class  </p>
+<ul>
+<li><a href="#State">State</a><ul>
+<li><a href="#new_State_new">new State(model)</a></li>
+<li><a href="#State+model">.model</a> : <code>object</code></li>
+<li><a href="#State+filetredDate">.filetredDate</a> : <code>Boolean</code></li>
+<li><a href="#State+viewModeList">.viewModeList</a> : <code>Array</code></li>
+<li><a href="#State+viewMode">.viewMode</a> : <code>String</code></li>
+<li><a href="#State+viewModeIndex">.viewModeIndex</a> : <code>number</code></li>
+<li><a href="#State+filterDate">.filterDate</a> : <code>Object</code></li>
+<li><a href="#State+view">.view</a> : <code>Object</code></li>
+<li><a href="#State+selected">.selected</a> : <code>Object</code></li>
+<li><a href="#State+setSelectedDateTime">.setSelectedDateTime(key, value)</a> ⇒ <code><a href="#State">State</a></code></li>
+<li><a href="#State+navigate">.navigate(nav)</a></li>
+<li><a href="#State+switchViewMode">.switchViewMode()</a> ⇒ <code><a href="#State">State</a></code></li>
+<li><a href="#State+switchViewModeTo">.switchViewModeTo(viewMode)</a></li>
+<li><a href="#State+setViewDateTime">.setViewDateTime(key, value)</a> ⇒ <code><a href="#State">State</a></code></li>
+</ul>
+</li>
+</ul>
+<p><a name="new_State_new"></a></p>
+<h3 id="new-statemodel">new State(model)<a class="headerlink" href="#new-statemodel" title="Permanent link">&para;</a></h3>
+<p><table>
+  <thead>
+    <tr>
+      <th>Param</th><th>Type</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>model</td><td><code>model</code></td>
+    </tr>  </tbody>
+</table></p>
+<p><a name="State+model"></a></p>
+<h3 id="statemodel-object">state.model : <code>object</code><a class="headerlink" href="#statemodel-object" title="Permanent link">&para;</a></h3>
+<p><strong>Kind</strong>: instance property of <code><a href="#State">State</a></code><br />
+<a name="State+filetredDate"></a></p>
+<h3 id="statefiletreddate-boolean">state.filetredDate : <code>Boolean</code><a class="headerlink" href="#statefiletreddate-boolean" title="Permanent link">&para;</a></h3>
+<p><strong>Kind</strong>: instance property of <code><a href="#State">State</a></code><br />
+<a name="State+viewModeList"></a></p>
+<h3 id="stateviewmodelist-array">state.viewModeList : <code>Array</code><a class="headerlink" href="#stateviewmodelist-array" title="Permanent link">&para;</a></h3>
+<p>get generated view mode list from options object</p>
+<p><strong>Kind</strong>: instance property of <code><a href="#State">State</a></code><br />
+<a name="State+viewMode"></a></p>
+<h3 id="stateviewmode-string">state.viewMode : <code>String</code><a class="headerlink" href="#stateviewmode-string" title="Permanent link">&para;</a></h3>
+<p>view mode string day, month, year</p>
+<p><strong>Kind</strong>: instance property of <code><a href="#State">State</a></code><br />
+<strong>Default</strong>: <code>day</code><br />
+<strong>Todo</strong></p>
+<ul>
+<li>add time to view modes</li>
+</ul>
+<p><a name="State+viewModeIndex"></a></p>
+<h3 id="stateviewmodeindex-number">state.viewModeIndex : <code>number</code><a class="headerlink" href="#stateviewmodeindex-number" title="Permanent link">&para;</a></h3>
+<p>view mode string index in view mode list</p>
+<p><strong>Kind</strong>: instance property of <code><a href="#State">State</a></code><br />
+<a name="State+filterDate"></a></p>
+<h3 id="statefilterdate-object">state.filterDate : <code>Object</code><a class="headerlink" href="#statefilterdate-object" title="Permanent link">&para;</a></h3>
+<p>contain filtered date objects</p>
+<p><strong>Kind</strong>: instance property of <code><a href="#State">State</a></code><br />
+<a name="State+view"></a></p>
+<h3 id="stateview-object">state.view : <code>Object</code><a class="headerlink" href="#stateview-object" title="Permanent link">&para;</a></h3>
+<p>contain view date object</p>
+<p><strong>Kind</strong>: instance property of <code><a href="#State">State</a></code><br />
+<a name="State+selected"></a></p>
+<h3 id="stateselected-object">state.selected : <code>Object</code><a class="headerlink" href="#stateselected-object" title="Permanent link">&para;</a></h3>
+<p>contain selected date object</p>
+<p><strong>Kind</strong>: instance property of <code><a href="#State">State</a></code><br />
+<a name="State+setSelectedDateTime"></a></p>
+<h3 id="statesetselecteddatetimekey-value-state">state.setSelectedDateTime(key, value) ⇒ <code><a href="#State">State</a></code><a class="headerlink" href="#statesetselecteddatetimekey-value-state" title="Permanent link">&para;</a></h3>
+<p>called on date select</p>
+<p><strong>Kind</strong>: instance method of <code><a href="#State">State</a></code><br />
+<strong>Access:</strong> public<br />
+<table>
+  <thead>
+    <tr>
+      <th>Param</th><th>Type</th><th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>key</td><td><code>String</code></td><td><p>accept date, month, year, hour, minute, second</p>
+</td>
+    </tr><tr>
+    <td>value</td><td><code>Number</code></td><td></td>
+    </tr>  </tbody>
+</table></p>
+<p><a name="State+navigate"></a></p>
+<h3 id="statenavigatenav">state.navigate(nav)<a class="headerlink" href="#statenavigatenav" title="Permanent link">&para;</a></h3>
+<p>change view state</p>
+<p><strong>Kind</strong>: instance method of <code><a href="#State">State</a></code><br />
+<table>
+  <thead>
+    <tr>
+      <th>Param</th><th>Type</th><th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>nav</td><td><code>String</code></td><td><p>accept next, prev</p>
+</td>
+    </tr>  </tbody>
+</table></p>
+<p><a name="State+switchViewMode"></a></p>
+<h3 id="stateswitchviewmode-state">state.switchViewMode() ⇒ <code><a href="#State">State</a></code><a class="headerlink" href="#stateswitchviewmode-state" title="Permanent link">&para;</a></h3>
+<p>every time called view state changed to next in queue</p>
+<p><strong>Kind</strong>: instance method of <code><a href="#State">State</a></code><br />
+<strong>Access:</strong> public<br />
+<a name="State+switchViewModeTo"></a></p>
+<h3 id="stateswitchviewmodetoviewmode">state.switchViewModeTo(viewMode)<a class="headerlink" href="#stateswitchviewmodetoviewmode" title="Permanent link">&para;</a></h3>
+<p>switch to specified view mode</p>
+<p><strong>Kind</strong>: instance method of <code><a href="#State">State</a></code><br />
+<table>
+  <thead>
+    <tr>
+      <th>Param</th><th>Type</th><th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>viewMode</td><td><code>String</code></td><td><p>accept date, month, year</p>
+</td>
+    </tr>  </tbody>
+</table></p>
+<p><a name="State+setViewDateTime"></a></p>
+<h3 id="statesetviewdatetimekey-value-state">state.setViewDateTime(key, value) ⇒ <code><a href="#State">State</a></code><a class="headerlink" href="#statesetviewdatetimekey-value-state" title="Permanent link">&para;</a></h3>
+<p><strong>Kind</strong>: instance method of <code><a href="#State">State</a></code><br />
+<table>
+  <thead>
+    <tr>
+      <th>Param</th><th>Type</th><th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>key</td><td><code>String</code></td><td><p>accept date, month, year, hour, minute, second</p>
+</td>
+    </tr><tr>
+    <td>value</td><td><code>Number</code></td><td></td>
+    </tr>  </tbody>
+</table></p>
+<p><a name="Toolbox"></a></p>
+<h2 id="toolbox">Toolbox<a class="headerlink" href="#toolbox" title="Permanent link">&para;</a></h2>
+<p>Do every things about toolbox, like attach events to toolbox elements</p>
+<p><strong>Kind</strong>: global class  </p>
+<ul>
+<li><a href="#Toolbox">Toolbox</a><ul>
+<li><a href="#new_Toolbox_new">new Toolbox(datepicker)</a></li>
+<li><a href="#Toolbox+model">.model</a> : <code>Datepicker</code></li>
+<li><a href="#Toolbox+_attachEvents">._attachEvents()</a></li>
+</ul>
+</li>
+</ul>
+<p><a name="new_Toolbox_new"></a></p>
+<h3 id="new-toolboxdatepicker">new Toolbox(datepicker)<a class="headerlink" href="#new-toolboxdatepicker" title="Permanent link">&para;</a></h3>
+<p><table>
+  <thead>
+    <tr>
+      <th>Param</th><th>Type</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>datepicker</td><td><code>Datepicker</code></td>
+    </tr>  </tbody>
+</table></p>
+<p><a name="Toolbox+model"></a></p>
+<h3 id="toolboxmodel-datepicker">toolbox.model : <code>Datepicker</code><a class="headerlink" href="#toolboxmodel-datepicker" title="Permanent link">&para;</a></h3>
+<p><strong>Kind</strong>: instance property of <code><a href="#Toolbox">Toolbox</a></code><br />
+<a name="Toolbox+_attachEvents"></a></p>
+<h3 id="toolbox_attachevents">toolbox._attachEvents()<a class="headerlink" href="#toolbox_attachevents" title="Permanent link">&para;</a></h3>
+<p>attach all events about toolbox</p>
+<p><strong>Kind</strong>: instance method of <code><a href="#Toolbox">Toolbox</a></code><br />
+<a name="View"></a></p>
+<h2 id="view">View<a class="headerlink" href="#view" title="Permanent link">&para;</a></h2>
+<p>As its name suggests, all rendering works do in this object</p>
+<p><strong>Kind</strong>: global class  </p>
+<ul>
+<li><a href="#View">View</a><ul>
+<li><a href="#new_View_new">new View(model)</a></li>
+<li><a href="#View+yearsViewCount">.yearsViewCount</a> : <code>number</code></li>
+<li><a href="#View+model">.model</a> : <code>Datepicker</code></li>
+<li><a href="#View+rendered">.rendered</a> : <code>null</code></li>
+<li><a href="#View+$container">.$container</a> : <code>null</code></li>
+<li><a href="#View+id">.id</a> : <code>string</code></li>
+<li><a href="#View+destroy">.destroy()</a></li>
+<li><a href="#View+setPickerBoxPosition">.setPickerBoxPosition()</a></li>
+<li><a href="#View+show">.show()</a></li>
+<li><a href="#View+hide">.hide()</a></li>
+<li><a href="#View+toggle">.toggle()</a></li>
+<li><a href="#View+checkYearAccess">.checkYearAccess(year)</a> ⇒ <code>Boolean</code></li>
+<li><a href="#View+checkMonthAccess">.checkMonthAccess(month)</a> ⇒ <code>Boolean</code></li>
+<li><a href="#View+checkDayAccess">.checkDayAccess(thisUnix)</a> ⇒ <code>Boolean</code></li>
+<li><a href="#View+getViewModel">.getViewModel(data)</a> ⇒ <code>*</code></li>
+<li><a href="#View+render">.render(data)</a></li>
+<li><a href="#View+afterRender">.afterRender()</a></li>
+</ul>
+</li>
+</ul>
+<p><a name="new_View_new"></a></p>
+<h3 id="new-viewmodel">new View(model)<a class="headerlink" href="#new-viewmodel" title="Permanent link">&para;</a></h3>
+<p><table>
+  <thead>
+    <tr>
+      <th>Param</th><th>Type</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>model</td><td><code>Datepicker</code></td>
+    </tr>  </tbody>
+</table></p>
+<p><a name="View+yearsViewCount"></a></p>
+<h3 id="viewyearsviewcount-number">view.yearsViewCount : <code>number</code><a class="headerlink" href="#viewyearsviewcount-number" title="Permanent link">&para;</a></h3>
+<p><strong>Kind</strong>: instance property of <code><a href="#View">View</a></code><br />
+<a name="View+model"></a></p>
+<h3 id="viewmodel-datepicker">view.model : <code>Datepicker</code><a class="headerlink" href="#viewmodel-datepicker" title="Permanent link">&para;</a></h3>
+<p><strong>Kind</strong>: instance property of <code><a href="#View">View</a></code><br />
+<a name="View+rendered"></a></p>
+<h3 id="viewrendered-null">view.rendered : <code>null</code><a class="headerlink" href="#viewrendered-null" title="Permanent link">&para;</a></h3>
+<p><strong>Kind</strong>: instance property of <code><a href="#View">View</a></code><br />
+<a name="View+$container"></a></p>
+<h3 id="viewcontainer-null">view.$container : <code>null</code><a class="headerlink" href="#viewcontainer-null" title="Permanent link">&para;</a></h3>
+<p><strong>Kind</strong>: instance property of <code><a href="#View">View</a></code><br />
+<a name="View+id"></a></p>
+<h3 id="viewid-string">view.id : <code>string</code><a class="headerlink" href="#viewid-string" title="Permanent link">&para;</a></h3>
+<p><strong>Kind</strong>: instance property of <code><a href="#View">View</a></code><br />
+<a name="View+destroy"></a></p>
+<h3 id="viewdestroy">view.destroy()<a class="headerlink" href="#viewdestroy" title="Permanent link">&para;</a></h3>
+<p>remove datepicker container element from dom</p>
+<p><strong>Kind</strong>: instance method of <code><a href="#View">View</a></code><br />
+<a name="View+setPickerBoxPosition"></a></p>
+<h3 id="viewsetpickerboxposition">view.setPickerBoxPosition()<a class="headerlink" href="#viewsetpickerboxposition" title="Permanent link">&para;</a></h3>
+<p>set datepicker container element based on <input/> element position</p>
+<p><strong>Kind</strong>: instance method of <code><a href="#View">View</a></code><br />
+<a name="View+show"></a></p>
+<h3 id="viewshow">view.show()<a class="headerlink" href="#viewshow" title="Permanent link">&para;</a></h3>
+<p>show datepicker container element</p>
+<p><strong>Kind</strong>: instance method of <code><a href="#View">View</a></code><br />
+<a name="View+hide"></a></p>
+<h3 id="viewhide">view.hide()<a class="headerlink" href="#viewhide" title="Permanent link">&para;</a></h3>
+<p>hide datepicker container element</p>
+<p><strong>Kind</strong>: instance method of <code><a href="#View">View</a></code><br />
+<a name="View+toggle"></a></p>
+<h3 id="viewtoggle">view.toggle()<a class="headerlink" href="#viewtoggle" title="Permanent link">&para;</a></h3>
+<p>toggle datepicker container element</p>
+<p><strong>Kind</strong>: instance method of <code><a href="#View">View</a></code><br />
+<a name="View+checkYearAccess"></a></p>
+<h3 id="viewcheckyearaccessyear-boolean">view.checkYearAccess(year) ⇒ <code>Boolean</code><a class="headerlink" href="#viewcheckyearaccessyear-boolean" title="Permanent link">&para;</a></h3>
+<p>check year is accessible</p>
+<p><strong>Kind</strong>: instance method of <code><a href="#View">View</a></code><br />
+<table>
+  <thead>
+    <tr>
+      <th>Param</th><th>Type</th><th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>year</td><td><code>Number</code></td><td><p>year number</p>
+</td>
+    </tr>  </tbody>
+</table></p>
+<p><a name="View+checkMonthAccess"></a></p>
+<h3 id="viewcheckmonthaccessmonth-boolean">view.checkMonthAccess(month) ⇒ <code>Boolean</code><a class="headerlink" href="#viewcheckmonthaccessmonth-boolean" title="Permanent link">&para;</a></h3>
+<p>check month is accessible</p>
+<p><strong>Kind</strong>: instance method of <code><a href="#View">View</a></code><br />
+<table>
+  <thead>
+    <tr>
+      <th>Param</th><th>Type</th><th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>month</td><td><code>Number</code></td><td><p>month number</p>
+</td>
+    </tr>  </tbody>
+</table></p>
+<p><a name="View+checkDayAccess"></a></p>
+<h3 id="viewcheckdayaccessthisunix-boolean">view.checkDayAccess(thisUnix) ⇒ <code>Boolean</code><a class="headerlink" href="#viewcheckdayaccessthisunix-boolean" title="Permanent link">&para;</a></h3>
+<p>check day is accessible</p>
+<p><strong>Kind</strong>: instance method of <code><a href="#View">View</a></code><br />
+<table>
+  <thead>
+    <tr>
+      <th>Param</th><th>Type</th><th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>thisUnix</td><td><code>Number</code></td><td><p>month number</p>
+</td>
+    </tr>  </tbody>
+</table></p>
+<p><a name="View+getViewModel"></a></p>
+<h3 id="viewgetviewmodeldata-42">view.getViewModel(data) ⇒ <code>*</code><a class="headerlink" href="#viewgetviewmodeldata-42" title="Permanent link">&para;</a></h3>
+<p><strong>Kind</strong>: instance method of <code><a href="#View">View</a></code><br />
+<table>
+  <thead>
+    <tr>
+      <th>Param</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>data</td>
+    </tr>  </tbody>
+</table></p>
+<p><a name="View+render"></a></p>
+<h3 id="viewrenderdata">view.render(data)<a class="headerlink" href="#viewrenderdata" title="Permanent link">&para;</a></h3>
+<p><strong>Kind</strong>: instance method of <code><a href="#View">View</a></code><br />
+<strong>Render</strong>: datepicker view element<br />
+<table>
+  <thead>
+    <tr>
+      <th>Param</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>data</td>
+    </tr>  </tbody>
+</table></p>
+<p><a name="View+afterRender"></a></p>
+<h3 id="viewafterrender">view.afterRender()<a class="headerlink" href="#viewafterrender" title="Permanent link">&para;</a></h3>
+<p>do after render work like attache events</p>
+<p><strong>Kind</strong>: instance method of <code><a href="#View">View</a></code><br />
+<a name="Config"></a></p>
+<h2 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h2>
+<p>This is default config class</p>
+<p><strong>Kind</strong>: global constant  </p>
+<ul>
+<li><a href="#Config">Config</a><ul>
+<li><a href="#Config.initialValue">.initialValue</a> : <code>Boolean</code></li>
+<li><a href="#Config.persianDigit">.persianDigit</a> : <code>Boolean</code></li>
+<li><a href="#Config.viewMode">.viewMode</a> : <code>string</code></li>
+<li><a href="#Config.format">.format</a> : <code>boolean</code></li>
+<li><a href="#Config.altField">.altField</a> : <code>boolean</code></li>
+<li><a href="#Config.altFormat">.altFormat</a> : <code>string</code></li>
+<li><a href="#Config.minDate">.minDate</a> : <code>boolean</code></li>
+<li><a href="#Config.maxDate">.maxDate</a> : <code>boolean</code></li>
+<li><a href="#Config.navigator">.navigator</a> : <code>object</code><ul>
+<li><a href="#Config.navigator.enabled">.enabled</a></li>
+<li><a href="#Config.navigator.text">.text</a><ul>
+<li><a href="#Config.navigator.text.btnNextText">.btnNextText</a></li>
+<li><a href="#Config.navigator.text.btnPrevText">.btnPrevText</a></li>
+</ul>
+</li>
+<li><a href="#Config.navigator.event_onNext">"onNext" (navigator)</a></li>
+<li><a href="#Config.navigator.event_onPrev">"onPrev" (navigator)</a></li>
+<li><a href="#Config.navigator.event_onSwitch">"onSwitch" (navigator)</a></li>
+</ul>
+</li>
+<li><a href="#Config.toolbox">.toolbox</a> : <code>object</code></li>
+<li><a href="#Config.onlyTimePicker">.onlyTimePicker</a> : <code>boolean</code></li>
+<li><a href="#Config.onlySelectOnDate">.onlySelectOnDate</a> : <code>boolean</code></li>
+<li><a href="#Config.timePicker">.timePicker</a> : <code>object</code></li>
+<li><a href="#Config.dayPicker">.dayPicker</a> : <code>object</code></li>
+<li><a href="#Config.monthPicker">.monthPicker</a> : <code>object</code></li>
+<li><a href="#Config.yearPicker">.yearPicker</a> : <code>object</code></li>
+<li><a href="#Config.position">.position</a></li>
+<li><a href="#Config.autoClose">.autoClose</a> : <code>boolean</code></li>
+<li><del><a href="#Config.observer">.observer</a> : <code>boolean</code></del></li>
+<li><a href="#Config.inputDelay">.inputDelay</a> : <code>number</code></li>
+<li><a href="#Config.formatter">.formatter(unixDate)</a> ⇒ <code>*</code></li>
+<li><a href="#Config.altFieldFormatter">.altFieldFormatter(unixDate)</a> ⇒ <code>*</code></li>
+<li><a href="#Config.checkDate">.checkDate()</a> : <code>function</code></li>
+<li><a href="#Config.checkMonth">.checkMonth()</a> : <code>function</code></li>
+<li><a href="#Config.checkYear">.checkYear()</a> : <code>function</code></li>
+<li><a href="#Config.onToggle">.onToggle()</a></li>
+<li><a href="#Config.onDestroy">.onDestroy()</a></li>
+<li><a href="#Config.event_onSelect">"onSelect" (unixDate)</a></li>
+<li><a href="#Config.event_onShow">"onShow"</a></li>
+<li><a href="#Config.event_onHide">"onHide" (self)</a></li>
+</ul>
+</li>
+</ul>
+<p><a name="Config.initialValue"></a></p>
+<h3 id="configinitialvalue-boolean">Config.initialValue : <code>Boolean</code><a class="headerlink" href="#configinitialvalue-boolean" title="Permanent link">&para;</a></h3>
+<p><strong>Kind</strong>: static property of <code><a href="#Config">Config</a></code><br />
+<a name="Config.persianDigit"></a></p>
+<h3 id="configpersiandigit-boolean">Config.persianDigit : <code>Boolean</code><a class="headerlink" href="#configpersiandigit-boolean" title="Permanent link">&para;</a></h3>
+<p><strong>Kind</strong>: static property of <code><a href="#Config">Config</a></code><br />
+<a name="Config.viewMode"></a></p>
+<h3 id="configviewmode-string">Config.viewMode : <code>string</code><a class="headerlink" href="#configviewmode-string" title="Permanent link">&para;</a></h3>
+<p>Acceptable value : day,month,year</p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config">Config</a></code><br />
+<strong>Default</strong>: <code>&quot;day&quot;</code><br />
+<a name="Config.format"></a></p>
+<h3 id="configformat-boolean">Config.format : <code>boolean</code><a class="headerlink" href="#configformat-boolean" title="Permanent link">&para;</a></h3>
+<p>the date format, combination of d, dd, m, mm, yy, yyy.
+<a href="http://babakhani.github.io/PersianWebToolkit/doc/persiandate/0.1.8/#/displaying/format/">http://babakhani.github.io/PersianWebToolkit/doc/persiandate/0.1.8/#/displaying/format/</a></p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config">Config</a></code><br />
+<strong>Default</strong>: <code>false</code><br />
+<a name="Config.altField"></a></p>
+<h3 id="configaltfield-boolean">Config.altField : <code>boolean</code><a class="headerlink" href="#configaltfield-boolean" title="Permanent link">&para;</a></h3>
+<p>An input element that is to be updated with the selected date from the datepicker. Use the altFormat option to change the format of the date within this field. Leave as blank for no alternate field. acceptable value: : '#elementId','.element-class'</p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config">Config</a></code><br />
+<strong>Default</strong>: <code>false</code><br />
+<a name="Config.altFormat"></a></p>
+<h3 id="configaltformat-string">Config.altFormat : <code>string</code><a class="headerlink" href="#configaltformat-string" title="Permanent link">&para;</a></h3>
+<p>the date format, combination of d, dd, m, mm, yy, yyy.
+<a href="http://babakhani.github.io/PersianWebToolkit/doc/persiandate/0.1.8/#/displaying/format/">http://babakhani.github.io/PersianWebToolkit/doc/persiandate/0.1.8/#/displaying/format/</a></p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config">Config</a></code><br />
+<strong>Default</strong>: <code>&quot;unix&quot;</code><br />
+<a name="Config.minDate"></a></p>
+<h3 id="configmindate-boolean">Config.minDate : <code>boolean</code><a class="headerlink" href="#configmindate-boolean" title="Permanent link">&para;</a></h3>
+<p>set min date on datepicker</p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config">Config</a></code><br />
+<strong>Properties</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>minDate</td>
+    </tr>  </tbody>
+</table>
+
+<p><a name="Config.maxDate"></a></p>
+<h3 id="configmaxdate-boolean">Config.maxDate : <code>boolean</code><a class="headerlink" href="#configmaxdate-boolean" title="Permanent link">&para;</a></h3>
+<p>set max date on datepicker</p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config">Config</a></code><br />
+<strong>Properties</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>maxDate</td>
+    </tr>  </tbody>
+</table>
+
+<p><a name="Config.navigator"></a></p>
+<h3 id="confignavigator-object">Config.navigator : <code>object</code><a class="headerlink" href="#confignavigator-object" title="Permanent link">&para;</a></h3>
+<p>navigator config object</p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config">Config</a></code><br />
+<strong>Default</strong>: <code>true</code>  </p>
+<ul>
+<li><a href="#Config.navigator">.navigator</a> : <code>object</code><ul>
+<li><a href="#Config.navigator.enabled">.enabled</a></li>
+<li><a href="#Config.navigator.text">.text</a><ul>
+<li><a href="#Config.navigator.text.btnNextText">.btnNextText</a></li>
+<li><a href="#Config.navigator.text.btnPrevText">.btnPrevText</a></li>
+</ul>
+</li>
+<li><a href="#Config.navigator.event_onNext">"onNext" (navigator)</a></li>
+<li><a href="#Config.navigator.event_onPrev">"onPrev" (navigator)</a></li>
+<li><a href="#Config.navigator.event_onSwitch">"onSwitch" (navigator)</a></li>
+</ul>
+</li>
+</ul>
+<p><a name="Config.navigator.enabled"></a></p>
+<h4 id="navigatorenabled">navigator.enabled<a class="headerlink" href="#navigatorenabled" title="Permanent link">&para;</a></h4>
+<p>Enable or Disable dayPicker</p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config.navigator">navigator</a></code><br />
+<a name="Config.navigator.text"></a></p>
+<h4 id="navigatortext">navigator.text<a class="headerlink" href="#navigatortext" title="Permanent link">&para;</a></h4>
+<p>navigator text config object</p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config.navigator">navigator</a></code>  </p>
+<ul>
+<li><a href="#Config.navigator.text">.text</a><ul>
+<li><a href="#Config.navigator.text.btnNextText">.btnNextText</a></li>
+<li><a href="#Config.navigator.text.btnPrevText">.btnPrevText</a></li>
+</ul>
+</li>
+</ul>
+<p><a name="Config.navigator.text.btnNextText"></a></p>
+<h5 id="textbtnnexttext">text.btnNextText<a class="headerlink" href="#textbtnnexttext" title="Permanent link">&para;</a></h5>
+<p>text of next btn</p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config.navigator.text">text</a></code><br />
+<a name="Config.navigator.text.btnPrevText"></a></p>
+<h5 id="textbtnprevtext">text.btnPrevText<a class="headerlink" href="#textbtnprevtext" title="Permanent link">&para;</a></h5>
+<p>text of prev btn</p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config.navigator.text">text</a></code><br />
+<a name="Config.navigator.event_onNext"></a></p>
+<h4 id="onnext-navigator">"onNext" (navigator)<a class="headerlink" href="#onnext-navigator" title="Permanent link">&para;</a></h4>
+<p>Trigger When Next button clicked</p>
+<p><strong>Kind</strong>: event emitted by <code><a href="#Config.navigator">navigator</a></code><br />
+<table>
+  <thead>
+    <tr>
+      <th>Param</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>navigator</td>
+    </tr>  </tbody>
+</table></p>
+<p><a name="Config.navigator.event_onPrev"></a></p>
+<h4 id="onprev-navigator">"onPrev" (navigator)<a class="headerlink" href="#onprev-navigator" title="Permanent link">&para;</a></h4>
+<p>Trigger When Prev button clicked</p>
+<p><strong>Kind</strong>: event emitted by <code><a href="#Config.navigator">navigator</a></code><br />
+<table>
+  <thead>
+    <tr>
+      <th>Param</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>navigator</td>
+    </tr>  </tbody>
+</table></p>
+<p><a name="Config.navigator.event_onSwitch"></a></p>
+<h4 id="onswitch-navigator">"onSwitch" (navigator)<a class="headerlink" href="#onswitch-navigator" title="Permanent link">&para;</a></h4>
+<p>Trigger When Switch view button clicked</p>
+<p><strong>Kind</strong>: event emitted by <code><a href="#Config.navigator">navigator</a></code><br />
+<table>
+  <thead>
+    <tr>
+      <th>Param</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>navigator</td>
+    </tr>  </tbody>
+</table></p>
+<p><a name="Config.toolbox"></a></p>
+<h3 id="configtoolbox-object">Config.toolbox : <code>object</code><a class="headerlink" href="#configtoolbox-object" title="Permanent link">&para;</a></h3>
+<p>toolbox config object</p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config">Config</a></code><br />
+<strong>Default</strong>: <code>true</code><br />
+<a name="Config.onlyTimePicker"></a></p>
+<h3 id="configonlytimepicker-boolean">Config.onlyTimePicker : <code>boolean</code><a class="headerlink" href="#configonlytimepicker-boolean" title="Permanent link">&para;</a></h3>
+<p>if true all pickers hide and just shpw timepicker</p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config">Config</a></code><br />
+<strong>Default</strong>: <code>false</code><br />
+<a name="Config.onlySelectOnDate"></a></p>
+<h3 id="configonlyselectondate-boolean">Config.onlySelectOnDate : <code>boolean</code><a class="headerlink" href="#configonlyselectondate-boolean" title="Permanent link">&para;</a></h3>
+<p>if true date select just by click on day in month grid</p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config">Config</a></code><br />
+<strong>Properties</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>justSelectOnDate</td>
+    </tr>  </tbody>
+</table>
+
+<p><a name="Config.timePicker"></a></p>
+<h3 id="configtimepicker-object">Config.timePicker : <code>object</code><a class="headerlink" href="#configtimepicker-object" title="Permanent link">&para;</a></h3>
+<p>timepicker config object</p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config">Config</a></code><br />
+<a name="Config.dayPicker"></a></p>
+<h3 id="configdaypicker-object">Config.dayPicker : <code>object</code><a class="headerlink" href="#configdaypicker-object" title="Permanent link">&para;</a></h3>
+<p>dayPicker config object</p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config">Config</a></code><br />
+<a name="Config.monthPicker"></a></p>
+<h3 id="configmonthpicker-object">Config.monthPicker : <code>object</code><a class="headerlink" href="#configmonthpicker-object" title="Permanent link">&para;</a></h3>
+<p>monthPicker config object</p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config">Config</a></code><br />
+<a name="Config.yearPicker"></a></p>
+<h3 id="configyearpicker-object">Config.yearPicker : <code>object</code><a class="headerlink" href="#configyearpicker-object" title="Permanent link">&para;</a></h3>
+<p>yearPicker config object</p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config">Config</a></code><br />
+<a name="Config.position"></a></p>
+<h3 id="configposition">Config.position<a class="headerlink" href="#configposition" title="Permanent link">&para;</a></h3>
+<p><strong>Kind</strong>: static property of <code><a href="#Config">Config</a></code><br />
+<a name="Config.autoClose"></a></p>
+<h3 id="configautoclose-boolean">Config.autoClose : <code>boolean</code><a class="headerlink" href="#configautoclose-boolean" title="Permanent link">&para;</a></h3>
+<p>If true picker close When Select day</p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config">Config</a></code><br />
+<strong>Default</strong>: <code>false</code><br />
+<a name="Config.observer"></a></p>
+<h3 id="configobserver-boolean"><del>Config.observer : <code>boolean</code></del><a class="headerlink" href="#configobserver-boolean" title="Permanent link">&para;</a></h3>
+<p><strong><em>Deprecated</em></strong></p>
+<p>observer</p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config">Config</a></code><br />
+<strong>Default</strong>: <code>false</code><br />
+<a name="Config.inputDelay"></a></p>
+<h3 id="configinputdelay-number">Config.inputDelay : <code>number</code><a class="headerlink" href="#configinputdelay-number" title="Permanent link">&para;</a></h3>
+<p>inputDelay</p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config">Config</a></code><br />
+<strong>Default</strong>: <code>800</code><br />
+<a name="Config.formatter"></a></p>
+<h3 id="configformatterunixdate-42">Config.formatter(unixDate) ⇒ <code>*</code><a class="headerlink" href="#configformatterunixdate-42" title="Permanent link">&para;</a></h3>
+<p>format value of input</p>
+<p><strong>Kind</strong>: static method of <code><a href="#Config">Config</a></code><br />
+<table>
+  <thead>
+    <tr>
+      <th>Param</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>unixDate</td>
+    </tr>  </tbody>
+</table></p>
+<p><a name="Config.altFieldFormatter"></a></p>
+<h3 id="configaltfieldformatterunixdate-42">Config.altFieldFormatter(unixDate) ⇒ <code>*</code><a class="headerlink" href="#configaltfieldformatterunixdate-42" title="Permanent link">&para;</a></h3>
+<p>format value of 'altField' input</p>
+<p><strong>Kind</strong>: static method of <code><a href="#Config">Config</a></code><br />
+<table>
+  <thead>
+    <tr>
+      <th>Param</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>unixDate</td>
+    </tr>  </tbody>
+</table></p>
+<p><a name="Config.checkDate"></a></p>
+<h3 id="configcheckdate-function">Config.checkDate() : <code>function</code><a class="headerlink" href="#configcheckdate-function" title="Permanent link">&para;</a></h3>
+<p>check date avalibility</p>
+<p><strong>Kind</strong>: static method of <code><a href="#Config">Config</a></code><br />
+<a name="Config.checkMonth"></a></p>
+<h3 id="configcheckmonth-function">Config.checkMonth() : <code>function</code><a class="headerlink" href="#configcheckmonth-function" title="Permanent link">&para;</a></h3>
+<p>check month avalibility</p>
+<p><strong>Kind</strong>: static method of <code><a href="#Config">Config</a></code><br />
+<a name="Config.checkYear"></a></p>
+<h3 id="configcheckyear-function">Config.checkYear() : <code>function</code><a class="headerlink" href="#configcheckyear-function" title="Permanent link">&para;</a></h3>
+<p>check year avalibility</p>
+<p><strong>Kind</strong>: static method of <code><a href="#Config">Config</a></code><br />
+<a name="Config.onToggle"></a></p>
+<h3 id="configontoggle">Config.onToggle()<a class="headerlink" href="#configontoggle" title="Permanent link">&para;</a></h3>
+<p><strong>Kind</strong>: static method of <code><a href="#Config">Config</a></code><br />
+<a name="Config.onDestroy"></a></p>
+<h3 id="configondestroy">Config.onDestroy()<a class="headerlink" href="#configondestroy" title="Permanent link">&para;</a></h3>
+<p><strong>Kind</strong>: static method of <code><a href="#Config">Config</a></code><br />
+<a name="Config.event_onSelect"></a></p>
+<h3 id="onselect-unixdate">"onSelect" (unixDate)<a class="headerlink" href="#onselect-unixdate" title="Permanent link">&para;</a></h3>
+<p>A function that takes current datepicker unixDate. It is called When Day Select.</p>
+<p><strong>Kind</strong>: event emitted by <code><a href="#Config">Config</a></code><br />
+<table>
+  <thead>
+    <tr>
+      <th>Param</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>unixDate</td>
+    </tr>  </tbody>
+</table></p>
+<p><a name="Config.event_onShow"></a></p>
+<h3 id="onshow">"onShow"<a class="headerlink" href="#onshow" title="Permanent link">&para;</a></h3>
+<p>A function that takes current datepicker instance. It is called just before the datepicker is displayed.</p>
+<p><strong>Kind</strong>: event emitted by <code><a href="#Config">Config</a></code><br />
+<a name="Config.event_onHide"></a></p>
+<h3 id="onhide-self">"onHide" (self)<a class="headerlink" href="#onhide-self" title="Permanent link">&para;</a></h3>
+<p>A function that takes current datepicker instance. It is called just before the datepicker Hide.</p>
+<p><strong>Kind</strong>: event emitted by <code><a href="#Config">Config</a></code><br />
+<table>
+  <thead>
+    <tr>
+      <th>Param</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>self</td>
+    </tr>  </tbody>
+</table></p>
+<p><a name="ClassDateRange"></a></p>
+<h2 id="classdaterange">ClassDateRange<a class="headerlink" href="#classdaterange" title="Permanent link">&para;</a></h2>
+<p><strong>Kind</strong>: global constant  </p>
+<ul>
+<li><a href="#ClassDateRange">ClassDateRange</a><ul>
+<li><a href="#ClassDateRange.monthRange">.monthRange</a></li>
+<li><a href="#ClassDateRange.weekRange">.weekRange</a></li>
+<li><a href="#ClassDateRange.persianDaysName">.persianDaysName</a></li>
+</ul>
+</li>
+</ul>
+<p><a name="ClassDateRange.monthRange"></a></p>
+<h3 id="classdaterangemonthrange">ClassDateRange.monthRange<a class="headerlink" href="#classdaterangemonthrange" title="Permanent link">&para;</a></h3>
+<p><strong>Kind</strong>: static property of <code><a href="#ClassDateRange">ClassDateRange</a></code><br />
+<strong>Properties</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>monthRange</td>
+    </tr>  </tbody>
+</table>
+
+<p><a name="ClassDateRange.weekRange"></a></p>
+<h3 id="classdaterangeweekrange">ClassDateRange.weekRange<a class="headerlink" href="#classdaterangeweekrange" title="Permanent link">&para;</a></h3>
+<p><strong>Kind</strong>: static property of <code><a href="#ClassDateRange">ClassDateRange</a></code><br />
+<strong>Properties</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>weekRange</td>
+    </tr>  </tbody>
+</table>
+
+<p><a name="ClassDateRange.persianDaysName"></a></p>
+<h3 id="classdaterangepersiandaysname">ClassDateRange.persianDaysName<a class="headerlink" href="#classdaterangepersiandaysname" title="Permanent link">&para;</a></h3>
+<p><strong>Kind</strong>: static property of <code><a href="#ClassDateRange">ClassDateRange</a></code><br />
+<strong>Properties</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>persianDaysName</td>
+    </tr>  </tbody>
+</table>
+
+<p><a name="Template"></a></p>
+<h2 id="template-string">Template : <code>string</code><a class="headerlink" href="#template-string" title="Permanent link">&para;</a></h2>
+<p><strong>Kind</strong>: global constant<br />
+<a name="log"></a></p>
+<h2 id="loginput">log(input)<a class="headerlink" href="#loginput" title="Permanent link">&para;</a></h2>
+<p>normal log</p>
+<p><strong>Kind</strong>: global function<br />
+<table>
+  <thead>
+    <tr>
+      <th>Param</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>input</td>
+    </tr>  </tbody>
+</table></p>
+<p><strong>Example</strong>  </p>
+<div class="codehilite"><pre><span></span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;whoooooha&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<p><a name="debug"></a></p>
+<h2 id="debugelem-input">debug(elem, input)<a class="headerlink" href="#debugelem-input" title="Permanent link">&para;</a></h2>
+<p>show debug messages if window.persianDatepickerDebug set as true</p>
+<p><strong>Kind</strong>: global function<br />
+<table>
+  <thead>
+    <tr>
+      <th>Param</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>elem</td>
+    </tr><tr>
+    <td>input</td>
+    </tr>  </tbody>
+</table></p>
+<p><strong>Example</strong>  </p>
+<div class="codehilite"><pre><span></span><span class="nb">window</span><span class="p">.</span><span class="nx">persianDatepickerDebug</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+<span class="nx">debug</span><span class="p">(</span><span class="s1">&#39;element&#39;</span><span class="p">,</span><span class="s1">&#39;message&#39;</span><span class="p">);</span>
+</pre></div>
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../changelog/" title="Change log" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Change log
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            license http://www.wtfpl.net/
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/babakhani" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://de.linkedin.com/in/martin-donath-20a95039" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application-2afe21e0b2.js"></script>
+      <script>var config={url:{base:"../.."}},app=new Application(config);app.initialize()</script>
+      
+        <script src="../.././lib/jquery/dist/jquery.js"></script>
+      
+        <script src="../.././lib/persian-date/dist/0.1.8/persian-date-0.1.8.js"></script>
+      
+        <script src="../.././lib/persian-datepicker/dist/js/persian-datepicker-0.4.5.js"></script>
+      
+        <script src="../.././js/datepicker-example.js"></script>
+      
+        <script src="https://buttons.github.io/buttons.js"></script>
+      
+    
+    
+      
+      <script>!function(e,t,a,n,o,c,i){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,c=t.createElement(a),i=t.getElementsByTagName(a)[0],c.async=1,c.src=n,i.parentNode.insertBefore(c,i)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-40548780-1","babakhani.github.io/PersianWebToolkit/"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var t=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",t,e.href)})});var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})</script>
+      
+    
+  </body>
+</html>

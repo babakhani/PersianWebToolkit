@@ -1,0 +1,19 @@
+{
+    "name": "persian-date",
+    "version": "0.1.8",
+    "main": "dist/<= pkg.version>/persian-date-<= pkg.version>.js",
+    "ignore": [
+        ".jshintrc",
+        "**/*.txt",
+        "source",
+        "spec",
+        ".bowerrc",
+        ".gitignore",
+        ".jshintignore",
+        ".jshintrc",
+        "bower.json",
+        "gruntfile.js",
+        "package.json",
+        "README.md"
+    ]
+}
