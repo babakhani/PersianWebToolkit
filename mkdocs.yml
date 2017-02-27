@@ -4,9 +4,11 @@ theme:              'material'
 site_description:   Persian Web Toolkit document
 site_author:        babakhani.reza@gmail.com
 copyright:          license http://www.wtfpl.net/
-
+remote_branch: 'gh-pages'
 docs_dir: 'docs-source'
 site_dir: 'docs'
+repo_name: 'GitHub'
+strict: true
 
 google_analytics:
     - 'UA-40548780-1'
@@ -27,14 +29,11 @@ pages:
     - index.md
     - Persian Datepicker: 'datepicker/index.md'
     - Persian Date: 'persian-date/index.md'
-    - Test: 'test.md'
 
 extra:
     social:
         - type: 'github'
-          link: 'https://github.com/squidfunk'
-        - type: 'twitter'
-          link: 'https://twitter.com/squidfunk'
+          link: 'https://github.com/babakhani'
         - type: 'linkedin'
           link: 'https://de.linkedin.com/in/martin-donath-20a95039'
 

@@ -1,6 +1,6 @@
 
-table{
-    table-layout:fixed;
+table {
+    table-layout: fixed;
     width: 100%;
 }
 
@@ -13,7 +13,12 @@ table td:nth-child(3) {
     color: #888;
 }
 
+/* Hide unwanted things */
+.md-header-nav__source,
+.md-logo,
+.md-source__repository,
 .md-nav__title {
-    display: none;
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
 }
-

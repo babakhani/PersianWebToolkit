@@ -259,36 +259,6 @@
             "location": "/persian-date/#is-a-persaindat",
             "text": "persianDate (). isPersianDate ( obj );   To check if a variable is a persianDate object, use  persianDate().isPersianDate()  .  persianDate (). isPersianDate ()   // false  persianDate (). isPersianDate ( new   Date ())   // false  persianDate (). isPersianDate ( persianDate ())   // true",
             "title": "Is a PersainDat"
-        },
-        {
-            "location": "/test/",
-            "text": "Persian Web Toolkit\n\u00b6\n\n\n- wdasd\n- dfasdasd\n- dasdsadasdas\n\n\n\n\n\nhead1\n\u00b6\n\n\nhead2\n\u00b6\n\n\nhead3\n\u00b6\n\n\nhead4\n\u00b6\n\n\ndsahdasudyasgudgasuydgasuydgasugdasd\ndhasiudygasuydgasugduyasgddaskjdhagshjd\n\n\ndsajdasvhdgvahsgvdhgasd\ndasbjdhbvasjhdvasdasdsa\n\n\ngooogle",
-            "title": "Test"
-        },
-        {
-            "location": "/test/#persian-web-toolkit",
-            "text": "- wdasd\n- dfasdasd\n- dasdsadasdas",
-            "title": "Persian Web Toolkit"
-        },
-        {
-            "location": "/test/#head1",
-            "text": "",
-            "title": "head1"
-        },
-        {
-            "location": "/test/#head2",
-            "text": "",
-            "title": "head2"
-        },
-        {
-            "location": "/test/#head3",
-            "text": "",
-            "title": "head3"
-        },
-        {
-            "location": "/test/#head4",
-            "text": "dsahdasudyasgudgasuydgasuydgasugdasd\ndhasiudygasuydgasugduyasgddaskjdhagshjd  dsajdasvhdgvahsgvdhgasd\ndasbjdhbvasjhdvasdasdsa  gooogle",
-            "title": "head4"
         }
     ]
 }
