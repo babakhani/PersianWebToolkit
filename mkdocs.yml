@@ -1,0 +1,58 @@
+site_name:          Persian Web Toolkit
+repo_url:           https://github.com/babakhani/PersianWebToolkit
+theme:              'material'
+site_description:   Persian Web Toolkit document
+site_author:        babakhani.reza@gmail.com
+copyright:          license http://www.wtfpl.net/
+
+google_analytics:
+    - 'UA-40548780-1'
+    - 'babakhani.github.io/PersianWebToolkit/'
+
+extra_css:
+    - ./css/extra.css
+
+markdown_extensions:
+  - admonition
+  - codehilite(guess_lang=false)
+  - footnotes
+  - meta
+  - toc(permalink=true)
+
+pages:
+    - index.md
+    - Persian Datepicker: 'datepicker/index.md'
+    - Persian Date: 'persian-date/index.md'
+    - Test: 'test.md'
+
+extra:
+    social:
+        - type: 'github'
+          link: 'https://github.com/squidfunk'
+        - type: 'twitter'
+          link: 'https://twitter.com/squidfunk'
+        - type: 'linkedin'
+          link: 'https://de.linkedin.com/in/martin-donath-20a95039'
+
+    logo: 'images/logo.svg'
+    font:
+        text: 'Ubuntu'
+        code: 'Ubuntu Mono'
+
+    palette:
+        primary: 'red'
+        accent: 'light blue'
+    version: 1.0
+use_directory_urls: true
+strict: true
+dev_addr: '127.0.0.1:8000'
+extra_javascript:
+    - https://buttons.github.io/buttons.js
+
+#extra_templates:
+#edit_uri: src/default/docs/
+#theme: readthedocs
+#markdown_extensions:
+#    - smarty
+#theme: null
+#theme_dir: 'theme'

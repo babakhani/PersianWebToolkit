@@ -1,0 +1,19 @@
+
+table{
+    table-layout:fixed;
+    width: 100%;
+}
+
+table td {
+    text-align: left;
+}
+
+table td:nth-child(2),
+table td:nth-child(3) {
+    color: #888;
+}
+
+.md-nav__title {
+    display: none;
+}
+
