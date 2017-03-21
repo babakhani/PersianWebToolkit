@@ -32,8 +32,9 @@ pages:
     - Persian Datepicker:
         - Getting Start: 'datepicker/index.md'
         - Example: 'datepicker/example.md'
+        - Options: 'datepicker/options.md'
+        - API: 'datepicker/api.md'
         - Change log: 'datepicker/changelog.md'
-        - Code docuemnt: 'datepicker/documentation.md'
 
 extra:
     social:
@@ -57,7 +58,7 @@ dev_addr: '127.0.0.1:8000'
 extra_javascript:
     - ./lib/jquery/dist/jquery.js
     - ./lib/persian-date/dist/0.1.8/persian-date-0.1.8.js
-    - ./lib/persian-datepicker/dist/js/persian-datepicker-0.4.5.js
+    - ./lib/persian-datepicker/dist/js/persian-datepicker-0.5.0.js
     - ./js/datepicker-example.js
     - https://buttons.github.io/buttons.js
 

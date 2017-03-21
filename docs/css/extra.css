@@ -1,13 +1,4 @@
 
-table {
-    display: block !important;
-    table-layout: fixed;
-    width: 100%;
-}
-
-table td {
-    text-align: left;
-}
 
 table td:nth-child(2),
 table td:nth-child(3) {

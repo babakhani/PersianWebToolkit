@@ -1,4 +1,7 @@
+
+
 $(document).ready(function () {
+
     $('.normal-example').persianDatepicker({});
 
     $('.inline-example').persianDatepicker();
@@ -8,13 +11,13 @@ $(document).ready(function () {
     });
 
     $('.formatter-example').persianDatepicker({
-        formatter: function(unix){
+        formatter: function (unix) {
             return 'selected unix: ' + unix;
         }
     });
 
     $('.alt-field-example').persianDatepicker({
-        altField: '.datepicker-demo-alt.alt-field-example'
+        altField: '.alt-field-example-alt-field'
     });
 
     $('.persian-digit-example').persianDatepicker({
@@ -54,8 +57,8 @@ $(document).ready(function () {
     });
 
     $('.on-select-example').persianDatepicker({
-        onSelect: function(unix){
-            alert('datepicker select : ' + unix);
+        onSelect: function (unix) {
+            // alert('datepicker select : ' + unix);
         }
     });
 

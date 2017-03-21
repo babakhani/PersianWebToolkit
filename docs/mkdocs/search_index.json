@@ -346,6 +346,401 @@
             "title": "onSelect"
         },
         {
+            "location": "/datepicker/options/",
+            "text": "Config\n\u00b6\n\n\nThis is default config class\n\n\nKind\n: global constant  \n\n\n\n\nConfig\n\n\n.initialValue\n : \nboolean\n\n\n.persianDigit\n : \nboolean\n\n\n.viewMode\n : \nstring\n\n\n.format\n : \nboolean\n\n\n.altField\n : \nboolean\n\n\n.altFormat\n : \nstring\n\n\n.minDate\n : \nDate\n\n\n.maxDate\n : \nDate\n\n\n.navigator\n : \nobject\n\n\n.enabled\n : \nboolean\n\n\n.scroll\n : \nobject\n\n\n.enabled\n : \nboolean\n\n\n\n\n\n\n.text\n\n\n.btnNextText\n\n\n.btnPrevText\n\n\n\n\n\n\n\"onNext\" (navigator)\n\n\n\"onPrev\" (navigator)\n\n\n\"onSwitch\" (navigator)\n\n\n\n\n\n\n.toolbox\n : \nobject\n\n\n.enabled\n : \nboolean\n\n\n.text\n : \nobject\n\n\n.btnToday\n : \nstring\n\n\n\n\n\n\n\"onToday\" (toolbox)\n\n\n\n\n\n\n.onlyTimePicker\n : \nboolean\n\n\n.onlySelectOnDate\n : \nboolean\n\n\n.timePicker\n : \nobject\n\n\n.enabled\n : \nboolean\n\n\n.step\n : \nnumber\n\n\n.hour\n : \nobject\n\n\n.enabled\n : \nboolean\n\n\n.step\n : \nboolean\n\n\n\n\n\n\n.minute\n : \nobject\n\n\n.enabled\n : \nboolean\n\n\n.step\n : \nboolean\n\n\n\n\n\n\n.second\n : \nobject\n\n\n.enabled\n : \nboolean\n\n\n.step\n : \nboolean\n\n\n\n\n\n\n.meridiem\n : \nobject\n\n\n.enabled\n : \nboolean\n\n\n\n\n\n\n\n\n\n\n.dayPicker\n : \nobject\n\n\n.enabled\n : \nboolean\n\n\n.titleFormat\n : \nstring\n\n\n.titleFormatter(year, month)\n \u21d2 \n*\n\n\n\"onSelect\" (selectedDayUnix)\n\n\n\n\n\n\n.monthPicker\n : \nobject\n\n\n.enabled\n : \nboolean\n\n\n.titleFormat\n : \nstring\n\n\n.titleFormatter(unix)\n \u21d2 \n*\n\n\n\"onSelect\" (monthIndex)\n\n\n\n\n\n\n.yearPicker\n : \nobject\n\n\n.enabled\n : \nboolean\n\n\n.titleFormat\n : \nstring\n\n\n.titleFormatter(year)\n \u21d2 \nstring\n\n\n\"onSelect\" (year)\n\n\n\n\n\n\n.position\n : \nmix\n\n\n.autoClose\n : \nboolean\n\n\n.template\n : \nstring\n\n\n.observer\n : \nboolean\n\n\n.inputDelay\n : \nnumber\n\n\n.formatter(unixDate)\n\n\n.altFieldFormatter(unixDate)\n\n\n.checkDate()\n : \nfunction\n\n\n.checkMonth()\n : \nfunction\n\n\n.checkYear()\n : \nfunction\n\n\n.onToggle()\n\n\n.onDestroy()\n\n\n\"onSelect\" (unixDate)\n\n\n\"onShow\"\n\n\n\"onHide\" (self)\n\n\n\n\n\n\n\n\n\n\nConfig.initialValue : \nboolean\n\u00b6\n\n\nKind\n: static property of \nConfig\n\n\nDefault\n: \ntrue\n\n\n\n\nConfig.persianDigit : \nboolean\n\u00b6\n\n\nKind\n: static property of \nConfig\n\n\nDefault\n: \ntrue\n\n\n\n\nConfig.viewMode : \nstring\n\u00b6\n\n\nAcceptable value : day,month,year\n\n\nKind\n: static property of \nConfig\n\n\nDefault\n: \n\"'day'\"\n\n\n\n\nConfig.format : \nboolean\n\u00b6\n\n\nthe date format, combination of d, dd, m, mm, yy, yyy.\n\nhttp://babakhani.github.io/PersianWebToolkit/doc/persiandate/0.1.8/#/displaying/format/\n\n\nKind\n: static property of \nConfig\n\n\nDefault\n: \n'LLLL'\n\n\n\n\nConfig.altField : \nboolean\n\u00b6\n\n\nAn input element that is to be updated with the selected date from the datepicker. Use the altFormat option to change the format of the date within this field. Leave as blank for no alternate field. acceptable value: : '#elementId','.element-class'\n\n\nKind\n: static property of \nConfig\n\n\nDefault\n: \nfalse\n\n\n\n\nConfig.altFormat : \nstring\n\u00b6\n\n\nthe date format, combination of d, dd, m, mm, yy, yyy.\n\nhttp://babakhani.github.io/PersianWebToolkit/doc/persiandate/0.1.8/#/displaying/format/\n\n\nKind\n: static property of \nConfig\n\n\nDefault\n: \n\"'unix'\"\n\n\n\n\nConfig.minDate : \nDate\n\u00b6\n\n\nset min date on datepicker\n\n\nKind\n: static property of \nConfig\n\n\nDefault\n: \nnull\n\n\nProperties\n\n\n\n  \n\n    \n\n      \nName\n\n    \n\n  \n\n  \n\n\n\n    \nminDate\n\n    \n  \n\n\n\n\n\n\n\nConfig.maxDate : \nDate\n\u00b6\n\n\nset max date on datepicker\n\n\nKind\n: static property of \nConfig\n\n\nDefault\n: \nnull\n\n\nProperties\n\n\n\n  \n\n    \n\n      \nName\n\n    \n\n  \n\n  \n\n\n\n    \nmaxDate\n\n    \n  \n\n\n\n\n\n\n\nConfig.navigator : \nobject\n\u00b6\n\n\nnavigator config object\n\n\nKind\n: static property of \nConfig\n\n\nDefault\n: \ntrue\n  \n\n\n\n\n.navigator\n : \nobject\n\n\n.enabled\n : \nboolean\n\n\n.scroll\n : \nobject\n\n\n.enabled\n : \nboolean\n\n\n\n\n\n\n.text\n\n\n.btnNextText\n\n\n.btnPrevText\n\n\n\n\n\n\n\"onNext\" (navigator)\n\n\n\"onPrev\" (navigator)\n\n\n\"onSwitch\" (navigator)\n\n\n\n\n\n\n\n\n\n\nnavigator.enabled : \nboolean\n\u00b6\n\n\nEnable or Disable dayPicker\n\n\nKind\n: static property of \nnavigator\n\n\nDefault\n: \ntrue\n\n\n\n\nnavigator.scroll : \nobject\n\u00b6\n\n\nscroll navigation options\n\n\nKind\n: static property of \nnavigator\n\n\n\n\nscroll.enabled : \nboolean\n\u00b6\n\n\nKind\n: static property of \nscroll\n\n\nDefault\n: \ntrue\n\n\n\n\nnavigator.text\n\u00b6\n\n\nnavigator text config object\n\n\nKind\n: static property of \nnavigator\n  \n\n\n\n\n.text\n\n\n.btnNextText\n\n\n.btnPrevText\n\n\n\n\n\n\n\n\n\n\ntext.btnNextText\n\u00b6\n\n\ntext of next btn\n\n\nKind\n: static property of \ntext\n\n\nDefault\n: \n'<'\n\n\n\n\ntext.btnPrevText\n\u00b6\n\n\ntext of prev btn\n\n\nKind\n: static property of \ntext\n\n\nDefault:\n: '>'\n\n\n\n\n\"onNext\" (navigator)\n\u00b6\n\n\nTrigger When Next button clicked\n\n\nKind\n: event emitted by \nnavigator\n\n\n\n  \n\n    \n\n      \nParam\n\n    \n\n  \n\n  \n\n\n\n    \nnavigator\n\n    \n  \n\n\n\n\nExample\n  \n\n\nfunction\n \n(\nnavigator\n)\n \n{\n\n     \n//log('navigator next ');\n\n \n}\n\n\n\n\n\n\n\n\n\"onPrev\" (navigator)\n\u00b6\n\n\nTrigger When Prev button clicked\n\n\nKind\n: event emitted by \nnavigator\n\n\n\n  \n\n    \n\n      \nParam\n\n    \n\n  \n\n  \n\n\n\n    \nnavigator\n\n    \n  \n\n\n\n\nExample\n  \n\n\nfunction\n \n(\nnavigator\n)\n \n{\n\n     \n//log('navigator prev ');\n\n \n}\n\n\n\n\n\n\n\n\n\"onSwitch\" (navigator)\n\u00b6\n\n\nTrigger When Switch view button clicked\n\n\nKind\n: event emitted by \nnavigator\n\n\n\n  \n\n    \n\n      \nParam\n\n    \n\n  \n\n  \n\n\n\n    \nnavigator\n\n    \n  \n\n\n\n\nExample\n  \n\n\nfunction\n \n(\nstate\n)\n \n{\n\n                \n// console.log('navigator switch ');\n\n \n}\n\n\n\n\n\n\n\n\nConfig.toolbox : \nobject\n\u00b6\n\n\ntoolbox config object\n\n\nKind\n: static property of \nConfig\n\n\nDefault\n: \ntrue\n  \n\n\n\n\n.toolbox\n : \nobject\n\n\n.enabled\n : \nboolean\n\n\n.text\n : \nobject\n\n\n.btnToday\n : \nstring\n\n\n\n\n\n\n\"onToday\" (toolbox)\n\n\n\n\n\n\n\n\n\n\ntoolbox.enabled : \nboolean\n\u00b6\n\n\nKind\n: static property of \ntoolbox\n\n\nDefault\n: \ntrue\n\n\n\n\ntoolbox.text : \nobject\n\u00b6\n\n\nKind\n: static property of \ntoolbox\n\n\n\n\ntext.btnToday : \nstring\n\u00b6\n\n\nKind\n: static property of \ntext\n\n\nDefault\n: \n\"'\u0627\u0645\u0631\u0648\u0632'\"\n\n\n\n\n\"onToday\" (toolbox)\n\u00b6\n\n\nKind\n: event emitted by \ntoolbox\n\n\n\n  \n\n    \n\n      \nParam\n\n    \n\n  \n\n  \n\n\n\n    \ntoolbox\n\n    \n  \n\n\n\n\nExample\n  \n\n\nfunction\n \n(\ntoolbox\n)\n \n{\n\n     \n//log('toolbox today btn');\n\n \n}\n\n\n\n\n\n\n\n\nConfig.onlyTimePicker : \nboolean\n\u00b6\n\n\nif true all pickers hide and just show timepicker\n\n\nKind\n: static property of \nConfig\n\n\nDefault\n: \nfalse\n\n\n\n\nConfig.onlySelectOnDate : \nboolean\n\u00b6\n\n\nif true date select just by click on day in month grid\n\n\nKind\n: static property of \nConfig\n\n\nDefault:\n: true\n\n\nProperties\n\n\n\n  \n\n    \n\n      \nName\n\n    \n\n  \n\n  \n\n\n\n    \njustSelectOnDate\n\n    \n  \n\n\n\n\n\n\n\nConfig.timePicker : \nobject\n\u00b6\n\n\ntimepicker config object\n\n\nKind\n: static property of \nConfig\n  \n\n\n\n\n.timePicker\n : \nobject\n\n\n.enabled\n : \nboolean\n\n\n.step\n : \nnumber\n\n\n.hour\n : \nobject\n\n\n.enabled\n : \nboolean\n\n\n.step\n : \nboolean\n\n\n\n\n\n\n.minute\n : \nobject\n\n\n.enabled\n : \nboolean\n\n\n.step\n : \nboolean\n\n\n\n\n\n\n.second\n : \nobject\n\n\n.enabled\n : \nboolean\n\n\n.step\n : \nboolean\n\n\n\n\n\n\n.meridiem\n : \nobject\n\n\n.enabled\n : \nboolean\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ntimePicker.enabled : \nboolean\n\u00b6\n\n\nKind\n: static property of \ntimePicker\n\n\n\n\ntimePicker.step : \nnumber\n\u00b6\n\n\nKind\n: static property of \ntimePicker\n\n\n\n\ntimePicker.hour : \nobject\n\u00b6\n\n\nKind\n: static property of \ntimePicker\n  \n\n\n\n\n.hour\n : \nobject\n\n\n.enabled\n : \nboolean\n\n\n.step\n : \nboolean\n\n\n\n\n\n\n\n\n\n\nhour.enabled : \nboolean\n\u00b6\n\n\nKind\n: static property of \nhour\n\n\n\n\nhour.step : \nboolean\n\u00b6\n\n\noverwrite by parent step\n\n\nKind\n: static property of \nhour\n\n\n\n\ntimePicker.minute : \nobject\n\u00b6\n\n\nKind\n: static property of \ntimePicker\n  \n\n\n\n\n.minute\n : \nobject\n\n\n.enabled\n : \nboolean\n\n\n.step\n : \nboolean\n\n\n\n\n\n\n\n\n\n\nminute.enabled : \nboolean\n\u00b6\n\n\nKind\n: static property of \nminute\n\n\n\n\nminute.step : \nboolean\n\u00b6\n\n\noverwrite by parent step\n\n\nKind\n: static property of \nminute\n\n\n\n\ntimePicker.second : \nobject\n\u00b6\n\n\nKind\n: static property of \ntimePicker\n  \n\n\n\n\n.second\n : \nobject\n\n\n.enabled\n : \nboolean\n\n\n.step\n : \nboolean\n\n\n\n\n\n\n\n\n\n\nsecond.enabled : \nboolean\n\u00b6\n\n\nKind\n: static property of \nsecond\n\n\n\n\nsecond.step : \nboolean\n\u00b6\n\n\noverwrite by parent step\n\n\nKind\n: static property of \nsecond\n\n\n\n\ntimePicker.meridiem : \nobject\n\u00b6\n\n\nKind\n: static property of \ntimePicker\n\n\n\n\nmeridiem.enabled : \nboolean\n\u00b6\n\n\nif you set this as false, datepicker clock system moved to 24-hour system\n\n\nKind\n: static property of \nmeridiem\n\n\n\n\nConfig.dayPicker : \nobject\n\u00b6\n\n\ndayPicker config object\n\n\nKind\n: static property of \nConfig\n  \n\n\n\n\n.dayPicker\n : \nobject\n\n\n.enabled\n : \nboolean\n\n\n.titleFormat\n : \nstring\n\n\n.titleFormatter(year, month)\n \u21d2 \n*\n\n\n\"onSelect\" (selectedDayUnix)\n\n\n\n\n\n\n\n\n\n\ndayPicker.enabled : \nboolean\n\u00b6\n\n\nKind\n: static property of \ndayPicker\n\n\nDefault\n: \ntrue\n\n\n\n\ndayPicker.titleFormat : \nstring\n\u00b6\n\n\nKind\n: static property of \ndayPicker\n\n\nDefault\n: \n\"'YYYY MMMM'\"\n\n\n\n\ndayPicker.titleFormatter(year, month) \u21d2 \n*\n\u00b6\n\n\nKind\n: static method of \ndayPicker\n\n\n\n  \n\n    \n\n      \nParam\n\n    \n\n  \n\n  \n\n\n\n    \nyear\n\n    \n\n    \nmonth\n\n    \n  \n\n\n\n\n\n\n\"onSelect\" (selectedDayUnix)\n\u00b6\n\n\nKind\n: event emitted by \ndayPicker\n\n\n\n  \n\n    \n\n      \nParam\n\n    \n\n  \n\n  \n\n\n\n    \nselectedDayUnix\n\n    \n  \n\n\n\n\n\n\nConfig.monthPicker : \nobject\n\u00b6\n\n\nmonthPicker config object\n\n\nKind\n: static property of \nConfig\n  \n\n\n\n\n.monthPicker\n : \nobject\n\n\n.enabled\n : \nboolean\n\n\n.titleFormat\n : \nstring\n\n\n.titleFormatter(unix)\n \u21d2 \n*\n\n\n\"onSelect\" (monthIndex)\n\n\n\n\n\n\n\n\n\n\nmonthPicker.enabled : \nboolean\n\u00b6\n\n\nKind\n: static property of \nmonthPicker\n\n\nDefault\n: \ntrue\n\n\n\n\nmonthPicker.titleFormat : \nstring\n\u00b6\n\n\nKind\n: static property of \nmonthPicker\n\n\nDefault\n: \n\"'YYYY'\"\n\n\n\n\nmonthPicker.titleFormatter(unix) \u21d2 \n*\n\u00b6\n\n\nKind\n: static method of \nmonthPicker\n\n\n\n  \n\n    \n\n      \nParam\n\n    \n\n  \n\n  \n\n\n\n    \nunix\n\n    \n  \n\n\n\n\n\n\n\"onSelect\" (monthIndex)\n\u00b6\n\n\nKind\n: event emitted by \nmonthPicker\n\n\n\n  \n\n    \n\n      \nParam\n\n    \n\n  \n\n  \n\n\n\n    \nmonthIndex\n\n    \n  \n\n\n\n\n\n\nConfig.yearPicker : \nobject\n\u00b6\n\n\nyearPicker config object\n\n\nKind\n: static property of \nConfig\n  \n\n\n\n\n.yearPicker\n : \nobject\n\n\n.enabled\n : \nboolean\n\n\n.titleFormat\n : \nstring\n\n\n.titleFormatter(year)\n \u21d2 \nstring\n\n\n\"onSelect\" (year)\n\n\n\n\n\n\n\n\n\n\nyearPicker.enabled : \nboolean\n\u00b6\n\n\nKind\n: static property of \nyearPicker\n\n\nDefault\n: \ntrue\n\n\n\n\nyearPicker.titleFormat : \nstring\n\u00b6\n\n\nKind\n: static property of \nyearPicker\n\n\nDefault\n: \n\"'YYYY'\"\n\n\n\n\nyearPicker.titleFormatter(year) \u21d2 \nstring\n\u00b6\n\n\nKind\n: static method of \nyearPicker\n\n\n\n  \n\n    \n\n      \nParam\n\n    \n\n  \n\n  \n\n\n\n    \nyear\n\n    \n  \n\n\n\n\n\n\n\"onSelect\" (year)\n\u00b6\n\n\nKind\n: event emitted by \nyearPicker\n\n\n\n  \n\n    \n\n      \nParam\n\n    \n\n  \n\n  \n\n\n\n    \nyear\n\n    \n  \n\n\n\n\n\n\nConfig.position : \nmix\n\u00b6\n\n\nposition of datepicker relative to input element\n\n\nKind\n: static property of \nConfig\n\n\nDefault\n: \n'auto'\n\n\nExample\n  \n\n\n'position'\n:\n \n'auto'\n\n\n'position'\n:\n \n[\n10\n,\n10\n]\n\n\n\n\n\n\n\n\nConfig.autoClose : \nboolean\n\u00b6\n\n\nIf true picker close When Select day\n\n\nKind\n: static property of \nConfig\n\n\nDefault\n: \nfalse\n\n\n\n\nConfig.template : \nstring\n\u00b6\n\n\nby default datepicker have a template string, and you can overwrite it simply by replace string in config.\n\n\nKind\n: static property of \nConfig\n\n\nExample\n  \n\n\n<\ndiv\n \nid\n=\n\"plotId\"\n \nclass\n=\n\"datepicker-plot-area datepicker-plot-area-inline-view\"\n>\n\n     \n{{\n#\nnavigator\n.\nenabled\n}}\n\n     \n<\ndiv\n \nclass\n=\n\"navigator\"\n>\n\n     \n<\ndiv\n \nclass\n=\n\"datepicker-header\"\n>\n\n     \n<\ndiv\n \nclass\n=\n\"btn btn-next\"\n>\n{{\nnavigator\n.\ntext\n.\nbtnNextText\n}}\n<\n/div>\n\n     \n<\ndiv\n \nclass\n=\n\"btn btn-switch\"\n>\n{{\n \nnavigator\n.\nswitch\n.\ntext\n \n}}\n<\n/div>\n\n     \n<\ndiv\n \nclass\n=\n\"btn btn-prev\"\n>\n{{\nnavigator\n.\ntext\n.\nbtnPrevText\n}}\n<\n/div>\n\n     \n<\n/div>\n\n     \n<\n/div>\n\n     \n{{\n/navigator.enabled}}\n\n     \n<\ndiv\n \nclass\n=\n\"datepicker-grid-view\"\n \n>\n\n     \n{{\n#\ndays\n.\nenabled\n}}\n\n     \n{{\n#\ndays\n.\nviewMode\n}}\n\n     \n<\ndiv\n \nclass\n=\n\"datepicker-day-view\"\n \n>\n\n     \n<\ndiv\n \nclass\n=\n\"month-grid-box\"\n>\n\n     \n<\ndiv\n \nclass\n=\n\"header\"\n>\n\n     \n<\ndiv\n \nclass\n=\n\"title\"\n><\n/div>\n\n     \n<\ndiv\n \nclass\n=\n\"header-row\"\n>\n\n     \n<\ndiv\n \nclass\n=\n\"header-row-cell\"\n>\n\u0634\n<\n/div>\n\n     \n<\ndiv\n \nclass\n=\n\"header-row-cell\"\n>\n\u06cc\n<\n/div>\n\n     \n<\ndiv\n \nclass\n=\n\"header-row-cell\"\n>\n\u062f\n<\n/div>\n\n     \n<\ndiv\n \nclass\n=\n\"header-row-cell\"\n>\n\u0633\n<\n/div>\n\n     \n<\ndiv\n \nclass\n=\n\"header-row-cell\"\n>\n\u0686\n<\n/div>\n\n     \n<\ndiv\n \nclass\n=\n\"header-row-cell\"\n>\n\u067e\n<\n/div>\n\n     \n<\ndiv\n \nclass\n=\n\"header-row-cell\"\n>\n\u062c\n<\n/div>\n\n     \n<\n/div>\n\n     \n<\n/div>\n\n     \n<\ntable\n \ncellspacing\n=\n\"0\"\n \nclass\n=\n\"table-days\"\n>\n\n     \n<\ntbody\n>\n\n     \n{{\n#\ndays\n.\nlist\n}}\n\n\n     \n<\ntr\n>\n\n     \n{{\n#\n.}}\n\n\n     \n{{\n#\nenabled\n}}\n\n     \n<\ntd\n \ndata\n-\nunix\n=\n\"{{dataUnix}}\"\n \n><\nspan\n  \nclass\n=\n\"{{#otherMonth}}other-month{{/otherMonth}} {{#selected}}selected{{/selected}}\"\n>\n{{\ntitle\n}}\n<\n/span></td>\n\n     \n{{\n/enabled}}\n\n     \n{{\n^\nenabled\n}}\n\n     \n<\ntd\n \ndata\n-\nunix\n=\n\"{{dataUnix}}\"\n \nclass\n=\n\"disabled\"\n><\nspan\n \nclass\n=\n\"{{#otherMonth}}other-month{{/otherMonth}}\"\n>\n{{\ntitle\n}}\n<\n/span></td>\n\n     \n{{\n/enabled}}\n\n\n     \n{{\n/.}}\n\n     \n<\n/tr>\n\n     \n{{\n/days.list}}\n\n     \n<\n/tbody>\n\n     \n<\n/table>\n\n     \n<\n/div>\n\n     \n<\n/div>\n\n     \n{{\n/days.viewMode}}\n\n     \n{{\n/days.enabled}}\n\n\n     \n{{\n#\nmonth\n.\nenabled\n}}\n\n     \n{{\n#\nmonth\n.\nviewMode\n}}\n\n     \n<\ndiv\n \nclass\n=\n\"datepicker-month-view\"\n>\n\n     \n{{\n#\nmonth\n.\nlist\n}}\n\n     \n{{\n#\nenabled\n}}\n\n     \n<\ndiv\n \ndata\n-\nmonth\n=\n\"{{dataMonth}}\"\n \nclass\n=\n\"month-item {{#selected}}selected{{/selected}}\"\n>\n{{\ntitle\n}}\n<\n/small></div>\n\n     \n{{\n/enabled}}\n\n     \n{{\n^\nenabled\n}}\n\n     \n<\ndiv\n \ndata\n-\nmonth\n=\n\"{{dataMonth}}\"\n \nclass\n=\n\"month-item month-item-disable {{#selected}}selected{{/selected}}\"\n>\n{{\ntitle\n}}\n<\n/small></div>\n\n     \n{{\n/enabled}}\n\n     \n{{\n/month.list}}\n\n     \n<\n/div>\n\n     \n{{\n/month.viewMode}}\n\n     \n{{\n/month.enabled}}\n\n\n     \n{{\n#\nyear\n.\nenabled\n \n}}\n\n     \n{{\n#\nyear\n.\nviewMode\n \n}}\n\n     \n<\ndiv\n \nclass\n=\n\"datepicker-year-view\"\n \n>\n\n     \n{{\n#\nyear\n.\nlist\n}}\n\n     \n{{\n#\nenabled\n}}\n\n     \n<\ndiv\n \ndata\n-\nyear\n=\n\"{{dataYear}}\"\n \nclass\n=\n\"year-item {{#selected}}selected{{/selected}}\"\n>\n{{\ntitle\n}}\n<\n/div>\n\n     \n{{\n/enabled}}\n\n     \n{{\n^\nenabled\n}}\n\n     \n<\ndiv\n \ndata\n-\nyear\n=\n\"{{dataYear}}\"\n \nclass\n=\n\"year-item year-item-disable {{#selected}}selected{{/selected}}\"\n>\n{{\ntitle\n}}\n<\n/div>\n\n     \n{{\n/enabled}}\n\n     \n{{\n/year.list}}\n\n     \n<\n/div>\n\n     \n{{\n/year.viewMode }}\n\n     \n{{\n/year.enabled }}\n\n\n     \n<\n/div>\n\n     \n{{\n#\ntime\n}}\n\n     \n{{\n#\nenabled\n}}\n\n     \n<\ndiv\n \nclass\n=\n\"datepicker-time-view\"\n>\n\n     \n{{\n#\nhour\n.\nenabled\n}}\n\n     \n<\ndiv\n \nclass\n=\n\"hour time-segment\"\n \ndata\n-\ntime\n-\nkey\n=\n\"hour\"\n>\n\n     \n<\ndiv\n \nclass\n=\n\"up-btn\"\n \ndata\n-\ntime\n-\nkey\n=\n\"hour\"\n>\n\u25b2\n<\n/div>\n\n     \n<\ninput\n \nvalue\n=\n\"{{hour.title}}\"\n \ntype\n=\n\"text\"\n \nplaceholder\n=\n\"hour\"\n \nclass\n=\n\"hour-input\"\n>\n\n     \n<\ndiv\n \nclass\n=\n\"down-btn\"\n \ndata\n-\ntime\n-\nkey\n=\n\"hour\"\n>\n\u25bc\n<\n/div>\n\n     \n<\n/div>\n\n     \n<\ndiv\n \nclass\n=\n\"divider\"\n>:<\n/div>\n\n     \n{{\n/hour.enabled}}\n\n     \n{{\n#\nminute\n.\nenabled\n}}\n\n     \n<\ndiv\n \nclass\n=\n\"minute time-segment\"\n \ndata\n-\ntime\n-\nkey\n=\n\"minute\"\n \n>\n\n     \n<\ndiv\n \nclass\n=\n\"up-btn\"\n \ndata\n-\ntime\n-\nkey\n=\n\"minute\"\n>\n\u25b2\n<\n/div>\n\n     \n<\ninput\n \nvalue\n=\n\"{{minute.title}}\"\n \ntype\n=\n\"text\"\n \nplaceholder\n=\n\"minute\"\n \nclass\n=\n\"minute-input\"\n>\n\n     \n<\ndiv\n \nclass\n=\n\"down-btn\"\n \ndata\n-\ntime\n-\nkey\n=\n\"minute\"\n>\n\u25bc\n<\n/div>\n\n     \n<\n/div>\n\n     \n<\ndiv\n \nclass\n=\n\"divider second-divider\"\n>:<\n/div>\n\n     \n{{\n/minute.enabled}}\n\n     \n{{\n#\nsecond\n.\nenabled\n}}\n\n     \n<\ndiv\n \nclass\n=\n\"second time-segment\"\n \ndata\n-\ntime\n-\nkey\n=\n\"second\"\n  \n>\n\n     \n<\ndiv\n \nclass\n=\n\"up-btn\"\n \ndata\n-\ntime\n-\nkey\n=\n\"second\"\n \n>\n\u25b2\n<\n/div>\n\n     \n<\ninput\n \nvalue\n=\n\"{{second.title}}\"\n  \ntype\n=\n\"text\"\n \nplaceholder\n=\n\"second\"\n \nclass\n=\n\"second-input\"\n>\n\n     \n<\ndiv\n \nclass\n=\n\"down-btn\"\n \ndata\n-\ntime\n-\nkey\n=\n\"second\"\n \n>\n\u25bc\n<\n/div>\n\n     \n<\n/div>\n\n     \n<\ndiv\n \nclass\n=\n\"divider meridian-divider\"\n><\n/div>\n\n     \n<\ndiv\n \nclass\n=\n\"divider meridian-divider\"\n><\n/div>\n\n     \n{{\n/second.enabled}}\n\n     \n{{\n#\nmeridiem\n.\nenabled\n}}\n\n     \n<\ndiv\n \nclass\n=\n\"meridiem time-segment\"\n \ndata\n-\ntime\n-\nkey\n=\n\"meridian\"\n \n>\n\n     \n<\ndiv\n \nclass\n=\n\"up-btn\"\n \ndata\n-\ntime\n-\nkey\n=\n\"meridiem\"\n>\n\u25b2\n<\n/div>\n\n     \n<\ninput\n \nvalue\n=\n\"{{meridiem.title}}\"\n \ntype\n=\n\"text\"\n \nclass\n=\n\"meridiem-input\"\n>\n\n     \n<\ndiv\n \nclass\n=\n\"down-btn\"\n \ndata\n-\ntime\n-\nkey\n=\n\"meridiem\"\n>\n\u25bc\n<\n/div>\n\n     \n<\n/div>\n\n     \n{{\n/meridiem.enabled}}\n\n     \n<\n/div>\n\n     \n{{\n/enabled}}\n\n     \n{{\n/time}}\n\n\n     \n{{\n#\ntoolbox\n}}\n\n     \n{{\n#\nenabled\n}}\n\n     \n<\ndiv\n \nclass\n=\n\"toolbox \"\n>\n\n     \n<\ndiv\n \nclass\n=\n\"btn-today\"\n>\n{{\ntext\n.\nbtnToday\n}}\n<\n/div>\n\n     \n<\n/div>\n\n     \n{{\n/enabled}}\n\n     \n{{\n/toolbox}}\n\n     \n<\n/div>\n\n\n\n\n\n\n\n\nConfig.observer : \nboolean\n\u00b6\n\n\nDeprecated\n\n\nobserver\n\n\nKind\n: static property of \nConfig\n\n\nDefault\n: \nfalse\n\n\n\n\nConfig.inputDelay : \nnumber\n\u00b6\n\n\ninputDelay\n\n\nKind\n: static property of \nConfig\n\n\nDefault\n: \n800\n\n\n\n\nConfig.formatter(unixDate)\n\u00b6\n\n\nformat value of input\n\n\nKind\n: static method of \nConfig\n\n\nDefault\n: \nfunction\n\n\n\n  \n\n    \n\n      \nParam\n\n    \n\n  \n\n  \n\n\n\n    \nunixDate\n\n    \n  \n\n\n\n\nExample\n  \n\n\nfunction\n \n(\nunixDate\n)\n \n{\n\n     \nvar\n \nself\n \n=\n \nthis\n;\n\n     \nvar\n \npdate\n \n=\n \nnew\n \npersianDate\n(\nunixDate\n);\n\n     \npdate\n.\nformatPersian\n \n=\n \nthis\n.\npersianDigit\n;\n\n     \nreturn\n \npdate\n.\nformat\n(\nself\n.\nformat\n);\n\n \n}\n\n\n\n\n\n\n\n\nConfig.altFieldFormatter(unixDate)\n\u00b6\n\n\nformat value of 'altField' input\n\n\nKind\n: static method of \nConfig\n\n\nDefault\n: \nfunction\n\n\n\n  \n\n    \n\n      \nParam\n\n    \n\n  \n\n  \n\n\n\n    \nunixDate\n\n    \n  \n\n\n\n\nExample\n  \n\n\nfunction\n \n(\nunixDate\n)\n \n{\n\n     \nvar\n \nself\n \n=\n \nthis\n;\n\n     \nvar\n \nthisAltFormat\n \n=\n \nself\n.\naltFormat\n.\ntoLowerCase\n();\n\n     \nif\n \n(\nthisAltFormat\n \n===\n \n'gregorian'\n \n||\n \nthisAltFormat\n \n===\n \n'g'\n)\n \n{\n\n         \nreturn\n \nnew\n \nDate\n(\nunixDate\n);\n\n     \n}\n\n     \nif\n \n(\nthisAltFormat\n \n===\n \n'unix'\n \n||\n \nthisAltFormat\n \n===\n \n'u'\n)\n \n{\n\n         \nreturn\n \nunixDate\n;\n\n     \n}\n\n     \nelse\n \n{\n\n         \nvar\n \npd\n \n=\n \nnew\n \npersianDate\n(\nunixDate\n);\n\n         \npd\n.\nformatPersian\n \n=\n \nthis\n.\npersianDigit\n;\n\n         \nreturn\n \npd\n.\nformat\n(\nself\n.\naltFormat\n);\n\n     \n}\n\n \n}\n\n\n\n\n\n\n\n\nConfig.checkDate() : \nfunction\n\u00b6\n\n\ncheck date avalibility\n\n\nKind\n: static method of \nConfig\n\n\n\n\nConfig.checkMonth() : \nfunction\n\u00b6\n\n\ncheck month avalibility\n\n\nKind\n: static method of \nConfig\n\n\n\n\nConfig.checkYear() : \nfunction\n\u00b6\n\n\ncheck year avalibility\n\n\nKind\n: static method of \nConfig\n\n\n\n\nConfig.onToggle()\n\u00b6\n\n\nKind\n: static method of \nConfig\n\n\n\n\nConfig.onDestroy()\n\u00b6\n\n\nKind\n: static method of \nConfig\n\n\n\n\n\"onSelect\" (unixDate)\n\u00b6\n\n\nA function that takes current datepicker unixDate. It is called When Day Select.\n\n\nKind\n: event emitted by \nConfig\n\n\n\n  \n\n    \n\n      \nParam\n\n    \n\n  \n\n  \n\n\n\n    \nunixDate\n\n    \n  \n\n\n\n\n\n\n\"onShow\"\n\u00b6\n\n\nA function that takes current datepicker instance. It is called just before the datepicker is displayed.\n\n\nKind\n: event emitted by \nConfig\n\n\n\n\n\"onHide\" (self)\n\u00b6\n\n\nA function that takes current datepicker instance. It is called just before the datepicker Hide.\n\n\nKind\n: event emitted by \nConfig\n\n\n\n  \n\n    \n\n      \nParam\n\n    \n\n  \n\n  \n\n\n\n    \nself",
+            "title": "Options"
+        },
+        {
+            "location": "/datepicker/options/#config",
+            "text": "This is default config class  Kind : global constant     Config  .initialValue  :  boolean  .persianDigit  :  boolean  .viewMode  :  string  .format  :  boolean  .altField  :  boolean  .altFormat  :  string  .minDate  :  Date  .maxDate  :  Date  .navigator  :  object  .enabled  :  boolean  .scroll  :  object  .enabled  :  boolean    .text  .btnNextText  .btnPrevText    \"onNext\" (navigator)  \"onPrev\" (navigator)  \"onSwitch\" (navigator)    .toolbox  :  object  .enabled  :  boolean  .text  :  object  .btnToday  :  string    \"onToday\" (toolbox)    .onlyTimePicker  :  boolean  .onlySelectOnDate  :  boolean  .timePicker  :  object  .enabled  :  boolean  .step  :  number  .hour  :  object  .enabled  :  boolean  .step  :  boolean    .minute  :  object  .enabled  :  boolean  .step  :  boolean    .second  :  object  .enabled  :  boolean  .step  :  boolean    .meridiem  :  object  .enabled  :  boolean      .dayPicker  :  object  .enabled  :  boolean  .titleFormat  :  string  .titleFormatter(year, month)  \u21d2  *  \"onSelect\" (selectedDayUnix)    .monthPicker  :  object  .enabled  :  boolean  .titleFormat  :  string  .titleFormatter(unix)  \u21d2  *  \"onSelect\" (monthIndex)    .yearPicker  :  object  .enabled  :  boolean  .titleFormat  :  string  .titleFormatter(year)  \u21d2  string  \"onSelect\" (year)    .position  :  mix  .autoClose  :  boolean  .template  :  string  .observer  :  boolean  .inputDelay  :  number  .formatter(unixDate)  .altFieldFormatter(unixDate)  .checkDate()  :  function  .checkMonth()  :  function  .checkYear()  :  function  .onToggle()  .onDestroy()  \"onSelect\" (unixDate)  \"onShow\"  \"onHide\" (self)",
+            "title": "Config"
+        },
+        {
+            "location": "/datepicker/options/#configinitialvalue-boolean",
+            "text": "Kind : static property of  Config  Default :  true",
+            "title": "Config.initialValue : boolean"
+        },
+        {
+            "location": "/datepicker/options/#configpersiandigit-boolean",
+            "text": "Kind : static property of  Config  Default :  true",
+            "title": "Config.persianDigit : boolean"
+        },
+        {
+            "location": "/datepicker/options/#configviewmode-string",
+            "text": "Acceptable value : day,month,year  Kind : static property of  Config  Default :  \"'day'\"",
+            "title": "Config.viewMode : string"
+        },
+        {
+            "location": "/datepicker/options/#configformat-boolean",
+            "text": "the date format, combination of d, dd, m, mm, yy, yyy. http://babakhani.github.io/PersianWebToolkit/doc/persiandate/0.1.8/#/displaying/format/  Kind : static property of  Config  Default :  'LLLL'",
+            "title": "Config.format : boolean"
+        },
+        {
+            "location": "/datepicker/options/#configaltfield-boolean",
+            "text": "An input element that is to be updated with the selected date from the datepicker. Use the altFormat option to change the format of the date within this field. Leave as blank for no alternate field. acceptable value: : '#elementId','.element-class'  Kind : static property of  Config  Default :  false",
+            "title": "Config.altField : boolean"
+        },
+        {
+            "location": "/datepicker/options/#configaltformat-string",
+            "text": "the date format, combination of d, dd, m, mm, yy, yyy. http://babakhani.github.io/PersianWebToolkit/doc/persiandate/0.1.8/#/displaying/format/  Kind : static property of  Config  Default :  \"'unix'\"",
+            "title": "Config.altFormat : string"
+        },
+        {
+            "location": "/datepicker/options/#configmindate-date",
+            "text": "set min date on datepicker  Kind : static property of  Config  Default :  null  Properties  \n   \n     \n       Name \n     \n   \n    \n     minDate",
+            "title": "Config.minDate : Date"
+        },
+        {
+            "location": "/datepicker/options/#configmaxdate-date",
+            "text": "set max date on datepicker  Kind : static property of  Config  Default :  null  Properties  \n   \n     \n       Name \n     \n   \n    \n     maxDate",
+            "title": "Config.maxDate : Date"
+        },
+        {
+            "location": "/datepicker/options/#confignavigator-object",
+            "text": "navigator config object  Kind : static property of  Config  Default :  true      .navigator  :  object  .enabled  :  boolean  .scroll  :  object  .enabled  :  boolean    .text  .btnNextText  .btnPrevText    \"onNext\" (navigator)  \"onPrev\" (navigator)  \"onSwitch\" (navigator)",
+            "title": "Config.navigator : object"
+        },
+        {
+            "location": "/datepicker/options/#navigatorenabled-boolean",
+            "text": "Enable or Disable dayPicker  Kind : static property of  navigator  Default :  true",
+            "title": "navigator.enabled : boolean"
+        },
+        {
+            "location": "/datepicker/options/#navigatorscroll-object",
+            "text": "scroll navigation options  Kind : static property of  navigator",
+            "title": "navigator.scroll : object"
+        },
+        {
+            "location": "/datepicker/options/#scrollenabled-boolean",
+            "text": "Kind : static property of  scroll  Default :  true",
+            "title": "scroll.enabled : boolean"
+        },
+        {
+            "location": "/datepicker/options/#navigatortext",
+            "text": "navigator text config object  Kind : static property of  navigator      .text  .btnNextText  .btnPrevText",
+            "title": "navigator.text"
+        },
+        {
+            "location": "/datepicker/options/#textbtnnexttext",
+            "text": "text of next btn  Kind : static property of  text  Default :  '<'",
+            "title": "text.btnNextText"
+        },
+        {
+            "location": "/datepicker/options/#textbtnprevtext",
+            "text": "text of prev btn  Kind : static property of  text  Default: : '>'",
+            "title": "text.btnPrevText"
+        },
+        {
+            "location": "/datepicker/options/#onnext-navigator",
+            "text": "Trigger When Next button clicked  Kind : event emitted by  navigator  \n   \n     \n       Param \n     \n   \n    \n     navigator \n          Example     function   ( navigator )   { \n      //log('navigator next '); \n  }",
+            "title": "\"onNext\" (navigator)"
+        },
+        {
+            "location": "/datepicker/options/#onprev-navigator",
+            "text": "Trigger When Prev button clicked  Kind : event emitted by  navigator  \n   \n     \n       Param \n     \n   \n    \n     navigator \n          Example     function   ( navigator )   { \n      //log('navigator prev '); \n  }",
+            "title": "\"onPrev\" (navigator)"
+        },
+        {
+            "location": "/datepicker/options/#onswitch-navigator",
+            "text": "Trigger When Switch view button clicked  Kind : event emitted by  navigator  \n   \n     \n       Param \n     \n   \n    \n     navigator \n          Example     function   ( state )   { \n                 // console.log('navigator switch '); \n  }",
+            "title": "\"onSwitch\" (navigator)"
+        },
+        {
+            "location": "/datepicker/options/#configtoolbox-object",
+            "text": "toolbox config object  Kind : static property of  Config  Default :  true      .toolbox  :  object  .enabled  :  boolean  .text  :  object  .btnToday  :  string    \"onToday\" (toolbox)",
+            "title": "Config.toolbox : object"
+        },
+        {
+            "location": "/datepicker/options/#toolboxenabled-boolean",
+            "text": "Kind : static property of  toolbox  Default :  true",
+            "title": "toolbox.enabled : boolean"
+        },
+        {
+            "location": "/datepicker/options/#toolboxtext-object",
+            "text": "Kind : static property of  toolbox",
+            "title": "toolbox.text : object"
+        },
+        {
+            "location": "/datepicker/options/#textbtntoday-string",
+            "text": "Kind : static property of  text  Default :  \"'\u0627\u0645\u0631\u0648\u0632'\"",
+            "title": "text.btnToday : string"
+        },
+        {
+            "location": "/datepicker/options/#ontoday-toolbox",
+            "text": "Kind : event emitted by  toolbox  \n   \n     \n       Param \n     \n   \n    \n     toolbox \n          Example     function   ( toolbox )   { \n      //log('toolbox today btn'); \n  }",
+            "title": "\"onToday\" (toolbox)"
+        },
+        {
+            "location": "/datepicker/options/#configonlytimepicker-boolean",
+            "text": "if true all pickers hide and just show timepicker  Kind : static property of  Config  Default :  false",
+            "title": "Config.onlyTimePicker : boolean"
+        },
+        {
+            "location": "/datepicker/options/#configonlyselectondate-boolean",
+            "text": "if true date select just by click on day in month grid  Kind : static property of  Config  Default: : true  Properties  \n   \n     \n       Name \n     \n   \n    \n     justSelectOnDate",
+            "title": "Config.onlySelectOnDate : boolean"
+        },
+        {
+            "location": "/datepicker/options/#configtimepicker-object",
+            "text": "timepicker config object  Kind : static property of  Config      .timePicker  :  object  .enabled  :  boolean  .step  :  number  .hour  :  object  .enabled  :  boolean  .step  :  boolean    .minute  :  object  .enabled  :  boolean  .step  :  boolean    .second  :  object  .enabled  :  boolean  .step  :  boolean    .meridiem  :  object  .enabled  :  boolean",
+            "title": "Config.timePicker : object"
+        },
+        {
+            "location": "/datepicker/options/#timepickerenabled-boolean",
+            "text": "Kind : static property of  timePicker",
+            "title": "timePicker.enabled : boolean"
+        },
+        {
+            "location": "/datepicker/options/#timepickerstep-number",
+            "text": "Kind : static property of  timePicker",
+            "title": "timePicker.step : number"
+        },
+        {
+            "location": "/datepicker/options/#timepickerhour-object",
+            "text": "Kind : static property of  timePicker      .hour  :  object  .enabled  :  boolean  .step  :  boolean",
+            "title": "timePicker.hour : object"
+        },
+        {
+            "location": "/datepicker/options/#hourenabled-boolean",
+            "text": "Kind : static property of  hour",
+            "title": "hour.enabled : boolean"
+        },
+        {
+            "location": "/datepicker/options/#hourstep-boolean",
+            "text": "overwrite by parent step  Kind : static property of  hour",
+            "title": "hour.step : boolean"
+        },
+        {
+            "location": "/datepicker/options/#timepickerminute-object",
+            "text": "Kind : static property of  timePicker      .minute  :  object  .enabled  :  boolean  .step  :  boolean",
+            "title": "timePicker.minute : object"
+        },
+        {
+            "location": "/datepicker/options/#minuteenabled-boolean",
+            "text": "Kind : static property of  minute",
+            "title": "minute.enabled : boolean"
+        },
+        {
+            "location": "/datepicker/options/#minutestep-boolean",
+            "text": "overwrite by parent step  Kind : static property of  minute",
+            "title": "minute.step : boolean"
+        },
+        {
+            "location": "/datepicker/options/#timepickersecond-object",
+            "text": "Kind : static property of  timePicker      .second  :  object  .enabled  :  boolean  .step  :  boolean",
+            "title": "timePicker.second : object"
+        },
+        {
+            "location": "/datepicker/options/#secondenabled-boolean",
+            "text": "Kind : static property of  second",
+            "title": "second.enabled : boolean"
+        },
+        {
+            "location": "/datepicker/options/#secondstep-boolean",
+            "text": "overwrite by parent step  Kind : static property of  second",
+            "title": "second.step : boolean"
+        },
+        {
+            "location": "/datepicker/options/#timepickermeridiem-object",
+            "text": "Kind : static property of  timePicker",
+            "title": "timePicker.meridiem : object"
+        },
+        {
+            "location": "/datepicker/options/#meridiemenabled-boolean",
+            "text": "if you set this as false, datepicker clock system moved to 24-hour system  Kind : static property of  meridiem",
+            "title": "meridiem.enabled : boolean"
+        },
+        {
+            "location": "/datepicker/options/#configdaypicker-object",
+            "text": "dayPicker config object  Kind : static property of  Config      .dayPicker  :  object  .enabled  :  boolean  .titleFormat  :  string  .titleFormatter(year, month)  \u21d2  *  \"onSelect\" (selectedDayUnix)",
+            "title": "Config.dayPicker : object"
+        },
+        {
+            "location": "/datepicker/options/#daypickerenabled-boolean",
+            "text": "Kind : static property of  dayPicker  Default :  true",
+            "title": "dayPicker.enabled : boolean"
+        },
+        {
+            "location": "/datepicker/options/#daypickertitleformat-string",
+            "text": "Kind : static property of  dayPicker  Default :  \"'YYYY MMMM'\"",
+            "title": "dayPicker.titleFormat : string"
+        },
+        {
+            "location": "/datepicker/options/#daypickertitleformatteryear-month-42",
+            "text": "Kind : static method of  dayPicker  \n   \n     \n       Param \n     \n   \n    \n     year \n     \n     month",
+            "title": "dayPicker.titleFormatter(year, month) \u21d2 *"
+        },
+        {
+            "location": "/datepicker/options/#onselect-selecteddayunix",
+            "text": "Kind : event emitted by  dayPicker  \n   \n     \n       Param \n     \n   \n    \n     selectedDayUnix",
+            "title": "\"onSelect\" (selectedDayUnix)"
+        },
+        {
+            "location": "/datepicker/options/#configmonthpicker-object",
+            "text": "monthPicker config object  Kind : static property of  Config      .monthPicker  :  object  .enabled  :  boolean  .titleFormat  :  string  .titleFormatter(unix)  \u21d2  *  \"onSelect\" (monthIndex)",
+            "title": "Config.monthPicker : object"
+        },
+        {
+            "location": "/datepicker/options/#monthpickerenabled-boolean",
+            "text": "Kind : static property of  monthPicker  Default :  true",
+            "title": "monthPicker.enabled : boolean"
+        },
+        {
+            "location": "/datepicker/options/#monthpickertitleformat-string",
+            "text": "Kind : static property of  monthPicker  Default :  \"'YYYY'\"",
+            "title": "monthPicker.titleFormat : string"
+        },
+        {
+            "location": "/datepicker/options/#monthpickertitleformatterunix-42",
+            "text": "Kind : static method of  monthPicker  \n   \n     \n       Param \n     \n   \n    \n     unix",
+            "title": "monthPicker.titleFormatter(unix) \u21d2 *"
+        },
+        {
+            "location": "/datepicker/options/#onselect-monthindex",
+            "text": "Kind : event emitted by  monthPicker  \n   \n     \n       Param \n     \n   \n    \n     monthIndex",
+            "title": "\"onSelect\" (monthIndex)"
+        },
+        {
+            "location": "/datepicker/options/#configyearpicker-object",
+            "text": "yearPicker config object  Kind : static property of  Config      .yearPicker  :  object  .enabled  :  boolean  .titleFormat  :  string  .titleFormatter(year)  \u21d2  string  \"onSelect\" (year)",
+            "title": "Config.yearPicker : object"
+        },
+        {
+            "location": "/datepicker/options/#yearpickerenabled-boolean",
+            "text": "Kind : static property of  yearPicker  Default :  true",
+            "title": "yearPicker.enabled : boolean"
+        },
+        {
+            "location": "/datepicker/options/#yearpickertitleformat-string",
+            "text": "Kind : static property of  yearPicker  Default :  \"'YYYY'\"",
+            "title": "yearPicker.titleFormat : string"
+        },
+        {
+            "location": "/datepicker/options/#yearpickertitleformatteryear-string",
+            "text": "Kind : static method of  yearPicker  \n   \n     \n       Param \n     \n   \n    \n     year",
+            "title": "yearPicker.titleFormatter(year) \u21d2 string"
+        },
+        {
+            "location": "/datepicker/options/#onselect-year",
+            "text": "Kind : event emitted by  yearPicker  \n   \n     \n       Param \n     \n   \n    \n     year",
+            "title": "\"onSelect\" (year)"
+        },
+        {
+            "location": "/datepicker/options/#configposition-mix",
+            "text": "position of datepicker relative to input element  Kind : static property of  Config  Default :  'auto'  Example     'position' :   'auto'  'position' :   [ 10 , 10 ]",
+            "title": "Config.position : mix"
+        },
+        {
+            "location": "/datepicker/options/#configautoclose-boolean",
+            "text": "If true picker close When Select day  Kind : static property of  Config  Default :  false",
+            "title": "Config.autoClose : boolean"
+        },
+        {
+            "location": "/datepicker/options/#configtemplate-string",
+            "text": "by default datepicker have a template string, and you can overwrite it simply by replace string in config.  Kind : static property of  Config  Example     < div   id = \"plotId\"   class = \"datepicker-plot-area datepicker-plot-area-inline-view\" > \n      {{ # navigator . enabled }} \n      < div   class = \"navigator\" > \n      < div   class = \"datepicker-header\" > \n      < div   class = \"btn btn-next\" > {{ navigator . text . btnNextText }} < /div> \n      < div   class = \"btn btn-switch\" > {{   navigator . switch . text   }} < /div> \n      < div   class = \"btn btn-prev\" > {{ navigator . text . btnPrevText }} < /div> \n      < /div> \n      < /div> \n      {{ /navigator.enabled}} \n      < div   class = \"datepicker-grid-view\"   > \n      {{ # days . enabled }} \n      {{ # days . viewMode }} \n      < div   class = \"datepicker-day-view\"   > \n      < div   class = \"month-grid-box\" > \n      < div   class = \"header\" > \n      < div   class = \"title\" >< /div> \n      < div   class = \"header-row\" > \n      < div   class = \"header-row-cell\" > \u0634 < /div> \n      < div   class = \"header-row-cell\" > \u06cc < /div> \n      < div   class = \"header-row-cell\" > \u062f < /div> \n      < div   class = \"header-row-cell\" > \u0633 < /div> \n      < div   class = \"header-row-cell\" > \u0686 < /div> \n      < div   class = \"header-row-cell\" > \u067e < /div> \n      < div   class = \"header-row-cell\" > \u062c < /div> \n      < /div> \n      < /div> \n      < table   cellspacing = \"0\"   class = \"table-days\" > \n      < tbody > \n      {{ # days . list }} \n\n      < tr > \n      {{ # .}} \n\n      {{ # enabled }} \n      < td   data - unix = \"{{dataUnix}}\"   >< span    class = \"{{#otherMonth}}other-month{{/otherMonth}} {{#selected}}selected{{/selected}}\" > {{ title }} < /span></td> \n      {{ /enabled}} \n      {{ ^ enabled }} \n      < td   data - unix = \"{{dataUnix}}\"   class = \"disabled\" >< span   class = \"{{#otherMonth}}other-month{{/otherMonth}}\" > {{ title }} < /span></td> \n      {{ /enabled}} \n\n      {{ /.}} \n      < /tr> \n      {{ /days.list}} \n      < /tbody> \n      < /table> \n      < /div> \n      < /div> \n      {{ /days.viewMode}} \n      {{ /days.enabled}} \n\n      {{ # month . enabled }} \n      {{ # month . viewMode }} \n      < div   class = \"datepicker-month-view\" > \n      {{ # month . list }} \n      {{ # enabled }} \n      < div   data - month = \"{{dataMonth}}\"   class = \"month-item {{#selected}}selected{{/selected}}\" > {{ title }} < /small></div> \n      {{ /enabled}} \n      {{ ^ enabled }} \n      < div   data - month = \"{{dataMonth}}\"   class = \"month-item month-item-disable {{#selected}}selected{{/selected}}\" > {{ title }} < /small></div> \n      {{ /enabled}} \n      {{ /month.list}} \n      < /div> \n      {{ /month.viewMode}} \n      {{ /month.enabled}} \n\n      {{ # year . enabled   }} \n      {{ # year . viewMode   }} \n      < div   class = \"datepicker-year-view\"   > \n      {{ # year . list }} \n      {{ # enabled }} \n      < div   data - year = \"{{dataYear}}\"   class = \"year-item {{#selected}}selected{{/selected}}\" > {{ title }} < /div> \n      {{ /enabled}} \n      {{ ^ enabled }} \n      < div   data - year = \"{{dataYear}}\"   class = \"year-item year-item-disable {{#selected}}selected{{/selected}}\" > {{ title }} < /div> \n      {{ /enabled}} \n      {{ /year.list}} \n      < /div> \n      {{ /year.viewMode }} \n      {{ /year.enabled }} \n\n      < /div> \n      {{ # time }} \n      {{ # enabled }} \n      < div   class = \"datepicker-time-view\" > \n      {{ # hour . enabled }} \n      < div   class = \"hour time-segment\"   data - time - key = \"hour\" > \n      < div   class = \"up-btn\"   data - time - key = \"hour\" > \u25b2 < /div> \n      < input   value = \"{{hour.title}}\"   type = \"text\"   placeholder = \"hour\"   class = \"hour-input\" > \n      < div   class = \"down-btn\"   data - time - key = \"hour\" > \u25bc < /div> \n      < /div> \n      < div   class = \"divider\" >:< /div> \n      {{ /hour.enabled}} \n      {{ # minute . enabled }} \n      < div   class = \"minute time-segment\"   data - time - key = \"minute\"   > \n      < div   class = \"up-btn\"   data - time - key = \"minute\" > \u25b2 < /div> \n      < input   value = \"{{minute.title}}\"   type = \"text\"   placeholder = \"minute\"   class = \"minute-input\" > \n      < div   class = \"down-btn\"   data - time - key = \"minute\" > \u25bc < /div> \n      < /div> \n      < div   class = \"divider second-divider\" >:< /div> \n      {{ /minute.enabled}} \n      {{ # second . enabled }} \n      < div   class = \"second time-segment\"   data - time - key = \"second\"    > \n      < div   class = \"up-btn\"   data - time - key = \"second\"   > \u25b2 < /div> \n      < input   value = \"{{second.title}}\"    type = \"text\"   placeholder = \"second\"   class = \"second-input\" > \n      < div   class = \"down-btn\"   data - time - key = \"second\"   > \u25bc < /div> \n      < /div> \n      < div   class = \"divider meridian-divider\" >< /div> \n      < div   class = \"divider meridian-divider\" >< /div> \n      {{ /second.enabled}} \n      {{ # meridiem . enabled }} \n      < div   class = \"meridiem time-segment\"   data - time - key = \"meridian\"   > \n      < div   class = \"up-btn\"   data - time - key = \"meridiem\" > \u25b2 < /div> \n      < input   value = \"{{meridiem.title}}\"   type = \"text\"   class = \"meridiem-input\" > \n      < div   class = \"down-btn\"   data - time - key = \"meridiem\" > \u25bc < /div> \n      < /div> \n      {{ /meridiem.enabled}} \n      < /div> \n      {{ /enabled}} \n      {{ /time}} \n\n      {{ # toolbox }} \n      {{ # enabled }} \n      < div   class = \"toolbox \" > \n      < div   class = \"btn-today\" > {{ text . btnToday }} < /div> \n      < /div> \n      {{ /enabled}} \n      {{ /toolbox}} \n      < /div>",
+            "title": "Config.template : string"
+        },
+        {
+            "location": "/datepicker/options/#configobserver-boolean",
+            "text": "Deprecated  observer  Kind : static property of  Config  Default :  false",
+            "title": "Config.observer : boolean"
+        },
+        {
+            "location": "/datepicker/options/#configinputdelay-number",
+            "text": "inputDelay  Kind : static property of  Config  Default :  800",
+            "title": "Config.inputDelay : number"
+        },
+        {
+            "location": "/datepicker/options/#configformatterunixdate",
+            "text": "format value of input  Kind : static method of  Config  Default :  function  \n   \n     \n       Param \n     \n   \n    \n     unixDate \n          Example     function   ( unixDate )   { \n      var   self   =   this ; \n      var   pdate   =   new   persianDate ( unixDate ); \n      pdate . formatPersian   =   this . persianDigit ; \n      return   pdate . format ( self . format ); \n  }",
+            "title": "Config.formatter(unixDate)"
+        },
+        {
+            "location": "/datepicker/options/#configaltfieldformatterunixdate",
+            "text": "format value of 'altField' input  Kind : static method of  Config  Default :  function  \n   \n     \n       Param \n     \n   \n    \n     unixDate \n          Example     function   ( unixDate )   { \n      var   self   =   this ; \n      var   thisAltFormat   =   self . altFormat . toLowerCase (); \n      if   ( thisAltFormat   ===   'gregorian'   ||   thisAltFormat   ===   'g' )   { \n          return   new   Date ( unixDate ); \n      } \n      if   ( thisAltFormat   ===   'unix'   ||   thisAltFormat   ===   'u' )   { \n          return   unixDate ; \n      } \n      else   { \n          var   pd   =   new   persianDate ( unixDate ); \n          pd . formatPersian   =   this . persianDigit ; \n          return   pd . format ( self . altFormat ); \n      } \n  }",
+            "title": "Config.altFieldFormatter(unixDate)"
+        },
+        {
+            "location": "/datepicker/options/#configcheckdate-function",
+            "text": "check date avalibility  Kind : static method of  Config",
+            "title": "Config.checkDate() : function"
+        },
+        {
+            "location": "/datepicker/options/#configcheckmonth-function",
+            "text": "check month avalibility  Kind : static method of  Config",
+            "title": "Config.checkMonth() : function"
+        },
+        {
+            "location": "/datepicker/options/#configcheckyear-function",
+            "text": "check year avalibility  Kind : static method of  Config",
+            "title": "Config.checkYear() : function"
+        },
+        {
+            "location": "/datepicker/options/#configontoggle",
+            "text": "Kind : static method of  Config",
+            "title": "Config.onToggle()"
+        },
+        {
+            "location": "/datepicker/options/#configondestroy",
+            "text": "Kind : static method of  Config",
+            "title": "Config.onDestroy()"
+        },
+        {
+            "location": "/datepicker/options/#onselect-unixdate",
+            "text": "A function that takes current datepicker unixDate. It is called When Day Select.  Kind : event emitted by  Config  \n   \n     \n       Param \n     \n   \n    \n     unixDate",
+            "title": "\"onSelect\" (unixDate)"
+        },
+        {
+            "location": "/datepicker/options/#onshow",
+            "text": "A function that takes current datepicker instance. It is called just before the datepicker is displayed.  Kind : event emitted by  Config",
+            "title": "\"onShow\""
+        },
+        {
+            "location": "/datepicker/options/#onhide-self",
+            "text": "A function that takes current datepicker instance. It is called just before the datepicker Hide.  Kind : event emitted by  Config  \n   \n     \n       Param \n     \n   \n    \n     self",
+            "title": "\"onHide\" (self)"
+        },
+        {
+            "location": "/datepicker/api/",
+            "text": "API\n\u00b6\n\n\nThis is default API class\n\n\nKind\n: global class  \n\n\n\n\nAPI\n\n\n.options\n\n\n.show()\n\n\n.hide()\n\n\n.toggle()\n\n\n.destroy()\n\n\n.setDate(unix)\n\n\n\n\n\n\n\n\n\n\napI.options\n\u00b6\n\n\nset options live\n\n\nKind\n: instance property of \nAPI\n\n\nExample\n  \n\n\nvar\n \npd\n \n=\n \n$\n(\n'.selector'\n).\npersianDatepicker\n();\n\n\npd\n.\noptions\n;\n\n\n//return current options\n\n\npd\n.\noptions\n \n=\n \n{};\n\n\n// set options and render datepicker with new options\n\n\n\n\n\n\n\n\napI.show()\n\u00b6\n\n\nmake datepicker visible\n\n\nKind\n: instance method of \nAPI\n\n\nExample\n  \n\n\nvar\n \npd\n \n=\n \n$\n(\n'.selector'\n).\npersianDatepicker\n();\n\n\npd\n.\nshow\n();\n\n\n\n\n\n\n\n\napI.hide()\n\u00b6\n\n\nmake datepicker invisible\n\n\nKind\n: instance method of \nAPI\n\n\nExample\n  \n\n\nvar\n \npd\n \n=\n \n$\n(\n'.selector'\n).\npersianDatepicker\n();\n\n\npd\n.\nshow\n();\n\n\n\n\n\n\n\n\napI.toggle()\n\u00b6\n\n\ntoggle datepicker visibility state\n\n\nKind\n: instance method of \nAPI\n\n\nExample\n  \n\n\nvar\n \npd\n \n=\n \n$\n(\n'.selector'\n).\npersianDatepicker\n();\n\n\npd\n.\ntoggle\n();\n\n\n\n\n\n\n\n\napI.destroy()\n\u00b6\n\n\ndestroy every thing clean dom and\n\n\nKind\n: instance method of \nAPI\n\n\nExample\n  \n\n\nvar\n \npd\n \n=\n \n$\n(\n'.selector'\n).\npersianDatepicker\n();\n\n\npd\n.\ndestroy\n();\n\n\n\n\n\n\n\n\napI.setDate(unix)\n\u00b6\n\n\nset selected date of datepicker accept unix timestamp\n\n\nKind\n: instance method of \nAPI\n\n\n\n  \n\n    \n\n      \nParam\n\n    \n\n  \n\n  \n\n\n\n    \nunix\n\n    \n  \n\n\n\n\nExample\n  \n\n\nvar\n \npd\n \n=\n \n$\n(\n'.selector'\n).\npersianDatepicker\n();\n\n\npd\n.\nsetDate\n(\n1382276091100\n)",
+            "title": "API"
+        },
+        {
+            "location": "/datepicker/api/#api",
+            "text": "This is default API class  Kind : global class     API  .options  .show()  .hide()  .toggle()  .destroy()  .setDate(unix)",
+            "title": "API"
+        },
+        {
+            "location": "/datepicker/api/#apioptions",
+            "text": "set options live  Kind : instance property of  API  Example     var   pd   =   $ ( '.selector' ). persianDatepicker ();  pd . options ;  //return current options  pd . options   =   {};  // set options and render datepicker with new options",
+            "title": "apI.options"
+        },
+        {
+            "location": "/datepicker/api/#apishow",
+            "text": "make datepicker visible  Kind : instance method of  API  Example     var   pd   =   $ ( '.selector' ). persianDatepicker ();  pd . show ();",
+            "title": "apI.show()"
+        },
+        {
+            "location": "/datepicker/api/#apihide",
+            "text": "make datepicker invisible  Kind : instance method of  API  Example     var   pd   =   $ ( '.selector' ). persianDatepicker ();  pd . show ();",
+            "title": "apI.hide()"
+        },
+        {
+            "location": "/datepicker/api/#apitoggle",
+            "text": "toggle datepicker visibility state  Kind : instance method of  API  Example     var   pd   =   $ ( '.selector' ). persianDatepicker ();  pd . toggle ();",
+            "title": "apI.toggle()"
+        },
+        {
+            "location": "/datepicker/api/#apidestroy",
+            "text": "destroy every thing clean dom and  Kind : instance method of  API  Example     var   pd   =   $ ( '.selector' ). persianDatepicker ();  pd . destroy ();",
+            "title": "apI.destroy()"
+        },
+        {
+            "location": "/datepicker/api/#apisetdateunix",
+            "text": "set selected date of datepicker accept unix timestamp  Kind : instance method of  API  \n   \n     \n       Param \n     \n   \n    \n     unix \n          Example     var   pd   =   $ ( '.selector' ). persianDatepicker ();  pd . setDate ( 1382276091100 )",
+            "title": "apI.setDate(unix)"
+        },
+        {
             "location": "/datepicker/changelog/",
             "text": "Change Log\n\u00b6\n\n\nAll notable changes to this project will be documented in this file.\n\n\nThe format is based on \nKeep a Changelog\n \nand this project adheres to \nSemantic Versioning\n.\n\n\n[0.5.0]\n\u00b6\n\n\nChanged\n\u00b6\n\n\n\n\nrefactor all code to es6",
             "title": "Change log"
@@ -364,596 +759,6 @@
             "location": "/datepicker/changelog/#changed",
             "text": "refactor all code to es6",
             "title": "Changed"
-        },
-        {
-            "location": "/datepicker/documentation/",
-            "text": "Classes\n\u00b6\n\n\n\n\nDateUtil\n\n\nDate helper, some useful date method stored here\n\n\n\n\nInput\n\n\nDo every thing about input element like get default value, set new value, set alt field input and etc.\n\n\n\n\nModel\n\n\nMain datepicker object, manage every things\n\n\n\n\nNavigator\n\n\nThis navigator class do every thing about navigate and select date\n\n\n\n\nOptions\n\n\nExtend default config from user interred and do compatibility works\n\n\n\n\nState\n\n\nAll state set in his object and get from this\nalso this object notify other object to update self or update view or etc.\n\n\n\n\nToolbox\n\n\nDo every things about toolbox, like attach events to toolbox elements\n\n\n\n\nView\n\n\nAs its name suggests, all rendering works do in this object\n\n\n\n\n\n\n\nConstants\n\u00b6\n\n\n\n\nConfig\n\n\nThis is default config class\n\n\n\n\nClassDateRange\n\n\n\n\nTemplate\n : \nstring\n\n\n\n\n\n\n\nFunctions\n\u00b6\n\n\n\n\nlog(input)\n\n\nnormal log\n\n\n\n\ndebug(elem, input)\n\n\nshow debug messages if window.persianDatepickerDebug set as true\n\n\n\n\n\n\n\n\n\nDateUtil\n\u00b6\n\n\nDate helper, some useful date method stored here\n\n\nKind\n: global class  \n\n\n\n\nDateUtil\n\n\n.isSameDay(dateA, dateB)\n \u21d2 \nboolean\n\n\n.isSameMonth(dateA, dateB)\n \u21d2 \nboolean\n\n\n.normalizeTime(key, value)\n \u21d2 \nnumber\n\n\n\n\n\n\n\n\n\n\ndateUtil.isSameDay(dateA, dateB) \u21d2 \nboolean\n\u00b6\n\n\ncheck if a date is same as b\n\n\nKind\n: instance method of \nDateUtil\n\n\n\n  \n\n    \n\n      \nParam\n\n    \n\n  \n\n  \n\n\n\n    \ndateA\n\n    \n\n    \ndateB\n\n    \n  \n\n\n\n\n\n\ndateUtil.isSameMonth(dateA, dateB) \u21d2 \nboolean\n\u00b6\n\n\ncheck if a month is same as b\n\n\nKind\n: instance method of \nDateUtil\n\n\n\n  \n\n    \n\n      \nParam\nType\n\n    \n\n  \n\n  \n\n\n\n    \ndateA\nDate\n\n    \n\n    \ndateB\nDate\n\n    \n  \n\n\n\n\n\n\ndateUtil.normalizeTime(key, value) \u21d2 \nnumber\n\u00b6\n\n\nnormalize time, like check second if bigger than 60\n\n\nKind\n: instance method of \nDateUtil\n\n\n\n  \n\n    \n\n      \nParam\nType\n\n    \n\n  \n\n  \n\n\n\n    \nkey\nstring\n\n    \n\n    \nvalue\nnumber\n\n    \n  \n\n\n\n\n\n\nInput\n\u00b6\n\n\nDo every thing about input element like get default value, set new value, set alt field input and etc.\n\n\nKind\n: global class  \n\n\n\n\nInput\n\n\nnew Input(model, inputElement)\n\n\n.model\n : \nObject\n\n\n.elem\n : \nElement\n\n\n.initialUnix\n : \nNumber\n\n\n.getInputPosition()\n \u21d2 \nObject\n\n\n.getInputSize()\n \u21d2 \nObject\n\n\n.update(unix)\n\n\n.getOnInitState()\n \u21d2 \nNumber\n\n\n\n\n\n\n\n\n\n\nnew Input(model, inputElement)\n\u00b6\n\n\n\n  \n\n    \n\n      \nParam\nType\n\n    \n\n  \n\n  \n\n\n\n    \nmodel\nModel\n\n    \n\n    \ninputElement\nElement\n\n    \n  \n\n\n\n\n\n\ninput.model : \nObject\n\u00b6\n\n\nKind\n: instance property of \nInput\n\n\n\n\ninput.elem : \nElement\n\u00b6\n\n\nKind\n: instance property of \nInput\n\n\n\n\ninput.initialUnix : \nNumber\n\u00b6\n\n\nKind\n: instance property of \nInput\n\n\n\n\ninput.getInputPosition() \u21d2 \nObject\n\u00b6\n\n\nget \n element position\n\n\nKind\n: instance method of \nInput\n\n\nTodo\n\n\n\n\nremove jquery\n\n\n\n\n\n\ninput.getInputSize() \u21d2 \nObject\n\u00b6\n\n\nget \n element size\n\n\nKind\n: instance method of \nInput\n\n\nTodo\n\n\n\n\nremove jquery\n\n\n\n\n\n\ninput.update(unix)\n\u00b6\n\n\nKind\n: instance method of \nInput\n\n\n\n  \n\n    \n\n      \nParam\n\n    \n\n  \n\n  \n\n\n\n    \nunix\n\n    \n  \n\n\n\n\n\n\ninput.getOnInitState() \u21d2 \nNumber\n\u00b6\n\n\nreturn initial value\n\n\nKind\n: instance method of \nInput\n\n\nReturns\n: \nNumber\n - - unix\n\n\n\n\nModel\n\u00b6\n\n\nMain datepicker object, manage every things\n\n\nKind\n: global class  \n\n\n\n\nModel\n\n\nnew Model(inputElement, options)\n\n\n.initialUnix\n : \nunix\n\n\n.inputElement\n : \nObject\n\n\n.options\n : \nOptions\n\n\n.input\n : \nInput\n\n\n.state\n : \nState\n\n\n.view\n : \nView\n\n\n.toolbox\n : \nToolbox\n\n\n.navigator\n : \nNavigator\n\n\n.updateInput(unix)\n\n\n\n\n\n\n\n\n\n\nnew Model(inputElement, options)\n\u00b6\n\n\n\n  \n\n    \n\n      \nParam\n\n    \n\n  \n\n  \n\n\n\n    \ninputElement\n\n    \n\n    \noptions\n\n    \n  \n\n\n\n\n\n\nmodel.initialUnix : \nunix\n\u00b6\n\n\n[initialUnix=null]\n\n\nKind\n: instance property of \nModel\n\n\n\n\nmodel.inputElement : \nObject\n\u00b6\n\n\ninputElement=inputElement\n\n\nKind\n: instance property of \nModel\n\n\n\n\nmodel.options : \nOptions\n\u00b6\n\n\nhandle works about config\n\n\nKind\n: instance property of \nModel\n\n\n\n\nmodel.input : \nInput\n\u00b6\n\n\nhandle works about input and alt field input element\n\n\nKind\n: instance property of \nModel\n\n\n\n\nmodel.state : \nState\n\u00b6\n\n\nset and get selected and view and other state\n\n\nKind\n: instance property of \nModel\n\n\n\n\nmodel.view : \nView\n\u00b6\n\n\nrender datepicker view base on State\n\n\nKind\n: instance property of \nModel\n\n\n\n\nmodel.toolbox : \nToolbox\n\u00b6\n\n\nhandle works about toolbox\n\n\nKind\n: instance property of \nModel\n\n\n\n\nmodel.navigator : \nNavigator\n\u00b6\n\n\nhandle navigation and dateoicker element events\n\n\nKind\n: instance property of \nModel\n\n\n\n\nmodel.updateInput(unix)\n\u00b6\n\n\nKind\n: instance method of \nModel\n\n\n\n  \n\n    \n\n      \nParam\n\n    \n\n  \n\n  \n\n\n\n    \nunix\n\n    \n  \n\n\n\n\n\n\nNavigator\n\u00b6\n\n\nThis navigator class do every thing about navigate and select date\n\n\nKind\n: global class\n\n\nAccess:\n public  \n\n\n\n\nNavigator\n\n\nnew Navigator(datepicker)\n\n\n.model\n : \nDatepicker\n\n\n.liveAttach()\n\n\n.timeUp(timekey)\n\n\n.timeDown(timekey)\n\n\n\n\n\n\n\n\n\n\nnew Navigator(datepicker)\n\u00b6\n\n\n\n  \n\n    \n\n      \nParam\nType\n\n    \n\n  \n\n  \n\n\n\n    \ndatepicker\nobject\n\n    \n  \n\n\n\n\n\n\nnavigator.model : \nDatepicker\n\u00b6\n\n\nKind\n: instance property of \nNavigator\n\n\n\n\nnavigator.liveAttach()\n\u00b6\n\n\nattach events that needed attach after every render\n\n\nKind\n: instance method of \nNavigator\n\n\nAccess:\n public\n\n\nTodo\n\n\n\n\nattach as a live way\n\n\n\n\n\n\nnavigator.timeUp(timekey)\n\u00b6\n\n\nset time up depend to timekey\n\n\nKind\n: instance method of \nNavigator\n\n\nAccess:\n public\n\n\n\n  \n\n    \n\n      \nParam\nType\nDescription\n\n    \n\n  \n\n  \n\n\n\n    \ntimekey\nString\naccept hour, minute,second\n\n\n\n    \n  \n\n\n\n\n\n\nnavigator.timeDown(timekey)\n\u00b6\n\n\nset time down depend to timekey\n\n\nKind\n: instance method of \nNavigator\n\n\nAccess:\n public\n\n\n\n  \n\n    \n\n      \nParam\nType\nDescription\n\n    \n\n  \n\n  \n\n\n\n    \ntimekey\nString\naccept hour, minute,second\n\n\n\n    \n  \n\n\n\n\n\n\nOptions\n\u00b6\n\n\nExtend default config from user interred and do compatibility works\n\n\nKind\n: global class\n\n\nAccess:\n public\n\n\n\n\nnew Options(options)\n\u00b6\n\n\n\n  \n\n    \n\n      \nParam\nType\nDescription\n\n    \n\n  \n\n  \n\n\n\n    \noptions\nobject\nconfig passed when initialize\n\n\n\n    \n  \n\n\n\n\n\n\nState\n\u00b6\n\n\nAll state set in his object and get from this\nalso this object notify other object to update self or update view or etc.\n\n\nKind\n: global class  \n\n\n\n\nState\n\n\nnew State(model)\n\n\n.model\n : \nobject\n\n\n.filetredDate\n : \nBoolean\n\n\n.viewModeList\n : \nArray\n\n\n.viewMode\n : \nString\n\n\n.viewModeIndex\n : \nnumber\n\n\n.filterDate\n : \nObject\n\n\n.view\n : \nObject\n\n\n.selected\n : \nObject\n\n\n.setSelectedDateTime(key, value)\n \u21d2 \nState\n\n\n.navigate(nav)\n\n\n.switchViewMode()\n \u21d2 \nState\n\n\n.switchViewModeTo(viewMode)\n\n\n.setViewDateTime(key, value)\n \u21d2 \nState\n\n\n\n\n\n\n\n\n\n\nnew State(model)\n\u00b6\n\n\n\n  \n\n    \n\n      \nParam\nType\n\n    \n\n  \n\n  \n\n\n\n    \nmodel\nmodel\n\n    \n  \n\n\n\n\n\n\nstate.model : \nobject\n\u00b6\n\n\nKind\n: instance property of \nState\n\n\n\n\nstate.filetredDate : \nBoolean\n\u00b6\n\n\nKind\n: instance property of \nState\n\n\n\n\nstate.viewModeList : \nArray\n\u00b6\n\n\nget generated view mode list from options object\n\n\nKind\n: instance property of \nState\n\n\n\n\nstate.viewMode : \nString\n\u00b6\n\n\nview mode string day, month, year\n\n\nKind\n: instance property of \nState\n\n\nDefault\n: \nday\n\n\nTodo\n\n\n\n\nadd time to view modes\n\n\n\n\n\n\nstate.viewModeIndex : \nnumber\n\u00b6\n\n\nview mode string index in view mode list\n\n\nKind\n: instance property of \nState\n\n\n\n\nstate.filterDate : \nObject\n\u00b6\n\n\ncontain filtered date objects\n\n\nKind\n: instance property of \nState\n\n\n\n\nstate.view : \nObject\n\u00b6\n\n\ncontain view date object\n\n\nKind\n: instance property of \nState\n\n\n\n\nstate.selected : \nObject\n\u00b6\n\n\ncontain selected date object\n\n\nKind\n: instance property of \nState\n\n\n\n\nstate.setSelectedDateTime(key, value) \u21d2 \nState\n\u00b6\n\n\ncalled on date select\n\n\nKind\n: instance method of \nState\n\n\nAccess:\n public\n\n\n\n  \n\n    \n\n      \nParam\nType\nDescription\n\n    \n\n  \n\n  \n\n\n\n    \nkey\nString\naccept date, month, year, hour, minute, second\n\n\n\n    \n\n    \nvalue\nNumber\n\n    \n  \n\n\n\n\n\n\nstate.navigate(nav)\n\u00b6\n\n\nchange view state\n\n\nKind\n: instance method of \nState\n\n\n\n  \n\n    \n\n      \nParam\nType\nDescription\n\n    \n\n  \n\n  \n\n\n\n    \nnav\nString\naccept next, prev\n\n\n\n    \n  \n\n\n\n\n\n\nstate.switchViewMode() \u21d2 \nState\n\u00b6\n\n\nevery time called view state changed to next in queue\n\n\nKind\n: instance method of \nState\n\n\nAccess:\n public\n\n\n\n\nstate.switchViewModeTo(viewMode)\n\u00b6\n\n\nswitch to specified view mode\n\n\nKind\n: instance method of \nState\n\n\n\n  \n\n    \n\n      \nParam\nType\nDescription\n\n    \n\n  \n\n  \n\n\n\n    \nviewMode\nString\naccept date, month, year\n\n\n\n    \n  \n\n\n\n\n\n\nstate.setViewDateTime(key, value) \u21d2 \nState\n\u00b6\n\n\nKind\n: instance method of \nState\n\n\n\n  \n\n    \n\n      \nParam\nType\nDescription\n\n    \n\n  \n\n  \n\n\n\n    \nkey\nString\naccept date, month, year, hour, minute, second\n\n\n\n    \n\n    \nvalue\nNumber\n\n    \n  \n\n\n\n\n\n\nToolbox\n\u00b6\n\n\nDo every things about toolbox, like attach events to toolbox elements\n\n\nKind\n: global class  \n\n\n\n\nToolbox\n\n\nnew Toolbox(datepicker)\n\n\n.model\n : \nDatepicker\n\n\n._attachEvents()\n\n\n\n\n\n\n\n\n\n\nnew Toolbox(datepicker)\n\u00b6\n\n\n\n  \n\n    \n\n      \nParam\nType\n\n    \n\n  \n\n  \n\n\n\n    \ndatepicker\nDatepicker\n\n    \n  \n\n\n\n\n\n\ntoolbox.model : \nDatepicker\n\u00b6\n\n\nKind\n: instance property of \nToolbox\n\n\n\n\ntoolbox._attachEvents()\n\u00b6\n\n\nattach all events about toolbox\n\n\nKind\n: instance method of \nToolbox\n\n\n\n\nView\n\u00b6\n\n\nAs its name suggests, all rendering works do in this object\n\n\nKind\n: global class  \n\n\n\n\nView\n\n\nnew View(model)\n\n\n.yearsViewCount\n : \nnumber\n\n\n.model\n : \nDatepicker\n\n\n.rendered\n : \nnull\n\n\n.$container\n : \nnull\n\n\n.id\n : \nstring\n\n\n.destroy()\n\n\n.setPickerBoxPosition()\n\n\n.show()\n\n\n.hide()\n\n\n.toggle()\n\n\n.checkYearAccess(year)\n \u21d2 \nBoolean\n\n\n.checkMonthAccess(month)\n \u21d2 \nBoolean\n\n\n.checkDayAccess(thisUnix)\n \u21d2 \nBoolean\n\n\n.getViewModel(data)\n \u21d2 \n*\n\n\n.render(data)\n\n\n.afterRender()\n\n\n\n\n\n\n\n\n\n\nnew View(model)\n\u00b6\n\n\n\n  \n\n    \n\n      \nParam\nType\n\n    \n\n  \n\n  \n\n\n\n    \nmodel\nDatepicker\n\n    \n  \n\n\n\n\n\n\nview.yearsViewCount : \nnumber\n\u00b6\n\n\nKind\n: instance property of \nView\n\n\n\n\nview.model : \nDatepicker\n\u00b6\n\n\nKind\n: instance property of \nView\n\n\n\n\nview.rendered : \nnull\n\u00b6\n\n\nKind\n: instance property of \nView\n\n\n\n\nview.$container : \nnull\n\u00b6\n\n\nKind\n: instance property of \nView\n\n\n\n\nview.id : \nstring\n\u00b6\n\n\nKind\n: instance property of \nView\n\n\n\n\nview.destroy()\n\u00b6\n\n\nremove datepicker container element from dom\n\n\nKind\n: instance method of \nView\n\n\n\n\nview.setPickerBoxPosition()\n\u00b6\n\n\nset datepicker container element based on \n element position\n\n\nKind\n: instance method of \nView\n\n\n\n\nview.show()\n\u00b6\n\n\nshow datepicker container element\n\n\nKind\n: instance method of \nView\n\n\n\n\nview.hide()\n\u00b6\n\n\nhide datepicker container element\n\n\nKind\n: instance method of \nView\n\n\n\n\nview.toggle()\n\u00b6\n\n\ntoggle datepicker container element\n\n\nKind\n: instance method of \nView\n\n\n\n\nview.checkYearAccess(year) \u21d2 \nBoolean\n\u00b6\n\n\ncheck year is accessible\n\n\nKind\n: instance method of \nView\n\n\n\n  \n\n    \n\n      \nParam\nType\nDescription\n\n    \n\n  \n\n  \n\n\n\n    \nyear\nNumber\nyear number\n\n\n\n    \n  \n\n\n\n\n\n\nview.checkMonthAccess(month) \u21d2 \nBoolean\n\u00b6\n\n\ncheck month is accessible\n\n\nKind\n: instance method of \nView\n\n\n\n  \n\n    \n\n      \nParam\nType\nDescription\n\n    \n\n  \n\n  \n\n\n\n    \nmonth\nNumber\nmonth number\n\n\n\n    \n  \n\n\n\n\n\n\nview.checkDayAccess(thisUnix) \u21d2 \nBoolean\n\u00b6\n\n\ncheck day is accessible\n\n\nKind\n: instance method of \nView\n\n\n\n  \n\n    \n\n      \nParam\nType\nDescription\n\n    \n\n  \n\n  \n\n\n\n    \nthisUnix\nNumber\nmonth number\n\n\n\n    \n  \n\n\n\n\n\n\nview.getViewModel(data) \u21d2 \n*\n\u00b6\n\n\nKind\n: instance method of \nView\n\n\n\n  \n\n    \n\n      \nParam\n\n    \n\n  \n\n  \n\n\n\n    \ndata\n\n    \n  \n\n\n\n\n\n\nview.render(data)\n\u00b6\n\n\nKind\n: instance method of \nView\n\n\nRender\n: datepicker view element\n\n\n\n  \n\n    \n\n      \nParam\n\n    \n\n  \n\n  \n\n\n\n    \ndata\n\n    \n  \n\n\n\n\n\n\nview.afterRender()\n\u00b6\n\n\ndo after render work like attache events\n\n\nKind\n: instance method of \nView\n\n\n\n\nConfig\n\u00b6\n\n\nThis is default config class\n\n\nKind\n: global constant  \n\n\n\n\nConfig\n\n\n.initialValue\n : \nBoolean\n\n\n.persianDigit\n : \nBoolean\n\n\n.viewMode\n : \nstring\n\n\n.format\n : \nboolean\n\n\n.altField\n : \nboolean\n\n\n.altFormat\n : \nstring\n\n\n.minDate\n : \nboolean\n\n\n.maxDate\n : \nboolean\n\n\n.navigator\n : \nobject\n\n\n.enabled\n\n\n.text\n\n\n.btnNextText\n\n\n.btnPrevText\n\n\n\n\n\n\n\"onNext\" (navigator)\n\n\n\"onPrev\" (navigator)\n\n\n\"onSwitch\" (navigator)\n\n\n\n\n\n\n.toolbox\n : \nobject\n\n\n.onlyTimePicker\n : \nboolean\n\n\n.onlySelectOnDate\n : \nboolean\n\n\n.timePicker\n : \nobject\n\n\n.dayPicker\n : \nobject\n\n\n.monthPicker\n : \nobject\n\n\n.yearPicker\n : \nobject\n\n\n.position\n\n\n.autoClose\n : \nboolean\n\n\n.observer\n : \nboolean\n\n\n.inputDelay\n : \nnumber\n\n\n.formatter(unixDate)\n \u21d2 \n*\n\n\n.altFieldFormatter(unixDate)\n \u21d2 \n*\n\n\n.checkDate()\n : \nfunction\n\n\n.checkMonth()\n : \nfunction\n\n\n.checkYear()\n : \nfunction\n\n\n.onToggle()\n\n\n.onDestroy()\n\n\n\"onSelect\" (unixDate)\n\n\n\"onShow\"\n\n\n\"onHide\" (self)\n\n\n\n\n\n\n\n\n\n\nConfig.initialValue : \nBoolean\n\u00b6\n\n\nKind\n: static property of \nConfig\n\n\n\n\nConfig.persianDigit : \nBoolean\n\u00b6\n\n\nKind\n: static property of \nConfig\n\n\n\n\nConfig.viewMode : \nstring\n\u00b6\n\n\nAcceptable value : day,month,year\n\n\nKind\n: static property of \nConfig\n\n\nDefault\n: \n\"day\"\n\n\n\n\nConfig.format : \nboolean\n\u00b6\n\n\nthe date format, combination of d, dd, m, mm, yy, yyy.\n\nhttp://babakhani.github.io/PersianWebToolkit/doc/persiandate/0.1.8/#/displaying/format/\n\n\nKind\n: static property of \nConfig\n\n\nDefault\n: \nfalse\n\n\n\n\nConfig.altField : \nboolean\n\u00b6\n\n\nAn input element that is to be updated with the selected date from the datepicker. Use the altFormat option to change the format of the date within this field. Leave as blank for no alternate field. acceptable value: : '#elementId','.element-class'\n\n\nKind\n: static property of \nConfig\n\n\nDefault\n: \nfalse\n\n\n\n\nConfig.altFormat : \nstring\n\u00b6\n\n\nthe date format, combination of d, dd, m, mm, yy, yyy.\n\nhttp://babakhani.github.io/PersianWebToolkit/doc/persiandate/0.1.8/#/displaying/format/\n\n\nKind\n: static property of \nConfig\n\n\nDefault\n: \n\"unix\"\n\n\n\n\nConfig.minDate : \nboolean\n\u00b6\n\n\nset min date on datepicker\n\n\nKind\n: static property of \nConfig\n\n\nProperties\n\n\n\n  \n\n    \n\n      \nName\n\n    \n\n  \n\n  \n\n\n\n    \nminDate\n\n    \n  \n\n\n\n\n\n\n\nConfig.maxDate : \nboolean\n\u00b6\n\n\nset max date on datepicker\n\n\nKind\n: static property of \nConfig\n\n\nProperties\n\n\n\n  \n\n    \n\n      \nName\n\n    \n\n  \n\n  \n\n\n\n    \nmaxDate\n\n    \n  \n\n\n\n\n\n\n\nConfig.navigator : \nobject\n\u00b6\n\n\nnavigator config object\n\n\nKind\n: static property of \nConfig\n\n\nDefault\n: \ntrue\n  \n\n\n\n\n.navigator\n : \nobject\n\n\n.enabled\n\n\n.text\n\n\n.btnNextText\n\n\n.btnPrevText\n\n\n\n\n\n\n\"onNext\" (navigator)\n\n\n\"onPrev\" (navigator)\n\n\n\"onSwitch\" (navigator)\n\n\n\n\n\n\n\n\n\n\nnavigator.enabled\n\u00b6\n\n\nEnable or Disable dayPicker\n\n\nKind\n: static property of \nnavigator\n\n\n\n\nnavigator.text\n\u00b6\n\n\nnavigator text config object\n\n\nKind\n: static property of \nnavigator\n  \n\n\n\n\n.text\n\n\n.btnNextText\n\n\n.btnPrevText\n\n\n\n\n\n\n\n\n\n\ntext.btnNextText\n\u00b6\n\n\ntext of next btn\n\n\nKind\n: static property of \ntext\n\n\n\n\ntext.btnPrevText\n\u00b6\n\n\ntext of prev btn\n\n\nKind\n: static property of \ntext\n\n\n\n\n\"onNext\" (navigator)\n\u00b6\n\n\nTrigger When Next button clicked\n\n\nKind\n: event emitted by \nnavigator\n\n\n\n  \n\n    \n\n      \nParam\n\n    \n\n  \n\n  \n\n\n\n    \nnavigator\n\n    \n  \n\n\n\n\n\n\n\"onPrev\" (navigator)\n\u00b6\n\n\nTrigger When Prev button clicked\n\n\nKind\n: event emitted by \nnavigator\n\n\n\n  \n\n    \n\n      \nParam\n\n    \n\n  \n\n  \n\n\n\n    \nnavigator\n\n    \n  \n\n\n\n\n\n\n\"onSwitch\" (navigator)\n\u00b6\n\n\nTrigger When Switch view button clicked\n\n\nKind\n: event emitted by \nnavigator\n\n\n\n  \n\n    \n\n      \nParam\n\n    \n\n  \n\n  \n\n\n\n    \nnavigator\n\n    \n  \n\n\n\n\n\n\nConfig.toolbox : \nobject\n\u00b6\n\n\ntoolbox config object\n\n\nKind\n: static property of \nConfig\n\n\nDefault\n: \ntrue\n\n\n\n\nConfig.onlyTimePicker : \nboolean\n\u00b6\n\n\nif true all pickers hide and just shpw timepicker\n\n\nKind\n: static property of \nConfig\n\n\nDefault\n: \nfalse\n\n\n\n\nConfig.onlySelectOnDate : \nboolean\n\u00b6\n\n\nif true date select just by click on day in month grid\n\n\nKind\n: static property of \nConfig\n\n\nProperties\n\n\n\n  \n\n    \n\n      \nName\n\n    \n\n  \n\n  \n\n\n\n    \njustSelectOnDate\n\n    \n  \n\n\n\n\n\n\n\nConfig.timePicker : \nobject\n\u00b6\n\n\ntimepicker config object\n\n\nKind\n: static property of \nConfig\n\n\n\n\nConfig.dayPicker : \nobject\n\u00b6\n\n\ndayPicker config object\n\n\nKind\n: static property of \nConfig\n\n\n\n\nConfig.monthPicker : \nobject\n\u00b6\n\n\nmonthPicker config object\n\n\nKind\n: static property of \nConfig\n\n\n\n\nConfig.yearPicker : \nobject\n\u00b6\n\n\nyearPicker config object\n\n\nKind\n: static property of \nConfig\n\n\n\n\nConfig.position\n\u00b6\n\n\nKind\n: static property of \nConfig\n\n\n\n\nConfig.autoClose : \nboolean\n\u00b6\n\n\nIf true picker close When Select day\n\n\nKind\n: static property of \nConfig\n\n\nDefault\n: \nfalse\n\n\n\n\nConfig.observer : \nboolean\n\u00b6\n\n\nDeprecated\n\n\nobserver\n\n\nKind\n: static property of \nConfig\n\n\nDefault\n: \nfalse\n\n\n\n\nConfig.inputDelay : \nnumber\n\u00b6\n\n\ninputDelay\n\n\nKind\n: static property of \nConfig\n\n\nDefault\n: \n800\n\n\n\n\nConfig.formatter(unixDate) \u21d2 \n*\n\u00b6\n\n\nformat value of input\n\n\nKind\n: static method of \nConfig\n\n\n\n  \n\n    \n\n      \nParam\n\n    \n\n  \n\n  \n\n\n\n    \nunixDate\n\n    \n  \n\n\n\n\n\n\nConfig.altFieldFormatter(unixDate) \u21d2 \n*\n\u00b6\n\n\nformat value of 'altField' input\n\n\nKind\n: static method of \nConfig\n\n\n\n  \n\n    \n\n      \nParam\n\n    \n\n  \n\n  \n\n\n\n    \nunixDate\n\n    \n  \n\n\n\n\n\n\nConfig.checkDate() : \nfunction\n\u00b6\n\n\ncheck date avalibility\n\n\nKind\n: static method of \nConfig\n\n\n\n\nConfig.checkMonth() : \nfunction\n\u00b6\n\n\ncheck month avalibility\n\n\nKind\n: static method of \nConfig\n\n\n\n\nConfig.checkYear() : \nfunction\n\u00b6\n\n\ncheck year avalibility\n\n\nKind\n: static method of \nConfig\n\n\n\n\nConfig.onToggle()\n\u00b6\n\n\nKind\n: static method of \nConfig\n\n\n\n\nConfig.onDestroy()\n\u00b6\n\n\nKind\n: static method of \nConfig\n\n\n\n\n\"onSelect\" (unixDate)\n\u00b6\n\n\nA function that takes current datepicker unixDate. It is called When Day Select.\n\n\nKind\n: event emitted by \nConfig\n\n\n\n  \n\n    \n\n      \nParam\n\n    \n\n  \n\n  \n\n\n\n    \nunixDate\n\n    \n  \n\n\n\n\n\n\n\"onShow\"\n\u00b6\n\n\nA function that takes current datepicker instance. It is called just before the datepicker is displayed.\n\n\nKind\n: event emitted by \nConfig\n\n\n\n\n\"onHide\" (self)\n\u00b6\n\n\nA function that takes current datepicker instance. It is called just before the datepicker Hide.\n\n\nKind\n: event emitted by \nConfig\n\n\n\n  \n\n    \n\n      \nParam\n\n    \n\n  \n\n  \n\n\n\n    \nself\n\n    \n  \n\n\n\n\n\n\nClassDateRange\n\u00b6\n\n\nKind\n: global constant  \n\n\n\n\nClassDateRange\n\n\n.monthRange\n\n\n.weekRange\n\n\n.persianDaysName\n\n\n\n\n\n\n\n\n\n\nClassDateRange.monthRange\n\u00b6\n\n\nKind\n: static property of \nClassDateRange\n\n\nProperties\n\n\n\n  \n\n    \n\n      \nName\n\n    \n\n  \n\n  \n\n\n\n    \nmonthRange\n\n    \n  \n\n\n\n\n\n\n\nClassDateRange.weekRange\n\u00b6\n\n\nKind\n: static property of \nClassDateRange\n\n\nProperties\n\n\n\n  \n\n    \n\n      \nName\n\n    \n\n  \n\n  \n\n\n\n    \nweekRange\n\n    \n  \n\n\n\n\n\n\n\nClassDateRange.persianDaysName\n\u00b6\n\n\nKind\n: static property of \nClassDateRange\n\n\nProperties\n\n\n\n  \n\n    \n\n      \nName\n\n    \n\n  \n\n  \n\n\n\n    \npersianDaysName\n\n    \n  \n\n\n\n\n\n\n\nTemplate : \nstring\n\u00b6\n\n\nKind\n: global constant\n\n\n\n\nlog(input)\n\u00b6\n\n\nnormal log\n\n\nKind\n: global function\n\n\n\n  \n\n    \n\n      \nParam\n\n    \n\n  \n\n  \n\n\n\n    \ninput\n\n    \n  \n\n\n\n\nExample\n  \n\n\nlog\n(\n'whoooooha'\n)\n\n\n\n\n\n\n\n\ndebug(elem, input)\n\u00b6\n\n\nshow debug messages if window.persianDatepickerDebug set as true\n\n\nKind\n: global function\n\n\n\n  \n\n    \n\n      \nParam\n\n    \n\n  \n\n  \n\n\n\n    \nelem\n\n    \n\n    \ninput\n\n    \n  \n\n\n\n\nExample\n  \n\n\nwindow\n.\npersianDatepickerDebug\n \n=\n \ntrue\n;\n\n\ndebug\n(\n'element'\n,\n'message'\n);",
-            "title": "Code docuemnt"
-        },
-        {
-            "location": "/datepicker/documentation/#classes",
-            "text": "DateUtil  Date helper, some useful date method stored here   Input  Do every thing about input element like get default value, set new value, set alt field input and etc.   Model  Main datepicker object, manage every things   Navigator  This navigator class do every thing about navigate and select date   Options  Extend default config from user interred and do compatibility works   State  All state set in his object and get from this\nalso this object notify other object to update self or update view or etc.   Toolbox  Do every things about toolbox, like attach events to toolbox elements   View  As its name suggests, all rendering works do in this object",
-            "title": "Classes"
-        },
-        {
-            "location": "/datepicker/documentation/#constants",
-            "text": "Config  This is default config class   ClassDateRange   Template  :  string",
-            "title": "Constants"
-        },
-        {
-            "location": "/datepicker/documentation/#functions",
-            "text": "log(input)  normal log   debug(elem, input)  show debug messages if window.persianDatepickerDebug set as true",
-            "title": "Functions"
-        },
-        {
-            "location": "/datepicker/documentation/#dateutil",
-            "text": "Date helper, some useful date method stored here  Kind : global class     DateUtil  .isSameDay(dateA, dateB)  \u21d2  boolean  .isSameMonth(dateA, dateB)  \u21d2  boolean  .normalizeTime(key, value)  \u21d2  number",
-            "title": "DateUtil"
-        },
-        {
-            "location": "/datepicker/documentation/#dateutilissamedaydatea-dateb-boolean",
-            "text": "check if a date is same as b  Kind : instance method of  DateUtil  \n   \n     \n       Param \n     \n   \n    \n     dateA \n     \n     dateB",
-            "title": "dateUtil.isSameDay(dateA, dateB) \u21d2 boolean"
-        },
-        {
-            "location": "/datepicker/documentation/#dateutilissamemonthdatea-dateb-boolean",
-            "text": "check if a month is same as b  Kind : instance method of  DateUtil  \n   \n     \n       Param Type \n     \n   \n    \n     dateA Date \n     \n     dateB Date",
-            "title": "dateUtil.isSameMonth(dateA, dateB) \u21d2 boolean"
-        },
-        {
-            "location": "/datepicker/documentation/#dateutilnormalizetimekey-value-number",
-            "text": "normalize time, like check second if bigger than 60  Kind : instance method of  DateUtil  \n   \n     \n       Param Type \n     \n   \n    \n     key string \n     \n     value number",
-            "title": "dateUtil.normalizeTime(key, value) \u21d2 number"
-        },
-        {
-            "location": "/datepicker/documentation/#input",
-            "text": "Do every thing about input element like get default value, set new value, set alt field input and etc.  Kind : global class     Input  new Input(model, inputElement)  .model  :  Object  .elem  :  Element  .initialUnix  :  Number  .getInputPosition()  \u21d2  Object  .getInputSize()  \u21d2  Object  .update(unix)  .getOnInitState()  \u21d2  Number",
-            "title": "Input"
-        },
-        {
-            "location": "/datepicker/documentation/#new-inputmodel-inputelement",
-            "text": "Param Type \n     \n   \n    \n     model Model \n     \n     inputElement Element",
-            "title": "new Input(model, inputElement)"
-        },
-        {
-            "location": "/datepicker/documentation/#inputmodel-object",
-            "text": "Kind : instance property of  Input",
-            "title": "input.model : Object"
-        },
-        {
-            "location": "/datepicker/documentation/#inputelem-element",
-            "text": "Kind : instance property of  Input",
-            "title": "input.elem : Element"
-        },
-        {
-            "location": "/datepicker/documentation/#inputinitialunix-number",
-            "text": "Kind : instance property of  Input",
-            "title": "input.initialUnix : Number"
-        },
-        {
-            "location": "/datepicker/documentation/#inputgetinputposition-object",
-            "text": "get   element position  Kind : instance method of  Input  Todo   remove jquery",
-            "title": "input.getInputPosition() \u21d2 Object"
-        },
-        {
-            "location": "/datepicker/documentation/#inputgetinputsize-object",
-            "text": "get   element size  Kind : instance method of  Input  Todo   remove jquery",
-            "title": "input.getInputSize() \u21d2 Object"
-        },
-        {
-            "location": "/datepicker/documentation/#inputupdateunix",
-            "text": "Kind : instance method of  Input  \n   \n     \n       Param \n     \n   \n    \n     unix",
-            "title": "input.update(unix)"
-        },
-        {
-            "location": "/datepicker/documentation/#inputgetoninitstate-number",
-            "text": "return initial value  Kind : instance method of  Input  Returns :  Number  - - unix",
-            "title": "input.getOnInitState() \u21d2 Number"
-        },
-        {
-            "location": "/datepicker/documentation/#model",
-            "text": "Main datepicker object, manage every things  Kind : global class     Model  new Model(inputElement, options)  .initialUnix  :  unix  .inputElement  :  Object  .options  :  Options  .input  :  Input  .state  :  State  .view  :  View  .toolbox  :  Toolbox  .navigator  :  Navigator  .updateInput(unix)",
-            "title": "Model"
-        },
-        {
-            "location": "/datepicker/documentation/#new-modelinputelement-options",
-            "text": "Param \n     \n   \n    \n     inputElement \n     \n     options",
-            "title": "new Model(inputElement, options)"
-        },
-        {
-            "location": "/datepicker/documentation/#modelinitialunix-unix",
-            "text": "[initialUnix=null]  Kind : instance property of  Model",
-            "title": "model.initialUnix : unix"
-        },
-        {
-            "location": "/datepicker/documentation/#modelinputelement-object",
-            "text": "inputElement=inputElement  Kind : instance property of  Model",
-            "title": "model.inputElement : Object"
-        },
-        {
-            "location": "/datepicker/documentation/#modeloptions-options",
-            "text": "handle works about config  Kind : instance property of  Model",
-            "title": "model.options : Options"
-        },
-        {
-            "location": "/datepicker/documentation/#modelinput-input",
-            "text": "handle works about input and alt field input element  Kind : instance property of  Model",
-            "title": "model.input : Input"
-        },
-        {
-            "location": "/datepicker/documentation/#modelstate-state",
-            "text": "set and get selected and view and other state  Kind : instance property of  Model",
-            "title": "model.state : State"
-        },
-        {
-            "location": "/datepicker/documentation/#modelview-view",
-            "text": "render datepicker view base on State  Kind : instance property of  Model",
-            "title": "model.view : View"
-        },
-        {
-            "location": "/datepicker/documentation/#modeltoolbox-toolbox",
-            "text": "handle works about toolbox  Kind : instance property of  Model",
-            "title": "model.toolbox : Toolbox"
-        },
-        {
-            "location": "/datepicker/documentation/#modelnavigator-navigator",
-            "text": "handle navigation and dateoicker element events  Kind : instance property of  Model",
-            "title": "model.navigator : Navigator"
-        },
-        {
-            "location": "/datepicker/documentation/#modelupdateinputunix",
-            "text": "Kind : instance method of  Model  \n   \n     \n       Param \n     \n   \n    \n     unix",
-            "title": "model.updateInput(unix)"
-        },
-        {
-            "location": "/datepicker/documentation/#navigator",
-            "text": "This navigator class do every thing about navigate and select date  Kind : global class  Access:  public     Navigator  new Navigator(datepicker)  .model  :  Datepicker  .liveAttach()  .timeUp(timekey)  .timeDown(timekey)",
-            "title": "Navigator"
-        },
-        {
-            "location": "/datepicker/documentation/#new-navigatordatepicker",
-            "text": "Param Type \n     \n   \n    \n     datepicker object",
-            "title": "new Navigator(datepicker)"
-        },
-        {
-            "location": "/datepicker/documentation/#navigatormodel-datepicker",
-            "text": "Kind : instance property of  Navigator",
-            "title": "navigator.model : Datepicker"
-        },
-        {
-            "location": "/datepicker/documentation/#navigatorliveattach",
-            "text": "attach events that needed attach after every render  Kind : instance method of  Navigator  Access:  public  Todo   attach as a live way",
-            "title": "navigator.liveAttach()"
-        },
-        {
-            "location": "/datepicker/documentation/#navigatortimeuptimekey",
-            "text": "set time up depend to timekey  Kind : instance method of  Navigator  Access:  public  \n   \n     \n       Param Type Description \n     \n   \n    \n     timekey String accept hour, minute,second",
-            "title": "navigator.timeUp(timekey)"
-        },
-        {
-            "location": "/datepicker/documentation/#navigatortimedowntimekey",
-            "text": "set time down depend to timekey  Kind : instance method of  Navigator  Access:  public  \n   \n     \n       Param Type Description \n     \n   \n    \n     timekey String accept hour, minute,second",
-            "title": "navigator.timeDown(timekey)"
-        },
-        {
-            "location": "/datepicker/documentation/#options",
-            "text": "Extend default config from user interred and do compatibility works  Kind : global class  Access:  public",
-            "title": "Options"
-        },
-        {
-            "location": "/datepicker/documentation/#new-optionsoptions",
-            "text": "Param Type Description \n     \n   \n    \n     options object config passed when initialize",
-            "title": "new Options(options)"
-        },
-        {
-            "location": "/datepicker/documentation/#state",
-            "text": "All state set in his object and get from this\nalso this object notify other object to update self or update view or etc.  Kind : global class     State  new State(model)  .model  :  object  .filetredDate  :  Boolean  .viewModeList  :  Array  .viewMode  :  String  .viewModeIndex  :  number  .filterDate  :  Object  .view  :  Object  .selected  :  Object  .setSelectedDateTime(key, value)  \u21d2  State  .navigate(nav)  .switchViewMode()  \u21d2  State  .switchViewModeTo(viewMode)  .setViewDateTime(key, value)  \u21d2  State",
-            "title": "State"
-        },
-        {
-            "location": "/datepicker/documentation/#new-statemodel",
-            "text": "Param Type \n     \n   \n    \n     model model",
-            "title": "new State(model)"
-        },
-        {
-            "location": "/datepicker/documentation/#statemodel-object",
-            "text": "Kind : instance property of  State",
-            "title": "state.model : object"
-        },
-        {
-            "location": "/datepicker/documentation/#statefiletreddate-boolean",
-            "text": "Kind : instance property of  State",
-            "title": "state.filetredDate : Boolean"
-        },
-        {
-            "location": "/datepicker/documentation/#stateviewmodelist-array",
-            "text": "get generated view mode list from options object  Kind : instance property of  State",
-            "title": "state.viewModeList : Array"
-        },
-        {
-            "location": "/datepicker/documentation/#stateviewmode-string",
-            "text": "view mode string day, month, year  Kind : instance property of  State  Default :  day  Todo   add time to view modes",
-            "title": "state.viewMode : String"
-        },
-        {
-            "location": "/datepicker/documentation/#stateviewmodeindex-number",
-            "text": "view mode string index in view mode list  Kind : instance property of  State",
-            "title": "state.viewModeIndex : number"
-        },
-        {
-            "location": "/datepicker/documentation/#statefilterdate-object",
-            "text": "contain filtered date objects  Kind : instance property of  State",
-            "title": "state.filterDate : Object"
-        },
-        {
-            "location": "/datepicker/documentation/#stateview-object",
-            "text": "contain view date object  Kind : instance property of  State",
-            "title": "state.view : Object"
-        },
-        {
-            "location": "/datepicker/documentation/#stateselected-object",
-            "text": "contain selected date object  Kind : instance property of  State",
-            "title": "state.selected : Object"
-        },
-        {
-            "location": "/datepicker/documentation/#statesetselecteddatetimekey-value-state",
-            "text": "called on date select  Kind : instance method of  State  Access:  public  \n   \n     \n       Param Type Description \n     \n   \n    \n     key String accept date, month, year, hour, minute, second  \n     \n     value Number",
-            "title": "state.setSelectedDateTime(key, value) \u21d2 State"
-        },
-        {
-            "location": "/datepicker/documentation/#statenavigatenav",
-            "text": "change view state  Kind : instance method of  State  \n   \n     \n       Param Type Description \n     \n   \n    \n     nav String accept next, prev",
-            "title": "state.navigate(nav)"
-        },
-        {
-            "location": "/datepicker/documentation/#stateswitchviewmode-state",
-            "text": "every time called view state changed to next in queue  Kind : instance method of  State  Access:  public",
-            "title": "state.switchViewMode() \u21d2 State"
-        },
-        {
-            "location": "/datepicker/documentation/#stateswitchviewmodetoviewmode",
-            "text": "switch to specified view mode  Kind : instance method of  State  \n   \n     \n       Param Type Description \n     \n   \n    \n     viewMode String accept date, month, year",
-            "title": "state.switchViewModeTo(viewMode)"
-        },
-        {
-            "location": "/datepicker/documentation/#statesetviewdatetimekey-value-state",
-            "text": "Kind : instance method of  State  \n   \n     \n       Param Type Description \n     \n   \n    \n     key String accept date, month, year, hour, minute, second  \n     \n     value Number",
-            "title": "state.setViewDateTime(key, value) \u21d2 State"
-        },
-        {
-            "location": "/datepicker/documentation/#toolbox",
-            "text": "Do every things about toolbox, like attach events to toolbox elements  Kind : global class     Toolbox  new Toolbox(datepicker)  .model  :  Datepicker  ._attachEvents()",
-            "title": "Toolbox"
-        },
-        {
-            "location": "/datepicker/documentation/#new-toolboxdatepicker",
-            "text": "Param Type \n     \n   \n    \n     datepicker Datepicker",
-            "title": "new Toolbox(datepicker)"
-        },
-        {
-            "location": "/datepicker/documentation/#toolboxmodel-datepicker",
-            "text": "Kind : instance property of  Toolbox",
-            "title": "toolbox.model : Datepicker"
-        },
-        {
-            "location": "/datepicker/documentation/#toolbox_attachevents",
-            "text": "attach all events about toolbox  Kind : instance method of  Toolbox",
-            "title": "toolbox._attachEvents()"
-        },
-        {
-            "location": "/datepicker/documentation/#view",
-            "text": "As its name suggests, all rendering works do in this object  Kind : global class     View  new View(model)  .yearsViewCount  :  number  .model  :  Datepicker  .rendered  :  null  .$container  :  null  .id  :  string  .destroy()  .setPickerBoxPosition()  .show()  .hide()  .toggle()  .checkYearAccess(year)  \u21d2  Boolean  .checkMonthAccess(month)  \u21d2  Boolean  .checkDayAccess(thisUnix)  \u21d2  Boolean  .getViewModel(data)  \u21d2  *  .render(data)  .afterRender()",
-            "title": "View"
-        },
-        {
-            "location": "/datepicker/documentation/#new-viewmodel",
-            "text": "Param Type \n     \n   \n    \n     model Datepicker",
-            "title": "new View(model)"
-        },
-        {
-            "location": "/datepicker/documentation/#viewyearsviewcount-number",
-            "text": "Kind : instance property of  View",
-            "title": "view.yearsViewCount : number"
-        },
-        {
-            "location": "/datepicker/documentation/#viewmodel-datepicker",
-            "text": "Kind : instance property of  View",
-            "title": "view.model : Datepicker"
-        },
-        {
-            "location": "/datepicker/documentation/#viewrendered-null",
-            "text": "Kind : instance property of  View",
-            "title": "view.rendered : null"
-        },
-        {
-            "location": "/datepicker/documentation/#viewcontainer-null",
-            "text": "Kind : instance property of  View",
-            "title": "view.$container : null"
-        },
-        {
-            "location": "/datepicker/documentation/#viewid-string",
-            "text": "Kind : instance property of  View",
-            "title": "view.id : string"
-        },
-        {
-            "location": "/datepicker/documentation/#viewdestroy",
-            "text": "remove datepicker container element from dom  Kind : instance method of  View",
-            "title": "view.destroy()"
-        },
-        {
-            "location": "/datepicker/documentation/#viewsetpickerboxposition",
-            "text": "set datepicker container element based on   element position  Kind : instance method of  View",
-            "title": "view.setPickerBoxPosition()"
-        },
-        {
-            "location": "/datepicker/documentation/#viewshow",
-            "text": "show datepicker container element  Kind : instance method of  View",
-            "title": "view.show()"
-        },
-        {
-            "location": "/datepicker/documentation/#viewhide",
-            "text": "hide datepicker container element  Kind : instance method of  View",
-            "title": "view.hide()"
-        },
-        {
-            "location": "/datepicker/documentation/#viewtoggle",
-            "text": "toggle datepicker container element  Kind : instance method of  View",
-            "title": "view.toggle()"
-        },
-        {
-            "location": "/datepicker/documentation/#viewcheckyearaccessyear-boolean",
-            "text": "check year is accessible  Kind : instance method of  View  \n   \n     \n       Param Type Description \n     \n   \n    \n     year Number year number",
-            "title": "view.checkYearAccess(year) \u21d2 Boolean"
-        },
-        {
-            "location": "/datepicker/documentation/#viewcheckmonthaccessmonth-boolean",
-            "text": "check month is accessible  Kind : instance method of  View  \n   \n     \n       Param Type Description \n     \n   \n    \n     month Number month number",
-            "title": "view.checkMonthAccess(month) \u21d2 Boolean"
-        },
-        {
-            "location": "/datepicker/documentation/#viewcheckdayaccessthisunix-boolean",
-            "text": "check day is accessible  Kind : instance method of  View  \n   \n     \n       Param Type Description \n     \n   \n    \n     thisUnix Number month number",
-            "title": "view.checkDayAccess(thisUnix) \u21d2 Boolean"
-        },
-        {
-            "location": "/datepicker/documentation/#viewgetviewmodeldata-42",
-            "text": "Kind : instance method of  View  \n   \n     \n       Param \n     \n   \n    \n     data",
-            "title": "view.getViewModel(data) \u21d2 *"
-        },
-        {
-            "location": "/datepicker/documentation/#viewrenderdata",
-            "text": "Kind : instance method of  View  Render : datepicker view element  \n   \n     \n       Param \n     \n   \n    \n     data",
-            "title": "view.render(data)"
-        },
-        {
-            "location": "/datepicker/documentation/#viewafterrender",
-            "text": "do after render work like attache events  Kind : instance method of  View",
-            "title": "view.afterRender()"
-        },
-        {
-            "location": "/datepicker/documentation/#config",
-            "text": "This is default config class  Kind : global constant     Config  .initialValue  :  Boolean  .persianDigit  :  Boolean  .viewMode  :  string  .format  :  boolean  .altField  :  boolean  .altFormat  :  string  .minDate  :  boolean  .maxDate  :  boolean  .navigator  :  object  .enabled  .text  .btnNextText  .btnPrevText    \"onNext\" (navigator)  \"onPrev\" (navigator)  \"onSwitch\" (navigator)    .toolbox  :  object  .onlyTimePicker  :  boolean  .onlySelectOnDate  :  boolean  .timePicker  :  object  .dayPicker  :  object  .monthPicker  :  object  .yearPicker  :  object  .position  .autoClose  :  boolean  .observer  :  boolean  .inputDelay  :  number  .formatter(unixDate)  \u21d2  *  .altFieldFormatter(unixDate)  \u21d2  *  .checkDate()  :  function  .checkMonth()  :  function  .checkYear()  :  function  .onToggle()  .onDestroy()  \"onSelect\" (unixDate)  \"onShow\"  \"onHide\" (self)",
-            "title": "Config"
-        },
-        {
-            "location": "/datepicker/documentation/#configinitialvalue-boolean",
-            "text": "Kind : static property of  Config",
-            "title": "Config.initialValue : Boolean"
-        },
-        {
-            "location": "/datepicker/documentation/#configpersiandigit-boolean",
-            "text": "Kind : static property of  Config",
-            "title": "Config.persianDigit : Boolean"
-        },
-        {
-            "location": "/datepicker/documentation/#configviewmode-string",
-            "text": "Acceptable value : day,month,year  Kind : static property of  Config  Default :  \"day\"",
-            "title": "Config.viewMode : string"
-        },
-        {
-            "location": "/datepicker/documentation/#configformat-boolean",
-            "text": "the date format, combination of d, dd, m, mm, yy, yyy. http://babakhani.github.io/PersianWebToolkit/doc/persiandate/0.1.8/#/displaying/format/  Kind : static property of  Config  Default :  false",
-            "title": "Config.format : boolean"
-        },
-        {
-            "location": "/datepicker/documentation/#configaltfield-boolean",
-            "text": "An input element that is to be updated with the selected date from the datepicker. Use the altFormat option to change the format of the date within this field. Leave as blank for no alternate field. acceptable value: : '#elementId','.element-class'  Kind : static property of  Config  Default :  false",
-            "title": "Config.altField : boolean"
-        },
-        {
-            "location": "/datepicker/documentation/#configaltformat-string",
-            "text": "the date format, combination of d, dd, m, mm, yy, yyy. http://babakhani.github.io/PersianWebToolkit/doc/persiandate/0.1.8/#/displaying/format/  Kind : static property of  Config  Default :  \"unix\"",
-            "title": "Config.altFormat : string"
-        },
-        {
-            "location": "/datepicker/documentation/#configmindate-boolean",
-            "text": "set min date on datepicker  Kind : static property of  Config  Properties  \n   \n     \n       Name \n     \n   \n    \n     minDate",
-            "title": "Config.minDate : boolean"
-        },
-        {
-            "location": "/datepicker/documentation/#configmaxdate-boolean",
-            "text": "set max date on datepicker  Kind : static property of  Config  Properties  \n   \n     \n       Name \n     \n   \n    \n     maxDate",
-            "title": "Config.maxDate : boolean"
-        },
-        {
-            "location": "/datepicker/documentation/#confignavigator-object",
-            "text": "navigator config object  Kind : static property of  Config  Default :  true      .navigator  :  object  .enabled  .text  .btnNextText  .btnPrevText    \"onNext\" (navigator)  \"onPrev\" (navigator)  \"onSwitch\" (navigator)",
-            "title": "Config.navigator : object"
-        },
-        {
-            "location": "/datepicker/documentation/#navigatorenabled",
-            "text": "Enable or Disable dayPicker  Kind : static property of  navigator",
-            "title": "navigator.enabled"
-        },
-        {
-            "location": "/datepicker/documentation/#navigatortext",
-            "text": "navigator text config object  Kind : static property of  navigator      .text  .btnNextText  .btnPrevText",
-            "title": "navigator.text"
-        },
-        {
-            "location": "/datepicker/documentation/#textbtnnexttext",
-            "text": "text of next btn  Kind : static property of  text",
-            "title": "text.btnNextText"
-        },
-        {
-            "location": "/datepicker/documentation/#textbtnprevtext",
-            "text": "text of prev btn  Kind : static property of  text",
-            "title": "text.btnPrevText"
-        },
-        {
-            "location": "/datepicker/documentation/#onnext-navigator",
-            "text": "Trigger When Next button clicked  Kind : event emitted by  navigator  \n   \n     \n       Param \n     \n   \n    \n     navigator",
-            "title": "\"onNext\" (navigator)"
-        },
-        {
-            "location": "/datepicker/documentation/#onprev-navigator",
-            "text": "Trigger When Prev button clicked  Kind : event emitted by  navigator  \n   \n     \n       Param \n     \n   \n    \n     navigator",
-            "title": "\"onPrev\" (navigator)"
-        },
-        {
-            "location": "/datepicker/documentation/#onswitch-navigator",
-            "text": "Trigger When Switch view button clicked  Kind : event emitted by  navigator  \n   \n     \n       Param \n     \n   \n    \n     navigator",
-            "title": "\"onSwitch\" (navigator)"
-        },
-        {
-            "location": "/datepicker/documentation/#configtoolbox-object",
-            "text": "toolbox config object  Kind : static property of  Config  Default :  true",
-            "title": "Config.toolbox : object"
-        },
-        {
-            "location": "/datepicker/documentation/#configonlytimepicker-boolean",
-            "text": "if true all pickers hide and just shpw timepicker  Kind : static property of  Config  Default :  false",
-            "title": "Config.onlyTimePicker : boolean"
-        },
-        {
-            "location": "/datepicker/documentation/#configonlyselectondate-boolean",
-            "text": "if true date select just by click on day in month grid  Kind : static property of  Config  Properties  \n   \n     \n       Name \n     \n   \n    \n     justSelectOnDate",
-            "title": "Config.onlySelectOnDate : boolean"
-        },
-        {
-            "location": "/datepicker/documentation/#configtimepicker-object",
-            "text": "timepicker config object  Kind : static property of  Config",
-            "title": "Config.timePicker : object"
-        },
-        {
-            "location": "/datepicker/documentation/#configdaypicker-object",
-            "text": "dayPicker config object  Kind : static property of  Config",
-            "title": "Config.dayPicker : object"
-        },
-        {
-            "location": "/datepicker/documentation/#configmonthpicker-object",
-            "text": "monthPicker config object  Kind : static property of  Config",
-            "title": "Config.monthPicker : object"
-        },
-        {
-            "location": "/datepicker/documentation/#configyearpicker-object",
-            "text": "yearPicker config object  Kind : static property of  Config",
-            "title": "Config.yearPicker : object"
-        },
-        {
-            "location": "/datepicker/documentation/#configposition",
-            "text": "Kind : static property of  Config",
-            "title": "Config.position"
-        },
-        {
-            "location": "/datepicker/documentation/#configautoclose-boolean",
-            "text": "If true picker close When Select day  Kind : static property of  Config  Default :  false",
-            "title": "Config.autoClose : boolean"
-        },
-        {
-            "location": "/datepicker/documentation/#configobserver-boolean",
-            "text": "Deprecated  observer  Kind : static property of  Config  Default :  false",
-            "title": "Config.observer : boolean"
-        },
-        {
-            "location": "/datepicker/documentation/#configinputdelay-number",
-            "text": "inputDelay  Kind : static property of  Config  Default :  800",
-            "title": "Config.inputDelay : number"
-        },
-        {
-            "location": "/datepicker/documentation/#configformatterunixdate-42",
-            "text": "format value of input  Kind : static method of  Config  \n   \n     \n       Param \n     \n   \n    \n     unixDate",
-            "title": "Config.formatter(unixDate) \u21d2 *"
-        },
-        {
-            "location": "/datepicker/documentation/#configaltfieldformatterunixdate-42",
-            "text": "format value of 'altField' input  Kind : static method of  Config  \n   \n     \n       Param \n     \n   \n    \n     unixDate",
-            "title": "Config.altFieldFormatter(unixDate) \u21d2 *"
-        },
-        {
-            "location": "/datepicker/documentation/#configcheckdate-function",
-            "text": "check date avalibility  Kind : static method of  Config",
-            "title": "Config.checkDate() : function"
-        },
-        {
-            "location": "/datepicker/documentation/#configcheckmonth-function",
-            "text": "check month avalibility  Kind : static method of  Config",
-            "title": "Config.checkMonth() : function"
-        },
-        {
-            "location": "/datepicker/documentation/#configcheckyear-function",
-            "text": "check year avalibility  Kind : static method of  Config",
-            "title": "Config.checkYear() : function"
-        },
-        {
-            "location": "/datepicker/documentation/#configontoggle",
-            "text": "Kind : static method of  Config",
-            "title": "Config.onToggle()"
-        },
-        {
-            "location": "/datepicker/documentation/#configondestroy",
-            "text": "Kind : static method of  Config",
-            "title": "Config.onDestroy()"
-        },
-        {
-            "location": "/datepicker/documentation/#onselect-unixdate",
-            "text": "A function that takes current datepicker unixDate. It is called When Day Select.  Kind : event emitted by  Config  \n   \n     \n       Param \n     \n   \n    \n     unixDate",
-            "title": "\"onSelect\" (unixDate)"
-        },
-        {
-            "location": "/datepicker/documentation/#onshow",
-            "text": "A function that takes current datepicker instance. It is called just before the datepicker is displayed.  Kind : event emitted by  Config",
-            "title": "\"onShow\""
-        },
-        {
-            "location": "/datepicker/documentation/#onhide-self",
-            "text": "A function that takes current datepicker instance. It is called just before the datepicker Hide.  Kind : event emitted by  Config  \n   \n     \n       Param \n     \n   \n    \n     self",
-            "title": "\"onHide\" (self)"
-        },
-        {
-            "location": "/datepicker/documentation/#classdaterange",
-            "text": "Kind : global constant     ClassDateRange  .monthRange  .weekRange  .persianDaysName",
-            "title": "ClassDateRange"
-        },
-        {
-            "location": "/datepicker/documentation/#classdaterangemonthrange",
-            "text": "Kind : static property of  ClassDateRange  Properties  \n   \n     \n       Name \n     \n   \n    \n     monthRange",
-            "title": "ClassDateRange.monthRange"
-        },
-        {
-            "location": "/datepicker/documentation/#classdaterangeweekrange",
-            "text": "Kind : static property of  ClassDateRange  Properties  \n   \n     \n       Name \n     \n   \n    \n     weekRange",
-            "title": "ClassDateRange.weekRange"
-        },
-        {
-            "location": "/datepicker/documentation/#classdaterangepersiandaysname",
-            "text": "Kind : static property of  ClassDateRange  Properties  \n   \n     \n       Name \n     \n   \n    \n     persianDaysName",
-            "title": "ClassDateRange.persianDaysName"
-        },
-        {
-            "location": "/datepicker/documentation/#template-string",
-            "text": "Kind : global constant",
-            "title": "Template : string"
-        },
-        {
-            "location": "/datepicker/documentation/#loginput",
-            "text": "normal log  Kind : global function  \n   \n     \n       Param \n     \n   \n    \n     input \n          Example     log ( 'whoooooha' )",
-            "title": "log(input)"
-        },
-        {
-            "location": "/datepicker/documentation/#debugelem-input",
-            "text": "show debug messages if window.persianDatepickerDebug set as true  Kind : global function  \n   \n     \n       Param \n     \n   \n    \n     elem \n     \n     input \n          Example     window . persianDatepickerDebug   =   true ;  debug ( 'element' , 'message' );",
-            "title": "debug(elem, input)"
         }
     ]
 }
