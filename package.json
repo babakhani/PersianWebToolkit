@@ -1,14 +1,19 @@
 {
-    "name": "persian-web-toolkit",
-    "version": "0.3.3",
-    "datepickerVersion": "0.3.6",
-    "persiandateVersion": "0.1.8",
-    "devDependencies": {
-        "grunt": "0.4.4",
-        "grunt-cli": "0.1.13",
-        "grunt-contrib-concat": "^0.5.0",
-        "grunt-contrib-copy ": "^0.2.0",
-        "grunt-contrib-sass": "",
-        "grunt-contrib-jade": ""
-    }
+  "name": "persian-web-toolkit",
+  "version": "0.3.3",
+  "datepickerVersion": "0.3.6",
+  "persiandateVersion": "0.1.8",
+  "dependencies": {
+    "jquery": "2.2.0",
+    "persian-date": "=0.1.8-b",
+    "persian-datepicker": "=0.4.5"
+  },
+  "scripts": {
+    "pre-dev": "sudo npm install -g mkdocs",
+    "dev": "babel --watch src/es6 --out-file src/.tmp/persian-datepicker.js & simple-server 3000 & grunt --force --dev &",
+    "lint": "sass-lint -c .sass-lint.yml --verbose & ./node_modules/jshint/bin/jshint src/es6/*.js",
+    "doc": "grunt --doc",
+    "build": "grunt --force --build",
+    "sync-pkg": "sync-pkg"
+  }
 }

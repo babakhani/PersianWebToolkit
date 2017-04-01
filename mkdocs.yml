@@ -7,6 +7,7 @@ copyright:          license http://www.wtfpl.net/
 remote_branch: 'gh-pages'
 docs_dir: 'src'
 site_dir: 'docs'
+site_url: 'http://google.com'
 repo_name: 'GitHub'
 strict: true
 
@@ -15,6 +16,7 @@ google_analytics:
     - 'babakhani.github.io/PersianWebToolkit/'
 
 extra_css:
+    - //fonts.googleapis.com/css?family=Open+Sans
     - ./css/extra.css
     - ./lib/persian-datepicker/dist/css/persian-datepicker-0.4.5.css
 
@@ -25,9 +27,7 @@ markdown_extensions:
   - meta
   - toc(permalink=true)
 
-
 pages:
-    - index.md
     - Persian Date: 'persian-date/index.md'
     - Persian Datepicker:
         - Getting Start: 'datepicker/index.md'
@@ -43,14 +43,14 @@ extra:
         - type: 'linkedin'
           link: 'https://de.linkedin.com/in/martin-donath-20a95039'
 
-    logo: 'images/logo.svg'
+    logo: 'img/logo.svg'
     font:
         text: 'Ubuntu'
         code: 'Ubuntu Mono'
 
     palette:
         primary: 'red'
-        accent: 'light blue'
+        accent: 'blue light'
     version: 1.0
 use_directory_urls: true
 strict: true
@@ -60,12 +60,5 @@ extra_javascript:
     - ./lib/persian-date/dist/0.1.8/persian-date-0.1.8.js
     - ./lib/persian-datepicker/dist/js/persian-datepicker-0.5.0.js
     - ./js/datepicker-example.js
+    - ./js/doc.js
     - https://buttons.github.io/buttons.js
-
-#extra_templates:
-#edit_uri: src/default/docs/
-#theme: readthedocs
-#markdown_extensions:
-#    - smarty
-#theme: null
-#theme_dir: 'theme'

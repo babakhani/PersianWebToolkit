@@ -61,6 +61,7 @@ bower install persian-datepicker
 
 | name                           | type             | default                                         | description  |
 | -------------                  |:-------------:   | :----------------------------------------------:| :----------: |
+| inline                         | boolean          | true                                            | If set true datepicker render inline|
 | initialValue                   | boolean          | true                                            | If set true datepicker init with input value date |
 | persianDigit                   | boolean          | true                                            | If true all digit shows as persian digit |
 | viewMode                       | string           | 'day'                                           | Accept day, motnh, year |

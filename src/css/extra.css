@@ -1,13 +1,31 @@
+* {
+    font-family: "Open Sans";
+}
 
+.md-header {
+    background-color: #222 !important;
+    border-bottom: 3px solid  #2E8B34;
+}
 
 table td:nth-child(2),
 table td:nth-child(3) {
     color: #888;
 }
 
-/* Hide unwanted things */
+.md-logo {
+    padding: 0 !important;
+}
+
+.md-logo img {
+    width: 36px;
+    height: 36px;
+}
+
+.md-header-nav__title {
+    padding-left: 10px;
+}
+
 .md-header-nav__source,
-.md-logo,
 .md-source__repository,
 .md-nav__title {
     display: none !important;
@@ -27,14 +45,25 @@ input.datepicker-demo-alt {
     padding: 10px;
 }
 
-/*.md-content__inner h2{*/
-    /*display: block;*/
-    /*width: 100%;*/
-    /*float: right;*/
-/*}*/
-.md-content__inner .inline-sample{
+.md-content__inner .inline-sample {
     display: block;
     width: 100%;
     float: right;
     clear: both;
 }
+
+.home-page .md-sidebar {
+    display: none;
+}
+
+.home-page .md-content {
+    display: block;
+    width: 90%;
+    margin: 0px 5%;
+}
+
+.home-page .jumbotron {
+    border: 2px solid red !important;
+}
+
+

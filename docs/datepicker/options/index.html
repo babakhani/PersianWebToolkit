@@ -9,6 +9,8 @@
         <meta name="description" content="Persian Web Toolkit document">
       
       
+        <link rel="canonical" href="http://google.com/datepicker/options/">
+      
       
         <meta name="author" content="babakhani.reza@gmail.com">
       
@@ -41,6 +43,8 @@
         <link rel="stylesheet" href="../../assets/stylesheets/application-02ce7adcc2.palette.css">
       
       
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans">
+      
         <link rel="stylesheet" href="../.././css/extra.css">
       
         <link rel="stylesheet" href="../.././lib/persian-datepicker/dist/css/persian-datepicker-0.4.5.css">
@@ -52,7 +56,7 @@
   
   
   
-    <body data-md-color-primary="red" data-md-color-accent="light-blue">
+    <body data-md-color-primary="red" data-md-color-accent="blue-light">
   
     <svg class="md-svg">
       <defs>
@@ -70,9 +74,9 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="Persian Web Toolkit" class=" md-logo  md-header-nav__button">
+        <a href="../../persian-date/" title="Persian Web Toolkit" class=" md-logo  md-header-nav__button">
           
-            <img src="../../images/logo.svg" width="24" height="24">
+            <img src="../../img/logo.svg" width="24" height="24">
           
         </a>
       </div>
@@ -154,7 +158,7 @@
   <label class="md-nav__title md-nav__title--site" for="drawer">
     <i class=" md-logo  md-nav__button">
       
-        <img src="../../images/logo.svg">
+        <img src="../../img/logo.svg">
       
     </i>
     Persian Web Toolkit
@@ -188,17 +192,6 @@
       
   <li class="md-nav__item">
     
-      <a href="../.." title="Home" class="md-nav__link">
-        Home
-      </a>
-    
-  </li>
-
-    
-      
-      
-  <li class="md-nav__item">
-    
       <a href="../../persian-date/" title="Persian Date" class="md-nav__link">
         Persian Date
       </a>
@@ -210,13 +203,13 @@
       
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
-    <label class="md-nav__link" for="nav-3">
+    <label class="md-nav__link" for="nav-2">
       Persian Datepicker
     </label>
     <nav class="md-nav" data-md-component="collapsible">
-      <label class="md-nav__title" for="nav-3">
+      <label class="md-nav__title" for="nav-2">
         Persian Datepicker
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -274,6 +267,13 @@
   
     <nav class="md-nav">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configinline-boolean" title="Config.inline : boolean" class="md-nav__link">
+    Config.inline : boolean
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#configinitialvalue-boolean" title="Config.initialValue : boolean" class="md-nav__link">
@@ -902,6 +902,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#configinline-boolean" title="Config.inline : boolean" class="md-nav__link">
+    Config.inline : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#configinitialvalue-boolean" title="Config.initialValue : boolean" class="md-nav__link">
     Config.initialValue : boolean
   </a>
@@ -1490,6 +1497,7 @@
 <p><strong>Kind</strong>: global constant  </p>
 <ul>
 <li><a href="#Config">Config</a><ul>
+<li><a href="#Config.inline">.inline</a> : <code>boolean</code></li>
 <li><a href="#Config.initialValue">.initialValue</a> : <code>boolean</code></li>
 <li><a href="#Config.persianDigit">.persianDigit</a> : <code>boolean</code></li>
 <li><a href="#Config.viewMode">.viewMode</a> : <code>string</code></li>
@@ -1588,7 +1596,12 @@
 </ul>
 </li>
 </ul>
-<p><a name="Config.initialValue"></a></p>
+<p><a name="Config.inline"></a></p>
+<h3 id="configinline-boolean">Config.inline : <code>boolean</code><a class="headerlink" href="#configinline-boolean" title="Permanent link">&para;</a></h3>
+<p>if true datepicker render inline</p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config">Config</a></code><br />
+<strong>Default</strong>: <code>false</code><br />
+<a name="Config.initialValue"></a></p>
 <h3 id="configinitialvalue-boolean">Config.initialValue : <code>boolean</code><a class="headerlink" href="#configinitialvalue-boolean" title="Permanent link">&para;</a></h3>
 <p><strong>Kind</strong>: static property of <code><a href="#Config">Config</a></code><br />
 <strong>Default</strong>: <code>true</code><br />
@@ -2455,6 +2468,8 @@
         <script src="../.././lib/persian-datepicker/dist/js/persian-datepicker-0.5.0.js"></script>
       
         <script src="../.././js/datepicker-example.js"></script>
+      
+        <script src="../.././js/doc.js"></script>
       
         <script src="https://buttons.github.io/buttons.js"></script>
       

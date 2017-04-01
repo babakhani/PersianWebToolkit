@@ -5,10 +5,7 @@ Some Ui Tools Compatible With Persian Layout And Jalali Calendar
 
 Persian Web Toolkit is freely distributable under the terms of the WTFPL license.
 
-
-# [Persian Date](persian-date/index.md)
-
-
+# Persian Date
 
 <a class="github-button" href="https://github.com/babakhani/persiandate/archive/master.zip" data-style="mega" aria-label="Download babakhani/persiandate on GitHub">Download</a>
 
@@ -21,7 +18,7 @@ Persian Web Toolkit is freely distributable under the terms of the WTFPL license
 [![npm version](https://badge.fury.io/js/persian-date.svg)](https://github.com/babakhani/pwt.datepicker)
 [![Bower version](https://badge.fury.io/bo/persian-date.svg)](https://github.com/babakhani/pwt.datepicker)
 
-![alt text](img/project/persian-date.png "Persian datepicker")
+![alt text](../img/project/persian-date.png "Persian datepicker")
 
 javascript date library for parsing, validating, manipulating, and formatting persian dates System.
 
@@ -41,13 +38,13 @@ javascript date library for parsing, validating, manipulating, and formatting pe
 [![npm version](https://badge.fury.io/js/persian-datepicker.svg)](https://github.com/babakhani/PersianDate)
 [![Bower version](https://badge.fury.io/bo/persian-datepicker.svg)](https://github.com/babakhani/PersianDate)
 
-![alt text](img/project/datepicker.png "Persian datepicker")
+![alt text](../img/project/datepicker.png "Persian datepicker")
 
 jQuery datepicker plugin work with Iranian calendar.
 
 
 # Persian Heat chart
 
-![alt text](img/project/persian-calheatmap.png "Persian datepicker")
+![alt text](../img/project/persian-calheatmap.png "Persian datepicker")
 
 javascript date library for parsing, validating, manipulating, and formatting persian dates System.
