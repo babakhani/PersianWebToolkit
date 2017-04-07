@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-   <url>
-      <loc>http://babakhani.github.io/PersianWebToolkit/persiandate</loc>
-   </url>
-   <url>
-      <loc>http://babakhani.github.io/PersianWebToolkit/datepicker</loc>
-   </url>
     <url>
-      <loc>http://babakhani.github.io/PersianWebToolkit/doc/datepicker</loc>
-   </url>
+        <loc>http://babakhani.github.io/PersianWebToolkit/</loc>
+    </url>
+    <url>
+        <loc>http://babakhani.github.io/PersianWebToolkit/persiandate</loc>
+    </url>
+    <url>
+        <loc>http://babakhani.github.io/PersianWebToolkit/datepicker</loc>
+    </url>
+    <url>
+        <loc>http://babakhani.github.io/PersianWebToolkit/doc/datepicker</loc>
+    </url>
+    <url>
+        <loc>http://babakhani.github.io/PersianWebToolkit/doc/persiandate</loc>
+    </url>
 </urlset> 

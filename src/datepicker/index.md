@@ -3,7 +3,7 @@ Persian Date Picker
 
 [![npm version](https://badge.fury.io/js/persian-datepicker.svg)](https://github.com/babakhani/PersianDate)
 [![Bower version](https://badge.fury.io/bo/persian-datepicker.svg)](https://github.com/babakhani/PersianDate)
-
+[![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/persianwebtoolkit/datepicker)
 
 Persian Date Picker
 This Date picker work with Iranian calendar.
@@ -61,7 +61,6 @@ bower install persian-datepicker
 
 | name                           | type             | default                                         | description  |
 | -------------                  |:-------------:   | :----------------------------------------------:| :----------: |
-| inline                         | boolean          | true                                            | If set true datepicker render inline|
 | initialValue                   | boolean          | true                                            | If set true datepicker init with input value date |
 | persianDigit                   | boolean          | true                                            | If true all digit shows as persian digit |
 | viewMode                       | string           | 'day'                                           | Accept day, motnh, year |

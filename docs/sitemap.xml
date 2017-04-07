@@ -2,42 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     
+        
     <url>
      <loc>http://google.com/persian-date/</loc>
-     <lastmod>2017-04-02</lastmod>
+     <lastmod>2017-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
+        
+    <url>
+     <loc>http://google.com/persian-date/changelog/</loc>
+     <lastmod>2017-04-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
     
         
     <url>
      <loc>http://google.com/datepicker/</loc>
-     <lastmod>2017-04-02</lastmod>
+     <lastmod>2017-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://google.com/datepicker/example/</loc>
-     <lastmod>2017-04-02</lastmod>
+     <lastmod>2017-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://google.com/datepicker/options/</loc>
-     <lastmod>2017-04-02</lastmod>
+     <lastmod>2017-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://google.com/datepicker/api/</loc>
-     <lastmod>2017-04-02</lastmod>
+     <lastmod>2017-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://google.com/datepicker/changelog/</loc>
-     <lastmod>2017-04-02</lastmod>
+     <lastmod>2017-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         

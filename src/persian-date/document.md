@@ -16,33 +16,6 @@
 </dd>
 </dl>
 
-## Functions
-
-<dl>
-<dt><a href="#toPersianDigit">toPersianDigit(digit)</a> ⇒ <code>string</code> | <code>*</code></dt>
-<dd><p>return converted string to persian digit</p>
-</dd>
-<dt><a href="#isArray">isArray(input)</a> ⇒ <code>boolean</code></dt>
-<dd></dd>
-<dt><a href="#isString">isString(input)</a> ⇒ <code>boolean</code></dt>
-<dd></dd>
-<dt><a href="#isNumber">isNumber(input)</a> ⇒ <code>boolean</code></dt>
-<dd></dd>
-<dt><a href="#isDate">isDate(input)</a> ⇒ <code>boolean</code></dt>
-<dd></dd>
-<dt><a href="#isUndefined">isUndefined(input)</a> ⇒ <code>boolean</code></dt>
-<dd></dd>
-<dt><a href="#leftZeroFill">leftZeroFill(number, targetLength)</a> ⇒ <code>string</code></dt>
-<dd></dd>
-<dt><a href="#normalizeDuration">normalizeDuration()</a> ⇒ <code>Object</code></dt>
-<dd><p>normalize duration params and return valid param</p>
-</dd>
-<dt><a href="#absRound">absRound(number)</a> ⇒ <code>number</code></dt>
-<dd></dd>
-<dt><a href="#mod">mod(a, b)</a> ⇒ <code>number</code></dt>
-<dd></dd>
-</dl>
-
 <a name="module_constants"></a>
 
 ## constants
@@ -50,32 +23,32 @@ Constants
 
 
 * [constants](#module_constants)
-    * [~GREGORIAN_EPOCH](#module_constants..GREGORIAN_EPOCH) : <code>number</code>
-    * [~PERSIAN_EPOCH](#module_constants..PERSIAN_EPOCH) : <code>number</code>
-    * [~monthRange](#module_constants..monthRange) : <code>Object</code>
-    * [~weekRange](#module_constants..weekRange) : <code>Object</code>
-    * [~persianDaysName](#module_constants..persianDaysName) : <code>Array.&lt;string&gt;</code>
+    * [.GREGORIAN_EPOCH](#module_constants.GREGORIAN_EPOCH) : <code>number</code>
+    * [.PERSIAN_EPOCH](#module_constants.PERSIAN_EPOCH) : <code>number</code>
+    * [.monthRange](#module_constants.monthRange) : <code>Object</code>
+    * [.weekRange](#module_constants.weekRange) : <code>Object</code>
+    * [.persianDaysName](#module_constants.persianDaysName) : <code>Array.&lt;string&gt;</code>
 
-<a name="module_constants..GREGORIAN_EPOCH"></a>
+<a name="module_constants.GREGORIAN_EPOCH"></a>
 
-### constants~GREGORIAN_EPOCH : <code>number</code>
-**Kind**: inner constant of <code>[constants](#module_constants)</code>  
-<a name="module_constants..PERSIAN_EPOCH"></a>
+### constants.GREGORIAN_EPOCH : <code>number</code>
+**Kind**: static property of <code>[constants](#module_constants)</code>  
+<a name="module_constants.PERSIAN_EPOCH"></a>
 
-### constants~PERSIAN_EPOCH : <code>number</code>
-**Kind**: inner constant of <code>[constants](#module_constants)</code>  
-<a name="module_constants..monthRange"></a>
+### constants.PERSIAN_EPOCH : <code>number</code>
+**Kind**: static property of <code>[constants](#module_constants)</code>  
+<a name="module_constants.monthRange"></a>
 
-### constants~monthRange : <code>Object</code>
-**Kind**: inner constant of <code>[constants](#module_constants)</code>  
-<a name="module_constants..weekRange"></a>
+### constants.monthRange : <code>Object</code>
+**Kind**: static property of <code>[constants](#module_constants)</code>  
+<a name="module_constants.weekRange"></a>
 
-### constants~weekRange : <code>Object</code>
-**Kind**: inner constant of <code>[constants](#module_constants)</code>  
-<a name="module_constants..persianDaysName"></a>
+### constants.weekRange : <code>Object</code>
+**Kind**: static property of <code>[constants](#module_constants)</code>  
+<a name="module_constants.persianDaysName"></a>
 
-### constants~persianDaysName : <code>Array.&lt;string&gt;</code>
-**Kind**: inner constant of <code>[constants](#module_constants)</code>  
+### constants.persianDaysName : <code>Array.&lt;string&gt;</code>
+**Kind**: static property of <code>[constants](#module_constants)</code>  
 <a name="Algorithms"></a>
 
 ## Algorithms
@@ -343,162 +316,6 @@ Duration
   <tbody>
 <tr>
     <td>duration</td>
-    </tr>  </tbody>
-</table>
-
-<a name="toPersianDigit"></a>
-
-## toPersianDigit(digit) ⇒ <code>string</code> \| <code>\*</code>
-return converted string to persian digit
-
-**Kind**: global function  
-<table>
-  <thead>
-    <tr>
-      <th>Param</th>
-    </tr>
-  </thead>
-  <tbody>
-<tr>
-    <td>digit</td>
-    </tr>  </tbody>
-</table>
-
-<a name="isArray"></a>
-
-## isArray(input) ⇒ <code>boolean</code>
-**Kind**: global function  
-<table>
-  <thead>
-    <tr>
-      <th>Param</th>
-    </tr>
-  </thead>
-  <tbody>
-<tr>
-    <td>input</td>
-    </tr>  </tbody>
-</table>
-
-<a name="isString"></a>
-
-## isString(input) ⇒ <code>boolean</code>
-**Kind**: global function  
-<table>
-  <thead>
-    <tr>
-      <th>Param</th>
-    </tr>
-  </thead>
-  <tbody>
-<tr>
-    <td>input</td>
-    </tr>  </tbody>
-</table>
-
-<a name="isNumber"></a>
-
-## isNumber(input) ⇒ <code>boolean</code>
-**Kind**: global function  
-<table>
-  <thead>
-    <tr>
-      <th>Param</th>
-    </tr>
-  </thead>
-  <tbody>
-<tr>
-    <td>input</td>
-    </tr>  </tbody>
-</table>
-
-<a name="isDate"></a>
-
-## isDate(input) ⇒ <code>boolean</code>
-**Kind**: global function  
-<table>
-  <thead>
-    <tr>
-      <th>Param</th>
-    </tr>
-  </thead>
-  <tbody>
-<tr>
-    <td>input</td>
-    </tr>  </tbody>
-</table>
-
-<a name="isUndefined"></a>
-
-## isUndefined(input) ⇒ <code>boolean</code>
-**Kind**: global function  
-<table>
-  <thead>
-    <tr>
-      <th>Param</th>
-    </tr>
-  </thead>
-  <tbody>
-<tr>
-    <td>input</td>
-    </tr>  </tbody>
-</table>
-
-<a name="leftZeroFill"></a>
-
-## leftZeroFill(number, targetLength) ⇒ <code>string</code>
-**Kind**: global function  
-<table>
-  <thead>
-    <tr>
-      <th>Param</th>
-    </tr>
-  </thead>
-  <tbody>
-<tr>
-    <td>number</td>
-    </tr><tr>
-    <td>targetLength</td>
-    </tr>  </tbody>
-</table>
-
-<a name="normalizeDuration"></a>
-
-## normalizeDuration() ⇒ <code>Object</code>
-normalize duration params and return valid param
-
-**Kind**: global function  
-<a name="absRound"></a>
-
-## absRound(number) ⇒ <code>number</code>
-**Kind**: global function  
-<table>
-  <thead>
-    <tr>
-      <th>Param</th>
-    </tr>
-  </thead>
-  <tbody>
-<tr>
-    <td>number</td>
-    </tr>  </tbody>
-</table>
-
-<a name="mod"></a>
-
-## mod(a, b) ⇒ <code>number</code>
-**Kind**: global function  
-<table>
-  <thead>
-    <tr>
-      <th>Param</th>
-    </tr>
-  </thead>
-  <tbody>
-<tr>
-    <td>a</td>
-    </tr><tr>
-    <td>b</td>
     </tr>  </tbody>
 </table>
 

@@ -18,7 +18,7 @@ google_analytics:
 extra_css:
     - //fonts.googleapis.com/css?family=Open+Sans
     - ./css/extra.css
-    - ./lib/persian-datepicker/dist/css/persian-datepicker-0.4.5.css
+    - ./lib/persian-datepicker/dist/css/persian-datepicker.css
 
 markdown_extensions:
   - admonition
@@ -28,7 +28,9 @@ markdown_extensions:
   - toc(permalink=true)
 
 pages:
-    - Persian Date: 'persian-date/index.md'
+    - Persian Date:
+        - Document: 'persian-date/index.md'
+        - Change log: 'persian-date/changelog.md'
     - Persian Datepicker:
         - Getting Start: 'datepicker/index.md'
         - Example: 'datepicker/example.md'
@@ -58,7 +60,7 @@ dev_addr: '127.0.0.1:8000'
 extra_javascript:
     - ./lib/jquery/dist/jquery.js
     - ./lib/persian-date/dist/0.1.8/persian-date-0.1.8.js
-    - ./lib/persian-datepicker/dist/js/persian-datepicker-0.5.0.js
+    - ./lib/persian-datepicker/dist/js/persian-datepicker.js
     - ./js/datepicker-example.js
     - ./js/doc.js
     - https://buttons.github.io/buttons.js
