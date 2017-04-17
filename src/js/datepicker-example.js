@@ -29,11 +29,11 @@ $(document).ready(function () {
     });
 
     $('.min-date-example').persianDatepicker({
-        minDate: new persianDate().unix()
+        minDate: new persianDate().valueOf()
     });
 
     $('.max-date-example').persianDatepicker({
-        maxDate: new persianDate().unix()
+        maxDate: new persianDate().valueOf()
     });
 
     $('.check-date-example').persianDatepicker({
