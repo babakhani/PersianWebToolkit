@@ -1,351 +1,199 @@
-<!DOCTYPE html >
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!doctype html>
+<html lang="en">
 <head>
-    <title>Persian DatePicker</title>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <script type="text/javascript" src="../lib/jquery.js"></script>
-    <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-    <script type="text/javascript" src="../lib/bootstrap/js/bootstrap.min.js"></script>
-    <link href="css/persian-datepicker-0.4.5.css" rel="stylesheet" type="text/css"/>
-    <script type="text/javascript" src="../lib/persian-date.js"></script>
-    <script type="text/javascript" src="js/persian-datepicker-0.4.5.min.js"></script>
-    <style>
-        .center-block {
-            width: 900px;
+    <title>Persian Datepicker</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Demo Bootstrap Style -->
+    <!-- ------------------------------------------------------------------------------------ -->
+    <link href="../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
+
+    <!-- Demo Font Embed -->
+    <!-- ------------------------------------------------------------------------------------ -->
+    <link href="../assets/css/fontiran.css" rel="stylesheet"/>
+
+    <!-- Persian Datepicker Style -->
+    <!-- ------------------------------------------------------------------------------------ -->
+    <link id="datepickerTheme" href="./css/persian-datepicker.css" rel="stylesheet"/>
+
+    <!-- Theme Switcher -->
+    <!-- ------------------------------------------------------------------------------------ -->
+    <script type="text/javascript">
+        function swapStyleSheet(sheet) {
+            document.getElementById('datepickerTheme').setAttribute('href', sheet);
+        }
+    </script>
+
+    <!-- Demo Style -->
+    <!-- ------------------------------------------------------------------------------------ -->
+    <style type="text/css">
+        *,
+        body {
+            font-family: IRANSans, tahoma;
+        }
+
+        .input-group-addon {
+            cursor: pointer;
+        }
+
+        .navbar-right {
+            padding: 10px;
         }
     </style>
 </head>
 <body>
+
+<nav class="navbar">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+                Persian Date Picker <span class="badge">Version 0.5.0</span>
+            </a>
+        </div>
+        <nav class="navbar-right">
+            <span>
+            theme:
+                </span>
+            <button class="btn btn-xs btn-primary"
+                    onclick="swapStyleSheet('css/persian-datepicker.css')">
+                Default
+            </button>
+            <button class="btn btn-xs btn-primary"
+                    onclick="swapStyleSheet('css/theme/persian-datepicker-blue.min.css')">
+                Blue
+            </button>
+            <button class="btn btn-xs btn-primary"
+                    onclick="swapStyleSheet('css/theme/persian-datepicker-cheerup.min.css')">
+                Cheerup
+            </button>
+            <button class="btn btn-xs btn-primary"
+                    onclick="swapStyleSheet('css/theme/persian-datepicker-dark.min.css')">
+                Dark
+            </button>
+            <button class="btn btn-xs btn-primary"
+                    onclick="swapStyleSheet('css/theme/persian-datepicker-redblack.min.css')">
+                Redblack
+            </button>
+        </nav><!--/.nav-collapse -->
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="row">
+                <div class="col-xs-12 col-md-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Inline Sample</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <input id="inlineAlt" class="form-control" disabled/>
+                                <br/>
+                                <div id="inline">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Input Sample without intial value observer true</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <input id="normalAlt" class="form-control" disabled/>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" id="normal"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Iconic Sample</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <input id="inputGroupAlt" type="text" class="form-control" placeholder="Alt Field"
+                                       disabled>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                            <span id="inputGroup" class="input-group-addon">
+                                <i class="glyphicon glyphicon-calendar"></i>
+                            </span>
+                                    <input id="inputGroupAlt2" type="text" class="form-control" placeholder="Alt Field">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Jquery (required dependency) -->
+<!-- ------------------------------------------------------------------------------------ -->
+<script src="../node_modules/jquery/dist/jquery.js"></script>
+
+<!-- PersianDate (required dependency) -->
+<!-- ------------------------------------------------------------------------------------ -->
+<script src="../node_modules/persian-date/dist/0.1.8b/persian-date-0.1.8b.js"></script>
+
+<!-- Datepicker main script -->
+<!-- ------------------------------------------------------------------------------------ -->
+<!--<script src="./js/persian-datepicker.js"></script>-->
+<script src="./js/persian-datepicker.js"></script>
+
+<!-- Init datepicker -->
+<!-- ------------------------------------------------------------------------------------ -->
 <script type="text/javascript">
-    /*
-     Default Functionality
-     */
     $(document).ready(function () {
-        /*
-         Default
-         */
-        window.pd = $("#inlineDatepicker").persianDatepicker({
-            timePicker: {
-                enabled: true
-            },
-            altField: '#inlineDatepickerAlt',
-            altFormat: "YYYY MM DD HH:mm:ss",
-//            minDate:1258675200000,
-//            maxDate:1358675200000,
-            checkDate: function (unix) {
-                var output = true;
-                var d = new persianDate(unix);
-                if (d.date() == 20) {
-                    output = false;
-                }
-                return output;
-            },
-            checkMonth: function (month) {
-                var output = true;
-                if (month == 1) {
-                    output = false;
-                }
-                return output;
 
-            }, checkYear: function (year) {
-                var output = true;
-                if (year == 1396) {
-                    output = false;
-                }
-                return output;
-            }
+        // Debug mode
+        // --------------------------------------------
+        window.persianDatepickerDebug = false;
 
-        }).data('datepicker');
-
-        $("#inlineDatepicker").pDatepicker("setDate", [1391, 12, 1, 11, 14]);
-
-        //pd.setDate([1333,12,28,11,20,30]);
-
-        /**
-         * Default
-         * */
-        $('#default').persianDatepicker({
-            altField: '#defaultAlt'
-
-        });
-
-
-        /*
-         observer
-         */
-        $("#observer").persianDatepicker({
-            altField: '#observerAlt',
-            altFormat: "YYYY MM DD HH:mm:ss",
+        // Normal Sample
+        // --------------------------------------------
+        $('#normal').persianDatepicker({
+            altField: '#normalAlt',
+            altFormat: 'LLLL',
+            initialValue: false,
             observer: true,
             format: 'YYYY/MM/DD'
-
         });
 
-        /*
-         timepicker
-         */
-        $("#timepicker").persianDatepicker({
-            altField: '#timepickerAltField',
-            altFormat: "YYYY MM DD HH:mm:ss",
-            format: "HH:mm:ss a",
-            onlyTimePicker: true
-
-        });
-        /*
-         month
-         */
-        $("#monthpicker").persianDatepicker({
-            format: " MMMM YYYY",
-            altField: '#monthpickerAlt',
-            altFormat: "YYYY MM DD HH:mm:ss",
-            yearPicker: {
-                enabled: false
-            },
-            monthPicker: {
-                enabled: true
-            },
-            dayPicker: {
-                enabled: false
-            }
+        // Input Group Sample
+        // --------------------------------------------
+        $('#inputGroup').persianDatepicker({
+            altField: '#inputGroupAlt,#inputGroupAlt2',
+            altFormat: 'LLLL'
         });
 
-        /*
-         year
-         */
-        $("#yearpicker").persianDatepicker({
-            format: "YYYY",
-            altField: '#yearpickerAlt',
-            altFormat: "YYYY MM DD HH:mm:ss",
-            dayPicker: {
-                enabled: false
-            },
-            monthPicker: {
-                enabled: false
-            },
-            yearPicker: {
-                enabled: true
-            }
-        });
-        /*
-         year and month
-         */
-        $("#yearAndMonthpicker").persianDatepicker({
-            format: "YYYY MM",
-            altFormat: "YYYY MM DD HH:mm:ss",
-            altField: '#yearAndMonthpickerAlt',
-            dayPicker: {
-                enabled: false
-            },
-            monthPicker: {
-                enabled: true
-            },
-            yearPicker: {
-                enabled: true
-            }
-        });
-        /**
-         inline with minDate and maxDate
-         */
-        $("#inlineDatepickerWithMinMax").persianDatepicker({
-            altField: '#inlineDatepickerWithMinMaxAlt',
-            altFormat: "YYYY MM DD HH:mm:ss",
-            minDate: 1416983467029,
-            maxDate: 1419983467029
-        });
-        /**
-         Custom Disable Date
-         */
-        $("#customDisabled").persianDatepicker({
+        // Inline Sample
+        // --------------------------------------------
+        window.pd = $("#inline").persianDatepicker({
+            inline: true,
+            altField: '#inlineAlt',
+            altFormat: 'LLLL',
             timePicker: {
-                enabled: true
+                enabled: true,
+                meridiem: {
+                    enabled: true
+                }
             },
-            altField: '#customDisabledAlt',
-            checkDate: function (unix) {
-                var output = true;
-                var d = new persianDate(unix);
-                if (d.date() == 20 | d.date() == 21 | d.date() == 22) {
-                    output = false;
-                }
-                return output;
-            },
-            checkMonth: function (month) {
-                var output = true;
-                if (month == 1) {
-                    output = false;
-                }
-                return output;
-
-            }, checkYear: function (year) {
-                var output = true;
-                if (year == 1396) {
-                    output = false;
-                }
-                return output;
-            }
-
-        });
-
-        /**
-         persianDate
-         */
-        $("#persianDigit").persianDatepicker({
-            altField: '#persianDigitAlt',
-            altFormat: "YYYY MM DD HH:mm:ss",
-            persianDigit: false
-        });
+        }).data('datepicker');
     });
 </script>
-<div class="col-xs-12">
-    <div class="col-xs-9">
-        <h1>Persian Date Picker Demo</h1>
-
-        <p>
-            <span class="label label-success">Version 0.4.5</span>
-        </p>
-    </div>
-</div>
-<div class="col-xs-12">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h4>Inline Datepicker</h4>
-        </div>
-        <div class="panel-body">
-            <div id="inlineDatepicker" data-date="2016/12/13 12:20" class="col-xs-6"></div>
-            <div class="col-xs-6">
-                <input id="inlineDatepickerAlt" type="text" class="form-control"/>
-            </div>
-        </div>
-    </div>
-
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h4>Default Functionlaity</h4>
-        </div>
-        <div class="panel-body">
-
-            <div class="form-group col-xs-6">
-                <label>Select Date</label>
-                <input id="default" type="text" class="form-control"/>
-            </div>
-            <div class="form-group col-xs-6">
-                <input id="defaultAlt" type="text" class="form-control"/>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h4>Observer Functionlaity</h4>
-            <h6>sync with pasted data</h6>
-        </div>
-        <div class="panel-body">
-            <div class="form-group col-xs-6">
-                <label>Select Date</label>
-                <input id="observer" type="text" class="form-control"/>
-            </div>
-            <div class="form-group col-xs-6">
-                <input id="observerAlt" type="text" class="form-control"/>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h4>Time Picker</h4>
-        </div>
-        <div class="panel-body">
-            <div class="form-group col-xs-6">
-                <label>Select Time</label>
-                <input id="timepicker" type="text" class="form-control"/>
-            </div>
-            <div class="form-group col-xs-6">
-                <input type="text" id="timepickerAltField" class="form-control"/>
-            </div>
-        </div>
-    </div>
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h4>Month Picker</h4>
-        </div>
-        <div class="panel-body">
-            <div class="form-group col-xs-6">
-                <h4>Select Month</h4>
-                <input id="monthpicker" type="text" class="form-control"/>
-            </div>
-            <div class="form-group col-xs-6">
-                <input id="monthpickerAlt" type="text" class="form-control"/>
-            </div>
-        </div>
-    </div>
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h4>Year Picker</h4>
-        </div>
-        <div class="panel-body">
-            <div class="form-group col-xs-6">
-                <label>Select Year</label>
-                <input id="yearpicker" type="text" class="form-control"/>
-            </div>
-            <div class="form-group col-xs-6">
-                <input id="yearpickerAlt" type="text" class="form-control"/>
-            </div>
-        </div>
-    </div>
-
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h4>Year And Month Picker</h4>
-        </div>
-        <div class="panel-body">
-            <div class="form-group col-xs-6">
-                <label>Select Year And Month</label>
-                <input id="yearAndMonthpicker" type="text" class=" form-control"/>
-            </div>
-            <div class="form-group col-xs-6">
-                <input id="yearAndMonthpickerAlt" type="text" class=" form-control"/>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h4>With Min and Max</h4>
-        </div>
-        <div class="panel-body">
-            <div id="inlineDatepickerWithMinMax" class="col-xs-6"></div>
-            <div class="col-xs-6">
-                <input id="inlineDatepickerWithMinMaxAlt" type="text" class=" form-control"/>
-            </div>
-        </div>
-    </div>
-
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h4>Custom Date Disabled</h4>
-        </div>
-        <div class="panel-body">
-            <div id="customDisabled" class="col-xs-6"></div>
-            <div class="col-xs-6">
-                <input id="customDisabledAlt" type="text" class=" form-control"/>
-            </div>
-        </div>
-    </div>
-
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h4>English Digit</h4>
-        </div>
-        <div class="panel-body">
-
-            <div id="persianDigit" class="col-xs-6"></div>
-            <div class="col-xs-6">
-                <input id="persianDigitAlt" type="text" class=" form-control"/>
-            </div>
-        </div>
-    </div>
-</div>
 </body>
 </html>

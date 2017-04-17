@@ -59,7 +59,7 @@ strict: true
 dev_addr: '127.0.0.1:8000'
 extra_javascript:
     - ./lib/jquery/dist/jquery.js
-    - ./lib/persian-date/dist/0.1.8/persian-date-0.1.8.js
+    - ./lib/persian-date/dist/persian-date.js
     - ./lib/persian-datepicker/dist/js/persian-datepicker.js
     - ./js/datepicker-example.js
     - ./js/doc.js
