@@ -1,10 +1,3 @@
-/*
-** persian-datepicker - v0.5.0
-** Reza Babakhani <babakhani.reza@gmail.com>
-** http://babakhani.github.io/PersianWebToolkit/docs/datepicker
-** Under WTFPL license 
-*/ 
-
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
@@ -208,7 +201,6 @@ var Options = function () {
     function Options(options) {
         _classCallCheck(this, Options);
 
-        console.log(Config);
         return this._compatibility($.extend(true, this, Config, options));
     }
 
@@ -1541,9 +1533,9 @@ var Input = function () {
             // TODO
             // self.model.options.altField.bind("change", function () {
             //     //if (!self._flagSelfManipulate) {
-            //         var newDate = new Date($(this).val());
+            //         let newDate = new Date($(this).val());
             //         if (newDate !== "Invalid Date") {
-            //             var newPersainDate = new persianDate(newDate);
+            //             let newPersainDate = new persianDate(newDate);
             //             self.selectDate(newPersainDate.valueOf());
             //         }
             //   //  }
@@ -1857,7 +1849,7 @@ var Navigator = function () {
                 /**
                  * @description days click event
                  */
-                $(document).on('click', '#' + that.model.view.id + ' .datepicker-day-view td', function () {
+                $(document).on('click', '#' + that.model.view.id + ' .datepicker-day-view td:not(.disabled)', function () {
                     var thisUnix = $(this).data('unix');
                     that.model.state.setSelectedDateTime('unix', thisUnix);
                     that.model.state.setViewDateTime('unix', that.model.state.selected.unixDate);
@@ -1877,7 +1869,7 @@ var Navigator = function () {
                 /**
                  * @description month click event
                  */
-                $(document).on('click', '#' + that.model.view.id + ' .datepicker-month-view .month-item', function () {
+                $(document).on('click', '#' + that.model.view.id + ' .datepicker-month-view .month-item:not(.month-item-disable)', function () {
                     var month = $(this).data('month');
                     that.model.state.switchViewModeTo('day');
                     if (!that.model.options.onlySelectOnDate) {
@@ -1900,7 +1892,7 @@ var Navigator = function () {
                 /**
                  * @description year click event
                  */
-                $(document).on('click', '#' + that.model.view.id + ' .datepicker-year-view .year-item', function () {
+                $(document).on('click', '#' + that.model.view.id + ' .datepicker-year-view .year-item:not(.year-item-disable)', function () {
                     var year = $(this).data('year');
                     that.model.state.switchViewModeTo('month');
                     if (!that.model.options.onlySelectOnDate) {
@@ -2576,9 +2568,9 @@ var View = function () {
             if (this.model.state.filetredDate) {
                 var startYear = this.model.state.filterDate.start.year;
                 var endYear = this.model.state.filterDate.end.year;
-                if (startYear <= year & year <= endYear) {
-                    output = true;
-                } else {
+                if (startYear && year < startYear) {
+                    return false;
+                } else if (endYear && year > endYear) {
                     return false;
                 }
             }
@@ -2664,9 +2656,11 @@ var View = function () {
                     endMonth = this.model.state.filterDate.end.month,
                     startYear = this.model.state.filterDate.start.year,
                     endYear = this.model.state.filterDate.end.year;
-                if ((startYear == endYear && endYear == y && month >= startMonth && month <= endMonth) | (y != endYear && y == startYear && month >= startMonth) | (y != startYear && y == endYear && month <= endMonth) | (y > startYear && y < endYear)) {
-                    output = true;
-                } else {
+                if (startMonth && endMonth && (y == endYear && month > endMonth || y > endYear) || y == startYear && month < startMonth || y < startYear) {
+                    return false;
+                } else if (endMonth && (y == endYear && month > endMonth || y > endYear)) {
+                    return false;
+                } else if (startMonth && (y == startYear && month < startMonth || y < startYear)) {
                     return false;
                 }
             }
@@ -2750,7 +2744,7 @@ var View = function () {
                     }
                 } else if (self.maxDate) {
                     self.maxDate = new persianDate(self.maxDate).endOf('day').valueOf();
-                    if (unixtimespan <= self.maxDate) {
+                    if (unixtimespan >= self.maxDate) {
                         return false;
                     }
                 }

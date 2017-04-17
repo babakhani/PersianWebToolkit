@@ -300,6 +300,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#observer" title="Observer" class="md-nav__link">
+    Observer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#format" title="format" class="md-nav__link">
     format
   </a>
@@ -470,6 +477,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#observer" title="Observer" class="md-nav__link">
+    Observer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#format" title="format" class="md-nav__link">
     format
   </a>
@@ -588,16 +602,48 @@
 <p><label>Datepicker</label>
 <input class="datepicker-demo normal-example" /></p>
 <h2 id="inline-example">inline example<a class="headerlink" href="#inline-example" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.inline-example&#39;</span><span class="p">).</span><span class="nx">persianDatepicker</span><span class="p">();</span>
+<div class="codehilite"><pre><span></span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.inline-example&#39;</span><span class="p">).</span><span class="nx">persianDatepicker</span><span class="p">({</span>
+    <span class="nx">inline</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nx">altField</span><span class="o">:</span> <span class="s1">&#39;#inlineExampleAlt&#39;</span><span class="p">,</span>
+    <span class="nx">altFormat</span><span class="o">:</span> <span class="s1">&#39;LLLL&#39;</span><span class="p">,</span>
+    <span class="nx">maxDate</span><span class="o">:</span> <span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;month&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">).</span><span class="nx">valueOf</span><span class="p">(),</span>
+    <span class="nx">minDate</span><span class="o">:</span> <span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">subtract</span><span class="p">(</span><span class="s1">&#39;month&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">).</span><span class="nx">valueOf</span><span class="p">(),</span>
+    <span class="nx">timePicker</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">enabled</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nx">meridiem</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">enabled</span><span class="o">:</span> <span class="kc">true</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">});</span>
 </pre></div>
 
 
-<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;inline-example&quot;</span> <span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">input</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;inlineExampleAlt&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;datepicker-demo&quot;</span> <span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;inline-example&quot;</span> <span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </pre></div>
 
 
 <p><label>Datepicker</label>
+<input id="inlineExampleAlt" class="datepicker-demo" />
 <div class="inline-example" ></div></p>
+<h2 id="observer">Observer<a class="headerlink" href="#observer" title="Permanent link">&para;</a></h2>
+<p>true, make user able to edit date by keyboard</p>
+<div class="codehilite"><pre><span></span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.observer-example&#39;</span><span class="p">).</span><span class="nx">persianDatepicker</span><span class="p">({</span>
+    <span class="nx">observer</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nx">format</span><span class="o">:</span> <span class="s1">&#39;YYYY/MM/DD&#39;</span><span class="p">,</span>
+    <span class="nx">altField</span><span class="o">:</span> <span class="s1">&#39;.observer-example-alt&#39;</span>
+<span class="p">});</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;observer-example&quot;</span> <span class="p">/&gt;</span>
+</pre></div>
+
+
+<p><label>Alt field</label>
+<input class="datepicker-demo observer-example-alt" />
+<label>Datepicker</label>
+<input class="datepicker-demo observer-example" /></p>
 <h2 id="format">format<a class="headerlink" href="#format" title="Permanent link">&para;</a></h2>
 <p>More options in <a href="http://babakhani.github.io/PersianWebToolkit/datepicker">Persian Date Documents</a></p>
 <div class="codehilite"><pre><span></span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.format-example&#39;</span><span class="p">).</span><span class="nx">persianDatepicker</span><span class="p">({</span>

@@ -1,10 +1,20 @@
-
-
 $(document).ready(function () {
 
     $('.normal-example').persianDatepicker({});
 
-    $('.inline-example').persianDatepicker();
+    $('.inline-example').persianDatepicker({
+        inline: true,
+        altField: '#inlineExampleAlt',
+        altFormat: 'LLLL',
+        maxDate: new persianDate().add('month', 3).valueOf(),
+        minDate: new persianDate().subtract('month', 3).valueOf(),
+        timePicker: {
+            enabled: true,
+            meridiem: {
+                enabled: true
+            }
+        }
+    });
 
     $('.format-example').persianDatepicker({
         format: 'LLLL'
@@ -60,6 +70,12 @@ $(document).ready(function () {
         onSelect: function (unix) {
             // alert('datepicker select : ' + unix);
         }
+    });
+
+    $('.observer-example').persianDatepicker({
+        observer: true,
+        format: 'YYYY/MM/DD',
+        altField: '.observer-example-alt'
     });
 
 });

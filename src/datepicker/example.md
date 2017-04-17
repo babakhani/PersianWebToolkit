@@ -17,14 +17,49 @@ $('.normal-example').persianDatepicker();
 ## inline example
 
 ```javascript
-$('.inline-example').persianDatepicker();
+$('.inline-example').persianDatepicker({
+    inline: true,
+    altField: '#inlineExampleAlt',
+    altFormat: 'LLLL',
+    maxDate: new persianDate().add('month', 3).valueOf(),
+    minDate: new persianDate().subtract('month', 3).valueOf(),
+    timePicker: {
+        enabled: true,
+        meridiem: {
+            enabled: true
+        }
+    }
+});
 ```
 
 ```html
+<input id="inlineExampleAlt" class="datepicker-demo" />
 <div class="inline-example" ></div>
 ```
+
 <label>Datepicker</label>
+<input id="inlineExampleAlt" class="datepicker-demo" />
 <div class="inline-example" ></div>
+
+## Observer
+
+true, make user able to edit date by keyboard
+
+```javascript
+$('.observer-example').persianDatepicker({
+    observer: true,
+    format: 'YYYY/MM/DD',
+    altField: '.observer-example-alt'
+});
+```
+
+```html
+<input class="observer-example" />
+```
+<label>Alt field</label>
+<input class="datepicker-demo observer-example-alt" />
+<label>Datepicker</label>
+<input class="datepicker-demo observer-example" />
 
 
 ## format
@@ -239,10 +274,6 @@ $('.on-select-example').persianDatepicker({
 ```
 <label>Datepicker</label>
 <input class="datepicker-demo on-select-example" />
-
-
-
-
 
 
 
