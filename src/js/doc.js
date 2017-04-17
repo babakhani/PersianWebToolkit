@@ -3,6 +3,4 @@ $(document).ready(function () {
         $('html').addClass('home-page');
     }
     $('.md-logo').attr('href','/');
-
-
 });
