@@ -7,7 +7,7 @@ body, html, * {
 }
 
 .jumbotron {
-    background: #2E8B34 !important;
+    background: #00A693 !important;
 }
 
 .jumbotron * {
@@ -35,7 +35,7 @@ body, html, * {
 .navbar {
     height: 56px !important;
     line-height: 56px !important;
-    border-bottom: 3px solid  #2E8B34;
+    border-bottom: 3px solid #028475;
 }
 
 .navbar-nav li a,
@@ -46,11 +46,11 @@ body, html, * {
     padding-bottom: 0px;
 }
 
-.navbar-brand{
+.navbar-brand {
     padding-left: 0px;
 }
 
-.navbar-brand img{
+.navbar-brand img {
     float: left;
     margin-top: 10px;
     margin-left: -15px;
@@ -63,4 +63,34 @@ body, html, * {
 
 .caption .description {
     min-height: 70px;
+}
+
+.owl-logo {
+    width: 100px;
+    height: 100px;
+    margin: 0px auto;
+    background-repeat: no-repeat;
+    background-image: url('../img/logo-jumbotron.svg');
+    background-size: contain;
+}
+
+.page-logo {
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin-top: 8px;
+    margin-right: 8px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url('../img/logo.svg');
+}
+
+.btn-success {
+    background: #00A693;
+    border-color: #00A693;
+}
+
+.btn-success:hover {
+    background: #028475;
 }
