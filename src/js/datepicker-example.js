@@ -48,13 +48,19 @@ $(document).ready(function () {
 
     $('.check-date-example').persianDatepicker({
         checkDate: function (unix) {
-            return new persianDate(unix).weekDayNumber != 4;
+            return new persianDate(unix).day() != 4;
         }
     });
 
     $('.check-month-example').persianDatepicker({
         checkMonth: function (month) {
             return month < 6;
+        }
+    });
+
+    $('.check-year-example').persianDatepicker({
+        checkYear: function (year) {
+            return year >= 1391;
         }
     });
 
@@ -68,7 +74,7 @@ $(document).ready(function () {
 
     $('.on-select-example').persianDatepicker({
         onSelect: function (unix) {
-            // alert('datepicker select : ' + unix);
+            console.log('datepicker select : ' + unix);
         }
     });
 
