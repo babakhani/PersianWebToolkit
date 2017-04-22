@@ -743,7 +743,7 @@
 <h2 id="checkdate">checkDate<a class="headerlink" href="#checkdate" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.check-date-example&#39;</span><span class="p">).</span><span class="nx">persianDatepicker</span><span class="p">({</span>
     <span class="nx">checkDate</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">unix</span><span class="p">){</span>
-        <span class="k">return</span> <span class="k">new</span> <span class="nx">persianDate</span><span class="p">(</span><span class="nx">unix</span><span class="p">).</span><span class="nx">weekDayNumber</span> <span class="o">!=</span> <span class="mi">4</span><span class="p">;</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nx">persianDate</span><span class="p">(</span><span class="nx">unix</span><span class="p">).</span><span class="nx">day</span><span class="p">()</span> <span class="o">!=</span> <span class="mi">4</span><span class="p">;</span>
     <span class="p">}</span>
 <span class="p">});</span>
 </pre></div>
@@ -814,7 +814,7 @@
 <h2 id="onselect">onSelect<a class="headerlink" href="#onselect" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.on-select-example&#39;</span><span class="p">).</span><span class="nx">persianDatepicker</span><span class="p">({</span>
     <span class="nx">onSelect</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">unix</span><span class="p">){</span>
-        <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;datepicker select : &#39;</span> <span class="o">+</span> <span class="nx">unix</span><span class="p">);</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;datepicker select : &#39;</span> <span class="o">+</span> <span class="nx">unix</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">});</span>
 </pre></div>
