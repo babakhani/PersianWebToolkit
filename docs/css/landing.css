@@ -38,6 +38,11 @@ body, html, * {
     border-bottom: 3px solid #028475;
 }
 
+.navbar .container{
+    padding-right: .4rem;
+    padding-left: .4rem;
+}
+
 .navbar-nav li a,
 .navbar-brand {
     height: 56px !important;
@@ -66,17 +71,17 @@ body, html, * {
 }
 
 .owl-logo {
-    width: 100px;
-    height: 100px;
-    margin: 0px auto;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
     background-repeat: no-repeat;
     background-image: url('../img/logo-jumbotron.svg');
     background-size: contain;
 }
 
 .page-logo {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     float: left;
     margin-top: 8px;
     margin-right: 8px;
