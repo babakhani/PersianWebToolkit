@@ -7,9 +7,10 @@ copyright:          license http://www.wtfpl.net/
 remote_branch: 'gh-pages'
 docs_dir: 'src'
 site_dir: 'docs'
-site_url: 'http://google.com'
+site_url: 'http://babakhani.github.io/PersianWebToolkit/docs/'
 repo_name: 'GitHub'
 strict: true
+edit_uri: PersianWebToolkit/docs/
 
 google_analytics:
     - 'UA-40548780-1'
