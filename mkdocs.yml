@@ -10,7 +10,7 @@ site_dir: 'beta'
 site_url: 'http://babakhani.github.io/PersianWebToolkit/beta/'
 repo_name: 'GitHub'
 strict: true
-site_favicon: 'img/favicon.ico'
+site_favicon: '/img/favicon.ico'
 
 google_analytics:
     - 'UA-40548780-1'
