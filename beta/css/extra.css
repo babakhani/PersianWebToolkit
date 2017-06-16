@@ -63,7 +63,11 @@ input.datepicker-demo-alt {
 }
 
 .home-page .jumbotron {
-    border: 2px solid red !important;
+    /*border: 2px solid red !important;*/
+}
+
+.md-nav__list .md-nav__item.md-nav__item--nested label{
+    font-size: 18px;
 }
 
 
