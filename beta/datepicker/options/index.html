@@ -1,0 +1,2515 @@
+
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Persian Web Toolkit document">
+      
+      
+        <link rel="canonical" href="http://babakhani.github.io/PersianWebToolkit/beta/datepicker/options/">
+      
+      
+        <meta name="author" content="babakhani.reza@gmail.com">
+      
+      
+        <link rel="shortcut icon" href="../../assets/images/favicon.ico">
+      
+      <meta name="generator" content="mkdocs+mkdocs-material#1.0.3">
+    
+    
+      
+        <title>Options - Persian Web Toolkit</title>
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr-facb31f4a3.js"></script>
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono">
+        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-f3ab63f78a.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-02ce7adcc2.palette.css">
+      
+      
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans">
+      
+        <link rel="stylesheet" href="../.././css/extra.css">
+      
+        <link rel="stylesheet" href="../.././lib/persian-datepicker/dist/css/persian-datepicker.css">
+      
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="red" data-md-color-accent="blue-light">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../persian-date/" title="Persian Web Toolkit" class=" md-logo  md-header-nav__button">
+          
+            <img src="../../img/logo.svg" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  Persian Datepicker
+                </span>
+              
+            
+            Options
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <div class="md-search__overlay"></div>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
+      <label class="md-icon md-search__icon" for="search"></label>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+              
+
+
+  
+
+
+  <a href="https://github.com/babakhani/PersianWebToolkit" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+            
+          </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <i class=" md-logo  md-nav__button">
+      
+        <img src="../../img/logo.svg">
+      
+    </i>
+    Persian Web Toolkit
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/babakhani/PersianWebToolkit" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      Persian Date
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-1">
+        Persian Date
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../persian-date/" title="Document" class="md-nav__link">
+        Document
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../persian-date/changelog/" title="Change log" class="md-nav__link">
+        Change log
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Persian Datepicker
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-2">
+        Persian Datepicker
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../" title="Getting Start" class="md-nav__link">
+        Getting Start
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../example/" title="Example" class="md-nav__link">
+        Example
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Options
+      </label>
+    
+    <a href="./" title="Options" class="md-nav__link md-nav__link--active">
+      Options
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#config" title="Config" class="md-nav__link">
+    Config
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configinline-boolean" title="Config.inline : boolean" class="md-nav__link">
+    Config.inline : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configinitialvalue-boolean" title="Config.initialValue : boolean" class="md-nav__link">
+    Config.initialValue : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configpersiandigit-boolean" title="Config.persianDigit : boolean" class="md-nav__link">
+    Config.persianDigit : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configviewmode-string" title="Config.viewMode : string" class="md-nav__link">
+    Config.viewMode : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configformat-boolean" title="Config.format : boolean" class="md-nav__link">
+    Config.format : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configaltfield-boolean" title="Config.altField : boolean" class="md-nav__link">
+    Config.altField : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configaltformat-string" title="Config.altFormat : string" class="md-nav__link">
+    Config.altFormat : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configmindate-date" title="Config.minDate : Date" class="md-nav__link">
+    Config.minDate : Date
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configmaxdate-date" title="Config.maxDate : Date" class="md-nav__link">
+    Config.maxDate : Date
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confignavigator-object" title="Config.navigator : object" class="md-nav__link">
+    Config.navigator : object
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#navigatorenabled-boolean" title="navigator.enabled : boolean" class="md-nav__link">
+    navigator.enabled : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navigatorscroll-object" title="navigator.scroll : object" class="md-nav__link">
+    navigator.scroll : object
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scrollenabled-boolean" title="scroll.enabled : boolean" class="md-nav__link">
+    scroll.enabled : boolean
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navigatortext" title="navigator.text" class="md-nav__link">
+    navigator.text
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#textbtnnexttext" title="text.btnNextText" class="md-nav__link">
+    text.btnNextText
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textbtnprevtext" title="text.btnPrevText" class="md-nav__link">
+    text.btnPrevText
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onnext-navigator" title=""onNext" (navigator)" class="md-nav__link">
+    "onNext" (navigator)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onprev-navigator" title=""onPrev" (navigator)" class="md-nav__link">
+    "onPrev" (navigator)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onswitch-navigator" title=""onSwitch" (navigator)" class="md-nav__link">
+    "onSwitch" (navigator)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configtoolbox-object" title="Config.toolbox : object" class="md-nav__link">
+    Config.toolbox : object
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#toolboxenabled-boolean" title="toolbox.enabled : boolean" class="md-nav__link">
+    toolbox.enabled : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toolboxtext-object" title="toolbox.text : object" class="md-nav__link">
+    toolbox.text : object
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#textbtntoday-string" title="text.btnToday : string" class="md-nav__link">
+    text.btnToday : string
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ontoday-toolbox" title=""onToday" (toolbox)" class="md-nav__link">
+    "onToday" (toolbox)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configonlytimepicker-boolean" title="Config.onlyTimePicker : boolean" class="md-nav__link">
+    Config.onlyTimePicker : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configonlyselectondate-boolean" title="Config.onlySelectOnDate : boolean" class="md-nav__link">
+    Config.onlySelectOnDate : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configtimepicker-object" title="Config.timePicker : object" class="md-nav__link">
+    Config.timePicker : object
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#timepickerenabled-boolean" title="timePicker.enabled : boolean" class="md-nav__link">
+    timePicker.enabled : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timepickerstep-number" title="timePicker.step : number" class="md-nav__link">
+    timePicker.step : number
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timepickerhour-object" title="timePicker.hour : object" class="md-nav__link">
+    timePicker.hour : object
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hourenabled-boolean" title="hour.enabled : boolean" class="md-nav__link">
+    hour.enabled : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hourstep-boolean" title="hour.step : boolean" class="md-nav__link">
+    hour.step : boolean
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timepickerminute-object" title="timePicker.minute : object" class="md-nav__link">
+    timePicker.minute : object
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#minuteenabled-boolean" title="minute.enabled : boolean" class="md-nav__link">
+    minute.enabled : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minutestep-boolean" title="minute.step : boolean" class="md-nav__link">
+    minute.step : boolean
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timepickersecond-object" title="timePicker.second : object" class="md-nav__link">
+    timePicker.second : object
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#secondenabled-boolean" title="second.enabled : boolean" class="md-nav__link">
+    second.enabled : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secondstep-boolean" title="second.step : boolean" class="md-nav__link">
+    second.step : boolean
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timepickermeridiem-object" title="timePicker.meridiem : object" class="md-nav__link">
+    timePicker.meridiem : object
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#meridiemenabled-boolean" title="meridiem.enabled : boolean" class="md-nav__link">
+    meridiem.enabled : boolean
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configdaypicker-object" title="Config.dayPicker : object" class="md-nav__link">
+    Config.dayPicker : object
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#daypickerenabled-boolean" title="dayPicker.enabled : boolean" class="md-nav__link">
+    dayPicker.enabled : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daypickertitleformat-string" title="dayPicker.titleFormat : string" class="md-nav__link">
+    dayPicker.titleFormat : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daypickertitleformatteryear-month-42" title="dayPicker.titleFormatter(year, month) ⇒ *" class="md-nav__link">
+    dayPicker.titleFormatter(year, month) ⇒ *
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onselect-selecteddayunix" title=""onSelect" (selectedDayUnix)" class="md-nav__link">
+    "onSelect" (selectedDayUnix)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configmonthpicker-object" title="Config.monthPicker : object" class="md-nav__link">
+    Config.monthPicker : object
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#monthpickerenabled-boolean" title="monthPicker.enabled : boolean" class="md-nav__link">
+    monthPicker.enabled : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monthpickertitleformat-string" title="monthPicker.titleFormat : string" class="md-nav__link">
+    monthPicker.titleFormat : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monthpickertitleformatterunix-42" title="monthPicker.titleFormatter(unix) ⇒ *" class="md-nav__link">
+    monthPicker.titleFormatter(unix) ⇒ *
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onselect-monthindex" title=""onSelect" (monthIndex)" class="md-nav__link">
+    "onSelect" (monthIndex)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configyearpicker-object" title="Config.yearPicker : object" class="md-nav__link">
+    Config.yearPicker : object
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#yearpickerenabled-boolean" title="yearPicker.enabled : boolean" class="md-nav__link">
+    yearPicker.enabled : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yearpickertitleformat-string" title="yearPicker.titleFormat : string" class="md-nav__link">
+    yearPicker.titleFormat : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yearpickertitleformatteryear-string" title="yearPicker.titleFormatter(year) ⇒ string" class="md-nav__link">
+    yearPicker.titleFormatter(year) ⇒ string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onselect-year" title=""onSelect" (year)" class="md-nav__link">
+    "onSelect" (year)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configposition-mix" title="Config.position : mix" class="md-nav__link">
+    Config.position : mix
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configautoclose-boolean" title="Config.autoClose : boolean" class="md-nav__link">
+    Config.autoClose : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configtemplate-string" title="Config.template : string" class="md-nav__link">
+    Config.template : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configobserver-boolean" title="Config.observer : boolean" class="md-nav__link">
+    Config.observer : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configinputdelay-number" title="Config.inputDelay : number" class="md-nav__link">
+    Config.inputDelay : number
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configformatterunixdate" title="Config.formatter(unixDate)" class="md-nav__link">
+    Config.formatter(unixDate)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configaltfieldformatterunixdate" title="Config.altFieldFormatter(unixDate)" class="md-nav__link">
+    Config.altFieldFormatter(unixDate)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configcheckdate-function" title="Config.checkDate() : function" class="md-nav__link">
+    Config.checkDate() : function
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configcheckmonth-function" title="Config.checkMonth() : function" class="md-nav__link">
+    Config.checkMonth() : function
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configcheckyear-function" title="Config.checkYear() : function" class="md-nav__link">
+    Config.checkYear() : function
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configontoggle" title="Config.onToggle()" class="md-nav__link">
+    Config.onToggle()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configondestroy" title="Config.onDestroy()" class="md-nav__link">
+    Config.onDestroy()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onselect-unixdate" title=""onSelect" (unixDate)" class="md-nav__link">
+    "onSelect" (unixDate)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onshow" title=""onShow"" class="md-nav__link">
+    "onShow"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onhide-self" title=""onHide" (self)" class="md-nav__link">
+    "onHide" (self)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../api/" title="API" class="md-nav__link">
+        API
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../changelog/" title="Change log" class="md-nav__link">
+        Change log
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#config" title="Config" class="md-nav__link">
+    Config
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configinline-boolean" title="Config.inline : boolean" class="md-nav__link">
+    Config.inline : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configinitialvalue-boolean" title="Config.initialValue : boolean" class="md-nav__link">
+    Config.initialValue : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configpersiandigit-boolean" title="Config.persianDigit : boolean" class="md-nav__link">
+    Config.persianDigit : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configviewmode-string" title="Config.viewMode : string" class="md-nav__link">
+    Config.viewMode : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configformat-boolean" title="Config.format : boolean" class="md-nav__link">
+    Config.format : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configaltfield-boolean" title="Config.altField : boolean" class="md-nav__link">
+    Config.altField : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configaltformat-string" title="Config.altFormat : string" class="md-nav__link">
+    Config.altFormat : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configmindate-date" title="Config.minDate : Date" class="md-nav__link">
+    Config.minDate : Date
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configmaxdate-date" title="Config.maxDate : Date" class="md-nav__link">
+    Config.maxDate : Date
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confignavigator-object" title="Config.navigator : object" class="md-nav__link">
+    Config.navigator : object
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#navigatorenabled-boolean" title="navigator.enabled : boolean" class="md-nav__link">
+    navigator.enabled : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navigatorscroll-object" title="navigator.scroll : object" class="md-nav__link">
+    navigator.scroll : object
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scrollenabled-boolean" title="scroll.enabled : boolean" class="md-nav__link">
+    scroll.enabled : boolean
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navigatortext" title="navigator.text" class="md-nav__link">
+    navigator.text
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#textbtnnexttext" title="text.btnNextText" class="md-nav__link">
+    text.btnNextText
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textbtnprevtext" title="text.btnPrevText" class="md-nav__link">
+    text.btnPrevText
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onnext-navigator" title=""onNext" (navigator)" class="md-nav__link">
+    "onNext" (navigator)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onprev-navigator" title=""onPrev" (navigator)" class="md-nav__link">
+    "onPrev" (navigator)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onswitch-navigator" title=""onSwitch" (navigator)" class="md-nav__link">
+    "onSwitch" (navigator)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configtoolbox-object" title="Config.toolbox : object" class="md-nav__link">
+    Config.toolbox : object
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#toolboxenabled-boolean" title="toolbox.enabled : boolean" class="md-nav__link">
+    toolbox.enabled : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toolboxtext-object" title="toolbox.text : object" class="md-nav__link">
+    toolbox.text : object
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#textbtntoday-string" title="text.btnToday : string" class="md-nav__link">
+    text.btnToday : string
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ontoday-toolbox" title=""onToday" (toolbox)" class="md-nav__link">
+    "onToday" (toolbox)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configonlytimepicker-boolean" title="Config.onlyTimePicker : boolean" class="md-nav__link">
+    Config.onlyTimePicker : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configonlyselectondate-boolean" title="Config.onlySelectOnDate : boolean" class="md-nav__link">
+    Config.onlySelectOnDate : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configtimepicker-object" title="Config.timePicker : object" class="md-nav__link">
+    Config.timePicker : object
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#timepickerenabled-boolean" title="timePicker.enabled : boolean" class="md-nav__link">
+    timePicker.enabled : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timepickerstep-number" title="timePicker.step : number" class="md-nav__link">
+    timePicker.step : number
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timepickerhour-object" title="timePicker.hour : object" class="md-nav__link">
+    timePicker.hour : object
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hourenabled-boolean" title="hour.enabled : boolean" class="md-nav__link">
+    hour.enabled : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hourstep-boolean" title="hour.step : boolean" class="md-nav__link">
+    hour.step : boolean
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timepickerminute-object" title="timePicker.minute : object" class="md-nav__link">
+    timePicker.minute : object
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#minuteenabled-boolean" title="minute.enabled : boolean" class="md-nav__link">
+    minute.enabled : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minutestep-boolean" title="minute.step : boolean" class="md-nav__link">
+    minute.step : boolean
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timepickersecond-object" title="timePicker.second : object" class="md-nav__link">
+    timePicker.second : object
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#secondenabled-boolean" title="second.enabled : boolean" class="md-nav__link">
+    second.enabled : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secondstep-boolean" title="second.step : boolean" class="md-nav__link">
+    second.step : boolean
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timepickermeridiem-object" title="timePicker.meridiem : object" class="md-nav__link">
+    timePicker.meridiem : object
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#meridiemenabled-boolean" title="meridiem.enabled : boolean" class="md-nav__link">
+    meridiem.enabled : boolean
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configdaypicker-object" title="Config.dayPicker : object" class="md-nav__link">
+    Config.dayPicker : object
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#daypickerenabled-boolean" title="dayPicker.enabled : boolean" class="md-nav__link">
+    dayPicker.enabled : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daypickertitleformat-string" title="dayPicker.titleFormat : string" class="md-nav__link">
+    dayPicker.titleFormat : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daypickertitleformatteryear-month-42" title="dayPicker.titleFormatter(year, month) ⇒ *" class="md-nav__link">
+    dayPicker.titleFormatter(year, month) ⇒ *
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onselect-selecteddayunix" title=""onSelect" (selectedDayUnix)" class="md-nav__link">
+    "onSelect" (selectedDayUnix)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configmonthpicker-object" title="Config.monthPicker : object" class="md-nav__link">
+    Config.monthPicker : object
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#monthpickerenabled-boolean" title="monthPicker.enabled : boolean" class="md-nav__link">
+    monthPicker.enabled : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monthpickertitleformat-string" title="monthPicker.titleFormat : string" class="md-nav__link">
+    monthPicker.titleFormat : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monthpickertitleformatterunix-42" title="monthPicker.titleFormatter(unix) ⇒ *" class="md-nav__link">
+    monthPicker.titleFormatter(unix) ⇒ *
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onselect-monthindex" title=""onSelect" (monthIndex)" class="md-nav__link">
+    "onSelect" (monthIndex)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configyearpicker-object" title="Config.yearPicker : object" class="md-nav__link">
+    Config.yearPicker : object
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#yearpickerenabled-boolean" title="yearPicker.enabled : boolean" class="md-nav__link">
+    yearPicker.enabled : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yearpickertitleformat-string" title="yearPicker.titleFormat : string" class="md-nav__link">
+    yearPicker.titleFormat : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yearpickertitleformatteryear-string" title="yearPicker.titleFormatter(year) ⇒ string" class="md-nav__link">
+    yearPicker.titleFormatter(year) ⇒ string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onselect-year" title=""onSelect" (year)" class="md-nav__link">
+    "onSelect" (year)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configposition-mix" title="Config.position : mix" class="md-nav__link">
+    Config.position : mix
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configautoclose-boolean" title="Config.autoClose : boolean" class="md-nav__link">
+    Config.autoClose : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configtemplate-string" title="Config.template : string" class="md-nav__link">
+    Config.template : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configobserver-boolean" title="Config.observer : boolean" class="md-nav__link">
+    Config.observer : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configinputdelay-number" title="Config.inputDelay : number" class="md-nav__link">
+    Config.inputDelay : number
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configformatterunixdate" title="Config.formatter(unixDate)" class="md-nav__link">
+    Config.formatter(unixDate)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configaltfieldformatterunixdate" title="Config.altFieldFormatter(unixDate)" class="md-nav__link">
+    Config.altFieldFormatter(unixDate)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configcheckdate-function" title="Config.checkDate() : function" class="md-nav__link">
+    Config.checkDate() : function
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configcheckmonth-function" title="Config.checkMonth() : function" class="md-nav__link">
+    Config.checkMonth() : function
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configcheckyear-function" title="Config.checkYear() : function" class="md-nav__link">
+    Config.checkYear() : function
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configontoggle" title="Config.onToggle()" class="md-nav__link">
+    Config.onToggle()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configondestroy" title="Config.onDestroy()" class="md-nav__link">
+    Config.onDestroy()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onselect-unixdate" title=""onSelect" (unixDate)" class="md-nav__link">
+    "onSelect" (unixDate)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onshow" title=""onShow"" class="md-nav__link">
+    "onShow"
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onhide-self" title=""onHide" (self)" class="md-nav__link">
+    "onHide" (self)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+               
+                 <a href="https://github.com/babakhani/PersianWebToolkit/edit/master/docs/datepicker/options.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
+               
+              
+                
+                  <h1>Options</h1>
+                
+                <p><a name="Config"></a></p>
+<h2 id="config">Config<a class="headerlink" href="#config" title="Permanent link">&para;</a></h2>
+<p>This is default config class</p>
+<p><strong>Kind</strong>: global constant  </p>
+<ul>
+<li><a href="#Config">Config</a><ul>
+<li><a href="#Config.inline">.inline</a> : <code>boolean</code></li>
+<li><a href="#Config.initialValue">.initialValue</a> : <code>boolean</code></li>
+<li><a href="#Config.persianDigit">.persianDigit</a> : <code>boolean</code></li>
+<li><a href="#Config.viewMode">.viewMode</a> : <code>string</code></li>
+<li><a href="#Config.format">.format</a> : <code>boolean</code></li>
+<li><a href="#Config.altField">.altField</a> : <code>boolean</code></li>
+<li><a href="#Config.altFormat">.altFormat</a> : <code>string</code></li>
+<li><a href="#Config.minDate">.minDate</a> : <code>Date</code></li>
+<li><a href="#Config.maxDate">.maxDate</a> : <code>Date</code></li>
+<li><a href="#Config.navigator">.navigator</a> : <code>object</code><ul>
+<li><a href="#Config.navigator.enabled">.enabled</a> : <code>boolean</code></li>
+<li><a href="#Config.navigator.scroll">.scroll</a> : <code>object</code><ul>
+<li><a href="#Config.navigator.scroll.enabled">.enabled</a> : <code>boolean</code></li>
+</ul>
+</li>
+<li><a href="#Config.navigator.text">.text</a><ul>
+<li><a href="#Config.navigator.text.btnNextText">.btnNextText</a></li>
+<li><a href="#Config.navigator.text.btnPrevText">.btnPrevText</a></li>
+</ul>
+</li>
+<li><a href="#Config.navigator.event_onNext">"onNext" (navigator)</a></li>
+<li><a href="#Config.navigator.event_onPrev">"onPrev" (navigator)</a></li>
+<li><a href="#Config.navigator.event_onSwitch">"onSwitch" (navigator)</a></li>
+</ul>
+</li>
+<li><a href="#Config.toolbox">.toolbox</a> : <code>object</code><ul>
+<li><a href="#Config.toolbox.enabled">.enabled</a> : <code>boolean</code></li>
+<li><a href="#Config.toolbox.text">.text</a> : <code>object</code><ul>
+<li><a href="#Config.toolbox.text.btnToday">.btnToday</a> : <code>string</code></li>
+</ul>
+</li>
+<li><a href="#Config.toolbox.event_onToday">"onToday" (toolbox)</a></li>
+</ul>
+</li>
+<li><a href="#Config.onlyTimePicker">.onlyTimePicker</a> : <code>boolean</code></li>
+<li><a href="#Config.onlySelectOnDate">.onlySelectOnDate</a> : <code>boolean</code></li>
+<li><a href="#Config.timePicker">.timePicker</a> : <code>object</code><ul>
+<li><a href="#Config.timePicker.enabled">.enabled</a> : <code>boolean</code></li>
+<li><a href="#Config.timePicker.step">.step</a> : <code>number</code></li>
+<li><a href="#Config.timePicker.hour">.hour</a> : <code>object</code><ul>
+<li><a href="#Config.timePicker.hour.enabled">.enabled</a> : <code>boolean</code></li>
+<li><a href="#Config.timePicker.hour.step">.step</a> : <code>boolean</code></li>
+</ul>
+</li>
+<li><a href="#Config.timePicker.minute">.minute</a> : <code>object</code><ul>
+<li><a href="#Config.timePicker.minute.enabled">.enabled</a> : <code>boolean</code></li>
+<li><a href="#Config.timePicker.minute.step">.step</a> : <code>boolean</code></li>
+</ul>
+</li>
+<li><a href="#Config.timePicker.second">.second</a> : <code>object</code><ul>
+<li><a href="#Config.timePicker.second.enabled">.enabled</a> : <code>boolean</code></li>
+<li><a href="#Config.timePicker.second.step">.step</a> : <code>boolean</code></li>
+</ul>
+</li>
+<li><a href="#Config.timePicker.meridiem">.meridiem</a> : <code>object</code><ul>
+<li><a href="#Config.timePicker.meridiem.enabled">.enabled</a> : <code>boolean</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#Config.dayPicker">.dayPicker</a> : <code>object</code><ul>
+<li><a href="#Config.dayPicker.enabled">.enabled</a> : <code>boolean</code></li>
+<li><a href="#Config.dayPicker.titleFormat">.titleFormat</a> : <code>string</code></li>
+<li><a href="#Config.dayPicker.titleFormatter">.titleFormatter(year, month)</a> ⇒ <code>*</code></li>
+<li><a href="#Config.dayPicker.event_onSelect">"onSelect" (selectedDayUnix)</a></li>
+</ul>
+</li>
+<li><a href="#Config.monthPicker">.monthPicker</a> : <code>object</code><ul>
+<li><a href="#Config.monthPicker.enabled">.enabled</a> : <code>boolean</code></li>
+<li><a href="#Config.monthPicker.titleFormat">.titleFormat</a> : <code>string</code></li>
+<li><a href="#Config.monthPicker.titleFormatter">.titleFormatter(unix)</a> ⇒ <code>*</code></li>
+<li><a href="#Config.monthPicker.event_onSelect">"onSelect" (monthIndex)</a></li>
+</ul>
+</li>
+<li><a href="#Config.yearPicker">.yearPicker</a> : <code>object</code><ul>
+<li><a href="#Config.yearPicker.enabled">.enabled</a> : <code>boolean</code></li>
+<li><a href="#Config.yearPicker.titleFormat">.titleFormat</a> : <code>string</code></li>
+<li><a href="#Config.yearPicker.titleFormatter">.titleFormatter(year)</a> ⇒ <code>string</code></li>
+<li><a href="#Config.yearPicker.event_onSelect">"onSelect" (year)</a></li>
+</ul>
+</li>
+<li><a href="#Config.position">.position</a> : <code>mix</code></li>
+<li><a href="#Config.autoClose">.autoClose</a> : <code>boolean</code></li>
+<li><a href="#Config.template">.template</a> : <code>string</code></li>
+<li><del><a href="#Config.observer">.observer</a> : <code>boolean</code></del></li>
+<li><a href="#Config.inputDelay">.inputDelay</a> : <code>number</code></li>
+<li><a href="#Config.formatter">.formatter(unixDate)</a></li>
+<li><a href="#Config.altFieldFormatter">.altFieldFormatter(unixDate)</a></li>
+<li><a href="#Config.checkDate">.checkDate()</a> : <code>function</code></li>
+<li><a href="#Config.checkMonth">.checkMonth()</a> : <code>function</code></li>
+<li><a href="#Config.checkYear">.checkYear()</a> : <code>function</code></li>
+<li><a href="#Config.onToggle">.onToggle()</a></li>
+<li><a href="#Config.onDestroy">.onDestroy()</a></li>
+<li><a href="#Config.event_onSelect">"onSelect" (unixDate)</a></li>
+<li><a href="#Config.event_onShow">"onShow"</a></li>
+<li><a href="#Config.event_onHide">"onHide" (self)</a></li>
+</ul>
+</li>
+</ul>
+<p><a name="Config.inline"></a></p>
+<h3 id="configinline-boolean">Config.inline : <code>boolean</code><a class="headerlink" href="#configinline-boolean" title="Permanent link">&para;</a></h3>
+<p>if true datepicker render inline</p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config">Config</a></code><br />
+<strong>Default</strong>: <code>false</code><br />
+<a name="Config.initialValue"></a></p>
+<h3 id="configinitialvalue-boolean">Config.initialValue : <code>boolean</code><a class="headerlink" href="#configinitialvalue-boolean" title="Permanent link">&para;</a></h3>
+<p><strong>Kind</strong>: static property of <code><a href="#Config">Config</a></code><br />
+<strong>Default</strong>: <code>true</code><br />
+<a name="Config.persianDigit"></a></p>
+<h3 id="configpersiandigit-boolean">Config.persianDigit : <code>boolean</code><a class="headerlink" href="#configpersiandigit-boolean" title="Permanent link">&para;</a></h3>
+<p><strong>Kind</strong>: static property of <code><a href="#Config">Config</a></code><br />
+<strong>Default</strong>: <code>true</code><br />
+<a name="Config.viewMode"></a></p>
+<h3 id="configviewmode-string">Config.viewMode : <code>string</code><a class="headerlink" href="#configviewmode-string" title="Permanent link">&para;</a></h3>
+<p>Acceptable value : day,month,year</p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config">Config</a></code><br />
+<strong>Default</strong>: <code>&quot;&#x27;day&#x27;&quot;</code><br />
+<a name="Config.format"></a></p>
+<h3 id="configformat-boolean">Config.format : <code>boolean</code><a class="headerlink" href="#configformat-boolean" title="Permanent link">&para;</a></h3>
+<p>the date format, combination of d, dd, m, mm, yy, yyy.
+<a href="http://babakhani.github.io/PersianWebToolkit/doc/persiandate/0.1.8/#/displaying/format/">http://babakhani.github.io/PersianWebToolkit/doc/persiandate/0.1.8/#/displaying/format/</a></p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config">Config</a></code><br />
+<strong>Default</strong>: <code>&#x27;LLLL&#x27;</code><br />
+<a name="Config.altField"></a></p>
+<h3 id="configaltfield-boolean">Config.altField : <code>boolean</code><a class="headerlink" href="#configaltfield-boolean" title="Permanent link">&para;</a></h3>
+<p>An input element that is to be updated with the selected date from the datepicker. Use the altFormat option to change the format of the date within this field. Leave as blank for no alternate field. acceptable value: : '#elementId','.element-class'</p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config">Config</a></code><br />
+<strong>Default</strong>: <code>false</code><br />
+<a name="Config.altFormat"></a></p>
+<h3 id="configaltformat-string">Config.altFormat : <code>string</code><a class="headerlink" href="#configaltformat-string" title="Permanent link">&para;</a></h3>
+<p>the date format, combination of d, dd, m, mm, yy, yyy.
+<a href="http://babakhani.github.io/PersianWebToolkit/doc/persiandate/0.1.8/#/displaying/format/">http://babakhani.github.io/PersianWebToolkit/doc/persiandate/0.1.8/#/displaying/format/</a></p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config">Config</a></code><br />
+<strong>Default</strong>: <code>&quot;&#x27;unix&#x27;&quot;</code><br />
+<a name="Config.minDate"></a></p>
+<h3 id="configmindate-date">Config.minDate : <code>Date</code><a class="headerlink" href="#configmindate-date" title="Permanent link">&para;</a></h3>
+<p>set min date on datepicker</p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config">Config</a></code><br />
+<strong>Default</strong>: <code>null</code><br />
+<strong>Properties</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>minDate</td>
+    </tr>  </tbody>
+</table>
+
+<p><a name="Config.maxDate"></a></p>
+<h3 id="configmaxdate-date">Config.maxDate : <code>Date</code><a class="headerlink" href="#configmaxdate-date" title="Permanent link">&para;</a></h3>
+<p>set max date on datepicker</p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config">Config</a></code><br />
+<strong>Default</strong>: <code>null</code><br />
+<strong>Properties</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>maxDate</td>
+    </tr>  </tbody>
+</table>
+
+<p><a name="Config.navigator"></a></p>
+<h3 id="confignavigator-object">Config.navigator : <code>object</code><a class="headerlink" href="#confignavigator-object" title="Permanent link">&para;</a></h3>
+<p>navigator config object</p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config">Config</a></code><br />
+<strong>Default</strong>: <code>true</code>  </p>
+<ul>
+<li><a href="#Config.navigator">.navigator</a> : <code>object</code><ul>
+<li><a href="#Config.navigator.enabled">.enabled</a> : <code>boolean</code></li>
+<li><a href="#Config.navigator.scroll">.scroll</a> : <code>object</code><ul>
+<li><a href="#Config.navigator.scroll.enabled">.enabled</a> : <code>boolean</code></li>
+</ul>
+</li>
+<li><a href="#Config.navigator.text">.text</a><ul>
+<li><a href="#Config.navigator.text.btnNextText">.btnNextText</a></li>
+<li><a href="#Config.navigator.text.btnPrevText">.btnPrevText</a></li>
+</ul>
+</li>
+<li><a href="#Config.navigator.event_onNext">"onNext" (navigator)</a></li>
+<li><a href="#Config.navigator.event_onPrev">"onPrev" (navigator)</a></li>
+<li><a href="#Config.navigator.event_onSwitch">"onSwitch" (navigator)</a></li>
+</ul>
+</li>
+</ul>
+<p><a name="Config.navigator.enabled"></a></p>
+<h4 id="navigatorenabled-boolean">navigator.enabled : <code>boolean</code><a class="headerlink" href="#navigatorenabled-boolean" title="Permanent link">&para;</a></h4>
+<p>Enable or Disable dayPicker</p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config.navigator">navigator</a></code><br />
+<strong>Default</strong>: <code>true</code><br />
+<a name="Config.navigator.scroll"></a></p>
+<h4 id="navigatorscroll-object">navigator.scroll : <code>object</code><a class="headerlink" href="#navigatorscroll-object" title="Permanent link">&para;</a></h4>
+<p>scroll navigation options</p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config.navigator">navigator</a></code><br />
+<a name="Config.navigator.scroll.enabled"></a></p>
+<h5 id="scrollenabled-boolean">scroll.enabled : <code>boolean</code><a class="headerlink" href="#scrollenabled-boolean" title="Permanent link">&para;</a></h5>
+<p><strong>Kind</strong>: static property of <code><a href="#Config.navigator.scroll">scroll</a></code><br />
+<strong>Default</strong>: <code>true</code><br />
+<a name="Config.navigator.text"></a></p>
+<h4 id="navigatortext">navigator.text<a class="headerlink" href="#navigatortext" title="Permanent link">&para;</a></h4>
+<p>navigator text config object</p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config.navigator">navigator</a></code>  </p>
+<ul>
+<li><a href="#Config.navigator.text">.text</a><ul>
+<li><a href="#Config.navigator.text.btnNextText">.btnNextText</a></li>
+<li><a href="#Config.navigator.text.btnPrevText">.btnPrevText</a></li>
+</ul>
+</li>
+</ul>
+<p><a name="Config.navigator.text.btnNextText"></a></p>
+<h5 id="textbtnnexttext">text.btnNextText<a class="headerlink" href="#textbtnnexttext" title="Permanent link">&para;</a></h5>
+<p>text of next btn</p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config.navigator.text">text</a></code><br />
+<strong>Default</strong>: <code>&#x27;&lt;&#x27;</code><br />
+<a name="Config.navigator.text.btnPrevText"></a></p>
+<h5 id="textbtnprevtext">text.btnPrevText<a class="headerlink" href="#textbtnprevtext" title="Permanent link">&para;</a></h5>
+<p>text of prev btn</p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config.navigator.text">text</a></code><br />
+<strong>Default:</strong>: '&gt;'<br />
+<a name="Config.navigator.event_onNext"></a></p>
+<h4 id="onnext-navigator">"onNext" (navigator)<a class="headerlink" href="#onnext-navigator" title="Permanent link">&para;</a></h4>
+<p>Trigger When Next button clicked</p>
+<p><strong>Kind</strong>: event emitted by <code><a href="#Config.navigator">navigator</a></code><br />
+<table>
+  <thead>
+    <tr>
+      <th>Param</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>navigator</td>
+    </tr>  </tbody>
+</table></p>
+<p><strong>Example</strong>  </p>
+<div class="codehilite"><pre><span></span><span class="kd">function</span> <span class="p">(</span><span class="nx">navigator</span><span class="p">)</span> <span class="p">{</span>
+     <span class="c1">//log(&#39;navigator next &#39;);</span>
+ <span class="p">}</span>
+</pre></div>
+
+
+<p><a name="Config.navigator.event_onPrev"></a></p>
+<h4 id="onprev-navigator">"onPrev" (navigator)<a class="headerlink" href="#onprev-navigator" title="Permanent link">&para;</a></h4>
+<p>Trigger When Prev button clicked</p>
+<p><strong>Kind</strong>: event emitted by <code><a href="#Config.navigator">navigator</a></code><br />
+<table>
+  <thead>
+    <tr>
+      <th>Param</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>navigator</td>
+    </tr>  </tbody>
+</table></p>
+<p><strong>Example</strong>  </p>
+<div class="codehilite"><pre><span></span><span class="kd">function</span> <span class="p">(</span><span class="nx">navigator</span><span class="p">)</span> <span class="p">{</span>
+     <span class="c1">//log(&#39;navigator prev &#39;);</span>
+ <span class="p">}</span>
+</pre></div>
+
+
+<p><a name="Config.navigator.event_onSwitch"></a></p>
+<h4 id="onswitch-navigator">"onSwitch" (navigator)<a class="headerlink" href="#onswitch-navigator" title="Permanent link">&para;</a></h4>
+<p>Trigger When Switch view button clicked</p>
+<p><strong>Kind</strong>: event emitted by <code><a href="#Config.navigator">navigator</a></code><br />
+<table>
+  <thead>
+    <tr>
+      <th>Param</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>navigator</td>
+    </tr>  </tbody>
+</table></p>
+<p><strong>Example</strong>  </p>
+<div class="codehilite"><pre><span></span><span class="kd">function</span> <span class="p">(</span><span class="nx">state</span><span class="p">)</span> <span class="p">{</span>
+                <span class="c1">// console.log(&#39;navigator switch &#39;);</span>
+ <span class="p">}</span>
+</pre></div>
+
+
+<p><a name="Config.toolbox"></a></p>
+<h3 id="configtoolbox-object">Config.toolbox : <code>object</code><a class="headerlink" href="#configtoolbox-object" title="Permanent link">&para;</a></h3>
+<p>toolbox config object</p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config">Config</a></code><br />
+<strong>Default</strong>: <code>true</code>  </p>
+<ul>
+<li><a href="#Config.toolbox">.toolbox</a> : <code>object</code><ul>
+<li><a href="#Config.toolbox.enabled">.enabled</a> : <code>boolean</code></li>
+<li><a href="#Config.toolbox.text">.text</a> : <code>object</code><ul>
+<li><a href="#Config.toolbox.text.btnToday">.btnToday</a> : <code>string</code></li>
+</ul>
+</li>
+<li><a href="#Config.toolbox.event_onToday">"onToday" (toolbox)</a></li>
+</ul>
+</li>
+</ul>
+<p><a name="Config.toolbox.enabled"></a></p>
+<h4 id="toolboxenabled-boolean">toolbox.enabled : <code>boolean</code><a class="headerlink" href="#toolboxenabled-boolean" title="Permanent link">&para;</a></h4>
+<p><strong>Kind</strong>: static property of <code><a href="#Config.toolbox">toolbox</a></code><br />
+<strong>Default</strong>: <code>true</code><br />
+<a name="Config.toolbox.text"></a></p>
+<h4 id="toolboxtext-object">toolbox.text : <code>object</code><a class="headerlink" href="#toolboxtext-object" title="Permanent link">&para;</a></h4>
+<p><strong>Kind</strong>: static property of <code><a href="#Config.toolbox">toolbox</a></code><br />
+<a name="Config.toolbox.text.btnToday"></a></p>
+<h5 id="textbtntoday-string">text.btnToday : <code>string</code><a class="headerlink" href="#textbtntoday-string" title="Permanent link">&para;</a></h5>
+<p><strong>Kind</strong>: static property of <code><a href="#Config.toolbox.text">text</a></code><br />
+<strong>Default</strong>: <code>&quot;&#x27;امروز&#x27;&quot;</code><br />
+<a name="Config.toolbox.event_onToday"></a></p>
+<h4 id="ontoday-toolbox">"onToday" (toolbox)<a class="headerlink" href="#ontoday-toolbox" title="Permanent link">&para;</a></h4>
+<p><strong>Kind</strong>: event emitted by <code><a href="#Config.toolbox">toolbox</a></code><br />
+<table>
+  <thead>
+    <tr>
+      <th>Param</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>toolbox</td>
+    </tr>  </tbody>
+</table></p>
+<p><strong>Example</strong>  </p>
+<div class="codehilite"><pre><span></span><span class="kd">function</span> <span class="p">(</span><span class="nx">toolbox</span><span class="p">)</span> <span class="p">{</span>
+     <span class="c1">//log(&#39;toolbox today btn&#39;);</span>
+ <span class="p">}</span>
+</pre></div>
+
+
+<p><a name="Config.onlyTimePicker"></a></p>
+<h3 id="configonlytimepicker-boolean">Config.onlyTimePicker : <code>boolean</code><a class="headerlink" href="#configonlytimepicker-boolean" title="Permanent link">&para;</a></h3>
+<p>if true all pickers hide and just show timepicker</p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config">Config</a></code><br />
+<strong>Default</strong>: <code>false</code><br />
+<a name="Config.onlySelectOnDate"></a></p>
+<h3 id="configonlyselectondate-boolean">Config.onlySelectOnDate : <code>boolean</code><a class="headerlink" href="#configonlyselectondate-boolean" title="Permanent link">&para;</a></h3>
+<p>if true date select just by click on day in month grid</p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config">Config</a></code><br />
+<strong>Default:</strong>: true<br />
+<strong>Properties</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>justSelectOnDate</td>
+    </tr>  </tbody>
+</table>
+
+<p><a name="Config.timePicker"></a></p>
+<h3 id="configtimepicker-object">Config.timePicker : <code>object</code><a class="headerlink" href="#configtimepicker-object" title="Permanent link">&para;</a></h3>
+<p>timepicker config object</p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config">Config</a></code>  </p>
+<ul>
+<li><a href="#Config.timePicker">.timePicker</a> : <code>object</code><ul>
+<li><a href="#Config.timePicker.enabled">.enabled</a> : <code>boolean</code></li>
+<li><a href="#Config.timePicker.step">.step</a> : <code>number</code></li>
+<li><a href="#Config.timePicker.hour">.hour</a> : <code>object</code><ul>
+<li><a href="#Config.timePicker.hour.enabled">.enabled</a> : <code>boolean</code></li>
+<li><a href="#Config.timePicker.hour.step">.step</a> : <code>boolean</code></li>
+</ul>
+</li>
+<li><a href="#Config.timePicker.minute">.minute</a> : <code>object</code><ul>
+<li><a href="#Config.timePicker.minute.enabled">.enabled</a> : <code>boolean</code></li>
+<li><a href="#Config.timePicker.minute.step">.step</a> : <code>boolean</code></li>
+</ul>
+</li>
+<li><a href="#Config.timePicker.second">.second</a> : <code>object</code><ul>
+<li><a href="#Config.timePicker.second.enabled">.enabled</a> : <code>boolean</code></li>
+<li><a href="#Config.timePicker.second.step">.step</a> : <code>boolean</code></li>
+</ul>
+</li>
+<li><a href="#Config.timePicker.meridiem">.meridiem</a> : <code>object</code><ul>
+<li><a href="#Config.timePicker.meridiem.enabled">.enabled</a> : <code>boolean</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><a name="Config.timePicker.enabled"></a></p>
+<h4 id="timepickerenabled-boolean">timePicker.enabled : <code>boolean</code><a class="headerlink" href="#timepickerenabled-boolean" title="Permanent link">&para;</a></h4>
+<p><strong>Kind</strong>: static property of <code><a href="#Config.timePicker">timePicker</a></code><br />
+<a name="Config.timePicker.step"></a></p>
+<h4 id="timepickerstep-number">timePicker.step : <code>number</code><a class="headerlink" href="#timepickerstep-number" title="Permanent link">&para;</a></h4>
+<p><strong>Kind</strong>: static property of <code><a href="#Config.timePicker">timePicker</a></code><br />
+<a name="Config.timePicker.hour"></a></p>
+<h4 id="timepickerhour-object">timePicker.hour : <code>object</code><a class="headerlink" href="#timepickerhour-object" title="Permanent link">&para;</a></h4>
+<p><strong>Kind</strong>: static property of <code><a href="#Config.timePicker">timePicker</a></code>  </p>
+<ul>
+<li><a href="#Config.timePicker.hour">.hour</a> : <code>object</code><ul>
+<li><a href="#Config.timePicker.hour.enabled">.enabled</a> : <code>boolean</code></li>
+<li><a href="#Config.timePicker.hour.step">.step</a> : <code>boolean</code></li>
+</ul>
+</li>
+</ul>
+<p><a name="Config.timePicker.hour.enabled"></a></p>
+<h5 id="hourenabled-boolean">hour.enabled : <code>boolean</code><a class="headerlink" href="#hourenabled-boolean" title="Permanent link">&para;</a></h5>
+<p><strong>Kind</strong>: static property of <code><a href="#Config.timePicker.hour">hour</a></code><br />
+<a name="Config.timePicker.hour.step"></a></p>
+<h5 id="hourstep-boolean">hour.step : <code>boolean</code><a class="headerlink" href="#hourstep-boolean" title="Permanent link">&para;</a></h5>
+<p>overwrite by parent step</p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config.timePicker.hour">hour</a></code><br />
+<a name="Config.timePicker.minute"></a></p>
+<h4 id="timepickerminute-object">timePicker.minute : <code>object</code><a class="headerlink" href="#timepickerminute-object" title="Permanent link">&para;</a></h4>
+<p><strong>Kind</strong>: static property of <code><a href="#Config.timePicker">timePicker</a></code>  </p>
+<ul>
+<li><a href="#Config.timePicker.minute">.minute</a> : <code>object</code><ul>
+<li><a href="#Config.timePicker.minute.enabled">.enabled</a> : <code>boolean</code></li>
+<li><a href="#Config.timePicker.minute.step">.step</a> : <code>boolean</code></li>
+</ul>
+</li>
+</ul>
+<p><a name="Config.timePicker.minute.enabled"></a></p>
+<h5 id="minuteenabled-boolean">minute.enabled : <code>boolean</code><a class="headerlink" href="#minuteenabled-boolean" title="Permanent link">&para;</a></h5>
+<p><strong>Kind</strong>: static property of <code><a href="#Config.timePicker.minute">minute</a></code><br />
+<a name="Config.timePicker.minute.step"></a></p>
+<h5 id="minutestep-boolean">minute.step : <code>boolean</code><a class="headerlink" href="#minutestep-boolean" title="Permanent link">&para;</a></h5>
+<p>overwrite by parent step</p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config.timePicker.minute">minute</a></code><br />
+<a name="Config.timePicker.second"></a></p>
+<h4 id="timepickersecond-object">timePicker.second : <code>object</code><a class="headerlink" href="#timepickersecond-object" title="Permanent link">&para;</a></h4>
+<p><strong>Kind</strong>: static property of <code><a href="#Config.timePicker">timePicker</a></code>  </p>
+<ul>
+<li><a href="#Config.timePicker.second">.second</a> : <code>object</code><ul>
+<li><a href="#Config.timePicker.second.enabled">.enabled</a> : <code>boolean</code></li>
+<li><a href="#Config.timePicker.second.step">.step</a> : <code>boolean</code></li>
+</ul>
+</li>
+</ul>
+<p><a name="Config.timePicker.second.enabled"></a></p>
+<h5 id="secondenabled-boolean">second.enabled : <code>boolean</code><a class="headerlink" href="#secondenabled-boolean" title="Permanent link">&para;</a></h5>
+<p><strong>Kind</strong>: static property of <code><a href="#Config.timePicker.second">second</a></code><br />
+<a name="Config.timePicker.second.step"></a></p>
+<h5 id="secondstep-boolean">second.step : <code>boolean</code><a class="headerlink" href="#secondstep-boolean" title="Permanent link">&para;</a></h5>
+<p>overwrite by parent step</p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config.timePicker.second">second</a></code><br />
+<a name="Config.timePicker.meridiem"></a></p>
+<h4 id="timepickermeridiem-object">timePicker.meridiem : <code>object</code><a class="headerlink" href="#timepickermeridiem-object" title="Permanent link">&para;</a></h4>
+<p><strong>Kind</strong>: static property of <code><a href="#Config.timePicker">timePicker</a></code><br />
+<a name="Config.timePicker.meridiem.enabled"></a></p>
+<h5 id="meridiemenabled-boolean">meridiem.enabled : <code>boolean</code><a class="headerlink" href="#meridiemenabled-boolean" title="Permanent link">&para;</a></h5>
+<p>if you set this as false, datepicker clock system moved to 24-hour system</p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config.timePicker.meridiem">meridiem</a></code><br />
+<a name="Config.dayPicker"></a></p>
+<h3 id="configdaypicker-object">Config.dayPicker : <code>object</code><a class="headerlink" href="#configdaypicker-object" title="Permanent link">&para;</a></h3>
+<p>dayPicker config object</p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config">Config</a></code>  </p>
+<ul>
+<li><a href="#Config.dayPicker">.dayPicker</a> : <code>object</code><ul>
+<li><a href="#Config.dayPicker.enabled">.enabled</a> : <code>boolean</code></li>
+<li><a href="#Config.dayPicker.titleFormat">.titleFormat</a> : <code>string</code></li>
+<li><a href="#Config.dayPicker.titleFormatter">.titleFormatter(year, month)</a> ⇒ <code>*</code></li>
+<li><a href="#Config.dayPicker.event_onSelect">"onSelect" (selectedDayUnix)</a></li>
+</ul>
+</li>
+</ul>
+<p><a name="Config.dayPicker.enabled"></a></p>
+<h4 id="daypickerenabled-boolean">dayPicker.enabled : <code>boolean</code><a class="headerlink" href="#daypickerenabled-boolean" title="Permanent link">&para;</a></h4>
+<p><strong>Kind</strong>: static property of <code><a href="#Config.dayPicker">dayPicker</a></code><br />
+<strong>Default</strong>: <code>true</code><br />
+<a name="Config.dayPicker.titleFormat"></a></p>
+<h4 id="daypickertitleformat-string">dayPicker.titleFormat : <code>string</code><a class="headerlink" href="#daypickertitleformat-string" title="Permanent link">&para;</a></h4>
+<p><strong>Kind</strong>: static property of <code><a href="#Config.dayPicker">dayPicker</a></code><br />
+<strong>Default</strong>: <code>&quot;&#x27;YYYY MMMM&#x27;&quot;</code><br />
+<a name="Config.dayPicker.titleFormatter"></a></p>
+<h4 id="daypickertitleformatteryear-month-42">dayPicker.titleFormatter(year, month) ⇒ <code>*</code><a class="headerlink" href="#daypickertitleformatteryear-month-42" title="Permanent link">&para;</a></h4>
+<p><strong>Kind</strong>: static method of <code><a href="#Config.dayPicker">dayPicker</a></code><br />
+<table>
+  <thead>
+    <tr>
+      <th>Param</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>year</td>
+    </tr><tr>
+    <td>month</td>
+    </tr>  </tbody>
+</table></p>
+<p><a name="Config.dayPicker.event_onSelect"></a></p>
+<h4 id="onselect-selecteddayunix">"onSelect" (selectedDayUnix)<a class="headerlink" href="#onselect-selecteddayunix" title="Permanent link">&para;</a></h4>
+<p><strong>Kind</strong>: event emitted by <code><a href="#Config.dayPicker">dayPicker</a></code><br />
+<table>
+  <thead>
+    <tr>
+      <th>Param</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>selectedDayUnix</td>
+    </tr>  </tbody>
+</table></p>
+<p><a name="Config.monthPicker"></a></p>
+<h3 id="configmonthpicker-object">Config.monthPicker : <code>object</code><a class="headerlink" href="#configmonthpicker-object" title="Permanent link">&para;</a></h3>
+<p>monthPicker config object</p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config">Config</a></code>  </p>
+<ul>
+<li><a href="#Config.monthPicker">.monthPicker</a> : <code>object</code><ul>
+<li><a href="#Config.monthPicker.enabled">.enabled</a> : <code>boolean</code></li>
+<li><a href="#Config.monthPicker.titleFormat">.titleFormat</a> : <code>string</code></li>
+<li><a href="#Config.monthPicker.titleFormatter">.titleFormatter(unix)</a> ⇒ <code>*</code></li>
+<li><a href="#Config.monthPicker.event_onSelect">"onSelect" (monthIndex)</a></li>
+</ul>
+</li>
+</ul>
+<p><a name="Config.monthPicker.enabled"></a></p>
+<h4 id="monthpickerenabled-boolean">monthPicker.enabled : <code>boolean</code><a class="headerlink" href="#monthpickerenabled-boolean" title="Permanent link">&para;</a></h4>
+<p><strong>Kind</strong>: static property of <code><a href="#Config.monthPicker">monthPicker</a></code><br />
+<strong>Default</strong>: <code>true</code><br />
+<a name="Config.monthPicker.titleFormat"></a></p>
+<h4 id="monthpickertitleformat-string">monthPicker.titleFormat : <code>string</code><a class="headerlink" href="#monthpickertitleformat-string" title="Permanent link">&para;</a></h4>
+<p><strong>Kind</strong>: static property of <code><a href="#Config.monthPicker">monthPicker</a></code><br />
+<strong>Default</strong>: <code>&quot;&#x27;YYYY&#x27;&quot;</code><br />
+<a name="Config.monthPicker.titleFormatter"></a></p>
+<h4 id="monthpickertitleformatterunix-42">monthPicker.titleFormatter(unix) ⇒ <code>*</code><a class="headerlink" href="#monthpickertitleformatterunix-42" title="Permanent link">&para;</a></h4>
+<p><strong>Kind</strong>: static method of <code><a href="#Config.monthPicker">monthPicker</a></code><br />
+<table>
+  <thead>
+    <tr>
+      <th>Param</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>unix</td>
+    </tr>  </tbody>
+</table></p>
+<p><a name="Config.monthPicker.event_onSelect"></a></p>
+<h4 id="onselect-monthindex">"onSelect" (monthIndex)<a class="headerlink" href="#onselect-monthindex" title="Permanent link">&para;</a></h4>
+<p><strong>Kind</strong>: event emitted by <code><a href="#Config.monthPicker">monthPicker</a></code><br />
+<table>
+  <thead>
+    <tr>
+      <th>Param</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>monthIndex</td>
+    </tr>  </tbody>
+</table></p>
+<p><a name="Config.yearPicker"></a></p>
+<h3 id="configyearpicker-object">Config.yearPicker : <code>object</code><a class="headerlink" href="#configyearpicker-object" title="Permanent link">&para;</a></h3>
+<p>yearPicker config object</p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config">Config</a></code>  </p>
+<ul>
+<li><a href="#Config.yearPicker">.yearPicker</a> : <code>object</code><ul>
+<li><a href="#Config.yearPicker.enabled">.enabled</a> : <code>boolean</code></li>
+<li><a href="#Config.yearPicker.titleFormat">.titleFormat</a> : <code>string</code></li>
+<li><a href="#Config.yearPicker.titleFormatter">.titleFormatter(year)</a> ⇒ <code>string</code></li>
+<li><a href="#Config.yearPicker.event_onSelect">"onSelect" (year)</a></li>
+</ul>
+</li>
+</ul>
+<p><a name="Config.yearPicker.enabled"></a></p>
+<h4 id="yearpickerenabled-boolean">yearPicker.enabled : <code>boolean</code><a class="headerlink" href="#yearpickerenabled-boolean" title="Permanent link">&para;</a></h4>
+<p><strong>Kind</strong>: static property of <code><a href="#Config.yearPicker">yearPicker</a></code><br />
+<strong>Default</strong>: <code>true</code><br />
+<a name="Config.yearPicker.titleFormat"></a></p>
+<h4 id="yearpickertitleformat-string">yearPicker.titleFormat : <code>string</code><a class="headerlink" href="#yearpickertitleformat-string" title="Permanent link">&para;</a></h4>
+<p><strong>Kind</strong>: static property of <code><a href="#Config.yearPicker">yearPicker</a></code><br />
+<strong>Default</strong>: <code>&quot;&#x27;YYYY&#x27;&quot;</code><br />
+<a name="Config.yearPicker.titleFormatter"></a></p>
+<h4 id="yearpickertitleformatteryear-string">yearPicker.titleFormatter(year) ⇒ <code>string</code><a class="headerlink" href="#yearpickertitleformatteryear-string" title="Permanent link">&para;</a></h4>
+<p><strong>Kind</strong>: static method of <code><a href="#Config.yearPicker">yearPicker</a></code><br />
+<table>
+  <thead>
+    <tr>
+      <th>Param</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>year</td>
+    </tr>  </tbody>
+</table></p>
+<p><a name="Config.yearPicker.event_onSelect"></a></p>
+<h4 id="onselect-year">"onSelect" (year)<a class="headerlink" href="#onselect-year" title="Permanent link">&para;</a></h4>
+<p><strong>Kind</strong>: event emitted by <code><a href="#Config.yearPicker">yearPicker</a></code><br />
+<table>
+  <thead>
+    <tr>
+      <th>Param</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>year</td>
+    </tr>  </tbody>
+</table></p>
+<p><a name="Config.position"></a></p>
+<h3 id="configposition-mix">Config.position : <code>mix</code><a class="headerlink" href="#configposition-mix" title="Permanent link">&para;</a></h3>
+<p>position of datepicker relative to input element</p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config">Config</a></code><br />
+<strong>Default</strong>: <code>&#x27;auto&#x27;</code><br />
+<strong>Example</strong>  </p>
+<div class="codehilite"><pre><span></span><span class="s1">&#39;position&#39;</span><span class="o">:</span> <span class="s1">&#39;auto&#39;</span>
+<span class="s1">&#39;position&#39;</span><span class="o">:</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+
+
+<p><a name="Config.autoClose"></a></p>
+<h3 id="configautoclose-boolean">Config.autoClose : <code>boolean</code><a class="headerlink" href="#configautoclose-boolean" title="Permanent link">&para;</a></h3>
+<p>If true picker close When Select day</p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config">Config</a></code><br />
+<strong>Default</strong>: <code>false</code><br />
+<a name="Config.template"></a></p>
+<h3 id="configtemplate-string">Config.template : <code>string</code><a class="headerlink" href="#configtemplate-string" title="Permanent link">&para;</a></h3>
+<p>by default datepicker have a template string, and you can overwrite it simply by replace string in config.</p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config">Config</a></code><br />
+<strong>Example</strong>  </p>
+<div class="codehilite"><pre><span></span><span class="o">&lt;</span><span class="nx">div</span> <span class="nx">id</span><span class="o">=</span><span class="s2">&quot;plotId&quot;</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;datepicker-plot-area datepicker-plot-area-inline-view&quot;</span><span class="o">&gt;</span>
+     <span class="p">{{</span><span class="err">#</span><span class="nx">navigator</span><span class="p">.</span><span class="nx">enabled</span><span class="p">}}</span>
+     <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;navigator&quot;</span><span class="o">&gt;</span>
+     <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;datepicker-header&quot;</span><span class="o">&gt;</span>
+     <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;btn btn-next&quot;</span><span class="o">&gt;</span><span class="p">{{</span><span class="nx">navigator</span><span class="p">.</span><span class="nx">text</span><span class="p">.</span><span class="nx">btnNextText</span><span class="p">}}</span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+     <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;btn btn-switch&quot;</span><span class="o">&gt;</span><span class="p">{{</span> <span class="nx">navigator</span><span class="p">.</span><span class="k">switch</span><span class="p">.</span><span class="nx">text</span> <span class="p">}}</span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+     <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;btn btn-prev&quot;</span><span class="o">&gt;</span><span class="p">{{</span><span class="nx">navigator</span><span class="p">.</span><span class="nx">text</span><span class="p">.</span><span class="nx">btnPrevText</span><span class="p">}}</span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+     <span class="o">&lt;</span><span class="err">/div&gt;</span>
+     <span class="o">&lt;</span><span class="err">/div&gt;</span>
+     <span class="p">{{</span><span class="err">/navigator.enabled}}</span>
+     <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;datepicker-grid-view&quot;</span> <span class="o">&gt;</span>
+     <span class="p">{{</span><span class="err">#</span><span class="nx">days</span><span class="p">.</span><span class="nx">enabled</span><span class="p">}}</span>
+     <span class="p">{{</span><span class="err">#</span><span class="nx">days</span><span class="p">.</span><span class="nx">viewMode</span><span class="p">}}</span>
+     <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;datepicker-day-view&quot;</span> <span class="o">&gt;</span>
+     <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;month-grid-box&quot;</span><span class="o">&gt;</span>
+     <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;header&quot;</span><span class="o">&gt;</span>
+     <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;title&quot;</span><span class="o">&gt;&lt;</span><span class="err">/div&gt;</span>
+     <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;header-row&quot;</span><span class="o">&gt;</span>
+     <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;header-row-cell&quot;</span><span class="o">&gt;</span><span class="nx">ش</span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+     <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;header-row-cell&quot;</span><span class="o">&gt;</span><span class="nx">ی</span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+     <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;header-row-cell&quot;</span><span class="o">&gt;</span><span class="nx">د</span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+     <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;header-row-cell&quot;</span><span class="o">&gt;</span><span class="nx">س</span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+     <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;header-row-cell&quot;</span><span class="o">&gt;</span><span class="nx">چ</span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+     <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;header-row-cell&quot;</span><span class="o">&gt;</span><span class="nx">پ</span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+     <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;header-row-cell&quot;</span><span class="o">&gt;</span><span class="nx">ج</span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+     <span class="o">&lt;</span><span class="err">/div&gt;</span>
+     <span class="o">&lt;</span><span class="err">/div&gt;</span>
+     <span class="o">&lt;</span><span class="nx">table</span> <span class="nx">cellspacing</span><span class="o">=</span><span class="s2">&quot;0&quot;</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;table-days&quot;</span><span class="o">&gt;</span>
+     <span class="o">&lt;</span><span class="nx">tbody</span><span class="o">&gt;</span>
+     <span class="p">{{</span><span class="err">#</span><span class="nx">days</span><span class="p">.</span><span class="nx">list</span><span class="p">}}</span>
+
+     <span class="o">&lt;</span><span class="nx">tr</span><span class="o">&gt;</span>
+     <span class="p">{{</span><span class="err">#</span><span class="p">.}}</span>
+
+     <span class="p">{{</span><span class="err">#</span><span class="nx">enabled</span><span class="p">}}</span>
+     <span class="o">&lt;</span><span class="nx">td</span> <span class="nx">data</span><span class="o">-</span><span class="nx">unix</span><span class="o">=</span><span class="s2">&quot;{{dataUnix}}&quot;</span> <span class="o">&gt;&lt;</span><span class="nx">span</span>  <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;{{#otherMonth}}other-month{{/otherMonth}} {{#selected}}selected{{/selected}}&quot;</span><span class="o">&gt;</span><span class="p">{{</span><span class="nx">title</span><span class="p">}}</span><span class="o">&lt;</span><span class="err">/span&gt;&lt;/td&gt;</span>
+     <span class="p">{{</span><span class="err">/enabled}}</span>
+     <span class="p">{{</span><span class="o">^</span><span class="nx">enabled</span><span class="p">}}</span>
+     <span class="o">&lt;</span><span class="nx">td</span> <span class="nx">data</span><span class="o">-</span><span class="nx">unix</span><span class="o">=</span><span class="s2">&quot;{{dataUnix}}&quot;</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;disabled&quot;</span><span class="o">&gt;&lt;</span><span class="nx">span</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;{{#otherMonth}}other-month{{/otherMonth}}&quot;</span><span class="o">&gt;</span><span class="p">{{</span><span class="nx">title</span><span class="p">}}</span><span class="o">&lt;</span><span class="err">/span&gt;&lt;/td&gt;</span>
+     <span class="p">{{</span><span class="err">/enabled}}</span>
+
+     <span class="p">{{</span><span class="err">/.}}</span>
+     <span class="o">&lt;</span><span class="err">/tr&gt;</span>
+     <span class="p">{{</span><span class="err">/days.list}}</span>
+     <span class="o">&lt;</span><span class="err">/tbody&gt;</span>
+     <span class="o">&lt;</span><span class="err">/table&gt;</span>
+     <span class="o">&lt;</span><span class="err">/div&gt;</span>
+     <span class="o">&lt;</span><span class="err">/div&gt;</span>
+     <span class="p">{{</span><span class="err">/days.viewMode}}</span>
+     <span class="p">{{</span><span class="err">/days.enabled}}</span>
+
+     <span class="p">{{</span><span class="err">#</span><span class="nx">month</span><span class="p">.</span><span class="nx">enabled</span><span class="p">}}</span>
+     <span class="p">{{</span><span class="err">#</span><span class="nx">month</span><span class="p">.</span><span class="nx">viewMode</span><span class="p">}}</span>
+     <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;datepicker-month-view&quot;</span><span class="o">&gt;</span>
+     <span class="p">{{</span><span class="err">#</span><span class="nx">month</span><span class="p">.</span><span class="nx">list</span><span class="p">}}</span>
+     <span class="p">{{</span><span class="err">#</span><span class="nx">enabled</span><span class="p">}}</span>
+     <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">data</span><span class="o">-</span><span class="nx">month</span><span class="o">=</span><span class="s2">&quot;{{dataMonth}}&quot;</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;month-item {{#selected}}selected{{/selected}}&quot;</span><span class="o">&gt;</span><span class="p">{{</span><span class="nx">title</span><span class="p">}}</span><span class="o">&lt;</span><span class="err">/small&gt;&lt;/div&gt;</span>
+     <span class="p">{{</span><span class="err">/enabled}}</span>
+     <span class="p">{{</span><span class="o">^</span><span class="nx">enabled</span><span class="p">}}</span>
+     <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">data</span><span class="o">-</span><span class="nx">month</span><span class="o">=</span><span class="s2">&quot;{{dataMonth}}&quot;</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;month-item month-item-disable {{#selected}}selected{{/selected}}&quot;</span><span class="o">&gt;</span><span class="p">{{</span><span class="nx">title</span><span class="p">}}</span><span class="o">&lt;</span><span class="err">/small&gt;&lt;/div&gt;</span>
+     <span class="p">{{</span><span class="err">/enabled}}</span>
+     <span class="p">{{</span><span class="err">/month.list}}</span>
+     <span class="o">&lt;</span><span class="err">/div&gt;</span>
+     <span class="p">{{</span><span class="err">/month.viewMode}}</span>
+     <span class="p">{{</span><span class="err">/month.enabled}}</span>
+
+     <span class="p">{{</span><span class="err">#</span><span class="nx">year</span><span class="p">.</span><span class="nx">enabled</span> <span class="p">}}</span>
+     <span class="p">{{</span><span class="err">#</span><span class="nx">year</span><span class="p">.</span><span class="nx">viewMode</span> <span class="p">}}</span>
+     <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;datepicker-year-view&quot;</span> <span class="o">&gt;</span>
+     <span class="p">{{</span><span class="err">#</span><span class="nx">year</span><span class="p">.</span><span class="nx">list</span><span class="p">}}</span>
+     <span class="p">{{</span><span class="err">#</span><span class="nx">enabled</span><span class="p">}}</span>
+     <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">data</span><span class="o">-</span><span class="nx">year</span><span class="o">=</span><span class="s2">&quot;{{dataYear}}&quot;</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;year-item {{#selected}}selected{{/selected}}&quot;</span><span class="o">&gt;</span><span class="p">{{</span><span class="nx">title</span><span class="p">}}</span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+     <span class="p">{{</span><span class="err">/enabled}}</span>
+     <span class="p">{{</span><span class="o">^</span><span class="nx">enabled</span><span class="p">}}</span>
+     <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">data</span><span class="o">-</span><span class="nx">year</span><span class="o">=</span><span class="s2">&quot;{{dataYear}}&quot;</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;year-item year-item-disable {{#selected}}selected{{/selected}}&quot;</span><span class="o">&gt;</span><span class="p">{{</span><span class="nx">title</span><span class="p">}}</span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+     <span class="p">{{</span><span class="err">/enabled}}</span>
+     <span class="p">{{</span><span class="err">/year.list}}</span>
+     <span class="o">&lt;</span><span class="err">/div&gt;</span>
+     <span class="p">{{</span><span class="err">/year.viewMode }}</span>
+     <span class="p">{{</span><span class="err">/year.enabled }}</span>
+
+     <span class="o">&lt;</span><span class="err">/div&gt;</span>
+     <span class="p">{{</span><span class="err">#</span><span class="nx">time</span><span class="p">}}</span>
+     <span class="p">{{</span><span class="err">#</span><span class="nx">enabled</span><span class="p">}}</span>
+     <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;datepicker-time-view&quot;</span><span class="o">&gt;</span>
+     <span class="p">{{</span><span class="err">#</span><span class="nx">hour</span><span class="p">.</span><span class="nx">enabled</span><span class="p">}}</span>
+     <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;hour time-segment&quot;</span> <span class="nx">data</span><span class="o">-</span><span class="nx">time</span><span class="o">-</span><span class="nx">key</span><span class="o">=</span><span class="s2">&quot;hour&quot;</span><span class="o">&gt;</span>
+     <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;up-btn&quot;</span> <span class="nx">data</span><span class="o">-</span><span class="nx">time</span><span class="o">-</span><span class="nx">key</span><span class="o">=</span><span class="s2">&quot;hour&quot;</span><span class="o">&gt;</span><span class="err">▲</span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+     <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">value</span><span class="o">=</span><span class="s2">&quot;{{hour.title}}&quot;</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span> <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;hour&quot;</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;hour-input&quot;</span><span class="o">&gt;</span>
+     <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;down-btn&quot;</span> <span class="nx">data</span><span class="o">-</span><span class="nx">time</span><span class="o">-</span><span class="nx">key</span><span class="o">=</span><span class="s2">&quot;hour&quot;</span><span class="o">&gt;</span><span class="err">▼</span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+     <span class="o">&lt;</span><span class="err">/div&gt;</span>
+     <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;divider&quot;</span><span class="o">&gt;:&lt;</span><span class="err">/div&gt;</span>
+     <span class="p">{{</span><span class="err">/hour.enabled}}</span>
+     <span class="p">{{</span><span class="err">#</span><span class="nx">minute</span><span class="p">.</span><span class="nx">enabled</span><span class="p">}}</span>
+     <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;minute time-segment&quot;</span> <span class="nx">data</span><span class="o">-</span><span class="nx">time</span><span class="o">-</span><span class="nx">key</span><span class="o">=</span><span class="s2">&quot;minute&quot;</span> <span class="o">&gt;</span>
+     <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;up-btn&quot;</span> <span class="nx">data</span><span class="o">-</span><span class="nx">time</span><span class="o">-</span><span class="nx">key</span><span class="o">=</span><span class="s2">&quot;minute&quot;</span><span class="o">&gt;</span><span class="err">▲</span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+     <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">value</span><span class="o">=</span><span class="s2">&quot;{{minute.title}}&quot;</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span> <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;minute&quot;</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;minute-input&quot;</span><span class="o">&gt;</span>
+     <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;down-btn&quot;</span> <span class="nx">data</span><span class="o">-</span><span class="nx">time</span><span class="o">-</span><span class="nx">key</span><span class="o">=</span><span class="s2">&quot;minute&quot;</span><span class="o">&gt;</span><span class="err">▼</span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+     <span class="o">&lt;</span><span class="err">/div&gt;</span>
+     <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;divider second-divider&quot;</span><span class="o">&gt;:&lt;</span><span class="err">/div&gt;</span>
+     <span class="p">{{</span><span class="err">/minute.enabled}}</span>
+     <span class="p">{{</span><span class="err">#</span><span class="nx">second</span><span class="p">.</span><span class="nx">enabled</span><span class="p">}}</span>
+     <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;second time-segment&quot;</span> <span class="nx">data</span><span class="o">-</span><span class="nx">time</span><span class="o">-</span><span class="nx">key</span><span class="o">=</span><span class="s2">&quot;second&quot;</span>  <span class="o">&gt;</span>
+     <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;up-btn&quot;</span> <span class="nx">data</span><span class="o">-</span><span class="nx">time</span><span class="o">-</span><span class="nx">key</span><span class="o">=</span><span class="s2">&quot;second&quot;</span> <span class="o">&gt;</span><span class="err">▲</span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+     <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">value</span><span class="o">=</span><span class="s2">&quot;{{second.title}}&quot;</span>  <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span> <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;second&quot;</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;second-input&quot;</span><span class="o">&gt;</span>
+     <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;down-btn&quot;</span> <span class="nx">data</span><span class="o">-</span><span class="nx">time</span><span class="o">-</span><span class="nx">key</span><span class="o">=</span><span class="s2">&quot;second&quot;</span> <span class="o">&gt;</span><span class="err">▼</span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+     <span class="o">&lt;</span><span class="err">/div&gt;</span>
+     <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;divider meridian-divider&quot;</span><span class="o">&gt;&lt;</span><span class="err">/div&gt;</span>
+     <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;divider meridian-divider&quot;</span><span class="o">&gt;&lt;</span><span class="err">/div&gt;</span>
+     <span class="p">{{</span><span class="err">/second.enabled}}</span>
+     <span class="p">{{</span><span class="err">#</span><span class="nx">meridiem</span><span class="p">.</span><span class="nx">enabled</span><span class="p">}}</span>
+     <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;meridiem time-segment&quot;</span> <span class="nx">data</span><span class="o">-</span><span class="nx">time</span><span class="o">-</span><span class="nx">key</span><span class="o">=</span><span class="s2">&quot;meridian&quot;</span> <span class="o">&gt;</span>
+     <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;up-btn&quot;</span> <span class="nx">data</span><span class="o">-</span><span class="nx">time</span><span class="o">-</span><span class="nx">key</span><span class="o">=</span><span class="s2">&quot;meridiem&quot;</span><span class="o">&gt;</span><span class="err">▲</span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+     <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">value</span><span class="o">=</span><span class="s2">&quot;{{meridiem.title}}&quot;</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;meridiem-input&quot;</span><span class="o">&gt;</span>
+     <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;down-btn&quot;</span> <span class="nx">data</span><span class="o">-</span><span class="nx">time</span><span class="o">-</span><span class="nx">key</span><span class="o">=</span><span class="s2">&quot;meridiem&quot;</span><span class="o">&gt;</span><span class="err">▼</span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+     <span class="o">&lt;</span><span class="err">/div&gt;</span>
+     <span class="p">{{</span><span class="err">/meridiem.enabled}}</span>
+     <span class="o">&lt;</span><span class="err">/div&gt;</span>
+     <span class="p">{{</span><span class="err">/enabled}}</span>
+     <span class="p">{{</span><span class="err">/time}}</span>
+
+     <span class="p">{{</span><span class="err">#</span><span class="nx">toolbox</span><span class="p">}}</span>
+     <span class="p">{{</span><span class="err">#</span><span class="nx">enabled</span><span class="p">}}</span>
+     <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;toolbox &quot;</span><span class="o">&gt;</span>
+     <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;btn-today&quot;</span><span class="o">&gt;</span><span class="p">{{</span><span class="nx">text</span><span class="p">.</span><span class="nx">btnToday</span><span class="p">}}</span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+     <span class="o">&lt;</span><span class="err">/div&gt;</span>
+     <span class="p">{{</span><span class="err">/enabled}}</span>
+     <span class="p">{{</span><span class="err">/toolbox}}</span>
+     <span class="o">&lt;</span><span class="err">/div&gt;</span>
+</pre></div>
+
+
+<p><a name="Config.observer"></a></p>
+<h3 id="configobserver-boolean"><del>Config.observer : <code>boolean</code></del><a class="headerlink" href="#configobserver-boolean" title="Permanent link">&para;</a></h3>
+<p><strong><em>Deprecated</em></strong></p>
+<p>observer</p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config">Config</a></code><br />
+<strong>Default</strong>: <code>false</code><br />
+<a name="Config.inputDelay"></a></p>
+<h3 id="configinputdelay-number">Config.inputDelay : <code>number</code><a class="headerlink" href="#configinputdelay-number" title="Permanent link">&para;</a></h3>
+<p>inputDelay</p>
+<p><strong>Kind</strong>: static property of <code><a href="#Config">Config</a></code><br />
+<strong>Default</strong>: <code>800</code><br />
+<a name="Config.formatter"></a></p>
+<h3 id="configformatterunixdate">Config.formatter(unixDate)<a class="headerlink" href="#configformatterunixdate" title="Permanent link">&para;</a></h3>
+<p>format value of input</p>
+<p><strong>Kind</strong>: static method of <code><a href="#Config">Config</a></code><br />
+<strong>Default</strong>: <code>function</code><br />
+<table>
+  <thead>
+    <tr>
+      <th>Param</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>unixDate</td>
+    </tr>  </tbody>
+</table></p>
+<p><strong>Example</strong>  </p>
+<div class="codehilite"><pre><span></span><span class="kd">function</span> <span class="p">(</span><span class="nx">unixDate</span><span class="p">)</span> <span class="p">{</span>
+     <span class="kd">var</span> <span class="nx">self</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+     <span class="kd">var</span> <span class="nx">pdate</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">persianDate</span><span class="p">(</span><span class="nx">unixDate</span><span class="p">);</span>
+     <span class="nx">pdate</span><span class="p">.</span><span class="nx">formatPersian</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">persianDigit</span><span class="p">;</span>
+     <span class="k">return</span> <span class="nx">pdate</span><span class="p">.</span><span class="nx">format</span><span class="p">(</span><span class="nx">self</span><span class="p">.</span><span class="nx">format</span><span class="p">);</span>
+ <span class="p">}</span>
+</pre></div>
+
+
+<p><a name="Config.altFieldFormatter"></a></p>
+<h3 id="configaltfieldformatterunixdate">Config.altFieldFormatter(unixDate)<a class="headerlink" href="#configaltfieldformatterunixdate" title="Permanent link">&para;</a></h3>
+<p>format value of 'altField' input</p>
+<p><strong>Kind</strong>: static method of <code><a href="#Config">Config</a></code><br />
+<strong>Default</strong>: <code>function</code><br />
+<table>
+  <thead>
+    <tr>
+      <th>Param</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>unixDate</td>
+    </tr>  </tbody>
+</table></p>
+<p><strong>Example</strong>  </p>
+<div class="codehilite"><pre><span></span><span class="kd">function</span> <span class="p">(</span><span class="nx">unixDate</span><span class="p">)</span> <span class="p">{</span>
+     <span class="kd">var</span> <span class="nx">self</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+     <span class="kd">var</span> <span class="nx">thisAltFormat</span> <span class="o">=</span> <span class="nx">self</span><span class="p">.</span><span class="nx">altFormat</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">();</span>
+     <span class="k">if</span> <span class="p">(</span><span class="nx">thisAltFormat</span> <span class="o">===</span> <span class="s1">&#39;gregorian&#39;</span> <span class="o">||</span> <span class="nx">thisAltFormat</span> <span class="o">===</span> <span class="s1">&#39;g&#39;</span><span class="p">)</span> <span class="p">{</span>
+         <span class="k">return</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nx">unixDate</span><span class="p">);</span>
+     <span class="p">}</span>
+     <span class="k">if</span> <span class="p">(</span><span class="nx">thisAltFormat</span> <span class="o">===</span> <span class="s1">&#39;unix&#39;</span> <span class="o">||</span> <span class="nx">thisAltFormat</span> <span class="o">===</span> <span class="s1">&#39;u&#39;</span><span class="p">)</span> <span class="p">{</span>
+         <span class="k">return</span> <span class="nx">unixDate</span><span class="p">;</span>
+     <span class="p">}</span>
+     <span class="k">else</span> <span class="p">{</span>
+         <span class="kd">var</span> <span class="nx">pd</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">persianDate</span><span class="p">(</span><span class="nx">unixDate</span><span class="p">);</span>
+         <span class="nx">pd</span><span class="p">.</span><span class="nx">formatPersian</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">persianDigit</span><span class="p">;</span>
+         <span class="k">return</span> <span class="nx">pd</span><span class="p">.</span><span class="nx">format</span><span class="p">(</span><span class="nx">self</span><span class="p">.</span><span class="nx">altFormat</span><span class="p">);</span>
+     <span class="p">}</span>
+ <span class="p">}</span>
+</pre></div>
+
+
+<p><a name="Config.checkDate"></a></p>
+<h3 id="configcheckdate-function">Config.checkDate() : <code>function</code><a class="headerlink" href="#configcheckdate-function" title="Permanent link">&para;</a></h3>
+<p>check date avalibility</p>
+<p><strong>Kind</strong>: static method of <code><a href="#Config">Config</a></code><br />
+<a name="Config.checkMonth"></a></p>
+<h3 id="configcheckmonth-function">Config.checkMonth() : <code>function</code><a class="headerlink" href="#configcheckmonth-function" title="Permanent link">&para;</a></h3>
+<p>check month avalibility</p>
+<p><strong>Kind</strong>: static method of <code><a href="#Config">Config</a></code><br />
+<a name="Config.checkYear"></a></p>
+<h3 id="configcheckyear-function">Config.checkYear() : <code>function</code><a class="headerlink" href="#configcheckyear-function" title="Permanent link">&para;</a></h3>
+<p>check year avalibility</p>
+<p><strong>Kind</strong>: static method of <code><a href="#Config">Config</a></code><br />
+<a name="Config.onToggle"></a></p>
+<h3 id="configontoggle">Config.onToggle()<a class="headerlink" href="#configontoggle" title="Permanent link">&para;</a></h3>
+<p><strong>Kind</strong>: static method of <code><a href="#Config">Config</a></code><br />
+<a name="Config.onDestroy"></a></p>
+<h3 id="configondestroy">Config.onDestroy()<a class="headerlink" href="#configondestroy" title="Permanent link">&para;</a></h3>
+<p><strong>Kind</strong>: static method of <code><a href="#Config">Config</a></code><br />
+<a name="Config.event_onSelect"></a></p>
+<h3 id="onselect-unixdate">"onSelect" (unixDate)<a class="headerlink" href="#onselect-unixdate" title="Permanent link">&para;</a></h3>
+<p>A function that takes current datepicker unixDate. It is called When Day Select.</p>
+<p><strong>Kind</strong>: event emitted by <code><a href="#Config">Config</a></code><br />
+<table>
+  <thead>
+    <tr>
+      <th>Param</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>unixDate</td>
+    </tr>  </tbody>
+</table></p>
+<p><a name="Config.event_onShow"></a></p>
+<h3 id="onshow">"onShow"<a class="headerlink" href="#onshow" title="Permanent link">&para;</a></h3>
+<p>A function that takes current datepicker instance. It is called just before the datepicker is displayed.</p>
+<p><strong>Kind</strong>: event emitted by <code><a href="#Config">Config</a></code><br />
+<a name="Config.event_onHide"></a></p>
+<h3 id="onhide-self">"onHide" (self)<a class="headerlink" href="#onhide-self" title="Permanent link">&para;</a></h3>
+<p>A function that takes current datepicker instance. It is called just before the datepicker Hide.</p>
+<p><strong>Kind</strong>: event emitted by <code><a href="#Config">Config</a></code><br />
+<table>
+  <thead>
+    <tr>
+      <th>Param</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>self</td>
+    </tr>  </tbody>
+</table></p>
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../example/" title="Example" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Example
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../api/" title="API" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                API
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            license http://www.wtfpl.net/
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/babakhani" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://de.linkedin.com/in/martin-donath-20a95039" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application-2afe21e0b2.js"></script>
+      <script>var config={url:{base:"../.."}},app=new Application(config);app.initialize()</script>
+      
+        <script src="../.././lib/jquery/dist/jquery.js"></script>
+      
+        <script src="../.././lib/persian-date/dist/persian-date.js"></script>
+      
+        <script src="../.././lib/persian-datepicker/dist/js/persian-datepicker.js"></script>
+      
+        <script src="../.././js/datepicker-example.js"></script>
+      
+        <script src="../.././js/doc.js"></script>
+      
+        <script src="https://buttons.github.io/buttons.js"></script>
+      
+    
+    
+      
+      <script>!function(e,t,a,n,o,c,i){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,c=t.createElement(a),i=t.getElementsByTagName(a)[0],c.async=1,c.src=n,i.parentNode.insertBefore(c,i)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-40548780-1","babakhani.github.io/PersianWebToolkit/"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var t=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",t,e.href)})});var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})</script>
+      
+    
+  </body>
+</html>

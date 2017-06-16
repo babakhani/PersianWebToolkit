@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    
+        
+    <url>
+     <loc>http://babakhani.github.io/PersianWebToolkit/beta//persian-date/</loc>
+     <lastmod>2017-06-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://babakhani.github.io/PersianWebToolkit/beta//persian-date/changelog/</loc>
+     <lastmod>2017-06-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>http://babakhani.github.io/PersianWebToolkit/beta//datepicker/</loc>
+     <lastmod>2017-06-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://babakhani.github.io/PersianWebToolkit/beta//datepicker/example/</loc>
+     <lastmod>2017-06-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://babakhani.github.io/PersianWebToolkit/beta//datepicker/options/</loc>
+     <lastmod>2017-06-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://babakhani.github.io/PersianWebToolkit/beta//datepicker/api/</loc>
+     <lastmod>2017-06-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://babakhani.github.io/PersianWebToolkit/beta//datepicker/changelog/</loc>
+     <lastmod>2017-06-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+</urlset>
