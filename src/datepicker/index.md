@@ -1,9 +1,9 @@
 Persian Date Picker
 ==============
 
-> This version is beta, i wish you can test it and give us feedback to make it better and release as stable version. thanks.
-
-[![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/persianwebtoolkit/datepicker)
+[![npm version](https://badge.fury.io/js/persian-datepicker.svg)](https://badge.fury.io/js/persian-datepicker)
+[![Bower version](https://badge.fury.io/bo/persian-datepicker.svg)](https://badge.fury.io/bo/persian-datepicker)
+[![Travis-ci](https://travis-ci.org/babakhani/pwt.datepicker.svg?branch=refactor)](https://badge.fury.io/bo/persian-datepicker)
 
 Persian Date Picker
 This Date picker work with Iranian calendar.

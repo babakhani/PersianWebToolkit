@@ -5,10 +5,13 @@
   "persiandateVersion": "0.1.8",
   "dependencies": {
     "jquery": "2.2.0",
+    "mkdocs": "0.0.1",
     "persian-date": "=0.1.8-b",
     "persian-datepicker": "=0.4.5"
   },
   "scripts": {
+    "start": "mkdocs serve",
+    "build": "",
     "pre-dev": "sudo npm install -g mkdocs",
     "dev": "babel --watch src/es6 --out-file src/.tmp/persian-datepicker.js & simple-server 3000 & grunt --force --dev &",
     "lint": "sass-lint -c .sass-lint.yml --verbose & ./node_modules/jshint/bin/jshint src/es6/*.js",
