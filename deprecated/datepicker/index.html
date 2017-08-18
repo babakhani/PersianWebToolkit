@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <link rel="shortcut icon" href="/PersianWebToolkit/vendor/img/favicon.png"/>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="canonical" href="http://babakhani.github.io/PersianWebToolkit"/>
+    <meta name="description" content="javascript,datepicker,date,persian,calendar">
+    <meta name="keyword"
+          content="persian,datepicker,date,khayam,jalali,reza,babakhani,jquery,plugin,javascript,js,persian web toolkit,pwt"/>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans"/>
+    <link rel="stylesheet" href="/PersianWebToolkit/vendor/lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/PersianWebToolkit/vendor/lib/prettify/theme/desert.css"/>
+    <link rel="stylesheet" href="/PersianWebToolkit/vendor/css/menu.css">
+    <link rel="stylesheet" href="/PersianWebToolkit/vendor/css/pygment_trac.css">
+    <link rel="stylesheet" href="/PersianWebToolkit/vendor/css/over-bootstrap.css">
+    <link rel="stylesheet" href="/PersianWebToolkit/vendor/css/pages.css">
+
+    <script src="/PersianWebToolkit/vendor/js/jquery.js"></script>
+    <script src="/PersianWebToolkit/vendor/lib/bootstrap/js/bootstrap.js"></script>
+    <script src="/PersianWebToolkit/vendor/js/pwt-date.js"></script>
+    <script src="/PersianWebToolkit/vendor/persian_datepicker/0.4.5/js/persian-datepicker-0.4.5.js"></script>
+    <link rel="stylesheet"
+          href="/PersianWebToolkit/vendor/persian_datepicker/0.4.5/css/persian-datepicker-0.4.5.css">
+    <script src="/PersianWebToolkit/vendor/lib/prettify/prettify.js"></script>
+    <script src="/PersianWebToolkit/vendor/js/angular.js"></script>
+</head>
+<body>
+<div id="main_content_wrap" class="outer" ng-controller="myController">
+<div ng-include="'/PersianWebToolkit/include/head.html'"></div>
+<div ng-include="'/PersianWebToolkit/doc/datepicker/0.4.5/include/page-menu.html'"></div>
+<div class="spacer" style="height:30px;"></div>
+
+    <!-- download -->
+    <div ng-include="'/PersianWebToolkit/doc/datepicker/0.4.5/include/download.html'"></div>
+    <div class="container">
+        <!--<!-- install -->
+        <div ng-include="'/PersianWebToolkit/doc/datepicker/0.4.5/include/install.html'"></div>
+        <!--<!-- Fiddle -->
+        <div ng-include="'/PersianWebToolkit/doc/datepicker/0.4.5/include/fiddle.html'"></div>
+        <!--<!-- quick sample -->
+        <div ng-include="'/PersianWebToolkit/doc/datepicker/0.4.5/include/quick-sample.html'"></div>
+        <!-- quick start -->
+        <div ng-include="'/PersianWebToolkit/doc/datepicker/0.4.5/include/quick-start.html'"></div>
+        <!-- options -->
+        <div ng-include="'/PersianWebToolkit/doc/datepicker/0.4.5/include/options.html'"></div>
+        <!-- method -->
+        <div ng-include="'/PersianWebToolkit/doc/datepicker/0.4.5/include/method.html'"></div>
+    </div>
+</div>
+<div ng-include="'/PersianWebToolkit/include/footer.html'"></div>
+</body>
+<script type="text/javascript">
+    var myApp = angular.module('myApp', [])
+    myApp.controller('myController', function ($scope) {
+        $scope.version = "0.4.5";
+        $scope.volume = '1.1 mb'
+        $scope.downloadUrl = 'https://github.com/babakhani/pwt.datepicker/archive/0.4.5.zip';
+        $scope.demoUrl = '/PersianWebToolkit/doc/datepicker/0.4.5/demo.html';
+
+        itemmax =11;
+        renderedcount = 0;
+        $scope.$on('$includeContentLoaded', function (event) {
+            renderedcount++;
+            if (renderedcount >= itemmax) {
+                $(document).trigger('loadInclude');
+            }
+        });
+
+
+    });
+</script>
+<script src="/PersianWebToolkit/vendor/js/main.js"></script>
+<script src="/PersianWebToolkit/vendor/js/directive.js"></script>
+
+
+</html>

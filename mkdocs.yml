@@ -6,7 +6,7 @@ site_author:        babakhani.reza@gmail.com
 copyright:          license http://www.wtfpl.net/
 remote_branch: 'gh-pages'
 docs_dir: 'src'
-site_dir: 'beta'
+site_dir: 'doc'
 site_url: 'http://babakhani.github.io/PersianWebToolkit/beta/'
 repo_name: 'GitHub'
 strict: true

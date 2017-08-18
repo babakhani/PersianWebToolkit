@@ -1,0 +1,1836 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Persian Web Toolkit document">
+      
+      
+        <link rel="canonical" href="http://babakhani.github.io/PersianWebToolkit/beta/persian-date/">
+      
+      
+        <meta name="author" content="babakhani.reza@gmail.com">
+      
+      
+        <link rel="shortcut icon" href="../img/favicon.ico">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.8.1">
+    
+    
+      
+        <title>Document - Persian Web Toolkit</title>
+      
+    
+    
+      <script src="../assets/javascripts/modernizr-1df76c4e58.js"></script>
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application-bfecc7305d.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-02c2a4388f.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono">
+        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans">
+    
+      <link rel="stylesheet" href=".././css/extra.css">
+    
+      <link rel="stylesheet" href=".././lib/persian-datepicker/dist/css/persian-datepicker.css">
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="red" data-md-color-accent="blue-light">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="http://babakhani.github.io/PersianWebToolkit/beta/" title="Persian Web Toolkit" class="md-logo md-header-nav__button">
+            <img src="../img/logo.svg" width="24" height="24">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  Persian Date
+                </span>
+              
+            
+            Document
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/babakhani/PersianWebToolkit" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-logo md-nav__button">
+        <img src="../img/logo.svg">
+      </i>
+    
+    Persian Web Toolkit
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/babakhani/PersianWebToolkit" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      Persian Date
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Persian Date
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Document
+      </label>
+    
+    <a href="./" title="Document" class="md-nav__link md-nav__link--active">
+      Document
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#install" title="Install" class="md-nav__link">
+    Install
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#browser" title="Browser" class="md-nav__link">
+    Browser
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parse" title="Parse" class="md-nav__link">
+    Parse
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#now" title="Now" class="md-nav__link">
+    Now
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unix-offset-milliseconds" title="Unix Offset (milliseconds)" class="md-nav__link">
+    Unix Offset (milliseconds)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unix-timestamp-seconds" title="Unix Timestamp (seconds)" class="md-nav__link">
+    Unix Timestamp (seconds)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#date" title="Date" class="md-nav__link">
+    Date
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#array" title="Array" class="md-nav__link">
+    Array
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aspnet-json-date" title="ASP.NET JSON Date" class="md-nav__link">
+    ASP.NET JSON Date
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pesiandate-clone" title="PesianDate Clone" class="md-nav__link">
+    PesianDate Clone
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-set" title="Get + Set" class="md-nav__link">
+    Get + Set
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#second" title="Second" class="md-nav__link">
+    Second
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minute" title="Minute" class="md-nav__link">
+    Minute
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hour" title="Hour" class="md-nav__link">
+    Hour
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#date-of-month" title="Date of Month" class="md-nav__link">
+    Date of Month
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#year" title="Year" class="md-nav__link">
+    Year
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#day-of-week" title="Day of Week" class="md-nav__link">
+    Day of Week
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manipulate" title="Manipulate" class="md-nav__link">
+    Manipulate
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add" title="Add" class="md-nav__link">
+    Add
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subtract" title="Subtract" class="md-nav__link">
+    Subtract
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-of-time" title="Start of Time" class="md-nav__link">
+    Start of Time
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#end-of-time" title="End of Time" class="md-nav__link">
+    End of Time
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#display" title="Display" class="md-nav__link">
+    Display
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#format" title="Format" class="md-nav__link">
+    Format
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#long-date-formats" title="Long Date formats" class="md-nav__link">
+    Long Date formats
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default-format" title="Default format" class="md-nav__link">
+    Default format
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#format-to-persian-date" title="Format To Persian date" class="md-nav__link">
+    Format To Persian date
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#difference" title="Difference" class="md-nav__link">
+    Difference
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unix-offset-milliseconds_1" title="Unix Offset (milliseconds)" class="md-nav__link">
+    Unix Offset (milliseconds)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unix-timestamp-seconds_1" title="Unix Timestamp (seconds)" class="md-nav__link">
+    Unix Timestamp (seconds)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timezone-offset" title="Timezone Offset" class="md-nav__link">
+    Timezone Offset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#days-in-month" title="Days in Month" class="md-nav__link">
+    Days in Month
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#as-javascript-date" title="As Javascript Date" class="md-nav__link">
+    As Javascript Date
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#as-array" title="As Array" class="md-nav__link">
+    As Array
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quert" title="Quert" class="md-nav__link">
+    Quert
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#is-leap-year" title="Is Leap Year" class="md-nav__link">
+    Is Leap Year
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#is-daylight-saving-time" title="Is Daylight Saving Time" class="md-nav__link">
+    Is Daylight Saving Time
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#is-a-persaindat" title="Is a PersainDat" class="md-nav__link">
+    Is a PersainDat
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="changelog/" title="Change log" class="md-nav__link">
+      Change log
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Persian Datepicker
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Persian Datepicker
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../datepicker/" title="Getting Start" class="md-nav__link">
+      Getting Start
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../datepicker/example/" title="Example" class="md-nav__link">
+      Example
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../datepicker/options/" title="Options" class="md-nav__link">
+      Options
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../datepicker/api/" title="API" class="md-nav__link">
+      API
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../datepicker/changelog/" title="Change log" class="md-nav__link">
+      Change log
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#install" title="Install" class="md-nav__link">
+    Install
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#browser" title="Browser" class="md-nav__link">
+    Browser
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parse" title="Parse" class="md-nav__link">
+    Parse
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#now" title="Now" class="md-nav__link">
+    Now
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unix-offset-milliseconds" title="Unix Offset (milliseconds)" class="md-nav__link">
+    Unix Offset (milliseconds)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unix-timestamp-seconds" title="Unix Timestamp (seconds)" class="md-nav__link">
+    Unix Timestamp (seconds)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#date" title="Date" class="md-nav__link">
+    Date
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#array" title="Array" class="md-nav__link">
+    Array
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aspnet-json-date" title="ASP.NET JSON Date" class="md-nav__link">
+    ASP.NET JSON Date
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pesiandate-clone" title="PesianDate Clone" class="md-nav__link">
+    PesianDate Clone
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-set" title="Get + Set" class="md-nav__link">
+    Get + Set
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#second" title="Second" class="md-nav__link">
+    Second
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minute" title="Minute" class="md-nav__link">
+    Minute
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hour" title="Hour" class="md-nav__link">
+    Hour
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#date-of-month" title="Date of Month" class="md-nav__link">
+    Date of Month
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#year" title="Year" class="md-nav__link">
+    Year
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#day-of-week" title="Day of Week" class="md-nav__link">
+    Day of Week
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manipulate" title="Manipulate" class="md-nav__link">
+    Manipulate
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add" title="Add" class="md-nav__link">
+    Add
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subtract" title="Subtract" class="md-nav__link">
+    Subtract
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-of-time" title="Start of Time" class="md-nav__link">
+    Start of Time
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#end-of-time" title="End of Time" class="md-nav__link">
+    End of Time
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#display" title="Display" class="md-nav__link">
+    Display
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#format" title="Format" class="md-nav__link">
+    Format
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#long-date-formats" title="Long Date formats" class="md-nav__link">
+    Long Date formats
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default-format" title="Default format" class="md-nav__link">
+    Default format
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#format-to-persian-date" title="Format To Persian date" class="md-nav__link">
+    Format To Persian date
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#difference" title="Difference" class="md-nav__link">
+    Difference
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unix-offset-milliseconds_1" title="Unix Offset (milliseconds)" class="md-nav__link">
+    Unix Offset (milliseconds)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unix-timestamp-seconds_1" title="Unix Timestamp (seconds)" class="md-nav__link">
+    Unix Timestamp (seconds)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timezone-offset" title="Timezone Offset" class="md-nav__link">
+    Timezone Offset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#days-in-month" title="Days in Month" class="md-nav__link">
+    Days in Month
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#as-javascript-date" title="As Javascript Date" class="md-nav__link">
+    As Javascript Date
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#as-array" title="As Array" class="md-nav__link">
+    As Array
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quert" title="Quert" class="md-nav__link">
+    Quert
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#is-leap-year" title="Is Leap Year" class="md-nav__link">
+    Is Leap Year
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#is-daylight-saving-time" title="Is Daylight Saving Time" class="md-nav__link">
+    Is Daylight Saving Time
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#is-a-persaindat" title="Is a PersainDat" class="md-nav__link">
+    Is a PersainDat
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/babakhani/PersianWebToolkit/edit/master/docs/persian-date/index.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
+                
+                
+                <h1 id="persian-date">Persian Date<a class="headerlink" href="#persian-date" title="Permanent link">&para;</a></h1>
+<p>Javascript date library for parsing, validating, manipulating, and formatting persian dates System.</p>
+<p>Inspired by <a href="http://momentjs.com/">momentjs</a></p>
+<p>More info at <a href="http://en.wikipedia.org/wiki/Iranian_calendar">wikipedia</a></p>
+<p><a href="https://github.com/babakhani/persiandate"><img alt="npm version" src="https://badge.fury.io/js/persian-date.svg" /></a>
+<a href="https://github.com/babakhani/persiandate"><img alt="Bower version" src="https://badge.fury.io/bo/persian-date.svg" /></a>
+<a href="https://coveralls.io/github/babakhani/PersianDate?branch=develop"><img alt="Coverage Status" src="https://coveralls.io/repos/github/babakhani/PersianDate/badge.svg?branch=develop" /></a>
+<a href="https://github.com/babakhani/persiandate"><img alt="Travis-ci" src="https://travis-ci.org/babakhani/PersianDate.svg?branch=master" /></a></p>
+<p><a class="github-button" href="https://github.com/babakhani/persiandate" data-icon="octicon-star" data-style="mega" data-count-href="/babakhani/persiandate/stargazers" data-count-api="/repos/babakhani/persiandate#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star babakhani/persiandate on GitHub">Star</a>
+<a class="github-button" href="https://github.com/babakhani/persiandate/issues" data-icon="octicon-issue-opened" data-style="mega" data-count-api="/repos/babakhani/persiandate#open_issues_count" data-count-aria-label="# issues on GitHub" aria-label="Issue babakhani/persiandate on GitHub">Issue</a>
+<a class="github-button" href="https://github.com/babakhani/persiandate/fork" data-icon="octicon-repo-forked" data-style="mega" data-count-href="/babakhani/persiandate/network" data-count-api="/repos/babakhani/persiandate#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork babakhani/persiandate on GitHub">Fork</a></p>
+<h2 id="install">Install<a class="headerlink" href="#install" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span>npm install persian-date@beta --save-dev
+bower install persian-date@beta --save-dev
+</pre></div>
+
+
+<h2 id="browser">Browser<a class="headerlink" href="#browser" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;node_modules/persian-date/dist/persian-date.js&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span><span class="p">&gt;</span>
+    <span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">format</span><span class="p">();</span> <span class="c1">// &quot;۱۳۹۶-۰۱-۱۱ ۲۳:۳۳:۲۷ ب ظ&quot; (when i run in my console)  </span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+
+
+<h2 id="parse">Parse<a class="headerlink" href="#parse" title="Permanent link">&para;</a></h2>
+<p>Instead of modifying the native <code>Date.prototype</code> , persianDate creates a wrapper for the Date object.
+To get this wrapper object, simply call <code>persianDate()</code> with one of the supported input types.</p>
+<h3 id="now">Now<a class="headerlink" href="#now" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>persianDate();
+</pre></div>
+
+
+<p>To get the current date and time, just call <code>persianDate()</code> with no parameters.</p>
+<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">now</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">persianDate</span><span class="p">();</span>
+</pre></div>
+
+
+<p>This is essentially the same as calling <code>persianDate(new Date())</code> .</p>
+<h3 id="unix-offset-milliseconds">Unix Offset (milliseconds)<a class="headerlink" href="#unix-offset-milliseconds" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>persianDate(/* Number */);
+</pre></div>
+
+
+<p>Similar to <code>new Date(Number)</code>, you can create a persianDate by passing an integer value representing the number of milliseconds since the Unix Epoch (Jan 1 1970 12AM UTC).</p>
+<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">day</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">persianDate</span><span class="p">(</span><span class="mi">1318781876406</span><span class="p">);</span> <span class="c1">// &quot;۱۳۹۰-۰۷-۲۴ ۱۹:۴۷:۵۶ ب ظ&quot;</span>
+</pre></div>
+
+
+<h3 id="unix-timestamp-seconds">Unix Timestamp (seconds)<a class="headerlink" href="#unix-timestamp-seconds" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>persianDate.unix(/* Number */);
+</pre></div>
+
+
+<p>To create a persianDate from a Unix timestamp (seconds since the Unix Epoch), use <code>persianDate.unix(Number)</code></p>
+<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">day</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">persianDate</span><span class="p">.</span><span class="nx">unix</span><span class="p">(</span><span class="mi">1318781876</span><span class="p">);</span> <span class="c1">// &quot;۱۳۹۰-۰۷-۲۴ ۱۹:۴۷:۵۶ ب ظ&quot;</span>
+</pre></div>
+
+
+<p>This is implemented as <code>persianDate(timestamp * 1000)</code> , so partial seconds in the input timestamp are included.</p>
+<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">day</span> <span class="o">=</span> <span class="nx">persianDate</span><span class="p">.</span><span class="nx">unix</span><span class="p">(</span><span class="mi">1318781876</span><span class="p">);</span>
+</pre></div>
+
+
+<h3 id="date">Date<a class="headerlink" href="#date" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="k">new</span> <span class="nx">persianDate</span><span class="p">(</span><span class="k">new</span> <span class="nb">Date</span><span class="p">());</span>
+</pre></div>
+
+
+<p>You can create a <code>persianDate</code> with a pre-existing native Javascript <code>Date</code> object.</p>
+<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">day</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="mi">2011</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">16</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">dayWrapper</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">persianDate</span><span class="p">(</span><span class="nx">day</span><span class="p">);</span> <span class="c1">// &quot;۱۳۹۰-۰۷-۲۴ ۰۰:۰۰:۰۰ ق ظ&quot;</span>
+</pre></div>
+
+
+<p>This is the fastest way to get a persianDate.js wrapper.</p>
+<h3 id="array">Array<a class="headerlink" href="#array" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="k">new</span> <span class="nx">persianDate</span><span class="p">([</span><span class="mi">1391</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">900</span><span class="p">]);</span>
+</pre></div>
+
+
+<p>You can create a persianDate with an array of numbers that mirror the parameters passed to new <code>Date()</code> But As Persian Date Number Like [1393,2,22,11,22,30]</p>
+<blockquote>
+<p>Note:In this version array of Gregorian Date dose not Support
+['year', 'month', 'day', 'hour', 'minute', 'second', 'millisecond']</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="k">new</span> <span class="nx">persianDate</span><span class="p">([</span><span class="mi">1393</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span><span class="mi">125</span><span class="p">]);</span> <span class="c1">// &quot;۱۳۹۳-۰۱-۱۴ ۱۵:۲۵:۵۰ ب ظ&quot;</span>
+</pre></div>
+
+
+<p>Any value past the year is optional, and will default to the lowest possible number.</p>
+<div class="codehilite"><pre><span></span><span class="k">new</span> <span class="nx">persianDate</span><span class="p">([</span><span class="mi">1392</span><span class="p">]);</span> <span class="c1">// Farvardin 1st</span>
+<span class="k">new</span> <span class="nx">persianDate</span><span class="p">([</span><span class="mi">1392</span><span class="p">,</span> <span class="mi">6</span><span class="p">]);</span> <span class="c1">// Shahrivar 1st</span>
+<span class="k">new</span> <span class="nx">persianDate</span><span class="p">([</span><span class="mi">1392</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">]);</span> <span class="c1">// Shahrivar 10th</span>
+</pre></div>
+
+
+<h3 id="aspnet-json-date">ASP.NET JSON Date<a class="headerlink" href="#aspnet-json-date" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>new persianDate(String);
+</pre></div>
+
+
+<p>ASP.NET returns dates in JSON as <code>/Date(1198908717056)/</code> or <code>/Date(1198908717056-0700)/</code></p>
+<p>If a string that matches this format is passed in, it will be parsed correctly.</p>
+<div class="codehilite"><pre><span></span><span class="k">new</span> <span class="nx">persianDate</span><span class="p">(</span><span class="s2">&quot;/Date(1198908717056-0700)/&quot;</span><span class="p">);</span> <span class="c1">//&quot;۱۳۸۶-۱۰-۰۸ ۰۹:۴۱:۵۷ ق ظ&quot;</span>
+</pre></div>
+
+
+<h4 id="pesiandate-clone">PesianDate Clone<a class="headerlink" href="#pesiandate-clone" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span>new persianDate(persianDate);
+</pre></div>
+
+
+<p>All persianDate are mutable. If you want a clone of a persianDate, you can do so explicitly or implicitly.
+Calling <code>persianDate()</code> on a persianDate will clone it.</p>
+<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">persianDate</span><span class="p">([</span><span class="mi">1392</span><span class="p">]);</span>
+<span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">persianDate</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span>
+<span class="nx">a</span><span class="p">.</span><span class="nx">year</span><span class="p">(</span><span class="mi">1300</span><span class="p">);</span>
+<span class="nx">b</span><span class="p">.</span><span class="nx">year</span><span class="p">();</span> <span class="c1">// 1392</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">persianDate</span><span class="p">([</span><span class="mi">1392</span><span class="p">]);</span>
+<span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="nx">a</span><span class="p">.</span><span class="nx">clone</span><span class="p">();</span>
+<span class="nx">a</span><span class="p">.</span><span class="nx">year</span><span class="p">(</span><span class="mi">1300</span><span class="p">);</span>
+<span class="nx">b</span><span class="p">.</span><span class="nx">year</span><span class="p">();</span> <span class="c1">// 1392</span>
+</pre></div>
+
+
+<h2 id="get-set">Get + Set<a class="headerlink" href="#get-set" title="Permanent link">&para;</a></h2>
+<p>persainDate.js uses overloaded getters and setters. You may be familiar with this pattern from it's use in jQuery.</p>
+<p>Calling these methods without parameters acts as a getter, and calling them with a parameter acts as a setter.</p>
+<p>These map to the corresponding function on the native <code>Date</code> object.</p>
+<div class="codehilite"><pre><span></span><span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">seconds</span><span class="p">(</span><span class="mi">30</span><span class="p">).</span><span class="nx">valueOf</span><span class="p">()</span> <span class="o">===</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">().</span><span class="nx">setSeconds</span><span class="p">(</span><span class="mi">30</span><span class="p">);</span> <span class="c1">// true</span>
+<span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">seconds</span><span class="p">()</span> <span class="o">===</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">().</span><span class="nx">getSeconds</span><span class="p">();</span> <span class="c1">// true</span>
+<span class="sb">`</span>
+
+<span class="sb">## Millisecond</span>
+
+<span class="sb">```</span><span class="nx">javascript</span>
+<span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">millisecond</span><span class="p">(</span><span class="nb">Number</span><span class="p">);</span>
+<span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">millisecond</span><span class="p">();</span> <span class="c1">// Number</span>
+<span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">milliseconds</span><span class="p">(</span><span class="nb">Number</span><span class="p">);</span>
+<span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">milliseconds</span><span class="p">();</span> <span class="c1">// Number</span>
+</pre></div>
+
+
+<p>Gets or sets the milliseconds.</p>
+<p>Accepts numbers from 0 to 999. If the range is exceeded, it will bubble up to the seconds.</p>
+<h3 id="second">Second<a class="headerlink" href="#second" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">second</span><span class="p">(</span><span class="nb">Number</span><span class="p">);</span>
+<span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">second</span><span class="p">();</span> <span class="c1">// Number</span>
+<span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">seconds</span><span class="p">(</span><span class="nb">Number</span><span class="p">);</span>
+<span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">seconds</span><span class="p">();</span> <span class="c1">// Number</span>
+</pre></div>
+
+
+<p>Gets or sets the seconds.</p>
+<p>Accepts numbers from 0 to 59. If the range is exceeded, it will bubble up to the minutes.</p>
+<h3 id="minute">Minute<a class="headerlink" href="#minute" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">minute</span><span class="p">(</span><span class="nb">Number</span><span class="p">);</span>
+<span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">minute</span><span class="p">();</span> <span class="c1">// Number</span>
+<span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">minutes</span><span class="p">(</span><span class="nb">Number</span><span class="p">);</span>
+<span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">minutes</span><span class="p">();</span> <span class="c1">// Number</span>
+</pre></div>
+
+
+<p>Gets or sets the minutes.</p>
+<p>Accepts numbers from 0 to 59. If the range is exceeded, it will bubble up to the hours.</p>
+<h3 id="hour">Hour<a class="headerlink" href="#hour" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">hour</span><span class="p">(</span><span class="nb">Number</span><span class="p">);</span>
+<span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">hour</span><span class="p">();</span> <span class="c1">// Number</span>
+<span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">hours</span><span class="p">(</span><span class="nb">Number</span><span class="p">);</span>
+<span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">hours</span><span class="p">();</span> <span class="c1">// Number</span>
+</pre></div>
+
+
+<p>Gets or sets the hour.</p>
+<p>Accepts numbers from 0 to 23. If the range is exceeded, it will bubble up to the day.</p>
+<h3 id="date-of-month">Date of Month<a class="headerlink" href="#date-of-month" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">date</span><span class="p">(</span><span class="nb">Number</span><span class="p">);</span>
+<span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">date</span><span class="p">();</span> <span class="c1">// Number</span>
+<span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">dates</span><span class="p">(</span><span class="nb">Number</span><span class="p">);</span>
+<span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">dates</span><span class="p">();</span> <span class="c1">// Number</span>
+</pre></div>
+
+
+<p>Gets or sets the day of the month.</p>
+<p>Accepts numbers from 1 to 31. If the range is exceeded, it will bubble up to the months.</p>
+<p>Note: persianDate#date is for the date of the month, and persianDate#day is for the day of the week.</p>
+<h3 id="year">Year<a class="headerlink" href="#year" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">year</span><span class="p">(</span><span class="nb">Number</span><span class="p">);</span>
+<span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">year</span><span class="p">();</span> <span class="c1">// Number</span>
+<span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">years</span><span class="p">(</span><span class="nb">Number</span><span class="p">);</span>
+<span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">years</span><span class="p">();</span> <span class="c1">// Number</span>
+</pre></div>
+
+
+<p>Gets or sets the year.</p>
+<p>Accepts numbers from -270,000 to 270,000.</p>
+<h3 id="day-of-week">Day of Week<a class="headerlink" href="#day-of-week" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">day</span><span class="p">();</span> <span class="c1">// Number</span>
+<span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">days</span><span class="p">();</span> <span class="c1">// Number</span>
+</pre></div>
+
+
+<p>Gets the day of the week.</p>
+<p>Note: <code>persianDate#date</code> is for the date of the month, and <code>persianDate#day</code> is for the day of the week.</p>
+<h2 id="manipulate">Manipulate<a class="headerlink" href="#manipulate" title="Permanent link">&para;</a></h2>
+<p>Once you have a PersianDate , you may want to manipulate it in some way. There are a number of methods to help with this.</p>
+<p>persianDate.js uses the <a href="http://en.wikipedia.org/wiki/Fluent_interface">fluent interface pattern</a>,
+ also known as <a href="https://en.wikipedia.org/wiki/Method_chaining">method chaining</a>. This allows you to do crazy things like the following.</p>
+<div class="codehilite"><pre><span></span><span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;days&#39;</span><span class="p">,</span> <span class="mi">7</span><span class="p">).</span><span class="nx">subtract</span><span class="p">(</span><span class="s1">&#39;months&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">).</span><span class="nx">year</span><span class="p">(</span><span class="mi">2009</span><span class="p">).</span><span class="nx">hours</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="nx">minutes</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="nx">seconds</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</pre></div>
+
+
+<blockquote>
+<p>Note: It should be noted that persianDates are mutable. Calling any of the manipulation methods will change the original persianDate.</p>
+</blockquote>
+<p>If you want to create a copy and manipulate it, you should use <code>persianDate#clone</code> before manipulating the persianDate.</p>
+<h3 id="add">Add<a class="headerlink" href="#add" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">add</span><span class="p">(</span><span class="nb">String</span><span class="p">,</span> <span class="nb">Number</span><span class="p">);</span>
+</pre></div>
+
+
+<p>Mutates the original persianDate by adding time.</p>
+<p>This is a pretty robust function for adding time to an existing persianDate. To add time, pass the key of what time you want to add, and the amount you want to add.</p>
+<div class="codehilite"><pre><span></span><span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;days&#39;</span><span class="p">,</span> <span class="mi">7</span><span class="p">);</span>
+</pre></div>
+
+
+<p>There are some shorthand keys as well if you're into that whole brevity thing.</p>
+<div class="codehilite"><pre><span></span><span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="mi">7</span><span class="p">);</span>
+</pre></div>
+
+
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th align="center">Alternate</th>
+<th align="center">Shorthand</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>years</td>
+<td align="center">year</td>
+<td align="center">y</td>
+</tr>
+<tr>
+<td>months</td>
+<td align="center">month</td>
+<td align="center">M</td>
+</tr>
+<tr>
+<td>weeks</td>
+<td align="center">week</td>
+<td align="center">w</td>
+</tr>
+<tr>
+<td>days</td>
+<td align="center">day</td>
+<td align="center">d</td>
+</tr>
+<tr>
+<td>hours</td>
+<td align="center">hour</td>
+<td align="center">h</td>
+</tr>
+<tr>
+<td>minutes</td>
+<td align="center">minute</td>
+<td align="center">m</td>
+</tr>
+<tr>
+<td>seconds</td>
+<td align="center">second</td>
+<td align="center">s</td>
+</tr>
+<tr>
+<td>milliseconds</td>
+<td align="center">millisecond</td>
+<td align="center">ms</td>
+</tr>
+</tbody>
+</table>
+<p>If you want to add multiple different keys at the same time, you can pass them in as an object literal.</p>
+<div class="codehilite"><pre><span></span><span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;days&#39;</span><span class="p">,</span> <span class="mi">7</span><span class="p">).</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;months&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span> <span class="c1">// with chaining</span>
+</pre></div>
+
+
+<p>There are no upper limits for the amounts, so you can overload any of the parameters.</p>
+<div class="codehilite"><pre><span></span><span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;milliseconds&#39;</span><span class="p">,</span> <span class="mi">1000000</span><span class="p">);</span> <span class="c1">// a million milliseconds</span>
+<span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;days&#39;</span><span class="p">,</span> <span class="mi">360</span><span class="p">);</span> <span class="c1">// 360 days</span>
+</pre></div>
+
+
+<h3 id="subtract">Subtract<a class="headerlink" href="#subtract" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">subtract</span><span class="p">(</span><span class="nb">String</span><span class="p">,</span> <span class="nb">Number</span><span class="p">);</span>
+</pre></div>
+
+
+<p>Mutates the original persianDate by subtracting time.</p>
+<p>This is exactly the same as <code>persianDate#add</code> , only instead of adding time, it subtracts time.</p>
+<div class="codehilite"><pre><span></span><span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">subtract</span><span class="p">(</span><span class="s1">&#39;days&#39;</span><span class="p">,</span> <span class="mi">7</span><span class="p">);</span>
+</pre></div>
+
+
+<h3 id="start-of-time">Start of Time<a class="headerlink" href="#start-of-time" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">startOf</span><span class="p">(</span><span class="nb">String</span><span class="p">);</span>
+</pre></div>
+
+
+<p>Mutates the original persianDate by setting it to the start of a unit of time.</p>
+<div class="codehilite"><pre><span></span><span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">startOf</span><span class="p">(</span><span class="s1">&#39;year&#39;</span><span class="p">);</span>   <span class="c1">// set to Farvardin 1st, 12:00 am this year</span>
+<span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">startOf</span><span class="p">(</span><span class="s1">&#39;month&#39;</span><span class="p">);</span>  <span class="c1">// set to the first of this month, 12:00 am</span>
+<span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">startOf</span><span class="p">(</span><span class="s1">&#39;week&#39;</span><span class="p">);</span>   <span class="c1">// set to the first day of this week, 12:00 am</span>
+<span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">startOf</span><span class="p">(</span><span class="s1">&#39;day&#39;</span><span class="p">);</span>    <span class="c1">// set to 12:00 am today</span>
+<span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">startOf</span><span class="p">(</span><span class="s1">&#39;hour&#39;</span><span class="p">);</span>   <span class="c1">// set to now, but with 0 mins, 0 secs, and 0 ms</span>
+<span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">startOf</span><span class="p">(</span><span class="s1">&#39;minute&#39;</span><span class="p">);</span> <span class="c1">// set to now, but with 0 seconds and 0 milliseconds</span>
+<span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">startOf</span><span class="p">(</span><span class="s1">&#39;second&#39;</span><span class="p">);</span> <span class="c1">// same as persianDate().milliseconds(0);</span>
+</pre></div>
+
+
+<p>These shortcuts are essentially the same as the following.</p>
+<div class="codehilite"><pre><span></span><span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">startOf</span><span class="p">(</span><span class="s1">&#39;year&#39;</span><span class="p">);</span>
+<span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">month</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="nx">date</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="nx">hours</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="nx">minutes</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="nx">seconds</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="nx">milliseconds</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">startOf</span><span class="p">(</span><span class="s1">&#39;hour&#39;</span><span class="p">);</span>
+<span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">minutes</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="nx">seconds</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="nx">milliseconds</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+
+<h3 id="end-of-time">End of Time<a class="headerlink" href="#end-of-time" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">endOf</span><span class="p">(</span><span class="nb">String</span><span class="p">);</span>
+</pre></div>
+
+
+<p>Mutates the original persianDate by setting it to the end of a unit of time.</p>
+<p>This is the same as <code>persianDate#startOf</code> , only instead of setting to the start of a unit of time, it sets to the end of a unit of time.</p>
+<div class="codehilite"><pre><span></span><span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">endOf</span><span class="p">(</span><span class="s2">&quot;year&quot;</span><span class="p">);</span> <span class="c1">// set the persianDate to 12-31 11:59:59.999 pm this year</span>
+</pre></div>
+
+
+<h2 id="display">Display<a class="headerlink" href="#display" title="Permanent link">&para;</a></h2>
+<p>Once parsing and manipulation are done, you need some way to display the persianDate.</p>
+<h3 id="format">Format<a class="headerlink" href="#format" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">format</span><span class="p">();</span>
+<span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">format</span><span class="p">(</span><span class="nb">String</span><span class="p">);</span>
+</pre></div>
+
+
+<p>This is the most robust display option. It takes a string of tokens and replaces them with their corresponding values.</p>
+<div class="codehilite"><pre><span></span><span class="nx">persianDate</span><span class="p">().</span><span class="nx">format</span><span class="p">(</span><span class="s2">&quot;dddd, MMMM DD YYYY, h:mm:ss a&quot;</span><span class="p">);</span> <span class="c1">// &quot;شنبه, فروردین ۱۲ ۱۳۹۶, ۵:۵۴:۱۱ ب ظ&quot;</span>
+<span class="nx">persianDate</span><span class="p">().</span><span class="nx">format</span><span class="p">(</span><span class="s2">&quot;dddd, ha&quot;</span><span class="p">);</span> <span class="c1">// &quot;شنبه, ۵ب ظ&quot;</span>
+</pre></div>
+
+
+<p>There are a couple conventions used with the naming of the</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th align="center">Tocken</th>
+<th align="center">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Month</td>
+<td align="center">M</td>
+<td align="center">۱ ۲ ... ۱۱ ۱۲</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">MM</td>
+<td align="center">۰۱ ۰۲ ... ۱۱ ۱۲</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">MMM</td>
+<td align="center">فرو ارد ... اسف</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">MMMM</td>
+<td align="center">فروردین اردیبهشت ... اسفند</td>
+</tr>
+<tr>
+<td>Day of month</td>
+<td align="center">D</td>
+<td align="center">۱ ۲ ... ۳۰ ۳۱</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">DD</td>
+<td align="center">۰۱ ۰۲ ... ۳۰ ۳۱</td>
+</tr>
+<tr>
+<td>Day of year</td>
+<td align="center">DDD</td>
+<td align="center">۱ ۲ ... ۳۶۴ ۳۶۵</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">d</td>
+<td align="center">۰ ۱ ... ۵ ۶</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">dd</td>
+<td align="center">ش ی ... ج</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">ddd</td>
+<td align="center">شنبه یکشنبه ... جمعه</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">dddd</td>
+<td align="center">انارام مانتره سپند ... اشتاد</td>
+</tr>
+<tr>
+<td>Week of Year</td>
+<td align="center">w</td>
+<td align="center">۱ ۲ ... ۵۲ ۵۳</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">ww</td>
+<td align="center">۰۱ ۰۲ ... ۵۲ ۵۳</td>
+</tr>
+<tr>
+<td>Year</td>
+<td align="center">YY</td>
+<td align="center">۶۶ ۹۱ ... ۹۸ ۳۰</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">YYY</td>
+<td align="center">۱۳۶۶ ۱۳۹۱ ... ۱۳۹۸ ۱۴۰۱</td>
+</tr>
+<tr>
+<td>AM/PM</td>
+<td align="center">a</td>
+<td align="center">"ق ظ", "ب ظ"</td>
+</tr>
+<tr>
+<td>Hour</td>
+<td align="center">H</td>
+<td align="center">۰ ۱ ... ۲۲ ۲۳</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">HH</td>
+<td align="center">۰۰ ۰۱ ... ۲۲ ۲۳</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">h</td>
+<td align="center">۱ ۲ ... ۱۱ ۱۲</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">hh</td>
+<td align="center">۰۱ ۰۲ ... ۱۱ ۱۲</td>
+</tr>
+<tr>
+<td>Minute</td>
+<td align="center">m</td>
+<td align="center">۰ ۱ ... ۵۸ ۵۹</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">mm</td>
+<td align="center">۰۰ ۰۱ ... ۵۸ ۵۹</td>
+</tr>
+<tr>
+<td>Second</td>
+<td align="center">s</td>
+<td align="center">۰ ۱ ... ۵۸ ۵۹</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">ss</td>
+<td align="center">۰۰ ۰۱ ... ۵۸ ۵۹</td>
+</tr>
+<tr>
+<td>Unix Timestamp</td>
+<td align="center">X</td>
+<td align="center">1360013296</td>
+</tr>
+<tr>
+<td>Timezone</td>
+<td align="center">Z</td>
+<td align="center">-۰۴:۳۰ -۰۵:۰۰ ... +۰۴:۳۰ +۰۵:۰۰</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">ZZ</td>
+<td align="center">-۰۴۳۰ -۰۵:۰۰ ... +۰۴:۳۰ +۰۵:۰۰</td>
+</tr>
+</tbody>
+</table>
+<h3 id="long-date-formats">Long Date formats<a class="headerlink" href="#long-date-formats" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th align="center">Tocken</th>
+<th align="center">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Time</td>
+<td align="center">LT</td>
+<td align="center">"۴:۱۵ ب ظ"</td>
+</tr>
+<tr>
+<td>Month numeral, day of month, year</td>
+<td align="center">L</td>
+<td align="center">۱۳۹۲/۰۲/۲۰</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">l</td>
+<td align="center">۳۹۲/۲/۲۰</td>
+</tr>
+<tr>
+<td>Month name, day of month, year</td>
+<td align="center">LL</td>
+<td align="center">اردیبهشت ۲۰ ۱۳۹۲</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">ll</td>
+<td align="center">ارد ۲۰ ۱۳۹۲</td>
+</tr>
+<tr>
+<td>Month name, day of month, year, time</td>
+<td align="center">LLL</td>
+<td align="center">اردیبهشت ۱۳۹۲ ۲۰ ۴:۲۳ ب ظ</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">lll</td>
+<td align="center">ارد ۱۳۹۲ ۲۰ ۴:۲۳ ب ظ</td>
+</tr>
+<tr>
+<td>Month name, day of month, day of week, year, time</td>
+<td align="center">LLLL</td>
+<td align="center">جمعه ۲۰ اردیبهشت ۱۳۹۲ ۴:۲۵ ب ظ</td>
+</tr>
+<tr>
+<td></td>
+<td align="center">llll</td>
+<td align="center">ج ۲۰ ارد ۱۳۹۲ ۴:۲۷ ب ظ</td>
+</tr>
+</tbody>
+</table>
+<h3 id="default-format">Default format<a class="headerlink" href="#default-format" title="Permanent link">&para;</a></h3>
+<p>ISO8601 format <code>YYYY-MM-DDTHH:mm:ssZ</code>
+"۱۳۹۱-۱۰-۰۴ ۱۱:۲۷:۵۳ ق ظ"</p>
+<h3 id="format-to-persian-date">Format To Persian date<a class="headerlink" href="#format-to-persian-date" title="Permanent link">&para;</a></h3>
+<p>By Default persianDate format, use Persian Number System, for engilsh number Set formatPersian Option as false</p>
+<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">d</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">persianDate</span><span class="p">([</span><span class="mi">1391</span><span class="p">]);</span>
+<span class="nx">d</span><span class="p">.</span><span class="nx">format</span><span class="p">();</span> <span class="c1">//&quot;۱۳۹۱-۰۱-۰۱ ۰۰:۰۰:۰۰ ق ظ&quot;</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">formatPersian</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+<span class="nx">d</span><span class="p">.</span><span class="nx">format</span><span class="p">();</span> <span class="c1">//&quot;1391-01-01 00:00:00 AM&quot;</span>
+</pre></div>
+
+
+<p>Also you can set golbal config like this</p>
+<div class="codehilite"><pre><span></span><span class="nb">window</span><span class="p">.</span><span class="nx">formatPersian</span>  <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+</pre></div>
+
+
+<blockquote>
+<p>Note: After Set Golbal config you can set config for every instance</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">d</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">persianDate</span><span class="p">([</span><span class="mi">1391</span><span class="p">]);</span>
+<span class="nx">d</span><span class="p">.</span><span class="nx">format</span><span class="p">();</span> <span class="c1">//&quot;۱۳۹۱-۰۱-۰۱ ۰۰:۰۰:۰۰ ق ظ&quot;</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">formatPersian</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+<span class="nx">d</span><span class="p">.</span><span class="nx">format</span><span class="p">();</span> <span class="c1">//&quot;1391-01-01 00:00:00 AM&quot;</span>
+<span class="nx">d</span><span class="p">.</span><span class="nx">formatPersian</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+<span class="nx">d</span><span class="p">.</span><span class="nx">format</span><span class="p">();</span> <span class="c1">//&quot;۱۳۹۱-۰۱-۰۱ ۰۰:۰۰:۰۰ ق ظ&quot;</span>
+</pre></div>
+
+
+<h3 id="difference">Difference<a class="headerlink" href="#difference" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>new persianDate().diff(PersianDate|String|Boolean);
+</pre></div>
+
+
+<p>To get the difference in milliseconds, use <code>persianDate#diff</code> like you would use <code>persianDate#from</code> .</p>
+<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">persianDate</span><span class="p">([</span><span class="mi">1392</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">29</span><span class="p">]);</span>
+<span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">persianDate</span><span class="p">([</span><span class="mi">1392</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="mi">28</span><span class="p">]);</span>
+<span class="nx">a</span><span class="p">.</span><span class="nx">diff</span><span class="p">(</span><span class="nx">b</span><span class="p">)</span> <span class="c1">// 86400000</span>
+</pre></div>
+
+
+<p>To get the difference in another unit of measurement, pass that measurement as the second argument.</p>
+<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">persianDate</span><span class="p">([</span><span class="mi">1392</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="mi">29</span><span class="p">]);</span>
+<span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">persianDate</span><span class="p">([</span><span class="mi">1392</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">28</span><span class="p">]);</span>
+<span class="nx">a</span><span class="p">.</span><span class="nx">diff</span><span class="p">(</span><span class="nx">b</span><span class="p">,</span> <span class="s1">&#39;days&#39;</span><span class="p">);</span> <span class="c1">// 1</span>
+</pre></div>
+
+
+<p>The supported measurements are years, months, weeks, days, hours, minutes, and seconds. For ease of development, the singular forms are supported .</p>
+<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">persianDate</span><span class="p">([</span><span class="mi">1391</span><span class="p">,</span> <span class="mi">0</span><span class="p">]);</span>
+<span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">persianDate</span><span class="p">([</span><span class="mi">1392</span><span class="p">,</span> <span class="mi">5</span><span class="p">]);</span>
+<span class="nx">a</span><span class="p">.</span><span class="nx">diff</span><span class="p">(</span><span class="nx">b</span><span class="p">,</span> <span class="s1">&#39;years&#39;</span><span class="p">);</span>
+<span class="nx">a</span><span class="p">.</span><span class="nx">diff</span><span class="p">(</span><span class="nx">b</span><span class="p">,</span> <span class="s1">&#39;years&#39;</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+</pre></div>
+
+
+<p>If the persianDate is later than the persianDate you are passing to <code>persianDate.fn.diff</code> , the return value will be negative.</p>
+<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">persianDate</span><span class="p">();</span>
+<span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;seconds&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+<span class="nx">a</span><span class="p">.</span><span class="nx">diff</span><span class="p">(</span><span class="nx">b</span><span class="p">);</span> <span class="c1">// -1000</span>
+<span class="nx">b</span><span class="p">.</span><span class="nx">diff</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span> <span class="c1">// 1000</span>
+</pre></div>
+
+
+<p>A easy way to think of this is by replacing <code>.diff(</code> with a minus operator.</p>
+<div class="codehilite"><pre><span></span><span class="nx">a</span><span class="p">.</span><span class="nx">diff</span><span class="p">(</span><span class="nx">b</span><span class="p">);</span>
+<span class="nx">b</span><span class="p">.</span><span class="nx">diff</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span>
+</pre></div>
+
+
+<h3 id="unix-offset-milliseconds_1">Unix Offset (milliseconds)<a class="headerlink" href="#unix-offset-milliseconds_1" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">valueOf</span><span class="p">();</span>
+</pre></div>
+
+
+<p><code>persianDate#valueOf</code> simply outputs the number of milliseconds since the Unix Epoch, just like <code>Date#valueOf</code> .</p>
+<div class="codehilite"><pre><span></span><span class="k">new</span> <span class="nx">persianDate</span><span class="p">(</span><span class="mi">1318874398806</span><span class="p">).</span><span class="nx">valueOf</span><span class="p">();</span> <span class="c1">// 1318874398806</span>
+<span class="k">new</span> <span class="nx">persianDate</span><span class="p">(</span><span class="mi">1318874398806</span><span class="p">).</span><span class="nx">format</span><span class="p">();</span> <span class="c1">// &quot;۱۳۹۰-۰۷-۲۵ ۲۱:۲۹:۵۸ ب ظ&quot;</span>
+</pre></div>
+
+
+<p>To get a Unix timestamp (the number of seconds since the epoch) from a <code>persianDate</code> , use <code>persianDate#unix</code> .</p>
+<h3 id="unix-timestamp-seconds_1">Unix Timestamp (seconds)<a class="headerlink" href="#unix-timestamp-seconds_1" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">unix</span><span class="p">();</span>
+</pre></div>
+
+
+<p><code>persianDate#unix</code> outputs a Unix timestamp (the of seconds since the Unix Epoch).</p>
+<div class="codehilite"><pre><span></span><span class="k">new</span> <span class="nx">persianDate</span><span class="p">(</span><span class="mi">1318874398806</span><span class="p">).</span><span class="nx">unix</span><span class="p">();</span> <span class="c1">// 1318874398</span>
+</pre></div>
+
+
+<p>This value is floored to the nearest second, and does not include a milliseconds component.</p>
+<h3 id="timezone-offset">Timezone Offset<a class="headerlink" href="#timezone-offset" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">zone</span><span class="p">();</span>
+</pre></div>
+
+
+<p>Get the timezone offset in minutes.</p>
+<div class="codehilite"><pre><span></span><span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">zone</span><span class="p">();</span> <span class="c1">// (60, 120, 240, -270, etc.)</span>
+</pre></div>
+
+
+<h3 id="days-in-month">Days in Month<a class="headerlink" href="#days-in-month" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">daysInMonth</span><span class="p">();</span>
+</pre></div>
+
+
+<p>Get the number of days in the current month.</p>
+<div class="codehilite"><pre><span></span><span class="k">new</span> <span class="nx">persianDate</span><span class="p">([</span><span class="mi">1392</span><span class="p">,</span><span class="mi">1</span><span class="p">]).</span><span class="nx">daysInMonth</span><span class="p">();</span> <span class="c1">// 31</span>
+<span class="k">new</span> <span class="nx">persianDate</span><span class="p">([</span><span class="mi">1392</span><span class="p">,</span><span class="mi">8</span><span class="p">]).</span><span class="nx">daysInMonth</span><span class="p">();</span> <span class="c1">// 30</span>
+<span class="k">new</span> <span class="nx">persianDate</span><span class="p">([</span><span class="mi">1392</span><span class="p">,</span><span class="mi">12</span><span class="p">]).</span><span class="nx">daysInMonth</span><span class="p">();</span> <span class="c1">// 29</span>
+<span class="k">new</span> <span class="nx">persianDate</span><span class="p">([</span><span class="mi">1391</span><span class="p">,</span><span class="mi">12</span><span class="p">]).</span><span class="nx">daysInMonth</span><span class="p">();</span> <span class="c1">// 30</span>
+</pre></div>
+
+
+<h3 id="as-javascript-date">As Javascript Date<a class="headerlink" href="#as-javascript-date" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">toDate</span><span class="p">();</span>
+</pre></div>
+
+
+<p>To get the native <code>Date</code> object that <code>persianDate.js</code> wraps, use <code>persianDate#toDate</code> .</p>
+<p>This will return the <code>Date</code> that the <code>persianDate</code> uses, so any changes to that <code>Date</code> will cause the persianDate to change. If you want a Date that is a copy, use <code>persianDate#clone</code> before you use <code>persianDate#toDate</code> .</p>
+<h3 id="as-array">As Array<a class="headerlink" href="#as-array" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">toArray</span><span class="p">();</span>
+</pre></div>
+
+
+<p>This returns an array that mirrors the parameters from new <code>persianDate()</code> .</p>
+<div class="codehilite"><pre><span></span><span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">toArray</span><span class="p">();</span> <span class="c1">// [1391, 1, 4, 14, 40, 16, 154];</span>
+</pre></div>
+
+
+<h2 id="quert">Quert<a class="headerlink" href="#quert" title="Permanent link">&para;</a></h2>
+<h3 id="is-leap-year">Is Leap Year<a class="headerlink" href="#is-leap-year" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">isLeapYear</span><span class="p">();</span>
+</pre></div>
+
+
+<p><code>persianDate#isLeapYear</code> returns true if that year is a leap year, and <code>false</code> if it is not.</p>
+<div class="codehilite"><pre><span></span><span class="k">new</span> <span class="nx">persianDate</span><span class="p">([</span><span class="mi">1391</span><span class="p">]).</span><span class="nx">isLeapYear</span><span class="p">();</span> <span class="c1">// true</span>
+<span class="k">new</span> <span class="nx">persianDate</span><span class="p">([</span><span class="mi">1392</span><span class="p">]).</span><span class="nx">isLeapYear</span><span class="p">();</span> <span class="c1">// false</span>
+<span class="k">new</span> <span class="nx">persianDate</span><span class="p">([</span><span class="mi">1393</span><span class="p">]).</span><span class="nx">isLeapYear</span><span class="p">();</span> <span class="c1">// false</span>
+<span class="k">new</span> <span class="nx">persianDate</span><span class="p">([</span><span class="mi">1394</span><span class="p">]).</span><span class="nx">isLeapYear</span><span class="p">();</span> <span class="c1">// false</span>
+<span class="k">new</span> <span class="nx">persianDate</span><span class="p">([</span><span class="mi">1395</span><span class="p">]).</span><span class="nx">isLeapYear</span><span class="p">();</span> <span class="c1">// true</span>
+<span class="k">new</span> <span class="nx">persianDate</span><span class="p">([</span><span class="mi">1396</span><span class="p">]).</span><span class="nx">isLeapYear</span><span class="p">();</span> <span class="c1">// false</span>
+</pre></div>
+
+
+<h3 id="is-daylight-saving-time">Is Daylight Saving Time<a class="headerlink" href="#is-daylight-saving-time" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">isDST</span><span class="p">();</span>
+</pre></div>
+
+
+<p><code>persianDate#isDST</code> checks if the current persianDate is in daylight savings time.</p>
+<blockquote>
+<p>Note: <a href="https://fa.wikipedia.org/wiki/%D8%B3%D8%A7%D8%B9%D8%AA_%D8%AA%D8%A7%D8%A8%D8%B3%D8%AA%D8%A7%D9%86%DB%8C">Daylight saving time in Iran</a></p>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="k">new</span> <span class="nx">persianDate</span><span class="p">([</span><span class="mi">1396</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">12</span><span class="p">]).</span><span class="nx">isDST</span><span class="p">();</span> <span class="c1">// false</span>
+<span class="k">new</span> <span class="nx">persianDate</span><span class="p">([</span><span class="mi">1396</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">14</span><span class="p">]).</span><span class="nx">isDST</span><span class="p">();</span> <span class="c1">// true</span>
+</pre></div>
+
+
+<h3 id="is-a-persaindat">Is a PersainDat<a class="headerlink" href="#is-a-persaindat" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">persianDate</span><span class="p">();</span>
+<span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">isPersianDate</span><span class="p">(</span><span class="nx">obj</span><span class="p">);</span> <span class="c1">// true</span>
+</pre></div>
+
+
+<p>To check if a variable is a persianDate object, use <code>persianDate().isPersianDate()</code> .</p>
+<div class="codehilite"><pre><span></span><span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">isPersianDate</span><span class="p">();</span> <span class="c1">// false</span>
+<span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">isPersianDate</span><span class="p">(</span><span class="k">new</span> <span class="nb">Date</span><span class="p">());</span> <span class="c1">// false</span>
+<span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">isPersianDate</span><span class="p">(</span><span class="nx">persianDate</span><span class="p">());</span> <span class="c1">// true</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+        
+          <a href="changelog/" title="Change log" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Change log
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            license http://www.wtfpl.net/
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/babakhani" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://de.linkedin.com/in/martin-donath-20a95039" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application-6940329b9f.js"></script>
+      
+      
+      <script>app.initialize({url:{base:".."}})</script>
+      
+        <script src=".././lib/jquery/dist/jquery.js"></script>
+      
+        <script src=".././lib/persian-date/dist/persian-date.js"></script>
+      
+        <script src=".././lib/persian-datepicker/dist/js/persian-datepicker.js"></script>
+      
+        <script src=".././js/datepicker-example.js"></script>
+      
+        <script src=".././js/doc.js"></script>
+      
+        <script src="https://buttons.github.io/buttons.js"></script>
+      
+    
+    
+      
+      <script>!function(e,t,a,n,o,c,i){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,c=t.createElement(a),i=t.getElementsByTagName(a)[0],c.async=1,c.src=n,i.parentNode.insertBefore(c,i)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-40548780-1","babakhani.github.io/PersianWebToolkit/"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var t=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",t,e.href)})});var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})</script>
+      
+    
+  </body>
+</html>
