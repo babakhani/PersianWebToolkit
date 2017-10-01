@@ -1052,13 +1052,18 @@
         }, 
         {
             "location": "/datepicker/changelog/", 
-            "text": "Change Log\n\n\nAll notable changes to this project will be documented in this file.\n\n\nThe format is based on \nKeep a Changelog\n \nand this project adheres to \nSemantic Versioning\n.\n\n\n[1.0.0] - 2017-10-1\n\n\n\n\nAdd gregorian calendar type\n\n\nAdd locale\n\n\nMake better user interface\n\n\nAdd responsive option\n\n\nAdd onSet event, that called when selected date changed by api\n\n\nExpose datepicker state with api (getState())\n\n\nAdd range selector with order validation example in doc\n\n\nImprove options set method to make better live configuration\n\n\nSeparate select event of user (click touch etc) and api\n\n\nDeprecate toolbox.text, toolbox.text.btnToday, persianDigit, toolbox.onToday\n\n\n\n\n[0.5.10]\n\n\n\n\nHotfix time plot wheel error\n\n\n\n\n[0.5.9]\n\n\n\n\nFix #154 #153 #152 #151 #150 #148 github issues\n\n\n\n\n[0.5.5]\n\n\n\n\nFix days rendering\n\n\nFix readme\n\n\n\n\n[0.5.4]\n\n\n\n\nFix document\n\n\nWorks before beta release\n\n\n\n\n[0.5.0]\n\n\n\n\nRefactor all code to es6\n\n\n\n\n[0.1.7] 2013-09-21\n\n\n\n\nFirst release", 
+            "text": "Change Log\n\n\nAll notable changes to this project will be documented in this file.\n\n\nThe format is based on \nKeep a Changelog\n \nand this project adheres to \nSemantic Versioning\n.\n\n\n[1.0.2] - 2017-10-1\n\n\n\n\nFix dependency version\n\n\n\n\n[1.0.0] - 2017-10-1\n\n\n\n\nAdd gregorian calendar type\n\n\nAdd locale\n\n\nMake better user interface\n\n\nAdd responsive option\n\n\nAdd onSet event, that called when selected date changed by api\n\n\nExpose datepicker state with api (getState())\n\n\nAdd range selector with order validation example in doc\n\n\nImprove options set method to make better live configuration\n\n\nSeparate select event of user (click touch etc) and api\n\n\nDeprecate toolbox.text, toolbox.text.btnToday, persianDigit, toolbox.onToday\n\n\n\n\n[0.5.10]\n\n\n\n\nHotfix time plot wheel error\n\n\n\n\n[0.5.9]\n\n\n\n\nFix #154 #153 #152 #151 #150 #148 github issues\n\n\n\n\n[0.5.5]\n\n\n\n\nFix days rendering\n\n\nFix readme\n\n\n\n\n[0.5.4]\n\n\n\n\nFix document\n\n\nWorks before beta release\n\n\n\n\n[0.5.0]\n\n\n\n\nRefactor all code to es6\n\n\n\n\n[0.1.7] 2013-09-21\n\n\n\n\nFirst release", 
             "title": "Change log"
         }, 
         {
             "location": "/datepicker/changelog/#change-log", 
             "text": "All notable changes to this project will be documented in this file.  The format is based on  Keep a Changelog  \nand this project adheres to  Semantic Versioning .", 
             "title": "Change Log"
+        }, 
+        {
+            "location": "/datepicker/changelog/#102-2017-10-1", 
+            "text": "Fix dependency version", 
+            "title": "[1.0.2] - 2017-10-1"
         }, 
         {
             "location": "/datepicker/changelog/#100-2017-10-1", 
