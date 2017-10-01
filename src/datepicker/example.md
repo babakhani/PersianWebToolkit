@@ -14,13 +14,111 @@ $('.normal-example').persianDatepicker();
 <input class="datepicker-demo normal-example" />
 
 
-## inline example
+## without initialValue
+
+```javascript
+$('.initial-value-example').persianDatepicker({
+    initialValue: false
+});
+```
+
+```html
+<input class="initial-value-example" />
+```
+<label>Datepicker</label>
+<input class="datepicker-demo initial-value-example" />
+
+
+
+## initialValueType
+
+```javascript
+$('.initial-value-type-example').persianDatepicker({
+    initialValueType: 'persian'
+});
+```
+
+```html
+<input class="initial-value-type-example" value="1396-10-12" />
+```
+<label>Datepicker</label>
+<input class="datepicker-demo initial-value-type-example" value="1396-10-12" />
+
+
+
+```javascript
+$('.initial-value-type-gregorian-example').persianDatepicker({
+    initialValueType: 'gregorian'
+});
+```
+
+```html
+<input class="initial-value-type-gregorian-example" value="2017-1-1" />
+```
+<label>Datepicker</label>
+<input class="datepicker-demo initial-value-type-gregorian-example" value="2017-1-1" />
+
+
+
+## inline
 
 ```javascript
 $('.inline-example').persianDatepicker({
     inline: true,
     altField: '#inlineExampleAlt',
     altFormat: 'LLLL',
+    toolbox:{
+        calendarSwitch:{
+            enabled: true
+        }
+    },
+    navigator:{
+        scroll:{
+            enabled: false
+        }
+    },
+    maxDate: new persianDate().add('month', 3).valueOf(),
+    minDate: new persianDate().subtract('month', 3).valueOf(),
+    timePicker: {
+        enabled: true,
+        meridiem: {
+            enabled: true
+        }
+    }
+});
+```
+```
+
+
+```html
+<input id="inlineExampleAlt" class="datepicker-demo" />
+<div class="inline-example" ></div>
+```
+
+<div class="one-inline-datepicker">
+<label>Datepicker</label>
+<input id="inlineExampleAlt" class="datepicker-demo" />
+<div class="inline-example" ></div>
+</div>
+
+
+## Gregorian Calendar
+
+```javascript
+$('.gregorian-example').persianDatepicker({
+    inline: true,
+    altField: '#gregorianExampleAlt',
+    altFormat: 'LLLL',
+    toolbox:{
+        calendarSwitch:{
+            enabled: true
+        }
+    },
+    navigator:{
+        scroll:{
+            enabled: false
+        }
+    },
     maxDate: new persianDate().add('month', 3).valueOf(),
     minDate: new persianDate().subtract('month', 3).valueOf(),
     timePicker: {
@@ -33,13 +131,88 @@ $('.inline-example').persianDatepicker({
 ```
 
 ```html
-<input id="inlineExampleAlt" class="datepicker-demo" />
-<div class="inline-example" ></div>
+<input id="gregorianExampleAlt" class="datepicker-demo" />
+<div class="gregorian-example" ></div>
 ```
 
+<div class="one-inline-datepicker">
 <label>Datepicker</label>
-<input id="inlineExampleAlt" class="datepicker-demo" />
-<div class="inline-example" ></div>
+<input id="gregorianExampleAlt" class="datepicker-demo" />
+<div class="gregorian-example" ></div>
+</div>
+
+
+
+## Change Leap Year Mode
+
+```javascript
+$('.leapyear-algorithmic').persianDatepicker({
+    inline: true,
+    
+});
+
+$('.leapyear-astronomical').persianDatepicker({
+    inline: true,
+    calendar:{
+        persian: {
+            leapYearMode: 'astronomical'
+        }
+    }
+});
+```
+
+```html
+<div class="leapyear-algorithmic" data-date="2025/3/12" ></div>
+<div class="leapyear-astronomical" data-date="2025/3/12" ></div>
+```
+
+<div class="two-inline-datepicker">
+<div>
+<label>algorithmic</label>
+<div class="leapyear-algorithmic" data-date="2025/3/12" ></div>
+</div>
+<div>
+<label>astronomical</label>
+<div class="leapyear-astronomical" data-date="2025/3/12" ></div>
+</div>
+</div>
+
+
+
+## locale
+
+```javascript
+$('.locale-fa').persianDatepicker({
+    inline: true,
+    
+});
+
+$('.locale-en').persianDatepicker({
+    inline: true,
+    calendar:{
+        persian: {
+            locale: 'en'
+        }
+    }
+});
+```
+
+```html
+<div class="locale-fa" ></div>
+<div class="locale-en" ></div>
+```
+
+<div class="two-inline-datepicker">
+<div>
+<label>fa</label>
+<div class="locale-fa" ></div>
+</div>
+<div>
+<label>en</label>
+<div class="locale-en" ></div>
+</div>
+</div>
+
 
 ## Observer
 
@@ -112,22 +285,6 @@ $('.alt-field-example').persianDatepicker({
 
 <label>Datepicker</label>
 <input class="datepicker-demo alt-field-example" />
-
-
-## persianDigit
-
-```javascript
-$('.persian-digit-example').persianDatepicker({
-    persianDigit: false
-});
-```
-
-```html
-<input class="persian-digit-example" />
-```
-<label>Datepicker</label>
-<input class="datepicker-demo persian-digit-example" />
-
 
 ## viewMode
 
@@ -278,9 +435,65 @@ $('.on-select-example').persianDatepicker({
 
 
 
+## Range selector
 
+Range Selector that make sure 'to' date is after 'from' date and also 'from' is before 'to' date.
 
+```javascript
 
+var to, from;
+to = $(".range-to-example").persianDatepicker({
+    inline: true,
+    altField: '.range-to-example-alt',
+    altFormat: 'LLLL',
+    initialValue: false,
+    onSelect: function (unix) {
+        to.touched = true;
+        if (from && from.options && from.options.maxDate != unix) {
+            var cachedValue = from.getState().selected.unixDate;
+            from.options = {maxDate: unix};
+            if (from.touched) {
+                from.setDate(cachedValue);
+            }
+        }
+    }
+});
+from = $(".range-from-example").persianDatepicker({
+    inline: true,
+    altField: '.range-from-example-alt',
+    altFormat: 'LLLL',
+    initialValue: false,
+    onSelect: function (unix) {
+        from.touched = true;
+        if (to && to.options && to.options.minDate != unix) {
+            var cachedValue = to.getState().selected.unixDate;
+            to.options = {minDate: unix};
+            if (to.touched) {
+                to.setDate(cachedValue);
+            }
+        }
+    }
+});
+
+```
+
+```html
+<div class="range-from-example"></div>
+<div class="range-to-example"></div>
+```
+
+<div class="two-inline-datepicker">
+<div>
+<label>to</label>
+<input  class='datepicker-demo range-to-example-alt' />
+<div class="datepicker-demo range-to-example" ></div>
+</div>
+<div>
+<label>From</label>
+<input  class='datepicker-demo range-from-example-alt' />
+<div class="datepicker-demo range-from-example" ></div>
+</div>
+</div>
 
 
 

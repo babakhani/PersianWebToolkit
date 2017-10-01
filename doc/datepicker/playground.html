@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Persian Web Toolkit</title>
+    <link rel="shortcut icon" href="../img/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans"/>
+    <!-- Bootstrap Core CSS -->
+    <link href="../lib/startbootstrap-heroic-features/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../lib/startbootstrap-heroic-features/css/heroic-features.css" rel="stylesheet">
+    <link href="../css/landing.css" rel="stylesheet">
+
+    <link href="../lib/persian-datepicker/dist/css/persian-datepicker.min.css" rel="stylesheet">
+    <link href="../lib/vue-persian-datepicker/css/datepicker.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/PersianWebToolkit/doc">
+                <div class="page-logo"></div>
+                Persian Web Toolkit / datepicker playground
+            </a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/PersianWebToolkit/doc/persian-date">Persian Date</a>
+                </li>
+                <li>
+                    <a href="/PersianWebToolkit/doc/datepicker">Datepicker</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<!-- Page Content -->
+<!-- Jumbotron Header -->
+<div class="container">
+    <div class="row">
+
+        <br/>
+
+        <div class="container-fluid datepicker-main">
+            <div class="container-fluid">
+                <div class="row content">
+                    <div id="app">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3">
+                                <div class="datepicker-demo-box">
+                                    <div class="form-group">
+                                        <label>altField:</label>
+                                        <input readonly class="form-control" id="altfieldExample"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Field:</label>
+                                        <datepicker v-on:eventcalled="eventcalled"
+                                                    v-bind:options="datepickerOptions"></datepicker>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-8 col-md-8  col-lg-9 options-container">
+                                <div>
+
+                                    <!-- Nav tabs -->
+                                    <ul id="configTab" class="nav nav-tabs" role="tablist">
+                                        <li role="presentation" class="active">
+                                            <a href="#home" aria-controls="home" role="tab" data-toggle="tab">
+                                                General
+                                            </a>
+                                        </li>
+                                        <li role="presentation">
+                                            <a href="#calendar" aria-controls="calednar" role="tab" data-toggle="tab">
+                                                Calendar
+                                            </a>
+                                        </li>
+                                        <li role="presentation">
+                                            <a href="#timesettings" aria-controls="timesettings" role="tab"
+                                               ata-toggle="tab">
+                                                Pickers
+                                            </a>
+                                        </li>
+                                        <li role="presentation">
+                                            <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">
+                                                Navigator
+                                            </a>
+                                        </li>
+                                        <!--<li role="presentation">-->
+                                        <!--<a href="#setting" aria-controls="setting" role="tab" data-toggle="tab">-->
+                                        <!--Timepicker-->
+                                        <!--</a>-->
+                                        <!--</li>-->
+                                        <li role="presentation">
+                                            <a href="#calender" aria-controls="calender" role="tab"
+                                               data-toggle="tab">
+                                                Toolbox
+                                            </a>
+                                        </li>
+                                        <li role="presentation">
+                                            <a href="#template" aria-controls="template" role="tab"
+                                               data-toggle="tab">
+                                                Template
+                                            </a>
+                                        </li>
+                                        <li role="presentation">
+                                            <a href="#eventsbox" aria-controls="eventsbox" role="tab"
+                                               data-toggle="tab">
+                                                events
+                                            </a>
+                                        </li>
+                                        <li role="presentation">
+                                            <a class="btn-success" href="#messages" aria-controls="messages" role="tab"
+                                               data-toggle="tab">
+                                                Get Configuration
+                                            </a>
+                                        </li>
+
+
+                                    </ul>
+
+                                    <!-- Tab panes -->
+                                    <div class="tab-content">
+                                        <div role="tabpanel" class="tab-pane" id="calendar">
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <div class="form-group">
+                                                            <label>calendarType:</label>
+                                                            <select v-model="datepickerOptions.calendarType"
+                                                                    class="form-control">
+                                                                <option>persian</option>
+                                                                <option>gregorian</option>
+                                                            </select>
+                                                            <p class="alert alert-info margin-top">
+                                                                set default calendar mode of datepicker, available
+                                                                options:
+                                                                'persian', 'gregorian'
+                                                            </p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-xs-6">
+                                                        <div class="form-group">
+                                                            <label>persian showHint:</label>
+                                                            <div>
+                                                                <label class="switch">
+                                                                    <input type="checkbox"
+                                                                           v-model="datepickerOptions.calendar.persian.showHint">
+                                                                    <span class="slider" data-toggle="tooltip"
+                                                                          data-placement="bottom"
+                                                                          title="right someThings here!"></span>
+                                                                </label>
+                                                            </div>
+                                                            <p class="alert alert-info margin-top">
+                                                                if set true, small date hint of this calendar will be
+                                                                shown on
+                                                                another calendar
+                                                            </p>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="sel1">persian locale:</label>
+                                                            <select v-model="datepickerOptions.calendar.persian.locale"
+                                                                    class="form-control">
+                                                                <option>fa</option>
+                                                                <option>en</option>
+                                                            </select>
+                                                            <p class="alert alert-info margin-top">
+                                                                set locale of calendar available options: 'fa', 'en'
+                                                            </p>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label for="sel1">persian locale:</label>
+                                                            <select v-model="datepickerOptions.calendar.persian.leapYearMode"
+                                                                    class="form-control">
+                                                                <option>algorithmic</option>
+                                                                <option>astronomical</option>
+                                                            </select>
+                                                            <p class="alert alert-info margin-top">
+                                                                if set true, small date hint of this calendar will be
+                                                                shown on
+                                                                another calendar
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-6">
+                                                        <div class="form-group">
+
+                                                            <div class="row">
+                                                                <label class="col-xs-12">gregorian showHint:</label>
+                                                            </div>
+                                                            <div>
+                                                                <label class="switch">
+                                                                    <input type="checkbox"
+                                                                           v-model="datepickerOptions.calendar.gregorian.showHint">
+                                                                    <span class="slider" data-toggle="tooltip"
+                                                                          data-placement="bottom"
+                                                                          title="right someThings here!"></span>
+                                                                </label>
+                                                            </div>
+                                                            <p class="alert alert-info margin-top">
+                                                                if set true, small date hint of this calendar will be
+                                                                shown on
+                                                                another calendar
+                                                            </p>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="sel1">gregorian locale:</label>
+                                                            <select v-model="datepickerOptions.calendar.gregorian.locale"
+                                                                    class="form-control" id="sel1">
+                                                                <option>fa</option>
+                                                                <option>en</option>
+                                                            </select>
+                                                            <p class="alert alert-info margin-top">
+                                                                set locale of calendar available options: 'fa', 'en'
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div role="tabpanel" class="tab-pane active" id="home">
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="form-group col-xs-6">
+                                                        <label>inline:</label>
+                                                        <div>
+                                                            <label class="switch">
+                                                                <input type="checkbox"
+                                                                       v-model="datepickerOptions.inline"
+                                                                       type="checkbox">
+                                                                <span class="slider" data-toggle="tooltip"
+                                                                      data-placement="bottom"
+                                                                      title="right someThings here!"></span>
+                                                            </label>
+                                                        </div>
+
+                                                        <p class="alert alert-info margin-top">
+                                                            if true datepicker render inline
+                                                        </p>
+
+                                                    </div>
+
+                                                    <div class="form-group col-xs-6">
+                                                        <label>responsive:</label>
+                                                        <div>
+                                                            <label class="switch">
+                                                                <input type="checkbox"
+                                                                       v-model="datepickerOptions.responsive"
+                                                                       type="checkbox">
+                                                                <span class="slider" data-toggle="tooltip"
+                                                                      data-placement="bottom"
+                                                                      title="right someThings here!"></span>
+                                                            </label>
+                                                        </div>
+                                                        <p class="alert alert-info margin-top">
+                                                            if set true make enable responsive view on mobile devices
+                                                        </p>
+                                                    </div>
+
+                                                    <div class="form-group col-xs-6">
+                                                        <label>autoClose:</label>
+                                                        <div>
+                                                            <label class="switch">
+                                                                <input :disabled="datepickerOptions.inline"
+                                                                       v-model="datepickerOptions.autoClose"
+                                                                       type="checkbox">
+                                                                <span class="slider"></span>
+                                                            </label>
+                                                        </div>
+                                                        <p class="alert alert-info margin-top">
+                                                            If true picker close When select a date
+                                                        </p>
+                                                    </div>
+
+                                                    <div class="form-group col-xs-6">
+                                                        <label>onlySelectOnDate:</label>
+                                                        <div>
+                                                            <label class="switch">
+                                                                <input type="checkbox"
+                                                                       v-model="datepickerOptions.onlySelectOnDate">
+                                                                <span class="slider"></span>
+                                                            </label>
+                                                        </div>
+                                                        <p class="alert alert-info margin-top">
+                                                            if true date select just by click on day in month grid, and
+                                                            when
+                                                            user select month or year selected date doesnt change
+                                                        </p>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xs-12">
+                                                            <div class="form-group col-xs-6">
+                                                                <label for="sel1">viewMode:</label>
+                                                                <select v-model="datepickerOptions.viewMode"
+                                                                        class="form-control">
+                                                                    <option>day</option>
+                                                                    <option>month</option>
+                                                                    <option>year</option>
+                                                                </select>
+                                                                <p class="alert alert-info">
+                                                                    default view mode, Acceptable value : day,month,year
+                                                                </p>
+                                                            </div>
+                                                            <div class="form-group col-xs-6">
+                                                                <label>initialValue:</label>
+                                                                <div>
+                                                                    <label class="switch">
+                                                                        <input type="checkbox"
+                                                                               v-model="datepickerOptions.initialValue">
+                                                                        <span class="slider"></span>
+                                                                    </label>
+                                                                </div>
+                                                                <p class="alert alert-info margin-top">
+                                                                    If set true datepicker init with input value date
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group col-xs-6">
+                                                        <label>format:</label>
+                                                        <input :disabled="datepickerOptions.inline" class="form-control"
+                                                               v-model="datepickerOptions.format"/>
+                                                        <p class="alert alert-info">
+                                                            Default input value formatt string.
+                                                        </p>
+                                                    </div>
+                                                    <div class="form-group col-xs-6">
+                                                        <label>altFormat:</label>
+                                                        <input class="form-control"
+                                                               v-model="datepickerOptions.altFormat"/>
+                                                        <p class="alert alert-info">
+                                                            Default input value formatt string.
+                                                        </p>
+                                                    </div>
+
+                                                    <div class="form-group col-xs-6">
+                                                        <label>minDate:</label>
+                                                        <input class="form-control"
+                                                               v-model="datepickerOptions.minDate"/>
+                                                        <p class="alert alert-info">
+                                                            set min date on datepicker, prevent user select date before
+                                                            given
+                                                            unix time
+                                                        </p>
+                                                    </div>
+
+                                                    <div class="form-group col-xs-6">
+                                                        <label>maxDate:</label>
+                                                        <input class="form-control"
+                                                               v-model="datepickerOptions.maxDate"/>
+                                                        <p class="alert alert-info">
+                                                            set max date on datepicker, prevent user select date after
+                                                            given
+                                                            unix time
+                                                        </p>
+                                                    </div>
+
+
+                                                    <div class="form-group col-xs-12">
+                                                        <label>postion:</label>
+                                                        <input class="form-control"
+                                                               v-model="datepickerOptions.position"/>
+                                                        <p class="alert alert-info">
+                                                            position of datepicker element relative to input element,
+                                                            accept
+                                                            auto, [x,y]
+                                                        </p>
+                                                    </div>
+
+                                                    <div class="form-group col-xs-6">
+                                                        <label>observer:</label>
+                                                        <div>
+                                                            <label class="switch">
+                                                                <input type="checkbox"
+                                                                       :disabled="datepickerOptions.inline"
+                                                                       v-model="datepickerOptions.observer">
+                                                                <span class="slider"></span>
+                                                            </label>
+                                                        </div>
+                                                        <p class="alert alert-info margin-top">
+                                                            if true datepicker update self by user inputted date string,
+                                                            accept
+                                                            'yyyy/mm/dd' example: '1396/10/2', '1396/1/12'
+                                                        </p>
+                                                    </div>
+
+                                                    <div class="form-group col-xs-6">
+                                                        <label>inputDelay:</label>
+                                                        <input class="form-control"
+                                                               :disabled="datepickerOptions.inline"
+                                                               v-model="datepickerOptions.inputDelay"/>
+                                                        <p class="alert alert-info">
+                                                            waite time for last user key-down event, accept millisecond
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div role="tabpanel" class="tab-pane" id="profile">
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="form-group col-xs-6">
+                                                        <label>Navigator enabled:</label>
+                                                        <div>
+                                                            <label class="switch">
+                                                                <input :disabled="datepickerOptions.onlyTimePicker"
+                                                                       type="checkbox"
+                                                                       v-model="datepickerOptions.navigator.enabled"
+                                                                       type="checkbox">
+                                                                <span class="slider"></span>
+                                                            </label>
+                                                        </div>
+
+                                                        <p class="alert alert-info">
+                                                            make navigator enable or disable
+                                                        </p>
+
+                                                    </div>
+                                                    <div class="form-group col-xs-6">
+                                                        <label>Navigator Scroll enabled:</label>
+                                                        <div>
+                                                            <label class="switch">
+                                                                <input type="checkbox"
+                                                                       v-model="datepickerOptions.navigator.scroll.enabled"
+                                                                       type="checkbox">
+                                                                <span class="slider"></span>
+                                                            </label>
+                                                        </div>
+                                                        <p class="alert alert-info">
+                                                            if you want make disable scroll navigation set this option
+                                                            false
+                                                        </p>
+                                                    </div>
+                                                    <div class="form-group col-xs-6">
+                                                        <label>next button text:</label>
+                                                        <input type="text"
+                                                               v-model="datepickerOptions.navigator.text.btnNextText"/>
+                                                        <p class="alert alert-info">
+                                                            text of next button
+                                                        </p>
+                                                    </div>
+                                                    <div class="form-group col-xs-6">
+                                                        <label>previews button text:</label>
+                                                        <input type="text"
+                                                               v-model="datepickerOptions.navigator.text.btnPrevText"/>
+                                                        <p class="alert alert-info">
+                                                            text of previews button
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div role="tabpanel" class="tab-pane" id="timesettings">
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-xs-4">
+                                                        <div class="form-group">
+                                                            <label>yearPicker:</label>
+                                                            <div>
+                                                                <label class="switch">
+                                                                    <input type="checkbox"
+                                                                           v-model="datepickerOptions.yearPicker.enabled">
+                                                                    <span class="slider"></span>
+                                                                </label>
+                                                            </div>
+                                                            <p class="alert alert-info margin-top ">
+                                                                make yearPicker enable or disable
+                                                            </p>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>yearPicker TitleFormat:</label>
+                                                            <div>
+                                                                <input class="form-control"
+                                                                       v-model="datepickerOptions.yearPicker.titleFormat"/>
+                                                            </div>
+                                                            <p class="alert alert-info margin-top ">
+                                                                YearPicker title format string
+                                                            </p>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="col-xs-4">
+                                                        <div class="form-group">
+                                                            <label>monthPicker:</label>
+                                                            <div>
+                                                                <label class="switch">
+                                                                    <input type="checkbox"
+                                                                           v-model="datepickerOptions.monthPicker.enabled">
+                                                                    <span class="slider"></span>
+                                                                </label>
+                                                            </div>
+                                                            <p class="alert alert-info margin-top ">
+                                                                make monthPicker enable or disable
+                                                            </p>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label>monthPicker TitleFormat:</label>
+                                                            <div>
+                                                                <input class="form-control"
+                                                                       v-model="datepickerOptions.monthPicker.titleFormat"/>
+                                                            </div>
+                                                            <p class="alert alert-info margin-top ">
+                                                                MonthPicker title format string
+                                                            </p>
+                                                        </div>
+
+                                                    </div>
+
+
+                                                    <div class="col-xs-4">
+                                                        <div class="form-group">
+                                                            <label>dayPicker:</label>
+                                                            <div>
+                                                                <label class="switch">
+                                                                    <input type="checkbox"
+                                                                           v-model="datepickerOptions.dayPicker.enabled">
+                                                                    <span class="slider"></span>
+                                                                </label>
+                                                            </div>
+                                                            <p class="alert alert-info margin-top ">
+                                                                make datePicker enable or disable
+                                                            </p>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label>dayPicker TitleFormat:</label>
+                                                            <div>
+                                                                <input class="form-control"
+                                                                       v-model="datepickerOptions.dayPicker.titleFormat"/>
+                                                            </div>
+                                                            <p class="alert alert-info margin-top ">
+                                                                DayPicker title format string
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <h3>Timepicker</h3>
+                                                <div class="row">
+
+                                                    <div class="form-group col-xs-6">
+                                                        <label>onlyTimePicker:</label>
+                                                        <div>
+                                                            <label class="switch">
+                                                                <input type="checkbox"
+                                                                       v-model="datepickerOptions.onlyTimePicker">
+                                                                <span class="slider"></span>
+                                                            </label>
+                                                        </div>
+                                                        <p class="alert alert-info margin-top ">
+                                                            if true all pickers hide and just show timepicker
+                                                        </p>
+                                                    </div>
+
+                                                    <div class="form-group col-xs-6">
+                                                        <label>timPicker:</label>
+                                                        <div>
+                                                            <label class="switch">
+                                                                <input type="checkbox"
+                                                                       v-model="datepickerOptions.timePicker.enabled">
+                                                                <span class="slider"></span>
+                                                            </label>
+                                                        </div>
+                                                        <p class="alert alert-info margin-top ">
+                                                            make timePicker enable or disable
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-xs-4">
+                                                        <div class="form-group">
+                                                            <label>timePicker hour:</label>
+                                                            <div>
+                                                                <label class="switch">
+                                                                    <input type="checkbox"
+                                                                           v-model="datepickerOptions.timePicker.hour.enabled">
+                                                                    <span class="slider"></span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>timePicker hour step:</label>
+                                                            <div>
+                                                                <input class="form-control"
+                                                                       v-model="datepickerOptions.timePicker.hour.step"/>
+                                                            </div>
+                                                            <p class="alert alert-info margin-top ">
+                                                                Hour section step
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-4">
+                                                        <div class="form-group">
+                                                            <label>timePicker minute:</label>
+                                                            <div>
+                                                                <label class="switch">
+                                                                    <input type="checkbox"
+                                                                           v-model="datepickerOptions.timePicker.minute.enabled">
+                                                                    <span class="slider"></span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label>timePicker minute step:</label>
+                                                            <div>
+                                                                <input class="form-control"
+                                                                       v-model="datepickerOptions.timePicker.minute.step"/>
+                                                            </div>
+                                                            <p class="alert alert-info margin-top ">
+                                                                minute section step
+                                                            </p>
+                                                        </div>
+
+
+                                                    </div>
+
+                                                    <div class="col-xs-4">
+                                                        <div class="form-group">
+                                                            <label>timePicker second:</label>
+                                                            <div>
+                                                                <label class="switch">
+                                                                    <input type="checkbox"
+                                                                           v-model="datepickerOptions.timePicker.second.enabled">
+                                                                    <span class="slider"></span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label>timePicker second step:</label>
+                                                            <div>
+                                                                <input class="form-control"
+                                                                       v-model="datepickerOptions.timePicker.second.step"/>
+                                                            </div>
+                                                            <p class="alert alert-info margin-top ">
+                                                                second section step
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-xs-6">
+                                                    <label>timepicker Meridian:</label>
+                                                    <div>
+                                                        <label class="switch">
+                                                            <input type="checkbox"
+                                                                   v-model="datepickerOptions.timePicker.meridian.enabled">
+                                                            <span class="slider"></span>
+                                                        </label>
+                                                    </div>
+                                                    <p class="alert alert-info">
+                                                        if you set this as false, datepicker timepicker system moved to
+                                                        24-hour
+                                                        system
+                                                    </p>
+                                                </div>
+                                                <div class="form-group col-xs-6">
+                                                    <label>Time Picker Step:</label>
+                                                    <input class="form-control"
+                                                           v-model="datepickerOptions.timePicker.step"/>
+                                                    <p class="alert alert-info">
+                                                        Time section step
+                                                    </p>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+                                        <div role="tabpanel" class="tab-pane" id="calender">
+
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="form-group col-xs-12">
+                                                        <label>Toolbox enabled:</label>
+                                                        <div>
+                                                            <label class="switch">
+                                                                <input type="checkbox"
+                                                                       v-model="datepickerOptions.toolbox.enabled">
+                                                                <span class="slider"></span>
+                                                            </label>
+                                                        </div>
+                                                        <p class="alert alert-info">
+                                                            boolean option that make toolbar enable or disable
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="form-group col-xs-4">
+                                                        <label>todayButton enabled:</label>
+                                                        <div>
+                                                            <label class="switch">
+                                                                <input type="checkbox"
+                                                                       v-model="datepickerOptions.toolbox.todayButton.enabled">
+                                                                <span class="slider"></span>
+                                                            </label>
+                                                        </div>
+                                                        <p class="alert alert-info">
+                                                            toolbox today button enable or disable
+                                                        </p>
+                                                    </div>
+
+                                                    <div class="form-group col-xs-4">
+                                                        <label>today button fa text:</label>
+                                                        <input class="form-control"
+                                                               v-model="datepickerOptions.toolbox.todayButton.text.fa"/>
+                                                        <p class="alert alert-info">
+                                                            show when current calendar is Persian
+                                                        </p>
+                                                    </div>
+
+                                                    <div class="form-group col-xs-4">
+                                                        <label>today button en text:</label>
+                                                        <input class="form-control"
+                                                               v-model="datepickerOptions.toolbox.todayButton.text.en"/>
+                                                        <p class="alert alert-info">
+                                                            show when current calendar is Gregorian
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="form-group col-xs-4">
+                                                        <label>submitButton enabled:</label>
+                                                        <div>
+                                                            <label class="switch">
+                                                                <input type="checkbox"
+                                                                       v-model="datepickerOptions.toolbox.submitButton.enabled">
+                                                                <span class="slider"></span>
+                                                            </label>
+                                                        </div>
+                                                        <p class="alert alert-info">
+                                                            toolbox submit button enable or disable
+                                                        </p>
+                                                    </div>
+
+                                                    <div class="form-group col-xs-4">
+                                                        <label>submit button fa text:</label>
+                                                        <input class="form-control"
+                                                               v-model="datepickerOptions.toolbox.submitButton.text.fa"/>
+                                                        <p class="alert alert-info">
+                                                            show when current calendar is Persian
+                                                        </p>
+                                                    </div>
+
+                                                    <div class="form-group col-xs-4">
+                                                        <label>submit button en text:</label>
+                                                        <input class="form-control"
+                                                               v-model="datepickerOptions.toolbox.submitButton.text.en"/>
+                                                        <p class="alert alert-info">
+                                                            show when current calendar is Gregorian
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="form-group col-xs-6">
+                                                        <label>Enabled Calendar Switch:</label>
+                                                        <div>
+                                                            <label class="switch">
+                                                                <input :disabled="datepickerOptions.onlyTimePicker"
+                                                                       type="checkbox"
+                                                                       v-model="datepickerOptions.toolbox.calendarSwitch.enabled"
+                                                                       type="checkbox">
+                                                                <span class="slider"></span>
+                                                            </label>
+                                                        </div>
+                                                        <p class="alert alert-info">
+                                                            make calendar switch enable or disable
+                                                        </p>
+                                                    </div>
+                                                    <div class="form-group col-xs-4">
+                                                        <label>calendarSwitch text format string:</label>
+                                                        <input class="form-control"
+                                                               v-model="datepickerOptions.toolbox.calendarSwitch.format"/>
+                                                        <p class="alert alert-info">
+                                                            calendar switch text format string
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div role="tabpanel" class="tab-pane" id="eventsbox">
+                                            <div class="panel-body">
+                                        <textarea class="form-control"
+                                                  rows="20"
+                                                  v-model="eventsLog"></textarea>
+                                            </div>
+                                        </div>
+                                        <div role="tabpanel" class="tab-pane" id="template">
+                                            <div class="panel-body">
+                                        <textarea class="form-control"
+                                                  rows="20"
+                                                  v-model="datepickerOptions.template"></textarea>
+                                            </div>
+                                        </div>
+                                        <div role="tabpanel" class="tab-pane" id="messages">
+                                            <div class="panel-body">
+                                                <textarea class="form-control"
+                                                          rows="20">{{datepickerOptions}}</textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer class="datepicker-footer">
+    <p>vue persian datepicker created by <a
+            href="https://github.com/bitaedalati">bita edalati</a>
+        <a class="header-logo-invertocat pull-right" href="https://github.com/bitaedalati" data-hotkey="g d"
+           aria-label="Homepage" data-ga-click="Header, go to dashboard, icon:logo">
+            <svg aria-hidden="true" class="octicon octicon-mark-github" height="32" version="1.1"
+                 viewBox="0 0 16 16"
+                 width="32">
+                <path fill-rule="evenodd"
+                      d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+            </svg>
+        </a>
+    </p>
+    <p>
+        <a href="#">Back to top</a>
+    </p>
+</footer>
+<!-- /.container -->
+
+<!-- jQuery -->
+<script src="../lib/startbootstrap-heroic-features/js/jquery.js"></script>
+<script src="../lib/startbootstrap-heroic-features/js/bootstrap.min.js"></script>
+
+<script src="../lib/vue/dist/vue.min.js"></script>
+
+<script src="../lib/persian-date/dist/persian-date.min.js"></script>
+<script src="../lib/persian-datepicker/dist/js/persian-datepicker.js"></script>
+
+<script src="../lib/vue-persian-datepicker/persian-datepicker.js"></script>
+<!-- Bootstrap Core JavaScript -->
+
+</body>
+
+</html>

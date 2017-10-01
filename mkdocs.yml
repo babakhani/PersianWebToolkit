@@ -32,9 +32,11 @@ pages:
     - Persian Date:
         - Document: 'persian-date/index.md'
         - Change log: 'persian-date/changelog.md'
+        - Leap year: 'persian-date/leapyear.md'
     - Persian Datepicker:
         - Getting Start: 'datepicker/index.md'
         - Example: 'datepicker/example.md'
+        - Playground: 'datepicker/playground-page.md'
         - Options: 'datepicker/options.md'
         - API: 'datepicker/api.md'
         - Change log: 'datepicker/changelog.md'
@@ -44,7 +46,9 @@ extra:
         - type: 'github'
           link: 'https://github.com/babakhani'
         - type: 'linkedin'
-          link: 'https://de.linkedin.com/in/martin-donath-20a95039'
+          link: 'https://www.linkedin.com/in/reza-babakhani-52747389/'
+        - type: 'twitter'
+          link: 'https://twitter.com/babakhani_reza'
 
     logo: 'img/logo.svg'
     font:

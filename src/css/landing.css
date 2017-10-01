@@ -6,8 +6,13 @@ body, html, * {
     font-family: "Open Sans" !important;
 }
 
+.datepicker-plot-area {
+    font-family: 'Open Sans', 'IRANSans';
+}
+
+
 .jumbotron {
-    background: #00A693 !important;
+   background: #028475;
 }
 
 .jumbotron * {
@@ -38,7 +43,7 @@ body, html, * {
     border-bottom: 3px solid #028475;
 }
 
-.navbar .container{
+.navbar .container {
     padding-right: .4rem;
     padding-left: .4rem;
 }

@@ -240,6 +240,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../persian-date/leapyear/" title="Leap year" class="md-nav__link">
+      Leap year
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -320,6 +332,27 @@
         <li class="md-nav__item">
   <a href="#inline-example" title="inline example" class="md-nav__link">
     inline example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gregorian-calendar" title="Gregorian Calendar" class="md-nav__link">
+    Gregorian Calendar
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-leap-year-mode" title="Change Leap Year Mode" class="md-nav__link">
+    Change Leap Year Mode
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#locale" title="locale" class="md-nav__link">
+    locale
   </a>
   
 </li>
@@ -437,6 +470,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../playground/" title="Playground" class="md-nav__link">
+      Playground
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../options/" title="Options" class="md-nav__link">
       Options
     </a>
@@ -502,6 +547,27 @@
         <li class="md-nav__item">
   <a href="#inline-example" title="inline example" class="md-nav__link">
     inline example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gregorian-calendar" title="Gregorian Calendar" class="md-nav__link">
+    Gregorian Calendar
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-leap-year-mode" title="Change Leap Year Mode" class="md-nav__link">
+    Change Leap Year Mode
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#locale" title="locale" class="md-nav__link">
+    locale
   </a>
   
 </li>
@@ -638,6 +704,16 @@
     <span class="nx">inline</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="nx">altField</span><span class="o">:</span> <span class="s1">&#39;#inlineExampleAlt&#39;</span><span class="p">,</span>
     <span class="nx">altFormat</span><span class="o">:</span> <span class="s1">&#39;LLLL&#39;</span><span class="p">,</span>
+    <span class="nx">toolbox</span><span class="o">:</span><span class="p">{</span>
+        <span class="nx">calendarSwitch</span><span class="o">:</span><span class="p">{</span>
+            <span class="nx">enabled</span><span class="o">:</span> <span class="kc">true</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nx">navigator</span><span class="o">:</span><span class="p">{</span>
+        <span class="nx">scroll</span><span class="o">:</span><span class="p">{</span>
+            <span class="nx">enabled</span><span class="o">:</span> <span class="kc">false</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
     <span class="nx">maxDate</span><span class="o">:</span> <span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;month&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">).</span><span class="nx">valueOf</span><span class="p">(),</span>
     <span class="nx">minDate</span><span class="o">:</span> <span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">subtract</span><span class="p">(</span><span class="s1">&#39;month&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">).</span><span class="nx">valueOf</span><span class="p">(),</span>
     <span class="nx">timePicker</span><span class="o">:</span> <span class="p">{</span>
@@ -650,14 +726,122 @@
 </pre></div>
 
 
-<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">input</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;inlineExampleAlt&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;datepicker-demo&quot;</span> <span class="p">/&gt;</span>
-<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;inline-example&quot;</span> <span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<div class="codehilite"><pre><span></span>```html
+&lt;input id=&quot;inlineExampleAlt&quot; class=&quot;datepicker-demo&quot; /&gt;
+&lt;div class=&quot;inline-example&quot; &gt;&lt;/div&gt;
 </pre></div>
 
 
-<p><label>Datepicker</label>
+<div class="one-inline-datepicker">
+<label>Datepicker</label>
 <input id="inlineExampleAlt" class="datepicker-demo" />
-<div class="inline-example" ></div></p>
+<div class="inline-example" ></div>
+</div>
+
+<h2 id="gregorian-calendar">Gregorian Calendar<a class="headerlink" href="#gregorian-calendar" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.gregorian-example&#39;</span><span class="p">).</span><span class="nx">persianDatepicker</span><span class="p">({</span>
+    <span class="nx">inline</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nx">altField</span><span class="o">:</span> <span class="s1">&#39;#gregorianExampleAlt&#39;</span><span class="p">,</span>
+    <span class="nx">altFormat</span><span class="o">:</span> <span class="s1">&#39;LLLL&#39;</span><span class="p">,</span>
+    <span class="nx">toolbox</span><span class="o">:</span><span class="p">{</span>
+        <span class="nx">calendarSwitch</span><span class="o">:</span><span class="p">{</span>
+            <span class="nx">enabled</span><span class="o">:</span> <span class="kc">true</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nx">navigator</span><span class="o">:</span><span class="p">{</span>
+        <span class="nx">scroll</span><span class="o">:</span><span class="p">{</span>
+            <span class="nx">enabled</span><span class="o">:</span> <span class="kc">false</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nx">maxDate</span><span class="o">:</span> <span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;month&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">).</span><span class="nx">valueOf</span><span class="p">(),</span>
+    <span class="nx">minDate</span><span class="o">:</span> <span class="k">new</span> <span class="nx">persianDate</span><span class="p">().</span><span class="nx">subtract</span><span class="p">(</span><span class="s1">&#39;month&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">).</span><span class="nx">valueOf</span><span class="p">(),</span>
+    <span class="nx">timePicker</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">enabled</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nx">meridiem</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">enabled</span><span class="o">:</span> <span class="kc">true</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">input</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;gregorianExampleAlt&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;datepicker-demo&quot;</span> <span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;gregorian-example&quot;</span> <span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+
+
+<div class="one-inline-datepicker">
+<label>Datepicker</label>
+<input id="gregorianExampleAlt" class="datepicker-demo" />
+<div class="gregorian-example" ></div>
+</div>
+
+<h2 id="change-leap-year-mode">Change Leap Year Mode<a class="headerlink" href="#change-leap-year-mode" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.leapyear-algorithmic&#39;</span><span class="p">).</span><span class="nx">persianDatepicker</span><span class="p">({</span>
+    <span class="nx">inline</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+
+<span class="p">});</span>
+
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.leapyear-astronomical&#39;</span><span class="p">).</span><span class="nx">persianDatepicker</span><span class="p">({</span>
+    <span class="nx">inline</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nx">calendar</span><span class="o">:</span><span class="p">{</span>
+        <span class="nx">persian</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">leapYearMode</span><span class="o">:</span> <span class="s1">&#39;astronomical&#39;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;leapyear-algorithmic&quot;</span> <span class="na">data-date</span><span class="o">=</span><span class="s">&quot;2025/3/12&quot;</span> <span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;leapyear-astronomical&quot;</span> <span class="na">data-date</span><span class="o">=</span><span class="s">&quot;2025/3/12&quot;</span> <span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+
+
+<div class="two-inline-datepicker">
+<div>
+<label>algorithmic</label>
+<div class="leapyear-algorithmic" data-date="2025/3/12" ></div>
+</div>
+<div>
+<label>astronomical</label>
+<div class="leapyear-astronomical" data-date="2025/3/12" ></div>
+</div>
+</div>
+
+<h2 id="locale">locale<a class="headerlink" href="#locale" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.locale-fa&#39;</span><span class="p">).</span><span class="nx">persianDatepicker</span><span class="p">({</span>
+    <span class="nx">inline</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+
+<span class="p">});</span>
+
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.locale-en&#39;</span><span class="p">).</span><span class="nx">persianDatepicker</span><span class="p">({</span>
+    <span class="nx">inline</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nx">calendar</span><span class="o">:</span><span class="p">{</span>
+        <span class="nx">persian</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">locale</span><span class="o">:</span> <span class="s1">&#39;en&#39;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;locale-fa&quot;</span> <span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;locale-en&quot;</span> <span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+
+
+<div class="two-inline-datepicker">
+<div>
+<label>fa</label>
+<div class="locale-fa" ></div>
+</div>
+<div>
+<label>en</label>
+<div class="locale-en" ></div>
+</div>
+</div>
+
 <h2 id="observer">Observer<a class="headerlink" href="#observer" title="Permanent link">&para;</a></h2>
 <p>true, make user able to edit date by keyboard</p>
 <div class="codehilite"><pre><span></span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.observer-example&#39;</span><span class="p">).</span><span class="nx">persianDatepicker</span><span class="p">({</span>
@@ -891,13 +1075,13 @@
           </a>
         
         
-          <a href="../options/" title="Options" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../playground/" title="Playground" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Options
+                Playground
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

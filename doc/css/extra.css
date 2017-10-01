@@ -1,15 +1,36 @@
 * {
-    font-family: "Open Sans";
+    font-family: "Open Sans", "IRANSans";
 }
 
 .md-header {
     background-color: #222 !important;
-    border-bottom: 3px solid  #028475;
+    border-bottom: 3px solid #028475;
 }
 
 table td:nth-child(2),
 table td:nth-child(3) {
     color: #888;
+}
+
+.two-inline-datepicker > div {
+    width: 50%;
+    float: right;
+    padding: 5%;
+}
+
+.one-inline-datepicker {
+    display: block;
+    float: right;
+    width: 100%;
+}
+
+.one-inline-datepicker {
+    width: 50%;
+    margin: 0 25%;
+}
+
+.one-inline-datepicker input.datepicker-demo {
+    margin-bottom: 10px;
 }
 
 .md-logo {
@@ -38,11 +59,57 @@ table td:nth-child(3) {
     min-width: 300px;
 }
 
+.md-content__inner h3 {
+    text-indent: 10px;
+    padding-left: 10px;
+}
+
+.md-content__inner h4,
+.md-content__inner h5 {
+    text-indent: 10px;
+    padding-left: 10px;
+    font-size: 18px;
+}
+
+.md-content__inner h3 {
+    border-left: 6px solid #ef5350;
+}
+
+.md-content__inner h4 {
+    font-size: 18px;
+    height: 2.6em;
+    border-left: 3px solid #ef5350;
+}
+
+.md-content__inner h5,
+.md-content__inner h6 {
+    border-left: 2px solid #ef5350;
+}
+
+.md-typeset h5 {
+    text-transform: none;
+    line-height: 1.2em;
+    height: 2.6em;
+}
+
+.md-typeset h4, .md-typeset h5, .md-typeset h6 {
+    letter-spacing: normal;
+}
+
+.datepicker-plot-area {
+    font-family: 'Open Sans', 'IRANSans';
+}
+
+.datepicker-plot-area.datepicker-plot-area-inline-view {
+    margin-bottom: 30px;
+}
+
 input.datepicker-demo,
 input.datepicker-demo-alt {
     min-width: 200px;
     border: 1px solid gray !important;
     padding: 10px;
+    font-family: 'Open Sans', 'IRANSans';
 }
 
 .md-content__inner .inline-sample {
@@ -66,7 +133,7 @@ input.datepicker-demo-alt {
     /*border: 2px solid red !important;*/
 }
 
-.md-nav__list .md-nav__item.md-nav__item--nested label{
+.md-nav__list .md-nav__item.md-nav__item--nested label {
     font-size: 18px;
 }
 

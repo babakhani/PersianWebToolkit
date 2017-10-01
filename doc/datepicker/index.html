@@ -240,6 +240,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../persian-date/leapyear/" title="Leap year" class="md-nav__link">
+      Leap year
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -327,8 +339,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#options" title="options" class="md-nav__link">
-    options
+  <a href="#options-table" title="options table" class="md-nav__link">
+    options table
   </a>
   
 </li>
@@ -350,6 +362,18 @@
   <li class="md-nav__item">
     <a href="example/" title="Example" class="md-nav__link">
       Example
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="playground/" title="Playground" class="md-nav__link">
+      Playground
     </a>
   </li>
 
@@ -444,8 +468,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#options" title="options" class="md-nav__link">
-    options
+  <a href="#options-table" title="options table" class="md-nav__link">
+    options table
   </a>
   
 </li>
@@ -468,19 +492,21 @@
                 
                 
                 <h1 id="persian-date-picker">Persian Date Picker<a class="headerlink" href="#persian-date-picker" title="Permanent link">&para;</a></h1>
+<p>This Date picker work with Iranian calendar.</p>
+<p>Jalali calendar datepicker, which depends on <a href="https://github.com/babakhani/PersianDate">persianDate</a></p>
+<p>More info at <a href="http://en.wikipedia.org/wiki/Iranian_calendar">Wikipedia</a></p>
+<blockquote>
+<p>Note: from v0.6.0 persianDatepicker support gregorian calendar</p>
+</blockquote>
 <p><a href="https://badge.fury.io/js/persian-datepicker"><img alt="npm version" src="https://badge.fury.io/js/persian-datepicker.svg" /></a>
 <a href="https://badge.fury.io/bo/persian-datepicker"><img alt="Bower version" src="https://badge.fury.io/bo/persian-datepicker.svg" /></a>
 <a href="https://badge.fury.io/bo/persian-datepicker"><img alt="Travis-ci" src="https://travis-ci.org/babakhani/pwt.datepicker.svg?branch=master" /></a></p>
-<p>Persian Date Picker
-This Date picker work with Iranian calendar.</p>
-<p>Jalali calendar datepicker, which depends on https://github.com/babakhani/PersianDate</p>
-<p>More info at <a href="http://en.wikipedia.org/wiki/Iranian_calendar">Wikipedia</a></p>
 <p><a class="github-button" href="https://github.com/babakhani/pwt.datepicker" data-icon="octicon-star" data-style="mega" data-count-href="/babakhani/pwt.datepicker/stargazers" data-count-api="/repos/babakhani/pwt.datepicker#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star babakhani/pwt.datepicker on GitHub">Star</a>
 <a class="github-button" href="https://github.com/babakhani/pwt.datepicker/issues" data-icon="octicon-issue-opened" data-style="mega" data-count-api="/repos/babakhani/pwt.datepicker#open_issues_count" data-count-aria-label="# issues on GitHub" aria-label="Issue babakhani/pwt.datepicker on GitHub">Issue</a>
 <a class="github-button" href="https://github.com/babakhani/pwt.datepicker/fork" data-icon="octicon-repo-forked" data-style="mega" data-count-href="/babakhani/pwt.datepicker/network" data-count-api="/repos/babakhani/pwt.datepicker#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork babakhani/pwt.datepicker on GitHub">Fork</a></p>
 <ul>
 <li><a href="http://babakhani.github.io/PersianWebToolkit/doc/datepicker">Documents</a></li>
-<li><a href="http://babakhani.github.io/PersianWebToolkit/doc/datepicker/example">Demo</a></li>
+<li><a href="http://babakhani.github.io/PersianWebToolkit/doc/datepicker/example">Example/Demo</a></li>
 </ul>
 <h2 id="table-of-content">Table of content:<a class="headerlink" href="#table-of-content" title="Permanent link">&para;</a></h2>
 <ul>
@@ -488,13 +514,20 @@ This Date picker work with Iranian calendar.</p>
 <li><a href="#install">Install</a></li>
 <li><a href="#usage">Usage</a></li>
 <li><a href="#options">Options</a></li>
+<li><a href="http://babakhani.github.io/PersianWebToolkit/doc/datepicker/options/">See Options Full Document</a></li>
 </ul>
 <h2 id="dependency">Dependency<a class="headerlink" href="#dependency" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://github.com/babakhani/PersianDate">persian date</a></li>
+<li><a href="http://jquery.com/">jquery</a></li>
 </ul>
+<blockquote>
+<p>persian-datepicker 0.6.x need persian-date 0.3.x</p>
+</blockquote>
 <h2 id="install">Install<a class="headerlink" href="#install" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>npm install persian-datepicker@beta
+<div class="codehilite"><pre><span></span>npm install persian-datepicker
+
+bower install persian-datepicker
 </pre></div>
 
 
@@ -508,7 +541,7 @@ This Date picker work with Iranian calendar.</p>
 
 <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span><span class="p">&gt;</span>
   <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.example1&quot;</span><span class="p">).</span><span class="nx">pDatepicker</span><span class="p">();</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.example1&quot;</span><span class="p">).</span><span class="nx">pDatepicker</span><span class="p">();</span>
   <span class="p">});</span>
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 
@@ -516,7 +549,8 @@ This Date picker work with Iranian calendar.</p>
 </pre></div>
 
 
-<h2 id="options">options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h2>
+<h2 id="options-table">options table<a class="headerlink" href="#options-table" title="Permanent link">&para;</a></h2>
+<p><a href="http://babakhani.github.io/PersianWebToolkit/doc/datepicker/options/">See Options Full Document</a></p>
 <table>
 <thead>
 <tr>
@@ -528,115 +562,193 @@ This Date picker work with Iranian calendar.</p>
 </thead>
 <tbody>
 <tr>
+<td>initialCalendar</td>
+<td align="center">string</td>
+<td align="center">'persian'</td>
+<td align="center">Set default calendar mode of datepicker, available options: 'persian', 'gregorian'</td>
+</tr>
+<tr>
+<td>calendar</td>
+<td align="center">object</td>
+<td align="center"></td>
+<td align="center">Calendar type and localization configuration</td>
+</tr>
+<tr>
+<td>calendar.persian</td>
+<td align="center">object</td>
+<td align="center"></td>
+<td align="center">Persian calendar configuration</td>
+</tr>
+<tr>
+<td>calendar.persian.locale</td>
+<td align="center">string</td>
+<td align="center">'fa'</td>
+<td align="center">Set locale of Persian calendar available options: 'fa', 'en'</td>
+</tr>
+<tr>
+<td>calendar.persian.showHint</td>
+<td align="center">boolean</td>
+<td align="center">false</td>
+<td align="center">If set true, small date hint of this calendar will be shown on another calendar</td>
+</tr>
+<tr>
+<td>calendar.persian.leapYearMode</td>
+<td align="center">string</td>
+<td align="center">algorithmic</td>
+<td align="center">Persian calendar leap year calculation mode, available options: 'algorithmic', 'astronomical'</td>
+</tr>
+<tr>
+<td>calendar.gregorian</td>
+<td align="center">object</td>
+<td align="center"></td>
+<td align="center">Gregorian calendar configuration</td>
+</tr>
+<tr>
+<td>calendar.gregorian.locale</td>
+<td align="center">string</td>
+<td align="center">'en'</td>
+<td align="center">set locale of Gregorian calendar available options: 'fa', 'en'</td>
+</tr>
+<tr>
+<td>calendar.gregorian.showHint</td>
+<td align="center">boolean</td>
+<td align="center">false</td>
+<td align="center">If set true, small date hint of this calendar will be shown on another calendar</td>
+</tr>
+<tr>
+<td>responsive</td>
+<td align="center">boolean</td>
+<td align="center">true</td>
+<td align="center">If set true make enable responsive view on mobile devices</td>
+</tr>
+<tr>
 <td>initialValue</td>
 <td align="center">boolean</td>
 <td align="center">true</td>
-<td align="center">If set true datepicker init with input value date</td>
+<td align="center">If set true datepicker init with input value date, use data-date property when you want set inline datepicker initial value</td>
 </tr>
 <tr>
-<td>persianDigit</td>
+<td>initialValueType</td>
+<td align="center">string</td>
+<td align="center">'gregorian'</td>
+<td align="center">Initial value calendar type, accept: 'persian', 'gregorian'</td>
+</tr>
+<tr>
+<td>inline</td>
+<td align="center">boolean</td>
+<td align="center">false</td>
+<td align="center">If set true datepicker render inline</td>
+</tr>
+<tr>
+<td>persianDigit (DEPRECATED Sience 0.6.0)</td>
 <td align="center">boolean</td>
 <td align="center">true</td>
-<td align="center">If true all digit shows as persian digit</td>
+<td align="center">If set true all digit shows as persian digit</td>
 </tr>
 <tr>
 <td>viewMode</td>
 <td align="center">string</td>
 <td align="center">'day'</td>
-<td align="center">Accept day, motnh, year</td>
+<td align="center">Accept day, month, year</td>
 </tr>
 <tr>
 <td>format</td>
 <td align="center">string</td>
 <td align="center">'LLLL'</td>
-<td align="center">Default input value formatt string.</td>
+<td align="center">The date format, combination of d, dd, m, mm, yy, yyy</td>
 </tr>
 <tr>
 <td>formatter</td>
 <td align="center">function</td>
 <td align="center">function(unixDate){return unixDate}</td>
-<td align="center">Format value of input</td>
+<td align="center">Main Input value formatter function</td>
 </tr>
 <tr>
 <td>altField</td>
-<td align="center">selector</td>
-<td align="center">false</td>
-<td align="center">Format value of alt field input</td>
+<td align="center">string</td>
+<td align="center">null</td>
+<td align="center">An input element that is to be updated with the selected date from the datepicker. Use the altFormat option to change the format of the date within this field. Leave as blank for no alternate field. acceptable value: : '#elementId','.element-class'</td>
+</tr>
+<tr>
+<td>altFormat</td>
+<td align="center">string</td>
+<td align="center">'unix'</td>
+<td align="center">The date format, combination of d, dd, m, mm, yy, yyy.</td>
 </tr>
 <tr>
 <td>altFieldFormatter</td>
-<td align="center">selector</td>
+<td align="center">function</td>
 <td align="center">function(unixDate){return unixDate}</td>
-<td align="center">Format value of input</td>
+<td align="center">Format value of alt field input input</td>
 </tr>
 <tr>
 <td>minDate</td>
-<td align="center">unixDate</td>
+<td align="center">Unix Offset</td>
 <td align="center">null</td>
-<td align="center">Format value of input</td>
+<td align="center">Set min date on datepicker, prevent user select date before given unix time</td>
 </tr>
 <tr>
 <td>maxDate</td>
-<td align="center">unixDate</td>
+<td align="center">Unix Offset</td>
 <td align="center">null</td>
-<td align="center">Format value of input</td>
+<td align="center">Set max date on datepicker, prevent user select date after given unix time</td>
 </tr>
 <tr>
 <td>navigator</td>
 <td align="center">object</td>
 <td align="center"></td>
-<td align="center">Navigator object options</td>
+<td align="center">Navigator config object</td>
 </tr>
 <tr>
 <td>navigator.enabled</td>
 <td align="center">boolean</td>
 <td align="center">true</td>
-<td align="center">Make enable/disable navigator</td>
+<td align="center">Make navigator enable or disable</td>
 </tr>
 <tr>
 <td>navigator.scroll</td>
 <td align="center">object</td>
 <td align="center"></td>
-<td align="center">navigate by mousewheel options</td>
+<td align="center">Navigate by scroll configuration</td>
 </tr>
 <tr>
 <td>navigator.scroll.enabled</td>
 <td align="center">boolean</td>
 <td align="center">true</td>
-<td align="center">if you want prevent to navigate on dates with mousewheel event make this options false</td>
+<td align="center">If you want prevent to navigate with mousewheel event make this options false</td>
 </tr>
 <tr>
 <td>navigator.text</td>
 <td align="center">object</td>
-<td align="center">true</td>
 <td align="center"></td>
+<td align="center">Navigator text config object</td>
 </tr>
 <tr>
 <td>navigator.text.btnNextText</td>
 <td align="center">string</td>
 <td align="center">'&lt;'</td>
-<td align="center"></td>
+<td align="center">Text of next button</td>
 </tr>
 <tr>
 <td>navigator.text.btnPrevText</td>
 <td align="center">string</td>
 <td align="center">'&gt;'</td>
-<td align="center"></td>
+<td align="center">Text of previews butto</td>
 </tr>
 <tr>
-<td>navigator.text.onNext</td>
+<td>navigator.onNext</td>
 <td align="center">event</td>
 <td align="center">function (navigator) {}</td>
 <td align="center">Called when navigator goes to next state</td>
 </tr>
 <tr>
-<td>navigator.text.onPrev</td>
+<td>navigator.onPrev</td>
 <td align="center">event</td>
 <td align="center">function (navigator) {}</td>
 <td align="center">Called when navigator goes to prev state</td>
 </tr>
 <tr>
-<td>navigator.text.onSwitch</td>
+<td>navigator.onSwitch</td>
 <td align="center">event</td>
 <td align="center">function (state) {}</td>
 <td align="center">Called when navigator switch</td>
@@ -660,13 +772,109 @@ This Date picker work with Iranian calendar.</p>
 <td align="center"></td>
 </tr>
 <tr>
-<td>toolbox.text.btnToday</td>
+<td>toolbox.text.btnToday (DEPRECATED Sience 0.6.0)</td>
 <td align="center">string</td>
 <td align="center">'امروز'</td>
 <td align="center">Today button text</td>
 </tr>
 <tr>
-<td>toolbox.onToday</td>
+<td>toolbox.todayButton</td>
+<td align="center">object</td>
+<td align="center"></td>
+<td align="center">Toolbox today button configuration</td>
+</tr>
+<tr>
+<td>toolbox.todayButton.enabled</td>
+<td align="center">boolean</td>
+<td align="center">false</td>
+<td align="center">Make toolbox today button enable or disable</td>
+</tr>
+<tr>
+<td>toolbox.todayButton.text</td>
+<td align="center">object</td>
+<td align="center"></td>
+<td align="center">Today button text</td>
+</tr>
+<tr>
+<td>toolbox.todayButton.text.fa</td>
+<td align="center">string</td>
+<td align="center">'امروز'</td>
+<td align="center">Show when current calendar is Persian</td>
+</tr>
+<tr>
+<td>toolbox.todayButton.text.en</td>
+<td align="center">string</td>
+<td align="center">'Today'</td>
+<td align="center">Show when current calendar is Gregorian</td>
+</tr>
+<tr>
+<td>toolbox.todayButton.onToday</td>
+<td align="center">event</td>
+<td align="center">function () {}</td>
+<td align="center">Called when today button clicked</td>
+</tr>
+<tr>
+<td>toolbox.submitButton</td>
+<td align="center">object</td>
+<td align="center"></td>
+<td align="center">Toolbox today button configuration</td>
+</tr>
+<tr>
+<td>toolbox.submitButton.enabled</td>
+<td align="center">boolean</td>
+<td align="center">true</td>
+<td align="center">Make toolbox submit button enable or disable</td>
+</tr>
+<tr>
+<td>toolbox.submitButton.text</td>
+<td align="center">object</td>
+<td align="center"></td>
+<td align="center">Submit button text</td>
+</tr>
+<tr>
+<td>toolbox.submitButton.text.fa</td>
+<td align="center">string</td>
+<td align="center">'تایید'</td>
+<td align="center">Show when current calendar is Persian</td>
+</tr>
+<tr>
+<td>toolbox.submitButton.text.en</td>
+<td align="center">string</td>
+<td align="center">'submit'</td>
+<td align="center">Show when current calendar is Gregorian</td>
+</tr>
+<tr>
+<td>toolbox.submitButton.onSubmit</td>
+<td align="center">event</td>
+<td align="center">function () {}</td>
+<td align="center">Called when submit button clicked</td>
+</tr>
+<tr>
+<td>toolbox.calendarSwitch</td>
+<td align="center">object</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>toolbox.calendarSwitch.enabled</td>
+<td align="center">boolean</td>
+<td align="center">true</td>
+<td align="center">Make calendar switch enable or disable</td>
+</tr>
+<tr>
+<td>toolbox.calendarSwitch.format</td>
+<td align="center">string</td>
+<td align="center">'MMMM'</td>
+<td align="center">Calendar switch text format string</td>
+</tr>
+<tr>
+<td>toolbox.calendarSwitch.onSwitch</td>
+<td align="center">event</td>
+<td align="center">function () {}</td>
+<td align="center">Called when calendar switch clicked</td>
+</tr>
+<tr>
+<td>toolbox.onToday (DEPRECATED Sience 0.6.0)</td>
 <td align="center">event</td>
 <td align="center">function(toolbox){return unixDate}</td>
 <td align="center">Event called when today btn clicked</td>
@@ -675,13 +883,13 @@ This Date picker work with Iranian calendar.</p>
 <td>onlyTimePicker (mode)</td>
 <td align="center">boolean</td>
 <td align="center">false</td>
-<td align="center">Must change</td>
+<td align="center">If true, all pickers hide and just show timepicker</td>
 </tr>
 <tr>
 <td>onlySelectOnDate</td>
 <td align="center">boolean</td>
 <td align="center">true</td>
-<td align="center">Must change</td>
+<td align="center">If true, date select just by click on day in month grid, and when user select month or year selected date doesnt change</td>
 </tr>
 <tr>
 <td>checkDate</td>
@@ -711,13 +919,13 @@ This Date picker work with Iranian calendar.</p>
 <td>timePicker.enabled</td>
 <td align="center">boolean</td>
 <td align="center">false</td>
-<td align="center">Enable/Disable timePicker object</td>
+<td align="center">Make timePicker enable or disable</td>
 </tr>
 <tr>
 <td>timePicker.step</td>
 <td align="center">int</td>
 <td align="center">1</td>
-<td align="center">Time section step</td>
+<td align="center">The amount that increases or decreases by pressing the button</td>
 </tr>
 <tr>
 <td>timePicker.hour</td>
@@ -729,13 +937,13 @@ This Date picker work with Iranian calendar.</p>
 <td>timePicker.hour.enabled</td>
 <td align="center">boolean</td>
 <td align="center">true</td>
-<td align="center">Enable/Disable hour in timepPcker object</td>
+<td align="center">Enable/Disable hour in timepPicker object</td>
 </tr>
 <tr>
 <td>timePicker.hour.step</td>
 <td align="center">int</td>
 <td align="center">null</td>
-<td align="center">Hour section step</td>
+<td align="center">The amount that increases or decreases hour, by pressing the button. overwrite by timepicker.step</td>
 </tr>
 <tr>
 <td>timePicker.minute</td>
@@ -753,7 +961,7 @@ This Date picker work with Iranian calendar.</p>
 <td>timePicker.minute.step</td>
 <td align="center">int</td>
 <td align="center">null</td>
-<td align="center">Minute section step</td>
+<td align="center">The amount that increases or decreases minute, by pressing the button. overwrite by timepicker.step</td>
 </tr>
 <tr>
 <td>timePicker.second</td>
@@ -771,7 +979,7 @@ This Date picker work with Iranian calendar.</p>
 <td>timePicker.second.step</td>
 <td align="center">int</td>
 <td align="center">null</td>
-<td align="center">Second section step</td>
+<td align="center">The amount that increases or decreases second, by pressing the button. overwrite by timepicker.step</td>
 </tr>
 <tr>
 <td>timePicker.meridian</td>
@@ -879,31 +1087,31 @@ This Date picker work with Iranian calendar.</p>
 <td>onSelect</td>
 <td align="center">event</td>
 <td align="center">function (unixDate) {}</td>
-<td align="center">Called when datePicker select event fire</td>
+<td align="center">Called when datepicker selected date change</td>
 </tr>
 <tr>
 <td>onShow</td>
 <td align="center">event</td>
 <td align="center">function () {}</td>
-<td align="center">Called when datePicker show</td>
+<td align="center">Called when datePicker shown</td>
 </tr>
 <tr>
 <td>onHide</td>
 <td align="center">event</td>
 <td align="center">function () {}</td>
-<td align="center">Called when datePicker hide</td>
+<td align="center">Called when datePicker hidden</td>
 </tr>
 <tr>
 <td>onToggle</td>
 <td align="center">event</td>
 <td align="center">function () {}</td>
-<td align="center">Called when datePicker toggle</td>
+<td align="center">Called when datePicker visibility toggle</td>
 </tr>
 <tr>
 <td>onDestroy</td>
 <td align="center">event</td>
 <td align="center">function () {}</td>
-<td align="center">Called when datePicker destroy</td>
+<td align="center">Called when datePicker destroyed</td>
 </tr>
 <tr>
 <td>autoClose</td>
@@ -914,8 +1122,26 @@ This Date picker work with Iranian calendar.</p>
 <tr>
 <td>position</td>
 <td align="center">string</td>
-<td align="center">auto</td>
-<td align="center">position of datepicker element relative to input element, accept auto, [x,y]</td>
+<td align="center">'auto'</td>
+<td align="center">Position of datepicker element relative to input element, accept 'auto', [x,y]</td>
+</tr>
+<tr>
+<td>observer</td>
+<td align="center">boolean</td>
+<td align="center">false</td>
+<td align="center">If true datepicker update self by user inputted date string, accept 'yyyy/mm/dd'</td>
+</tr>
+<tr>
+<td>inputDelay</td>
+<td align="center">int</td>
+<td align="center">800  (millisecond)</td>
+<td align="center">Time for last user key-down event, accept millisecond</td>
+</tr>
+<tr>
+<td>template</td>
+<td align="center">string</td>
+<td align="center">null</td>
+<td align="center">By default datepicker have a template string, and you can overwrite it simply by replace string in config.</td>
 </tr>
 </tbody>
 </table>
@@ -937,7 +1163,7 @@ This Date picker work with Iranian calendar.</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../persian-date/changelog/" title="Change log" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../persian-date/leapyear/" title="Leap year" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -946,7 +1172,7 @@ This Date picker work with Iranian calendar.</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Change log
+                Leap year
               </span>
             </div>
           </a>

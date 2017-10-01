@@ -1,0 +1,23 @@
+{
+  "name": "vue-persian-datepiker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "simple-server 6767",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "bita.edalati@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "simple-server": "*"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1",
+    "persian-date": "^0.3.0-b",
+    "persian-datepicker": "^0.5.11",
+    "vue": "^2.4.2",
+    "vue-clipboards": "^1.1.0"
+  }
+}

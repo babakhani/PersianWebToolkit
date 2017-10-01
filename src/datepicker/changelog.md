@@ -4,28 +4,37 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) 
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [0.5.10]
-### Changed
-- hotfix time plot wheel error
+## [1.0.0] - 2017-10-1
+- Add gregorian calendar type
+- Add locale
+- Make better user interface
+- Add responsive option
+- Add onSet event, that called when selected date changed by api
+- Expose datepicker state with api (getState())
+- Add range selector with order validation example in doc
+- Improve options set method to make better live configuration
+- Separate select event of user (click touch etc) and api
+- Deprecate toolbox.text, toolbox.text.btnToday, persianDigit, toolbox.onToday
 
-<<<<<<< HEAD
-## [Unreleased]
-=======
+## [0.5.10]
+- Hotfix time plot wheel error
+
 ## [0.5.9]
-- fix #154 #153 #152 #151 #150 #148 github issues
+- Fix #154 #153 #152 #151 #150 #148 github issues
 
 ## [0.5.5] 
-### Changed
-- fix days rendering
-- fix readme
+- Fix days rendering
+- Fix readme
 
 
 ## [0.5.4] 
-### Changed
-- fix document
-- works before beta release
+- Fix document
+- Works before beta release
 
 
 ## [0.5.0] 
-### Changed
-- refactor all code to es6
+- Refactor all code to es6
+
+
+## [0.1.7] 2013-09-21
+- First release

@@ -1,18 +1,31 @@
 <a name="API"></a>
 
 ## API
-This is default API class
+Default API class
 
 **Kind**: global class  
 
 * [API](#API)
     * [.options](#API+options)
+    * [.options](#API+options)
     * [.show()](#API+show)
+    * [.getState()](#API+getState)
     * [.hide()](#API+hide)
     * [.toggle()](#API+toggle)
     * [.destroy()](#API+destroy)
     * [.setDate(unix)](#API+setDate)
 
+<a name="API+options"></a>
+
+### apI.options
+get current option object
+
+**Kind**: instance property of [<code>API</code>](#API)  
+**Example**  
+```js
+var pd = $('.selector').persianDatepicker();
+console.log(pd.options);
+```
 <a name="API+options"></a>
 
 ### apI.options
@@ -37,6 +50,21 @@ make datepicker visible
 ```js
 var pd = $('.selector').persianDatepicker();
 pd.show();
+```
+<a name="API+getState"></a>
+
+### apI.getState()
+return datepicker current state
+
+**Kind**: instance method of [<code>API</code>](#API)  
+**Since**: 1.0.0  
+**Example**  
+```js
+var pd = $('.selector').persianDatepicker();
+var state = pd.getState();
+
+console.log(state.selected);
+console.log(state.view);
 ```
 <a name="API+hide"></a>
 

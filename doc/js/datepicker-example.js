@@ -6,12 +6,69 @@ $(document).ready(function () {
         inline: true,
         altField: '#inlineExampleAlt',
         altFormat: 'LLLL',
+        toolbox: {
+            calendarSwitch: {
+                enabled: true
+            }
+        },
         maxDate: new persianDate().add('month', 3).valueOf(),
         minDate: new persianDate().subtract('month', 3).valueOf(),
         timePicker: {
             enabled: true,
             meridiem: {
                 enabled: true
+            }
+        }
+    });
+
+    $('.gregorian-example').persianDatepicker({
+        inline: true,
+        altField: '#gregorianExampleAlt',
+        altFormat: 'LLLL',
+        initialCalendar: 'gregorian',
+        toolbox: {
+            calendarSwitch: {
+                enabled: true
+            }
+        },
+        navigator: {
+            scroll: {
+                enabled: false
+            }
+        },
+        maxDate: new persianDate().add('month', 3).valueOf(),
+        minDate: new persianDate().subtract('month', 3).valueOf(),
+        timePicker: {
+            enabled: true,
+            meridiem: {
+                enabled: true
+            }
+        }
+    });
+
+    $('.leapyear-algorithmic').persianDatepicker({
+        inline: true
+    });
+
+    $('.leapyear-astronomical').persianDatepicker({
+        inline: true,
+        calendar: {
+            persian: {
+                leapYearMode: 'astronomical'
+            }
+        }
+    });
+
+    $('.locale-fa').persianDatepicker({
+        inline: true,
+
+    });
+
+    $('.locale-en').persianDatepicker({
+        inline: true,
+        calendar: {
+            persian: {
+                locale: 'en'
             }
         }
     });

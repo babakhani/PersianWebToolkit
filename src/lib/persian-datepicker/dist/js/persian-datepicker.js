@@ -1,5 +1,5 @@
 /*
-** persian-datepicker - v0.5.5
+** persian-datepicker - v1.0.0
 ** Reza Babakhani <babakhani.reza@gmail.com>
 ** http://babakhani.github.io/PersianWebToolkit/docs/datepicker
 ** Under WTFPL license 
@@ -23,9 +23,9 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	function __webpack_require__(moduleId) {
 /******/
 /******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId])
+/******/ 		if(installedModules[moduleId]) {
 /******/ 			return installedModules[moduleId].exports;
-/******/
+/******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = installedModules[moduleId] = {
 /******/ 			i: moduleId,
@@ -80,7 +80,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 8);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -91,15 +91,46 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 var Helper = {
+
+    // leading edge, instead of the trailing.
+    debounce: function debounce(func, wait, immediate) {
+        var timeout;
+        return function () {
+            var context = this,
+                args = arguments;
+            var later = function later() {
+                timeout = null;
+                if (!immediate) func.apply(context, args);
+            };
+            var callNow = immediate && !timeout;
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+            if (callNow) func.apply(context, args);
+        };
+    },
+
+
     /**
      * @desc normal log
      * @param input
      * @example log('whoooooha')
      */
     log: function log(input) {
+        /*eslint-disable no-console */
         console.log(input);
+        /*eslint-enable no-console */
     },
 
+
+    /* eslint-disable no-useless-escape */
+    isMobile: function () {
+        var check = false;
+        (function (a) {
+            if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(a) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0, 4))) check = true;
+        })(navigator.userAgent || navigator.vendor || window.opera);
+        return check;
+    }(),
+    /* eslint-enable no-useless-escape */
 
     /**
      * @desc show debug messages if window.persianDatepickerDebug set as true
@@ -109,6 +140,7 @@ var Helper = {
      * debug('element','message');
      */
     debug: function debug(elem, input) {
+        /*eslint-disable no-console */
         if (window.persianDatepickerDebug) {
             if (elem.constructor.name) {
                 console.log('Debug: ' + elem.constructor.name + ' : ' + input);
@@ -116,6 +148,7 @@ var Helper = {
                 console.log('Debug: ' + input);
             }
         }
+        /*eslint-enable no-console */
     },
     delay: function delay(callback, ms) {
         clearTimeout(window.datepickerTimer);
@@ -133,52 +166,11 @@ module.exports = Helper;
 
 
 /**
- * Date helper, some useful date method stored here
- * @class
+ * @type {string}
  */
-var DateUtil = {
+var Template = "\n<div id=\"plotId\" class=\"datepicker-plot-area {{cssClass}}\">\n    {{#navigator.enabled}}\n        <div data-navigator class=\"datepicker-navigator\">\n            <div class=\"pwt-btn pwt-btn-next\">{{navigator.text.btnNextText}}</div>\n            <div class=\"pwt-btn pwt-btn-switch\">{{navigator.switch.text}}</div>\n            <div class=\"pwt-btn pwt-btn-prev\">{{navigator.text.btnPrevText}}</div>\n        </div>\n    {{/navigator.enabled}}\n    <div class=\"datepicker-grid-view\" >\n    {{#days.enabled}}\n        {{#days.viewMode}}\n        <div class=\"datepicker-day-view\" >    \n            <div class=\"month-grid-box\">\n                <div class=\"header\">\n                    <div class=\"title\"></div>\n                    <div class=\"header-row\">\n                        {{#weekdays.list}}\n                            <div class=\"header-row-cell\">{{.}}</div>\n                        {{/weekdays.list}}\n                    </div>\n                </div>    \n                <table cellspacing=\"0\" class=\"table-days\">\n                    <tbody>\n                        {{#days.list}}\n                           \n                            <tr>\n                                {{#.}}\n                                    {{#enabled}}\n                                        <td data-date=\"{{dataDate}}\" data-unix=\"{{dataUnix}}\" >\n                                            <span  class=\"{{#otherMonth}}other-month{{/otherMonth}}\">{{title}}</span>\n                                            {{#altCalendarShowHint}}\n                                            <i  class=\"alter-calendar-day\">{{alterCalTitle}}</i>\n                                            {{/altCalendarShowHint}}\n                                        </td>\n                                    {{/enabled}}\n                                    {{^enabled}}\n                                        <td data-date=\"{{dataDate}}\" data-unix=\"{{dataUnix}}\" class=\"disabled\">\n                                            <span class=\"{{#otherMonth}}other-month{{/otherMonth}}\">{{title}}</span>\n                                            {{#altCalendarShowHint}}\n                                            <i  class=\"alter-calendar-day\">{{alterCalTitle}}</i>\n                                            {{/altCalendarShowHint}}\n                                        </td>\n                                    {{/enabled}}\n                                    \n                                {{/.}}\n                            </tr>\n                        {{/days.list}}\n                    </tbody>\n                </table>\n            </div>\n        </div>\n        {{/days.viewMode}}\n    {{/days.enabled}}\n    \n    {{#month.enabled}}\n        {{#month.viewMode}}\n            <div class=\"datepicker-month-view\">\n                {{#month.list}}\n                    {{#enabled}}               \n                        <div data-month=\"{{dataMonth}}\" class=\"month-item {{#selected}}selected{{/selected}}\">{{title}}</small></div>\n                    {{/enabled}}\n                    {{^enabled}}               \n                        <div data-month=\"{{dataMonth}}\" class=\"month-item month-item-disable {{#selected}}selected{{/selected}}\">{{title}}</small></div>\n                    {{/enabled}}\n                {{/month.list}}\n            </div>\n        {{/month.viewMode}}\n    {{/month.enabled}}\n    \n    {{#year.enabled }}\n        {{#year.viewMode }}\n            <div class=\"datepicker-year-view\" >\n                {{#year.list}}\n                    {{#enabled}}\n                        <div data-year=\"{{dataYear}}\" class=\"year-item {{#selected}}selected{{/selected}}\">{{title}}</div>\n                    {{/enabled}}\n                    {{^enabled}}\n                        <div data-year=\"{{dataYear}}\" class=\"year-item year-item-disable {{#selected}}selected{{/selected}}\">{{title}}</div>\n                    {{/enabled}}                    \n                {{/year.list}}\n            </div>\n        {{/year.viewMode }}\n    {{/year.enabled }}\n    \n    </div>\n    {{#time}}\n    {{#enabled}}\n    <div class=\"datepicker-time-view\">\n        {{#hour.enabled}}\n            <div class=\"hour time-segment\" data-time-key=\"hour\">\n                <div class=\"up-btn\" data-time-key=\"hour\">\u25B2</div>\n                <input value=\"{{hour.title}}\" type=\"text\" placeholder=\"hour\" class=\"hour-input\">\n                <div class=\"down-btn\" data-time-key=\"hour\">\u25BC</div>                    \n            </div>       \n            <div class=\"divider\">\n                <span>:</span>\n            </div>\n        {{/hour.enabled}}\n        {{#minute.enabled}}\n            <div class=\"minute time-segment\" data-time-key=\"minute\" >\n                <div class=\"up-btn\" data-time-key=\"minute\">\u25B2</div>\n                <input disabled value=\"{{minute.title}}\" type=\"text\" placeholder=\"minute\" class=\"minute-input\">\n                <div class=\"down-btn\" data-time-key=\"minute\">\u25BC</div>\n            </div>        \n            <div class=\"divider second-divider\">\n                <span>:</span>\n            </div>\n        {{/minute.enabled}}\n        {{#second.enabled}}\n            <div class=\"second time-segment\" data-time-key=\"second\"  >\n                <div class=\"up-btn\" data-time-key=\"second\" >\u25B2</div>\n                <input disabled value=\"{{second.title}}\"  type=\"text\" placeholder=\"second\" class=\"second-input\">\n                <div class=\"down-btn\" data-time-key=\"second\" >\u25BC</div>\n            </div>\n            <div class=\"divider meridian-divider\"></div>\n            <div class=\"divider meridian-divider\"></div>\n        {{/second.enabled}}\n        {{#meridian.enabled}}\n            <div class=\"meridian time-segment\" data-time-key=\"meridian\" >\n                <div class=\"up-btn\" data-time-key=\"meridian\">\u25B2</div>\n                <input disabled value=\"{{meridian.title}}\" type=\"text\" class=\"meridian-input\">\n                <div class=\"down-btn\" data-time-key=\"meridian\">\u25BC</div>\n            </div>\n        {{/meridian.enabled}}\n    </div>\n    {{/enabled}}\n    {{/time}}\n    \n    {{#toolbox}}\n    {{#enabled}}\n    <div class=\"toolbox\">\n        {{#toolbox.submitButton.enabled}}\n            <div class=\"pwt-btn-submit\">{{submitButtonText}}</div>\n        {{/toolbox.submitButton.enabled}}        \n        {{#toolbox.todayButton.enabled}}\n            <div class=\"pwt-btn-today\">{{todayButtonText}}</div>\n        {{/toolbox.todayButton.enabled}}        \n        {{#toolbox.calendarSwitch.enabled}}\n            <div class=\"pwt-btn-calendar\">{{calendarSwitchText}}</div>\n        {{/toolbox.calendarSwitch.enabled}}\n    </div>\n    {{/enabled}}\n    {{^enabled}}\n        {{#onlyTimePicker}}\n        <div class=\"toolbox\">\n            <div class=\"pwt-btn-exit\">{{text.btnExit}}</div>\n        </div>\n        {{/onlyTimePicker}}\n    {{/enabled}}\n    {{/toolbox}}\n</div>\n";
 
-    /**
-     * @property convert24hTo12
-     * @param hour
-     */
-    convert24hTo12: function convert24hTo12(hour) {
-        var output = hour;
-        if (hour > 12) {
-            output = hour - 12;
-        }
-        if (hour === 0) {
-            output = 0;
-        }
-        return output;
-    },
-
-
-    /**
-     * check if a date is same as b
-     * @param dateA
-     * @param dateB
-     * @return {boolean}
-     * @static
-     */
-    isSameDay: function isSameDay(dateA, dateB) {
-        return dateA && dateB && dateA.date() == dateB.date() && dateA.year() == dateB.year() && dateA.month() == dateB.month();
-    },
-
-
-    /**
-     * @desc check if a month is same as b
-     * @param {Date} dateA
-     * @param {Date} dateB
-     * @return {boolean}
-     * @static
-     */
-    isSameMonth: function isSameMonth(dateA, dateB) {
-        return dateA && dateB && dateA.year() == dateB.year() && dateA.month() == dateB.month();
-    }
-};
-
-module.exports = DateUtil;
+module.exports = Template;
 
 /***/ }),
 /* 2 */
@@ -191,199 +183,114 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var Config = __webpack_require__(6);
-var Template = __webpack_require__(3);
-/**
- * Extend default config from user interred and do compatibility works
- * @public
- */
-
-var Options = function () {
-
-    /**
-     * @param {object} options config passed when initialize
-     * @return {object}
-     * @todo remove jquery
-     */
-    function Options(options) {
-        _classCallCheck(this, Options);
-
-        return this._compatibility($.extend(true, this, Config, options));
-    }
-
-    /**
-     * @private
-     * @param options
-     */
-
-
-    _createClass(Options, [{
-        key: '_compatibility',
-        value: function _compatibility(options) {
-            if (!options.template) {
-                options.template = Template;
-            }
-
-            if (options.onlyTimePicker) {
-                options.dayPicker.enabled = false;
-                options.monthPicker.enabled = false;
-                options.yearPicker.enabled = false;
-                options.navigator.enabled = false;
-                options.toolbox.enabled = false;
-                options.timePicker.enabled = true;
-            }
-
-            if (options.timePicker.hour.step === null) {
-                options.timePicker.hour.step = options.timePicker.step;
-            }
-            if (options.timePicker.minute.step === null) {
-                options.timePicker.minute.step = options.timePicker.step;
-            }
-            if (options.timePicker.second.step === null) {
-                options.timePicker.second.step = options.timePicker.step;
-            }
-
-            if (options.dayPicker.enabled === false) {
-                options.onlySelectOnDate = false;
-            }
-
-            options._viewModeList = [];
-            if (options.dayPicker.enabled) {
-                options._viewModeList.push('day');
-            }
-            if (options.monthPicker.enabled) {
-                options._viewModeList.push('month');
-            }
-            if (options.yearPicker.enabled) {
-                options._viewModeList.push('year');
-            }
-        }
-    }]);
-
-    return Options;
-}();
-
-module.exports = Options;
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/**
- * @type {string}
- */
-var Template = "\n<div id=\"plotId\" class=\"datepicker-plot-area {{cssClass}}\">\n    {{#navigator.enabled}}\n        <div class=\"datepicker-header\">\n            <div class=\"btn btn-next\">{{navigator.text.btnNextText}}</div>\n            <div class=\"btn btn-switch\">{{ navigator.switch.text }}</div>\n            <div class=\"btn btn-prev\">{{navigator.text.btnPrevText}}</div>\n        </div>\n    {{/navigator.enabled}}    \n    <div class=\"datepicker-grid-view\" >\n    {{#days.enabled}}\n        {{#days.viewMode}}\n        <div class=\"datepicker-day-view\" >    \n            <div class=\"month-grid-box\">\n                <div class=\"header\">\n                    <div class=\"title\"></div>\n                    <div class=\"header-row\">\n                        <div class=\"header-row-cell\">\u0634</div>\n                        <div class=\"header-row-cell\">\u06CC</div>\n                        <div class=\"header-row-cell\">\u062F</div>\n                        <div class=\"header-row-cell\">\u0633</div>\n                        <div class=\"header-row-cell\">\u0686</div>\n                        <div class=\"header-row-cell\">\u067E</div>\n                        <div class=\"header-row-cell\">\u062C</div>\n                    </div>\n                </div>    \n                <table cellspacing=\"0\" class=\"table-days\">\n                    <tbody>\n                        {{#days.list}}\n                           \n                            <tr>\n                                {{#.}}\n                                    \n                                    {{#enabled}}\n                                        <td data-unix=\"{{dataUnix}}\" ><span  class=\"{{#otherMonth}}other-month{{/otherMonth}} {{#selected}}selected{{/selected}} {{#today}}today{{/today}}\">{{title}}</span></td>\n                                    {{/enabled}}\n                                    {{^enabled}}\n                                        <td data-unix=\"{{dataUnix}}\" class=\"disabled\"><span class=\"{{#otherMonth}}other-month{{/otherMonth}}\">{{title}}</span></td>\n                                    {{/enabled}}\n                                    \n                                {{/.}}\n                            </tr>\n                        {{/days.list}}\n                    </tbody>\n                </table>\n            </div>\n        </div>\n        {{/days.viewMode}}\n    {{/days.enabled}}\n    \n    {{#month.enabled}}\n        {{#month.viewMode}}\n            <div class=\"datepicker-month-view\">\n                {{#month.list}}\n                    {{#enabled}}               \n                        <div data-month=\"{{dataMonth}}\" class=\"month-item {{#selected}}selected{{/selected}}\">{{title}}</small></div>\n                    {{/enabled}}\n                    {{^enabled}}               \n                        <div data-month=\"{{dataMonth}}\" class=\"month-item month-item-disable {{#selected}}selected{{/selected}}\">{{title}}</small></div>\n                    {{/enabled}}\n                {{/month.list}}\n            </div>\n        {{/month.viewMode}}\n    {{/month.enabled}}\n    \n    {{#year.enabled }}\n        {{#year.viewMode }}\n            <div class=\"datepicker-year-view\" >\n                {{#year.list}}\n                    {{#enabled}}\n                        <div data-year=\"{{dataYear}}\" class=\"year-item {{#selected}}selected{{/selected}}\">{{title}}</div>\n                    {{/enabled}}\n                    {{^enabled}}\n                        <div data-year=\"{{dataYear}}\" class=\"year-item year-item-disable {{#selected}}selected{{/selected}}\">{{title}}</div>\n                    {{/enabled}}                    \n                {{/year.list}}\n            </div>\n        {{/year.viewMode }}\n    {{/year.enabled }}\n    \n    </div>\n    {{#time}}\n    {{#enabled}}\n    <div class=\"datepicker-time-view\">\n        {{#hour.enabled}}\n            <div class=\"hour time-segment\" data-time-key=\"hour\">\n                <div class=\"up-btn\" data-time-key=\"hour\">\u25B2</div>\n                <input value=\"{{hour.title}}\" type=\"text\" placeholder=\"hour\" class=\"hour-input\">\n                <div class=\"down-btn\" data-time-key=\"hour\">\u25BC</div>                    \n            </div>       \n            <div class=\"divider\">\n                <span>:</span>\n            </div>\n        {{/hour.enabled}}\n        {{#minute.enabled}}\n            <div class=\"minute time-segment\" data-time-key=\"minute\" >\n                <div class=\"up-btn\" data-time-key=\"minute\">\u25B2</div>\n                <input disabled value=\"{{minute.title}}\" type=\"text\" placeholder=\"minute\" class=\"minute-input\">\n                <div class=\"down-btn\" data-time-key=\"minute\">\u25BC</div>\n            </div>        \n            <div class=\"divider second-divider\">\n                <span>:</span>\n            </div>\n        {{/minute.enabled}}\n        {{#second.enabled}}\n            <div class=\"second time-segment\" data-time-key=\"second\"  >\n                <div class=\"up-btn\" data-time-key=\"second\" >\u25B2</div>\n                <input disabled value=\"{{second.title}}\"  type=\"text\" placeholder=\"second\" class=\"second-input\">\n                <div class=\"down-btn\" data-time-key=\"second\" >\u25BC</div>\n            </div>\n            <div class=\"divider meridian-divider\"></div>\n            <div class=\"divider meridian-divider\"></div>\n        {{/second.enabled}}\n        {{#meridiem.enabled}}\n            <div class=\"meridiem time-segment\" data-time-key=\"meridian\" >\n                <div class=\"up-btn\" data-time-key=\"meridiem\">\u25B2</div>\n                <input disabled value=\"{{meridiem.title}}\" type=\"text\" class=\"meridiem-input\">\n                <div class=\"down-btn\" data-time-key=\"meridiem\">\u25BC</div>\n            </div>\n        {{/meridiem.enabled}}\n    </div>\n    {{/enabled}}\n    {{/time}}\n    \n    {{#toolbox}}\n    {{#enabled}}\n    <div class=\"toolbox \">\n        <div class=\"btn-today\">{{text.btnToday}}</div>\n    </div>\n    {{/enabled}}\n    {{/toolbox}}\n</div>\n";
-
-module.exports = Template;
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var State = __webpack_require__(12);
-var Toolbox = __webpack_require__(13);
-var View = __webpack_require__(14);
-var Input = __webpack_require__(9);
-var API = __webpack_require__(5);
-var Navigator = __webpack_require__(10);
-var Options = __webpack_require__(2);
+var State = __webpack_require__(11);
+var Toolbox = __webpack_require__(12);
+var View = __webpack_require__(13);
+var Input = __webpack_require__(6);
+var API = __webpack_require__(3);
+var Navigator = __webpack_require__(7);
+var Options = __webpack_require__(8);
+var PersianDateWrapper = __webpack_require__(10);
 
 /**
  * Main datepicker object, manage every things
  */
 
-var Model =
-
-/**
- * @param inputElement
- * @param options
- * @private
- */
-function Model(inputElement, options) {
-  _classCallCheck(this, Model);
+var Model = function () {
 
   /**
-   * @desc DateUtil - date helper class
-   * @type {DateUtil}
+   * @param inputElement
+   * @param options
+   * @private
    */
+  function Model(inputElement, options) {
+    _classCallCheck(this, Model);
 
-  /**
-   * @desc [initialUnix=null]
-   * @type {unix}
-   */
-  this.initialUnix = null;
-
-  /**
-   * @desc inputElement=inputElement
-   * @type {Object}
-   */
-  this.inputElement = inputElement;
-
-  /**
-   * @desc handle works about config
-   * @type {Options}
-   */
-  this.options = new Options(options);
-
-  /**
-   * @desc set and get selected and view and other state
-   * @type {State}
-   */
-  this.state = new State(this);
-
-  /**
-   * @desc handle works about input and alt field input element
-   * @type {Input}
-   */
-  this.input = new Input(this, inputElement);
-
-  /**
-   * @desc render datepicker view base on State
-   * @type {View}
-   */
-  this.view = new View(this);
-
-  /**
-   * @desc handle works about toolbox
-   * @type {Toolbox}
-   */
-  this.toolbox = new Toolbox(this);
-
-  /**
-   *
-   * @param unix
-   */
-  this.updateInput = function (unix) {
-    this.input.update(unix);
-  };
-
-  this.state.setViewDateTime('unix', this.input.getOnInitState());
-  if (this.options.initialValue) {
-    this.state.setSelectedDateTime('unix', this.input.getOnInitState());
+    return this.components(inputElement, options);
   }
 
-  /**
-   * @desc handle navigation and dateoicker element events
-   * @type {Navigator}
-   */
-  this.navigator = new Navigator(this);
+  _createClass(Model, [{
+    key: 'components',
+    value: function components(inputElement, options) {
+      /**
+       * @desc [initialUnix=null]
+       * @type {unix}
+       */
+      this.initialUnix = null;
 
-  var that = this;
-  return new API(this);
-};
+      /**
+       * @desc inputElement=inputElement
+       * @type {Object}
+       */
+      this.inputElement = inputElement;
+
+      /**
+       * @desc handle works about config
+       * @type {Options}
+       */
+      this.options = new Options(options, this);
+
+      /**
+       *
+       * @type {PersianDateWrapper}
+       */
+      this.PersianDate = new PersianDateWrapper(this);
+
+      /**
+       * @desc set and get selected and view and other state
+       * @type {State}
+       */
+      this.state = new State(this);
+
+      this.api = new API(this);
+
+      /**
+       * @desc handle works about input and alt field input element
+       * @type {Input}
+       */
+      this.input = new Input(this, inputElement);
+
+      /**
+       * @desc render datepicker view base on State
+       * @type {View}
+       */
+      this.view = new View(this);
+
+      /**
+       * @desc handle works about toolbox
+       * @type {Toolbox}
+       */
+      this.toolbox = new Toolbox(this);
+
+      /**
+       *
+       * @param unix
+       */
+      this.updateInput = function (unix) {
+        this.input.update(unix);
+      };
+
+      this.state.setViewDateTime('unix', this.input.getOnInitState());
+      this.state.setSelectedDateTime('unix', this.input.getOnInitState());
+      this.view.render();
+
+      /**
+       * @desc handle navigation and dateoicker element events
+       * @type {Navigator}
+       */
+      this.navigator = new Navigator(this);
+
+      return this.api;
+    }
+  }]);
+
+  return Model;
+}();
 
 module.exports = Model;
 
 /***/ }),
-/* 5 */
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -393,18 +300,22 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var options = __webpack_require__(2);
-
 /**
- * This is default API class
+ * Default API class
  */
-
 var API = function () {
     function API(model) {
         _classCallCheck(this, API);
 
         this.model = model;
     }
+
+    /**
+     * @description get current option object
+     * @example var pd = $('.selector').persianDatepicker();
+     * console.log(pd.options);
+     */
+
 
     _createClass(API, [{
         key: 'show',
@@ -419,6 +330,22 @@ var API = function () {
             this.model.view.show();
             this.model.options.onShow(this);
             return this.model;
+        }
+
+        /**
+         * @description return datepicker current state
+         * @since 1.0.0
+         * @example var pd = $('.selector').persianDatepicker();
+         * var state = pd.getState();
+         *
+         * console.log(state.selected);
+         * console.log(state.view);
+         * */
+
+    }, {
+        key: 'getState',
+        value: function getState() {
+            return this.model.state;
         }
 
         /**
@@ -477,7 +404,8 @@ var API = function () {
             this.model.state.setSelectedDateTime('unix', unix);
             this.model.state.setViewDateTime('unix', unix);
             this.model.state.setSelectedDateTime('unix', unix);
-            this.model.options.dayPicker.onSelect(unix);
+            this.model.view.render(this.view);
+            this.model.options.onSet(unix);
             return this.model;
         }
     }, {
@@ -496,8 +424,9 @@ var API = function () {
          */
         ,
         set: function set(inputOptions) {
-            this.model.options = new Options(inputOptions);
-            this.model.view.reRender();
+            var opt = $.extend(true, this.model.options, inputOptions);
+            this.destroy();
+            this.model.components(this.model.inputElement, opt);
         }
     }]);
 
@@ -507,7 +436,7 @@ var API = function () {
 module.exports = API;
 
 /***/ }),
-/* 6 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -516,9 +445,106 @@ module.exports = API;
 var Helper = __webpack_require__(0);
 
 /**
- * This is default config class
+ * @description persian-datepicker configuration document
  */
 var Config = {
+
+  /**
+   * @description set default calendar mode of datepicker, available options: 'persian', 'gregorian'
+   * @default 'persian'
+   * @type string
+   * @since 1.0.0
+   */
+  'calendarType': 'persian',
+
+  /**
+   * @description calendar type and localization configuration
+   * @type object
+   * @since 1.0.0
+   * @example
+   * {
+   *     'persian': {
+   *         'locale': 'fa',
+   *         'showHint': false,
+   *         'leapYearMode': 'algorithmic' // "astronomical"
+   *     },
+   *
+   *     'gregorian': {
+   *         'locale': 'en',
+   *         'showHint': false
+   *     }
+   * }
+   *
+   *
+   *
+   */
+  'calendar': {
+
+    /**
+     * @description Persian calendar configuration
+     * @type object
+     * @since 1.0.0
+     */
+    'persian': {
+
+      /**
+       * @description set locale of Persian calendar available options: 'fa', 'en'
+       * @default 'fa'
+       * @type string
+       * @since 1.0.0
+       */
+      'locale': 'fa',
+
+      /**
+       * @description if set true, small date hint of this calendar will be shown on another calendar
+       * @type boolean
+       * @default false
+       * @since 1.0.0
+       */
+      'showHint': false,
+
+      /**
+       * @description Persian calendar leap year calculation mode, available options: 'algorithmic', 'astronomical'
+       * @type string
+       * @link http://babakhani.github.io/PersianWebToolkit/doc/persian-date/leapyear
+       * @default 'algorithmic'
+       * @since 1.0.0
+       */
+      'leapYearMode': 'algorithmic' // "astronomical"
+    },
+
+    /**
+     * @description Gregorian calendar configuration
+     * @type object
+     * @since 1.0.0
+     */
+    'gregorian': {
+
+      /**
+       * @description set locale of Gregorian calendar available options: 'fa', 'en'
+       * @default 'en'
+       * @type string
+       * @since 1.0.0
+       */
+      'locale': 'en',
+
+      /**
+       * @description if set true, small date hint of this calendar will be shown on another calendar
+       * @type boolean
+       * @default false
+       * @since 1.0.0
+       */
+      'showHint': false
+    }
+  },
+
+  /**
+   * @description if set true make enable responsive view on mobile devices
+   * @type boolean
+   * @since 1.0.0
+   * @default true
+   */
+  'responsive': true,
 
   /**
    * @description if true datepicker render inline
@@ -528,19 +554,28 @@ var Config = {
   'inline': false,
 
   /**
+   * @description If set true datepicker init with input value date, use data-date property when you want set inline datepicker initial value
    * @type boolean
    * @default true
    */
   'initialValue': true,
 
   /**
+   * @description If set true datepicker init with input value date
+   * @type boolean
+   * @default true
+   */
+  'initialValueType': 'gregorian',
+
+  /**
+   * @deprecated from v1.0.0 this options is deprecated, use calendar.persian.locale instead
    * @type boolean
    * @default true
    */
   'persianDigit': true,
 
   /**
-   * @description Acceptable value : day,month,year
+   * @description default view mode, Acceptable value : day,month,year
    * @type {string}
    * @default 'day'
    */
@@ -548,7 +583,7 @@ var Config = {
 
   /**
    * @description the date format, combination of d, dd, m, mm, yy, yyy.
-   * {@link http://babakhani.github.io/PersianWebToolkit/doc/persiandate/0.1.8/#/displaying/format/}
+   * @link http://babakhani.github.io/PersianWebToolkit/doc/persian-date/#format
    * @type {boolean}
    * @default 'LLLL'
    */
@@ -566,9 +601,8 @@ var Config = {
    *  }
    */
   'formatter': function formatter(unixDate) {
-    var self = this;
-    var pdate = new persianDate(unixDate);
-    pdate.formatPersian = this.persianDigit;
+    var self = this,
+        pdate = this.model.PersianDate.date(unixDate);
     return pdate.format(self.format);
   },
 
@@ -576,12 +610,16 @@ var Config = {
    * @description An input element that is to be updated with the selected date from the datepicker. Use the altFormat option to change the format of the date within this field. Leave as blank for no alternate field. acceptable value: : '#elementId','.element-class'
    * @type {boolean}
    * @default false
+   * @example
+   * altField: '#inputAltFirld'
+   *
+   * altField: '.input-alt-field'
    */
   'altField': false,
 
   /**
    * @description the date format, combination of d, dd, m, mm, yy, yyy.
-   * {@link http://babakhani.github.io/PersianWebToolkit/doc/persiandate/0.1.8/#/displaying/format/}
+   * @link http://babakhani.github.io/PersianWebToolkit/doc/persian-date/#format
    * @type {string}
    * @default 'unix'
    */
@@ -608,22 +646,22 @@ var Config = {
    *  }
    */
   'altFieldFormatter': function altFieldFormatter(unixDate) {
-    var self = this;
-    var thisAltFormat = self.altFormat.toLowerCase();
+    var self = this,
+        thisAltFormat = self.altFormat.toLowerCase(),
+        pd = void 0;
     if (thisAltFormat === 'gregorian' || thisAltFormat === 'g') {
       return new Date(unixDate);
     }
     if (thisAltFormat === 'unix' || thisAltFormat === 'u') {
       return unixDate;
     } else {
-      var pd = new persianDate(unixDate);
-      pd.formatPersian = this.persianDigit;
+      pd = this.model.PersianDate.date(unixDate);
       return pd.format(self.altFormat);
     }
   },
 
   /**
-   * @description set min date on datepicker
+   * @description Set min date on datepicker, prevent user select date before given unix time
    * @property minDate
    * @type Date
    * @default null
@@ -631,7 +669,7 @@ var Config = {
   'minDate': null,
 
   /**
-   * @description set max date on datepicker
+   * @description Set max date on datepicker, prevent user select date after given unix time
    * @property maxDate
    * @type Date
    * @default null
@@ -645,20 +683,21 @@ var Config = {
    */
   'navigator': {
     /**
-     * @description Enable or Disable dayPicker
+     * @description make navigator enable or disable
      * @type boolean
      * @default true
      */
     'enabled': true,
 
     /**
-     *
+     * @description navigate by scroll configuration
      * @type object
      * @description scroll navigation options
      */
     'scroll': {
 
       /**
+       * @description if you want make disable scroll navigation set this option false
        * @type boolean
        * @default true
        */
@@ -670,51 +709,48 @@ var Config = {
      */
     'text': {
       /**
-       * @description text of next btn
+       * @description text of next button
        * @default '<'
        */
       'btnNextText': '<',
 
       /**
-       * @description text of prev btn
+       * @description text of prev button
        * @default: '>'
        */
       'btnPrevText': '>'
     },
 
     /**
-     * @description Trigger When Next button clicked
+     * @description Called when navigator goes to next state
      * @event
-     * @param navigator
      * @example function (navigator) {
      *      //log('navigator next ');
      *  }
      */
-    'onNext': function onNext(navigator) {
+    'onNext': function onNext() {
       //log('navigator next ');
     },
 
     /**
-     * @description Trigger When Prev button clicked
+     * @description Called when navigator goes to previews state
      * @event
-     * @param navigator
      * @example function (navigator) {
      *      //log('navigator prev ');
      *  }
      */
-    'onPrev': function onPrev(navigator) {
+    'onPrev': function onPrev() {
       //log('navigator prev ');
     },
 
     /**
-     * @description Trigger When Switch view button clicked
+     * @description Called when navigator switch
      * @event
-     * @param navigator
      * @example function (state) {
             // console.log('navigator switch ');
      *  }
      */
-    'onSwitch': function onSwitch(state) {
+    'onSwitch': function onSwitch() {
       // console.log('navigator switch ');
     }
   },
@@ -727,21 +763,153 @@ var Config = {
   'toolbox': {
 
     /**
+     * @description boolean option that make toolbar enable or disable
      * @type boolean
      * @default true
      */
     'enabled': true,
 
     /**
+     * @description toolbox button text configuration
      * @type object
+     * @deprecated from 1.0.0
      */
     'text': {
 
       /**
+       * @description text of today button, deprecated from 1.0.0
        * @type string
        * @default 'امروز'
+       * @deprecated from 1.0.0
        */
       btnToday: 'امروز'
+
+    },
+
+    /**
+     * @description submit button configuration (only shown on mobile)
+     * @since 1.0.0
+     */
+    submitButton: {
+
+      /**
+       * @description make submit button enable or disable
+       * @type boolean
+       * @default false
+       * @since 1.0.0
+       */
+      enabled: false,
+
+      /**
+       * @description submit button text
+       * @since 1.0.0
+       * @type object
+       */
+      text: {
+
+        /**
+         * @description show when current calendar is Persian
+         * @since 1.0.0
+         * @type object
+         * @default تایید
+         */
+        fa: 'تایید',
+
+        /**
+         * @description show when current calendar is Gregorian
+         * @since 1.0.0
+         * @type object
+         * @default submit
+         */
+        en: 'submit'
+      },
+
+      /**
+       * @description Called when submit button clicked
+       * @since 1.0.0
+       * @type function
+       * @event
+       */
+      onSubmit: function onSubmit() {}
+    },
+
+    /**
+     * @description toolbox today button configuration
+     * @since 1.0.0
+     */
+    todayButton: {
+
+      /**
+       * @description make toolbox today button enable or disable
+       * @type boolean
+       * @since 1.0.0
+       */
+      enabled: true,
+
+      /**
+       * @description today button text
+       * @since 1.0.0
+       * @type object
+       */
+      text: {
+
+        /**
+         * @description show when current calendar is Persian
+         * @since 1.0.0
+         * @type object
+         * @default امروز
+         */
+        fa: 'امروز',
+
+        /**
+         * @description show when current calendar is Gregorian
+         * @since 1.0.0
+         * @type object
+         * @default today
+         */
+        en: 'today'
+      },
+
+      /**
+       * @description Called when today button clicked
+       * @since 1.0.0
+       * @type function
+       * @event
+       */
+      onToday: function onToday() {}
+    },
+
+    /**
+     * @description toolbox calendar switch configuration
+     * @type object
+     * @since 1.0.0
+     */
+    calendarSwitch: {
+
+      /**
+       * @description make calendar switch enable or disable
+       * @type boolean
+       * @since 1.0.0
+       * @default true
+       */
+      enabled: true,
+
+      /**
+       * @description calendar switch text format string
+       * @link http://babakhani.github.io/PersianWebToolkit/doc/persian-date/#format
+       * @type string
+       * @since 1.0.0
+       * @default MMMM
+       */
+      format: 'MMMM',
+
+      /**
+       * @description Called when calendar switch clicked
+       * @since 1.0.0
+       * @type function
+       * @event
+       */
+      onSwitch: function onSwitch() {}
     },
 
     /**
@@ -750,8 +918,9 @@ var Config = {
      * @example function (toolbox) {
      *      //log('toolbox today btn');
      *  }
+     *  @deprecated 1.0.0
      */
-    onToday: function onToday(toolbox) {
+    onToday: function onToday() {
       //log('toolbox today btn');
     }
   },
@@ -764,7 +933,7 @@ var Config = {
   'onlyTimePicker': false,
 
   /**
-   * @description if true date select just by click on day in month grid
+   * @description  if true date select just by click on day in month grid, and when user select month or year selected date doesnt change
    * @property justSelectOnDate
    * @type boolean
    * @default: true
@@ -772,73 +941,80 @@ var Config = {
   'onlySelectOnDate': true,
 
   /**
-   * @description check date avalibility
+   * @description Validate date access before render
    * @type function
    */
-  'checkDate': function checkDate(unix) {
+  'checkDate': function checkDate() {
     return true;
   },
 
   /**
-   * @description check month avalibility
+   * @description Validate month access before render
    * @type {function}
    */
-  'checkMonth': function checkMonth(month) {
+  'checkMonth': function checkMonth() {
     return true;
   },
 
   /**
-   * @description check year avalibility
+   * @description Validate year access before render
    * @type {function}
    */
-  'checkYear': function checkYear(year) {
+  'checkYear': function checkYear() {
     return true;
   },
 
   /**
-   * @description timepicker config object
+   * @description timePicker configuration
    * @type {object}
    */
   'timePicker': {
 
     /**
+     * @description make timePicker enable or disable
      * @type boolean
      */
     'enabled': false,
 
     /**
+     * @description The amount that increases or decreases by pressing the button
      * @type number
      */
     'step': 1,
 
     /**
+     * @description hour selector configuration
      * @type object
      */
     'hour': {
 
       /**
+       * @description make hour selector enable or disable
        * @type boolean
        */
       'enabled': true,
 
       /**
-       * @description overwrite by parent step
+       * @description The amount that increases or decreases hour, by pressing the button. overwrite by timepicker.step
        * @type boolean
        */
       'step': null
     },
 
     /**
+     * @description minute selector configuration
      * @type object
      */
     'minute': {
 
       /**
+       * @description make minute selector enable or disable
        * @type boolean
        */
       'enabled': true,
 
       /**
+       * @description The amount that increases or decreases minute, by pressing the button. overwrite by timepicker.step
        * @description overwrite by parent step
        * @type boolean
        */
@@ -846,154 +1022,165 @@ var Config = {
     },
 
     /**
+     * @description second selector configuration
      * @type object
      */
     'second': {
 
       /**
+       * @description make second selector enable or disable
        * @type boolean
        */
       'enabled': true,
 
       /**
-       * @description overwrite by parent step
+       * @description The amount that increases or decreases second, by pressing the button. overwrite by timepicker.step
        * @type boolean
        */
       'step': null
     },
 
     /**
+     * @description meridian selector configuration
      * @type object
      */
-    'meridiem': {
+    'meridian': {
 
       /**
+       * @description if you set this as false, datepicker timepicker system moved to 24-hour system
        * @type boolean
-       * @description if you set this as false, datepicker clock system moved to 24-hour system
        */
       'enabled': false
     }
   },
 
   /**
-   * @description dayPicker config object
+   * @description dayPicker configuration
    * @type {object}
    */
   'dayPicker': {
 
     /**
+     * @description make daypicker enable or disable
      * @type boolean
      * @default true
      */
     'enabled': true,
 
     /**
+     * @description daypicker title format string
      * @type string
      * @default 'YYYY MMMM'
+     * @link http://babakhani.github.io/PersianWebToolkit/doc/persian-date/#format
      */
     'titleFormat': 'YYYY MMMM',
 
     /**
+     * @description daypicker title formatter function
      * @param year
      * @param month
      * @return {*}
      */
     'titleFormatter': function titleFormatter(year, month) {
-      var titleDate = new persianDate([year, month]);
-      titleDate.formatPersian = this.model.options.persianDigit;
+      var titleDate = this.model.PersianDate.date([year, month]);
       return titleDate.format(this.model.options.dayPicker.titleFormat);
     },
 
     /**
+     * @description fired when user select date
      * @event
      * @param selectedDayUnix
      */
     'onSelect': function onSelect(selectedDayUnix) {
-      Helper.debug('dayPicker Event: onSelect : ' + selectedDayUnix);
+      Helper.debug(this, 'dayPicker Event: onSelect : ' + selectedDayUnix);
     }
 
   },
 
   /**
-   * @description monthPicker config object
+   * @description monthPicker configuration
    * @type {object}
    */
   'monthPicker': {
 
     /**
+     * @description make monthPicker enable or disable
      * @type boolean
      * @default true
      */
     'enabled': true,
 
     /**
+     * @description monthPicker title format string
      * @type string
      * @default 'YYYY'
      */
     'titleFormat': 'YYYY',
 
     /**
+     * @description monthPicker title formatter function
      * @param unix
      * @return {*}
      */
     'titleFormatter': function titleFormatter(unix) {
-      var titleDate = new persianDate(unix);
-      titleDate.formatPersian = this.model.options.persianDigit;
+      var titleDate = this.model.PersianDate.date(unix);
       return titleDate.format(this.model.options.monthPicker.titleFormat);
     },
 
     /**
+     * @description fired when user select month
      * @event
      * @param monthIndex
      */
     'onSelect': function onSelect(monthIndex) {
-      Helper.debug('monthPicker Event: onSelect : ' + monthIndex);
+      Helper.debug(this, 'monthPicker Event: onSelect : ' + monthIndex);
     }
   },
 
   /**
-   * @description yearPicker config object
+   * @description yearPicker configuration
    * @type {object}
    */
   'yearPicker': {
 
     /**
+     * @description make yearPicker enable or disable
      * @type boolean
      * @default true
      */
     'enabled': true,
 
     /**
+     * @description yearPicker title format string
      * @type string
      * @default 'YYYY'
      */
     'titleFormat': 'YYYY',
 
     /**
-     *
+     * @description yearPicker title formatter function
      * @param year
      * @return {string}
      */
     'titleFormatter': function titleFormatter(year) {
       var remaining = parseInt(year / 12, 10) * 12;
-      var startYear = new persianDate([remaining]);
-      var endYear = new persianDate([remaining + 11]);
-      startYear.formatPersian = this.model.options.persianDigit;
-      endYear.formatPersian = this.model.options.persianDigit;
+      var startYear = this.model.PersianDate.date([remaining]);
+      var endYear = this.model.PersianDate.date([remaining + 11]);
       return startYear.format(this.model.options.yearPicker.titleFormat) + '-' + endYear.format(this.model.options.yearPicker.titleFormat);
     },
 
     /**
+     * @description fired when user select year
      * @event
      * @param year
      */
     'onSelect': function onSelect(year) {
-      Helper.debug('yearPicker Event: onSelect : ' + year);
+      Helper.debug(this, 'yearPicker Event: onSelect : ' + year);
     }
   },
 
   /**
-   * @description A function that takes current datepicker unixDate. It is called When Day Select.
+   * @description Called when date Select by user.
    * @event
    * @param unixDate
    */
@@ -1002,8 +1189,17 @@ var Config = {
   },
 
   /**
+   * @description Called when date Select by api.
+   * @event
+   * @param unixDate
+   */
+  'onSet': function onSet(unixDate) {
+    Helper.debug(this, 'datepicker Event: onSet : ' + unixDate);
+  },
+
+  /**
    * @description position of datepicker relative to input element
-   * @type mix
+   * @type string | array
    * @default 'auto'
    * @example
    *  'position': 'auto'
@@ -1016,34 +1212,35 @@ var Config = {
    * @event
    */
   'onShow': function onShow() {
-    Helper.debug(this, 'dayPicker Event: onShow ');
+    Helper.debug(this, 'Event: onShow ');
   },
 
   /**
    * @description A function that takes current datepicker instance. It is called just before the datepicker Hide.
    * @event
-   * @param self
    */
   'onHide': function onHide() {
-    Helper.debug(this, 'dayPicker Event: onHide ');
+    Helper.debug(this, 'Event: onHide ');
   },
 
   /**
-   *
+   * @description on toggle datepicker event
+   * @event
    */
   'onToggle': function onToggle() {
-    Helper.debug(this, 'dayPicker Event: onToggle ');
+    Helper.debug(this, 'Event: onToggle ');
   },
 
   /**
-   *
+   * @description on destroy datepicker event
+   * @event
    */
   'onDestroy': function onDestroy() {
-    Helper.debug(this, 'dayPicker Event: onDestroy ');
+    Helper.debug(this, 'Event: onDestroy ');
   },
 
   /**
-   * @description If true picker close When Select day
+   * @description If true datepicker close When select a date
    * @type {boolean}
    * @default false
    */
@@ -1157,13 +1354,13 @@ var Config = {
    <div class="divider meridian-divider"></div>
    <div class="divider meridian-divider"></div>
    {{/second.enabled}}
-   {{#meridiem.enabled}}
-   <div class="meridiem time-segment" data-time-key="meridian" >
-   <div class="up-btn" data-time-key="meridiem">▲</div>
-   <input value="{{meridiem.title}}" type="text" class="meridiem-input">
-   <div class="down-btn" data-time-key="meridiem">▼</div>
+   {{#meridian.enabled}}
+   <div class="meridian time-segment" data-time-key="meridian" >
+   <div class="up-btn" data-time-key="meridian">▲</div>
+   <input value="{{meridian.title}}" type="text" class="meridian-input">
+   <div class="down-btn" data-time-key="meridian">▼</div>
    </div>
-   {{/meridiem.enabled}}
+   {{/meridian.enabled}}
    </div>
    {{/enabled}}
    {{/time}}
@@ -1183,10 +1380,10 @@ var Config = {
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   /**
-   * @description observer
+   * @description if true datepicker update self by user inputted date string, accept 'yyyy/mm/dd'
+   * @example '1396/10/2', ''
    * @type {boolean}
    * @default false
-   * @deprecated
    */
   'observer': false,
 
@@ -1196,7 +1393,7 @@ var Config = {
 
 
   /**
-   * @description inputDelay
+   * @description waite time for last user key-down event, accept millisecond
    * @type {number}
    * @default 800
    */
@@ -1206,214 +1403,34 @@ var Config = {
 module.exports = Config;
 
 /***/ }),
-/* 7 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-/**
- */
-var ClassDateRange = {
-    /**
-     * @property monthRange
-     */
-    monthRange: [{
-        index: 1,
-        name: {
-            fa: "فروردین"
-        },
-        abbr: {
-            fa: "فرو"
-        }
-    }, {
-        index: 2,
-        name: {
-            fa: "اردیبهشت"
-        },
-        abbr: {
-            fa: "ارد"
-        }
-    }, {
-        index: 3,
-        name: {
-            fa: "خرداد"
-        },
-        abbr: {
-            fa: "خرد"
-        }
-    }, {
-        index: 4,
-        name: {
-            fa: "تیر"
-        },
-        abbr: {
-            fa: "تیر"
-        }
-    }, {
-        index: 5,
-        name: {
-            fa: "مرداد"
-        },
-        abbr: {
-            fa: "مرد"
-        }
-    }, {
-        index: 6,
-        name: {
-            fa: "شهریور"
-        },
-        abbr: {
-            fa: "شهر"
-        }
-    }, {
-        index: 7,
-        name: {
-            fa: "مهر"
-        },
-        abbr: {
-            fa: "مهر"
-        }
-    }, {
-        index: 8,
-        name: {
-            fa: "آبان"
-        },
-        abbr: {
-            fa: "آبا"
-        }
-
-    }, {
-        index: 9,
-        name: {
-            fa: "آذر"
-        },
-        abbr: {
-            fa: "آذر"
-        }
-    }, {
-        index: 10,
-        name: {
-            fa: "دی"
-        },
-        abbr: {
-            fa: "دی"
-        }
-    }, {
-        index: 11,
-        name: {
-            fa: "بهمن"
-        },
-        abbr: {
-            fa: "بهم"
-        }
-    }, {
-        index: 12,
-        name: {
-            fa: "اسفند"
-        },
-        abbr: {
-            fa: "اسف"
-        }
-    }],
-
-    /**
-     * @property weekRange
-     */
-    weekRange: {
-        0: {
-            name: {
-                fa: "شنبه"
-            },
-            abbr: {
-                fa: "ش"
-            }
-        },
-        1: {
-            name: {
-                fa: "یکشنبه"
-            },
-            abbr: {
-                fa: "ی"
-            }
-        },
-        2: {
-            name: {
-                fa: "دوشنبه"
-            },
-            abbr: {
-                fa: "د"
-            }
-        },
-        3: {
-            name: {
-                fa: "سه شنبه"
-            },
-            abbr: {
-                fa: "س"
-            }
-        },
-        4: {
-            name: {
-                fa: "چهار شنبه"
-            },
-            abbr: {
-                fa: "چ"
-            }
-        }, 5: {
-            name: {
-                fa: "پنج شنبه"
-            },
-            abbr: {
-                fa: "پ"
-            }
-        },
-        6: {
-            name: {
-                fa: "جمعه"
-            },
-            abbr: {
-                fa: "ج"
-            }
-        }
-    },
-
-    /**
-     * @property persianDaysName
-     */
-    persianDaysName: ["اورمزد", "بهمن", "اوردیبهشت", "شهریور", "سپندارمذ", "خورداد", "امرداد", "دی به آذز", "آذز", "آبان", "خورشید", "ماه", "تیر", "گوش", "دی به مهر", "مهر", "سروش", "رشن", "فروردین", "بهرام", "رام", "باد", "دی به دین", "دین", "ارد", "اشتاد", "آسمان", "زامیاد", "مانتره سپند", "انارام", "زیادی"]
-};
-
-module.exports = ClassDateRange;
-
-/***/ }),
-/* 8 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var Model = __webpack_require__(4);
+var Model = __webpack_require__(2);
 
 /**
  * @author babakhani.reza@gmail.com
  * @description jquery plugin initializer
  */
 (function ($) {
+    /*eslint-disable no-unused-vars */
     $.fn.persianDatepicker = $.fn.pDatepicker = function (options) {
         var args = Array.prototype.slice.call(arguments),
             output = null,
             self = this;
         if (!this) {
-            $.error("Invalid selector");
+            $.error('Invalid selector');
         }
         $(this).each(function () {
             // encapsulation Args
             var emptyArr = [],
                 tempArg = args.concat(emptyArr),
-                dp = $(this).data("datepicker"),
+                dp = $(this).data('datepicker'),
                 funcName = null;
-            if (dp && typeof tempArg[0] === "string") {
+            if (dp && typeof tempArg[0] === 'string') {
                 funcName = tempArg[0];
                 output = dp[funcName](tempArg[0]);
             } else {
@@ -1421,12 +1438,13 @@ var Model = __webpack_require__(4);
             }
         });
         $(this).data('datepicker', self.pDatePicker);
-        return this;
+        return self.pDatePicker;
     };
+    /*eslint-enable no-unused-vars */
 })(jQuery);
 
 /***/ }),
-/* 9 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1437,7 +1455,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var Helper = __webpack_require__(0);
-var PersianDateParser = __webpack_require__(11);
+var PersianDateParser = __webpack_require__(9);
 /**
  * Do every thing about input element like get default value, set new value, set alt field input and etc.
  */
@@ -1458,6 +1476,12 @@ var Input = function () {
         this.model = model;
 
         /**
+         * @type {boolean}
+         * @private
+         */
+        this._firstUpdate = true;
+
+        /**
          * @type {Element}
          */
         this.elem = inputElement;
@@ -1472,7 +1496,11 @@ var Input = function () {
          * @type {Number}
          */
         this.initialUnix = null;
-        this._attachInputElementEvents();
+
+        if (this.model.options.inline == false) {
+            this._attachInputElementEvents();
+        }
+
         return this;
     }
 
@@ -1487,9 +1515,10 @@ var Input = function () {
             var parse = new PersianDateParser(),
                 that = this;
             if (parse.parse(inputString) !== undefined) {
-                var pd = new persianDate(parse.parse(inputString)).valueOf();
+                var pd = this.model.PersianDate.date(parse.parse(inputString)).valueOf();
                 that.model.state.setSelectedDateTime('unix', pd);
                 that.model.state.setViewDateTime('unix', pd);
+                that.model.view.render();
             }
         }
     }, {
@@ -1506,8 +1535,7 @@ var Input = function () {
                 doneTypingInterval = that.model.options.inputDelay,
                 ctrlDown = false,
                 ctrlKey = [17, 91],
-                vKey = 86,
-                cKey = 67;
+                vKey = 86;
 
             $(document).keydown(function (e) {
                 if ($.inArray(e.keyCode, ctrlKey) > 0) ctrlDown = true;
@@ -1515,7 +1543,7 @@ var Input = function () {
                 if ($.inArray(e.keyCode, ctrlKey) > 0) ctrlDown = false;
             });
 
-            $(that.elem).bind("keyup", function (e) {
+            $(that.elem).bind('keyup', function (e) {
                 var $self = $(this);
                 var trueKey = false;
                 if (e.keyCode === 8 || e.keyCode < 105 && e.keyCode > 96 || e.keyCode < 58 && e.keyCode > 47 || ctrlDown && (e.keyCode == vKey || $.inArray(e.keyCode, ctrlKey) > 0)) {
@@ -1542,7 +1570,7 @@ var Input = function () {
             //     //if (!self._flagSelfManipulate) {
             //         let newDate = new Date($(this).val());
             //         if (newDate !== "Invalid Date") {
-            //             let newPersainDate = new persianDate(newDate);
+            //             let newPersainDate = this.model.PersianDate.date(newDate);
             //             self.selectDate(newPersainDate.valueOf());
             //         }
             //   //  }
@@ -1558,16 +1586,24 @@ var Input = function () {
         key: '_attachInputElementEvents',
         value: function _attachInputElementEvents() {
             var that = this;
-            $(this.elem).on('focus click', function () {
-                that.model.view.show();
-            });
-            if (this.model.state.ui.isInline === false) {
-                $(document).on('click', function (e) {
-                    if (!$(e.target).closest(".datepicker-plot-area, .datepicker-plot-area > *, .pwt-datepicker-input-element").length) {
-                        that.model.view.hide();
-                    }
-                });
-            }
+            var closePickerHandler = function closePickerHandler(e) {
+                if (!$(e.target).is(that.elem) && !$(e.target).is(that.model.view.$container) && $(e.target).closest('#' + that.model.view.$container.attr('id')).length == 0 && !$(e.target).is($(that.elem).children())) {
+                    that.model.api.hide();
+                    $('body').unbind('click', closePickerHandler);
+                }
+            };
+
+            $(this.elem).on('focus click', Helper.debounce(function (evt) {
+                that.model.api.show();
+                if (that.model.state.ui.isInline === false) {
+                    $('body').unbind('click', closePickerHandler).bind('click', closePickerHandler);
+                }
+                if (Helper.isMobile) {
+                    $(this).blur();
+                }
+                evt.stopPropagation();
+                return false;
+            }, 200));
         }
 
         /**
@@ -1634,8 +1670,12 @@ var Input = function () {
     }, {
         key: 'update',
         value: function update(unix) {
-            this._updateInputField(unix);
-            this._updateAltField(unix);
+            if (this.model.options.initialValue == false && this._firstUpdate) {
+                this._firstUpdate = false;
+            } else {
+                this._updateInputField(unix);
+                this._updateAltField(unix);
+            }
         }
 
         /**
@@ -1646,17 +1686,45 @@ var Input = function () {
     }, {
         key: 'getOnInitState',
         value: function getOnInitState() {
-            var garegurianDate = null;
-            var $inputElem = $(this.elem);
+            var persianDatePickerTimeRegex = '^([0-1][0-9]|2[0-3]):([0-5][0-9])(?::([0-5][0-9]))?$';
+            var garegurianDate = null,
+                $inputElem = $(this.elem),
+                inputValue = void 0;
+
+            // Define input value by check inline mode and input mode
+
             if ($inputElem[0].nodeName === 'INPUT') {
-                garegurianDate = new Date($inputElem[0].getAttribute('value')).valueOf();
+                inputValue = $inputElem[0].getAttribute('value');
             } else {
-                garegurianDate = new Date($inputElem.data('date')).valueOf();
+                inputValue = $inputElem.data('date');
             }
-            if (garegurianDate && garegurianDate != 'undefined') {
-                this.initialUnix = garegurianDate;
+
+            // Check time string by regex
+            if (inputValue && inputValue.match(persianDatePickerTimeRegex)) {
+                var timeArray = inputValue.split(':'),
+                    tempDate = new Date();
+                tempDate.setHours(timeArray[0]);
+                tempDate.setMinutes(timeArray[1]);
+                if (timeArray[2]) {
+                    tempDate.setSeconds(timeArray[2]);
+                } else {
+                    tempDate.setSeconds(0);
+                }
+                this.initialUnix = tempDate.valueOf();
             } else {
-                this.initialUnix = new Date().valueOf();
+                if (this.model.options.initialValueType === 'persian' && inputValue) {
+                    var parse = new PersianDateParser();
+                    var pd = new persianDate(parse.parse(inputValue)).valueOf();
+                    garegurianDate = new Date(pd).valueOf();
+                } else if (inputValue) {
+                    garegurianDate = new Date(inputValue).valueOf();
+                }
+
+                if (garegurianDate && garegurianDate != 'undefined') {
+                    this.initialUnix = garegurianDate;
+                } else {
+                    this.initialUnix = new Date().valueOf();
+                }
             }
             return this.initialUnix;
         }
@@ -1668,7 +1736,7 @@ var Input = function () {
 module.exports = Input;
 
 /***/ }),
-/* 10 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1678,7 +1746,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var Hamster = __webpack_require__(15);
+var Hamster = __webpack_require__(14);
 
 /**
  * This navigator class do every thing about navigate and select date
@@ -1713,30 +1781,33 @@ var Navigator = function () {
     _createClass(Navigator, [{
         key: 'liveAttach',
         value: function liveAttach() {
-
             // Check options
             if (this.model.options.navigator.scroll.enabled) {
                 var that = this;
                 var gridPlot = $('#' + that.model.view.id + ' .datepicker-grid-view')[0];
-                Hamster(gridPlot).wheel(function (event, delta, deltaX, deltaY) {
+                Hamster(gridPlot).wheel(function (event, delta) {
                     if (delta > 0) {
                         that.model.state.navigate('next');
                     } else {
                         that.model.state.navigate('prev');
                     }
+                    that.model.view.render();
                     event.preventDefault();
                 });
 
                 if (this.model.options.timePicker.enabled) {
                     var timePlot = $('#' + that.model.view.id + ' .datepicker-time-view')[0];
-                    Hamster(timePlot).wheel(function (event, delta, deltaX, deltaY) {
+                    Hamster(timePlot).wheel(function (event, delta) {
                         var $target = $(event.target);
                         var key = $target.data('time-key') ? $target.data('time-key') : $target.parents('[data-time-key]').data('time-key');
-                        if (delta > 0) {
-                            that.timeUp(key);
-                        } else {
-                            that.timeDown(key);
+                        if (key) {
+                            if (delta > 0) {
+                                that.timeUp(key);
+                            } else {
+                                that.timeDown(key);
+                            }
                         }
+                        that.model.view.render();
                         event.preventDefault();
                     });
                 }
@@ -1752,22 +1823,31 @@ var Navigator = function () {
     }, {
         key: 'timeUp',
         value: function timeUp(timekey) {
+            if (this.model.options.timePicker[timekey] == undefined) {
+                return;
+            }
             var step = void 0,
-                t = void 0;
-            if (timekey == 'meridiem') {
+                t = void 0,
+                that = this;
+            if (timekey == 'meridian') {
                 step = 12;
-                if (this.model.state.view.meridiem == 'PM') {
-                    t = new persianDate(this.model.state.selected.unixDate).add('hour', step).valueOf();
+                if (this.model.state.view.meridian == 'PM') {
+                    t = this.model.PersianDate.date(this.model.state.selected.unixDate).add('hour', step).valueOf();
                 } else {
-                    t = new persianDate(this.model.state.selected.unixDate).subtract('hour', step).valueOf();
+                    t = this.model.PersianDate.date(this.model.state.selected.unixDate).subtract('hour', step).valueOf();
                 }
-                this.model.state.meridiemToggle();
+                this.model.state.meridianToggle();
             } else {
                 step = this.model.options.timePicker[timekey].step;
-                t = new persianDate(this.model.state.selected.unixDate).add(timekey, step).valueOf();
+                t = this.model.PersianDate.date(this.model.state.selected.unixDate).add(timekey, step).valueOf();
             }
             this.model.state.setViewDateTime('unix', t);
             this.model.state.setSelectedDateTime('unix', t);
+            this.model.view.renderTimePartial();
+            clearTimeout(this.scrollDelayTimeDown);
+            this.scrollDelayTimeUp = setTimeout(function () {
+                that.model.view.markSelectedDay();
+            }, 300);
         }
 
         /**
@@ -1779,22 +1859,31 @@ var Navigator = function () {
     }, {
         key: 'timeDown',
         value: function timeDown(timekey) {
+            if (this.model.options.timePicker[timekey] == undefined) {
+                return;
+            }
             var step = void 0,
-                t = void 0;
-            if (timekey == 'meridiem') {
+                t = void 0,
+                that = this;
+            if (timekey == 'meridian') {
                 step = 12;
-                if (this.model.state.view.meridiem == 'AM') {
-                    t = new persianDate(this.model.state.selected.unixDate).add('hour', step).valueOf();
+                if (this.model.state.view.meridian == 'AM') {
+                    t = this.model.PersianDate.date(this.model.state.selected.unixDate).add('hour', step).valueOf();
                 } else {
-                    t = new persianDate(this.model.state.selected.unixDate).subtract('hour', step).valueOf();
+                    t = this.model.PersianDate.date(this.model.state.selected.unixDate).subtract('hour', step).valueOf();
                 }
-                this.model.state.meridiemToggle();
+                this.model.state.meridianToggle();
             } else {
                 step = this.model.options.timePicker[timekey].step;
-                t = new persianDate(this.model.state.selected.unixDate).subtract(timekey, step).valueOf();
+                t = this.model.PersianDate.date(this.model.state.selected.unixDate).subtract(timekey, step).valueOf();
             }
             this.model.state.setViewDateTime('unix', t);
             this.model.state.setSelectedDateTime('unix', t);
+            this.model.view.renderTimePartial();
+            clearTimeout(this.scrollDelayTimeDown);
+            this.scrollDelayTimeDown = setTimeout(function () {
+                that.model.view.markSelectedDay();
+            }, 300);
         }
 
         /**
@@ -1812,15 +1901,18 @@ var Navigator = function () {
                 /**
                  * @description navigator click event
                  */
-                $(document).on('click', '#' + that.model.view.id + ' .btn', function () {
-                    if ($(this).is('.btn-next')) {
+                $(document).on('click', '#' + that.model.view.id + ' .pwt-btn', function () {
+                    if ($(this).is('.pwt-btn-next')) {
                         that.model.state.navigate('next');
+                        that.model.view.render();
                         that.model.options.navigator.onNext(that);
-                    } else if ($(this).is('.btn-switch')) {
+                    } else if ($(this).is('.pwt-btn-switch')) {
                         that.model.state.switchViewMode();
+                        that.model.view.render();
                         that.model.options.navigator.onSwitch(that);
-                    } else if ($(this).is('.btn-prev')) {
+                    } else if ($(this).is('.pwt-btn-prev')) {
                         that.model.state.navigate('prev');
+                        that.model.view.render();
                         that.model.options.navigator.onPrev(that);
                     }
                 });
@@ -1857,14 +1949,26 @@ var Navigator = function () {
                  * @description days click event
                  */
                 $(document).on('click', '#' + that.model.view.id + ' .datepicker-day-view td:not(.disabled)', function () {
-                    var thisUnix = $(this).data('unix');
+                    var thisUnix = $(this).data('unix'),
+                        mustRender = void 0;
                     that.model.state.setSelectedDateTime('unix', thisUnix);
+                    if (that.model.state.selected.month !== that.model.state.view.month) {
+                        mustRender = true;
+                    } else {
+                        mustRender = false;
+                    }
                     that.model.state.setViewDateTime('unix', that.model.state.selected.unixDate);
-                    that.model.options.dayPicker.onSelect(thisUnix);
                     if (that.model.options.autoClose) {
                         that.model.view.hide();
                         that.model.options.onHide(that);
                     }
+                    if (mustRender) {
+                        that.model.view.render();
+                    } else {
+                        that.model.view.markSelectedDay();
+                    }
+                    that.model.options.dayPicker.onSelect(thisUnix);
+                    that.model.options.onSelect(thisUnix);
                 });
             }
 
@@ -1887,7 +1991,9 @@ var Navigator = function () {
                         }
                     }
                     that.model.state.setViewDateTime('month', month);
+                    that.model.view.render();
                     that.model.options.monthPicker.onSelect(month);
+                    that.model.options.onSelect(that.model.state.selected.unix);
                 });
             }
 
@@ -1910,7 +2016,9 @@ var Navigator = function () {
                         }
                     }
                     that.model.state.setViewDateTime('year', year);
+                    that.model.view.render();
                     that.model.options.yearPicker.onSelect(year);
+                    that.model.options.onSelect(that.model.state.selected.unix);
                 });
             }
         }
@@ -1922,7 +2030,99 @@ var Navigator = function () {
 module.exports = Navigator;
 
 /***/ }),
-/* 11 */
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Config = __webpack_require__(4);
+var Template = __webpack_require__(1);
+/**
+ * Extend default config from user interred and do compatibility works
+ * @public
+ */
+
+var Options = function () {
+
+    /**
+     * @param {object} options config passed when initialize
+     * @return {object}
+     * @todo remove jquery
+     */
+    function Options(options, model) {
+        _classCallCheck(this, Options);
+
+        this.model = model;
+        return this._compatibility($.extend(true, this, Config, options));
+    }
+
+    /**
+     * @private
+     * @param options
+     */
+
+
+    _createClass(Options, [{
+        key: '_compatibility',
+        value: function _compatibility(options) {
+
+            if (options.inline) {
+                options.toolbox.submitButton.enabled = false;
+            }
+
+            if (!options.template) {
+                options.template = Template;
+            }
+            persianDate.toCalendar(options.calendarType);
+            persianDate.toLocale(options.calendar[options.calendarType].locale);
+            if (options.onlyTimePicker) {
+                options.dayPicker.enabled = false;
+                options.monthPicker.enabled = false;
+                options.yearPicker.enabled = false;
+                options.navigator.enabled = false;
+                options.toolbox.enabled = false;
+                options.timePicker.enabled = true;
+            }
+
+            if (options.timePicker.hour.step === null) {
+                options.timePicker.hour.step = options.timePicker.step;
+            }
+            if (options.timePicker.minute.step === null) {
+                options.timePicker.minute.step = options.timePicker.step;
+            }
+            if (options.timePicker.second.step === null) {
+                options.timePicker.second.step = options.timePicker.step;
+            }
+
+            if (options.dayPicker.enabled === false) {
+                options.onlySelectOnDate = false;
+            }
+
+            options._viewModeList = [];
+            if (options.dayPicker.enabled) {
+                options._viewModeList.push('day');
+            }
+            if (options.monthPicker.enabled) {
+                options._viewModeList.push('month');
+            }
+            if (options.yearPicker.enabled) {
+                options._viewModeList.push('year');
+            }
+        }
+    }]);
+
+    return Options;
+}();
+
+module.exports = Options;
+
+/***/ }),
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1958,7 +2158,9 @@ var PersianDateParser = function () {
             inputString = inputString.toEnglishDigits();
 
             if (jalaliPat.test(inputString)) {
+                /* eslint-disable no-useless-escape */
                 persianDateArray = inputString.split(/\/|-|\,|\./).map(Number);
+                /* eslint-enable no-useless-escape */
                 return persianDateArray;
             } else {
                 return undefined;
@@ -1972,7 +2174,7 @@ var PersianDateParser = function () {
 module.exports = PersianDateParser;
 
 /***/ }),
-/* 12 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1982,13 +2184,56 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var DateUtil = __webpack_require__(1);
+var PersianDateWrapper = function () {
+    function PersianDateWrapper(model) {
+        _classCallCheck(this, PersianDateWrapper);
+
+        this.model = model;
+        this.model.options.calendar_ = this.model.options.calendarType;
+        this.model.options.locale_ = this.model.options.calendar[this.model.options.calendarType].locale;
+        return this;
+    }
+
+    _createClass(PersianDateWrapper, [{
+        key: "date",
+        value: function date(input) {
+            if (window.inspdCount || window.inspdCount === 0) {
+                window.inspdCount++;
+            } else {
+                window.inspdCount = 0;
+            }
+            var that = this;
+            var output = void 0,
+                cp = void 0;
+            cp = persianDate.toCalendar(that.model.options.calendar_);
+            if (this.model.options.calendar[this.model.options.calendarType].leapYearMode) {
+                cp.toLeapYearMode(this.model.options.calendar[this.model.options.calendarType].leapYearMode);
+            }
+            output = new cp(input);
+            return output.toLocale(that.model.options.locale_);
+        }
+    }]);
+
+    return PersianDateWrapper;
+}();
+
+module.exports = PersianDateWrapper;
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
  * All state set in his object and get from this
  * also this object notify other object to update self or update view or etc.
  */
-
 var State = function () {
 
     /**
@@ -2067,7 +2312,7 @@ var State = function () {
             second: 0,
             unixDate: 0,
             dateObject: null,
-            meridiem: 'AM'
+            meridian: 'AM'
         };
 
         /**
@@ -2079,6 +2324,7 @@ var State = function () {
             month: 0,
             date: 0,
             hour: 0,
+            hour12: 0,
             minute: 0,
             second: 0,
             unixDate: 0,
@@ -2106,12 +2352,12 @@ var State = function () {
         value: function _setFilterDate(minDate, maxDate) {
             var self = this;
             if (!minDate) {
-                minDate = -999999999999999999;
+                minDate = -2000000000000000;
             }
             if (!maxDate) {
-                maxDate = 999999999999999999;
+                maxDate = 2000000000000000;
             }
-            var pd = new persianDate(minDate);
+            var pd = self.model.PersianDate.date(minDate);
             self.filterDate.start.unixDate = minDate;
             self.filterDate.start.hour = pd.hour();
             self.filterDate.start.minute = pd.minute();
@@ -2120,7 +2366,7 @@ var State = function () {
             self.filterDate.start.date = pd.date();
             self.filterDate.start.year = pd.year();
 
-            var pdEnd = new persianDate(maxDate);
+            var pdEnd = self.model.PersianDate.date(maxDate);
             self.filterDate.end.unixDate = maxDate;
             self.filterDate.end.hour = pdEnd.hour();
             self.filterDate.end.minute = pdEnd.minute();
@@ -2143,11 +2389,19 @@ var State = function () {
                     this.setViewDateTime('year', this.view.year + 12);
                 }
                 if (this.viewMode == 'month') {
-                    this.setViewDateTime('year', this.view.year + 1);
+                    var newYear = this.view.year + 1;
+                    if (newYear === 0) {
+                        newYear = 1;
+                    }
+                    this.setViewDateTime('year', newYear);
                 }
                 if (this.viewMode == 'day') {
+                    var _newYear = this.view.year + 1;
+                    if (_newYear === 0) {
+                        _newYear = 1;
+                    }
                     if (this.view.month + 1 == 13) {
-                        this.setViewDateTime('year', this.view.year + 1);
+                        this.setViewDateTime('year', _newYear);
                         this.setViewDateTime('month', 1);
                     } else {
                         this.setViewDateTime('month', this.view.month + 1);
@@ -2158,11 +2412,19 @@ var State = function () {
                     this.setViewDateTime('year', this.view.year - 12);
                 }
                 if (this.viewMode == 'month') {
-                    this.setViewDateTime('year', this.view.year - 1);
+                    var _newYear2 = this.view.year - 1;
+                    if (_newYear2 === 0) {
+                        _newYear2 = -1;
+                    }
+                    this.setViewDateTime('year', _newYear2);
                 }
                 if (this.viewMode == 'day') {
                     if (this.view.month - 1 <= 0) {
-                        this.setViewDateTime('year', this.view.year - 1);
+                        var _newYear3 = this.view.year - 1;
+                        if (_newYear3 === 0) {
+                            _newYear3 = -1;
+                        }
+                        this.setViewDateTime('year', _newYear3);
                         this.setViewDateTime('month', 12);
                     } else {
                         this.setViewDateTime('month', this.view.month - 1);
@@ -2215,11 +2477,12 @@ var State = function () {
             switch (key) {
                 case 'unix':
                     that.selected.unixDate = value;
-                    var pd = new persianDate(value);
+                    var pd = this.model.PersianDate.date(value);
                     that.selected.year = pd.year();
                     that.selected.month = pd.month();
                     that.selected.date = pd.date();
                     that.selected.hour = pd.hour();
+                    that.selected.hour12 = pd.format('hh');
                     that.selected.minute = pd.minute();
                     that.selected.second = pd.second();
                     break;
@@ -2254,11 +2517,9 @@ var State = function () {
     }, {
         key: '_updateSelectedUnix',
         value: function _updateSelectedUnix() {
-            this.selected.dateObject = new persianDate([this.selected.year, this.selected.month, this.selected.date, this.view.hour, this.view.minute, this.view.second]);
+            this.selected.dateObject = this.model.PersianDate.date([this.selected.year, this.selected.month, this.selected.date, this.view.hour, this.view.minute, this.view.second]);
             this.selected.unixDate = this.selected.dateObject.valueOf();
             this.model.updateInput(this.selected.unixDate);
-            this.model.options.onSelect(this.selected.unixDate);
-            this.model.view.render(this.view);
             return this;
         }
 
@@ -2271,15 +2532,15 @@ var State = function () {
     }, {
         key: '_setViewDateTimeUnix',
         value: function _setViewDateTimeUnix() {
-            this.view.dateObject = new persianDate([this.view.year, this.view.month, this.view.date, this.view.hour, this.view.minute, this.view.second]);
+            this.view.dateObject = this.model.PersianDate.date([this.view.year, this.view.month, this.view.date, this.view.hour, this.view.minute, this.view.second]);
             this.view.year = this.view.dateObject.year();
             this.view.month = this.view.dateObject.month();
             this.view.date = this.view.dateObject.date();
             this.view.hour = this.view.dateObject.hour();
+            this.view.hour12 = this.view.dateObject.format('hh');
             this.view.minute = this.view.dateObject.minute();
             this.view.second = this.view.dateObject.second();
             this.view.unixDate = this.view.dateObject.valueOf();
-            this.model.view.render(this.view);
             return this;
         }
 
@@ -2294,10 +2555,9 @@ var State = function () {
         key: 'setViewDateTime',
         value: function setViewDateTime(key, value) {
             var self = this;
-
             switch (key) {
                 case 'unix':
-                    var pd = new persianDate(value);
+                    var pd = this.model.PersianDate.date(value);
                     self.view.year = pd.year();
                     self.view.month = pd.month();
                     self.view.date = pd.date();
@@ -2329,17 +2589,17 @@ var State = function () {
         }
 
         /**
-         * desc change meridiem state
+         * desc change meridian state
          */
 
     }, {
-        key: 'meridiemToggle',
-        value: function meridiemToggle() {
+        key: 'meridianToggle',
+        value: function meridianToggle() {
             var self = this;
-            if (self.view.meridiem === 'AM') {
-                self.view.meridiem = 'PM';
-            } else if (self.view.meridiem === 'PM') {
-                self.view.meridiem = 'AM';
+            if (self.view.meridian === 'AM') {
+                self.view.meridian = 'PM';
+            } else if (self.view.meridian === 'PM') {
+                self.view.meridian = 'AM';
             }
         }
     }]);
@@ -2350,7 +2610,7 @@ var State = function () {
 module.exports = State;
 
 /***/ }),
-/* 13 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2365,45 +2625,77 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 var Toolbox = function () {
 
-  /**
-   * @param {Datepicker} datepicker
-   * @return {Toolbox}
-   */
-  function Toolbox(model) {
-    _classCallCheck(this, Toolbox);
-
     /**
-     * @type {Datepicker}
+     * @param {Datepicker} datepicker
+     * @return {Toolbox}
      */
-    this.model = model;
-    this._attachEvents();
-    return this;
-  }
+    function Toolbox(model) {
+        _classCallCheck(this, Toolbox);
 
-  /**
-   * attach all events about toolbox
-   */
-
-
-  _createClass(Toolbox, [{
-    key: '_attachEvents',
-    value: function _attachEvents() {
-      var that = this;
-      $(document).on('click', '#' + that.model.view.id + ' .btn-today', function () {
-        that.model.state.setSelectedDateTime('unix', new Date().valueOf());
-        that.model.state.setViewDateTime('unix', new Date().valueOf());
-        that.model.options.toolbox.onToday();
-      });
+        /**
+         * @type {Datepicker}
+         */
+        this.model = model;
+        this._attachEvents();
+        return this;
     }
-  }]);
 
-  return Toolbox;
+    _createClass(Toolbox, [{
+        key: '_toggleCalendartype',
+        value: function _toggleCalendartype() {
+            var that = this;
+            if (that.model.options.calendar_ == 'persian') {
+                that.model.options.calendar_ = 'gregorian';
+                that.model.options.locale_ = this.model.options.calendar.gregorian.locale;
+            } else {
+                that.model.options.calendar_ = 'persian';
+                that.model.options.locale_ = this.model.options.calendar.persian.locale;
+            }
+        }
+
+        /**
+         * attach all events about toolbox
+         */
+
+    }, {
+        key: '_attachEvents',
+        value: function _attachEvents() {
+            var that = this;
+            $(document).on('click', '#' + that.model.view.id + ' .pwt-btn-today', function () {
+                that.model.state.setSelectedDateTime('unix', new Date().valueOf());
+                that.model.state.setViewDateTime('unix', new Date().valueOf());
+                that.model.view.reRender();
+                /**
+                 * @deprecated
+                 * @todo remove this
+                 */
+                that.model.options.toolbox.onToday();
+                that.model.options.toolbox.todayButton.onToday();
+            });
+
+            $(document).on('click', '#' + that.model.view.id + ' .pwt-btn-calendar', function () {
+                that._toggleCalendartype();
+                that.model.state.setSelectedDateTime('unix', that.model.state.selected.unixDate);
+                that.model.state.setViewDateTime('unix', that.model.state.view.unixDate);
+                that.model.view.render();
+                that.model.options.toolbox.calendarSwitch.onSwitch();
+            });
+
+            $(document).on('click', '#' + that.model.view.id + ' .pwt-btn-submit', function () {
+                that.model.view.hide();
+                that.model.options.toolbox.submitButton.onSubmit();
+                that.model.options.onHide(this);
+            });
+        }
+    }]);
+
+    return Toolbox;
 }();
 
 module.exports = Toolbox;
 
 /***/ }),
-/* 14 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2417,11 +2709,9 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var ClassDateRange = __webpack_require__(7);
-var Template = __webpack_require__(3);
+var Template = __webpack_require__(1);
 var Helper = __webpack_require__(0);
-var DateUtil = __webpack_require__(1);
-var Mustache = __webpack_require__(16);
+var Mustache = __webpack_require__(15);
 
 /**
  * As its name suggests, all rendering works do in this object
@@ -2471,18 +2761,31 @@ var View = function () {
             this.$container = $('<div  id="' + this.id + '" class="datepicker-container-inline"></div>').appendTo(that.model.inputElement);
         } else {
             this.$container = $('<div  id="' + this.id + '" class="datepicker-container"></div>').appendTo('body');
-            this.$container.hide();
+            this.hide();
             this.setPickerBoxPosition();
+            this.addCompatibilityClass();
         }
         return this;
     }
 
     /**
-     * @desc remove datepicker container element from dom
+     * @desc add css class to handle compatibility ui things
      */
 
 
     _createClass(View, [{
+        key: 'addCompatibilityClass',
+        value: function addCompatibilityClass() {
+            if (Helper.isMobile && this.model.options.responsive) {
+                this.$container.addClass('pwt-mobile-view');
+            }
+        }
+
+        /**
+         * @desc remove datepicker container element from dom
+         */
+
+    }, {
         key: 'destroy',
         value: function destroy() {
             this.$container.remove();
@@ -2495,17 +2798,17 @@ var View = function () {
     }, {
         key: 'setPickerBoxPosition',
         value: function setPickerBoxPosition() {
-            var inputPosition = this.model.input.getInputPosition();
-            var inputSize = this.model.input.getInputSize();
-            if (this.model.options.position === "auto") {
+            var inputPosition = this.model.input.getInputPosition(),
+                inputSize = this.model.input.getInputSize();
+            if (this.model.options.position === 'auto') {
                 this.$container.css({
                     left: inputPosition.left + 'px',
                     top: inputSize.height + inputPosition.top + 'px'
                 });
             } else {
                 this.$container.css({
-                    top: this.model.options.position[0] + inputPosition.left + 'px',
-                    left: this.model.options.position[1] + inputPosition.top + 'px'
+                    left: this.model.options.position[1] + inputPosition.left + 'px',
+                    top: this.model.options.position[0] + inputPosition.top + 'px'
                 });
             }
         }
@@ -2517,7 +2820,7 @@ var View = function () {
     }, {
         key: 'show',
         value: function show() {
-            this.$container.show();
+            this.$container.removeClass('pwt-hide');
             this.setPickerBoxPosition();
         }
 
@@ -2528,7 +2831,7 @@ var View = function () {
     }, {
         key: 'hide',
         value: function hide() {
-            this.$container.hide();
+            this.$container.addClass('pwt-hide');
         }
 
         /**
@@ -2573,8 +2876,8 @@ var View = function () {
         value: function checkYearAccess(year) {
             var output = true;
             if (this.model.state.filetredDate) {
-                var startYear = this.model.state.filterDate.start.year;
-                var endYear = this.model.state.filterDate.end.year;
+                var startYear = this.model.state.filterDate.start.year,
+                    endYear = this.model.state.filterDate.end.year;
                 if (startYear && year < startYear) {
                     return false;
                 } else if (endYear && year > endYear) {
@@ -2597,6 +2900,13 @@ var View = function () {
         value: function _getYearViewModel(viewState) {
             var _this = this;
 
+            var isEnabled = this.model.options.yearPicker.enabled;
+            // Make performance better
+            if (!isEnabled) {
+                return {
+                    enabled: false
+                };
+            }
             /**
              * @description Generate years list based on viewState year
              * @return ['1380',n+12,'1392']
@@ -2607,7 +2917,8 @@ var View = function () {
             /*
              * @description Generate years object based on list
              */
-            var yearsModel = [];
+            var yearsModel = [],
+                yearStr = this.model.PersianDate.date();
             var _iteratorNormalCompletion = true;
             var _didIteratorError = false;
             var _iteratorError = undefined;
@@ -2616,8 +2927,7 @@ var View = function () {
                 for (var _iterator = list[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
                     var i = _step.value;
 
-                    var yearStr = new persianDate([i]);
-                    yearStr.formatPersian = this.model.options.persianDigit;
+                    yearStr.year([i]);
                     yearsModel.push({
                         title: yearStr.format('YYYY'),
                         enabled: this.checkYearAccess(i),
@@ -2641,7 +2951,7 @@ var View = function () {
             }
 
             return {
-                enabled: this.model.options.yearPicker.enabled,
+                enabled: isEnabled,
                 viewMode: this.model.state.viewMode == 'year',
                 list: yearsModel
             };
@@ -2656,6 +2966,7 @@ var View = function () {
     }, {
         key: 'checkMonthAccess',
         value: function checkMonthAccess(month) {
+            month = month + 1;
             var output = true,
                 y = this.model.state.view.year;
             if (this.model.state.filetredDate) {
@@ -2684,21 +2995,32 @@ var View = function () {
     }, {
         key: '_getMonthViewModel',
         value: function _getMonthViewModel() {
-            var monthModel = [];
+            var isEnaled = this.model.options.monthPicker.enabled;
+            // Make performance better
+            if (!isEnaled) {
+                return {
+                    enabled: false
+                };
+            }
+
+            var monthModel = [],
+                that = this;
             var _iteratorNormalCompletion2 = true;
             var _didIteratorError2 = false;
             var _iteratorError2 = undefined;
 
             try {
-                for (var _iterator2 = ClassDateRange.monthRange[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-                    var month = _step2.value;
+                for (var _iterator2 = that.model.PersianDate.date().rangeName().months.entries()[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+                    var _step2$value = _slicedToArray(_step2.value, 2),
+                        index = _step2$value[0],
+                        month = _step2$value[1];
 
                     monthModel.push({
-                        title: month.name.fa,
-                        enabled: this.checkMonthAccess(month.index),
+                        title: month,
+                        enabled: this.checkMonthAccess(index),
                         year: this.model.state.view.year,
-                        dataMonth: month.index,
-                        selected: DateUtil.isSameMonth(this.model.state.selected.dateObject, new persianDate([this.model.state.view.year, month.index]))
+                        dataMonth: index + 1,
+                        selected: this.model.state.selected.year == this.model.state.view.year && this.model.state.selected.month == index + 1
                     });
                 }
             } catch (err) {
@@ -2717,7 +3039,7 @@ var View = function () {
             }
 
             return {
-                enabled: this.model.options.monthPicker.enabled,
+                enabled: isEnaled,
                 viewMode: this.model.state.viewMode == 'month',
                 list: monthModel
             };
@@ -2739,18 +3061,18 @@ var View = function () {
 
             if (self.model.state.filetredDate) {
                 if (self.minDate && self.maxDate) {
-                    self.minDate = new persianDate(self.minDate).startOf('day').valueOf();
-                    self.maxDate = new persianDate(self.maxDate).endOf('day').valueOf();
+                    self.minDate = self.model.PersianDate.date(self.minDate).startOf('day').valueOf();
+                    self.maxDate = self.model.PersianDate.date(self.maxDate).endOf('day').valueOf();
                     if (!(unixtimespan >= self.minDate && unixtimespan <= self.maxDate)) {
                         return false;
                     }
                 } else if (self.minDate) {
-                    self.minDate = new persianDate(self.minDate).startOf('day').valueOf();
+                    self.minDate = self.model.PersianDate.date(self.minDate).startOf('day').valueOf();
                     if (unixtimespan <= self.minDate) {
                         return false;
                     }
                 } else if (self.maxDate) {
-                    self.maxDate = new persianDate(self.maxDate).endOf('day').valueOf();
+                    self.maxDate = self.model.PersianDate.date(self.maxDate).endOf('day').valueOf();
                     if (unixtimespan >= self.maxDate) {
                         return false;
                     }
@@ -2772,16 +3094,28 @@ var View = function () {
             if (this.model.state.viewMode != 'day') {
                 return [];
             }
+
+            var isEnabled = this.model.options.dayPicker.enabled;
+            // Make performance better
+            if (!isEnabled) {
+                return {
+                    enabled: false
+                };
+            }
+
             //log('if you see this many time your code has performance issue');
-            var viewMonth = this.model.state.view.month;
-            var viewYear = this.model.state.view.year;
-            var pdateInstance = new persianDate();
-            var daysCount = pdateInstance.daysInMonth(viewYear, viewMonth);
-            var firstWeekDayOfMonth = pdateInstance.getFirstWeekDayOfMonth(viewYear, viewMonth) - 1;
-            var outputList = [];
-            var daysListindex = 0;
-            var nextMonthListIndex = 0;
-            var daysMatrix = [['null', 'null', 'null', 'null', 'null', 'null', 'null'], ['null', 'null', 'null', 'null', 'null', 'null', 'null'], ['null', 'null', 'null', 'null', 'null', 'null', 'null'], ['null', 'null', 'null', 'null', 'null', 'null', 'null'], ['null', 'null', 'null', 'null', 'null', 'null', 'null'], ['null', 'null', 'null', 'null', 'null', 'null', 'null']];
+            var viewMonth = this.model.state.view.month,
+                viewYear = this.model.state.view.year;
+            var pdateInstance = this.model.PersianDate.date(),
+                daysCount = pdateInstance.daysInMonth(viewYear, viewMonth),
+                firstWeekDayOfMonth = pdateInstance.getFirstWeekDayOfMonth(viewYear, viewMonth) - 1,
+                outputList = [],
+                daysListindex = 0,
+                nextMonthListIndex = 0,
+                daysMatrix = [['null', 'null', 'null', 'null', 'null', 'null', 'null'], ['null', 'null', 'null', 'null', 'null', 'null', 'null'], ['null', 'null', 'null', 'null', 'null', 'null', 'null'], ['null', 'null', 'null', 'null', 'null', 'null', 'null'], ['null', 'null', 'null', 'null', 'null', 'null', 'null'], ['null', 'null', 'null', 'null', 'null', 'null', 'null']];
+
+            var anotherCalendar = this._getAnotherCalendar();
+            var pdate = this.model.PersianDate.date();
             var _iteratorNormalCompletion3 = true;
             var _didIteratorError3 = false;
             var _iteratorError3 = undefined;
@@ -2799,33 +3133,28 @@ var View = function () {
 
                     try {
                         for (var _iterator4 = daysRow.entries()[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
-                            var _step4$value = _slicedToArray(_step4.value, 2),
-                                dayIndex = _step4$value[0],
-                                day = _step4$value[1];
+                            var _step4$value = _slicedToArray(_step4.value, 1),
+                                dayIndex = _step4$value[0];
 
                             var calcedDate = void 0,
-                                otherMonth = void 0,
-                                pdate = void 0;
+                                otherMonth = void 0;
                             if (rowIndex === 0 && dayIndex < firstWeekDayOfMonth) {
-                                pdate = new persianDate(this.model.state.view.dateObject.startOf('month').valueOf());
-                                calcedDate = pdate.subtract('days', firstWeekDayOfMonth - dayIndex);
+                                calcedDate = pdate.unix(this.model.state.view.dateObject.startOf('month').valueOf() / 1000).subtract('days', firstWeekDayOfMonth - dayIndex);
                                 otherMonth = true;
                             } else if (rowIndex === 0 && dayIndex >= firstWeekDayOfMonth || rowIndex <= 5 && daysListindex < daysCount) {
                                 daysListindex += 1;
-                                calcedDate = new persianDate([this.model.state.view.year, this.model.state.view.month, daysListindex]);
+                                calcedDate = pdate.year(this.model.state.view.year).month(this.model.state.view.month).date(daysListindex);
                                 otherMonth = false;
                             } else {
                                 nextMonthListIndex += 1;
-                                pdate = new persianDate(this.model.state.view.dateObject.endOf('month').valueOf());
-                                calcedDate = pdate.add('days', nextMonthListIndex);
+                                calcedDate = pdate.unix(this.model.state.view.dateObject.endOf('month').valueOf() / 1000).add('days', nextMonthListIndex);
                                 otherMonth = true;
                             }
-                            calcedDate.formatPersian = this.model.options.persianDigit;
                             outputList[rowIndex].push({
-                                title: calcedDate.format('DD'),
+                                title: calcedDate.format('D'),
+                                alterCalTitle: new persianDate(calcedDate.valueOf()).toCalendar(anotherCalendar[0]).toLocale(anotherCalendar[1]).format('D'),
+                                dataDate: [calcedDate.year(), calcedDate.month(), calcedDate.date()].join(','),
                                 dataUnix: calcedDate.valueOf(),
-                                selected: DateUtil.isSameDay(calcedDate, this.model.state.selected.dateObject),
-                                today: DateUtil.isSameDay(calcedDate, new persianDate()),
                                 otherMonth: otherMonth,
                                 // TODO: make configurable
                                 enabled: this.checkDayAccess(calcedDate.valueOf())
@@ -2862,31 +3191,62 @@ var View = function () {
             }
 
             return {
-                enabled: this.model.options.dayPicker.enabled && this.model.state.viewMode == 'day',
+                enabled: isEnabled,
                 viewMode: this.model.state.viewMode == 'day',
                 list: outputList
             };
         }
+    }, {
+        key: 'markSelectedDay',
+        value: function markSelectedDay() {
+            var selected = this.model.state.selected;
+            this.$container.find('.table-days td').each(function () {
+                if ($(this).data('date') == [selected.year, selected.month, selected.date].join(',')) {
+                    $(this).addClass('selected');
+                } else {
+                    $(this).removeClass('selected');
+                }
+            });
+        }
+    }, {
+        key: 'markToday',
+        value: function markToday() {
+            var today = new persianDate();
+            this.$container.find('.table-days td').each(function () {
+                if ($(this).data('date') == [today.year(), today.month(), today.date()].join(',')) {
+                    $(this).addClass('today');
+                } else {
+                    $(this).removeClass('today');
+                }
+            });
+        }
 
         /**
          * @private
-         * @return {{enabled: boolean, hour: {title, enabled: boolean}, minute: {title, enabled: boolean}, second: {title, enabled: boolean}, meridiem: {title: (meridiem|{title, enabled}|ClassDatepicker.ClassConfig.timePicker.meridiem|{enabled}|string|string), enabled: boolean}}}
+         * @return {{enabled: boolean, hour: {title, enabled: boolean}, minute: {title, enabled: boolean}, second: {title, enabled: boolean}, meridian: {title: (meridian|{title, enabled}|ClassDatepicker.ClassConfig.timePicker.meridian|{enabled}|string|string), enabled: boolean}}}
          */
 
     }, {
         key: '_getTimeViewModel',
         value: function _getTimeViewModel() {
-            var hourTitle = void 0;
-            this.model.state.view.dateObject.formatPersian = this.model.options.persianDigit;
 
-            if (this.model.options.timePicker.meridiem.enabled) {
-                hourTitle = (DateUtil.convert24hTo12(this.model.state.view.hour, this.model.state.view.meridiem) + '').toPersianDigit();
+            var isEnabled = this.model.options.timePicker.enabled;
+            // Make performance better
+            if (!isEnabled) {
+                return {
+                    enabled: false
+                };
+            }
+
+            var hourTitle = void 0;
+            if (this.model.options.timePicker.meridian.enabled) {
+                hourTitle = this.model.state.view.dateObject.format('hh');
             } else {
-                hourTitle = (this.model.state.view.hour + '').toPersianDigit();
+                hourTitle = this.model.state.view.dateObject.format('HH');
             }
 
             return {
-                enabled: this.model.options.timePicker.enabled,
+                enabled: isEnabled,
                 hour: {
                     title: hourTitle,
                     enabled: this.model.options.timePicker.hour.enabled
@@ -2899,11 +3259,37 @@ var View = function () {
                     title: this.model.state.view.dateObject.format('ss'),
                     enabled: this.model.options.timePicker.second.enabled
                 },
-                meridiem: {
+                meridian: {
                     title: this.model.state.view.dateObject.format('a'),
-                    enabled: this.model.options.timePicker.meridiem.enabled
+                    enabled: this.model.options.timePicker.meridian.enabled
                 }
             };
+        }
+
+        /**
+         *
+         * @return {{enabled: boolean, list: (*|Array)}}
+         * @private
+         */
+
+    }, {
+        key: '_getWeekViewModel',
+        value: function _getWeekViewModel() {
+            return {
+                enabled: true,
+                list: this.model.PersianDate.date().rangeName().weekdaysMin
+            };
+        }
+
+        /**
+         *
+         * @return {string}
+         */
+
+    }, {
+        key: 'getCssClass',
+        value: function getCssClass() {
+            return [this.model.state.ui.isInline ? 'datepicker-plot-area-inline-view' : '', !this.model.options.timePicker.meridian.enabled ? 'datepicker-state-no-meridian' : '', this.model.options.onlyTimePicker ? 'datepicker-state-only-time' : '', !this.model.options.timePicker.second.enabled ? 'datepicker-state-no-second' : ''].join(' ');
         }
 
         /**
@@ -2914,6 +3300,7 @@ var View = function () {
     }, {
         key: 'getViewModel',
         value: function getViewModel(data) {
+            var anotherCalendar = this._getAnotherCalendar();
             return {
                 plotId: '',
                 navigator: {
@@ -2927,11 +3314,59 @@ var View = function () {
                 selected: this.model.state.selected,
                 time: this._getTimeViewModel(data),
                 days: this._getDayViewModel(data),
+                weekdays: this._getWeekViewModel(data),
                 month: this._getMonthViewModel(data),
                 year: this._getYearViewModel(data),
                 toolbox: this.model.options.toolbox,
-                cssClass: this.model.state.ui.isInline ? 'datepicker-plot-area-inline-view' : ''
+                cssClass: this.getCssClass(),
+                onlyTimePicker: this.model.options.onlyTimePicker,
+                altCalendarShowHint: this.model.options.calendar[anotherCalendar[0]].showHint,
+                calendarSwitchText: this.model.state.view.dateObject.toCalendar(anotherCalendar[0]).toLocale(anotherCalendar[1]).format(this.model.options.toolbox.calendarSwitch.format),
+                todayButtonText: this._getButtonText().todayButtontext,
+                submitButtonText: this._getButtonText().submitButtonText
             };
+        }
+    }, {
+        key: '_getButtonText',
+        value: function _getButtonText() {
+            var output = {};
+            if (this.model.options.locale_ == 'fa') {
+                output.todayButtontext = this.model.options.toolbox.todayButton.text.fa;
+                output.submitButtonText = this.model.options.toolbox.submitButton.text.fa;
+            } else if (this.model.options.locale_ == 'en') {
+                output.todayButtontext = this.model.options.toolbox.todayButton.text.en;
+                output.submitButtonText = this.model.options.toolbox.submitButton.text.en;
+            }
+            return output;
+        }
+    }, {
+        key: '_getAnotherCalendar',
+        value: function _getAnotherCalendar() {
+            var that = this,
+                cal = void 0,
+                loc = void 0;
+            if (that.model.options.calendar_ == 'persian') {
+                cal = 'gregorian';
+                loc = that.model.options.calendar.gregorian.locale;
+            } else {
+                cal = 'persian';
+                loc = that.model.options.calendar.persian.locale;
+            }
+            return [cal, loc];
+        }
+
+        /**
+         * @desc render times area, prevent performance issue with scroll and time section
+         */
+
+    }, {
+        key: 'renderTimePartial',
+        value: function renderTimePartial() {
+            var timeViewModel = this._getTimeViewModel(this.model.state.view);
+            this.$container.find('[data-time-key="hour"] input').val(timeViewModel.hour.title);
+            this.$container.find('[data-time-key="minute"] input').val(timeViewModel.minute.title);
+            this.$container.find('[data-time-key="second"] input').val(timeViewModel.second.title);
+            this.$container.find('[data-time-key="meridian"] input').val(timeViewModel.meridian.title);
         }
 
         /**
@@ -2942,10 +3377,15 @@ var View = function () {
     }, {
         key: 'render',
         value: function render(data) {
+            if (!data) {
+                data = this.model.state.view;
+            }
             Helper.debug(this, 'render');
             Mustache.parse(Template);
             this.rendered = $(Mustache.render(this.model.options.template, this.getViewModel(data)));
             this.$container.empty().append(this.rendered);
+            this.markSelectedDay();
+            this.markToday();
             this.afterRender();
         }
     }, {
@@ -2974,7 +3414,7 @@ var View = function () {
 module.exports = View;
 
 /***/ }),
-/* 15 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -3307,7 +3747,7 @@ if (typeof window.define === 'function' && window.define.amd) {
 
 
 /***/ }),
-/* 16 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
