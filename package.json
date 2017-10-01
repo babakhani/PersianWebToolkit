@@ -6,8 +6,8 @@
   "dependencies": {
     "jquery": "2.2.0",
     "mkdocs": "0.0.1",
-    "persian-date": "=0.1.8-b",
-    "persian-datepicker": "=0.4.5"
+    "persian-date": "1.0.0",
+    "persian-datepicker": "1.0.0"
   },
   "scripts": {
     "start": "mkdocs serve",
