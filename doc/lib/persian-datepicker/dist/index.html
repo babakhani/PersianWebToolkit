@@ -26,7 +26,7 @@
     <!-- Theme Switcher -->
     <!-- ------------------------------------------------------------------------------------ -->
     <script type="text/javascript">
-        function swapStyleSheet (sheet) {
+        function swapStyleSheet(sheet) {
             document.getElementById('datepickerTheme').setAttribute('href', sheet);
         }
     </script>
@@ -58,7 +58,7 @@
     <div class="container">
         <div class="navbar-header">
             <a class="navbar-brand" href="#">
-                Persian Date Picker <span class="badge">Beta Version 0.5.10</span>
+                Persian Date Picker <span class="badge">Beta Version 1.0.0</span>
             </a>
         </div>
         <nav class="navbar-right">
@@ -97,13 +97,13 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h3 class="panel-title">Persian Inline Sample </h3>
-                            <span>algorithmic Leap Year</span>
+                            <span>algorithmic Leap Year, with 'en' locale</span>
                         </div>
                         <div class="panel-body">
                             <div class="form-group">
                                 <input id="inlineAlt" class="form-control" disabled/>
                                 <br/>
-                                <div id="inline" data-date="1403/12/1">
+                                <div id="inline">
                                 </div>
                             </div>
                         </div>
@@ -221,7 +221,7 @@
     $(document).ready(function () {
         // Debug mode
         // --------------------------------------------
-        window.persianDatepickerDebug = true;
+//        window.persianDatepickerDebug = true;
 
         // Normal Sample
         // --------------------------------------------
@@ -300,6 +300,7 @@
         // --------------------------------------------
         window.pd = $("#inline").persianDatepicker({
             initialValueType: 'persian',
+            minDate: 1506550581778,
             calendar: {
                 persian: {
                     enabled: true,

@@ -339,8 +339,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#options-table" title="options table" class="md-nav__link">
-    options table
+  <a href="#options-table" title="Options table" class="md-nav__link">
+    Options table
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thanks-and-appreciation" title="Thanks and appreciation" class="md-nav__link">
+    Thanks and appreciation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" title="license" class="md-nav__link">
+    license
   </a>
   
 </li>
@@ -372,7 +386,7 @@
 
 
   <li class="md-nav__item">
-    <a href="playground/" title="Playground" class="md-nav__link">
+    <a href="playground-page/" title="Playground" class="md-nav__link">
       Playground
     </a>
   </li>
@@ -468,8 +482,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#options-table" title="options table" class="md-nav__link">
-    options table
+  <a href="#options-table" title="Options table" class="md-nav__link">
+    Options table
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thanks-and-appreciation" title="Thanks and appreciation" class="md-nav__link">
+    Thanks and appreciation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" title="license" class="md-nav__link">
+    license
   </a>
   
 </li>
@@ -496,7 +524,7 @@
 <p>Jalali calendar datepicker, which depends on <a href="https://github.com/babakhani/PersianDate">persianDate</a></p>
 <p>More info at <a href="http://en.wikipedia.org/wiki/Iranian_calendar">Wikipedia</a></p>
 <blockquote>
-<p>Note: from v0.6.0 persianDatepicker support gregorian calendar</p>
+<p>Note: from v1.0.0 persianDatepicker support gregorian calendar</p>
 </blockquote>
 <p><a href="https://badge.fury.io/js/persian-datepicker"><img alt="npm version" src="https://badge.fury.io/js/persian-datepicker.svg" /></a>
 <a href="https://badge.fury.io/bo/persian-datepicker"><img alt="Bower version" src="https://badge.fury.io/bo/persian-datepicker.svg" /></a>
@@ -507,6 +535,7 @@
 <ul>
 <li><a href="http://babakhani.github.io/PersianWebToolkit/doc/datepicker">Documents</a></li>
 <li><a href="http://babakhani.github.io/PersianWebToolkit/doc/datepicker/example">Example/Demo</a></li>
+<li><a href="http://babakhani.github.io/PersianWebToolkit/doc/datepicker/playground.html">Playground</a></li>
 </ul>
 <h2 id="table-of-content">Table of content:<a class="headerlink" href="#table-of-content" title="Permanent link">&para;</a></h2>
 <ul>
@@ -522,7 +551,7 @@
 <li><a href="http://jquery.com/">jquery</a></li>
 </ul>
 <blockquote>
-<p>persian-datepicker 0.6.x need persian-date 0.3.x</p>
+<p>persian-datepicker 1.x.x need persian-date 1.x.x</p>
 </blockquote>
 <h2 id="install">Install<a class="headerlink" href="#install" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span>npm install persian-datepicker
@@ -549,8 +578,8 @@ bower install persian-datepicker
 </pre></div>
 
 
-<h2 id="options-table">options table<a class="headerlink" href="#options-table" title="Permanent link">&para;</a></h2>
-<p><a href="http://babakhani.github.io/PersianWebToolkit/doc/datepicker/options/">See Options Full Document</a></p>
+<h2 id="options-table">Options table<a class="headerlink" href="#options-table" title="Permanent link">&para;</a></h2>
+<p><a href="http://babakhani.github.io/PersianWebToolkit/doc/datepicker/options/">Options full document</a></p>
 <table>
 <thead>
 <tr>
@@ -562,7 +591,7 @@ bower install persian-datepicker
 </thead>
 <tbody>
 <tr>
-<td>initialCalendar</td>
+<td>calendarType</td>
 <td align="center">string</td>
 <td align="center">'persian'</td>
 <td align="center">Set default calendar mode of datepicker, available options: 'persian', 'gregorian'</td>
@@ -640,7 +669,7 @@ bower install persian-datepicker
 <td align="center">If set true datepicker render inline</td>
 </tr>
 <tr>
-<td>persianDigit (DEPRECATED Sience 0.6.0)</td>
+<td>persianDigit (DEPRECATED from 1.0.0)</td>
 <td align="center">boolean</td>
 <td align="center">true</td>
 <td align="center">If set true all digit shows as persian digit</td>
@@ -649,13 +678,13 @@ bower install persian-datepicker
 <td>viewMode</td>
 <td align="center">string</td>
 <td align="center">'day'</td>
-<td align="center">Accept day, month, year</td>
+<td align="center">Accept 'day', 'month', 'year'</td>
 </tr>
 <tr>
 <td>format</td>
 <td align="center">string</td>
 <td align="center">'LLLL'</td>
-<td align="center">The date format, combination of d, dd, m, mm, yy, yyy</td>
+<td align="center">The date format, combination of d, dd, m, mm, yy, yyy. <a href="http://babakhani.github.io/PersianWebToolkit/doc/persian-date/#format">format document</a></td>
 </tr>
 <tr>
 <td>formatter</td>
@@ -673,7 +702,7 @@ bower install persian-datepicker
 <td>altFormat</td>
 <td align="center">string</td>
 <td align="center">'unix'</td>
-<td align="center">The date format, combination of d, dd, m, mm, yy, yyy.</td>
+<td align="center">The date format, combination of d, dd, m, mm, yy, yyy. <a href="http://babakhani.github.io/PersianWebToolkit/doc/persian-date/#format">format document</a></td>
 </tr>
 <tr>
 <td>altFieldFormatter</td>
@@ -715,7 +744,7 @@ bower install persian-datepicker
 <td>navigator.scroll.enabled</td>
 <td align="center">boolean</td>
 <td align="center">true</td>
-<td align="center">If you want prevent to navigate with mousewheel event make this options false</td>
+<td align="center">If you want prevent to navigate with mouse-wheel event make this option false</td>
 </tr>
 <tr>
 <td>navigator.text</td>
@@ -733,7 +762,7 @@ bower install persian-datepicker
 <td>navigator.text.btnPrevText</td>
 <td align="center">string</td>
 <td align="center">'&gt;'</td>
-<td align="center">Text of previews butto</td>
+<td align="center">Text of previews button</td>
 </tr>
 <tr>
 <td>navigator.onNext</td>
@@ -766,13 +795,13 @@ bower install persian-datepicker
 <td align="center">Enable/Disable toolbox object</td>
 </tr>
 <tr>
-<td>toolbox.text</td>
+<td>toolbox.text (DEPRECATED from 1.0.0)</td>
 <td align="center">object</td>
 <td align="center"></td>
 <td align="center"></td>
 </tr>
 <tr>
-<td>toolbox.text.btnToday (DEPRECATED Sience 0.6.0)</td>
+<td>toolbox.text.btnToday (DEPRECATED from 1.0.0)</td>
 <td align="center">string</td>
 <td align="center">'امروز'</td>
 <td align="center">Today button text</td>
@@ -874,7 +903,7 @@ bower install persian-datepicker
 <td align="center">Called when calendar switch clicked</td>
 </tr>
 <tr>
-<td>toolbox.onToday (DEPRECATED Sience 0.6.0)</td>
+<td>toolbox.onToday (DEPRECATED from 0.6.0)</td>
 <td align="center">event</td>
 <td align="center">function(toolbox){return unixDate}</td>
 <td align="center">Event called when today btn clicked</td>
@@ -1021,7 +1050,7 @@ bower install persian-datepicker
 <td>dayPicker.onSelect</td>
 <td align="center">event</td>
 <td align="center">function (selectedDayUnix) {}</td>
-<td align="center">Called when date select</td>
+<td align="center">Called when date select by user</td>
 </tr>
 <tr>
 <td>monthPicker</td>
@@ -1051,7 +1080,7 @@ bower install persian-datepicker
 <td>monthPicker.onSelect</td>
 <td align="center">event</td>
 <td align="center">function (monthIndex) {}</td>
-<td align="center">Called when month select</td>
+<td align="center">Called when month select by user</td>
 </tr>
 <tr>
 <td>yearPicker</td>
@@ -1081,13 +1110,19 @@ bower install persian-datepicker
 <td>yearPicker.onSelect</td>
 <td align="center">event</td>
 <td align="center">function (year) {}</td>
-<td align="center">Called when year select</td>
+<td align="center">Called when year select by user</td>
 </tr>
 <tr>
 <td>onSelect</td>
 <td align="center">event</td>
 <td align="center">function (unixDate) {}</td>
-<td align="center">Called when datepicker selected date change</td>
+<td align="center">Called when date Select by user.</td>
+</tr>
+<tr>
+<td>onSet</td>
+<td align="center">event</td>
+<td align="center">function (unixDate) {}</td>
+<td align="center">Called when date Select by api.</td>
 </tr>
 <tr>
 <td>onShow</td>
@@ -1145,6 +1180,12 @@ bower install persian-datepicker
 </tr>
 </tbody>
 </table>
+<h2 id="thanks-and-appreciation">Thanks and appreciation<a class="headerlink" href="#thanks-and-appreciation" title="Permanent link">&para;</a></h2>
+<p>Thanks to <a href="https://github.com/pylover">vahid Mardani</a> for everything that I learned from him
+, <a href="http://behance.net/behroozbahrami">Behrooz Bahrami</a> for designing the logo.
+, <a href="http://github.com/bitaedalati">Bita Edalati</a> for create amazing <a href="http://babakhani.github.io/PersianWebToolkit/doc/datepicker/playground.html">Playground</a></p>
+<h2 id="license">license<a class="headerlink" href="#license" title="Permanent link">&para;</a></h2>
+<p><a href="http://www.wtfpl.net/">WTFPL</a></p>
                 
                   
                 
@@ -1217,7 +1258,9 @@ bower install persian-datepicker
     
       <a href="https://github.com/babakhani" class="md-footer-social__link fa fa-github"></a>
     
-      <a href="https://de.linkedin.com/in/martin-donath-20a95039" class="md-footer-social__link fa fa-linkedin"></a>
+      <a href="https://www.linkedin.com/in/reza-babakhani-52747389/" class="md-footer-social__link fa fa-linkedin"></a>
+    
+      <a href="https://twitter.com/babakhani_reza" class="md-footer-social__link fa fa-twitter"></a>
     
   </div>
 

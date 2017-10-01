@@ -317,7 +317,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../datepicker/playground/" title="Playground" class="md-nav__link">
+    <a href="../../datepicker/playground-page/" title="Playground" class="md-nav__link">
       Playground
     </a>
   </li>
@@ -399,11 +399,11 @@
 astronomical: occur whenever that number of days elapse between equinoxes at the reference meridian.</p>
 <p>algorithmic: based on Ahmad Birashk proposed algorithm.</p>
 <p>After version 0.3.0 persianDate support both algorithm and you can choose which algorithm use in your project. 
-currently we have support 3 type of calendar <code>persianAstro</code>, <code>persianAlgo</code>.</p>
+currently we have support 3 type of calendar <code>astronomical</code>, <code>algorithmic</code>.</p>
 <p>you can change it globally like this example.</p>
 <h1 id="test-leap-years-calculation-algorithm">Test leap years calculation algorithm<a class="headerlink" href="#test-leap-years-calculation-algorithm" title="Permanent link">&para;</a></h1>
 <p>I designed a test to understand the differences between these algorithms.</p>
-<p>Check total leap years in next 3003 year after 1396, Difference test between persianDateAstro, persianDateAlgo, jalaali</p>
+<p>Check total leap years in next 3003 year after 1396, Difference test between Astronomical, Algorithmic and some other algorithms I found.</p>
 <p>you can see this result by run mocha test.</p>
 <h3 id="check-total-leap-years-in-next-3003-year-difference-algorithm">Check total leap years in next 3003 year, Difference algorithm<a class="headerlink" href="#check-total-leap-years-in-next-3003-year-difference-algorithm" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span>- Total gregorian leap year: <span class="m">728</span>
@@ -415,18 +415,14 @@ currently we have support 3 type of calendar <code>persianAstro</code>, <code>pe
 
 - Total Common leap year <span class="o">(</span>persianAstro, persianAlgo, NASA, Behrooz_Birashk, wiki python, gregorian<span class="o">)</span>: <span class="m">118</span>
 
-- Common leap year <span class="o">(</span>persianAstro, NASA<span class="o">)</span>: <span class="m">118</span>
-- Common leap year <span class="o">(</span>persianAlgo, NASA<span class="o">)</span>: <span class="m">727</span>
+- Common leap year <span class="o">(</span>Astronomical, NASA<span class="o">)</span>: <span class="m">118</span>
+- Common leap year <span class="o">(</span>Algorithmic, NASA<span class="o">)</span>: <span class="m">727</span>
 
-- Common leap year <span class="o">(</span>persianAstro, Behrooz_Birashk<span class="o">)</span>: <span class="m">133</span>
-- Common leap year <span class="o">(</span>persianAlgo, Behrooz_Birashk<span class="o">)</span>: <span class="m">691</span>
+- Common leap year <span class="o">(</span>Astronomical, Behrooz_Birashk<span class="o">)</span>: <span class="m">133</span>
+- Common leap year <span class="o">(</span>Algorithmic, Behrooz_Birashk<span class="o">)</span>: <span class="m">691</span>
 
-- Common leap year <span class="o">(</span>persianAstro, wiki<span class="o">)</span>: <span class="m">118</span>
-- Common leap year <span class="o">(</span>persianAlgo, wiki<span class="o">)</span>: <span class="m">711</span>
-
-- Total jalaali leap year: <span class="m">431</span>
-- Jalaali Error Count: <span class="m">1221</span> 
-<span class="o">(</span>unfortunailtly jalaali.js <span class="k">return</span> error <span class="k">if</span> year number is greater than <span class="m">3178</span> <span class="o">)</span>
+- Common leap year <span class="o">(</span>Astronomical, wiki<span class="o">)</span>: <span class="m">118</span>
+- Common leap year <span class="o">(</span>Algorithmic, wiki<span class="o">)</span>: <span class="m">711</span>
 </pre></div>
 
 
@@ -435,7 +431,7 @@ currently we have support 3 type of calendar <code>persianAstro</code>, <code>pe
 | 
 <a href="https://fa.wikipedia.org/wiki/%DA%AF%D8%A7%D9%87%E2%80%8C%D8%B4%D9%85%D8%A7%D8%B1%DB%8C_%D9%87%D8%AC%D8%B1%DB%8C_%D8%AE%D9%88%D8%B1%D8%B4%DB%8C%D8%AF%DB%8C_%D8%AD%D8%B3%D8%A7%D8%A8%DB%8C">wikipedia</a>
 |
-<a href="https://en.wikipedia.org/wiki/Jalali_calendar">wikipedia</a>
+<a href="https://en.wikipedia.org/wiki/Jalali_calendar">wikipedia Jalali_calendar</a>
 |
 <a href="https://eclipse.gsfc.nasa.gov/SKYCAL/SKYCAL.html">NASA sky calendar</a></p>
                 
@@ -510,7 +506,9 @@ currently we have support 3 type of calendar <code>persianAstro</code>, <code>pe
     
       <a href="https://github.com/babakhani" class="md-footer-social__link fa fa-github"></a>
     
-      <a href="https://de.linkedin.com/in/martin-donath-20a95039" class="md-footer-social__link fa fa-linkedin"></a>
+      <a href="https://www.linkedin.com/in/reza-babakhani-52747389/" class="md-footer-social__link fa fa-linkedin"></a>
+    
+      <a href="https://twitter.com/babakhani_reza" class="md-footer-social__link fa fa-twitter"></a>
     
   </div>
 

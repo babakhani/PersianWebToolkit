@@ -7,10 +7,11 @@ Vue.component('datepicker', {
     watch: {
         options: {
             handler: function (val, oldVal) {
-                console.log(this.options.inline);
                 var that = this;
                 setTimeout(function () {
                     that.pdatepicker.destroy();
+                    val.minDate = parseInt(val.minDate);
+                    val.maxDate = parseInt(val.maxDate);
                     that.pdatepicker = $(that.$el).children('*').persianDatepicker(val);
                     that.pdatepicker.show();
                 }, 1);
@@ -103,16 +104,28 @@ new Vue({
             this.eventsLog = logtime + ':  ' + eventMessage + '\n' + this.eventsLog;
         }
     },
+    computed: {
+        outputConfig: function () {
+            let output = $.extend(true, {}, this.datepickerOptions);
+            if (this.templateDisabled) {
+                delete output.template;
+                return output;
+            } else {
+                return output;
+            }
+
+        }
+    },
     data: {
         eventsLog: '',
+        templateDisabled: true,
         datepickerOptions: {
             inline: true,
-            format: 'l',
+            format: 'LLLL',
             viewMode: 'day',
-            persianDigit: true,
             initialValue: true,
-            minDate: 1504713660730,
-            maxDate: 1604713660730,
+            minDate: new persianDate().subtract('days',3).valueOf(),
+            maxDate: new persianDate().add('days', 8).valueOf(),
             autoClose: false,
             position: 'auto',
             altFormat: 'lll',

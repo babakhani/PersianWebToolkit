@@ -615,6 +615,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#license" title="license" class="md-nav__link">
+    license
+  </a>
+  
+</li>
+      
       
       
     </ul>
@@ -702,7 +709,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../datepicker/playground/" title="Playground" class="md-nav__link">
+    <a href="../datepicker/playground-page/" title="Playground" class="md-nav__link">
       Playground
     </a>
   </li>
@@ -1134,6 +1141,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#license" title="license" class="md-nav__link">
+    license
+  </a>
+  
+</li>
+      
       
       
     </ul>
@@ -1154,7 +1168,7 @@
                 <h1 id="persian-date">Persian Date<a class="headerlink" href="#persian-date" title="Permanent link">&para;</a></h1>
 <p>Javascript date library for parsing, validating, manipulating, and formatting Persian dates System.</p>
 <blockquote>
-<p>from 0.6.0 support gregorian calendar.</p>
+<p>from 1.0.0 persian date support gregorian calendar.</p>
 </blockquote>
 <p>Inspired by <a href="http://momentjs.com/">momentjs</a></p>
 <p>More info at <a href="http://en.wikipedia.org/wiki/Iranian_calendar">wikipedia</a></p>
@@ -1188,7 +1202,7 @@ bower install persian-date --save-dev
 <h3 id="tocalendar">toCalendar<a class="headerlink" href="#tocalendar" title="Permanent link">&para;</a></h3>
 <p>default: <code>persian</code></p>
 <p>available option: <code>persian</code> <code>gregorian</code></p>
-<p>from version 0.3.* <code>persianDate</code> have an option that allows developers to set calendar type of Date object.</p>
+<p>from version 1.0.* <code>persianDate</code> have an option that allows developers to set calendar type of Date object.</p>
 <p>you can change calendar type globally or only in specific object</p>
 <p>if you want change calendar type globally:</p>
 <div class="codehilite"><pre><span></span><span class="nx">persianDate</span><span class="p">.</span><span class="nx">toCalendar</span><span class="p">(</span><span class="s1">&#39;gregorian&#39;</span><span class="p">);</span>
@@ -1214,7 +1228,7 @@ bower install persian-date --save-dev
 <p>algorithmic: based on Behrooz-Birashk proposed algorithm.</p>
 </li>
 </ul>
-<p>After version 0.3.* <code>persianDate</code> support both algorithms and you can choose which algorithm use in your project. 
+<p>After version 1.0.* <code>persianDate</code> support both algorithms and you can choose which algorithm use in your project. 
 currently, we have support 2 type of leap year mode <code>algorithmic</code>, <code>astronomical</code>.</p>
 <p>you can change it globally like this example</p>
 <div class="codehilite"><pre><span></span><span class="nx">persianDate</span><span class="p">.</span><span class="nx">toLeapYearMode</span><span class="p">(</span><span class="s1">&#39;algorithmic&#39;</span><span class="p">)</span>
@@ -1258,7 +1272,7 @@ currently, we have support 2 type of leap year mode <code>algorithmic</code>, <c
 
 
 <blockquote>
-<p>after version 0.3.*, you must use <code>toLocale</code> instead <code>formatPersian</code>, for show persian or english digit.</p>
+<p>after version 1.0.*, you must use <code>toLocale</code> instead <code>formatPersian</code>, for show persian or english digit.</p>
 </blockquote>
 <h2 id="parse">Parse<a class="headerlink" href="#parse" title="Permanent link">&para;</a></h2>
 <p>Instead of modifying the native <code>Date.prototype</code> , persianDate creates a wrapper for the Date object.
@@ -1332,7 +1346,7 @@ To get this wrapper object, simply call <code>persianDate()</code> with one of t
 
 
 <blockquote>
-<p>Note: from 0.3.* you can pass gregorian date array to create gregorian date object. for this functionality you must change date object calendar type by <code>toCalendar('gregorian')</code></p>
+<p>Note: from 1.0.* you can pass gregorian date array to create gregorian date object. for this functionality you must change date object calendar type by <code>toCalendar('gregorian')</code></p>
 </blockquote>
 <p>example:</p>
 <div class="codehilite"><pre><span></span><span class="nx">persianDate</span><span class="p">.</span><span class="nx">toCalendar</span><span class="p">(</span><span class="s1">&#39;gregorian&#39;</span><span class="p">);</span>
@@ -1826,7 +1840,7 @@ Calling <code>persianDate()</code> on a persianDate will clone it.</p>
 "۱۳۹۱-۱۰-۰۴ ۱۱:۲۷:۵۳ ق ظ"</p>
 <h3 id="format-to-persian-digit">Format To Persian digit<a class="headerlink" href="#format-to-persian-digit" title="Permanent link">&para;</a></h3>
 <blockquote>
-<p>Deprecated as 0.3.* instead use <a href="#tolocale">toLocale</a></p>
+<p>Deprecated as 1.0.* instead use <a href="#tolocale">toLocale</a></p>
 </blockquote>
 <p>By Default persianDate format, use Persian Number System, for engilsh number Set formatPersian Option as false</p>
 <!-- skip-example -->
@@ -2103,7 +2117,8 @@ Calling <code>persianDate()</code> on a persianDate will clone it.</p>
 </pre></div>
 
 
-<p>```</p>
+<h2 id="license">license<a class="headerlink" href="#license" title="Permanent link">&para;</a></h2>
+<p><a href="http://www.wtfpl.net/">WTFPL</a></p>
                 
                   
                 
@@ -2162,7 +2177,9 @@ Calling <code>persianDate()</code> on a persianDate will clone it.</p>
     
       <a href="https://github.com/babakhani" class="md-footer-social__link fa fa-github"></a>
     
-      <a href="https://de.linkedin.com/in/martin-donath-20a95039" class="md-footer-social__link fa fa-linkedin"></a>
+      <a href="https://www.linkedin.com/in/reza-babakhani-52747389/" class="md-footer-social__link fa fa-linkedin"></a>
+    
+      <a href="https://twitter.com/babakhani_reza" class="md-footer-social__link fa fa-twitter"></a>
     
   </div>
 

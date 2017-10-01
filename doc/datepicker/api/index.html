@@ -308,7 +308,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../playground/" title="Playground" class="md-nav__link">
+    <a href="../playground-page/" title="Playground" class="md-nav__link">
       Playground
     </a>
   </li>
@@ -370,8 +370,22 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#apioptions_1" title="apI.options" class="md-nav__link">
+    apI.options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#apishow" title="apI.show()" class="md-nav__link">
     apI.show()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apigetstate" title="apI.getState()" class="md-nav__link">
+    apI.getState()
   </a>
   
 </li>
@@ -469,8 +483,22 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#apioptions_1" title="apI.options" class="md-nav__link">
+    apI.options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#apishow" title="apI.show()" class="md-nav__link">
     apI.show()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apigetstate" title="apI.getState()" class="md-nav__link">
+    apI.getState()
   </a>
   
 </li>
@@ -529,12 +557,14 @@
                 
                 <p><a name="API"></a></p>
 <h2 id="api">API<a class="headerlink" href="#api" title="Permanent link">&para;</a></h2>
-<p>This is default API class</p>
+<p>Default API class</p>
 <p><strong>Kind</strong>: global class  </p>
 <ul>
 <li><a href="#API">API</a><ul>
 <li><a href="#API+options">.options</a></li>
+<li><a href="#API+options">.options</a></li>
 <li><a href="#API+show">.show()</a></li>
+<li><a href="#API+getState">.getState()</a></li>
 <li><a href="#API+hide">.hide()</a></li>
 <li><a href="#API+toggle">.toggle()</a></li>
 <li><a href="#API+destroy">.destroy()</a></li>
@@ -544,6 +574,16 @@
 </ul>
 <p><a name="API+options"></a></p>
 <h3 id="apioptions">apI.options<a class="headerlink" href="#apioptions" title="Permanent link">&para;</a></h3>
+<p>get current option object</p>
+<p><strong>Kind</strong>: instance property of <a href="#API"><code>API</code></a><br />
+<strong>Example</strong>  </p>
+<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">pd</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.selector&#39;</span><span class="p">).</span><span class="nx">persianDatepicker</span><span class="p">();</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">pd</span><span class="p">.</span><span class="nx">options</span><span class="p">);</span>
+</pre></div>
+
+
+<p><a name="API+options"></a></p>
+<h3 id="apioptions_1">apI.options<a class="headerlink" href="#apioptions_1" title="Permanent link">&para;</a></h3>
 <p>set options live</p>
 <p><strong>Kind</strong>: instance property of <a href="#API"><code>API</code></a><br />
 <strong>Example</strong>  </p>
@@ -562,6 +602,20 @@
 <strong>Example</strong>  </p>
 <div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">pd</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.selector&#39;</span><span class="p">).</span><span class="nx">persianDatepicker</span><span class="p">();</span>
 <span class="nx">pd</span><span class="p">.</span><span class="nx">show</span><span class="p">();</span>
+</pre></div>
+
+
+<p><a name="API+getState"></a></p>
+<h3 id="apigetstate">apI.getState()<a class="headerlink" href="#apigetstate" title="Permanent link">&para;</a></h3>
+<p>return datepicker current state</p>
+<p><strong>Kind</strong>: instance method of <a href="#API"><code>API</code></a><br />
+<strong>Since</strong>: 1.0.0<br />
+<strong>Example</strong>  </p>
+<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">pd</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.selector&#39;</span><span class="p">).</span><span class="nx">persianDatepicker</span><span class="p">();</span>
+<span class="kd">var</span> <span class="nx">state</span> <span class="o">=</span> <span class="nx">pd</span><span class="p">.</span><span class="nx">getState</span><span class="p">();</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">state</span><span class="p">.</span><span class="nx">selected</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">state</span><span class="p">.</span><span class="nx">view</span><span class="p">);</span>
 </pre></div>
 
 
@@ -686,7 +740,9 @@
     
       <a href="https://github.com/babakhani" class="md-footer-social__link fa fa-github"></a>
     
-      <a href="https://de.linkedin.com/in/martin-donath-20a95039" class="md-footer-social__link fa fa-linkedin"></a>
+      <a href="https://www.linkedin.com/in/reza-babakhani-52747389/" class="md-footer-social__link fa fa-linkedin"></a>
+    
+      <a href="https://twitter.com/babakhani_reza" class="md-footer-social__link fa fa-twitter"></a>
     
   </div>
 

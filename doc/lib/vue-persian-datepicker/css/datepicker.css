@@ -2,7 +2,11 @@ a {
     color: #000 !important;
 }
 
-.datepicker-demo-box {
+.navbar{
+    z-index: 100001;
+}
+
+.datepicker-demo-box--fixed{
     position: fixed;
 }
 

@@ -308,7 +308,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../playground/" title="Playground" class="md-nav__link">
+    <a href="../playground-page/" title="Playground" class="md-nav__link">
       Playground
     </a>
   </li>
@@ -1119,6 +1119,13 @@
         <li class="md-nav__item">
   <a href="#onselect-unixdate" title=""onSelect" (unixDate)" class="md-nav__link">
     "onSelect" (unixDate)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#onset-unixdate" title=""onSet" (unixDate)" class="md-nav__link">
+    "onSet" (unixDate)
   </a>
   
 </li>
@@ -1987,6 +1994,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#onset-unixdate" title=""onSet" (unixDate)" class="md-nav__link">
+    "onSet" (unixDate)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#onshow" title=""onShow"" class="md-nav__link">
     "onShow"
   </a>
@@ -2081,7 +2095,7 @@
 </li>
 <li><a href="#Config.toolbox">.toolbox</a> : <code>object</code><ul>
 <li><a href="#Config.toolbox.enabled">.enabled</a> : <code>boolean</code></li>
-<li><a href="#Config.toolbox.text">.text</a> : <code>object</code><ul>
+<li><del><a href="#Config.toolbox.text">.text</a> : <code>object</code></del><ul>
 <li><del><a href="#Config.toolbox.text.btnToday">.btnToday</a> : <code>string</code></del></li>
 </ul>
 </li>
@@ -2172,6 +2186,7 @@
 <li><a href="#Config.checkMonth">.checkMonth()</a> : <code>function</code></li>
 <li><a href="#Config.checkYear">.checkYear()</a> : <code>function</code></li>
 <li><a href="#Config.event_onSelect">"onSelect" (unixDate)</a></li>
+<li><a href="#Config.event_onSet">"onSet" (unixDate)</a></li>
 <li><a href="#Config.event_onShow">"onShow"</a></li>
 <li><a href="#Config.event_onHide">"onHide"</a></li>
 <li><a href="#Config.event_onToggle">"onToggle"</a></li>
@@ -2184,12 +2199,12 @@
 <p>set default calendar mode of datepicker, available options: 'persian', 'gregorian'</p>
 <p><strong>Kind</strong>: static property of <a href="#Config"><code>Config</code></a><br />
 <strong>Default</strong>: <code>&quot;&#x27;persian&#x27;&quot;</code><br />
-<strong>Since</strong>: 0.6.0<br />
+<strong>Since</strong>: 1.0.0<br />
 <a name="Config.calendar"></a></p>
 <h2 id="configcalendar-object">Config.calendar : <code>object</code><a class="headerlink" href="#configcalendar-object" title="Permanent link">&para;</a></h2>
 <p>calendar type and localization configuration</p>
 <p><strong>Kind</strong>: static property of <a href="#Config"><code>Config</code></a><br />
-<strong>Since</strong>: 0.6.0<br />
+<strong>Since</strong>: 1.0.0<br />
 <strong>Example</strong>  </p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="s1">&#39;persian&#39;</span><span class="o">:</span> <span class="p">{</span>
@@ -2226,7 +2241,7 @@
 <h3 id="calendarpersian-object">calendar.persian : <code>object</code><a class="headerlink" href="#calendarpersian-object" title="Permanent link">&para;</a></h3>
 <p>Persian calendar configuration</p>
 <p><strong>Kind</strong>: static property of <a href="#Config.calendar"><code>calendar</code></a><br />
-<strong>Since</strong>: 0.6.0  </p>
+<strong>Since</strong>: 1.0.0  </p>
 <ul>
 <li><a href="#Config.calendar.persian">.persian</a> : <code>object</code><ul>
 <li><a href="#Config.calendar.persian.locale">.locale</a> : <code>string</code></li>
@@ -2240,25 +2255,25 @@
 <p>set locale of Persian calendar available options: 'fa', 'en'</p>
 <p><strong>Kind</strong>: static property of <a href="#Config.calendar.persian"><code>persian</code></a><br />
 <strong>Default</strong>: <code>&quot;&#x27;fa&#x27;&quot;</code><br />
-<strong>Since</strong>: 0.6.0<br />
+<strong>Since</strong>: 1.0.0<br />
 <a name="Config.calendar.persian.showHint"></a></p>
 <h4 id="persianshowhint-boolean">persian.showHint : <code>boolean</code><a class="headerlink" href="#persianshowhint-boolean" title="Permanent link">&para;</a></h4>
 <p>if set true, small date hint of this calendar will be shown on another calendar</p>
 <p><strong>Kind</strong>: static property of <a href="#Config.calendar.persian"><code>persian</code></a><br />
 <strong>Default</strong>: <code>false</code><br />
-<strong>Since</strong>: 0.6.0<br />
+<strong>Since</strong>: 1.0.0<br />
 <a name="Config.calendar.persian.leapYearMode"></a></p>
 <h4 id="persianleapyearmode-string">persian.leapYearMode : <code>string</code><a class="headerlink" href="#persianleapyearmode-string" title="Permanent link">&para;</a></h4>
 <p>Persian calendar leap year calculation mode, available options: 'algorithmic', 'astronomical'</p>
 <p><strong>Kind</strong>: static property of <a href="#Config.calendar.persian"><code>persian</code></a><br />
 <strong>Default</strong>: <code>&quot;&#x27;algorithmic&#x27;&quot;</code><br />
 <strong>Link</strong>: http://babakhani.github.io/PersianWebToolkit/doc/persian-date/leapyear<br />
-<strong>Since</strong>: 0.6.0<br />
+<strong>Since</strong>: 1.0.0<br />
 <a name="Config.calendar.gregorian"></a></p>
 <h3 id="calendargregorian-object">calendar.gregorian : <code>object</code><a class="headerlink" href="#calendargregorian-object" title="Permanent link">&para;</a></h3>
 <p>Gregorian calendar configuration</p>
 <p><strong>Kind</strong>: static property of <a href="#Config.calendar"><code>calendar</code></a><br />
-<strong>Since</strong>: 0.6.0  </p>
+<strong>Since</strong>: 1.0.0  </p>
 <ul>
 <li><a href="#Config.calendar.gregorian">.gregorian</a> : <code>object</code><ul>
 <li><a href="#Config.calendar.gregorian.locale">.locale</a> : <code>string</code></li>
@@ -2271,19 +2286,19 @@
 <p>set locale of Gregorian calendar available options: 'fa', 'en'</p>
 <p><strong>Kind</strong>: static property of <a href="#Config.calendar.gregorian"><code>gregorian</code></a><br />
 <strong>Default</strong>: <code>&quot;&#x27;en&#x27;&quot;</code><br />
-<strong>Since</strong>: 0.6.0<br />
+<strong>Since</strong>: 1.0.0<br />
 <a name="Config.calendar.gregorian.showHint"></a></p>
 <h4 id="gregorianshowhint-boolean">gregorian.showHint : <code>boolean</code><a class="headerlink" href="#gregorianshowhint-boolean" title="Permanent link">&para;</a></h4>
 <p>if set true, small date hint of this calendar will be shown on another calendar</p>
 <p><strong>Kind</strong>: static property of <a href="#Config.calendar.gregorian"><code>gregorian</code></a><br />
 <strong>Default</strong>: <code>false</code><br />
-<strong>Since</strong>: 0.6.0<br />
+<strong>Since</strong>: 1.0.0<br />
 <a name="Config.responsive"></a></p>
 <h2 id="configresponsive-boolean">Config.responsive : <code>boolean</code><a class="headerlink" href="#configresponsive-boolean" title="Permanent link">&para;</a></h2>
 <p>if set true make enable responsive view on mobile devices</p>
 <p><strong>Kind</strong>: static property of <a href="#Config"><code>Config</code></a><br />
 <strong>Default</strong>: <code>true</code><br />
-<strong>Since</strong>: 0.6.0<br />
+<strong>Since</strong>: 1.0.0<br />
 <a name="Config.inline"></a></p>
 <h2 id="configinline-boolean">Config.inline : <code>boolean</code><a class="headerlink" href="#configinline-boolean" title="Permanent link">&para;</a></h2>
 <p>if true datepicker render inline</p>
@@ -2468,7 +2483,7 @@
 <ul>
 <li><a href="#Config.toolbox">.toolbox</a> : <code>object</code><ul>
 <li><a href="#Config.toolbox.enabled">.enabled</a> : <code>boolean</code></li>
-<li><a href="#Config.toolbox.text">.text</a> : <code>object</code><ul>
+<li><del><a href="#Config.toolbox.text">.text</a> : <code>object</code></del><ul>
 <li><del><a href="#Config.toolbox.text.btnToday">.btnToday</a> : <code>string</code></del></li>
 </ul>
 </li>
@@ -2508,20 +2523,21 @@
 <p><strong>Kind</strong>: static property of <a href="#Config.toolbox"><code>toolbox</code></a><br />
 <strong>Default</strong>: <code>true</code><br />
 <a name="Config.toolbox.text"></a></p>
-<h3 id="toolboxtext-object">toolbox.text : <code>object</code><a class="headerlink" href="#toolboxtext-object" title="Permanent link">&para;</a></h3>
-<p>toolbox button text coniguration</p>
+<h3 id="toolboxtext-object"><del>toolbox.text : <code>object</code></del><a class="headerlink" href="#toolboxtext-object" title="Permanent link">&para;</a></h3>
+<p><strong><em>Deprecated</em></strong></p>
+<p>toolbox button text configuration</p>
 <p><strong>Kind</strong>: static property of <a href="#Config.toolbox"><code>toolbox</code></a><br />
 <a name="Config.toolbox.text.btnToday"></a></p>
 <h4 id="textbtntoday-string"><del>text.btnToday : <code>string</code></del><a class="headerlink" href="#textbtntoday-string" title="Permanent link">&para;</a></h4>
 <p><strong><em>Deprecated</em></strong></p>
-<p>text of today button, deprecated from 0.6.0</p>
+<p>text of today button, deprecated from 1.0.0</p>
 <p><strong>Kind</strong>: static property of <a href="#Config.toolbox.text"><code>text</code></a><br />
 <strong>Default</strong>: <code>&quot;&#x27;امروز&#x27;&quot;</code><br />
 <a name="Config.toolbox.submitButton"></a></p>
 <h3 id="toolboxsubmitbutton">toolbox.submitButton<a class="headerlink" href="#toolboxsubmitbutton" title="Permanent link">&para;</a></h3>
 <p>submit button configuration (only shown on mobile)</p>
 <p><strong>Kind</strong>: static property of <a href="#Config.toolbox"><code>toolbox</code></a><br />
-<strong>Since</strong>: 0.6.0  </p>
+<strong>Since</strong>: 1.0.0  </p>
 <ul>
 <li><a href="#Config.toolbox.submitButton">.submitButton</a><ul>
 <li><a href="#Config.toolbox.submitButton.enabled">.enabled</a> : <code>boolean</code></li>
@@ -2539,12 +2555,12 @@
 <p>make submit button enable or disable</p>
 <p><strong>Kind</strong>: static property of <a href="#Config.toolbox.submitButton"><code>submitButton</code></a><br />
 <strong>Default</strong>: <code>false</code><br />
-<strong>Since</strong>: 0.6.0<br />
+<strong>Since</strong>: 1.0.0<br />
 <a name="Config.toolbox.submitButton.text"></a></p>
 <h4 id="submitbuttontext-object">submitButton.text : <code>object</code><a class="headerlink" href="#submitbuttontext-object" title="Permanent link">&para;</a></h4>
 <p>submit button text</p>
 <p><strong>Kind</strong>: static property of <a href="#Config.toolbox.submitButton"><code>submitButton</code></a><br />
-<strong>Since</strong>: 0.6.0  </p>
+<strong>Since</strong>: 1.0.0  </p>
 <ul>
 <li><a href="#Config.toolbox.submitButton.text">.text</a> : <code>object</code><ul>
 <li><a href="#Config.toolbox.submitButton.text.fa">.fa</a> : <code>object</code></li>
@@ -2557,23 +2573,23 @@
 <p>show when current calendar is Persian</p>
 <p><strong>Kind</strong>: static property of <a href="#Config.toolbox.submitButton.text"><code>text</code></a><br />
 <strong>Default</strong>: <code>تایید</code><br />
-<strong>Since</strong>: 0.6.0<br />
+<strong>Since</strong>: 1.0.0<br />
 <a name="Config.toolbox.submitButton.text.en"></a></p>
 <h5 id="texten-object">text.en : <code>object</code><a class="headerlink" href="#texten-object" title="Permanent link">&para;</a></h5>
 <p>show when current calendar is Gregorian</p>
 <p><strong>Kind</strong>: static property of <a href="#Config.toolbox.submitButton.text"><code>text</code></a><br />
 <strong>Default</strong>: <code>submit</code><br />
-<strong>Since</strong>: 0.6.0<br />
+<strong>Since</strong>: 1.0.0<br />
 <a name="Config.toolbox.submitButton.event_onSubmit"></a></p>
 <h4 id="onsubmit">"onSubmit"<a class="headerlink" href="#onsubmit" title="Permanent link">&para;</a></h4>
-<p>submit button event</p>
+<p>Called when submit button clicked</p>
 <p><strong>Kind</strong>: event emitted by <a href="#Config.toolbox.submitButton"><code>submitButton</code></a><br />
-<strong>Since</strong>: 0.6.0<br />
+<strong>Since</strong>: 1.0.0<br />
 <a name="Config.toolbox.todayButton"></a></p>
 <h3 id="toolboxtodaybutton">toolbox.todayButton<a class="headerlink" href="#toolboxtodaybutton" title="Permanent link">&para;</a></h3>
 <p>toolbox today button configuration</p>
 <p><strong>Kind</strong>: static property of <a href="#Config.toolbox"><code>toolbox</code></a><br />
-<strong>Since</strong>: 0.6.0  </p>
+<strong>Since</strong>: 1.0.0  </p>
 <ul>
 <li><a href="#Config.toolbox.todayButton">.todayButton</a><ul>
 <li><a href="#Config.toolbox.todayButton.enabled">.enabled</a> : <code>boolean</code></li>
@@ -2590,12 +2606,12 @@
 <h4 id="todaybuttonenabled-boolean">todayButton.enabled : <code>boolean</code><a class="headerlink" href="#todaybuttonenabled-boolean" title="Permanent link">&para;</a></h4>
 <p>make toolbox today button enable or disable</p>
 <p><strong>Kind</strong>: static property of <a href="#Config.toolbox.todayButton"><code>todayButton</code></a><br />
-<strong>Since</strong>: 0.6.0<br />
+<strong>Since</strong>: 1.0.0<br />
 <a name="Config.toolbox.todayButton.text"></a></p>
 <h4 id="todaybuttontext-object">todayButton.text : <code>object</code><a class="headerlink" href="#todaybuttontext-object" title="Permanent link">&para;</a></h4>
 <p>today button text</p>
 <p><strong>Kind</strong>: static property of <a href="#Config.toolbox.todayButton"><code>todayButton</code></a><br />
-<strong>Since</strong>: 0.6.0  </p>
+<strong>Since</strong>: 1.0.0  </p>
 <ul>
 <li><a href="#Config.toolbox.todayButton.text">.text</a> : <code>object</code><ul>
 <li><a href="#Config.toolbox.todayButton.text.fa">.fa</a> : <code>object</code></li>
@@ -2608,23 +2624,23 @@
 <p>show when current calendar is Persian</p>
 <p><strong>Kind</strong>: static property of <a href="#Config.toolbox.todayButton.text"><code>text</code></a><br />
 <strong>Default</strong>: <code>امروز</code><br />
-<strong>Since</strong>: 0.6.0<br />
+<strong>Since</strong>: 1.0.0<br />
 <a name="Config.toolbox.todayButton.text.en"></a></p>
 <h5 id="texten-object_1">text.en : <code>object</code><a class="headerlink" href="#texten-object_1" title="Permanent link">&para;</a></h5>
 <p>show when current calendar is Gregorian</p>
 <p><strong>Kind</strong>: static property of <a href="#Config.toolbox.todayButton.text"><code>text</code></a><br />
 <strong>Default</strong>: <code>today</code><br />
-<strong>Since</strong>: 0.6.0<br />
+<strong>Since</strong>: 1.0.0<br />
 <a name="Config.toolbox.todayButton.event_onToday"></a></p>
 <h4 id="ontoday">"onToday"<a class="headerlink" href="#ontoday" title="Permanent link">&para;</a></h4>
-<p>Called when calendar calendar switch click</p>
+<p>Called when today button clicked</p>
 <p><strong>Kind</strong>: event emitted by <a href="#Config.toolbox.todayButton"><code>todayButton</code></a><br />
-<strong>Since</strong>: 0.6.0<br />
+<strong>Since</strong>: 1.0.0<br />
 <a name="Config.toolbox.calendarSwitch"></a></p>
 <h3 id="toolboxcalendarswitch-object">toolbox.calendarSwitch : <code>object</code><a class="headerlink" href="#toolboxcalendarswitch-object" title="Permanent link">&para;</a></h3>
 <p>toolbox calendar switch configuration</p>
 <p><strong>Kind</strong>: static property of <a href="#Config.toolbox"><code>toolbox</code></a><br />
-<strong>Since</strong>: 0.6.0  </p>
+<strong>Since</strong>: 1.0.0  </p>
 <ul>
 <li><a href="#Config.toolbox.calendarSwitch">.calendarSwitch</a> : <code>object</code><ul>
 <li><a href="#Config.toolbox.calendarSwitch.enabled">.enabled</a> : <code>boolean</code></li>
@@ -2638,19 +2654,19 @@
 <p>make calendar switch enable or disable</p>
 <p><strong>Kind</strong>: static property of <a href="#Config.toolbox.calendarSwitch"><code>calendarSwitch</code></a><br />
 <strong>Default</strong>: <code>true</code><br />
-<strong>Since</strong>: 0.6.0<br />
+<strong>Since</strong>: 1.0.0<br />
 <a name="Config.toolbox.calendarSwitch.format"></a></p>
 <h4 id="calendarswitchformat-string">calendarSwitch.format : <code>string</code><a class="headerlink" href="#calendarswitchformat-string" title="Permanent link">&para;</a></h4>
 <p>calendar switch text format string</p>
 <p><strong>Kind</strong>: static property of <a href="#Config.toolbox.calendarSwitch"><code>calendarSwitch</code></a><br />
 <strong>Default</strong>: <code>&quot;MMMM&quot;</code><br />
 <strong>Link</strong>: http://babakhani.github.io/PersianWebToolkit/doc/persian-date/#format<br />
-<strong>Since</strong>: 0.6.0<br />
+<strong>Since</strong>: 1.0.0<br />
 <a name="Config.toolbox.calendarSwitch.event_onSwitch"></a></p>
 <h4 id="onswitch_1">"onSwitch"<a class="headerlink" href="#onswitch_1" title="Permanent link">&para;</a></h4>
-<p>Called when calendar switch click</p>
+<p>Called when calendar switch clicked</p>
 <p><strong>Kind</strong>: event emitted by <a href="#Config.toolbox.calendarSwitch"><code>calendarSwitch</code></a><br />
-<strong>Since</strong>: 0.6.0<br />
+<strong>Since</strong>: 1.0.0<br />
 <a name="Config.toolbox.event_onToday"></a></p>
 <h3 id="ontoday-toolbox"><del>"onToday" (toolbox)</del><a class="headerlink" href="#ontoday-toolbox" title="Permanent link">&para;</a></h3>
 <p><strong><em>Deprecated</em></strong></p>
@@ -3204,7 +3220,22 @@
 <p><strong>Kind</strong>: static method of <a href="#Config"><code>Config</code></a><br />
 <a name="Config.event_onSelect"></a></p>
 <h2 id="onselect-unixdate">"onSelect" (unixDate)<a class="headerlink" href="#onselect-unixdate" title="Permanent link">&para;</a></h2>
-<p>A function that takes current datepicker unixDate. called When date Select.</p>
+<p>Called when date Select by user.</p>
+<p><strong>Kind</strong>: event emitted by <a href="#Config"><code>Config</code></a><br />
+<table>
+  <thead>
+    <tr>
+      <th>Param</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr>
+    <td>unixDate</td>
+    </tr>  </tbody>
+</table></p>
+<p><a name="Config.event_onSet"></a></p>
+<h2 id="onset-unixdate">"onSet" (unixDate)<a class="headerlink" href="#onset-unixdate" title="Permanent link">&para;</a></h2>
+<p>Called when date Select by api.</p>
 <p><strong>Kind</strong>: event emitted by <a href="#Config"><code>Config</code></a><br />
 <table>
   <thead>
@@ -3251,7 +3282,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../playground/" title="Playground" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../playground-page/" title="Playground" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -3305,7 +3336,9 @@
     
       <a href="https://github.com/babakhani" class="md-footer-social__link fa fa-github"></a>
     
-      <a href="https://de.linkedin.com/in/martin-donath-20a95039" class="md-footer-social__link fa fa-linkedin"></a>
+      <a href="https://www.linkedin.com/in/reza-babakhani-52747389/" class="md-footer-social__link fa fa-linkedin"></a>
+    
+      <a href="https://twitter.com/babakhani_reza" class="md-footer-social__link fa fa-twitter"></a>
     
   </div>
 

@@ -330,8 +330,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#inline-example" title="inline example" class="md-nav__link">
-    inline example
+  <a href="#without-initialvalue" title="without initialValue" class="md-nav__link">
+    without initialValue
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initialvaluetype" title="initialValueType" class="md-nav__link">
+    initialValueType
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inline" title="inline" class="md-nav__link">
+    inline
   </a>
   
 </li>
@@ -381,13 +395,6 @@
         <li class="md-nav__item">
   <a href="#altfield" title="altField" class="md-nav__link">
     altField
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#persiandigit" title="persianDigit" class="md-nav__link">
-    persianDigit
   </a>
   
 </li>
@@ -455,6 +462,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#range-selector" title="Range selector" class="md-nav__link">
+    Range selector
+  </a>
+  
+</li>
+      
       
       
     </ul>
@@ -470,7 +484,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../playground/" title="Playground" class="md-nav__link">
+    <a href="../playground-page/" title="Playground" class="md-nav__link">
       Playground
     </a>
   </li>
@@ -545,8 +559,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#inline-example" title="inline example" class="md-nav__link">
-    inline example
+  <a href="#without-initialvalue" title="without initialValue" class="md-nav__link">
+    without initialValue
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initialvaluetype" title="initialValueType" class="md-nav__link">
+    initialValueType
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inline" title="inline" class="md-nav__link">
+    inline
   </a>
   
 </li>
@@ -596,13 +624,6 @@
         <li class="md-nav__item">
   <a href="#altfield" title="altField" class="md-nav__link">
     altField
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#persiandigit" title="persianDigit" class="md-nav__link">
-    persianDigit
   </a>
   
 </li>
@@ -670,6 +691,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#range-selector" title="Range selector" class="md-nav__link">
+    Range selector
+  </a>
+  
+</li>
+      
       
       
     </ul>
@@ -699,7 +727,45 @@
 
 <p><label>Datepicker</label>
 <input class="datepicker-demo normal-example" /></p>
-<h2 id="inline-example">inline example<a class="headerlink" href="#inline-example" title="Permanent link">&para;</a></h2>
+<h2 id="without-initialvalue">without initialValue<a class="headerlink" href="#without-initialvalue" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.initial-value-example&#39;</span><span class="p">).</span><span class="nx">persianDatepicker</span><span class="p">({</span>
+    <span class="nx">initialValue</span><span class="o">:</span> <span class="kc">false</span>
+<span class="p">});</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;initial-value-example&quot;</span> <span class="p">/&gt;</span>
+</pre></div>
+
+
+<p><label>Datepicker</label>
+<input class="datepicker-demo initial-value-example" /></p>
+<h2 id="initialvaluetype">initialValueType<a class="headerlink" href="#initialvaluetype" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.initial-value-type-example&#39;</span><span class="p">).</span><span class="nx">persianDatepicker</span><span class="p">({</span>
+    <span class="nx">initialValueType</span><span class="o">:</span> <span class="s1">&#39;persian&#39;</span>
+<span class="p">});</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;initial-value-type-example&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;1396-10-12&quot;</span> <span class="p">/&gt;</span>
+</pre></div>
+
+
+<p><label>Datepicker</label>
+<input class="datepicker-demo initial-value-type-example" value="1396-10-12" /></p>
+<div class="codehilite"><pre><span></span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.initial-value-type-gregorian-example&#39;</span><span class="p">).</span><span class="nx">persianDatepicker</span><span class="p">({</span>
+    <span class="nx">initialValueType</span><span class="o">:</span> <span class="s1">&#39;gregorian&#39;</span>
+<span class="p">});</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;initial-value-type-gregorian-example&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;2017-1-1&quot;</span> <span class="p">/&gt;</span>
+</pre></div>
+
+
+<p><label>Datepicker</label>
+<input class="datepicker-demo initial-value-type-gregorian-example" value="2017-1-1" /></p>
+<h2 id="inline">inline<a class="headerlink" href="#inline" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.inline-example&#39;</span><span class="p">).</span><span class="nx">persianDatepicker</span><span class="p">({</span>
     <span class="nx">inline</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="nx">altField</span><span class="o">:</span> <span class="s1">&#39;#inlineExampleAlt&#39;</span><span class="p">,</span>
@@ -904,19 +970,6 @@
 <input class="datepicker-demo-alt alt-field-example-alt-field" /></p>
 <p><label>Datepicker</label>
 <input class="datepicker-demo alt-field-example" /></p>
-<h2 id="persiandigit">persianDigit<a class="headerlink" href="#persiandigit" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.persian-digit-example&#39;</span><span class="p">).</span><span class="nx">persianDatepicker</span><span class="p">({</span>
-    <span class="nx">persianDigit</span><span class="o">:</span> <span class="kc">false</span>
-<span class="p">});</span>
-</pre></div>
-
-
-<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;persian-digit-example&quot;</span> <span class="p">/&gt;</span>
-</pre></div>
-
-
-<p><label>Datepicker</label>
-<input class="datepicker-demo persian-digit-example" /></p>
 <h2 id="viewmode">viewMode<a class="headerlink" href="#viewmode" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.view-mode-example&#39;</span><span class="p">).</span><span class="nx">persianDatepicker</span><span class="p">({</span>
     <span class="nx">viewMode</span><span class="o">:</span> <span class="s1">&#39;year&#39;</span>
@@ -1042,6 +1095,61 @@
 
 <p><label>Datepicker</label>
 <input class="datepicker-demo on-select-example" /></p>
+<h2 id="range-selector">Range selector<a class="headerlink" href="#range-selector" title="Permanent link">&para;</a></h2>
+<p>Range Selector that make sure 'to' date is after 'from' date and also 'from' is before 'to' date.</p>
+<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">to</span><span class="p">,</span> <span class="nx">from</span><span class="p">;</span>
+<span class="nx">to</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.range-to-example&quot;</span><span class="p">).</span><span class="nx">persianDatepicker</span><span class="p">({</span>
+    <span class="nx">inline</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nx">altField</span><span class="o">:</span> <span class="s1">&#39;.range-to-example-alt&#39;</span><span class="p">,</span>
+    <span class="nx">altFormat</span><span class="o">:</span> <span class="s1">&#39;LLLL&#39;</span><span class="p">,</span>
+    <span class="nx">initialValue</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nx">onSelect</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">unix</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">to</span><span class="p">.</span><span class="nx">touched</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">from</span> <span class="o">&amp;&amp;</span> <span class="nx">from</span><span class="p">.</span><span class="nx">options</span> <span class="o">&amp;&amp;</span> <span class="nx">from</span><span class="p">.</span><span class="nx">options</span><span class="p">.</span><span class="nx">maxDate</span> <span class="o">!=</span> <span class="nx">unix</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kd">var</span> <span class="nx">cachedValue</span> <span class="o">=</span> <span class="nx">from</span><span class="p">.</span><span class="nx">getState</span><span class="p">().</span><span class="nx">selected</span><span class="p">.</span><span class="nx">unixDate</span><span class="p">;</span>
+            <span class="nx">from</span><span class="p">.</span><span class="nx">options</span> <span class="o">=</span> <span class="p">{</span><span class="nx">maxDate</span><span class="o">:</span> <span class="nx">unix</span><span class="p">};</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nx">from</span><span class="p">.</span><span class="nx">touched</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">from</span><span class="p">.</span><span class="nx">setDate</span><span class="p">(</span><span class="nx">cachedValue</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+<span class="nx">from</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.range-from-example&quot;</span><span class="p">).</span><span class="nx">persianDatepicker</span><span class="p">({</span>
+    <span class="nx">inline</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nx">altField</span><span class="o">:</span> <span class="s1">&#39;.range-from-example-alt&#39;</span><span class="p">,</span>
+    <span class="nx">altFormat</span><span class="o">:</span> <span class="s1">&#39;LLLL&#39;</span><span class="p">,</span>
+    <span class="nx">initialValue</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nx">onSelect</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">unix</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">from</span><span class="p">.</span><span class="nx">touched</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">to</span> <span class="o">&amp;&amp;</span> <span class="nx">to</span><span class="p">.</span><span class="nx">options</span> <span class="o">&amp;&amp;</span> <span class="nx">to</span><span class="p">.</span><span class="nx">options</span><span class="p">.</span><span class="nx">minDate</span> <span class="o">!=</span> <span class="nx">unix</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kd">var</span> <span class="nx">cachedValue</span> <span class="o">=</span> <span class="nx">to</span><span class="p">.</span><span class="nx">getState</span><span class="p">().</span><span class="nx">selected</span><span class="p">.</span><span class="nx">unixDate</span><span class="p">;</span>
+            <span class="nx">to</span><span class="p">.</span><span class="nx">options</span> <span class="o">=</span> <span class="p">{</span><span class="nx">minDate</span><span class="o">:</span> <span class="nx">unix</span><span class="p">};</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nx">to</span><span class="p">.</span><span class="nx">touched</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">to</span><span class="p">.</span><span class="nx">setDate</span><span class="p">(</span><span class="nx">cachedValue</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;range-from-example&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;range-to-example&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+
+
+<div class="two-inline-datepicker">
+<div>
+<label>to</label>
+<input  class='datepicker-demo range-to-example-alt' />
+<div class="datepicker-demo range-to-example" ></div>
+</div>
+<div>
+<label>From</label>
+<input  class='datepicker-demo range-from-example-alt' />
+<div class="datepicker-demo range-from-example" ></div>
+</div>
+</div>
                 
                   
                 
@@ -1075,7 +1183,7 @@
           </a>
         
         
-          <a href="../playground/" title="Playground" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../playground-page/" title="Playground" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
@@ -1114,7 +1222,9 @@
     
       <a href="https://github.com/babakhani" class="md-footer-social__link fa fa-github"></a>
     
-      <a href="https://de.linkedin.com/in/martin-donath-20a95039" class="md-footer-social__link fa fa-linkedin"></a>
+      <a href="https://www.linkedin.com/in/reza-babakhani-52747389/" class="md-footer-social__link fa fa-linkedin"></a>
+    
+      <a href="https://twitter.com/babakhani_reza" class="md-footer-social__link fa fa-twitter"></a>
     
   </div>
 
