@@ -38,7 +38,7 @@ $(document).ready(function () {
         inline: true,
         altField: '#gregorianExampleAlt',
         altFormat: 'LLLL',
-        initialCalendar: 'gregorian',
+        calendarType: 'gregorian',
         toolbox: {
             calendarSwitch: {
                 enabled: true
