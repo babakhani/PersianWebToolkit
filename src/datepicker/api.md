@@ -1,11 +1,10 @@
 <a name="API"></a>
 
 ## API
-Default API class
-
 **Kind**: global class  
 
 * [API](#API)
+    * [new API()](#new_API_new)
     * [.options](#API+options)
     * [.options](#API+options)
     * [.show()](#API+show)
@@ -14,6 +13,11 @@ Default API class
     * [.toggle()](#API+toggle)
     * [.destroy()](#API+destroy)
     * [.setDate(unix)](#API+setDate)
+
+<a name="new_API_new"></a>
+
+### new API()
+available api document stored here.
 
 <a name="API+options"></a>
 
