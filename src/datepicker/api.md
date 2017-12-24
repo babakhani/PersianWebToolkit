@@ -1,10 +1,11 @@
 <a name="API"></a>
 
 ## API
+This is the API documentation for persian-datepicker
+
 **Kind**: global class  
 
 * [API](#API)
-    * [new API()](#new_API_new)
     * [.options](#API+options)
     * [.options](#API+options)
     * [.show()](#API+show)
@@ -13,11 +14,6 @@
     * [.toggle()](#API+toggle)
     * [.destroy()](#API+destroy)
     * [.setDate(unix)](#API+setDate)
-
-<a name="new_API_new"></a>
-
-### new API()
-available api document stored here.
 
 <a name="API+options"></a>
 
