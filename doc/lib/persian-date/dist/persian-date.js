@@ -1,6 +1,6 @@
 /*!
  * 
- * persian-date -  1.0.1
+ * persian-date -  1.0.3
  * Reza Babakhani <babakhani.reza@gmail.com>
  * http://babakhani.github.io/PersianWebToolkit/docs/persian-date/
  * Under WTFPL license 
@@ -262,7 +262,7 @@ var PersianDateClass = function () {
         this.leapYearMode = PersianDateClass.leapYearMode;
 
         this.algorithms = new Algorithms(this);
-        this.version = "1.0.1";
+        this.version = "1.0.3";
         this._utcMode = false;
         if (this.localType !== 'fa') {
             this.formatPersian = false;
@@ -1456,7 +1456,7 @@ var PersianDateClass = function () {
                     // 8:30 PM
                     case 'LT':
                         {
-                            return self.format('h:m a');
+                            return self.format('H:m a');
                         }
                     // 09/04/1986
                     case 'L':
@@ -2285,25 +2285,25 @@ var Algorithms = function () {
     }, {
         key: 'calcGregorian',
         value: function calcGregorian(dateArray) {
-            if (dateArray[0]) {
+            if (dateArray[0] || dateArray[0] === 0) {
                 this.ON.gregorian.year = dateArray[0];
             }
-            if (dateArray[1]) {
+            if (dateArray[1] || dateArray[1] === 0) {
                 this.ON.gregorian.month = dateArray[1];
             }
-            if (dateArray[2]) {
+            if (dateArray[2] || dateArray[2] === 0) {
                 this.ON.gregorian.day = dateArray[2];
             }
-            if (dateArray[3]) {
+            if (dateArray[3] || dateArray[3] === 0) {
                 this.ON.gregorian.hour = dateArray[3];
             }
-            if (dateArray[4]) {
+            if (dateArray[4] || dateArray[4] === 0) {
                 this.ON.gregorian.minute = dateArray[4];
             }
-            if (dateArray[5]) {
+            if (dateArray[5] || dateArray[5] === 0) {
                 this.ON.gregorian.second = dateArray[5];
             }
-            if (dateArray[6]) {
+            if (dateArray[6] || dateArray[6] === 0) {
                 this.ON.gregorian.millisecond = dateArray[6];
             }
             this.updateFromGregorian();
