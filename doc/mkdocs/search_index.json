@@ -252,13 +252,18 @@
         }, 
         {
             "location": "/persian-date/changelog/", 
-            "text": "Persian Date Change Log\n\n\nAll notable changes to this project will be documented in this file.\n\n\nThe format is based on \nKeep a Changelog\n \nand this project adheres to \nSemantic Versioning\n.\n\n\n[1.0.3] - 2017-12-24\n\n\n\n\nFix \n183\n\n\nFix \n41\n\n\n\n\n[1.0.1] - 2017-10-1\n\n\n\n\nFix npm published package\n\n\n\n\n[1.0.0] - 2017-10-1\n\n\n\n\nRefactor algorithms\n\n\nSupport gregorian calendar type\n\n\nSupport two persian leap year calculation mode\n\n\nAdd toCalendar, toLocale, toLeapYearMode options\n\n\nFix isDST method\n\n\nFix add subtract issue with bubbled days\n\n\nAdd rangeName, isSameDay, isSameMonth\n\n\nWrite more test\n\n\n\n\n[0.2.5]\n\n\n\n\nFix \n#37\n\n\n\n\n[0.2.4]\n\n\n\n\nMerge bit-foundation-typings .d.ts\n\n\n\n\n[0.2.2]\n\n\n\n\nFix bower \n\n\n\n\n[0.2.1]\n\n\n\n\nSome dev env fix before release \n\n\n\n\n[0.2.0]\n\n\n\n\nRefactor all code to es6\n\n\nHello webpack ,babel, mocha, istanbul, coveralls, travis, sync-pg\n\n\nAdd millisecond as last item of date array [1396, 12, 23, 40, 40, 40, 200]\n\n\nWrite mocha test\n\n\nChange licence to WTFPL\n\n\n\n\n[0.1.8]\n\n\n\n\nFix some issue\n\n\nAdd document\n\n\n\n\n[0.1.7] - 2015-01-05\n\n\n\n\nFix Format Like Moment.js\n\n\nFix formatPersian Config\n\n\nFix Constructor Without New Keyword\n\n\nFix #daysInMonth\n\n\nAdd #toArray\n\n\nFix persianDate.unix(input)", 
+            "text": "Persian Date Change Log\n\n\nAll notable changes to this project will be documented in this file.\n\n\nThe format is based on \nKeep a Changelog\n \nand this project adheres to \nSemantic Versioning\n.\n\n\n[1.0.4] - 2018-1-27\n\n\n\n\nFix \n43\n\n\nFix \n44\n\n\n\n\n[1.0.3] - 2017-12-24\n\n\n\n\nFix \n183\n\n\nFix \n41\n\n\n\n\n[1.0.1] - 2017-10-1\n\n\n\n\nFix npm published package\n\n\n\n\n[1.0.0] - 2017-10-1\n\n\n\n\nRefactor algorithms\n\n\nSupport gregorian calendar type\n\n\nSupport two persian leap year calculation mode\n\n\nAdd toCalendar, toLocale, toLeapYearMode options\n\n\nFix isDST method\n\n\nFix add subtract issue with bubbled days\n\n\nAdd rangeName, isSameDay, isSameMonth\n\n\nWrite more test\n\n\n\n\n[0.2.5]\n\n\n\n\nFix \n#37\n\n\n\n\n[0.2.4]\n\n\n\n\nMerge bit-foundation-typings .d.ts\n\n\n\n\n[0.2.2]\n\n\n\n\nFix bower \n\n\n\n\n[0.2.1]\n\n\n\n\nSome dev env fix before release \n\n\n\n\n[0.2.0]\n\n\n\n\nRefactor all code to es6\n\n\nHello webpack ,babel, mocha, istanbul, coveralls, travis, sync-pg\n\n\nAdd millisecond as last item of date array [1396, 12, 23, 40, 40, 40, 200]\n\n\nWrite mocha test\n\n\nChange licence to WTFPL\n\n\n\n\n[0.1.8]\n\n\n\n\nFix some issue\n\n\nAdd document\n\n\n\n\n[0.1.7] - 2015-01-05\n\n\n\n\nFix Format Like Moment.js\n\n\nFix formatPersian Config\n\n\nFix Constructor Without New Keyword\n\n\nFix #daysInMonth\n\n\nAdd #toArray\n\n\nFix persianDate.unix(input)", 
             "title": "Change log"
         }, 
         {
             "location": "/persian-date/changelog/#persian-date-change-log", 
             "text": "All notable changes to this project will be documented in this file.  The format is based on  Keep a Changelog  \nand this project adheres to  Semantic Versioning .", 
             "title": "Persian Date Change Log"
+        }, 
+        {
+            "location": "/persian-date/changelog/#104-2018-1-27", 
+            "text": "Fix  43  Fix  44", 
+            "title": "[1.0.4] - 2018-1-27"
         }, 
         {
             "location": "/persian-date/changelog/#103-2017-12-24", 
@@ -1057,13 +1062,18 @@
         }, 
         {
             "location": "/datepicker/changelog/", 
-            "text": "Change Log\n\n\nAll notable changes to this project will be documented in this file.\n\n\nThe format is based on \nKeep a Changelog\n \nand this project adheres to \nSemantic Versioning\n.\n\n\n[1.1.0] - 2017-12-24\n\n\n\n\nFix \n#190\n\n\nFix \n#189\n\n\nFix \n#187\n\n\nFix \n#183\n\n\nFix \n#182\n\n\nFix \n#168\n\n\n\n\n[1.0.2] - 2017-10-1\n\n\n\n\nFix dependency version\n\n\n\n\n[1.0.0] - 2017-10-1\n\n\n\n\nAdd gregorian calendar type\n\n\nAdd locale\n\n\nMake better user interface\n\n\nAdd responsive option\n\n\nAdd onSet event, that called when selected date changed by api\n\n\nExpose datepicker state with api (getState())\n\n\nAdd range selector with order validation example in doc\n\n\nImprove options set method to make better live configuration\n\n\nSeparate select event of user (click touch etc) and api\n\n\nDeprecate toolbox.text, toolbox.text.btnToday, persianDigit, toolbox.onToday\n\n\n\n\n[0.5.10]\n\n\n\n\nHotfix time plot wheel error\n\n\n\n\n[0.5.9]\n\n\n\n\nFix #154 #153 #152 #151 #150 #148 github issues\n\n\n\n\n[0.5.5]\n\n\n\n\nFix days rendering\n\n\nFix readme\n\n\n\n\n[0.5.4]\n\n\n\n\nFix document\n\n\nWorks before beta release\n\n\n\n\n[0.5.0]\n\n\n\n\nRefactor all code to es6\n\n\n\n\n[0.1.7] 2013-09-21\n\n\n\n\nFirst release", 
+            "text": "Change Log\n\n\nAll notable changes to this project will be documented in this file.\n\n\nThe format is based on \nKeep a Changelog\n \nand this project adheres to \nSemantic Versioning\n.\n\n\n[1.1.1] - 2018-1-27\n\n\n\n\nFix \n#202\n\n\nFix \n#203\n\n\n\n\n[1.1.0] - 2017-12-24\n\n\n\n\nFix \n#190\n\n\nFix \n#189\n\n\nFix \n#187\n\n\nFix \n#183\n\n\nFix \n#182\n\n\nFix \n#168\n\n\n\n\n[1.0.2] - 2017-10-1\n\n\n\n\nFix dependency version\n\n\n\n\n[1.0.0] - 2017-10-1\n\n\n\n\nAdd gregorian calendar type\n\n\nAdd locale\n\n\nMake better user interface\n\n\nAdd responsive option\n\n\nAdd onSet event, that called when selected date changed by api\n\n\nExpose datepicker state with api (getState())\n\n\nAdd range selector with order validation example in doc\n\n\nImprove options set method to make better live configuration\n\n\nSeparate select event of user (click touch etc) and api\n\n\nDeprecate toolbox.text, toolbox.text.btnToday, persianDigit, toolbox.onToday\n\n\n\n\n[0.5.10]\n\n\n\n\nHotfix time plot wheel error\n\n\n\n\n[0.5.9]\n\n\n\n\nFix #154 #153 #152 #151 #150 #148 github issues\n\n\n\n\n[0.5.5]\n\n\n\n\nFix days rendering\n\n\nFix readme\n\n\n\n\n[0.5.4]\n\n\n\n\nFix document\n\n\nWorks before beta release\n\n\n\n\n[0.5.0]\n\n\n\n\nRefactor all code to es6\n\n\n\n\n[0.1.7] 2013-09-21\n\n\n\n\nFirst release", 
             "title": "Change log"
         }, 
         {
             "location": "/datepicker/changelog/#change-log", 
             "text": "All notable changes to this project will be documented in this file.  The format is based on  Keep a Changelog  \nand this project adheres to  Semantic Versioning .", 
             "title": "Change Log"
+        }, 
+        {
+            "location": "/datepicker/changelog/#111-2018-1-27", 
+            "text": "Fix  #202  Fix  #203", 
+            "title": "[1.1.1] - 2018-1-27"
         }, 
         {
             "location": "/datepicker/changelog/#110-2017-12-24", 
