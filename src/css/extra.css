@@ -7,6 +7,20 @@
     border-bottom: 3px solid #028475;
 }
 
+.datepicker-plot-area *{
+    font-family: IRANSans !important;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    select,
+    textarea,
+    input {
+        font-size: 16px;
+    }
+}
+
+input[type='text'],textarea {font-size:1em;}
+
 table td:nth-child(2),
 table td:nth-child(3) {
     color: #888;
@@ -18,10 +32,10 @@ table td:nth-child(3) {
     padding: 5%;
 }
 
-.one-inline-datepicker {
-    display: block;
-    float: right;
-    width: 100%;
+@media only screen and (max-width: 720px) {
+    .two-inline-datepicker > div {
+        width: 100%;
+    }
 }
 
 .one-inline-datepicker {
@@ -46,17 +60,16 @@ table td:nth-child(3) {
     padding-left: 10px;
 }
 
-.md-header-nav__source,
-.md-source__repository,
-.md-nav__title {
+.md-nav__title.md-nav__title--site,
+[data-md-color-primary=red] .md-nav__source{
+    background: #222 !important;
+}
+
+.md-nav__source,
+.md-source__repository {
     display: none !important;
     width: 0 !important;
     height: 0 !important;
-}
-
-.md-content__inner label {
-    display: block;
-    min-width: 300px;
 }
 
 .md-content__inner h3 {
@@ -119,19 +132,19 @@ input.datepicker-demo-alt {
     clear: both;
 }
 
-.home-page .md-sidebar {
-    display: none;
-}
+/*.home-page .md-sidebar {*/
+    /*display: none;*/
+/*}*/
 
-.home-page .md-content {
-    display: block;
-    width: 90%;
-    margin: 0px 5%;
-}
+/*.home-page .md-content {*/
+    /*display: block;*/
+    /*width: 90%;*/
+    /*margin: 0px 5%;*/
+/*}*/
 
-.home-page .jumbotron {
-    /*border: 2px solid red !important;*/
-}
+/*.home-page .jumbotron {*/
+    /*!*border: 2px solid red !important;*!*/
+/*}*/
 
 .md-nav__list .md-nav__item.md-nav__item--nested label {
     font-size: 18px;
