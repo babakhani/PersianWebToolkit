@@ -395,17 +395,35 @@
                 
                 
                 <h1 id="persian-date-leap-year-calculation">Persian Date leap year calculation<a class="headerlink" href="#persian-date-leap-year-calculation" title="Permanent link">&para;</a></h1>
-<p>There is two popular way to determining leap years for the Persian calendar. 
-astronomical: occur whenever that number of days elapse between equinoxes at the reference meridian.</p>
-<p>algorithmic: based on Ahmad Birashk proposed algorithm.</p>
-<p>After version 0.3.0 persianDate support both algorithm and you can choose which algorithm use in your project. 
-currently we have support 3 type of calendar <code>astronomical</code>, <code>algorithmic</code>.</p>
-<p>you can change it globally like this example.</p>
+<p>
+There are two popular way to determining leap years for the Persian calendar. 
+</p>
+<p>
+There are two popular way to determining leap years for the Persian calendar. 
+</p>
+<p>
+astronomical: occur whenever that number of days elapse between equinoxes at the reference meridian.
+</p>
+<p>
+algorithmic: based on Ahmad Birashk proposed algorithm.
+</p>
+<p>
+After version 0.3.0 persianDate support both algorithm and you can choose which algorithm use in your project. 
+currently we have support 2 type of calendar <code>astronomical</code>, <code>algorithmic</code>.</p>
+
 <h1 id="test-leap-years-calculation-algorithm">Test leap years calculation algorithm<a class="headerlink" href="#test-leap-years-calculation-algorithm" title="Permanent link">&para;</a></h1>
+
 <p>I designed a test to understand the differences between these algorithms.</p>
+
 <p>Check total leap years in next 3003 year after 1396, Difference test between Astronomical, Algorithmic and some other algorithms I found.</p>
+
 <p>you can see this result by run mocha test.</p>
-<h3 id="check-total-leap-years-in-next-3003-year-difference-algorithm">Check total leap years in next 3003 year, Difference algorithm<a class="headerlink" href="#check-total-leap-years-in-next-3003-year-difference-algorithm" title="Permanent link">&para;</a></h3>
+
+<h3 id="check-total-leap-years-in-next-3003-year-difference-algorithm">
+
+  Check total leap years in next 3003 year
+
+<a class="headerlink" href="#check-total-leap-years-in-next-3003-year-difference-algorithm" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span>- Total gregorian leap year: <span class="m">728</span>
 - Total Nasa algorithm leap year: <span class="m">727</span>
 - Total Algorithmic leap year: <span class="m">727</span>
