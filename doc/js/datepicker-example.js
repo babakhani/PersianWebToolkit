@@ -1,9 +1,20 @@
 $(document).ready(function () {
 
-    $('.normal-example').persianDatepicker({});
+    $('.normal-example').persianDatepicker({
+      calendar:{
+        persian: {
+          leapYearMode: 'astronomical'
+        }
+      }
+    });
 
     $('.inline-example').persianDatepicker({
         inline: true,
+        calendar:{
+          persian: {
+            leapYearMode: 'astronomical'
+          }
+        },
         altField: '#inlineExampleAlt',
         altFormat: 'LLLL',
         toolbox: {
@@ -27,11 +38,21 @@ $(document).ready(function () {
     });
 
     $('.initial-value-type-example').persianDatepicker({
-        initialValueType: 'persian'
+        initialValueType: 'persian',
+        calendar:{
+          persian: {
+            leapYearMode: 'astronomical'
+          }
+        },
     });
 
     $('.initial-value-type-gregorian-example').persianDatepicker({
-        initialValueType: 'gregorian'
+        initialValueType: 'gregorian',
+        calendar:{
+          persian: {
+            leapYearMode: 'astronomical'
+          }
+        },
     });
 
     $('.gregorian-example').persianDatepicker({
@@ -39,6 +60,11 @@ $(document).ready(function () {
         altField: '#gregorianExampleAlt',
         altFormat: 'LLLL',
         calendarType: 'gregorian',
+        calendar:{
+          persian: {
+            leapYearMode: 'astronomical'
+          }
+        },
         toolbox: {
             calendarSwitch: {
                 enabled: true
@@ -60,11 +86,21 @@ $(document).ready(function () {
     });
 
     $('.initial-value-example').persianDatepicker({
-        initialValue: false
+        initialValue: false,
+        calendar:{
+          persian: {
+            leapYearMode: 'astronomical'
+          }
+        },
     });
 
     $('.leapyear-algorithmic').persianDatepicker({
         inline: true,
+        calendar:{
+          persian: {
+            leapYearMode: 'astronomical'
+          }
+        },
         navigator: {
             scroll: {
                 enabled: false
@@ -88,6 +124,11 @@ $(document).ready(function () {
 
     $('.locale-fa').persianDatepicker({
         inline: true,
+        calendar:{
+          persian: {
+            leapYearMode: 'astronomical'
+          }
+        },
         navigator: {
             scroll: {
                 enabled: false
@@ -105,77 +146,147 @@ $(document).ready(function () {
         },
         calendar: {
             persian: {
-                locale: 'en'
+                leapYearMode: 'astronomical'
             }
         }
     });
 
     $('.format-example').persianDatepicker({
-        format: 'LLLL'
+        format: 'LLLL',
+        calendar: {
+            persian: {
+                leapYearMode: 'astronomical'
+            }
+        }
     });
 
     $('.formatter-example').persianDatepicker({
         formatter: function (unix) {
             return 'selected unix: ' + unix;
+        },
+        calendar: {
+            persian: {
+                leapYearMode: 'astronomical'
+            }
         }
     });
 
     $('.alt-field-example').persianDatepicker({
-        altField: '.alt-field-example-alt-field'
+        altField: '.alt-field-example-alt-field',
+        calendar: {
+            persian: {
+                leapYearMode: 'astronomical'
+            }
+        }
     });
 
     $('.persian-digit-example').persianDatepicker({
-        persianDigit: false
+        persianDigit: false,
+        calendar: {
+            persian: {
+                leapYearMode: 'astronomical'
+            }
+        }
     });
 
     $('.view-mode-example').persianDatepicker({
-        viewMode: 'year'
+        viewMode: 'year',
+        calendar: {
+            persian: {
+                leapYearMode: 'astronomical'
+            }
+        }
     });
 
     $('.min-date-example').persianDatepicker({
-        minDate: new persianDate().valueOf()
+        minDate: new persianDate().valueOf(),
+        calendar: {
+            persian: {
+                leapYearMode: 'astronomical'
+            }
+        }
     });
 
     $('.max-date-example').persianDatepicker({
-        maxDate: new persianDate().valueOf()
+        maxDate: new persianDate().valueOf(),
+        calendar: {
+            persian: {
+                leapYearMode: 'astronomical'
+            }
+        }
     });
 
     $('.check-date-example').persianDatepicker({
         checkDate: function (unix) {
             return new persianDate(unix).day() != 4;
+        },
+        calendar: {
+            persian: {
+                leapYearMode: 'astronomical'
+            }
         }
     });
 
     $('.check-month-example').persianDatepicker({
         checkMonth: function (month) {
             return month < 6;
+        },
+        calendar: {
+            persian: {
+                leapYearMode: 'astronomical'
+            }
         }
     });
 
     $('.check-year-example').persianDatepicker({
         checkYear: function (year) {
             return year >= 1391;
+        },
+        calendar: {
+            persian: {
+                leapYearMode: 'astronomical'
+            }
         }
     });
 
     $('.only-timepicker-example').persianDatepicker({
-        onlyTimePicker: true
+        onlyTimePicker: true,
+        calendar: {
+            persian: {
+                leapYearMode: 'astronomical'
+            }
+        }
     });
 
     $('.auto-close-example').persianDatepicker({
-        autoClose: true
+        autoClose: true,
+        calendar: {
+            persian: {
+                leapYearMode: 'astronomical'
+            }
+        }
     });
 
     $('.on-select-example').persianDatepicker({
         onSelect: function (unix) {
             console.log('datepicker select : ' + unix);
+        },
+        calendar: {
+            persian: {
+                leapYearMode: 'astronomical'
+            }
         }
     });
 
     $('.observer-example').persianDatepicker({
         observer: true,
         format: 'YYYY/MM/DD',
-        altField: '.observer-example-alt'
+        altField: '.observer-example-alt',
+        calendar: {
+            persian: {
+                leapYearMode: 'astronomical'
+            }
+        }
     });
 
 
@@ -185,6 +296,11 @@ $(document).ready(function () {
         altField: '.range-to-example-alt',
         altFormat: 'LLLL',
         initialValue: false,
+        calendar: {
+            persian: {
+                leapYearMode: 'astronomical'
+            }
+        },
         navigator: {
             scroll: {
                 enabled: false
@@ -205,6 +321,11 @@ $(document).ready(function () {
         inline: true,
         altField: '.range-from-example-alt',
         altFormat: 'LLLL',
+        calendar: {
+            persian: {
+                leapYearMode: 'astronomical'
+            }
+        },
         initialValue: false,
         navigator: {
             scroll: {
