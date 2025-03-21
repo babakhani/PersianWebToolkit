@@ -307,7 +307,7 @@ $('.view-mode-example').persianDatepicker({
 
 ```javascript
 $('.min-date-example').persianDatepicker({
-    minDate: new persianDate().unix()
+    minDate: new persianDate().valueOf()
 });
 ```
 
@@ -323,7 +323,7 @@ $('.min-date-example').persianDatepicker({
 
 ```javascript
 $('.max-date-example').persianDatepicker({
-    maxDate: new persianDate().unix()
+    maxDate: new persianDate().valueOf()
 });
 ```
 
